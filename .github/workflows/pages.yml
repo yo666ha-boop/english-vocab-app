@@ -29,6 +29,20 @@ jobs:
         with:
           ref: main
 
+      - name: Ensure Pages uses GitHub Actions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" >/tmp/pages-before.json 2>/dev/null; then
+            gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow >/tmp/pages-configured.json
+          else
+            gh api -X POST "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow >/tmp/pages-configured.json
+          fi
+          gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/pages-after.json
+          cat /tmp/pages-after.json
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -55,7 +69,7 @@ jobs:
           PAGE_URL='${{ steps.deployment.outputs.page_url }}'
           EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
           LIVE_SHA=''
-          for i in $(seq 1 12); do
+          for i in $(seq 1 18); do
             if curl -LfsS --connect-timeout 10 --max-time 30 "${PAGE_URL}" -o /tmp/live-index.html; then
               LIVE_SHA="$(sha256sum /tmp/live-index.html | awk '{print $1}')"
               if [ "$LIVE_SHA" = "$EXPECTED_SHA" ]; then
@@ -72,6 +86,8 @@ jobs:
           echo "index_sha256=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Record verified Pages URL
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
@@ -79,13 +95,19 @@ jobs:
           PAGE_URL='${{ steps.verify.outputs.page_url }}'
           INDEX_SHA='${{ steps.verify.outputs.index_sha256 }}'
           VERIFIED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/pages-api.json
+          HTML_URL="$(node -e "const j=require('/tmp/pages-api.json'); console.log(j.html_url||'')")"
+          BUILD_TYPE="$(node -e "const j=require('/tmp/pages-api.json'); console.log(j.build_type||'')")"
           cat > audit/PAGES_DEPLOY_STATUS.json <<EOF
           {
             "status": "verified",
             "page_url": "$PAGE_URL",
+            "pages_api_html_url": "$HTML_URL",
+            "build_type": "$BUILD_TYPE",
             "index_sha256": "$INDEX_SHA",
             "verified_at_utc": "$VERIFIED_AT",
             "checks": {
+              "pages_api": true,
               "http_fetch": true,
               "live_matches_main_index_sha256": true,
               "app_title_present": true,
