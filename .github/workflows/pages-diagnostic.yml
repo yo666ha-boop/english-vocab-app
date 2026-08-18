@@ -1,0 +1,113 @@
+name: Diagnose vocabulary GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pages-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Read Pages API and live URL
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -u
+          mkdir -p audit
+          API_OK=false
+          LIVE_OK=false
+          HTTP_CODE=''
+          LIVE_SHA=''
+          EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/pages.json 2>/tmp/pages.err; then
+            API_OK=true
+          else
+            printf '{}' > /tmp/pages.json
+          fi
+          if gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" > /tmp/build.json 2>/tmp/build.err; then :; else printf '{}' > /tmp/build.json; fi
+          PAGE_URL="$(node -e "const j=require('/tmp/pages.json'); console.log(j.html_url||'')")"
+          if [ -n "$PAGE_URL" ]; then
+            HTTP_CODE="$(curl -L -sS -o /tmp/live.html -w '%{http_code}' --connect-timeout 10 --max-time 30 "$PAGE_URL" || true)"
+            if [ "$HTTP_CODE" = '200' ]; then
+              LIVE_OK=true
+              LIVE_SHA="$(sha256sum /tmp/live.html | awk '{print $1}')"
+            fi
+          fi
+          node - <<'NODE'
+          const fs=require('fs');
+          const pages=JSON.parse(fs.readFileSync('/tmp/pages.json','utf8'));
+          const build=JSON.parse(fs.readFileSync('/tmp/build.json','utf8'));
+          const out={
+            api_ok: process.env.API_OK === 'true',
+            html_url: process.env.PAGE_URL || pages.html_url || '',
+            status: pages.status || '',
+            build_type: pages.build_type || '',
+            source: pages.source || null,
+            https_enforced: pages.https_enforced ?? null,
+            latest_build: {
+              status: build.status || '',
+              commit: build.commit || '',
+              created_at: build.created_at || '',
+              updated_at: build.updated_at || ''
+            },
+            live_http_code: process.env.HTTP_CODE || '',
+            live_ok: process.env.LIVE_OK === 'true',
+            expected_main_index_sha256: process.env.EXPECTED_SHA || '',
+            live_index_sha256: process.env.LIVE_SHA || '',
+            live_matches_main: !!process.env.LIVE_SHA && process.env.LIVE_SHA === process.env.EXPECTED_SHA,
+            checked_at_utc: new Date().toISOString()
+          };
+          fs.writeFileSync('audit/PAGES_API_STATUS.json', JSON.stringify(out,null,2)+'\n');
+          NODE
+        env:
+          API_OK: ${{ env.API_OK }}
+
+      - name: Build status file robustly
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/pages.json 2>/tmp/pages.err; then API_OK=true; else API_OK=false; printf '{}' > /tmp/pages.json; fi
+          if gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" > /tmp/build.json 2>/tmp/build.err; then :; else printf '{}' > /tmp/build.json; fi
+          PAGE_URL="$(node -e "const j=require('/tmp/pages.json'); console.log(j.html_url||'')")"
+          HTTP_CODE=''; LIVE_SHA=''; LIVE_OK=false
+          if [ -n "$PAGE_URL" ]; then
+            HTTP_CODE="$(curl -L -sS -o /tmp/live.html -w '%{http_code}' --connect-timeout 10 --max-time 30 "$PAGE_URL" || true)"
+            if [ "$HTTP_CODE" = '200' ]; then LIVE_OK=true; LIVE_SHA="$(sha256sum /tmp/live.html | awk '{print $1}')"; fi
+          fi
+          export API_OK PAGE_URL HTTP_CODE LIVE_OK EXPECTED_SHA LIVE_SHA
+          mkdir -p audit
+          node - <<'NODE'
+          const fs=require('fs');
+          const pages=JSON.parse(fs.readFileSync('/tmp/pages.json','utf8'));
+          const build=JSON.parse(fs.readFileSync('/tmp/build.json','utf8'));
+          const out={api_ok:process.env.API_OK==='true',html_url:process.env.PAGE_URL||'',status:pages.status||'',build_type:pages.build_type||'',source:pages.source||null,https_enforced:pages.https_enforced??null,latest_build:{status:build.status||'',commit:build.commit||'',created_at:build.created_at||'',updated_at:build.updated_at||''},live_http_code:process.env.HTTP_CODE||'',live_ok:process.env.LIVE_OK==='true',expected_main_index_sha256:process.env.EXPECTED_SHA||'',live_index_sha256:process.env.LIVE_SHA||'',live_matches_main:!!process.env.LIVE_SHA&&process.env.LIVE_SHA===process.env.EXPECTED_SHA,checked_at_utc:new Date().toISOString()};
+          fs.writeFileSync('audit/PAGES_API_STATUS.json',JSON.stringify(out,null,2)+'\n');
+          NODE
+          cat audit/PAGES_API_STATUS.json
+          if [ -s /tmp/pages.err ]; then echo 'Pages API stderr:'; cat /tmp/pages.err; fi
+          if [ -s /tmp/build.err ]; then echo 'Latest build stderr:'; cat /tmp/build.err; fi
+
+      - name: Commit diagnostic result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PAGES_API_STATUS.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore: record GitHub Pages diagnostic'
+          git push origin HEAD:main
