@@ -17,6 +17,7 @@ const s7=path.join(tmp,'07-m3-word-order.html');
 const s8=path.join(tmp,'08-m3-infinitive2.html');
 const s9=path.join(tmp,'09-m3.html');
 const s10=path.join(tmp,'10-case.html');
+const s11=path.join(tmp,'11-vocab-v7.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
@@ -29,15 +30,23 @@ try{
   run('tools/repair_m3_infinitive2_v4.mjs',[s7,s8]);
   run('tools/repair_m3_review.mjs',[s8,s9]);
   run('tools/normalize_question_subject_case.mjs',[s9,s10]);
-  run('tools/apply_mikami_runtime_gates.mjs',[s10,outputPath]);
+  run('tools/migrate_vocab_coordinates_v7.mjs',[s10,s11]);
+  run('tools/apply_mikami_runtime_gates.mjs',[s11,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
-  for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','minIdx <= 0) return false']){
+  for(const marker of [
+    'id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)',
+    'v7-2026-08-18-1based','if (minIdx === -2) return true','const selectedOrdinal = currentSectionIndex() + 1'
+  ]){
     if(!out.includes(marker)) throw new Error(`FINAL GATE MISSING: ${marker}`);
   }
   const m=out.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
   if(!m) throw new Error('FINAL qb-data missing');
   const qb=JSON.parse(m[1]);
+  const metaMatch=out.match(/<script\s+id=["']meta-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
+  if(!metaMatch) throw new Error('FINAL meta-data missing');
+  const meta=JSON.parse(metaMatch[1]);
+  if(meta.vocabCoordinateVersion!=='v7-2026-08-18-1based') throw new Error('FINAL vocab coordinate version mismatch');
   const bankText=qb.map(x=>`${x.id}\n${x.q||''}\n${x.a||''}`).join('\n');
   const forbidden=[
     /This is (?:he|she|we)\b/i,
@@ -80,6 +89,7 @@ try{
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
   const m3Audit=JSON.parse(fs.readFileSync(s9+'.m3-review.audit.json','utf8'));
+  const vocabAudit=JSON.parse(fs.readFileSync(s11+'.v7-coordinate.audit.json','utf8'));
   const report={
     status:'OK',input:inputPath,output:outputPath,
     question_count:baseAudit.question_count,
@@ -89,8 +99,9 @@ try{
     m3_word_order_v4_changed:wordOrderAudit.changed,
     m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
-    uncertain_vocab_positions:baseAudit.audit.uncertain_vocab_positions,
-    gates:{vocab_fail_closed:true,prerequisite:true,quality:true}
+    vocab_coordinate_version:vocabAudit.version,
+    vocab_migration:vocabAudit.stats,
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true}
   };
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
