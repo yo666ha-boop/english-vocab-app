@@ -1,0 +1,241 @@
+{
+  "index_bytes_utf8": 4095290,
+  "index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
+  "known_terms": {
+    "sweet(s)": {
+      "count": 0,
+      "hits": []
+    },
+    "friend(s)": {
+      "count": 0,
+      "hits": []
+    },
+    "English": {
+      "count": 240,
+      "hits": [
+        {
+          "offset": 119419,
+          "snippet": "eakfast\", \"japanese\": \"朝食\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ブレックファスト\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"アクションコーナー\", \"section\": \"アクションコーナー\", \"english\": \"English\", \"japanese\": \"英語\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"イングリッシュ\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"アクションコーナー\", \"section\": \"アクションコーナー\", \"english\": \"bath\", \"japanese\": \"入浴\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"バス\"}, {\"dataset\": \"textbook\", \"textbook"
+        },
+        {
+          "offset": 665323,
+          "snippet": "e\": \"数学\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"マス\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Sounds and Letters 1\", \"section\": \"Sounds and Letters 1\", \"english\": \"English\", \"japanese\": \"英語\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"イングリッシュ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Sounds and Letters 1\", \"section\": \"Sounds and Letters 1\", \"english\": \"clock\", \"japanese\": \"（置き［かけ］）時計\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"クロック\"}"
+        },
+        {
+          "offset": 762586,
+          "snippet": "ction\": \"Unit 6-3\", \"english\": \"wear\", \"japanese\": \"…を着ている、身につけている\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"動詞\", \"pos_raw\": \"動\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウェア\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"window\", \"japanese\": \"窓\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィンドウ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\":"
+        },
+        {
+          "offset": 762620,
+          "snippet": "ar\", \"japanese\": \"…を着ている、身につけている\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"動詞\", \"pos_raw\": \"動\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウェア\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"window\", \"japanese\": \"窓\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィンドウ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"ka"
+        },
+        {
+          "offset": 762903,
+          "snippet": "ion\": \"Real Life English 2\", \"english\": \"window\", \"japanese\": \"窓\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィンドウ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"プロブレム\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"light\", \"japanese\": \"明かり、電灯\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcatego"
+        },
+        {
+          "offset": 762937,
+          "snippet": "ish\": \"window\", \"japanese\": \"窓\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィンドウ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"プロブレム\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"light\", \"japanese\": \"明かり、電灯\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\","
+        },
+        {
+          "offset": 763222,
+          "snippet": "n\": \"Real Life English 2\", \"english\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"プロブレム\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"light\", \"japanese\": \"明かり、電灯\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ライト\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"moment\", \"japanese\": \"瞬間、ちょっとの間\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subca"
+        },
+        {
+          "offset": 763256,
+          "snippet": "h\": \"problem\", \"japanese\": \"問題\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"プロブレム\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"light\", \"japanese\": \"明かり、電灯\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ライト\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Real Life English 2\", \"section\": \"Real Life English 2\", \"english\": \"moment\", \"japanese\": \"瞬間、ちょっとの間\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": "
+        }
+      ]
+    },
+    "want to": {
+      "count": 4,
+      "hits": [
+        {
+          "offset": 100124,
+          "snippet": "new\", \"japanese\": \"新しい、新入りの\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"形容詞\", \"pos_raw\": \"形\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ニュー\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"PROGRAM 1\", \"section\": \"PROGRAM 1-3\", \"english\": \"want to ～\", \"japanese\": \"～したい\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"熟語・表現\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウォント トゥ\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"PROGRAM 1\", \"section\": \"PROGRAM 1-3\", \"english\": \"No problem.\", \"japanese\": \"どういたしまして。\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"熟語・表現\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ノー プロブレム\"}, {\"d"
+        },
+        {
+          "offset": 653873,
+          "snippet": ", \"japanese\": \"私を…と呼んでください。\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"熟語・表現\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"コール ミー\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Unit 1\", \"section\": \"Unit 1-1\", \"english\": \"want to\", \"japanese\": \"…したい\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"熟語・表現\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウォント トゥ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Unit 1\", \"section\": \"Unit 1-2\", \"english\": \"fan\", \"japanese\": \"ファン\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"ファン\"}, {\"dataset\": \"textbook\", \"textb"
+        },
+        {
+          "offset": 1231170,
+          "snippet": "h\": \"It makes me ...\", \"japanese\": \"私を〜な気持ちにする\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"イットメイクスミー\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"I want to ...\", \"japanese\": \"〜したい\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"アイ・ウォント・トゥ\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"I would like to ...\", \"japanese\": \"〜したい（丁寧）\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"アイ・ウッド・ライク・トゥ\"}, {\"dataset\": \"e"
+        },
+        {
+          "offset": 1243982,
+          "snippet": "h other, ...\", \"japanese\": \"もし助け合えば、…\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"イフ・ウィー・ヘルプ・イーチ・アザー\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"I want to join ...\", \"japanese\": \"〜に参加したい\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"アイ・ウォント・トゥ・ジョイン\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"because of\", \"japanese\": \"〜のために\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"40点超え追加\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ビコーズ オブ\"}, {\"dataset\": \"exam"
+        }
+      ]
+    },
+    "How about you?": {
+      "count": 1,
+      "hits": [
+        {
+          "offset": 662438,
+          "snippet": "ish\": \"wow\", \"japanese\": \"うわあ、わあ\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"感動詞\", \"pos_raw\": \"間\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ワオ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Unit 1\", \"section\": \"Unit 1-3\", \"english\": \"How about you?\", \"japanese\": \"あなたはどうですか。\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"熟語・表現\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ハウ アバウト ユー\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Sounds and Letters 1\", \"section\": \"Sounds and Letters 1\", \"english\": \"shop\", \"japanese\": \"店\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana"
+        }
+      ]
+    },
+    "don't": {
+      "count": 3,
+      "hits": [
+        {
+          "offset": 1238265,
+          "snippet": " \"We need to ...\", \"japanese\": \"私たちは〜する必要がある\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィー・ニード・トゥ\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"We don't have to ...\", \"japanese\": \"〜する必要はない\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ウィー・ドント・ハフ・トゥ\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"I recommend ...\", \"japanese\": \"〜をおすすめする\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"アイ・レコメンド\"}, {\"dataset\""
+        },
+        {
+          "offset": 1238856,
+          "snippet": "sh\": \"I recommend ...\", \"japanese\": \"〜をおすすめする\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"アイ・レコメンド\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"Why don't we ...?\", \"japanese\": \"〜しませんか？\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ワイ・ドント・ウィー\"}, {\"dataset\": \"exam\", \"textbook\": \"\", \"grade\": \"nan\", \"major_unit\": \"\", \"section\": \"\", \"english\": \"How about ...?\", \"japanese\": \"〜はどう？\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"英作文の型\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ハウ・アバウト\"}, {\"dataset\": \"exam\", \"te"
+        },
+        {
+          "offset": 1296225,
+          "snippet": "ける）\", \"english\": \"know\", \"japanese\": \"知っている\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"\", \"kana\": \"ノウ\", \"elem_type\": \"書けるようにする\", \"elem_category\": \"カテゴリーB：スーパー動詞（絶対に書ける）\", \"elem_category_short\": \"カテゴリーB\", \"elem_hint\": \"I don't know.\", \"elem_intro\": \"動詞は“文のエンジン”。ここが書けると教科書がスラスラ読める！\", \"elem_order\": \"4\"}, {\"dataset\": \"elementary\", \"textbook\": \"\", \"grade\": \"小学生\", \"major_unit\": \"書けるようにする単語\", \"section\": \"カテゴリーB：スーパー動詞（絶対に書ける）\", \"english\": \"go\", \"japanese\": \"行く\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"\", \"pos_raw\": \"\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"\", \"kana\": \"ゴウ\", \"elem_type\": \"書けるようにする\", \"elem_category\": \"カテゴリーB：スーパー動詞（絶対に書ける）\", \"elem_category_short\": \"カテゴリーB\", \"elem_hint\": \"go to sc"
+        }
+      ]
+    },
+    "Malala Yousafzai": {
+      "count": 0,
+      "hits": []
+    },
+    "Cafe Maria": {
+      "count": 0,
+      "hits": []
+    },
+    "Diane Kichijitsu": {
+      "count": 0,
+      "hits": []
+    },
+    "South Africa": {
+      "count": 1,
+      "hits": [
+        {
+          "offset": 649100,
+          "snippet": "ish\": \"hot\", \"japanese\": \"熱い、暑い\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"形容詞\", \"pos_raw\": \"形\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ホット\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Unit 1\", \"section\": \"Unit 1-1\", \"english\": \"South Africa\", \"japanese\": \"南アフリカ共和国\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"サウス アフリカ\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"1\", \"major_unit\": \"Unit 1\", \"section\": \"Unit 1-1\", \"english\": \"call\", \"japanese\": \"…を（～と）呼ぶ、名づける\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"動詞\", \"pos_raw\": \"動\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"コール\"}, {\"dataset\":"
+        }
+      ]
+    },
+    "natural gas": {
+      "count": 1,
+      "hits": [
+        {
+          "offset": 1104161,
+          "snippet": "al\", \"japanese\": \"石炭\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"コール\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"3\", \"major_unit\": \"Let's Read 2\", \"section\": \"Let's Read 2-1\", \"english\": \"natural gas\", \"japanese\": \"天然ガス\", \"star\": \"0\", \"phrase\": \"1\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ナチュラル ガス\"}, {\"dataset\": \"textbook\", \"textbook\": \"ニューホライズン\", \"grade\": \"3\", \"major_unit\": \"Let's Read 2\", \"section\": \"Let's Read 2-1\", \"english\": \"energy\", \"japanese\": \"エネルギー\", \"star\": \"0\", \"phrase\": \"0\", \"pos\": \"名詞\", \"pos_raw\": \"名\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"エナジー\"}, {\"dataset"
+        }
+      ]
+    }
+  },
+  "key_counts": {
+    "id": 0,
+    "word": 0,
+    "english": 4163,
+    "en": 0,
+    "jp": 0,
+    "ja": 0,
+    "japanese": 4163,
+    "meaning": 0,
+    "kana": 4163,
+    "reading": 0,
+    "book": 0,
+    "textbook": 4165,
+    "grade": 4165,
+    "unit": 0,
+    "part": 0,
+    "page": 13,
+    "star": 4163,
+    "important": 0,
+    "phrase": 4162,
+    "pos": 4165
+  },
+  "array_assignments": [
+    {
+      "name": "DATA",
+      "offset": 49350,
+      "snippet": "const DATA = [{\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"Get Ready 2\", \"section\": \"Get Ready 2\", \"english\": \"I\", \"japanese\": \"私は［が］\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"代名詞\", \"pos_raw\": \"代\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"1\", \"kana\": \"アイ\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"Get Ready 2\", \"section\": \"Get Ready 2\", \"english\": \"me\", \"japanese\": \"（I の代わりに）私\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"代名詞\", \"pos_raw\": \"代\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": \"ミー\"}, {\"dataset\": \"textbook\", \"textbook\": \"サンシャイン\", \"grade\": \"1\", \"major_unit\": \"Get Ready 2\", \"section\": \"Get Ready 2\", \"english\": \"see\", \"japanese\": \"わかる\", \"star\": \"1\", \"phrase\": \"0\", \"pos\": \"動詞\", \"pos_raw\": \"動\", \"exam_category\": \"\", \"exam_subcategory\": \"\", \"current_confirmed\": \"0\", \"kana\": "
+    },
+    {
+      "name": "out",
+      "offset": 1332924,
+      "snippet": "const out = [];\n  const seen = new Set();\n  values.forEach(v => {\n    const sv = String(v ?? '');\n    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }\n  });\n  return out;\n}\nfunction rowsForDataset() {\n  return DATA.filter(r => r.dataset === state.dataset);\n}\nfunction selectedArray(key) {\n  return Array.from(state.filters[key] || []);\n}\nfunction matches(setObj, value) {\n  if (!setObj || setObj.size === 0) return true;\n  return setObj.has(String(value ?? ''));\n}\nfunction renderChecklist(box, key, values) {\n  const selected = state.filters[key];\n  box.innerHTML = values.map(v => {\n    const sv = String(v);\n    return `<label class=\"checkitem\"><input type=\"checkbox\" data-filter=\"${key}\" value=\"${esc(sv)}\" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;\n  }).join('');\n  box.querySelectorAll('input[type=\"checkbox\"]').forEach(input => {\n    input.addEventListener"
+    },
+    {
+      "name": "cats",
+      "offset": 1335827,
+      "snippet": "const cats = ['書ける最優先','長文テーマ語','英作文の型','40点超え追加','不規則動詞'];\n    if (state.filters.examCategory.size === 0) state.filters.examCategory = new Set(cats);\n    renderChecklist(els.boxes.examCategory, 'examCategory', cats);\n    const base = rows.filter(r => matches(state.filters.examCategory, r.exam_category));\n    const subs = uniqueKeepOrder(base.map(r => r.exam_subcategory).filter(Boolean));\n    state.filters.examSub = new Set(selectedArray('examSub').filter(v => subs.includes(v)));\n    renderChecklist(els.boxes.examSub, 'examSub', subs);\n  } else {\n    const types = ['書けるようにする','意味・イメージでわかる'];\n    renderChecklist(els.boxes.elemType, 'elemType', types);\n    const base = rows.filter(r => matches(state.filters.elemType, r.elem_type));\n    const cats = uniqueKeepOrder(base.map(r => r.elem_category).filter(Boolean));\n    state.filters.elemCategory = new Set(selectedArray('elemCategory').filter("
+    },
+    {
+      "name": "types",
+      "offset": 1336384,
+      "snippet": "const types = ['書けるようにする','意味・イメージでわかる'];\n    renderChecklist(els.boxes.elemType, 'elemType', types);\n    const base = rows.filter(r => matches(state.filters.elemType, r.elem_type));\n    const cats = uniqueKeepOrder(base.map(r => r.elem_category).filter(Boolean));\n    state.filters.elemCategory = new Set(selectedArray('elemCategory').filter(v => cats.includes(v)));\n    if (state.filters.elemCategory.size === 0) state.filters.elemCategory = new Set(cats);\n    renderChecklist(els.boxes.elemCategory, 'elemCategory', cats);\n  }\n}\nfunction filteredRows() {\n  const rows = rowsForDataset();\n  if (state.dataset === 'textbook') {\n    return rows.filter(r =>\n      matches(state.filters.textbook, r.textbook) &&\n      matches(state.filters.grade, String(r.grade).replace('.0','')) &&\n      matches(state.filters.major, r.major_unit) &&\n      matches(state.filters.section, r.section) &&\n      matches(s"
+    },
+    {
+      "name": "blocks",
+      "offset": 1338699,
+      "snippet": "const blocks = [];\n    let current = '';\n    let intro = '';\n    let rows = [];\n    const flush = () => {\n      if (!current || rows.length === 0) return;\n      const head = state.dataset === 'elementary'\n        ? `<thead><tr><th style=\"width:22%\">英語</th><th style=\"width:22%\">カタカナ読み</th><th style=\"width:22%\">日本語</th><th>コツ・セット</th></tr></thead>`\n        : `<thead><tr><th style=\"width:30%\">英語</th><th style=\"width:30%\">カタカナ読み</th><th>日本語</th></tr></thead>`;\n      const introHtml = intro ? `<div class=\"memory-intro\">${esc(intro)}</div>` : '';\n      blocks.push(`<div class=\"memory-section\"><div class=\"memory-title\">${esc(current)}</div>${introHtml}<table class=\"memory-table\">${head}<tbody>${rows.join('')}</tbody></table></div>`);\n    };\n    state.currentList.forEach(r => {\n      const title = state.dataset === 'elementary' ? r.elem_category : r.section;\n      const nextIntro = state.dataset"
+    },
+    {
+      "name": "rows",
+      "offset": 1338764,
+      "snippet": "let rows = [];\n    const flush = () => {\n      if (!current || rows.length === 0) return;\n      const head = state.dataset === 'elementary'\n        ? `<thead><tr><th style=\"width:22%\">英語</th><th style=\"width:22%\">カタカナ読み</th><th style=\"width:22%\">日本語</th><th>コツ・セット</th></tr></thead>`\n        : `<thead><tr><th style=\"width:30%\">英語</th><th style=\"width:30%\">カタカナ読み</th><th>日本語</th></tr></thead>`;\n      const introHtml = intro ? `<div class=\"memory-intro\">${esc(intro)}</div>` : '';\n      blocks.push(`<div class=\"memory-section\"><div class=\"memory-title\">${esc(current)}</div>${introHtml}<table class=\"memory-table\">${head}<tbody>${rows.join('')}</tbody></table></div>`);\n    };\n    state.currentList.forEach(r => {\n      const title = state.dataset === 'elementary' ? r.elem_category : r.section;\n      const nextIntro = state.dataset === 'elementary' ? (r.elem_intro || '') : '';\n      if (title !="
+    },
+    {
+      "name": "candidates",
+      "offset": 1342658,
+      "snippet": "const candidates = [];\n  if (specialRule) {\n    rows.forEach(r => {\n      if (String(r.star || '') === '1') {\n        candidates.push({ row: r, fixedMode: 'en2jp' });\n        candidates.push({ row: r, fixedMode: 'jp2en' });\n      } else {\n        candidates.push({ row: r, fixedMode: 'en2jp' });\n      }\n    });\n  } else {\n    rows.forEach(r => candidates.push({ row: r, fixedMode: '' }));\n  }\n  const count = Math.min(parseInt(els.qCount.value, 10), candidates.length);\n  const picked = shuffle(candidates).slice(0, count).map((item, idx) => {\n    const r = item.row;\n    let mode = item.fixedMode || els.quizMode.value;\n    if (mode === 'random') mode = Math.random() < 0.5 ? 'en2jp' : 'jp2en';\n    const prompt = mode === 'en2jp' ? r.english : r.japanese;\n    const answer = mode === 'en2jp' ? r.japanese : r.english;\n    return { no: idx + 1, mode, prompt, answer, kana: '', extra: '', star: Stri"
+    },
+    {
+      "name": "rows",
+      "offset": 1348858,
+      "snippet": "const rows = [];\n  rows.push(['モード', currentDatasetLabel()]);\n  if (state.dataset === 'textbook') {\n    rows.push(['教科書', compactList(state.filters.textbook, 'すべて')]);\n    rows.push(['学年', compactList(state.filters.grade, 'すべて')]);\n    rows.push(['大単元', compactList(state.filters.major, 'すべて')]);\n    rows.push(['小単元', compactList(state.filters.section, 'すべて')]);\n    rows.push(['品詞', compactList(state.filters.pos, 'すべて')]);\n    const cond = [];\n    if (state.toggles.starOnly) cond.push('☆のみ');\n    if (state.toggles.phraseOnly) cond.push('熟語・表現のみ');\n    if (state.toggles.currentOnly) cond.push('現行確認済みのみ');\n    rows.push(['条件', cond.length ? cond.join('、') : '指定なし']);\n  } else if (state.dataset === 'exam') {\n    rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);\n    rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);\n  } else {\n    rows.push(['テスト区分', compactLis"
+    },
+    {
+      "name": "cond",
+      "offset": 1349288,
+      "snippet": "const cond = [];\n    if (state.toggles.starOnly) cond.push('☆のみ');\n    if (state.toggles.phraseOnly) cond.push('熟語・表現のみ');\n    if (state.toggles.currentOnly) cond.push('現行確認済みのみ');\n    rows.push(['条件', cond.length ? cond.join('、') : '指定なし']);\n  } else if (state.dataset === 'exam') {\n    rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);\n    rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);\n  } else {\n    rows.push(['テスト区分', compactList(state.filters.elemType, 'すべて')]);\n    rows.push(['カテゴリー', compactList(state.filters.elemCategory, 'すべて')]);\n  }\n  rows.push(['対象語数', `${state.currentList.length}語`]);\n  rows.push(['出題形式', quizModeTextForPrint()]);\n  rows.push(['問題数', state.currentTest.length ? `${state.currentTest.length}問` : '未作成']);\n  return rows;\n}\nfunction normalizeGradeLabelForPrint(v) {\n  const s = String(v || '').replace(/\\.0$/, '').trim();\n  if (!s) "
+    },
+    {
+      "name": "out",
+      "offset": 1350281,
+      "snippet": "const out = [];\n  const seen = new Set();\n  (state.currentList || []).forEach(r => {\n    const v = String(r[key] || '').replace(/\\.0$/, '').trim();\n    if (v && !seen.has(v)) { seen.add(v); out.push(v); }\n  });\n  return out;\n}\nfunction shortItemsForPrint(items, emptyLabel='全範囲') {\n  const vals = (items || []).filter(v => String(v || '').trim());\n  if (!vals.length) return emptyLabel;\n  if (vals.length === 1) return vals[0];\n  if (vals.length <= 3) return vals.join('、');\n  return `${vals[0]}〜${vals[vals.length - 1]}`;\n}\nfunction buildPrintRangeLine() {\n  if (state.dataset === 'textbook') {\n    const textbooks = shortItemsForPrint(uniqueFromCurrentList('textbook'), '全教科書');\n    const grades = shortItemsForPrint(uniqueFromCurrentList('grade').map(normalizeGradeLabelForPrint), '全学年');\n    const sections = shortItemsForPrint(uniqueFromCurrentList('section'), '全単元');\n    return `${textbooks}｜$"
+    },
+    {
+      "name": "pages",
+      "offset": 1541699,
+      "snippet": "const pages = [];\n  for (let i = 0; i < state.currentTest.length; i += 10) pages.push(state.currentTest.slice(i, i + 10));\n  return pages.map((pageRows, idx) => {\n    const header = idx === 0 ? mkFullHeader(title, withAnswers) : mkCompactHeader(title, idx);\n    const instruction = idx === 0 ? mkInstruction(withAnswers) : '';\n    const qHtml = pageRows.map(q => mkQuestionRow(q, withAnswers)).join('');\n    const cls = idx === 0 ? 'mk-page' : 'mk-page compact';\n    return `<div class=\"${cls}\">${header}${instruction}<div class=\"mk-questions\">${qHtml}</div>${mkFooter()}</div>`;\n  }).join('');\n}\nfunction buildMemoryPrintHtml() {\n  const groups = new Map();\n  state.currentList.forEach(r => {\n    const key = r.section || r.major_unit || r.exam_category || '暗記練習';\n    if (!groups.has(key)) groups.set(key, []);\n    groups.get(key).push(r);\n  });\n  const blocks = Array.from(groups.entries()).map((["
+    },
+    {
+      "name": "pages",
+      "offset": 2649320,
+      "snippet": "const pages = [];\n  for (let i = 0; i < state.currentTest.length; i += 10) pages.push(state.currentTest.slice(i, i + 10));\n  const pageHtml = pages.map((pageRows, idx) => {\n    return `<div class=\"ps-page\">${buildDesignedHeaderHtml(title)}${buildDesignedInstructionHtml(withAnswers)}<div class=\"ps-page-label\">${esc(sideLabel(idx))}</div>${buildCompactQuestionTable(pageRows, withAnswers)}<div class=\"ps-footer\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABakAAALTCAYAAAAcpI7jAAEAAElEQVR4nOz927MuSXYfhv1W1Xfbt7PPpU/fZgYzIECQICEADAIgZZqmKJukZYVshUPhB4rkg8MhP9n/C4N6sh/9YD3Z4bAfFCGLdARokgYskyIpAoQIAgTm1tPT3ef0ue29v68q/ZC3tVauzKr69ndO90jImT77q6rMlStXrntmZdF/8O//B+4/+d/+J/irf+2voqMOoxvRdR2ICF3XoVWIKP12AOCcWS/ejbVjO+ccXGhDRCCidG31EaE5l7uiSl2HEhffzvlnLrc+jAOefXmDv/8bv42/++v/FL/+j/4p/s0Pf4i7wx7oCCOt4EBwcSwBVwAg558QRpAbQO4AuAHkBsCNgBvhHDACcNQB6OBA/i/1cOjhqAdRh/R0PKDDiMuzC/zKL/9J/JX/0Z/F/+zf"
+    },
+    {
+      "name": "oldClasses",
+      "offset": 3684719,
+      "snippet": "const oldClasses = ['test-print', 'answer-print', 'memory-print', 'print-sheet'];\n  document.body.classList.remove(...oldClasses);\n  const sheet = document.getElementById('printSheet');\n\n  if (mode === 'memory') {\n    if (state.dataset === 'exam') {\n      alert('高校入試版は暗記プリントではなく、問題印刷または解答印刷を使ってください。');\n      return;\n    }\n    if (!state.currentList.length) {\n      alert('印刷する単語がありません。条件を確認してください。');\n      return;\n    }\n    sheet.innerHTML = buildMemoryPrintHtml();\n  } else {\n    if (!state.currentTest.length) {\n      alert('先に「テスト作成」を押してください。');\n      return;\n    }\n    sheet.innerHTML = buildTestPrintHtml(mode === 'answer');\n  }\n\n  document.body.classList.add('print-sheet');\n  if (mode === 'answer') document.body.classList.add('answer-sheet');\n\n  await waitForPrintImages(sheet);\n  await nextPaint();\n  window.print();\n}\nwindow.addEventListener('afterprint', () => {\n  document.body.classLi"
+    },
+    {
+      "name": "pages",
+      "offset": 3901275,
+      "snippet": "const pages = [];\n  for (let i = 0; i < state.currentTest.length; i += 10) pages.push(state.currentTest.slice(i, i + 10));\n  return pages.map((pageRows, idx) => {\n    const head = idx === 0 ? rbHeader(withAnswers) : rbMiniHeader(withAnswers, idx);\n    const rows = pageRows.map(q => rbQuestionRow(q, withAnswers)).join('');\n    return `<div class=\"rb-page\">${head}${rbInstruction(withAnswers)}<div class=\"rb-rows\">${rows}</div>${rbFooter()}</div>`;\n  }).join('');\n};\n\nbuildMemoryPrintHtml = function() {\n  const rows = state.currentList.slice();\n  const groups = new Map();\n  rows.forEach(r => {\n    const key = state.dataset === 'textbook' ? (r.section || r.major_unit || 'その他') : (r.level || r.unit || r.category || r.type || 'その他');\n    if (!groups.has(key)) groups.set(key, []);\n    groups.get(key).push(r);\n  });\n  const body = Array.from(groups.entries()).map(([g, arr]) => `\n    <div class=\"rb"
+    },
+    {
+      "name": "oldClasses",
+      "offset": 3903198,
+      "snippet": "const oldClasses = ['test-print', 'answer-print', 'memory-print', 'print-sheet'];\n  document.body.classList.remove(...oldClasses);\n  const sheet = document.getElementById('printSheet');\n  if (mode === 'memory') {\n    if (state.dataset === 'exam') { alert('高校入試版は暗記プリントではなく、問題印刷または解答印刷を使ってください。'); return; }\n    if (!state.currentList.length) { alert('印刷する単語がありません。条件を確認してください。'); return; }\n    sheet.innerHTML = buildMemoryPrintHtml();\n  } else {\n    if (!state.currentTest.length) { alert('先に「テスト作成」を押してください。'); return; }\n    sheet.innerHTML = buildTestPrintHtml(mode === 'answer');\n  }\n  document.body.classList.add('print-sheet');\n  if (mode === 'answer') document.body.classList.add('answer-sheet');\n  await rbWaitImages(sheet); await rbNextPaint(); window.print();\n};\n\n</script>\n</body>\n</html>\n"
+    }
+  ],
+  "object_assignments": [
+    {
+      "name": "state",
+      "offset": 1329178,
+      "snippet": "const state = {\n  dataset: \"textbook\",\n  memoryMode: false,\n  answersVisible: false,\n  filters: {\n    textbook: new Set([\"サンシャイン\"]),\n    grade: new Set([\"1\"]),\n    major: new Set(),\n    section: new Set(),\n    pos: new Set(),\n    examCategory: new Set(),\n    examSub: new Set(),\n    elemType: new Set([\"書けるようにする\"]),\n    elemCategory: new Set()\n  },\n  toggles: {\n    starOnly: false,\n    phraseOnly: false,\n    currentOnly: false\n  },\n  currentList: [],\n  currentTest: []\n};\n\nconst els = {\n  tabs: Array.from(document.querySelectorAll('.tab')),\n  summary: document.getElementById('summary'),\n  badge: document.getElementById('datasetBadge'),\n  listModeLabel: document.getElementById('listModeLabel'),\n  memoryGroupedArea: document.getElementById('memoryGroupedArea'),\n  listArea: document.getElementById('listArea'),\n  listBody: document.querySelector('#listTable tbody'),\n  headRow: document.getEleme"
+    },
+    {
+      "name": "els",
+      "offset": 1329653,
+      "snippet": "const els = {\n  tabs: Array.from(document.querySelectorAll('.tab')),\n  summary: document.getElementById('summary'),\n  badge: document.getElementById('datasetBadge'),\n  listModeLabel: document.getElementById('listModeLabel'),\n  memoryGroupedArea: document.getElementById('memoryGroupedArea'),\n  listArea: document.getElementById('listArea'),\n  listBody: document.querySelector('#listTable tbody'),\n  headRow: document.getElementById('theadRow'),\n  testArea: document.getElementById('testArea'),\n  testSummary: document.getElementById('testSummary'),\n  qCount: document.getElementById('qCount'),\n  printLayout: document.getElementById('printLayout'),\n  quizMode: document.getElementById('quizMode'),\n  starQuizRule: document.getElementById('starQuizRule'),\n  textbookFilters: document.getElementById('textbookFilters'),\n  examFilters: document.getElementById('examFilters'),\n  elementaryFilters: docume"
+    }
+  ],
+  "array_assignment_count": 15,
+  "object_assignment_count": 2
+}
