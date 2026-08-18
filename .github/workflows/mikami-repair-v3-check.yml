@@ -27,6 +27,7 @@ jobs:
           node --check tools/repair_targeted_patterns_v3.mjs
           node --check tools/repair_gen_be_v4.mjs
           node --check tools/repair_gen_pbe_v4.mjs
+          node --check tools/repair_gen_pdid_v4.mjs
           node --check tools/repair_m2_infinitive_bank_v4.mjs
           node --check tools/repair_infinitive_v3.mjs
           node --check tools/repair_present_perfect_v3.mjs
@@ -41,6 +42,7 @@ jobs:
           node --check tools/test_targeted_patterns_v3.mjs
           node --check tools/test_gen_be_v4.mjs
           node --check tools/test_gen_pbe_v4.mjs
+          node --check tools/test_gen_pdid_v4.mjs
           node --check tools/test_m2_infinitive_bank_v4.mjs
           node --check tools/test_infinitive_v3.mjs
           node --check tools/test_present_perfect_v3.mjs
@@ -56,6 +58,8 @@ jobs:
         run: node tools/test_gen_be_v4.mjs
       - name: GEN-PBE V4 regression
         run: node tools/test_gen_pbe_v4.mjs
+      - name: GEN-PDID V4 regression
+        run: node tools/test_gen_pdid_v4.mjs
       - name: M2 infinitive bank V4 regression
         run: node tools/test_m2_infinitive_bank_v4.mjs
       - name: Infinitive V3 regression
@@ -106,6 +110,7 @@ jobs:
           SOURCE_SHA=$GITHUB_SHA
           GEN_BE_V4=enabled
           GEN_PBE_V4=enabled
+          GEN_PDID_V4=enabled
           M2_INFINITIVE_BANK_V4=enabled
           V7_GATE=enabled
           EOF
