@@ -52,7 +52,7 @@ jobs:
       - name: Install Playwright WebKit
         run: |
           npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps webkit
+          npx playwright install webkit
 
       - name: Run iPhone-sized WebKit interaction smoke
         env:
@@ -124,4 +124,5 @@ jobs:
           git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png
           git diff --cached --quiet && exit 0
           git commit -m 'test: record live vocabulary WebKit smoke pass'
+          git pull --rebase origin main
           git push origin HEAD:main
