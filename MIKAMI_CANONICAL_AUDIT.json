@@ -1,0 +1,18 @@
+{
+  "bytes_utf8": 4095290,
+  "sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
+  "markers": {
+    "R1-PRON": 0,
+    "GEN-PRS": 0,
+    "M2-GER2": 0,
+    "M2-COMP2": 0,
+    "M2X-INF": 0,
+    "My friend is smaller than He.": 0,
+    "Practice tennis": 0,
+    "Mika love listening": 0,
+    "She love": 0,
+    "She begin": 0
+  },
+  "qb_data_found": false,
+  "targets": []
+}
