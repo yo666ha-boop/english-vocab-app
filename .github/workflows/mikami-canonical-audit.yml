@@ -1,0 +1,59 @@
+name: Mikami canonical app audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mikami-canonical-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect canonical markers and target question groups
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re, json, hashlib
+
+          p = Path('index.html')
+          text = p.read_text(encoding='utf-8')
+          markers = [
+              'R1-PRON', 'GEN-PRS', 'M2-GER2', 'M2-COMP2', 'M2X-INF',
+              'My friend is smaller than He.', 'Practice tennis',
+              'Mika love listening', 'She love', 'She begin'
+          ]
+          report = {
+              'bytes_utf8': len(text.encode('utf-8')),
+              'sha256': hashlib.sha256(text.encode('utf-8')).hexdigest(),
+              'markers': {m: text.count(m) for m in markers},
+              'qb_data_found': False,
+              'targets': []
+          }
+          m = re.search(r'<script id="qb-data"[^>]*>(.*?)</script>', text, re.S)
+          if m:
+              report['qb_data_found'] = True
+              try:
+                  bank = json.loads(m.group(1))
+                  prefixes = ('R1-PRON','GEN-PRS','M2-GER2','M2-COMP2','M2X-INF')
+                  for q in bank:
+                      qid = str(q.get('id',''))
+                      cat = str(q.get('category',''))
+                      if qid.startswith(prefixes) or any(k in cat for k in ['現在完了','関係代名詞']):
+                          report['targets'].append(q)
+              except Exception as e:
+                  report['qb_parse_error'] = repr(e)
+          Path('MIKAMI_CANONICAL_AUDIT.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+          PY
+      - name: Commit audit report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add MIKAMI_CANONICAL_AUDIT.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore: record canonical English app audit'
+          git push
