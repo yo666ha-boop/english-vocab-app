@@ -30,8 +30,7 @@ function repairCurrent(x){
   const q=String(x.q||'');
   if(x.type==='変形'&&/を疑問文にしなさい。?$/.test(q)){
     let src=q.replace(/\s*を疑問文にしなさい。?$/,'').trim().replace(/[.。]$/,'');
-    src=repairCurrentAffirmative(src);
-    const ans=currentQuestion(src);
+    src=repairCurrentAffirmative(src); const ans=currentQuestion(src);
     if(ans){x.q=`${src}. を疑問文にしなさい。`;x.a=ans;return;}
   }
   if(x.type==='見分け'){
@@ -40,10 +39,8 @@ function repairCurrent(x){
     return;
   }
   if(x.type==='間違い直し'){
-    // Intentionally-wrong Do/Does + adjective question: only the model answer is corrected.
-    let m=q.match(/^(?:Do|Does)\s+(.+?)\s+([^?]+)\?\s*の誤りを直しなさい。?$/i);
-    if(m&&looksAdjectivalPredicate(m[2])){const s=canonicalSubjectCase(m[1]);x.a=`${presentBe(s,true)} ${questionSubject(s)} ${m[2].trim()}?`;return;}
-    // Intentionally-wrong be + lexical verb sentence: keep the error prompt and regenerate its correction.
+    let m=q.match(/^(?:Do|Does)\s+(.+?)\?\s*の誤りを直しなさい。?$/i);
+    if(m){const sr=splitSubjectRest(m[1]);if(sr&&looksAdjectivalPredicate(sr.rest)){x.a=`${presentBe(sr.subject,true)} ${questionSubject(sr.subject)} ${sr.rest.trim()}?`;return;}}
     m=q.match(/^(.+?)\s+(?:am|is|are)\s+([A-Za-z]+)(.*?)[.]?\s*の誤りを直しなさい。?$/i);
     if(m&&!looksAdjectivalPredicate(m[2]+m[3])){const s=canonicalSubjectCase(m[1]);x.a=`${s} ${toPresentVerb(m[2],isThirdSingular(s))}${m[3].trimEnd()}.`;}
   }
@@ -52,8 +49,7 @@ function repairPast(x){
   const q=String(x.q||'');
   if(x.type==='変形'&&/を疑問文にしなさい。?$/.test(q)){
     let src=q.replace(/\s*を疑問文にしなさい。?$/,'').trim().replace(/[.。]$/,'');
-    src=repairPastAffirmative(src);
-    const ans=pastQuestion(src);
+    src=repairPastAffirmative(src); const ans=pastQuestion(src);
     if(ans){x.q=`${src}. を疑問文にしなさい。`;x.a=ans;return;}
   }
   if(x.type==='見分け'){
@@ -62,8 +58,8 @@ function repairPast(x){
     return;
   }
   if(x.type==='間違い直し'){
-    const m=q.match(/^Did\s+(.+?)\s+([^?]+)\?\s*の誤りを直しなさい。?$/i);
-    if(m&&looksAdjectivalPredicate(m[2])){const s=canonicalSubjectCase(m[1]);x.a=`${pastBe(s,true)} ${questionSubject(s)} ${m[2].trim()}?`;}
+    const m=q.match(/^Did\s+(.+?)\?\s*の誤りを直しなさい。?$/i);
+    if(m){const sr=splitSubjectRest(m[1]);if(sr&&looksAdjectivalPredicate(sr.rest)){x.a=`${pastBe(sr.subject,true)} ${questionSubject(sr.subject)} ${sr.rest.trim()}?`;}}
   }
 }
 function repairCurrentAffirmative(src){
@@ -91,7 +87,9 @@ function pastQuestion(src){
 }
 
 const knownSubjects=['My mother','My brother','My father','My sister','My friend','Ken and I','Ken and Emi','Tom and Ken','I','You','We','They','He','She','Ken','Mika','Emi','Tom'];
-function parseSubject(src){const s=src.trim();for(const sub of [...knownSubjects].sort((a,b)=>b.length-a.length)){if(s.startsWith(sub+' '))return{subject:sub,rest:s.slice(sub.length+1)};}const m=s.match(/^([A-Z][A-Za-z]+)\s+(.+)$/);return m?{subject:m[1],rest:m[2]}:null;}
+function subjectList(){return [...knownSubjects].sort((a,b)=>b.length-a.length);}
+function parseSubject(src){const s=src.trim();for(const sub of subjectList())if(s.startsWith(sub+' '))return{subject:sub,rest:s.slice(sub.length+1)};const m=s.match(/^([A-Z][A-Za-z]+)\s+(.+)$/);return m?{subject:m[1],rest:m[2]}:null;}
+function splitSubjectRest(body){const s=body.trim();for(const sub of subjectList()){if(s.toLowerCase().startsWith(sub.toLowerCase()+' '))return{subject:canonicalSubjectCase(sub),rest:s.slice(sub.length+1)};}const m=s.match(/^([A-Za-z]+)\s+(.+)$/);return m?{subject:canonicalSubjectCase(m[1]),rest:m[2]}:null;}
 function canonicalSubjectCase(s){const t=s.trim();return({i:'I',you:'You',we:'We',they:'They',he:'He',she:'She'})[t.toLowerCase()]||t;}
 function questionSubject(s){if(s==='I')return'I';return({You:'you',We:'we',They:'they',He:'he',She:'she'})[s]||s;}
 function isThirdSingular(s){return !['I','You','We','They'].includes(s)&&!/\band\b/i.test(s);}
@@ -101,13 +99,16 @@ function cap(s){return s[0].toUpperCase()+s.slice(1);}
 function looksAdjectivalPredicate(s){const f=String(s).trim().split(/\s+/)[0].toLowerCase();return new Set(['busy','kind','happy','sad','tired','old','young','small','tall','cold','hot','hungry','ready','free','late','early','fine','sick']).has(f);}
 function toBaseVerb(v){const x=v.toLowerCase(),irr={has:'have',does:'do',goes:'go'};if(irr[x])return irr[x];if(/ies$/.test(x))return x.replace(/ies$/,'y');if(/(?:ches|shes|sses|xes|zes|oes)$/.test(x))return x.replace(/es$/,'');if(/s$/.test(x)&&!/ss$/.test(x))return x.slice(0,-1);return x;}
 function toPresentVerb(v,third){const b=toBaseVerb(v);if(!third)return b;if(b==='have')return'has';if(/[^aeiou]y$/.test(b))return b.slice(0,-1)+'ies';if(/(?:ch|sh|ss|x|z|o)$/.test(b))return b+'es';return b+'s';}
-function pastToBase(v){const x=v.toLowerCase(),irr={went:'go',had:'have',saw:'see',ate:'eat',made:'make',took:'take',came:'come',did:'do',wrote:'write',bought:'buy',spoke:'speak',ran:'run',got:'get',gave:'give',knew:'know',thought:'think',found:'find',lost:'lose',read:'read'};if(irr[x])return irr[x];if(/ied$/.test(x))return x.replace(/ied$/,'y');if(/ed$/.test(x)){let b=x.slice(0,-2);if(/([bcdfghjklmnpqrstvwxyz])\1$/.test(b))b=b.slice(0,-1);return b;}return x;}
+function pastToBase(v){
+  const x=v.toLowerCase();
+  const map={went:'go',had:'have',saw:'see',ate:'eat',made:'make',took:'take',came:'come',did:'do',wrote:'write',bought:'buy',spoke:'speak',ran:'run',got:'get',gave:'give',knew:'know',thought:'think',found:'find',lost:'lose',read:'read',practiced:'practice',liked:'like',used:'use',lived:'live',loved:'love',danced:'dance',closed:'close'};
+  if(map[x])return map[x];if(/ied$/.test(x))return x.replace(/ied$/,'y');if(/ed$/.test(x)){let b=x.slice(0,-2);if(/([bcdfghjklmnpqrstvwxyz])\1$/.test(b))b=b.slice(0,-1);return b;}return x;
+}
 function normalizeAuxPronounCase(s){return s.replace(/^(Do|Does|Did|Have|Has|Had|Can|Will|Would|Should|Must|Am|Is|Are|Was|Were)\s+(You|We|They|He|She)\b/,(_,a,p)=>`${a} ${p.toLowerCase()}`);}
 function auditM3(qb){
   const errors=[];
   for(const x of qb){
-    if(!String(x.id||'').startsWith('M3N-'))continue;
-    const a=String(x.a||'');
+    if(!String(x.id||'').startsWith('M3N-'))continue;const a=String(x.a||'');
     if(/^(?:Are|Were) (?:he|she|my mother|my brother|my father|Tom|Emi)\b/i.test(a))errors.push(`${x.id}:wrong be agreement:${a}`);
     if(/^Do (?:he|she|my mother|my brother|my father|Tom|Emi)\b/i.test(a))errors.push(`${x.id}:wrong do agreement:${a}`);
     if(/^Does (?:I|we|they|you)\b/i.test(a))errors.push(`${x.id}:wrong does agreement:${a}`);
