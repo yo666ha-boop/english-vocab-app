@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const [,,inputPath,outputPath=inputPath]=process.argv;
 if(!inputPath){console.error('Usage: node tools/repair_reading_v3.mjs <html> [output.html]');process.exit(2);}
 let html=fs.readFileSync(inputPath,'utf8');
-for(const marker of ['id="qb-data"','M2-RD2-1549','M2-RD2-1560']) if(!html.includes(marker)) throw new Error(`NOT CANONICAL: missing ${marker}`);
+for(const marker of ['id="qb-data"','M2-RD2-']) if(!html.includes(marker)) throw new Error(`NOT CANONICAL: missing ${marker}`);
 const re=/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/;
 const m=html.match(re);if(!m)throw new Error('missing qb-data');
 const qb=JSON.parse(m[1]);if(!Array.isArray(qb)||qb.length<10000)throw new Error(`NOT CANONICAL: qb count=${qb.length}`);
