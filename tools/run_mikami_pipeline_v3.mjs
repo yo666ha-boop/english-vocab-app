@@ -14,6 +14,7 @@ const s3a=path.join(tmp,'03a-gen-be-v4.html');
 const s3p=path.join(tmp,'03p-gen-pbe-v4.html');
 const s3d=path.join(tmp,'03d-gen-pdid-v4.html');
 const s3b=path.join(tmp,'03b-m2-infinitive-bank.html');
+const s3m=path.join(tmp,'03m-m2-past-v4.html');
 const s4=path.join(tmp,'04-infinitive.html');
 const s4c=path.join(tmp,'04c-m3c-review-v4.html');
 const s5=path.join(tmp,'05-present-perfect.html');
@@ -32,7 +33,8 @@ try{
   run('tools/repair_gen_pbe_v4.mjs',[s3a,s3p]);
   run('tools/repair_gen_pdid_v4.mjs',[s3p,s3d]);
   run('tools/repair_m2_infinitive_bank_v4.mjs',[s3d,s3b]);
-  run('tools/repair_infinitive_v3.mjs',[s3b,s4]);
+  run('tools/repair_m2_past_v4.mjs',[s3b,s3m]);
+  run('tools/repair_infinitive_v3.mjs',[s3m,s4]);
   run('tools/repair_m3c_review_v4.mjs',[s4,s4c]);
   run('tools/repair_present_perfect_v3.mjs',[s4c,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
@@ -52,19 +54,11 @@ try{
   if(!metaMatch) throw new Error('FINAL meta-data missing');
   const meta=JSON.parse(metaMatch[1]);
   if(meta.vocabCoordinateVersion!=='v7-2026-08-18-1based') throw new Error('FINAL vocab coordinate version mismatch');
-
   const bankText=qb.map(x=>`${x.id}\n${x.q||''}\n${x.a||''}`).join('\n');
-  const forbidden=[
-    /This is (?:he|she|we)\b/i,
-    /\bthan He\b|than\s*\/\s*He\b/,
-    /否定文または疑問文/,
-    /(?:Do|Does)\s+.+\s+have\s+(?:finished|visited|been|lost|lived|studied)/i,
-    /\b(?:Mika|She) (?:love|begin|stop)\b/,
-    /Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/,
-    /practice\s*\/\s*the\s*\/\s*tennis/i,
-    /^(?:Do|Does)\s+.+\s+(?:went|came|saw|made|took)\b/im,
-    /^Did\s+.+\s+(?:went|came|saw|made|took)\b/im
-  ];
+  const forbidden=[/This is (?:he|she|we)\b/i,/\bthan He\b|than\s*\/\s*He\b/,/否定文または疑問文/,
+    /(?:Do|Does)\s+.+\s+have\s+(?:finished|visited|been|lost|lived|studied)/i,/\b(?:Mika|She) (?:love|begin|stop)\b/,
+    /Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/,/practice\s*\/\s*the\s*\/\s*tennis/i,
+    /^(?:Do|Does)\s+.+\s+(?:went|came|saw|made|took)\b/im,/^Did\s+.+\s+(?:went|came|saw|made|took)\b/im];
   for(const re of forbidden) if(re.test(bankText)) throw new Error(`FINAL KNOWN-BAD QUESTION PATTERN: ${re}`);
 
   const singular=/^(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|Our team|This dog|My mother|My father|My brother|My sister|My friend) (?:play|go)\b/;
@@ -95,6 +89,14 @@ try{
         if(/^Did\s+.+\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought)\b/i.test(a)) throw new Error(`FINAL GEN-PDID past verb after Did: ${x.id}`);
       }
       if(x.type==='変形'&&/を否定文にしなさい/.test(q)&&/\bdid not\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought)\b/i.test(a)) throw new Error(`FINAL GEN-PDID past verb after did not: ${x.id}`);
+    }
+    if(String(x.id||'').startsWith('M2-PAST-')&&x.type==='変形'){
+      const q=String(x.q||''),a=String(x.a||'');
+      if(x.category==='過去の疑問文・否定文'&&/を疑問文にしなさい/.test(q)){
+        if(/^(?:Do|Does)\b/.test(a)) throw new Error(`FINAL M2 past present auxiliary: ${x.id}`);
+        if(/^Did\s+(?:you|You)\b/.test(a)&&/^(?:I|We)\b/.test(q)) throw new Error(`FINAL M2 past subject changed to you: ${x.id}`);
+        if(/\bDid\s+.+\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought|used)\b/i.test(a)) throw new Error(`FINAL M2 past non-base after Did: ${x.id}`);
+      }
     }
     if(String(x.id||'').startsWith('M3C-')&&x.type==='変形'&&!String(x.category||'').startsWith('現在完了形')){
       const q=String(x.q||''),a=String(x.a||'');
@@ -133,35 +135,19 @@ try{
   const genPbeAudit=JSON.parse(fs.readFileSync(s3p+'.gen-pbe-v4.audit.json','utf8'));
   const genPdidAudit=JSON.parse(fs.readFileSync(s3d+'.gen-pdid-v4.audit.json','utf8'));
   const m2InfAudit=JSON.parse(fs.readFileSync(s3b+'.m2-infinitive-bank-v4.audit.json','utf8'));
+  const m2PastAudit=JSON.parse(fs.readFileSync(s3m+'.m2-past-v4.audit.json','utf8'));
   const m3cAudit=JSON.parse(fs.readFileSync(s4c+'.m3c-review-v4.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
   const m3Audit=JSON.parse(fs.readFileSync(s9+'.m3-review.audit.json','utf8'));
   const vocabAudit=JSON.parse(fs.readFileSync(s11+'.v7-coordinate.audit.json','utf8'));
-  const report={
-    status:'OK',input:inputPath,output:outputPath,
-    question_count:baseAudit.question_count,
-    targeted_v3_pre_changed:preAudit.changed,
-    base_changed:baseAudit.changed_items,
-    targeted_v3_post_changed:postAudit.changed,
-    gen_be_v4_changed:genBeAudit.changed,
-    gen_pbe_v4_changed:genPbeAudit.changed,
-    gen_pdid_v4_changed:genPdidAudit.changed,
-    m2_infinitive_bank_v4_changed:m2InfAudit.changed,
-    m3c_review_v4_changed:m3cAudit.changed,
-    m3_word_order_v4_changed:wordOrderAudit.changed,
-    m3_infinitive2_v4_changed:inf2Audit.changed,
-    m3_changed:m3Audit.changed,
-    vocab_coordinate_version:vocabAudit.version,
-    vocab_migration:vocabAudit.stats,
-    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,gen_pdid:true,m2_infinitive_bank:true,m3c_review:true}
-  };
+  const report={status:'OK',input:inputPath,output:outputPath,question_count:baseAudit.question_count,
+    targeted_v3_pre_changed:preAudit.changed,base_changed:baseAudit.changed_items,targeted_v3_post_changed:postAudit.changed,
+    gen_be_v4_changed:genBeAudit.changed,gen_pbe_v4_changed:genPbeAudit.changed,gen_pdid_v4_changed:genPdidAudit.changed,
+    m2_infinitive_bank_v4_changed:m2InfAudit.changed,m2_past_v4_changed:m2PastAudit.changed,m3c_review_v4_changed:m3cAudit.changed,
+    m3_word_order_v4_changed:wordOrderAudit.changed,m3_infinitive2_v4_changed:inf2Audit.changed,m3_changed:m3Audit.changed,
+    vocab_coordinate_version:vocabAudit.version,vocab_migration:vocabAudit.stats,
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,gen_pdid:true,m2_infinitive_bank:true,m2_past:true,m3c_review:true}};
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
-}catch(e){
-  try{if(fs.existsSync(outputPath))fs.unlinkSync(outputPath);}catch{}
-  console.error(`MIKAMI V3 PIPELINE FAILED: ${e.message}`);
-  process.exit(4);
-}finally{
-  try{fs.rmSync(tmp,{recursive:true,force:true});}catch{}
-}
+}catch(e){try{if(fs.existsSync(outputPath))fs.unlinkSync(outputPath);}catch{}console.error(`MIKAMI V3 PIPELINE FAILED: ${e.message}`);process.exit(4);}finally{try{fs.rmSync(tmp,{recursive:true,force:true});}catch{}}
