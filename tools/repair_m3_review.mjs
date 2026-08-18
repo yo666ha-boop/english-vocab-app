@@ -124,6 +124,9 @@ function auditM3(qb){
   }
   return{errors};
 }
-function parseAnswerQuestionSubject(a){const m=String(a).match(/^(?:Do|Does|Did|Am|Is|Are|Was|Were|Have|Has|Had|Can|Will|Would|Should|Must)\s+(.+?)\s+/i);return m?canonicalSubjectCase(m[1]):null;}
+function parseAnswerQuestionSubject(a){
+  const m=String(a).match(/^(?:Do|Does|Did|Am|Is|Are|Was|Were|Have|Has|Had|Can|Will|Would|Should|Must)\s+(.+?)\?$/i);
+  if(!m)return null;const sr=splitSubjectRest(m[1]);return sr?sr.subject:null;
+}
 function extractJsonScript(src,id){const re=new RegExp(`<script\\s+id=["']${id}["']\\s+type=["']application/json["']>([\\s\\S]*?)<\\/script>`),m=src.match(re);if(!m)throw new Error(`missing JSON script ${id}`);return{json:m[1]};}
 function replaceJsonScript(src,id,json){const re=new RegExp(`(<script\\s+id=["']${id}["']\\s+type=["']application/json["']>)[\\s\\S]*?(<\\/script>)`);if(!re.test(src))throw new Error(`missing JSON script ${id}`);return src.replace(re,`$1${json}$2`);}
