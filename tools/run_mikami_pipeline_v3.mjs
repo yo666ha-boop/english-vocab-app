@@ -7,18 +7,21 @@ import {execFileSync} from 'node:child_process';
 const [,,inputPath,outputPath='14b01a93-de5d-4c95-a655-932d2f3f2513_repaired.html']=process.argv;
 if(!inputPath){console.error('Usage: node tools/run_mikami_pipeline_v3.mjs <canonical.html> [output.html]');process.exit(2);}
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v3-pipeline-'));
-const s1=path.join(tmp,'01-targeted-v3.html');
+const s1=path.join(tmp,'01-targeted-pre.html');
 const s2=path.join(tmp,'02-base.html');
-const s3=path.join(tmp,'03-m3.html');
-const s4=path.join(tmp,'04-case.html');
+const s3=path.join(tmp,'03-targeted-post.html');
+const s4=path.join(tmp,'04-m3.html');
+const s5=path.join(tmp,'05-case.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
-  // Normalize generated families first so the strict canonical audit does not stop on known delegated defects.
+  // Pre-pass removes generated defects that the strict base audit intentionally refuses.
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
   run('tools/fix_mikami_canonical.mjs',[s1,s2]);
-  run('tools/repair_m3_review.mjs',[s2,s3]);
-  run('tools/normalize_question_subject_case.mjs',[s3,s4]);
-  run('tools/apply_mikami_runtime_gates.mjs',[s4,outputPath]);
+  // Post-pass prevents base repairs from reintroducing capitalization/inflection defects.
+  run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
+  run('tools/repair_m3_review.mjs',[s3,s4]);
+  run('tools/normalize_question_subject_case.mjs',[s4,s5]);
+  run('tools/apply_mikami_runtime_gates.mjs',[s5,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
   for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','minIdx <= 0) return false']){
@@ -44,14 +47,16 @@ try{
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
   }
 
-  const targetedAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
+  const preAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
-  const m3Audit=JSON.parse(fs.readFileSync(s3+'.m3-review.audit.json','utf8'));
+  const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
+  const m3Audit=JSON.parse(fs.readFileSync(s4+'.m3-review.audit.json','utf8'));
   const report={
     status:'OK',input:inputPath,output:outputPath,
     question_count:baseAudit.question_count,
-    targeted_v3_changed:targetedAudit.changed,
+    targeted_v3_pre_changed:preAudit.changed,
     base_changed:baseAudit.changed_items,
+    targeted_v3_post_changed:postAudit.changed,
     m3_changed:m3Audit.changed,
     uncertain_vocab_positions:baseAudit.audit.uncertain_vocab_positions,
     gates:{vocab_fail_closed:true,prerequisite:true,quality:true}
