@@ -1,0 +1,21 @@
+name: Mikami Canonical Repair V2 Check
+on:
+  push:
+    branches: [mikami-canonical-repair]
+  workflow_dispatch:
+jobs:
+  check-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: |
+          node --check tools/repair_m3_review.mjs
+          node --check tools/normalize_question_subject_case.mjs
+          node --check tools/run_mikami_pipeline_v2.mjs
+          node --check tools/test_m3_review_v2.mjs
+      - name: M3 v2 regression
+        run: node tools/test_m3_review_v2.mjs
