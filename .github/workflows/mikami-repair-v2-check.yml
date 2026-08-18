@@ -2,6 +2,8 @@ name: Mikami Canonical Repair V2 Check
 on:
   push:
     branches: [mikami-canonical-repair]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 jobs:
   check-v2:
