@@ -88,7 +88,7 @@ function auditBank(qb){
     const q=String(x.q||''), a=String(x.a||''), both=`${q} ${a}`;
     if(x.type==='空所補充' && /^To$/.test(a)) errors.push(`${x.id}:capitalized to blank`);
     if(/\bto played\b/i.test(a)) errors.push(`${x.id}:answer still has to played`);
-    if(/\bwent(?:s)? there\b/i.test(a)) errors.push(`${x.id}:invalid wents/went-family answer artifact`);
+    if(/\bwents there\b/i.test(a)) errors.push(`${x.id}:invalid wents artifact`);
     if(/\bHe gots up\b/i.test(both)) errors.push(`${x.id}:gots remains`);
     if(/to played (?:swimming|running)\b/i.test(q)) errors.push(`${x.id}:mixed infinitive+collocation error remains`);
     if(x.type==='読解' && /^He got up early to catch the first train/.test(q) && a!=='彼は始発電車に乗るために早く起きました。') errors.push(`${x.id}:reading answer mismatch`);
