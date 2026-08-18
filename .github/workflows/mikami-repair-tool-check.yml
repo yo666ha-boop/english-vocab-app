@@ -14,11 +14,18 @@ jobs:
         with:
           node-version: '22'
       - name: Syntax check
-        run: node --check tools/fix_mikami_canonical.mjs
+        run: |
+          node --check tools/fix_mikami_canonical.mjs
+          node --check tools/apply_mikami_runtime_gates.mjs
       - name: Safety check against unrelated index
         run: |
           if node tools/fix_mikami_canonical.mjs index.html /tmp/should-not-exist.html 2>/tmp/mikami.err; then
-            echo 'ERROR: tool accepted unrelated index.html'
+            echo 'ERROR: repair tool accepted unrelated index.html'
             exit 1
           fi
           grep -q 'NOT CANONICAL' /tmp/mikami.err
+          if node tools/apply_mikami_runtime_gates.mjs index.html /tmp/should-not-exist-2.html 2>/tmp/mikami-gates.err; then
+            echo 'ERROR: gate tool accepted unrelated index.html'
+            exit 1
+          fi
+          grep -q 'NOT CANONICAL' /tmp/mikami-gates.err
