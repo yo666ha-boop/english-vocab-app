@@ -1,0 +1,27 @@
+{
+  "status": "ready-for-final-audit",
+  "canonical_source": "英単語_教科書別マスターデータ_NH_SS_2026_v7_app_wordbook_master",
+  "canonical_csv_sha256": "c0c57a2b9f57412e6c9c6e33251385b782b0316390e3d050c9c1b932b3d9815d",
+  "textbook_records": 3975,
+  "exam_records_preserved": 534,
+  "elementary_records_preserved": 104,
+  "total_records": 4613,
+  "missing_english": 0,
+  "missing_japanese": 0,
+  "missing_kana": 0,
+  "counts_by_textbook_grade": {
+    "ニューホライズン_1": 832,
+    "ニューホライズン_2": 673,
+    "ニューホライズン_3": 608,
+    "サンシャイン_1": 662,
+    "サンシャイン_2": 673,
+    "サンシャイン_3": 527
+  },
+  "sync_commit": "ab55703ed5b1a69d045da88a373fd4ce67224dbf",
+  "notes": [
+    "Canonical v7 textbook data replaced the old 3524-record textbook dataset.",
+    "Exam and elementary datasets were preserved unchanged in count.",
+    "Existing POS metadata was reused only when uniquely matched; new single-word POS was not guessed.",
+    "The temporary one-shot workflow was removed after the successful sync."
+  ]
+}
