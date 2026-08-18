@@ -1,0 +1,67 @@
+{
+  "version": "old-meta-sections-to-v7-2026-08-18",
+  "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated.",
+  "aliases": {
+    "ニューホライズン": {
+      "中1": {
+        "Unit 8-1": "Unit 8-1・2", "Unit 8-2": "Unit 8-1・2",
+        "Unit 9-2": "Unit 9-2", "Unit 9-3": "Unit 9-2",
+        "Let's Read 1": "Let's Read", "Let's Read 2": "Let's Read"
+      },
+      "中2": {
+        "Unit 3-1": "Unit 3-1・2", "Unit 3-2": "Unit 3-1・2",
+        "Let's Read 1-1": "Let's Read 1", "Let's Read 1-2": "Let's Read 1",
+        "Unit 4-3": "Unit 4-3・4", "Unit 4-4": "Unit 4-3・4",
+        "Unit 5-3": "Unit 5-3・4", "Unit 5-4": "Unit 5-3・4",
+        "Let's Read 2-1": "Let's Read 2", "Let's Read 2-2": "Let's Read 2",
+        "Unit 7-1": "Unit 7-1・2", "Unit 7-2": "Unit 7-1・2",
+        "Let's Read 3-1": "Let's Read 3", "Let's Read 3-2": "Let's Read 3"
+      },
+      "中3": {
+        "Unit 1-1": "Unit 1-1・2", "Unit 1-2": "Unit 1-1・2",
+        "Unit 2-3": "Unit 2-3・4", "Unit 2-4": "Unit 2-3・4",
+        "Unit 3-3": "Unit 3-3・4", "Unit 3-4": "Unit 3-3・4",
+        "Unit 4-3": "Unit 4-4",
+        "Unit 5-3": "Unit 5-4",
+        "Unit 6-2": "Unit 6-2・3", "Unit 6-3": "Unit 6-4",
+        "Let's Read 2-1": "Let's Read 2", "Let's Read 2-2": "Let's Read 2"
+      }
+    },
+    "サンシャイン": {
+      "中1": {
+        "Step 2 / Our Project 1": "Our Project 1",
+        "PROGRAM 9-2": "PROGRAM 9-2・3", "PROGRAM 9-3": "PROGRAM 9-2・3",
+        "PROGRAM 10-1": "PROGRAM 10-1・2", "PROGRAM 10-2": "PROGRAM 10-1・2",
+        "Step 6 / Our Project 3 / Power-Up 6": "Power-Up 6"
+      },
+      "中2": {
+        "Reading 1-1": "Reading 1", "Reading 1-2 / Power-Up 2": "Power-Up 2",
+        "Power-Up 4 / Step 4 / Our Project 5": "Step 4 / Our Project 5",
+        "Reading 2-1": "Reading 2", "Reading 2-2": "Reading 2",
+        "PROGRAM 7-1": "PROGRAM 7-1・2", "PROGRAM 7-2": "PROGRAM 7-1・2",
+        "PROGRAM 8-2": "PROGRAM 8-2・3", "PROGRAM 8-3": "PROGRAM 8-2・3",
+        "Power-Up 5": "Power-Up 5 / Step 5", "Step 5 / Our Project 6": "Our Project 6",
+        "Reading 3-1": "Reading 3", "Reading 3-2": "Reading 3"
+      },
+      "中3": {
+        "Power-Up 1": "Power-Up 1 / Our Project 7", "Step 2 / Our Project 7": "Power-Up 1 / Our Project 7",
+        "Reading 1-1": "Reading 1", "Reading 1-2": "Reading 1",
+        "Power-Up 2 / Step 4": "Power-Up 2 / Step 4",
+        "Our Project 8 / Power-Up 3": "Our Project 8 / Power-Up 3",
+        "PROGRAM 7-1": "PROGRAM 7-1・2", "PROGRAM 7-2": "PROGRAM 7-1・2",
+        "Reading 2-1": "Reading 2", "Reading 2-2": "Reading 2"
+      }
+    }
+  },
+  "blockedPatterns": [
+    "^Sounds and Letters ", "^Get Ready [2456]$", "^Further Reading ", "^Step 3$"
+  ],
+  "blockedExact": {
+    "ニューホライズン": {"中3": ["Let's Read 3-1", "Let's Read 3-2"]},
+    "サンシャイン": {
+      "中1": ["PROGRAM 1-3","PROGRAM 2-3","PROGRAM 3-3","PROGRAM 4-3","PROGRAM 5-3","PROGRAM 6-3","PROGRAM 7-3","PROGRAM 8-3","PROGRAM 9-4","Step 5 / Power-Up 5","PROGRAM 10-4"],
+      "中2": ["PROGRAM 1-4","PROGRAM 2-4","PROGRAM 3-4","PROGRAM 4-4","PROGRAM 5-4","PROGRAM 6-4","PROGRAM 7-4","PROGRAM 8-4"],
+      "中3": ["PROGRAM 1-4","PROGRAM 2-4","PROGRAM 3-4","PROGRAM 4-4","PROGRAM 5-4","PROGRAM 6-4","PROGRAM 7-4"]
+    }
+  }
+}

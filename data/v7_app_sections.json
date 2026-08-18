@@ -1,0 +1,30 @@
+{
+  "version": "v7-2026-08-18-1based",
+  "semantics": {
+    "priorGrade": -2,
+    "unknown": [0, -1],
+    "currentGradeFirstSection": 1
+  },
+  "counts": {
+    "ニューホライズン": {"中1": 46, "中2": 35, "中3": 30},
+    "サンシャイン": {"中1": 39, "中2": 33, "中3": 27}
+  },
+  "sections": {
+    "ニューホライズン": {
+      "中1": ["プレステップ2","プレステップ3","プレステップ4","プレステップ5","プレステップ6","プレステップ7","プレステップ8","プレステップ9","Unit 0","Unit 1-1","Unit 1-2","Unit 1-3","Unit 2-1","Unit 2-2","Unit 2-3","Unit 3-1","Unit 3-2","Unit 3-3","Unit 4-1","Unit 4-2","Unit 4-3","Stage Activity 1","Unit 5-1","Unit 5-2","Unit 5-3","Unit 6-1","Unit 6-2","Unit 6-3","Real Life English 2","Unit 7-1","Unit 7-2","Unit 7-3","Real Life English 3","Unit 8-1・2","Unit 8-3","Real Life English 4","Stage Activity 2","Unit 9-1","Unit 9-2","Real Life English 5","Unit 10-1","Unit 10-2","Unit 10-3","Real Life English 6","Stage Activity 3","Let's Read"],
+      "中2": ["Unit 0","Unit 1-1","Unit 1-2","Unit 1-3","Unit 1-4","Unit 2-1","Unit 2-2","Unit 2-3","Unit 2-4","Real Life English 2","Unit 3-1・2","Unit 3-3","Unit 3-4","Stage Activity 1","Let's Read 1","Unit 4-1","Unit 4-2","Unit 4-3・4","Real Life English 4","Unit 5-1","Unit 5-2","Unit 5-3・4","Unit 6-1","Unit 6-2","Unit 6-3","Unit 6-4","Real Life English 6","Stage Activity 2","Let's Read 2","Unit 7-1・2","Unit 7-3","Unit 7-4","Real Life English 7","Stage Activity 3","Let's Read 3"],
+      "中3": ["Unit 0","Unit 1-1・2","Unit 1-3","Unit 1-4","Unit 2-1","Unit 2-2","Unit 2-3・4","Unit 3-1","Unit 3-2","Unit 3-3・4","Real Life English 3","Stage Activity 1","Let's Read 1-1","Let's Read 1-2","Unit 4-1","Unit 4-2","Unit 4-3","Unit 4-4","Real Life English 4","Unit 5-1","Unit 5-2","Unit 5-3","Unit 5-4","Real Life English 5","Stage Activity 2","Unit 6-1","Unit 6-2・3","Unit 6-4","Stage Activity 3","Let's Read 2"]
+    },
+    "サンシャイン": {
+      "中1": ["プレステップ2","プレステップ3","プレステップ4","プレステップ5","プレステップ6","プレステップ7","プレステップ8","プレステップ9","Get Ready 3","PROGRAM 1-1","PROGRAM 1-2","PROGRAM 2-1","PROGRAM 2-2","アクションコーナー","PROGRAM 3-1","PROGRAM 3-2","Our Project 1","Power-Up 1","PROGRAM 4-1","PROGRAM 4-2","PROGRAM 5-1","PROGRAM 5-2","Power-Up 2","PROGRAM 6-1","PROGRAM 6-2","PROGRAM 7-1","PROGRAM 7-2","疑問詞のまとめ","Power-Up 3","Our Project 2","PROGRAM 8-1","PROGRAM 8-2","Power-Up 4","PROGRAM 9-1","PROGRAM 9-2・3","PROGRAM 10-1・2","PROGRAM 10-3","Our Project 3","Power-Up 6"],
+      "中2": ["PROGRAM 1-1","PROGRAM 1-2","PROGRAM 1-3","PROGRAM 2-1","PROGRAM 2-2","PROGRAM 2-3","Power-Up 1 / Step 2","PROGRAM 3-1","PROGRAM 3-2","PROGRAM 3-3","Our Project 4","Reading 1","Power-Up 2","PROGRAM 4-1","PROGRAM 4-2","PROGRAM 4-3","Power-Up 3 / Step 3","PROGRAM 5-1","PROGRAM 5-2","PROGRAM 5-3","PROGRAM 6-1","PROGRAM 6-2","PROGRAM 6-3","Power-Up 4","Step 4 / Our Project 5","Reading 2","PROGRAM 7-1・2","PROGRAM 7-3","PROGRAM 8-1","PROGRAM 8-2・3","Power-Up 5 / Step 5","Our Project 6","Reading 3"],
+      "中3": ["PROGRAM 1-1","PROGRAM 1-2","PROGRAM 1-3","PROGRAM 2-1","PROGRAM 2-2","PROGRAM 2-3","PROGRAM 3-1","PROGRAM 3-2","PROGRAM 3-3","Power-Up 1 / Our Project 7","Reading 1","PROGRAM 4-1","PROGRAM 4-2","PROGRAM 4-3","PROGRAM 5-1","PROGRAM 5-2","PROGRAM 5-3","Power-Up 2 / Step 4","PROGRAM 6-1","PROGRAM 6-2","PROGRAM 6-3","Our Project 8 / Power-Up 3","PROGRAM 7-1・2","PROGRAM 7-3","Power-Up 4","Reading 2","Special Project"]
+    }
+  },
+  "source": {
+    "spreadsheetId": "1AkKYV6h-9ZCq1-p8126u4t8z0pvPSRnHlOfY8C-3hH4",
+    "workCopyId": "1Dg4LyGzy0ljXUeXyVWLzFiZ2fGcrsI7oytf7o2NlRbw",
+    "wordCount": 3975,
+    "mappingAudit": {"EXACT": 3045, "FALLBACK_LAST_CORE": 507, "PRIOR_GRADE": 423, "UNMAPPED": 0}
+  }
+}
