@@ -17,17 +17,21 @@ jobs:
         run: |
           node --check tools/fix_mikami_canonical.mjs
           node --check tools/repair_targeted_patterns_v3.mjs
+          node --check tools/repair_infinitive_v3.mjs
           node --check tools/repair_present_perfect_v3.mjs
           node --check tools/repair_m3_review.mjs
           node --check tools/normalize_question_subject_case.mjs
           node --check tools/apply_mikami_runtime_gates.mjs
           node --check tools/run_mikami_pipeline_v3.mjs
           node --check tools/test_targeted_patterns_v3.mjs
+          node --check tools/test_infinitive_v3.mjs
           node --check tools/test_present_perfect_v3.mjs
           node --check tools/test_m3_review_v2.mjs
           node --check tools/test_pipeline_v3_integration.mjs
       - name: Targeted generated-family V3 regression
         run: node tools/test_targeted_patterns_v3.mjs
+      - name: Infinitive V3 regression
+        run: node tools/test_infinitive_v3.mjs
       - name: Present-perfect V3 regression
         run: node tools/test_present_perfect_v3.mjs
       - name: M3 regression
