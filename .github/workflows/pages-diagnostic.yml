@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/pages-diagnostic.yml'
+      - '.github/workflows/vocab-pages-health.yml'
   workflow_dispatch:
 
 permissions:
@@ -45,22 +46,7 @@ jobs:
           const build=JSON.parse(fs.readFileSync('/tmp/build.json','utf8'));
           const health=JSON.parse(fs.readFileSync('/tmp/health.json','utf8'));
           const run=(health.workflow_runs||[])[0]||{};
-          const out={
-            api_ok:process.env.API_OK==='true',
-            html_url:process.env.PAGE_URL||'',
-            status:pages.status||'',
-            build_type:pages.build_type||'',
-            source:pages.source||null,
-            https_enforced:pages.https_enforced??null,
-            latest_build:{status:build.status||'',commit:build.commit||'',created_at:build.created_at||'',updated_at:build.updated_at||''},
-            live_http_code:process.env.HTTP_CODE||'',
-            live_ok:process.env.LIVE_OK==='true',
-            expected_main_index_sha256:process.env.EXPECTED_SHA||'',
-            live_index_sha256:process.env.LIVE_SHA||'',
-            live_matches_main:!!process.env.LIVE_SHA&&process.env.LIVE_SHA===process.env.EXPECTED_SHA,
-            webkit_health_run:{id:run.id||null,status:run.status||'',conclusion:run.conclusion||'',head_sha:run.head_sha||'',created_at:run.created_at||'',updated_at:run.updated_at||''},
-            checked_at_utc:new Date().toISOString()
-          };
+          const out={api_ok:process.env.API_OK==='true',html_url:process.env.PAGE_URL||'',status:pages.status||'',build_type:pages.build_type||'',source:pages.source||null,https_enforced:pages.https_enforced??null,latest_build:{status:build.status||'',commit:build.commit||'',created_at:build.created_at||'',updated_at:build.updated_at||''},live_http_code:process.env.HTTP_CODE||'',live_ok:process.env.LIVE_OK==='true',expected_main_index_sha256:process.env.EXPECTED_SHA||'',live_index_sha256:process.env.LIVE_SHA||'',live_matches_main:!!process.env.LIVE_SHA&&process.env.LIVE_SHA===process.env.EXPECTED_SHA,webkit_health_run:{id:run.id||null,status:run.status||'',conclusion:run.conclusion||'',head_sha:run.head_sha||'',created_at:run.created_at||'',updated_at:run.updated_at||''},checked_at_utc:new Date().toISOString()};
           fs.writeFileSync('audit/PAGES_API_STATUS.json',JSON.stringify(out,null,2)+'\n');
           NODE
           cat audit/PAGES_API_STATUS.json
@@ -73,4 +59,5 @@ jobs:
           git add audit/PAGES_API_STATUS.json
           git diff --cached --quiet && exit 0
           git commit -m 'chore: record GitHub Pages diagnostic'
+          git pull --rebase origin main
           git push origin HEAD:main
