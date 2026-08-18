@@ -18,13 +18,13 @@ replaceOne("q:'We want to play tennis. を否定文または疑問文に直し�
 replaceOne("'M2X-INF-1001':{q:'We want to play tennis. を疑問文にしなさい。',a:'Do we want to play tennis?'}","'M2X-INF-1001':{q:'You went to the library to study. を疑問文にしなさい。',a:'Did you go to the library to study?'}","INF past-tense expectation");
 replaceOne(
   "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'}\n];",
-  "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'},\n  {id:'M3N-WORD-TEST',subject:'英語',grade:'中3',category:'英語の語順',type:'読解',q:'This dog play tennis at six. 問い：この英文の意味を書きなさい。',a:'This dogはat sixにtennisをします。'}\n];",
-  'M3 word-order fixture'
+  "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'},\n  {id:'M3N-WORD-TEST',subject:'英語',grade:'中3',category:'英語の語順',type:'読解',q:'This dog play tennis at six. 問い：この英文の意味を書きなさい。',a:'This dogはat sixにtennisをします。'},\n  {id:'M3N-INF2-TEST',subject:'英語',grade:'中3',category:'不定詞②',type:'間違い直し',q:'My father went there to played swimming. の誤りを直しなさい。',a:'My father went there to go swimming.'}\n];",
+  'M3 word-order + infinitive II fixture'
 );
 replaceOne(
   " 'M3N-00246':{a:'Did I play tennis yesterday?'}\n};",
-  " 'M3N-00246':{a:'Did I play tennis yesterday?'},\n 'M3N-WORD-TEST':{q:'This dog plays tennis at six. 問い：この英文の意味を書きなさい。',a:'この犬は6時にテニスをします。'}\n};",
-  'M3 word-order expectation'
+  " 'M3N-00246':{a:'Did I play tennis yesterday?'},\n 'M3N-WORD-TEST':{q:'This dog plays tennis at six. 問い：この英文の意味を書きなさい。',a:'この犬は6時にテニスをします。'},\n 'M3N-INF2-TEST':{q:'My father went there to swam. の誤りを直しなさい。',a:'My father went there to swim.'}\n};",
+  'M3 word-order + infinitive II expectation'
 );
 replaceOne("Mikami full v2 repair regression: OK","Mikami full v3 integration regression: OK","success label");
 const dir=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v3-integration-'));
