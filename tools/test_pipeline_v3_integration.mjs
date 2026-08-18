@@ -12,12 +12,12 @@ const replaceOne=(from,to,label)=>{
 replaceOne("tools/run_mikami_pipeline_v2.mjs","tools/run_mikami_pipeline_v3.mjs","pipeline v3");
 replaceOne(
   "const cases=[\n  {id:'R1-PRON-0001'",
-  "const cases=[\n  {id:'GEN-BE-TEST',subject:'英語',grade:'中1',category:'be動詞',type:'変形',q:'We are happy. を疑問文にしなさい。',a:'Are you happy?'},\n  {id:'GEN-PBE-TEST',subject:'英語',grade:'中1',category:'過去のbe動詞',type:'変形',q:'We were happy yesterday. を疑問文にしなさい。',a:'Were you happy yesterday?'},\n  {id:'GEN-PDID-TEST',subject:'英語',grade:'中1',category:'過去の疑問文・否定文',type:'変形',q:'I got up at six yesterday. を疑問文にしなさい。',a:'Do you got up at six yesterday?'},\n  {id:'M3C-TEST',subject:'英語',grade:'中3',category:'未来の文',type:'変形',q:'We will help my mother. を疑問文にしなさい。',a:'Will you help your mother?'},\n  {id:'R1-PRON-0001'",
+  "const cases=[\n  {id:'GEN-BE-TEST',subject:'英語',grade:'中1',category:'be動詞',type:'変形',q:'We are happy. を疑問文にしなさい。',a:'Are you happy?'},\n  {id:'GEN-PBE-TEST',subject:'英語',grade:'中1',category:'過去のbe動詞',type:'変形',q:'We were happy yesterday. を疑問文にしなさい。',a:'Were you happy yesterday?'},\n  {id:'GEN-PDID-TEST',subject:'英語',grade:'中1',category:'過去の疑問文・否定文',type:'変形',q:'I got up at six yesterday. を疑問文にしなさい。',a:'Do you got up at six yesterday?'},\n  {id:'M2-PAST-TEST',subject:'英語',grade:'中2',category:'過去の疑問文・否定文',type:'変形',q:'I used the internet yesterday. を疑問文にしなさい。',a:'Did you us the internet yesterday?'},\n  {id:'M3C-TEST',subject:'英語',grade:'中3',category:'未来の文',type:'変形',q:'We will help my mother. を疑問文にしなさい。',a:'Will you help your mother?'},\n  {id:'R1-PRON-0001'",
   'generated review fixtures'
 );
 replaceOne(
   "const expected={\n 'R1-PRON-0001'",
-  "const expected={\n 'GEN-BE-TEST':{a:'Are we happy?'},\n 'GEN-PBE-TEST':{a:'Were we happy yesterday?'},\n 'GEN-PDID-TEST':{a:'Did I get up at six yesterday?'},\n 'M3C-TEST':{q:'We will help our mother. を疑問文にしなさい。',a:'Will we help our mother?'},\n 'R1-PRON-0001'",
+  "const expected={\n 'GEN-BE-TEST':{a:'Are we happy?'},\n 'GEN-PBE-TEST':{a:'Were we happy yesterday?'},\n 'GEN-PDID-TEST':{a:'Did I get up at six yesterday?'},\n 'M2-PAST-TEST':{a:'Did I use the internet yesterday?'},\n 'M3C-TEST':{q:'We will help our mother. を疑問文にしなさい。',a:'Will we help our mother?'},\n 'R1-PRON-0001'",
   'generated review expectations'
 );
 replaceOne("q:'We (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","GEN third-person fixture");
