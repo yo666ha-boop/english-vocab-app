@@ -12,13 +12,13 @@ const replaceOne=(from,to,label)=>{
 replaceOne("tools/run_mikami_pipeline_v2.mjs","tools/run_mikami_pipeline_v3.mjs","pipeline v3");
 replaceOne(
   "const cases=[\n  {id:'R1-PRON-0001'",
-  "const cases=[\n  {id:'GEN-BE-TEST',subject:'英語',grade:'中1',category:'be動詞',type:'変形',q:'We are happy. を疑問文にしなさい。',a:'Are you happy?'},\n  {id:'GEN-PBE-TEST',subject:'英語',grade:'中1',category:'過去のbe動詞',type:'変形',q:'We were happy yesterday. を疑問文にしなさい。',a:'Were you happy yesterday?'},\n  {id:'R1-PRON-0001'",
-  'GEN-BE + GEN-PBE fixtures'
+  "const cases=[\n  {id:'GEN-BE-TEST',subject:'英語',grade:'中1',category:'be動詞',type:'変形',q:'We are happy. を疑問文にしなさい。',a:'Are you happy?'},\n  {id:'GEN-PBE-TEST',subject:'英語',grade:'中1',category:'過去のbe動詞',type:'変形',q:'We were happy yesterday. を疑問文にしなさい。',a:'Were you happy yesterday?'},\n  {id:'GEN-PDID-TEST',subject:'英語',grade:'中1',category:'過去の疑問文・否定文',type:'変形',q:'I got up at six yesterday. を疑問文にしなさい。',a:'Do you got up at six yesterday?'},\n  {id:'R1-PRON-0001'",
+  'GEN-BE + GEN-PBE + GEN-PDID fixtures'
 );
 replaceOne(
   "const expected={\n 'R1-PRON-0001'",
-  "const expected={\n 'GEN-BE-TEST':{a:'Are we happy?'},\n 'GEN-PBE-TEST':{a:'Were we happy yesterday?'},\n 'R1-PRON-0001'",
-  'GEN-BE + GEN-PBE expectations'
+  "const expected={\n 'GEN-BE-TEST':{a:'Are we happy?'},\n 'GEN-PBE-TEST':{a:'Were we happy yesterday?'},\n 'GEN-PDID-TEST':{a:'Did I get up at six yesterday?'},\n 'R1-PRON-0001'",
+  'GEN-BE + GEN-PBE + GEN-PDID expectations'
 );
 replaceOne("q:'We (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","GEN third-person fixture");
 replaceOne("'GEN-PRS-0731':{a:'practice the piano'}","'GEN-PRS-0731':{a:'practices the piano'}","GEN third-person expectation");
