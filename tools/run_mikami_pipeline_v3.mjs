@@ -15,6 +15,7 @@ const s3p=path.join(tmp,'03p-gen-pbe-v4.html');
 const s3d=path.join(tmp,'03d-gen-pdid-v4.html');
 const s3b=path.join(tmp,'03b-m2-infinitive-bank.html');
 const s4=path.join(tmp,'04-infinitive.html');
+const s4c=path.join(tmp,'04c-m3c-review-v4.html');
 const s5=path.join(tmp,'05-present-perfect.html');
 const s6=path.join(tmp,'06-reading.html');
 const s7=path.join(tmp,'07-m3-word-order.html');
@@ -32,7 +33,8 @@ try{
   run('tools/repair_gen_pdid_v4.mjs',[s3p,s3d]);
   run('tools/repair_m2_infinitive_bank_v4.mjs',[s3d,s3b]);
   run('tools/repair_infinitive_v3.mjs',[s3b,s4]);
-  run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
+  run('tools/repair_m3c_review_v4.mjs',[s4,s4c]);
+  run('tools/repair_present_perfect_v3.mjs',[s4c,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
   run('tools/repair_m3_word_order_v4.mjs',[s6,s7]);
   run('tools/repair_m3_infinitive2_v4.mjs',[s7,s8]);
@@ -42,11 +44,7 @@ try{
   run('tools/apply_mikami_runtime_gates.mjs',[s11,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
-  for(const marker of [
-    'id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)',
-    'v7-2026-08-18-1based','if (minIdx === -2) return true','const selectedOrdinal = currentSectionIndex() + 1'
-  ]) if(!out.includes(marker)) throw new Error(`FINAL GATE MISSING: ${marker}`);
-
+  for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','v7-2026-08-18-1based','if (minIdx === -2) return true','const selectedOrdinal = currentSectionIndex() + 1']) if(!out.includes(marker)) throw new Error(`FINAL GATE MISSING: ${marker}`);
   const m=out.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
   if(!m) throw new Error('FINAL qb-data missing');
   const qb=JSON.parse(m[1]);
@@ -98,6 +96,11 @@ try{
       }
       if(x.type==='変形'&&/を否定文にしなさい/.test(q)&&/\bdid not\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought)\b/i.test(a)) throw new Error(`FINAL GEN-PDID past verb after did not: ${x.id}`);
     }
+    if(String(x.id||'').startsWith('M3C-')&&x.type==='変形'&&!String(x.category||'').startsWith('現在完了形')){
+      const q=String(x.q||''),a=String(x.a||'');
+      if(/を疑問文にしなさい/.test(q)&&/^(?:Will|Can|Must|Should|May|Are|Were|Do|Does|Did)\s+you\b/i.test(a)&&/^(?:I|We)\b/.test(q)) throw new Error(`FINAL M3C subject changed to you: ${x.id}`);
+      if(/\bWe\b/.test(q)&&/\byour (?:mother|father|brother|sister|homework|key)\b/i.test(`${q} ${a}`)) throw new Error(`FINAL M3C possessive drift we->your: ${x.id}`);
+    }
     if(String(x.id||'').startsWith('GEN-PRS-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GEN blank: ${x.id}`);
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
     const cat=String(x.category||''),q=String(x.q||''),a=String(x.a||'');
@@ -130,6 +133,7 @@ try{
   const genPbeAudit=JSON.parse(fs.readFileSync(s3p+'.gen-pbe-v4.audit.json','utf8'));
   const genPdidAudit=JSON.parse(fs.readFileSync(s3d+'.gen-pdid-v4.audit.json','utf8'));
   const m2InfAudit=JSON.parse(fs.readFileSync(s3b+'.m2-infinitive-bank-v4.audit.json','utf8'));
+  const m3cAudit=JSON.parse(fs.readFileSync(s4c+'.m3c-review-v4.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
   const m3Audit=JSON.parse(fs.readFileSync(s9+'.m3-review.audit.json','utf8'));
@@ -144,12 +148,13 @@ try{
     gen_pbe_v4_changed:genPbeAudit.changed,
     gen_pdid_v4_changed:genPdidAudit.changed,
     m2_infinitive_bank_v4_changed:m2InfAudit.changed,
+    m3c_review_v4_changed:m3cAudit.changed,
     m3_word_order_v4_changed:wordOrderAudit.changed,
     m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
     vocab_coordinate_version:vocabAudit.version,
     vocab_migration:vocabAudit.stats,
-    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,gen_pdid:true,m2_infinitive_bank:true}
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,gen_pdid:true,m2_infinitive_bank:true,m3c_review:true}
   };
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
