@@ -26,132 +26,102 @@ console.log(JSON.stringify({status:'OK',changed:changes.length,audit},null,2));
 function repair(x){
   let q=String(x.q||''),a=String(x.a||'');
   if(x.type==='並びかえ'){
-    const tokens=parseParenTokens(q);
-    const spec=specFromTokens(tokens);
+    const tokens=parseParenTokens(q),spec=specFromTokens(tokens);
     if(spec){
-      const sentence=buildSentence(spec);
-      a=sentence;
-      // Keep the learning target visible in the token bank, but correct the verb form token.
+      a=buildSentence(spec);
       const fixed=tokens.map(t=>normalizeTokenForSpec(t,spec));
       q=q.replace(/\([^()]+\)/,`( ${fixed.join(' / ')} )`);
     }
   }else if(x.type==='間違い直し'){
     const src=q.replace(/\s*の誤りを直しなさい。?$/,'').trim().replace(/[.。]$/,'');
-    const spec=specFromBrokenSentence(src);
-    if(spec)a=buildSentence(spec);
+    const spec=specFromBrokenSentence(src);if(spec)a=buildSentence(spec);
   }else if(x.type==='英作文'){
-    const answerSpec=specFromCorrectSentence(a);
-    if(answerSpec){
-      q=`次の日本語に合う英文を書きなさい。『${toJapanese(answerSpec)}』`;
-      a=buildSentence(answerSpec);
-    }
+    const spec=specFromCorrectSentence(a);
+    if(spec){const jp=toJapanese(spec);if(jp){q=`次の日本語に合う英文を書きなさい。『${jp}』`;a=buildSentence(spec);}}
   }else if(x.type==='選択'){
-    const b=q.match(/\(A\)\s*([^()]+?)\s*\(B\)\s*([^()]+?)\s*\(C\)\s*([^()]+?)(?:$|\.)/);
-    if(b){
-      const spec=specFromLooseSentence(b[2].trim().replace(/[.。]$/,''));
-      if(spec){
-        const correct=buildSentence(spec).replace(/\.$/,'');
-        q=q.replace(b[2].trim(),correct);
-        a='B';
-      }
-    }
+    const b=q.match(/\(A\)\s*([^()]+?)\s*\(B\)\s*([^()]+?)\s*\(C\)\s*([^()]+?)(?=$|\.)/);
+    if(b){const spec=specFromLooseSentence(b[2].trim().replace(/[.。]$/,''),true);if(spec){q=q.replace(b[2].trim(),buildSentence(spec).replace(/\.$/,''));a='B';}}
   }else if(x.type==='空所補充'){
     const mm=q.match(/^(.+?)\s*\(\s*\)\s*(.+?)\s*[.。]/)||q.match(/^(.+?)\s*\(\s+\)\s*(.+?)\s*[.。]/);
-    if(mm){
-      const subject=clean(mm[1]);
-      const rest=clean(mm[2]);
-      if(/^to\s+/.test(rest))a=isThird(subject)?'goes':'go';
-      else if(/^(?:soccer|tennis|baseball|basketball|volleyball)\b/i.test(rest))a=isThird(subject)?'plays':'play';
-      a=lowerFirst(a);
-    }
+    if(mm){const subject=normalizeSubjectCapitalization(clean(mm[1])),rest=clean(mm[2]);if(/^to\s+/.test(rest))a=isThird(subject)?'goes':'go';else if(/^(?:soccer|tennis|baseball|basketball|volleyball)\b/i.test(rest))a=isThird(subject)?'plays':'play';a=lowerFirst(a);}
   }else if(x.type==='読解'){
     const src=q.split(/\s*問い：/)[0].trim().replace(/[.。]$/,'');
-    const spec=specFromLooseSentence(src);
-    if(spec){
-      q=`${buildSentence(spec)} 問い：この英文の意味を書きなさい。`;
-      a=toJapanese(spec);
-    }
+    const spec=specFromLooseSentence(src,false);if(spec){const jp=toJapanese(spec);if(jp){q=`${buildSentence(spec)} 問い：この英文の意味を書きなさい。`;a=jp;}}
   }
   x.q=q;x.a=a;
 }
 
 function parseParenTokens(q){const m=String(q).match(/\(([^()]+)\)/);return m?m[1].split('/').map(clean):[];}
 function specFromTokens(tokens){
-  if(tokens.length<4)return null;
-  const verbToken=tokens.find(t=>/^(?:play|plays|go|goes)$/i.test(t));
-  const time=tokens.find(t=>/^at\s+/.test(t));
-  if(!verbToken||!time)return null;
-  const remaining=tokens.filter(t=>t!==verbToken&&t!==time);
-  if(remaining.length<2)return null;
-  const subject=normalizeSubjectCapitalization(remaining[0]);
-  const complement=remaining.slice(1).join(' ');
-  return {subject,kind:activityKind(complement),complement,time};
+  if(tokens.length<3)return null;
+  const verb=tokens.find(t=>/^(?:play|plays|go|goes)$/i.test(t));
+  const time=tokens.find(isTimePhrase)||null;
+  if(!verb)return null;
+  const remaining=tokens.filter(t=>t!==verb&&t!==time);if(remaining.length<2)return null;
+  const subject=normalizeSubjectCapitalization(remaining[0]),complement=remaining.slice(1).join(' ');
+  return{subject,kind:activityKind(complement),complement,time};
 }
 function specFromBrokenSentence(src){
-  // destination pattern: Subject the station go at noon -> Subject goes to the station at noon
-  let m=src.match(/^(.+?)\s+(the\s+\w+(?:\s+\w+)*)\s+(?:go|goes)\s+(at\s+.+)$/i);
-  if(m)return{subject:normalizeSubjectCapitalization(m[1]),kind:'destination',complement:clean(m[2]),time:clean(m[3])};
-  return specFromLooseSentence(src);
+  const {core,time}=splitTime(src);
+  const subject=detectKnownSubject(core);if(!subject)return null;
+  const rest=core.slice(subject.length).trim();
+  let m=rest.match(/^(the\s+.+?)\s+(?:go|goes)$/i);
+  if(m)return{subject,kind:'destination',complement:clean(m[1]),time};
+  return specFromLooseSentence(src,false);
 }
-function specFromLooseSentence(src){
-  const timeMatch=src.match(/\s+(at\s+(?:noon|midnight|\w+))$/i);if(!timeMatch)return null;
-  const time=clean(timeMatch[1]);const core=src.slice(0,timeMatch.index).trim();
+function specFromLooseSentence(src,allowNoTime=false){
+  const {core,time}=splitTime(src);
+  if(!time&&!allowNoTime)return null;
   const subject=detectKnownSubject(core);if(!subject)return null;
   const rest=core.slice(subject.length).trim();
   let m=rest.match(/^(?:play|plays)\s+(.+)$/i);if(m)return{subject,kind:activityKind(m[1]),complement:clean(m[1]),time};
   m=rest.match(/^(?:go|goes)\s+(.+)$/i);if(m){const c=clean(m[1]);return{subject,kind:/^to\s+/.test(c)?'destination':activityKind(c),complement:c.replace(/^to\s+/,'').trim(),time};}
+  // broken selection B: singular subject + bare play/go still parses here.
+  m=rest.match(/^(?:play|go)\s+(.+)$/i);if(m){const c=clean(m[1]);return{subject,kind:/^to\s+/.test(c)?'destination':activityKind(c),complement:c.replace(/^to\s+/,'').trim(),time};}
   return null;
 }
-function specFromCorrectSentence(s){return specFromLooseSentence(String(s||'').trim().replace(/[.。]$/,''));}
+function specFromCorrectSentence(s){return specFromLooseSentence(String(s||'').trim().replace(/[.。]$/,''),true);}
+function splitTime(src){
+  const s=clean(src);
+  const patterns=[/\s+(every day)$/i,/\s+(every morning)$/i,/\s+(every evening)$/i,/\s+(every night)$/i,/\s+(in the morning)$/i,/\s+(in the afternoon)$/i,/\s+(in the evening)$/i,/\s+(after class)$/i,/\s+(after school)$/i,/\s+(before breakfast)$/i,/\s+(before dinner)$/i,/\s+(on Sunday)$/i,/\s+(on weekends)$/i,/\s+(at noon)$/i,/\s+(at midnight)$/i,/\s+(at (?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve))$/i];
+  for(const re of patterns){const m=s.match(re);if(m)return{core:s.slice(0,m.index).trim(),time:clean(m[1])};}
+  return{core:s,time:null};
+}
+function isTimePhrase(t){return !!splitTime(`X ${t}`).time;}
 function detectKnownSubject(core){
-  const list=['The student','The teacher','Our team','This dog','My mother','My father','My brother','My sister','My friend','Ken and Emi','Tom and Ken','They','We','You','I','He','She','Mika','Ken','Emi','Tom'];
+  const list=['The student','The teacher','Our team','This dog','My mother','My father','My brother','My sister','My friend','Ken and Emi','Tom and Ken','They','We','You','I','He','She','Yuki','Mika','Ken','Emi','Tom'];
   for(const s of list.sort((a,b)=>b.length-a.length))if(core.toLowerCase().startsWith(s.toLowerCase()+' '))return normalizeSubjectCapitalization(s);
   const m=core.match(/^((?:The|This|Our|My)\s+\w+|[A-Z][A-Za-z]+)\s+/);return m?normalizeSubjectCapitalization(m[1]):null;
 }
 function activityKind(c){const x=clean(c).toLowerCase();if(['running','swimming'].includes(x))return'go-activity';if(/^the\s+/.test(x))return'destination';return'play-sport';}
-function buildSentence(s){
-  if(s.kind==='destination')return`${s.subject} ${isThird(s.subject)?'goes':'go'} to ${s.complement.replace(/^to\s+/i,'')} ${s.time}.`;
-  if(s.kind==='go-activity')return`${s.subject} ${isThird(s.subject)?'goes':'go'} ${s.complement} ${s.time}.`;
-  return`${s.subject} ${isThird(s.subject)?'plays':'play'} ${s.complement} ${s.time}.`;
-}
-function normalizeTokenForSpec(t,s){
-  if(/^(?:play|plays)$/i.test(t))return isThird(s.subject)?'plays':'play';
-  if(/^(?:go|goes)$/i.test(t))return isThird(s.subject)?'goes':'go';
-  return t;
-}
+function buildSentence(s){const tail=s.time?` ${s.time}`:'';if(s.kind==='destination')return`${s.subject} ${isThird(s.subject)?'goes':'go'} to ${s.complement.replace(/^to\s+/i,'')}${tail}.`;if(s.kind==='go-activity')return`${s.subject} ${isThird(s.subject)?'goes':'go'} ${s.complement}${tail}.`;return`${s.subject} ${isThird(s.subject)?'plays':'play'} ${s.complement}${tail}.`;}
+function normalizeTokenForSpec(t,s){if(/^(?:play|plays)$/i.test(t))return isThird(s.subject)?'plays':'play';if(/^(?:go|goes)$/i.test(t))return isThird(s.subject)?'goes':'go';return t;}
 function toJapanese(s){
-  const subj=jpSubject(s.subject),time=jpTime(s.time);
-  if(!subj||!time)throw new Error(`Unsupported Japanese mapping: ${JSON.stringify(s)}`);
-  if(s.kind==='destination'){
-    const dest=jpDestination(s.complement);if(!dest)throw new Error(`Unsupported destination: ${s.complement}`);
-    return`${subj}は${time}${dest}へ行きます。`;
-  }
-  if(s.kind==='go-activity'){
-    const act={running:'走りに',swimming:'泳ぎに'}[s.complement.toLowerCase()];if(!act)throw new Error(`Unsupported activity: ${s.complement}`);
-    return`${subj}は${time}${act}行きます。`;
-  }
-  const sport=jpSport(s.complement);if(!sport)throw new Error(`Unsupported sport: ${s.complement}`);
-  return`${subj}は${time}${sport}をします。`;
+  const subj=jpSubject(s.subject),time=jpTime(s.time);if(!subj||!time)return null;
+  if(s.kind==='destination'){const dest=jpDestination(s.complement);return dest?`${subj}は${time}${dest}へ行きます。`:null;}
+  if(s.kind==='go-activity'){const act={running:'走りに',swimming:'泳ぎに'}[s.complement.toLowerCase()];return act?`${subj}は${time}${act}行きます。`:null;}
+  const sport=jpSport(s.complement);return sport?`${subj}は${time}${sport}をします。`:null;
 }
-function jpSubject(s){return{'The student':'その生徒','The teacher':'その先生','Our team':'私たちのチーム','This dog':'この犬','My mother':'私の母','My father':'私の父','My brother':'私の兄［弟］','My sister':'私の姉［妹］','My friend':'私の友達','He':'彼','She':'彼女','Mika':'ミカ','Ken':'ケン','Emi':'エミ','Tom':'トム','I':'私は','You':'あなた','We':'私たち','They':'彼ら'}[s]||null;}
-function jpTime(t){const x=t.toLowerCase();const map={'at noon':'正午に','at midnight':'真夜中に','at six':'6時に','at seven':'7時に','at eight':'8時に','at nine':'9時に','at ten':'10時に','at eleven':'11時に'};return map[x]||null;}
-function jpDestination(c){const x=c.replace(/^to\s+/i,'').toLowerCase();return{'the station':'駅','the library':'図書館','the room':'部屋','the park':'公園','the school':'学校'}[x]||null;}
+function jpSubject(s){return{'The student':'その生徒','The teacher':'その先生','Our team':'私たちのチーム','This dog':'この犬','My mother':'私の母','My father':'私の父','My brother':'私の兄弟','My sister':'私の姉妹','My friend':'私の友達','He':'彼','She':'彼女','Yuki':'ユキ','Mika':'ミカ','Ken':'ケン','Emi':'エミ','Tom':'トム','I':'私','You':'あなた','We':'私たち','They':'彼ら'}[s]||null;}
+function jpTime(t){if(!t)return null;const x=t.toLowerCase();const map={'every day':'毎日','every morning':'毎朝','every evening':'毎晩','every night':'毎晩','in the morning':'朝に','in the afternoon':'午後に','in the evening':'夕方に','after class':'授業の後に','after school':'放課後に','before breakfast':'朝食前に','before dinner':'夕食前に','on sunday':'日曜日に','on weekends':'週末に','at noon':'正午に','at midnight':'真夜中に','at one':'1時に','at two':'2時に','at three':'3時に','at four':'4時に','at five':'5時に','at six':'6時に','at seven':'7時に','at eight':'8時に','at nine':'9時に','at ten':'10時に','at eleven':'11時に','at twelve':'12時に'};return map[x]||null;}
+function jpDestination(c){const x=c.replace(/^to\s+/i,'').toLowerCase();return{'the station':'駅','the library':'図書館','the room':'部屋','the park':'公園','the school':'学校','the pool':'プール','the office':'事務所','the zoo':'動物園','the gym':'体育館','the store':'店'}[x]||null;}
 function jpSport(c){return{soccer:'サッカー',tennis:'テニス',baseball:'野球',basketball:'バスケットボール',volleyball:'バレーボール'}[c.toLowerCase()]||null;}
 function isThird(s){return !['I','You','We','They'].includes(s)&&! /\band\b/i.test(s);}
-function normalizeSubjectCapitalization(s){const x=clean(s);const map={'the student':'The student','the teacher':'The teacher','our team':'Our team','this dog':'This dog'};return map[x.toLowerCase()]||x;}
+function normalizeSubjectCapitalization(s){const x=clean(s);const map={'the student':'The student','the teacher':'The teacher','our team':'Our team','this dog':'This dog','he':'He','she':'She','you':'You','we':'We','they':'They','i':'I','yuki':'Yuki','mika':'Mika','ken':'Ken','emi':'Emi','tom':'Tom'};return map[x.toLowerCase()]||x;}
 function clean(s){return String(s||'').trim().replace(/\s+/g,' ');}
 function lowerFirst(s){s=String(s||'');return /^[A-Z]/.test(s)?s[0].toLowerCase()+s.slice(1):s;}
+function singularSubjectsPattern(){return'(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|Our team|This dog|My mother|My father|My brother|My sister|My friend)';}
 
 function auditWordOrder(qb){
-  const errors=[];
+  const errors=[],sing=singularSubjectsPattern();
   for(const x of qb){
     if(!String(x.id||'').startsWith('M3N-')||x.category!=='英語の語順')continue;
-    const q=String(x.q||''),a=String(x.a||'');
-    if(/\b(?:The student|The teacher|Our team|This dog) (?:play|go)\b/.test(`${q} ${a}`))errors.push(`${x.id}:bare verb remains for singular subject`);
+    const q=String(x.q||''),a=String(x.a||''),both=`${q} ${a}`;
+    if(new RegExp(`\\b${sing} (?:play|go)\\b`).test(both))errors.push(`${x.id}:bare verb remains for singular subject`);
     if(x.type==='空所補充'&&/^[A-Z]/.test(a))errors.push(`${x.id}:capitalized blank answer ${a}`);
-    if(/(?:はat\b|に(?:soccer|tennis|baseball|running|swimming)\b|the\s+\w+へ)/i.test(`${q} ${a}`))errors.push(`${x.id}:code-switched Japanese remains`);
-    if(x.type==='選択'&&/\(B\)\s*(?:The student|The teacher|Our team|This dog) (?:play|go)\b/.test(q))errors.push(`${x.id}:ungrammatical B remains`);
-    if(x.type==='読解'&&/^[A-Za-z].*[ぁ-んァ-ン一-龯]/.test(a))errors.push(`${x.id}:mixed-language reading answer`);
+    if(/(?:は(?:at |every |after |before |in the |on )|に(?:soccer|tennis|baseball|basketball|volleyball|running|swimming)\b|the\s+\w+へ)/i.test(both))errors.push(`${x.id}:code-switched Japanese remains`);
+    if(x.type==='選択'&&new RegExp(`\\(B\\)\\s*${sing} (?:play|go)\\b`).test(q))errors.push(`${x.id}:ungrammatical B remains`);
+    if(x.type==='読解'&&/[A-Za-z]+は/.test(a))errors.push(`${x.id}:mixed-language reading answer`);
   }
   return{errors};
 }
