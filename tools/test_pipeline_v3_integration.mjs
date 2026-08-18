@@ -10,7 +10,7 @@ const replaceOne=(from,to,label)=>{
   src=src.replace(from,to);
 };
 replaceOne("tools/run_mikami_pipeline_v2.mjs","tools/run_mikami_pipeline_v3.mjs","pipeline v3");
-replaceOne("q:'We (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。',a:'Practice tennis'","GEN third-person fixture");
+replaceOne("q:'We (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","GEN third-person fixture");
 replaceOne("'GEN-PRS-0731':{a:'practice the piano'}","'GEN-PRS-0731':{a:'practices the piano'}","GEN third-person expectation");
 replaceOne("q:'He is smaller than He.',a:'He is smaller than He.'","q:'She is popularer than He.',a:'She is more popular than He.'","COMP generated fixture");
 replaceOne("'M2-COMP2-1001':{a:'Ken is smaller than Tom.'}","'M2-COMP2-1001':{q:'She is popularer than Ken.',a:'She is more popular than Ken.'}","COMP generated expectation");
