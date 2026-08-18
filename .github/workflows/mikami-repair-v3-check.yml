@@ -24,6 +24,7 @@ jobs:
           node --check tools/repair_m3_infinitive2_v4.mjs
           node --check tools/repair_m3_review.mjs
           node --check tools/normalize_question_subject_case.mjs
+          node --check tools/migrate_vocab_coordinates_v7.mjs
           node --check tools/apply_mikami_runtime_gates.mjs
           node --check tools/run_mikami_pipeline_v3.mjs
           node --check tools/test_targeted_patterns_v3.mjs
@@ -33,6 +34,7 @@ jobs:
           node --check tools/test_m3_word_order_v4.mjs
           node --check tools/test_m3_infinitive2_v4.mjs
           node --check tools/test_m3_review_v2.mjs
+          node --check tools/test_vocab_coordinate_migration_v7.mjs
           node --check tools/test_pipeline_v3_integration.mjs
       - name: Targeted generated-family V3 regression
         run: node tools/test_targeted_patterns_v3.mjs
@@ -48,6 +50,8 @@ jobs:
         run: node tools/test_m3_infinitive2_v4.mjs
       - name: M3 regression
         run: node tools/test_m3_review_v2.mjs
+      - name: V7 vocabulary coordinate migration regression
+        run: node tools/test_vocab_coordinate_migration_v7.mjs
       - name: Full V3 pipeline integration
         run: node tools/test_pipeline_v3_integration.mjs
       - name: Safety stop against unrelated app
