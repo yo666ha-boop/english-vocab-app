@@ -15,8 +15,18 @@ const cases=[
   {id:'GEN-PRS-0006',subject:'英語',grade:'中1',category:'一般動詞',type:'変形',q:'He play tennis. を疑問文にしなさい。',a:'Do he play tennis?'},
   {id:'GEN-PRS-0007',subject:'英語',grade:'中1',category:'一般動詞',type:'変形',q:'He play tennis. を否定文にしなさい。',a:'He do not play tennis.'},
   {id:'GEN-PRS-0008',subject:'英語',grade:'中1',category:'一般動詞',type:'並びかえ',q:'次の語(句)を正しい順に並べかえなさい。 ( practice / the / tennis / I )',a:'I practice tennis.'},
-  {id:'M2-GER2-0001',subject:'英語',grade:'中2',category:'動名詞',type:'空所補充',q:'She enjoys (      ). 「音楽を聞くことを楽しみます」',a:'Listening to music'},
-  {id:'M2-GER2-0002',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『ミカは音楽を聞くことを楽しみます。』',a:'Mika love listening to music.'},
+
+  {id:'M2-GER2-0001',subject:'英語',grade:'中2',category:'動名詞',type:'空所補充',q:'I stop (      ). 「スマホを使うのをやめる」',a:'Using my phone'},
+  {id:'M2-GER2-0002',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『あなたは スマホを使うのをやめる。』',a:'You stop using my phone.'},
+  {id:'M2-GER2-0003',subject:'英語',grade:'中2',category:'動名詞',type:'間違い直し',q:'We like to play. の誤りを直しなさい。',a:'We like playing tennis.'},
+  {id:'M2-GER2-0004',subject:'英語',grade:'中2',category:'動名詞',type:'間違い直し',q:'They enjoy to read. の誤りを直しなさい。',a:'They enjoy reading comics.'},
+  {id:'M2-GER2-0005',subject:'英語',grade:'中2',category:'動名詞',type:'空所補充',q:'He stop (      ). 「スマホを使うのをやめる」',a:'Using my phone'},
+  {id:'M2-GER2-0006',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『彼女は 音楽を聞くことが大好きだ。』',a:'She love listening to music.'},
+  {id:'M2-GER2-0007',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『タクミは 理科を勉強し始める。』',a:'Takumi begin studying science.'},
+  {id:'M2-GER2-0008',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『ミカは スマホを使うのをやめる。』',a:'Mika stop using my phone.'},
+  {id:'M2-GER2-0009',subject:'英語',grade:'中2',category:'動名詞',type:'間違い直し',q:'My friend begin to study. の誤りを直しなさい。',a:'My friend begin studying science.'},
+  {id:'M2-GER2-0010',subject:'英語',grade:'中2',category:'動名詞',type:'英作文',q:'次の日本語に合う英文を書きなさい。『彼は 宿題を終える。』',a:'He finishes homework.'},
+
   {id:'M2-COMP2-0001',subject:'英語',grade:'中2',category:'比較',type:'間違い直し',q:'She is popularer than He. の誤りを直しなさい。',a:'She is more popular than He.'},
   {id:'M2-COMP2-0002',subject:'英語',grade:'中2',category:'比較',type:'並びかえ',q:'( She / than / He / is / easier )',a:'She is easier than that one.'}
 ];
@@ -35,8 +45,18 @@ const expected={
   'GEN-PRS-0006':{q:'He plays tennis. を疑問文にしなさい。',a:'Does he play tennis?'},
   'GEN-PRS-0007':{q:'He plays tennis. を否定文にしなさい。',a:'He does not play tennis.'},
   'GEN-PRS-0008':{q:'次の語(句)を正しい順に並べかえなさい。 ( practice / tennis / I )',a:'I practice tennis.'},
-  'M2-GER2-0001':{a:'listening to music'},
-  'M2-GER2-0002':{a:'Mika enjoys listening to music.'},
+
+  'M2-GER2-0001':{q:'I stop (      ). 「スマホを使うのをやめる」',a:'using the phone'},
+  'M2-GER2-0002':{q:'動名詞を使って、次の日本語に合う英文を書きなさい。『あなたは スマホを使うのをやめる。』',a:'You stop using the phone.'},
+  'M2-GER2-0003':{type:'変形',q:'次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We like (play) tennis.',a:'We like playing tennis.'},
+  'M2-GER2-0004':{type:'変形',q:'次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 They enjoy (read) comics.',a:'They enjoy reading comics.'},
+  'M2-GER2-0005':{q:'He stops (      ). 「スマホを使うのをやめる」',a:'using the phone'},
+  'M2-GER2-0006':{q:'動名詞を使って、次の日本語に合う英文を書きなさい。『彼女は 音楽を聞くことが大好きだ。』',a:'She loves listening to music.'},
+  'M2-GER2-0007':{q:'動名詞を使って、次の日本語に合う英文を書きなさい。『タクミは 理科を勉強し始める。』',a:'Takumi begins studying science.'},
+  'M2-GER2-0008':{q:'動名詞を使って、次の日本語に合う英文を書きなさい。『ミカは スマホを使うのをやめる。』',a:'Mika stops using the phone.'},
+  'M2-GER2-0009':{type:'変形',q:'次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 My friend begins (study) science.',a:'My friend begins studying science.'},
+  'M2-GER2-0010':{q:'動名詞を使って、次の日本語に合う英文を書きなさい。『彼は 宿題を終える。』',a:'He finishes doing homework.'},
+
   'M2-COMP2-0001':{q:'She is popularer than Ken. の誤りを直しなさい。',a:'She is more popular than Ken.'},
   'M2-COMP2-0002':{q:'( She / than / Ken / is / easier )',a:'She is easier than Ken.'}
 };
