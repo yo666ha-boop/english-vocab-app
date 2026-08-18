@@ -10,6 +10,16 @@ const replaceOne=(from,to,label)=>{
   src=src.replace(from,to);
 };
 replaceOne("tools/run_mikami_pipeline_v2.mjs","tools/run_mikami_pipeline_v3.mjs","pipeline v3");
+replaceOne(
+  "const cases=[\n  {id:'R1-PRON-0001'",
+  "const cases=[\n  {id:'GEN-BE-TEST',subject:'英語',grade:'中1',category:'be動詞',type:'変形',q:'We are happy. を疑問文にしなさい。',a:'Are you happy?'},\n  {id:'R1-PRON-0001'",
+  'GEN-BE fixture'
+);
+replaceOne(
+  "const expected={\n 'R1-PRON-0001'",
+  "const expected={\n 'GEN-BE-TEST':{a:'Are we happy?'},\n 'R1-PRON-0001'",
+  'GEN-BE expectation'
+);
 replaceOne("q:'We (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","GEN third-person fixture");
 replaceOne("'GEN-PRS-0731':{a:'practice the piano'}","'GEN-PRS-0731':{a:'practices the piano'}","GEN third-person expectation");
 replaceOne("'M2-GER2-1001':{a:'Mika enjoys listening to music.'}","'M2-GER2-1001':{type:'変形',q:'次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 Mika loves (listen) to music.',a:'Mika loves listening to music.'}","GER rebuilt expectation");
