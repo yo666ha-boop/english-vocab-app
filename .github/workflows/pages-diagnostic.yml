@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   pages: read
+  actions: read
 
 jobs:
   diagnose:
@@ -20,7 +21,7 @@ jobs:
         with:
           ref: main
 
-      - name: Read Pages API and live URL
+      - name: Read Pages API, live URL, and WebKit run status
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -30,6 +31,7 @@ jobs:
           EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
           if gh api "repos/${GITHUB_REPOSITORY}/pages" > /tmp/pages.json 2>/tmp/pages.err; then API_OK=true; else API_OK=false; printf '{}' > /tmp/pages.json; fi
           if gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" > /tmp/build.json 2>/tmp/build.err; then :; else printf '{}' > /tmp/build.json; fi
+          if gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vocab-pages-health.yml/runs?per_page=1" > /tmp/health.json 2>/tmp/health.err; then :; else printf '{"workflow_runs":[]}' > /tmp/health.json; fi
           PAGE_URL="$(node -e "const j=require('/tmp/pages.json'); console.log(j.html_url||'')")"
           HTTP_CODE=''; LIVE_SHA=''; LIVE_OK=false
           if [ -n "$PAGE_URL" ]; then
@@ -41,6 +43,8 @@ jobs:
           const fs=require('fs');
           const pages=JSON.parse(fs.readFileSync('/tmp/pages.json','utf8'));
           const build=JSON.parse(fs.readFileSync('/tmp/build.json','utf8'));
+          const health=JSON.parse(fs.readFileSync('/tmp/health.json','utf8'));
+          const run=(health.workflow_runs||[])[0]||{};
           const out={
             api_ok:process.env.API_OK==='true',
             html_url:process.env.PAGE_URL||'',
@@ -54,13 +58,13 @@ jobs:
             expected_main_index_sha256:process.env.EXPECTED_SHA||'',
             live_index_sha256:process.env.LIVE_SHA||'',
             live_matches_main:!!process.env.LIVE_SHA&&process.env.LIVE_SHA===process.env.EXPECTED_SHA,
+            webkit_health_run:{id:run.id||null,status:run.status||'',conclusion:run.conclusion||'',head_sha:run.head_sha||'',created_at:run.created_at||'',updated_at:run.updated_at||''},
             checked_at_utc:new Date().toISOString()
           };
           fs.writeFileSync('audit/PAGES_API_STATUS.json',JSON.stringify(out,null,2)+'\n');
           NODE
           cat audit/PAGES_API_STATUS.json
-          if [ -s /tmp/pages.err ]; then echo 'Pages API stderr:'; cat /tmp/pages.err; fi
-          if [ -s /tmp/build.err ]; then echo 'Latest build stderr:'; cat /tmp/build.err; fi
+          for f in /tmp/pages.err /tmp/build.err /tmp/health.err; do if [ -s "$f" ]; then cat "$f"; fi; done
 
       - name: Commit diagnostic result
         run: |
