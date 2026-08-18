@@ -1,0 +1,39 @@
+name: Mikami Canonical Repair V3 Check
+on:
+  push:
+    branches: [mikami-canonical-repair]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  check-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: |
+          node --check tools/fix_mikami_canonical.mjs
+          node --check tools/repair_targeted_patterns_v3.mjs
+          node --check tools/repair_m3_review.mjs
+          node --check tools/normalize_question_subject_case.mjs
+          node --check tools/apply_mikami_runtime_gates.mjs
+          node --check tools/run_mikami_pipeline_v3.mjs
+          node --check tools/test_targeted_patterns_v3.mjs
+          node --check tools/test_m3_review_v2.mjs
+          node --check tools/test_pipeline_v3_integration.mjs
+      - name: Targeted generated-family V3 regression
+        run: node tools/test_targeted_patterns_v3.mjs
+      - name: M3 regression
+        run: node tools/test_m3_review_v2.mjs
+      - name: Full V3 pipeline integration
+        run: node tools/test_pipeline_v3_integration.mjs
+      - name: Safety stop against unrelated app
+        run: |
+          if node tools/run_mikami_pipeline_v3.mjs index.html /tmp/not-canonical.html 2>/tmp/v3.err; then
+            echo 'ERROR: V3 pipeline accepted unrelated index.html'
+            exit 1
+          fi
+          grep -q 'NOT CANONICAL' /tmp/v3.err
