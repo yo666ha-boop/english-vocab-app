@@ -10,6 +10,7 @@ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v3-pipeline-'));
 const s1=path.join(tmp,'01-targeted-pre.html');
 const s2=path.join(tmp,'02-base.html');
 const s3=path.join(tmp,'03-targeted-post.html');
+const s3b=path.join(tmp,'03b-m2-infinitive-bank.html');
 const s4=path.join(tmp,'04-infinitive.html');
 const s5=path.join(tmp,'05-present-perfect.html');
 const s6=path.join(tmp,'06-reading.html');
@@ -23,7 +24,8 @@ try{
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
   run('tools/fix_mikami_canonical.mjs',[s1,s2]);
   run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
-  run('tools/repair_infinitive_v3.mjs',[s3,s4]);
+  run('tools/repair_m2_infinitive_bank_v4.mjs',[s3,s3b]);
+  run('tools/repair_infinitive_v3.mjs',[s3b,s4]);
   run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
   run('tools/repair_m3_word_order_v4.mjs',[s6,s7]);
@@ -61,11 +63,17 @@ try{
   ];
   for(const re of forbidden) if(re.test(bankText)) throw new Error(`FINAL KNOWN-BAD QUESTION PATTERN: ${re}`);
   const singular=/^(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|Our team|This dog|My mother|My father|My brother|My sister|My friend) (?:play|go)\b/;
+  const badM2InfThird=/^(?:He|She|Yuki|Mika|Takumi|Ken|Emi|Tom|The student|The teacher|This boy|This girl|My mother|My father|My brother|My sister|My friend) (?:want|need|like) to\b/i;
   for(const x of qb){
     if(/日本語で説明しなさい/.test(String(x.q||''))&&/^[A-Za-z]/.test(String(x.a||''))) throw new Error(`FINAL Japanese-answer mismatch: ${x.id}`);
     if(String(x.id||'').startsWith('GEN-PRS-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GEN blank: ${x.id}`);
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
     const cat=String(x.category||''),q=String(x.q||''),a=String(x.a||'');
+    if(String(x.id||'').startsWith('M2-INF2-')&&cat==='不定詞'){
+      if(x.type==='空所補充'&&/^To$/.test(a)) throw new Error(`FINAL M2 infinitive capitalized to: ${x.id}`);
+      if(x.type==='空所補充'&&/^to$/i.test(a)&&/\bto\s*\(\s*\)\s*(?=[A-Za-z])/i.test(q)) throw new Error(`FINAL M2 infinitive double-to blank: ${x.id}`);
+      if(badM2InfThird.test(a)) throw new Error(`FINAL M2 infinitive third-person agreement: ${x.id}`);
+    }
     if(cat.startsWith('現在完了形')){
       if(/^You have (?:finished my homework|lost my key)\b/.test(q)||/^We have (?:finished my homework|lost my key)\b/.test(q)||/^They have (?:finished my homework|lost my key)\b/.test(q)||/^He has (?:finished my homework|lost my key)\b/.test(q)||/^She has (?:finished my homework|lost my key)\b/.test(q)) throw new Error(`FINAL present-perfect possessive mismatch: ${x.id}`);
     }
@@ -86,6 +94,7 @@ try{
   const preAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
+  const m2InfAudit=JSON.parse(fs.readFileSync(s3b+'.m2-infinitive-bank-v4.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
   const m3Audit=JSON.parse(fs.readFileSync(s9+'.m3-review.audit.json','utf8'));
@@ -96,12 +105,13 @@ try{
     targeted_v3_pre_changed:preAudit.changed,
     base_changed:baseAudit.changed_items,
     targeted_v3_post_changed:postAudit.changed,
+    m2_infinitive_bank_v4_changed:m2InfAudit.changed,
     m3_word_order_v4_changed:wordOrderAudit.changed,
     m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
     vocab_coordinate_version:vocabAudit.version,
     vocab_migration:vocabAudit.stats,
-    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true}
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,m2_infinitive_bank:true}
   };
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
