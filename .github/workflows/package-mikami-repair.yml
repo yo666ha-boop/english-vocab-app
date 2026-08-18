@@ -3,6 +3,8 @@ name: Package Mikami Repair
 on:
   push:
     branches: [mikami-canonical-repair]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
