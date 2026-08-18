@@ -1,0 +1,31 @@
+{
+  "version": "v7-2026-08-18",
+  "canonicalSource": {
+    "title": "英単語_教科書別マスターデータ_NH_SS_2026_v7_app_wordbook_master",
+    "spreadsheetId": "1AkKYV6h-9ZCq1-p8126u4t8z0pvPSRnHlOfY8C-3hH4",
+    "sheet": "単語マスター",
+    "modifiedTimeUtc": "2026-08-18T06:24:25.275Z"
+  },
+  "canonicalAudit": {
+    "wordCount": 3975,
+    "importantStarCount": 1627,
+    "missingEnglish": 0,
+    "missingJapanese": 0,
+    "missingKana": 0,
+    "idIntegrity": "1-3975 / no duplicates",
+    "v6EnglishDiff": 0,
+    "v6JapaneseDiff": 0,
+    "posPolicy": "not canonicalized; do not infer missing parts of speech"
+  },
+  "embeddedAppBeforeSync": {
+    "textbookRecordCount": 3524,
+    "shortfallVsCanonical": 451
+  },
+  "syncPolicy": {
+    "direction": "canonical-v7-to-app-only",
+    "neverRegenerateCanonicalFromApp": true,
+    "preserveNonTextbookDatasets": true,
+    "nonTextbookDatasets": ["exam", "elementary"],
+    "mergeAllowedOnlyAfterTextbookCount": 3975
+  }
+}

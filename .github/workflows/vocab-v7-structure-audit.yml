@@ -1,0 +1,30 @@
+name: Vocab v7 structure audit
+
+on:
+  push:
+    branches: [vocab-master-v7]
+    paths:
+      - 'tools/extract_vocab_data.mjs'
+      - '.github/workflows/vocab-v7-structure-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: vocab-master-v7
+      - name: Extract embedded vocabulary structure
+        run: node tools/extract_vocab_data.mjs
+      - name: Commit audit reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/DATA_DECLARATION_SNIPPET.txt audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore(vocab): record v7 embedded-data audit'
+          git push origin HEAD:vocab-master-v7
