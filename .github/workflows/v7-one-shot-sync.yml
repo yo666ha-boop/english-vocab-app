@@ -1,0 +1,66 @@
+name: V7 one-shot canonical sync
+
+on:
+  push:
+    branches: [vocab-master-v7]
+    paths:
+      - '.github/workflows/v7-one-shot-sync.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: vocab-master-v7
+          fetch-depth: 0
+
+      - name: Download exact canonical v7 CSV
+        env:
+          SOURCE_URL: 'https://sdmntprjapaneast.oaiusercontent.com/files/00000000-0ec8-8209-b9e5-ab28ccced9e7/raw?se=2026-08-18T13%3A13%3A41Z&sp=r&sv=2026-02-06&sr=b&scid=70679161-81bd-5bfd-bca6-389a9ccff9f7&skoid=b1bca990-dcac-4c31-8ca1-ac563cf24c54&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-17T22%3A37%3A30Z&ske=2026-08-18T22%3A37%3A30Z&sks=b&skv=2026-02-06&sig=wuNDwY4mhGMZz1kcvy%2Bq7vSrjWNEpXVHZYivdq41tCc%3D'
+        run: |
+          mkdir -p data
+          curl -L --fail --retry 3 --retry-delay 2 "$SOURCE_URL" -o data/v7_master.csv
+          test "$(wc -c < data/v7_master.csv)" -gt 1200000
+          head -c 100 data/v7_master.csv | grep -q 'ID,教科書'
+
+      - name: Sync canonical textbook data into app
+        run: node tools/sync_vocab_v7.mjs data/v7_master.csv
+
+      - name: Re-audit embedded app data
+        run: |
+          node tools/extract_vocab_data.mjs
+          node - <<'NODE'
+          const fs = require('fs');
+          const a = JSON.parse(fs.readFileSync('audit/V7_SYNC_RESULT.json','utf8'));
+          const b = JSON.parse(fs.readFileSync('audit/VOCAB_EMBEDDED_DATA_SUMMARY.json','utf8'));
+          const fail = (m) => { console.error(m); process.exit(1); };
+          if (a.canonical_count !== 3975) fail('canonical_count != 3975');
+          if (a.new_textbook_count !== 3975) fail('new_textbook_count != 3975');
+          if (a.final_total_count !== 4613) fail('final_total_count != 4613');
+          if (a.missing_english || a.missing_japanese || a.missing_kana) fail('canonical blanks detected');
+          if (b.textbook_record_count !== 3975) fail('embedded textbook count != 3975');
+          if (b.dataset_counts.exam !== 534) fail('exam dataset changed');
+          if (b.dataset_counts.elementary !== 104) fail('elementary dataset changed');
+          if (b.data_array_count !== 4613) fail('embedded total != 4613');
+          console.log('FINAL V7 APP AUDIT PASS', {canonical:a.canonical_count,total:a.final_total_count,datasets:b.dataset_counts});
+          NODE
+
+      - name: Remove obsolete partial source chunks
+        run: rm -f data/v7_source_*.md
+
+      - name: Commit completed v7 app sync
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html data/v7_master.csv audit/V7_SYNC_RESULT.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt data/v7_source_*.md 2>/dev/null || true
+          git add -u
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'feat(vocab): sync app to canonical v7 3975 words'
+            git push origin HEAD:vocab-master-v7
+          fi
