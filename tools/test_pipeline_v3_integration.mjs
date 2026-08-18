@@ -12,6 +12,7 @@ const replaceOne=(from,to,label)=>{
 replaceOne("tools/run_mikami_pipeline_v2.mjs","tools/run_mikami_pipeline_v3.mjs","pipeline v3");
 replaceOne("q:'We (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","q:'He (      ) every day. 「ピアノを練習します」',a:'Practice tennis'","GEN third-person fixture");
 replaceOne("'GEN-PRS-0731':{a:'practice the piano'}","'GEN-PRS-0731':{a:'practices the piano'}","GEN third-person expectation");
+replaceOne("'M2-GER2-1001':{a:'Mika enjoys listening to music.'}","'M2-GER2-1001':{type:'変形',q:'次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 Mika loves (listen) to music.',a:'Mika loves listening to music.'}","GER rebuilt expectation");
 replaceOne("q:'He is smaller than He.',a:'He is smaller than He.'","q:'She is popularer than He.',a:'She is more popular than He.'","COMP generated fixture");
 replaceOne("'M2-COMP2-1001':{a:'Ken is smaller than Tom.'}","'M2-COMP2-1001':{q:'She is popularer than Ken.',a:'She is more popular than Ken.'}","COMP generated expectation");
 replaceOne("q:'We want to play tennis. を否定文または疑問文に直しなさい。',a:'Do you want to play tennis?'","q:'You went to the library to study. を否定文または疑問文に直しなさい。',a:'You do not went to the library to study.'","INF past-tense fixture");
