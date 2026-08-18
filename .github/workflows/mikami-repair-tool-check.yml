@@ -16,7 +16,11 @@ jobs:
       - name: Syntax check
         run: |
           node --check tools/fix_mikami_canonical.mjs
+          node --check tools/repair_m3_review.mjs
           node --check tools/apply_mikami_runtime_gates.mjs
+          node --check tools/test_m3_review.mjs
+      - name: M3 review functional regression
+        run: node tools/test_m3_review.mjs
       - name: Safety check against unrelated index
         run: |
           if node tools/fix_mikami_canonical.mjs index.html /tmp/should-not-exist.html 2>/tmp/mikami.err; then
@@ -24,6 +28,11 @@ jobs:
             exit 1
           fi
           grep -q 'NOT CANONICAL' /tmp/mikami.err
+          if node tools/repair_m3_review.mjs index.html /tmp/should-not-exist-m3.html 2>/tmp/mikami-m3.err; then
+            echo 'ERROR: M3 repair tool accepted unrelated index.html'
+            exit 1
+          fi
+          grep -q 'NOT CANONICAL' /tmp/mikami-m3.err
           if node tools/apply_mikami_runtime_gates.mjs index.html /tmp/should-not-exist-2.html 2>/tmp/mikami-gates.err; then
             echo 'ERROR: gate tool accepted unrelated index.html'
             exit 1
