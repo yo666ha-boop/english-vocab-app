@@ -14,8 +14,9 @@ const s4=path.join(tmp,'04-infinitive.html');
 const s5=path.join(tmp,'05-present-perfect.html');
 const s6=path.join(tmp,'06-reading.html');
 const s7=path.join(tmp,'07-m3-word-order.html');
-const s8=path.join(tmp,'08-m3.html');
-const s9=path.join(tmp,'09-case.html');
+const s8=path.join(tmp,'08-m3-infinitive2.html');
+const s9=path.join(tmp,'09-m3.html');
+const s10=path.join(tmp,'10-case.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
@@ -25,9 +26,10 @@ try{
   run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
   run('tools/repair_m3_word_order_v4.mjs',[s6,s7]);
-  run('tools/repair_m3_review.mjs',[s7,s8]);
-  run('tools/normalize_question_subject_case.mjs',[s8,s9]);
-  run('tools/apply_mikami_runtime_gates.mjs',[s9,outputPath]);
+  run('tools/repair_m3_infinitive2_v4.mjs',[s7,s8]);
+  run('tools/repair_m3_review.mjs',[s8,s9]);
+  run('tools/normalize_question_subject_case.mjs',[s9,s10]);
+  run('tools/apply_mikami_runtime_gates.mjs',[s10,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
   for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','minIdx <= 0) return false']){
@@ -64,13 +66,20 @@ try{
       if(x.type==='空所補充'&&/^[A-Z]/.test(a)) throw new Error(`FINAL M3 word-order capitalized blank: ${x.id}`);
       if(/(?:は(?:at |every |after |before |in the |on )|に(?:soccer|tennis|baseball|basketball|volleyball|running|swimming)\b|the\s+\w+へ)/i.test(`${q} ${a}`)) throw new Error(`FINAL M3 word-order pseudo-Japanese: ${x.id}`);
     }
+    if(String(x.id||'').startsWith('M3N-')&&cat==='不定詞②'){
+      if(x.type==='空所補充'&&/^To$/.test(a)) throw new Error(`FINAL M3 infinitive2 capitalized to: ${x.id}`);
+      if(/\bHe gots up\b/i.test(`${q} ${a}`)) throw new Error(`FINAL M3 infinitive2 gots: ${x.id}`);
+      if(/to played (?:swimming|running)\b/i.test(q)) throw new Error(`FINAL M3 infinitive2 mixed error: ${x.id}`);
+      if(/\bwents there\b/i.test(a)) throw new Error(`FINAL M3 infinitive2 wents: ${x.id}`);
+    }
   }
 
   const preAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
-  const m3Audit=JSON.parse(fs.readFileSync(s8+'.m3-review.audit.json','utf8'));
+  const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
+  const m3Audit=JSON.parse(fs.readFileSync(s9+'.m3-review.audit.json','utf8'));
   const report={
     status:'OK',input:inputPath,output:outputPath,
     question_count:baseAudit.question_count,
@@ -78,6 +87,7 @@ try{
     base_changed:baseAudit.changed_items,
     targeted_v3_post_changed:postAudit.changed,
     m3_word_order_v4_changed:wordOrderAudit.changed,
+    m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
     uncertain_vocab_positions:baseAudit.audit.uncertain_vocab_positions,
     gates:{vocab_fail_closed:true,prerequisite:true,quality:true}
