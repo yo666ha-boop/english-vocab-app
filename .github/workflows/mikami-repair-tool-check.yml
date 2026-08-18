@@ -1,0 +1,22 @@
+name: Mikami Canonical Repair Tool Check
+on:
+  push:
+    branches: [mikami-canonical-repair]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: node --check tools/fix_mikami_canonical.mjs
+      - name: Safety check against unrelated index
+        run: |
+          if node tools/fix_mikami_canonical.mjs index.html /tmp/should-not-exist.html 2>/tmp/mikami.err; then
+            echo 'ERROR: tool accepted unrelated index.html'
+            exit 1
+          fi
+          grep -q 'NOT CANONICAL' /tmp/mikami.err
