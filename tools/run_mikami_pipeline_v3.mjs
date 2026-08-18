@@ -10,18 +10,20 @@ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v3-pipeline-'));
 const s1=path.join(tmp,'01-targeted-pre.html');
 const s2=path.join(tmp,'02-base.html');
 const s3=path.join(tmp,'03-targeted-post.html');
-const s4=path.join(tmp,'04-present-perfect.html');
-const s5=path.join(tmp,'05-m3.html');
-const s6=path.join(tmp,'06-case.html');
+const s4=path.join(tmp,'04-infinitive.html');
+const s5=path.join(tmp,'05-present-perfect.html');
+const s6=path.join(tmp,'06-m3.html');
+const s7=path.join(tmp,'07-case.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
   run('tools/fix_mikami_canonical.mjs',[s1,s2]);
   run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
-  run('tools/repair_present_perfect_v3.mjs',[s3,s4]);
-  run('tools/repair_m3_review.mjs',[s4,s5]);
-  run('tools/normalize_question_subject_case.mjs',[s5,s6]);
-  run('tools/apply_mikami_runtime_gates.mjs',[s6,outputPath]);
+  run('tools/repair_infinitive_v3.mjs',[s3,s4]);
+  run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
+  run('tools/repair_m3_review.mjs',[s5,s6]);
+  run('tools/normalize_question_subject_case.mjs',[s6,s7]);
+  run('tools/apply_mikami_runtime_gates.mjs',[s7,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
   for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','minIdx <= 0) return false']){
@@ -38,7 +40,9 @@ try{
     /(?:Do|Does)\s+.+\s+have\s+(?:finished|visited|been|lost|lived|studied)/i,
     /\b(?:Mika|She) (?:love|begin|stop)\b/,
     /Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/,
-    /practice\s*\/\s*the\s*\/\s*tennis/i
+    /practice\s*\/\s*the\s*\/\s*tennis/i,
+    /^(?:Do|Does)\s+.+\s+(?:went|came|saw|made|took)\b/im,
+    /^Did\s+.+\s+(?:went|came|saw|made|took)\b/im
   ];
   for(const re of forbidden) if(re.test(bankText)) throw new Error(`FINAL KNOWN-BAD QUESTION PATTERN: ${re}`);
   for(const x of qb){
@@ -55,7 +59,7 @@ try{
   const preAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
-  const m3Audit=JSON.parse(fs.readFileSync(s5+'.m3-review.audit.json','utf8'));
+  const m3Audit=JSON.parse(fs.readFileSync(s6+'.m3-review.audit.json','utf8'));
   const report={
     status:'OK',input:inputPath,output:outputPath,
     question_count:baseAudit.question_count,
