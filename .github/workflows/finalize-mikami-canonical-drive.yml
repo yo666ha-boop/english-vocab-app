@@ -23,24 +23,28 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Fetch existing Drive transfer copy without changing permissions
+      - name: Fetch and validate existing Drive transfer copy
         shell: bash
         run: |
           set -euo pipefail
           URL='https://drive.usercontent.google.com/download?id=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4&export=download&confirm=t'
-          curl -fL --retry 2 --connect-timeout 20 --max-time 120 "$URL" -o /tmp/mikami-canonical.html
+          curl --compressed -fL --retry 2 --connect-timeout 20 --max-time 120 "$URL" -o /tmp/mikami-canonical.html
           test -s /tmp/mikami-canonical.html
-          BYTES=$(wc -c < /tmp/mikami-canonical.html)
-          echo "downloaded_bytes=$BYTES"
-          test "$BYTES" -gt 3500000
-          grep -q 'id="qb-data"' /tmp/mikami-canonical.html
-          grep -q 'id="meta-data"' /tmp/mikami-canonical.html
-          grep -q 'R1-PRON-' /tmp/mikami-canonical.html
-          grep -q 'M2-GER2-' /tmp/mikami-canonical.html
-          grep -q 'M2-COMP2-' /tmp/mikami-canonical.html
-          grep -q 'M2-INF2-' /tmp/mikami-canonical.html
-          grep -q 'M2X-INF-' /tmp/mikami-canonical.html
-          grep -q 'M3N-' /tmp/mikami-canonical.html
+          echo "downloaded_bytes=$(wc -c < /tmp/mikami-canonical.html)"
+          file /tmp/mikami-canonical.html
+          node <<'NODE'
+          const fs=require('fs');
+          const p='/tmp/mikami-canonical.html';
+          const s=fs.readFileSync(p,'utf8');
+          for(const marker of ['id="qb-data"','id="meta-data"','R1-PRON-','M2-GER2-','M2-COMP2-','M2-INF2-','M2X-INF-','M3N-']){
+            if(!s.includes(marker)) throw new Error('not canonical: missing '+marker);
+          }
+          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
+          if(!m) throw new Error('qb-data not found');
+          const qb=JSON.parse(m[1]);
+          if(!Array.isArray(qb) || qb.length<10000) throw new Error('question bank too small: '+(qb?.length??'invalid'));
+          console.log('canonical_question_count='+qb.length);
+          NODE
 
       - name: Run canonical V3 repair pipeline
         run: |
