@@ -30,7 +30,7 @@ function repair(x){
     if(spec){
       a=buildSentence(spec);
       const fixed=tokens.map(t=>normalizeTokenForSpec(t,spec));
-      q=q.replace(/\([^()]+\)/,`( ${fixed.join(' / ')} )`);
+      q=replaceTokenParen(q,`( ${fixed.join(' / ')} )`);
     }
   }else if(x.type==='間違い直し'){
     const src=q.replace(/\s*の誤りを直しなさい。?$/,'').trim().replace(/[.。]$/,'');
@@ -51,7 +51,16 @@ function repair(x){
   x.q=q;x.a=a;
 }
 
-function parseParenTokens(q){const m=String(q).match(/\(([^()]+)\)/);return m?m[1].split('/').map(clean):[];}
+function tokenParenMatches(q){
+  return [...String(q).matchAll(/\(([^()]+)\)/g)].filter(m=>m[1].includes('/'));
+}
+function parseParenTokens(q){
+  const matches=tokenParenMatches(q);const m=matches.at(-1);return m?m[1].split('/').map(clean):[];
+}
+function replaceTokenParen(q,replacement){
+  const matches=tokenParenMatches(q);const m=matches.at(-1);if(!m)return q;
+  return q.slice(0,m.index)+replacement+q.slice(m.index+m[0].length);
+}
 function specFromTokens(tokens){
   if(tokens.length<3)return null;
   const verb=tokens.find(t=>/^(?:play|plays|go|goes)$/i.test(t));
@@ -76,7 +85,6 @@ function specFromLooseSentence(src,allowNoTime=false){
   const rest=core.slice(subject.length).trim();
   let m=rest.match(/^(?:play|plays)\s+(.+)$/i);if(m)return{subject,kind:activityKind(m[1]),complement:clean(m[1]),time};
   m=rest.match(/^(?:go|goes)\s+(.+)$/i);if(m){const c=clean(m[1]);return{subject,kind:/^to\s+/.test(c)?'destination':activityKind(c),complement:c.replace(/^to\s+/,'').trim(),time};}
-  // broken selection B: singular subject + bare play/go still parses here.
   m=rest.match(/^(?:play|go)\s+(.+)$/i);if(m){const c=clean(m[1]);return{subject,kind:/^to\s+/.test(c)?'destination':activityKind(c),complement:c.replace(/^to\s+/,'').trim(),time};}
   return null;
 }
