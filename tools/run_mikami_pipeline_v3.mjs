@@ -11,6 +11,7 @@ const s1=path.join(tmp,'01-targeted-pre.html');
 const s2=path.join(tmp,'02-base.html');
 const s3=path.join(tmp,'03-targeted-post.html');
 const s3a=path.join(tmp,'03a-gen-be-v4.html');
+const s3p=path.join(tmp,'03p-gen-pbe-v4.html');
 const s3b=path.join(tmp,'03b-m2-infinitive-bank.html');
 const s4=path.join(tmp,'04-infinitive.html');
 const s5=path.join(tmp,'05-present-perfect.html');
@@ -26,7 +27,8 @@ try{
   run('tools/fix_mikami_canonical.mjs',[s1,s2]);
   run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
   run('tools/repair_gen_be_v4.mjs',[s3,s3a]);
-  run('tools/repair_m2_infinitive_bank_v4.mjs',[s3a,s3b]);
+  run('tools/repair_gen_pbe_v4.mjs',[s3a,s3p]);
+  run('tools/repair_m2_infinitive_bank_v4.mjs',[s3p,s3b]);
   run('tools/repair_infinitive_v3.mjs',[s3b,s4]);
   run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
@@ -74,6 +76,15 @@ try{
       if(/^(?:Am|Is|Are) (?:You|We|They|He|She)\b/.test(a)) throw new Error(`FINAL GEN-BE question pronoun case: ${x.id}`);
       if(x.type==='変形'&&/\bWe are\b/.test(q)&&/^Are you\b/i.test(a)) throw new Error(`FINAL GEN-BE subject changed we->you: ${x.id}`);
       if(x.type==='変形'&&/\bI am\b/.test(q)&&/^Are you\b/i.test(a)) throw new Error(`FINAL GEN-BE subject changed I->you: ${x.id}`);
+      if(x.type==='答え方'&&/^Are you\b/i.test(q)&&/^Yes, you are\.$/i.test(a)) throw new Error(`FINAL GEN-BE response perspective mismatch: ${x.id}`);
+    }
+    if(String(x.id||'').startsWith('GEN-PBE-')){
+      const q=String(x.q||''),a=String(x.a||'');
+      if(x.type==='空所補充'&&/^(Was|Were)$/.test(a)) throw new Error(`FINAL capitalized GEN-PBE blank: ${x.id}`);
+      if(/^(?:Was|Were) (?:You|We|They|He|She)\b/.test(a)) throw new Error(`FINAL GEN-PBE question pronoun case: ${x.id}`);
+      if(x.type==='変形'&&/\bWe were\b/.test(q)&&/^Were you\b/i.test(a)) throw new Error(`FINAL GEN-PBE subject changed we->you: ${x.id}`);
+      if(x.type==='変形'&&/\bI was\b/.test(q)&&/^Were you\b/i.test(a)) throw new Error(`FINAL GEN-PBE subject changed I->you: ${x.id}`);
+      if(x.type==='答え方'&&/^Were you\b/i.test(q)&&/^Yes, you were\.$/i.test(a)) throw new Error(`FINAL GEN-PBE response perspective mismatch: ${x.id}`);
     }
     if(String(x.id||'').startsWith('GEN-PRS-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GEN blank: ${x.id}`);
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
@@ -104,6 +115,7 @@ try{
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
   const genBeAudit=JSON.parse(fs.readFileSync(s3a+'.gen-be-v4.audit.json','utf8'));
+  const genPbeAudit=JSON.parse(fs.readFileSync(s3p+'.gen-pbe-v4.audit.json','utf8'));
   const m2InfAudit=JSON.parse(fs.readFileSync(s3b+'.m2-infinitive-bank-v4.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
@@ -116,13 +128,14 @@ try{
     base_changed:baseAudit.changed_items,
     targeted_v3_post_changed:postAudit.changed,
     gen_be_v4_changed:genBeAudit.changed,
+    gen_pbe_v4_changed:genPbeAudit.changed,
     m2_infinitive_bank_v4_changed:m2InfAudit.changed,
     m3_word_order_v4_changed:wordOrderAudit.changed,
     m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
     vocab_coordinate_version:vocabAudit.version,
     vocab_migration:vocabAudit.stats,
-    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,m2_infinitive_bank:true}
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,m2_infinitive_bank:true}
   };
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
