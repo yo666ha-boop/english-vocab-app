@@ -2,14 +2,22 @@ name: Mikami Canonical Repair V3 Check
 on:
   push:
     branches: [mikami-canonical-repair]
+    paths-ignore:
+      - 'release/generated/**'
   pull_request:
     branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   check-v3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -81,3 +89,23 @@ jobs:
           name: mikami-canonical-repair-bundle-20260819
           path: dist/mikami-canonical-repair
           if-no-files-found: error
+      - name: Publish CI status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          cat > release/generated/repair_ci_20260819.status.txt <<EOF
+          STATUS=${{ job.status }}
+          RUN_ID=$GITHUB_RUN_ID
+          RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT
+          SOURCE_SHA=$GITHUB_SHA
+          GEN_BE_V4=enabled
+          M2_INFINITIVE_BANK_V4=enabled
+          V7_GATE=enabled
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/repair_ci_20260819.status.txt
+          git commit -m 'record Mikami repair CI result 20260819' || true
+          git push origin HEAD:mikami-canonical-repair
