@@ -18,9 +18,13 @@ jobs:
           node --check tools/fix_mikami_canonical.mjs
           node --check tools/repair_m3_review.mjs
           node --check tools/apply_mikami_runtime_gates.mjs
+          node --check tools/run_mikami_pipeline.mjs
           node --check tools/test_m3_review.mjs
+          node --check tools/test_pipeline.mjs
       - name: M3 review functional regression
         run: node tools/test_m3_review.mjs
+      - name: Full repair pipeline regression
+        run: node tools/test_pipeline.mjs
       - name: Safety check against unrelated index
         run: |
           if node tools/fix_mikami_canonical.mjs index.html /tmp/should-not-exist.html 2>/tmp/mikami.err; then
