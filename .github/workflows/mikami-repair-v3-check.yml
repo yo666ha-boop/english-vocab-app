@@ -53,8 +53,17 @@ jobs:
         run: |
           set -euo pipefail
           URL='https://drive.usercontent.google.com/download?id=1WuYC-xX6_2zfawSr6l_7IwpIvrMfNaRo&export=download&confirm=t'
-          curl -L --fail --retry 2 "$URL" -o /tmp/source.html
-          echo "bytes=$(wc -c </tmp/source.html)"
+          curl -L --fail --retry 2 "$URL" -o /tmp/source.download
+          echo 'download type:'
+          file /tmp/source.download || true
+          echo "download_bytes=$(wc -c </tmp/source.download)"
+          if gzip -t /tmp/source.download 2>/dev/null; then
+            echo 'gzip transfer detected; decompressing'
+            gzip -dc /tmp/source.download > /tmp/source.html
+          else
+            cp /tmp/source.download /tmp/source.html
+          fi
+          echo "source_bytes=$(wc -c </tmp/source.html)"
           sha256sum /tmp/source.html | tee /tmp/source.sha256.txt
           test "$(wc -c </tmp/source.html)" -eq 4037995
       - name: Verify source identity markers
