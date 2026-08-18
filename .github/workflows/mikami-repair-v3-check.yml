@@ -21,6 +21,7 @@ jobs:
           node --check tools/repair_present_perfect_v3.mjs
           node --check tools/repair_reading_v3.mjs
           node --check tools/repair_m3_word_order_v4.mjs
+          node --check tools/repair_m3_infinitive2_v4.mjs
           node --check tools/repair_m3_review.mjs
           node --check tools/normalize_question_subject_case.mjs
           node --check tools/apply_mikami_runtime_gates.mjs
@@ -30,6 +31,7 @@ jobs:
           node --check tools/test_present_perfect_v3.mjs
           node --check tools/test_reading_v3.mjs
           node --check tools/test_m3_word_order_v4.mjs
+          node --check tools/test_m3_infinitive2_v4.mjs
           node --check tools/test_m3_review_v2.mjs
           node --check tools/test_pipeline_v3_integration.mjs
       - name: Targeted generated-family V3 regression
@@ -42,6 +44,8 @@ jobs:
         run: node tools/test_reading_v3.mjs
       - name: M3 word-order V4 regression
         run: node tools/test_m3_word_order_v4.mjs
+      - name: M3 infinitive II V4 regression
+        run: node tools/test_m3_infinitive2_v4.mjs
       - name: M3 regression
         run: node tools/test_m3_review_v2.mjs
       - name: Full V3 pipeline integration
