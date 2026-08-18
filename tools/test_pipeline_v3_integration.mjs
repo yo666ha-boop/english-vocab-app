@@ -17,6 +17,16 @@ replaceOne("'M2-COMP2-1001':{a:'Ken is smaller than Tom.'}","'M2-COMP2-1001':{q:
 replaceOne("q:'We want to play tennis. を否定文または疑問文に直しなさい。',a:'Do you want to play tennis?'","q:'You went to the library to study. を否定文または疑問文に直しなさい。',a:'You do not went to the library to study.'","INF past-tense fixture");
 replaceOne("'M2X-INF-1001':{q:'We want to play tennis. を疑問文にしなさい。',a:'Do we want to play tennis?'}","'M2X-INF-1001':{q:'You went to the library to study. を疑問文にしなさい。',a:'Did you go to the library to study?'}","INF past-tense expectation");
 replaceOne(
+  "  {id:'M2X-INF-1001',subject:'英語',grade:'中2',category:'不定詞①',type:'変形',q:'You went to the library to study. を否定文または疑問文に直しなさい。',a:'You do not went to the library to study.'},\n  {id:'M2-RD2-1549'",
+  "  {id:'M2X-INF-1001',subject:'英語',grade:'中2',category:'不定詞①',type:'変形',q:'You went to the library to study. を否定文または疑問文に直しなさい。',a:'You do not went to the library to study.'},\n  {id:'M2-INF2-TEST',subject:'英語',grade:'中2',category:'不定詞',type:'空所補充',q:'He need to (      ) study harder.',a:'To'},\n  {id:'M2-RD2-1549'",
+  'M2 infinitive bank fixture'
+);
+replaceOne(
+  " 'M2X-INF-1001':{q:'You went to the library to study. を疑問文にしなさい。',a:'Did you go to the library to study?'},\n 'M2-RD2-1549'",
+  " 'M2X-INF-1001':{q:'You went to the library to study. を疑問文にしなさい。',a:'Did you go to the library to study?'},\n 'M2-INF2-TEST':{q:'He needs (      ) study harder.',a:'to'},\n 'M2-RD2-1549'",
+  'M2 infinitive bank expectation'
+);
+replaceOne(
   "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'}\n];",
   "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'},\n  {id:'M3N-WORD-TEST',subject:'英語',grade:'中3',category:'英語の語順',type:'読解',q:'This dog play tennis at six. 問い：この英文の意味を書きなさい。',a:'This dogはat sixにtennisをします。'},\n  {id:'M3N-INF2-TEST',subject:'英語',grade:'中3',category:'不定詞②',type:'間違い直し',q:'My father went there to played swimming. の誤りを直しなさい。',a:'My father went there to go swimming.'}\n];",
   'M3 word-order + infinitive II fixture'
