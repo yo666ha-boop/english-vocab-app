@@ -1,0 +1,81 @@
+name: Finalize Mikami Canonical From Drive Transfer
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/finalize-mikami-canonical-drive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch existing Drive transfer copy without changing permissions
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://drive.usercontent.google.com/download?id=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4&export=download&confirm=t'
+          curl -fL --retry 2 --connect-timeout 20 --max-time 120 "$URL" -o /tmp/mikami-canonical.html
+          test -s /tmp/mikami-canonical.html
+          BYTES=$(wc -c < /tmp/mikami-canonical.html)
+          echo "downloaded_bytes=$BYTES"
+          test "$BYTES" -gt 3500000
+          grep -q 'id="qb-data"' /tmp/mikami-canonical.html
+          grep -q 'id="meta-data"' /tmp/mikami-canonical.html
+          grep -q 'R1-PRON-' /tmp/mikami-canonical.html
+          grep -q 'M2-GER2-' /tmp/mikami-canonical.html
+          grep -q 'M2-COMP2-' /tmp/mikami-canonical.html
+          grep -q 'M2-INF2-' /tmp/mikami-canonical.html
+          grep -q 'M2X-INF-' /tmp/mikami-canonical.html
+          grep -q 'M3N-' /tmp/mikami-canonical.html
+
+      - name: Run canonical V3 repair pipeline
+        run: |
+          mkdir -p dist/final
+          node tools/run_mikami_pipeline_v3.mjs \
+            /tmp/mikami-canonical.html \
+            'dist/final/みかみ塾英語問題アプリ_正本修正版_20260818.html'
+
+      - name: Verify final output
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260818.html'
+          AUDIT="$OUT.pipeline-v3.audit.json"
+          test -s "$OUT"
+          test -s "$AUDIT"
+          grep -q '"status": "OK"' "$AUDIT"
+          grep -q 'v7-2026-08-18-1based' "$OUT"
+          grep -q 'passesPrereqGrammar(item)' "$OUT"
+          grep -q 'passesQualityGate(item)' "$OUT"
+          grep -q 'const infinitiveBlank =' "$OUT"
+          if grep -Eqi 'This is (he|she|we)\b|\bthan He\b|否定文または疑問文|\bHe gots up\b|\bwents there\b' "$OUT"; then
+            echo 'Known-bad pattern remains in final HTML'
+            exit 1
+          fi
+
+      - name: Package final repaired app
+        shell: bash
+        run: |
+          cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
+          cd dist/final
+          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260818.zip' \
+            'みかみ塾英語問題アプリ_正本修正版_20260818.html' \
+            'みかみ塾英語問題アプリ_正本修正版_20260818.html.pipeline-v3.audit.json' \
+            'README_修正内容.txt'
+
+      - name: Upload final repaired app
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-english-question-app-canonical-repaired-20260818
+          path: dist/みかみ塾英語問題アプリ_正本修正版_20260818.zip
+          if-no-files-found: error
