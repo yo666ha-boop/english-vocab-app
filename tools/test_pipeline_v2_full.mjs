@@ -56,5 +56,6 @@ const expected={
 };
 for(const [id,want] of Object.entries(expected)) for(const [k,v] of Object.entries(want)) if(byId[id]?.[k]!==v) throw new Error(`${id}.${k}: expected ${v}, got ${byId[id]?.[k]}`);
 for(const marker of ['minIdx <= 0) return false','passesPrereqGrammar(item)','passesQualityGate(item)']) if(!out.includes(marker)) throw new Error(`missing runtime gate: ${marker}`);
-for(const bad of [/This is (?:he|she|we)\b/i,/\bthan He\b/,/否定文または疑問文/,/Do you have (?:visited|been|finished|lost|lived|studied|seen|done)/i]) if(bad.test(out)) throw new Error(`known bad pattern remains: ${bad}`);
+const bankText=parsed.map(x=>`${x.q||''}\n${x.a||''}`).join('\n');
+for(const bad of [/This is (?:he|she|we)\b/i,/\bthan He\b/,/否定文または疑問文/,/Do you have (?:visited|been|finished|lost|lived|studied|seen|done)/i]) if(bad.test(bankText)) throw new Error(`known bad question pattern remains: ${bad}`);
 console.log('Mikami full v2 repair regression: OK');
