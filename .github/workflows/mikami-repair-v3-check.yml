@@ -17,6 +17,7 @@ jobs:
         run: |
           node --check tools/fix_mikami_canonical.mjs
           node --check tools/repair_targeted_patterns_v3.mjs
+          node --check tools/repair_gen_be_v4.mjs
           node --check tools/repair_m2_infinitive_bank_v4.mjs
           node --check tools/repair_infinitive_v3.mjs
           node --check tools/repair_present_perfect_v3.mjs
@@ -29,6 +30,7 @@ jobs:
           node --check tools/apply_mikami_runtime_gates.mjs
           node --check tools/run_mikami_pipeline_v3.mjs
           node --check tools/test_targeted_patterns_v3.mjs
+          node --check tools/test_gen_be_v4.mjs
           node --check tools/test_m2_infinitive_bank_v4.mjs
           node --check tools/test_infinitive_v3.mjs
           node --check tools/test_present_perfect_v3.mjs
@@ -40,6 +42,8 @@ jobs:
           node --check tools/test_pipeline_v3_integration.mjs
       - name: Targeted generated-family V3 regression
         run: node tools/test_targeted_patterns_v3.mjs
+      - name: GEN-BE V4 regression
+        run: node tools/test_gen_be_v4.mjs
       - name: M2 infinitive bank V4 regression
         run: node tools/test_m2_infinitive_bank_v4.mjs
       - name: Infinitive V3 regression
@@ -74,6 +78,6 @@ jobs:
       - name: Upload repair bundle
         uses: actions/upload-artifact@v4
         with:
-          name: mikami-canonical-repair-bundle-20260818
+          name: mikami-canonical-repair-bundle-20260819
           path: dist/mikami-canonical-repair
           if-no-files-found: error
