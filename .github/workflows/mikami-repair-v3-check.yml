@@ -61,3 +61,15 @@ jobs:
             exit 1
           fi
           grep -q 'NOT CANONICAL' /tmp/v3.err
+      - name: Build repair bundle
+        run: |
+          mkdir -p dist/mikami-canonical-repair/tools dist/mikami-canonical-repair/data dist/mikami-canonical-repair/release
+          cp tools/*.mjs dist/mikami-canonical-repair/tools/
+          cp data/v7_app_sections.json data/old_section_to_v7_rules.json dist/mikami-canonical-repair/data/
+          cp release/FINALIZE_正本.bat release/README_FINALIZE.txt dist/mikami-canonical-repair/
+      - name: Upload repair bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-canonical-repair-bundle-20260818
+          path: dist/mikami-canonical-repair
+          if-no-files-found: error
