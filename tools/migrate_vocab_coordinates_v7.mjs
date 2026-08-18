@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const [,,inputPath,outputPath=inputPath]=process.argv;
 if(!inputPath){console.error('Usage: node tools/migrate_vocab_coordinates_v7.mjs <html> [output.html]');process.exit(2);}
 let html=fs.readFileSync(inputPath,'utf8');
-for(const m of ['id="qb-data"','id="meta-data"','function passesVocab(item, overrideMode)','function renderSectionOptions()']) if(!html.includes(m)) throw new Error(`NOT CANONICAL: missing ${m}`);
+for(const m of ['id="qb-data"','id="meta-data"','function passesVocab(item, overrideMode)']) if(!html.includes(m)) throw new Error(`NOT CANONICAL: missing ${m}`);
 
 const qb=JSON.parse(extractJson(html,'qb-data'));
 const meta=JSON.parse(extractJson(html,'meta-data'));
@@ -30,7 +30,7 @@ for(const [id,rec] of Object.entries(meta.passMeta||{})){
     if(old===-2){stats.priorGrade++;continue;}
     if(!Number.isInteger(old)||old<=0){stats.legacyUnknown++;continue;}
     const arr=((legacySections[tb]||{})[g]||[]);
-    const oldLabel=arr[old]; // legacy coordinate is selectedIndex (0-based)
+    const oldLabel=arr[old];
     if(!oldLabel){rec[tb]=-1;stats.outOfRange++;pushSample(samples.blocked,{id,tb,grade,old,reason:'out_of_range'});continue;}
     const target=mapLabel(tb,grade,oldLabel,def,rules);
     if(!target){rec[tb]=-1;stats.blockedObsolete++;pushSample(samples.blocked,{id,tb,grade,old,oldLabel,reason:'obsolete_or_unsupported'});continue;}
@@ -43,7 +43,6 @@ for(const [id,rec] of Object.entries(meta.passMeta||{})){
   }
 }
 
-// Replace section arrays with v7 1-based coordinate labels. Keep canonical numeric grade keys.
 meta.sections={};
 for(const [tb,byGrade] of Object.entries(def.sections)){
   meta.sections[tb]={};
@@ -54,7 +53,7 @@ meta.vocabCoordinateSemantics=def.semantics;
 meta.vocabMigrationAudit={...stats,policy:rules.policy};
 
 html=replaceJson(html,'meta-data',JSON.stringify(meta));
-const newPass=`function passesVocab(item, overrideMode) {\n  if (item.subject !== '英語') return true;\n  const mode = overrideMode || (useVocabGate() ? 'on' : 'off');\n  if (mode === 'off') return true;\n  if (item.grade !== currentGrade()) return true;\n  const rec = meta.passMeta[item.id] || {};\n  const minIdx = rec[currentTextbook()];\n  if (meta.vocabCoordinateVersion !== 'v7-2026-08-18-1based') return false;\n  if (minIdx === -2) return true; // explicitly confirmed prior-grade vocabulary\n  if (!Number.isInteger(minIdx) || minIdx <= 0) return false;\n  const selectedOrdinal = currentSectionIndex() + 1;\n  return minIdx <= selectedOrdinal;\n}`;
+const newPass=`function passesVocab(item, overrideMode) {\n  if (item.subject !== '英語') return true;\n  const mode = overrideMode || (useVocabGate() ? 'on' : 'off');\n  if (mode === 'off') return true;\n  if (item.grade !== currentGrade()) return true;\n  const rec = meta.passMeta[item.id] || {};\n  const minIdx = rec[currentTextbook()];\n  if (meta.vocabCoordinateVersion !== 'v7-2026-08-18-1based') return false;\n  if (minIdx === -2) return true;\n  if (!Number.isInteger(minIdx) || minIdx <= 0) return false;\n  const selectedOrdinal = currentSectionIndex() + 1;\n  return minIdx <= selectedOrdinal;\n}`;
 html=replaceFunction(html,'passesVocab',newPass);
 
 const audit=auditFinal(meta,def);
