@@ -10,18 +10,18 @@ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v3-pipeline-'));
 const s1=path.join(tmp,'01-targeted-pre.html');
 const s2=path.join(tmp,'02-base.html');
 const s3=path.join(tmp,'03-targeted-post.html');
-const s4=path.join(tmp,'04-m3.html');
-const s5=path.join(tmp,'05-case.html');
+const s4=path.join(tmp,'04-present-perfect.html');
+const s5=path.join(tmp,'05-m3.html');
+const s6=path.join(tmp,'06-case.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
-  // Pre-pass removes generated defects that the strict base audit intentionally refuses.
   run('tools/repair_targeted_patterns_v3.mjs',[inputPath,s1]);
   run('tools/fix_mikami_canonical.mjs',[s1,s2]);
-  // Post-pass prevents base repairs from reintroducing capitalization/inflection defects.
   run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
-  run('tools/repair_m3_review.mjs',[s3,s4]);
-  run('tools/normalize_question_subject_case.mjs',[s4,s5]);
-  run('tools/apply_mikami_runtime_gates.mjs',[s5,outputPath]);
+  run('tools/repair_present_perfect_v3.mjs',[s3,s4]);
+  run('tools/repair_m3_review.mjs',[s4,s5]);
+  run('tools/normalize_question_subject_case.mjs',[s5,s6]);
+  run('tools/apply_mikami_runtime_gates.mjs',[s6,outputPath]);
 
   const out=fs.readFileSync(outputPath,'utf8');
   for(const marker of ['id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)','minIdx <= 0) return false']){
@@ -35,7 +35,7 @@ try{
     /This is (?:he|she|we)\b/i,
     /\bthan He\b|than\s*\/\s*He\b/,
     /否定文または疑問文/,
-    /Do you have (?:visited|been|finished|lost|lived|studied|seen|done)/i,
+    /(?:Do|Does)\s+.+\s+have\s+(?:finished|visited|been|lost|lived|studied)/i,
     /\b(?:Mika|She) (?:love|begin|stop)\b/,
     /Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/,
     /practice\s*\/\s*the\s*\/\s*tennis/i
@@ -45,12 +45,17 @@ try{
     if(/日本語で説明しなさい/.test(String(x.q||''))&&/^[A-Za-z]/.test(String(x.a||''))) throw new Error(`FINAL Japanese-answer mismatch: ${x.id}`);
     if(String(x.id||'').startsWith('GEN-PRS-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GEN blank: ${x.id}`);
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
+    const cat=String(x.category||'');
+    const q=String(x.q||'');
+    if(cat.startsWith('現在完了形')){
+      if(/^You have (?:finished my homework|lost my key)\b/.test(q)||/^We have (?:finished my homework|lost my key)\b/.test(q)||/^They have (?:finished my homework|lost my key)\b/.test(q)||/^He has (?:finished my homework|lost my key)\b/.test(q)||/^She has (?:finished my homework|lost my key)\b/.test(q)) throw new Error(`FINAL present-perfect possessive mismatch: ${x.id}`);
+    }
   }
 
   const preAudit=JSON.parse(fs.readFileSync(s1+'.targeted-v3.audit.json','utf8'));
   const baseAudit=JSON.parse(fs.readFileSync(s2+'.audit.json','utf8'));
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
-  const m3Audit=JSON.parse(fs.readFileSync(s4+'.m3-review.audit.json','utf8'));
+  const m3Audit=JSON.parse(fs.readFileSync(s5+'.m3-review.audit.json','utf8'));
   const report={
     status:'OK',input:inputPath,output:outputPath,
     question_count:baseAudit.question_count,
