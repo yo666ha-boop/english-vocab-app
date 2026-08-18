@@ -12,6 +12,7 @@ const s2=path.join(tmp,'02-base.html');
 const s3=path.join(tmp,'03-targeted-post.html');
 const s3a=path.join(tmp,'03a-gen-be-v4.html');
 const s3p=path.join(tmp,'03p-gen-pbe-v4.html');
+const s3d=path.join(tmp,'03d-gen-pdid-v4.html');
 const s3b=path.join(tmp,'03b-m2-infinitive-bank.html');
 const s4=path.join(tmp,'04-infinitive.html');
 const s5=path.join(tmp,'05-present-perfect.html');
@@ -28,7 +29,8 @@ try{
   run('tools/repair_targeted_patterns_v3.mjs',[s2,s3]);
   run('tools/repair_gen_be_v4.mjs',[s3,s3a]);
   run('tools/repair_gen_pbe_v4.mjs',[s3a,s3p]);
-  run('tools/repair_m2_infinitive_bank_v4.mjs',[s3p,s3b]);
+  run('tools/repair_gen_pdid_v4.mjs',[s3p,s3d]);
+  run('tools/repair_m2_infinitive_bank_v4.mjs',[s3d,s3b]);
   run('tools/repair_infinitive_v3.mjs',[s3b,s4]);
   run('tools/repair_present_perfect_v3.mjs',[s4,s5]);
   run('tools/repair_reading_v3.mjs',[s5,s6]);
@@ -43,9 +45,8 @@ try{
   for(const marker of [
     'id="qb-data"','id="meta-data"','passesPrereqGrammar(item)','passesQualityGate(item)',
     'v7-2026-08-18-1based','if (minIdx === -2) return true','const selectedOrdinal = currentSectionIndex() + 1'
-  ]){
-    if(!out.includes(marker)) throw new Error(`FINAL GATE MISSING: ${marker}`);
-  }
+  ]) if(!out.includes(marker)) throw new Error(`FINAL GATE MISSING: ${marker}`);
+
   const m=out.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
   if(!m) throw new Error('FINAL qb-data missing');
   const qb=JSON.parse(m[1]);
@@ -53,6 +54,7 @@ try{
   if(!metaMatch) throw new Error('FINAL meta-data missing');
   const meta=JSON.parse(metaMatch[1]);
   if(meta.vocabCoordinateVersion!=='v7-2026-08-18-1based') throw new Error('FINAL vocab coordinate version mismatch');
+
   const bankText=qb.map(x=>`${x.id}\n${x.q||''}\n${x.a||''}`).join('\n');
   const forbidden=[
     /This is (?:he|she|we)\b/i,
@@ -66,6 +68,7 @@ try{
     /^Did\s+.+\s+(?:went|came|saw|made|took)\b/im
   ];
   for(const re of forbidden) if(re.test(bankText)) throw new Error(`FINAL KNOWN-BAD QUESTION PATTERN: ${re}`);
+
   const singular=/^(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|Our team|This dog|My mother|My father|My brother|My sister|My friend) (?:play|go)\b/;
   const badM2InfThird=/^(?:He|She|Yuki|Mika|Takumi|Ken|Emi|Tom|The student|The teacher|This boy|This girl|My mother|My father|My brother|My sister|My friend) (?:want|need|like) to\b/i;
   for(const x of qb){
@@ -85,6 +88,15 @@ try{
       if(x.type==='変形'&&/\bWe were\b/.test(q)&&/^Were you\b/i.test(a)) throw new Error(`FINAL GEN-PBE subject changed we->you: ${x.id}`);
       if(x.type==='変形'&&/\bI was\b/.test(q)&&/^Were you\b/i.test(a)) throw new Error(`FINAL GEN-PBE subject changed I->you: ${x.id}`);
       if(x.type==='答え方'&&/^Were you\b/i.test(q)&&/^Yes, you were\.$/i.test(a)) throw new Error(`FINAL GEN-PBE response perspective mismatch: ${x.id}`);
+    }
+    if(String(x.id||'').startsWith('GEN-PDID-')){
+      const q=String(x.q||''),a=String(x.a||'');
+      if(x.type==='変形'&&/を疑問文にしなさい/.test(q)){
+        if(/^(?:Do|Does)\b/.test(a)) throw new Error(`FINAL GEN-PDID present auxiliary: ${x.id}`);
+        if(/^Did\s+(?:you|You)\b/.test(a)&&/^(?:I|We)\b/.test(q)) throw new Error(`FINAL GEN-PDID subject changed to you: ${x.id}`);
+        if(/^Did\s+.+\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought)\b/i.test(a)) throw new Error(`FINAL GEN-PDID past verb after Did: ${x.id}`);
+      }
+      if(x.type==='変形'&&/を否定文にしなさい/.test(q)&&/\bdid not\s+(?:went|came|saw|made|took|had|did|got|ate|wrote|bought)\b/i.test(a)) throw new Error(`FINAL GEN-PDID past verb after did not: ${x.id}`);
     }
     if(String(x.id||'').startsWith('GEN-PRS-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GEN blank: ${x.id}`);
     if(String(x.id||'').startsWith('M2-GER2-')&&x.type==='空所補充'&&/^[A-Z]/.test(String(x.a||''))) throw new Error(`FINAL capitalized GER blank: ${x.id}`);
@@ -116,6 +128,7 @@ try{
   const postAudit=JSON.parse(fs.readFileSync(s3+'.targeted-v3.audit.json','utf8'));
   const genBeAudit=JSON.parse(fs.readFileSync(s3a+'.gen-be-v4.audit.json','utf8'));
   const genPbeAudit=JSON.parse(fs.readFileSync(s3p+'.gen-pbe-v4.audit.json','utf8'));
+  const genPdidAudit=JSON.parse(fs.readFileSync(s3d+'.gen-pdid-v4.audit.json','utf8'));
   const m2InfAudit=JSON.parse(fs.readFileSync(s3b+'.m2-infinitive-bank-v4.audit.json','utf8'));
   const wordOrderAudit=JSON.parse(fs.readFileSync(s7+'.m3-word-order-v4.audit.json','utf8'));
   const inf2Audit=JSON.parse(fs.readFileSync(s8+'.m3-infinitive2-v4.audit.json','utf8'));
@@ -129,13 +142,14 @@ try{
     targeted_v3_post_changed:postAudit.changed,
     gen_be_v4_changed:genBeAudit.changed,
     gen_pbe_v4_changed:genPbeAudit.changed,
+    gen_pdid_v4_changed:genPdidAudit.changed,
     m2_infinitive_bank_v4_changed:m2InfAudit.changed,
     m3_word_order_v4_changed:wordOrderAudit.changed,
     m3_infinitive2_v4_changed:inf2Audit.changed,
     m3_changed:m3Audit.changed,
     vocab_coordinate_version:vocabAudit.version,
     vocab_migration:vocabAudit.stats,
-    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,m2_infinitive_bank:true}
+    gates:{vocab_v7_1based:true,vocab_unknown_fail_closed:true,vocab_prior_grade_pass:true,prerequisite:true,quality:true,gen_be:true,gen_pbe:true,gen_pdid:true,m2_infinitive_bank:true}
   };
   fs.writeFileSync(outputPath+'.pipeline-v3.audit.json',JSON.stringify(report,null,2),'utf8');
   console.log(JSON.stringify(report,null,2));
