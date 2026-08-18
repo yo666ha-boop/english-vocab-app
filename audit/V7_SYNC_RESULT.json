@@ -1,0 +1,49 @@
+{
+  "canonical_csv_sha256": "c0c57a2b9f57412e6c9c6e33251385b782b0316390e3d050c9c1b932b3d9815d",
+  "canonical_count": 3975,
+  "canonical_id_min": 1,
+  "canonical_id_max": 3975,
+  "old_textbook_count": 3524,
+  "new_textbook_count": 3975,
+  "preserved_dataset_counts": {
+    "exam": 534,
+    "elementary": 104
+  },
+  "final_total_count": 4613,
+  "missing_english": 0,
+  "missing_japanese": 0,
+  "missing_kana": 0,
+  "metadata_matches": {
+    "exact": 0,
+    "fallback": 2548,
+    "new_without_old_metadata": 1427
+  },
+  "counts_by_textbook_grade": {
+    "ニューホライズン\t1": 832,
+    "ニューホライズン\t2": 673,
+    "ニューホライズン\t3": 608,
+    "サンシャイン\t1": 662,
+    "サンシャイン\t2": 673,
+    "サンシャイン\t3": 527
+  },
+  "generated_at_utc": "2026-08-18T13:09:41.346Z",
+  "policy": {
+    "direction": "canonical-v7-to-app-only",
+    "canonical_fields": [
+      "textbook",
+      "grade",
+      "major_unit",
+      "section",
+      "english",
+      "japanese",
+      "star",
+      "phrase",
+      "kana"
+    ],
+    "preserved_datasets": [
+      "exam",
+      "elementary"
+    ],
+    "pos_policy": "reuse existing metadata when uniquely matched; never guess single-word POS for new rows"
+  }
+}
