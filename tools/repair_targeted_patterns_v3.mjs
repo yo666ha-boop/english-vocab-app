@@ -52,17 +52,62 @@ function repairGen(x){
   x.q=q; x.a=a;
 }
 
+const GERUND_SPECS=[
+  {key:'like',main:'like',base:'play',tail:'tennis',gerund:'playing tennis',jp:'テニスをすることが好きだ',detect:/テニスをすることが好き|\blike(?:s)?\b[\s\S]*(?:play|playing)\b|\bplaying tennis\b/i},
+  {key:'enjoy',main:'enjoy',base:'read',tail:'comics',gerund:'reading comics',jp:'まんがを読むことを楽しむ',detect:/まんがを読むことを楽し|\benjoy(?:s)?\b[\s\S]*(?:read|reading)\b|\breading comics\b/i},
+  {key:'finish',main:'finish',base:'do',tail:'homework',gerund:'doing homework',jp:'宿題を終える',detect:/宿題を終え|\bfinish(?:es)?\b[\s\S]*(?:homework|do|doing)\b|\bdoing homework\b/i},
+  {key:'practice',main:'practice',base:'speak',tail:'English',gerund:'speaking English',jp:'英語を話す練習をする',detect:/英語を話す練習|\bpractice(?:s)?\b[\s\S]*(?:speak|speaking)\b|\bspeaking English\b/i},
+  {key:'start',main:'start',base:'make',tail:'lunch',gerund:'making lunch',jp:'昼食を作り始める',detect:/昼食を作り始め|\bstart(?:s)?\b[\s\S]*(?:cook|make|making)\b|\bmaking lunch\b/i},
+  {key:'stop',main:'stop',base:'use',tail:'the phone',gerund:'using the phone',jp:'スマホを使うのをやめる',detect:/スマホを使うのをやめ|\bstop(?:s)?\b[\s\S]*(?:use|using|to us)\b|\busing (?:my|your|our|their|his|her|the) phone\b/i},
+  {key:'love',main:'love',base:'listen',tail:'to music',gerund:'listening to music',jp:'音楽を聞くことが大好きだ',detect:/音楽を聞くことが大好き|\blove(?:s)?\b[\s\S]*(?:listen|listening)\b|\blistening to music\b/i},
+  {key:'begin',main:'begin',base:'study',tail:'science',gerund:'studying science',jp:'理科を勉強し始める',detect:/理科を勉強し始め|\bbegin(?:s)?\b[\s\S]*(?:study|studying)\b|\bstudying science\b/i}
+];
+
 function repairGer(x){
-  let q=String(x.q||''), a=String(x.a||'');
-  q=q.replace(/\bMika love\b/g,'Mika enjoys').replace(/\bShe love\b/g,'She enjoys')
-     .replace(/\bMika begin\b/g,'Mika finishes').replace(/\bShe begin\b/g,'She finishes')
-     .replace(/\bMika stop\b/g,'Mika stops').replace(/\bShe stop\b/g,'She stops');
-  a=a.replace(/\bMika love\b/g,'Mika enjoys').replace(/\bShe love\b/g,'She enjoys')
-     .replace(/\bMika begin\b/g,'Mika finishes').replace(/\bShe begin\b/g,'She finishes')
-     .replace(/\bMika stop\b/g,'Mika stops').replace(/\bShe stop\b/g,'She stops');
-  q=q.replace(/using my phone/g,'using her phone'); a=a.replace(/using my phone/g,'using her phone');
-  if(x.type==='空所補充') a=lowerFirst(a);
-  x.q=q; x.a=a;
+  const q0=String(x.q||''),a0=String(x.a||'');
+  const spec=gerundSpec(`${q0} ${a0}`);
+  if(!spec) return;
+  const subject=gerundSubject(x);
+  if(!subject) return;
+  const main=toPresent(spec.main,isThird(subject));
+  const jp=(q0.match(/「([^」]+)」/)||[])[1]||spec.jp;
+  const answer=`${subject} ${main} ${spec.gerund}.`;
+
+  if(x.type==='空所補充'){
+    x.q=`${subject} ${main} (      ). 「${jp}」`;
+    x.a=spec.gerund;
+    return;
+  }
+  if(x.type==='英作文'){
+    const quoted=(q0.match(/『([^』]+)』/)||[])[1];
+    x.q=quoted
+      ? `動名詞を使って、次の日本語に合う英文を書きなさい。『${quoted}』`
+      : `動名詞を使って、次の日本語に合う英文を書きなさい。『${jp}』`;
+    x.a=answer;
+    return;
+  }
+  if(x.type==='間違い直し' || x.type==='変形'){
+    x.type='変形';
+    x.q=`次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 ${subject} ${main} (${spec.base}) ${spec.tail}.`;
+    x.a=answer;
+  }
+}
+
+function gerundSpec(text){return GERUND_SPECS.find(s=>s.detect.test(String(text||'')))||null;}
+function gerundSubject(x){
+  const a=String(x.a||'').trim();
+  const q=String(x.q||'').trim();
+  for(const text of [a,q]){
+    const s=leadingKnownSubject(text);
+    if(s) return s;
+    const embedded=text.match(/(?:^|。\s*)(My friend|Takumi|Mika|I|You|We|They|He|She)\s+/);
+    if(embedded) return embedded[1];
+  }
+  return null;
+}
+function leadingKnownSubject(text){
+  for(const s of ['My friend','Takumi','Mika','I','You','We','They','He','She']) if(String(text).startsWith(s+' ')) return s;
+  return null;
 }
 
 function repairComp(x){
@@ -134,8 +179,15 @@ function auditFamilies(qb){
       if(x.type==='空所補充'&&/^[A-Z]/.test(a)) errors.push(`${id}:capitalized mid-sentence answer ${a}`);
     }
     if(id.startsWith('M2-GER2-')){
-      if(/\b(?:Mika|She) (?:love|begin|stop)\b/.test(`${q} ${a}`)) errors.push(`${id}:3sg gerund family remains`);
+      if(!gerundSpec(`${q} ${a}`)) errors.push(`${id}:unknown gerund template`);
       if(x.type==='空所補充'&&/^[A-Z]/.test(a)) errors.push(`${id}:capitalized gerund blank ${a}`);
+      if(x.type==='間違い直し') errors.push(`${id}:ambiguous legacy error-correction type remains`);
+      if(/\b(?:He|She|Takumi|Mika|My friend) (?:like|enjoy|finish|practice|start|stop|love|begin)\b/.test(`${q} ${a}`)) errors.push(`${id}:third-person singular main verb remains`);
+      if(/using (?:my|your|our|their|his|her) phone|stop to us/i.test(`${q} ${a}`)) errors.push(`${id}:phone ownership/template defect remains`);
+      if(/\b(?:like|likes|start|starts|love|loves|begin|begins) to (?:play|cook|listen|study)\b/i.test(q)) errors.push(`${id}:ambiguous infinitive-vs-gerund prompt remains`);
+      if(x.type==='英作文' && !/^動名詞を使って、/.test(q)) errors.push(`${id}:composition does not explicitly require gerund`);
+      if(x.type==='変形' && !/動名詞に直して/.test(q)) errors.push(`${id}:transformation does not explicitly require gerund`);
+      if(!/\b(?:playing|reading|doing|speaking|making|using|listening|studying)\b/i.test(a)) errors.push(`${id}:answer lacks target gerund`);
     }
     if(id.startsWith('M2-COMP2-')){
       if(/\bthan He\b|than\s*\/\s*He\b/.test(`${q} ${a}`)) errors.push(`${id}:than He remains`);
