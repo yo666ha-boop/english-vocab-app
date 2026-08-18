@@ -86,8 +86,7 @@ function pastQuestion(src){
   return `Did ${questionSubject(subject)} ${pastToBase(m[1])}${m[2]?' '+m[2].trim():''}?`;
 }
 
-const knownSubjects=['My mother','My brother','My father','My sister','My friend','Ken and I','Ken and Emi','Tom and Ken','I','You','We','They','He','She','Ken','Mika','Emi','Tom'];
-function subjectList(){return [...knownSubjects].sort((a,b)=>b.length-a.length);}
+function subjectList(){return ['My mother','My brother','My father','My sister','My friend','Ken and I','Ken and Emi','Tom and Ken','I','You','We','They','He','She','Ken','Mika','Emi','Tom'].sort((a,b)=>b.length-a.length);}
 function parseSubject(src){const s=src.trim();for(const sub of subjectList())if(s.startsWith(sub+' '))return{subject:sub,rest:s.slice(sub.length+1)};const m=s.match(/^([A-Z][A-Za-z]+)\s+(.+)$/);return m?{subject:m[1],rest:m[2]}:null;}
 function splitSubjectRest(body){const s=body.trim();for(const sub of subjectList()){if(s.toLowerCase().startsWith(sub.toLowerCase()+' '))return{subject:canonicalSubjectCase(sub),rest:s.slice(sub.length+1)};}const m=s.match(/^([A-Za-z]+)\s+(.+)$/);return m?{subject:canonicalSubjectCase(m[1]),rest:m[2]}:null;}
 function canonicalSubjectCase(s){const t=s.trim();return({i:'I',you:'You',we:'We',they:'They',he:'He',she:'She'})[t.toLowerCase()]||t;}
