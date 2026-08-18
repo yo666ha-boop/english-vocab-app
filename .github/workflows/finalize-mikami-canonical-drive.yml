@@ -12,31 +12,35 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   finalize:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Fetch and validate refreshed Drive transfer copy
+      - name: Build final repaired app from refreshed Drive canonical
+        id: build
+        continue-on-error: true
         shell: bash
         run: |
           set -euo pipefail
+          exec > >(tee /tmp/mikami-finalize.log) 2>&1
           URL='https://drive.usercontent.google.com/download?id=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4&export=download&confirm=t'
           curl --compressed -fL --retry 2 --connect-timeout 20 --max-time 120 "$URL" -o /tmp/mikami-canonical.html
           test -s /tmp/mikami-canonical.html
-          echo "downloaded_bytes=$(wc -c < /tmp/mikami-canonical.html)"
-          test "$(wc -c < /tmp/mikami-canonical.html)" -eq 4035500
-          file /tmp/mikami-canonical.html
+          BYTES=$(wc -c < /tmp/mikami-canonical.html)
+          echo "downloaded_bytes=$BYTES"
+          test "$BYTES" -eq 4035500
           node <<'NODE'
           const fs=require('fs');
-          const p='/tmp/mikami-canonical.html';
-          const s=fs.readFileSync(p,'utf8');
+          const s=fs.readFileSync('/tmp/mikami-canonical.html','utf8');
           for(const marker of ['id="qb-data"','id="meta-data"','R1-PRON-','M2-GER2-','M2-COMP2-','M2-INF2-','M2X-INF-','M3N-']){
             if(!s.includes(marker)) throw new Error('not canonical: missing '+marker);
           }
@@ -47,17 +51,11 @@ jobs:
           console.log('canonical_question_count='+qb.length);
           NODE
 
-      - name: Run canonical V3/V4 repair pipeline
-        run: |
           mkdir -p dist/final
           node tools/run_mikami_pipeline_v3.mjs \
             /tmp/mikami-canonical.html \
             'dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
 
-      - name: Verify final output
-        shell: bash
-        run: |
-          set -euo pipefail
           OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
           AUDIT="$OUT.pipeline-v3.audit.json"
           test -s "$OUT"
@@ -72,14 +70,11 @@ jobs:
             echo 'Known-bad pattern remains in final HTML'
             exit 1
           fi
-          if grep -Eqi '"a":"To"|\bto\s*\(\s*\)\s*[A-Za-z]' "$OUT"; then
-            echo 'M2/M3 infinitive blank defect remains in final HTML'
+          if grep -Eqi '\"a\":\"To\"|\bto\s*\(\s*\)\s*[A-Za-z]' "$OUT"; then
+            echo 'Infinitive blank defect remains in final HTML'
             exit 1
           fi
 
-      - name: Package final repaired app
-        shell: bash
-        run: |
           cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
           cd dist/final
           zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' \
@@ -87,7 +82,39 @@ jobs:
             'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v3.audit.json' \
             'README_修正内容.txt'
 
+      - name: Publish status and generated audit to branch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          cp /tmp/mikami-finalize.log release/generated/finalize_20260819.log 2>/dev/null || true
+          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
+          AUDIT="$OUT.pipeline-v3.audit.json"
+          ZIP='dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip'
+          if test -s "$ZIP" && test -s "$AUDIT"; then
+            STATUS='PASS'
+            cp "$AUDIT" release/generated/finalize_20260819.audit.json
+          else
+            STATUS='FAIL'
+          fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "SOURCE_DRIVE_ID=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4"
+            echo "EXPECTED_SOURCE_BYTES=4035500"
+          } > release/generated/finalize_20260819.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/finalize_20260819.status.txt release/generated/finalize_20260819.log
+          test ! -f release/generated/finalize_20260819.audit.json || git add release/generated/finalize_20260819.audit.json
+          git commit -m "record canonical finalize result 20260819" || true
+          git push origin HEAD:mikami-canonical-repair
+
       - name: Upload final repaired app
+        if: steps.build.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: mikami-english-question-app-canonical-repaired-20260819
