@@ -2,16 +2,16 @@
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  4124    0  4124    0     0  12802      0 --:--:-- --:--:-- --:--:-- 12802100  148k    0  148k    0     0   379k      0 --:--:-- --:--:-- --:--:-- 2093k
-downloaded_bytes=902723
+100  148k    0  148k    0     0   459k      0 --:--:-- --:--:-- --:--:--  459k
+downloaded_bytes=903402
 --- response headers ---
 strict-transport-security: max-age=31536000; includeSubDomains
-permissions-policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
-content-security-policy: script-src 'nonce-ynAbAJB1RiDB-Xpt0c252w' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport;worker-src 'self'
-content-security-policy: require-trusted-types-for 'script';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport
-cross-origin-opener-policy: unsafe-none
-accept-ch: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
 cross-origin-resource-policy: cross-origin
+permissions-policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
+cross-origin-opener-policy: unsafe-none
+content-security-policy: require-trusted-types-for 'script';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport
+content-security-policy: script-src 'nonce-FWt1TC8GPFU0UfUU1e5EXA' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport;worker-src 'self'
+accept-ch: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
 server: ESF
 content-length: 0
 x-xss-protection: 0
@@ -22,23 +22,23 @@ HTTP/2 200
 content-type: text/html; charset=utf-8
 x-frame-options: DENY
 vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site
-set-cookie: __Host-GAPS=1:dU2ym3yfayOlU1ds3vo6-Bpi36tauQ:VUGPTNXgecpkA5Jy; Expires=Thu, 17-Aug-2028 18:53:45 GMT; Path=/; Secure; HttpOnly; Priority=HIGH
+set-cookie: __Host-GAPS=1:rsaN6QvIIxnhMUKGjeXi_6h5j9vyZg:-E4hKTeDSAkuSdPg; Expires=Fri, 18-Aug-2028 02:24:26 GMT; Path=/; Secure; HttpOnly; Priority=HIGH
 x-auto-login: realm=com.google&args=service%3Dwise%26continue%3Dhttps://drive.usercontent.google.com/download?id%253D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%2526export%253Ddownload%2526confirm%253Dt
 link: <https://www.google.com/intl/en-US/drive/>; rel="canonical"
 x-ua-compatible: IE=edge
 cache-control: no-cache, no-store, max-age=0, must-revalidate
 pragma: no-cache
 expires: Mon, 01 Jan 1990 00:00:00 GMT
-date: Tue, 18 Aug 2026 18:53:45 GMT
+date: Wed, 19 Aug 2026 02:24:26 GMT
 strict-transport-security: max-age=31536000; includeSubDomains
-content-security-policy: script-src 'nonce-y0b0QLyiaxWjYxUScf8pkg' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /v3/signin/_/AccountsSignInUi/cspreport;worker-src 'self'
+content-security-policy: script-src 'nonce-nJoTCEDTGYooXc5C82GsbA' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /v3/signin/_/AccountsSignInUi/cspreport;worker-src 'self'
 content-security-policy: require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport
 cross-origin-resource-policy: same-site
 permissions-policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
 report-to: {"group":"AccountsSignInUi","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/AccountsSignInUi"}]}
 cross-origin-opener-policy-report-only: same-origin; report-to="AccountsSignInUi"
 accept-ch: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
-reporting-endpoints: default="/v3/signin/_/AccountsSignInUi/web-reports?context=eJwNw2tIU2EABmCxfW8hBmoXbUGIFLRgdpSagl0QEVm7Hs7ONke5lC0c2KbbUbxEaqI_LKIML1QQRFFiFkR0gyihKAuNctFcVn9KEgsrUoqEeh940hK6bWn6lPKt-pSxvPuppQc-pZbzQPpc6lnunp4UZ1i7-FIc414e4tqDr0QdF-S-FnvZ6pkSTo7mxEUHG4rjwsiPDQnxjH-2JkRGW0KULSVEBa9PvhN6Ho_PiAlebX8vMnm5w4yUTjO-VFjwlbUXFjRzO3fx4kcL_vAtoxV3-cqUFX2zVgywId8GIy_FbNBpNsz32LHAI_123OCi0w6U8PXbDtxk3TcH9LITm3gLG7iQTTzc5cQoJ_kDh-84EeUnb50YZ1-ujCre6ZJRxs_rZEzypZMyrnLkoYwYf1-n4Bdn5ChYyz9MChZ53y4Fdv5crWCOf_Myr6lRkM3eywr2c9M_BfV-FzRu43aOHHHBOuhCa6aKo5zIUjHDb7JVTHNTSIW5WcWFFhVSj4odPH9cxQI3PFXRyL0TKkKVbhzmzgdudPMJPsWDfI7dGz3w8VDSg_NctMGLEh7c48XuES9KeXi2EqMc-FsJS7kPDq4y-xDr37wyK33VvXhfHBmPxpLXVuRtr4k0-EOBYFgLaS2HopGwFgwHqhu12sZQLBhtCkb9hVKhSSouMOVLkr9e-g8JhuzX"
+reporting-endpoints: default="/v3/signin/_/AccountsSignInUi/web-reports?context=eJwNw2tIU2EABuCx_F5EDNQsbVGIELRgNkctofohYjJ3cePs7Ea5lC0c2Kbb2fASmZj7YSHRxUUFQRgWkoFERRBRFGWlUS6ay-pPSWJhRUqRUO8DT96LnK15GpV9i0b1oPyuunr_J3UtD-XPq89z_8yUSLFy-aVI8gBf5JYDr0QrV5a9FjVscU8LO0dL0-IYa6vSQsePtBnxlH92ZURxd0bULGdEHa_LvhMankjPiklebXsvCnnlqAmqXhO-1JnxlZXnZnRwD_fx0kcz_vBNnQV3eGTaglNzFgyxtsIKHS_HrMhVrFhI2rDIo2dtuMFjtxowzjnfGqBx2LGJN7OWDWzka312XOcsf-DwbTui_PitHRPsK3OgkZ-1OjDFw4MOXOXIfQdi_H2thF9cUCqhmH8YJSxx_W4JNv7cJGGef_MKr2mWUMKeKxL2ceKfhDa_Ewp3cw9HDjthSTnRVSjjCGeKZMzymxIZM5yzUUYiJMPUIeNSpwx9UsZ2XjguY5Hbn8iI88CkjJDXhUPce8-Ffj7BJznFF9i1wQ0fn866keKd6z3YxXtGPajm6A4vEjw258U4B_56sbfWh3puNPlQlJ-bHTmTRsG5wYfDq8q3NUfa_aFAMKyElM6D0UhYCYYDTXGlJR6KBaOJYNRv0BuM-qpKY4Ve72_T_wcqIOh9"
 content-encoding: gzip
 server: ESF
 x-xss-protection: 0
@@ -48,11 +48,11 @@ alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 --- html diagnosis ---
 <title>Google Drive: Sign-in
 accounts.google.com
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S1076200164:1787079225846366&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;rhlk=js&amp;rrk=47&amp;service=wise
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S1076200164:1787079225846366&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S1076200164:1787079225846366&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
+drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S839501003:1787106266832754&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;rhlk=js&amp;rrk=47&amp;service=wise
+drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S839501003:1787106266832754&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
+drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S839501003:1787106266832754&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
 ServiceLogin
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S1076200164:1787079225846366&amp;flowEntry=SignUp&amp;flowName=GlifWebSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
+drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S839501003:1787106266832754&amp;flowEntry=SignUp&amp;flowName=GlifWebSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
 accounts.google.com
 accounts.google.com
 SOURCE_SIZE_MISMATCH
