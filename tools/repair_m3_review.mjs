@@ -15,6 +15,8 @@ for(const x of qb){
   if(String(x.id||'').startsWith('M3N-')){
     if(x.category==='be動詞と一般動詞（現在形）') repairCurrent(x);
     if(x.category==='be動詞と一般動詞（過去形）') repairPast(x);
+    repairGenericQuestion(x);
+    repairGenericWrongBeQuestion(x);
   }
   if(x.subject==='英語') x.a=normalizeAuxPronounCase(String(x.a||''));
   if(x.q!==oldQ||x.a!==oldA) changes.push({id:x.id,q_before:oldQ,q_after:x.q,a_before:oldA,a_after:x.a});
@@ -25,6 +27,33 @@ html=replaceJsonScript(html,'qb-data',JSON.stringify(qb));
 fs.writeFileSync(outputPath,html,'utf8');
 fs.writeFileSync(outputPath+'.m3-review.audit.json',JSON.stringify({status:'OK',changed:changes.length,changes,audit},null,2),'utf8');
 console.log(JSON.stringify({status:'OK',changed:changes.length,audit},null,2));
+
+function repairGenericQuestion(x){
+  const q=String(x.q||'');
+  if(x.type!=='変形'||!/を疑問文にしなさい。?$/.test(q))return;
+  let src=q.replace(/\s*を疑問文にしなさい。?$/,'').trim().replace(/[.。]$/,'');
+  const p=parseSubject(src);if(!p)return;
+  const subject=p.subject;let rest=p.rest.trim(),m;
+  if((m=rest.match(/^(am|is|are)\s+(.+)$/i))){
+    const pred=m[2];x.q=`${subject} ${presentBe(subject,false)} ${pred}. を疑問文にしなさい。`;x.a=`${presentBe(subject,true)} ${questionSubject(subject)} ${pred}?`;return;
+  }
+  if((m=rest.match(/^(was|were)\s+(.+)$/i))){
+    const pred=m[2];x.q=`${subject} ${pastBe(subject,false)} ${pred}. を疑問文にしなさい。`;x.a=`${pastBe(subject,true)} ${questionSubject(subject)} ${pred}?`;return;
+  }
+  if((m=rest.match(/^(have|has)\s+(.+)$/i))){
+    const aux=isThirdSingular(subject)?'has':'have', pred=m[2];
+    x.q=`${subject} ${aux} ${pred}. を疑問文にしなさい。`;x.a=`${cap(aux)} ${questionSubject(subject)} ${pred}?`;return;
+  }
+  if((m=rest.match(/^(will|can|must|should|may|would|could)\s+(.+)$/i))){
+    const aux=m[1].toLowerCase(),pred=m[2];x.a=`${cap(aux)} ${questionSubject(subject)} ${pred}?`;return;
+  }
+}
+function repairGenericWrongBeQuestion(x){
+  if(x.type!=='間違い直し')return;
+  const q=String(x.q||'');
+  const m=q.match(/^(?:Do|Does)\s+(.+?)\?\s*の誤りを直しなさい。?$/i);if(!m)return;
+  const sr=splitSubjectRest(m[1]);if(sr&&looksAdjectivalPredicate(sr.rest))x.a=`${presentBe(sr.subject,true)} ${questionSubject(sr.subject)} ${sr.rest.trim()}?`;
+}
 
 function repairCurrent(x){
   const q=String(x.q||'');
@@ -95,7 +124,7 @@ function isThirdSingular(s){return !['I','You','We','They'].includes(s)&&!/\band
 function presentBe(s,question){let b=s==='I'?'am':(['You','We','They'].includes(s)||/\band\b/i.test(s)?'are':'is');return question?cap(b):b;}
 function pastBe(s,question){let b=(['You','We','They'].includes(s)||/\band\b/i.test(s))?'were':'was';return question?cap(b):b;}
 function cap(s){return s[0].toUpperCase()+s.slice(1);}
-function looksAdjectivalPredicate(s){const f=String(s).trim().split(/\s+/)[0].toLowerCase();return new Set(['busy','kind','happy','sad','tired','old','young','small','tall','cold','hot','hungry','ready','free','late','early','fine','sick']).has(f);}
+function looksAdjectivalPredicate(s){const f=String(s).trim().split(/\s+/)[0].toLowerCase();return new Set(['busy','kind','happy','sad','tired','old','young','small','tall','cold','hot','hungry','ready','free','late','early','fine','sick','sleepy']).has(f);}
 function toBaseVerb(v){const x=v.toLowerCase(),irr={has:'have',does:'do',goes:'go'};if(irr[x])return irr[x];if(/ies$/.test(x))return x.replace(/ies$/,'y');if(/(?:ches|shes|sses|xes|zes|oes)$/.test(x))return x.replace(/es$/,'');if(/s$/.test(x)&&!/ss$/.test(x))return x.slice(0,-1);return x;}
 function toPresentVerb(v,third){const b=toBaseVerb(v);if(!third)return b;if(b==='have')return'has';if(/[^aeiou]y$/.test(b))return b.slice(0,-1)+'ies';if(/(?:ch|sh|ss|x|z|o)$/.test(b))return b+'es';return b+'s';}
 function pastToBase(v){
