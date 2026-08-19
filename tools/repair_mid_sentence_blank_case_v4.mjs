@@ -12,7 +12,7 @@ const m=html.match(re); if(!m) throw new Error('NOT CANONICAL: missing qb-data')
 const qb=JSON.parse(m[1]); if(!Array.isArray(qb)||qb.length<10000) throw new Error(`NOT CANONICAL: qb count=${qb.length}`);
 
 const lowerable=new Set([
- 'am','is','are','was','were','do','does','did','have','has','can','will','must','should','may','to','who','which','that',
+ 'am','is','are','was','were','do','does','did','have','has','had','can','will','must','should','may','to','who','which','that',
  'play','plays','study','studies','like','likes','love','loves','want','wants','need','needs','read','reads','use','uses',
  'go','goes','come','comes','visit','visits','practice','practices','speak','speaks','finish','finishes','enjoy','enjoys',
  'watch','watches','help','helps','make','makes','take','takes','live','lives','work','works','run','runs','swim','swims',
@@ -27,8 +27,6 @@ for(const x of qb){
   const bm=q.match(/\(\s*\)/); if(!bm) continue;
   const prefix=q.slice(0,bm.index).trimEnd();
   if(!prefix) continue;
-  // If punctuation/instruction immediately precedes the blank, it may be the
-  // first word of an embedded English sentence and capitalization is valid.
   if(/[。.!?！？:：『「]$/.test(prefix)) continue;
   const before=a;
   x.a=a.toLowerCase();
