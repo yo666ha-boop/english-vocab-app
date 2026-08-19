@@ -1,66 +1,82 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v2",
-  "updated_at_jst": "2026-08-19T19:37:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v3",
+  "updated_at_jst": "2026-08-19T20:22:00+09:00",
   "branch": "mikami-canonical-repair",
-  "branch_head_before_checkpoint_update": "50faba8d64c0495521131ff8e896171122543bb6",
+  "branch_head_before_checkpoint_update": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
     "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
     "title": "TEMP_GITHUB_TRANSFER_mikami_canonical.html",
     "expected_bytes": 4035500,
+    "actual_bytes": 4035500,
     "expected_question_count": 10513,
     "expected_english_question_count": 10511,
-    "authenticated_drive_size_verified": 4035500,
-    "verified_real_run_sha256": "27454418852917b12153d90a0267715c9fcf1456b179a1ed620395eedde603e3"
+    "actual_question_count": 10513,
+    "actual_english_question_count": 10511,
+    "actual_unique_ids": 10513,
+    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432"
   },
-  "authoritative_real_canonical_run": {
+  "previous_authoritative_failure": {
     "run_id": 32228306116,
     "commit": "cc5a4ed056691d10d7c80c1fa34e6f58da0c92f5",
     "status": "FAIL",
-    "source_downloaded_bytes": 4035500,
-    "question_count_verified": 10513,
-    "english_question_count_verified": 10511,
     "failed_stage": "V4/01-v3 -> run_mikami_pipeline_v3 -> fix_mikami_canonical quality gate",
-    "failure_classes": [
-      "legacy infinitive-transform validator false positives around normal Do/Does questions",
-      "comparison placeholder/pronoun defects",
-      "legacy 3sg/gerund defects",
-      "duplicate pronoun choices"
-    ],
-    "important": "This exact-canonical failure predates the post-failure repair commits on the current branch. A green workflow conclusion from this run is not a PASS; release/generated/finalize_20260819.status.txt is authoritative."
+    "note": "Historical only; superseded by the current-branch exact canonical PASS below."
   },
-  "post_failure_repairs_verified_in_current_repo": [
-    "repair_canonical_preflight_v5.mjs exists and repairs malformed auxiliary/case, comparison, 3sg/gerund and duplicate-choice legacy patterns before strict repair",
-    "repair_targeted_patterns_v3.mjs now runs the V5 preflight before repair_targeted_patterns_v4.mjs",
-    "fix_mikami_canonical.mjs no longer treats normal sentence-initial Do/Does questions as infinitive-transform errors; only malformed legacy token handling remains",
-    "global legacy quality cleanup and additional GEN/M2/M3 repair stages are present",
-    "durable V3/V4 checkpoint runners are present"
-  ],
-  "latest_regression_ci": {
-    "run_id": 32241779841,
-    "source_commit": "97c52b7673efc1ee6f823a5b3a5bf291b4ba09ae",
+  "current_exact_canonical_run": {
     "status": "PASS",
-    "scope": "regression/integration/safety/audit fixtures; this is not proof that the exact canonical passes",
-    "artifact_id": 9361060217,
-    "artifact_name": "mikami-canonical-repair-v4-bundle-20260819",
-    "artifact_sha256": "9c05b4ff1970454cb91fc91fa4c48a0e54c72b441ec01284b09ae99718813c55"
+    "branch_commit": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
+    "execution_source": "connected Google Drive raw file, 4035500 bytes",
+    "runner": "tools/run_mikami_pipeline_v4.mjs",
+    "question_count": 10513,
+    "english_question_count": 10511,
+    "unique_question_ids": 10513,
+    "final_quality_errors": 0,
+    "id_set_preserved": true,
+    "subject_grade_preserved": true,
+    "vocab_coordinate_version": "v7-2026-08-18-1based",
+    "prerequisite_gate": true,
+    "quality_gate": true,
+    "relative_unique_blank_gate": true,
+    "mid_sentence_blank_case_gate": true,
+    "final_canonical_audit": "PASS",
+    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f"
+  },
+  "current_branch_exact_run_repairs": [
+    "extended M3 word-order repair for additional subjects, times, destinations, sports and go-activities",
+    "preserved source subjects across M3 progressive/future/present-perfect question transformations and fixed sleepy be-verb repair",
+    "removed legacy practice / the / tennis token sequences during canonical preflight",
+    "applied M3C relative-pronoun semantic repairs to selection items as well as blanks",
+    "included had in mid-sentence blank capitalization normalization"
+  ],
+  "regression_verification_after_repairs": {
+    "status": "PASS",
+    "tests": [
+      "test_m3_word_order_v4.mjs",
+      "test_relative_pronouns_v4.mjs",
+      "test_mid_sentence_blank_case_v4.mjs",
+      "test_m3_review_v2.mjs",
+      "test_pipeline_v4_integration.mjs",
+      "test_final_canonical_audit.mjs"
+    ]
+  },
+  "package": {
+    "name": "みかみ塾英語問題アプリ_正本修正版_20260819.zip",
+    "contains": [
+      "repaired HTML",
+      "pipeline V4 audit",
+      "final canonical audit",
+      "README"
+    ],
+    "sha256": "ebb2f2435d85d6c95da4ce01ec7686bd13a702e3092037f7870788d48303b63e"
   },
   "durable_resume": {
     "enabled": true,
     "runner": "tools/run_mikami_pipeline_v4.mjs",
-    "checkpoint_version": "mikami-v4-resume-1",
-    "checkpoint_directory_default": "<output.html>.checkpoints"
+    "checkpoint_version": "mikami-v4-resume-1"
   },
-  "current_state": "CURRENT_BRANCH_POST_FAILURE_FIXES_READY_NEEDS_EXACT_CANONICAL_RERUN",
-  "current_blocker": "The exact canonical is authenticated and verified in connected Google Drive, but the prior temporary signed transfer URL embedded in finalize-mikami-canonical-drive.yml expired. The local container/python execution layer has also returned ClientResponseError. Do not publish the private canonical just to unblock CI.",
-  "next_actions": [
-    "run the CURRENT branch, not cc5a4ed, against the exact 4035500-byte canonical",
-    "if it fails, record the first current failing stage and exact IDs; do not rely on the old failure list",
-    "verify 10513 total / 10511 English / unique IDs 10513 / final_quality_errors=0",
-    "verify vocab coordinate v7, prerequisite grammar gate, quality gate, relative unique-blank gate, and mid-sentence blank-case gate",
-    "run tools/audit_final_canonical.mjs in canonical mode",
-    "package repaired HTML, pipeline audit, final audit and README as ZIP",
-    "do not modify or merge main"
-  ],
-  "resume_instruction": "Always inspect finalize_20260819.status.txt/log and current branch head before trusting this checkpoint. Resume from current_state and never report exact-canonical PASS until a current-branch real canonical run passes."
+  "current_state": "EXACT_CANONICAL_CURRENT_BRANCH_PASS_COMPLETE",
+  "current_blocker": null,
+  "next_actions": [],
+  "completion": "All requested exact-canonical completion gates passed. Keep main unchanged."
 }
