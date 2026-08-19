@@ -1,0 +1,114 @@
+name: Exam memory print live smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/exam-memory-print-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    env:
+      PAGE_URL: https://yo666ha-boop.github.io/english-vocab-app/
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Wait for deployed app to match main
+        id: live
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED="$(sha256sum index.html | awk '{print $1}')"
+          LIVE=''
+          for i in $(seq 1 60); do
+            curl -L -sS -o /tmp/live.html "$PAGE_URL" || true
+            LIVE="$(sha256sum /tmp/live.html 2>/dev/null | awk '{print $1}' || true)"
+            [ "$LIVE" = "$EXPECTED" ] && break
+            sleep 5
+          done
+          test "$LIVE" = "$EXPECTED"
+          ! grep -q '高校入試版は暗記プリントではなく、問題印刷または解答印刷を使ってください。' /tmp/live.html
+          echo "index_sha256=$EXPECTED" >> "$GITHUB_OUTPUT"
+      - name: Install Playwright package
+        run: npm install --no-save playwright@1.55.0
+      - name: Test exam memory printing in Edge-equivalent Chromium
+        env:
+          INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch();
+            const page=await browser.newPage({viewport:{width:1365,height:768}});
+            await page.goto(process.env.PAGE_URL,{waitUntil:'networkidle',timeout:60000});
+            await page.evaluate(()=>{
+              window.__alerts=[];
+              window.__printCalled=0;
+              window.alert=m=>window.__alerts.push(String(m));
+              window.print=()=>{window.__printCalled++};
+            });
+            await page.locator('button.tab[data-dataset="exam"]').click();
+            const examCount=await page.evaluate(()=>state.currentList.length);
+            if(examCount!==534) throw new Error('expected 534 exam words, got '+examCount);
+            const t0=Date.now();
+            await page.locator('#memoryPrintBtn').click();
+            await page.waitForFunction(()=>window.__printCalled===1,null,{timeout:10000});
+            const elapsed=Date.now()-t0;
+            const full=await page.evaluate(()=>({
+              alerts:window.__alerts.slice(),
+              prints:window.__printCalled,
+              pages:document.querySelectorAll('#printSheet .rb-memory-page').length,
+              rows:document.querySelectorAll('#printSheet .rb-mem-row').length,
+              maxRows:Math.max(...[...document.querySelectorAll('#printSheet .rb-memory-page')].map(p=>p.querySelectorAll('.rb-mem-row').length)),
+              firstHeading:document.querySelector('#printSheet .rb-memory-group h3')?.textContent?.trim()||''
+            }));
+            if(full.alerts.length) throw new Error('exam print alerted: '+JSON.stringify(full.alerts));
+            if(full.prints!==1) throw new Error('exam print not invoked');
+            if(full.pages!==30) throw new Error('534 exam words should make 30 pages: '+JSON.stringify(full));
+            if(full.rows!==534) throw new Error('exam row count mismatch: '+full.rows);
+            if(full.maxRows>18) throw new Error('exam page exceeds 18 rows');
+            if(!full.firstHeading || full.firstHeading==='その他') throw new Error('exam heading broken: '+full.firstHeading);
+            await page.emulateMedia({media:'print'});
+            const pdfStart=Date.now();
+            const pdf=await page.pdf({format:'A4',printBackground:true,preferCSSPageSize:true});
+            const pdfMs=Date.now()-pdfStart;
+            if(pdf.length<100000) throw new Error('exam PDF too small');
+            await page.emulateMedia({media:'screen'});
+            await page.evaluate(()=>{
+              document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
+              state.dataset='exam';
+              state.currentList=DATA.filter(r=>r.dataset==='exam').slice(0,30);
+              window.__alerts=[]; window.__printCalled=0;
+            });
+            await page.locator('#memoryPrintBtn').click();
+            await page.waitForFunction(()=>window.__printCalled===1,null,{timeout:10000});
+            const small=await page.evaluate(()=>({pages:document.querySelectorAll('#printSheet .rb-memory-page').length,rows:[...document.querySelectorAll('#printSheet .rb-memory-page')].map(p=>p.querySelectorAll('.rb-mem-row').length),heading:document.querySelector('#printSheet .rb-memory-group h3')?.textContent?.trim()||''}));
+            if(small.pages!==2 || small.rows.join(',')!=='18,12') throw new Error('30-word exam pagination wrong: '+JSON.stringify(small));
+            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Chromium (Edge-equivalent)',checks:{exam_memory_print_enabled:true,full_exam_534_prints:true,full_exam_534_paginated_30_pages:true,max_18_rows_per_page:true,exam_group_heading_works:true,exam_pdf_compositor_works:true,exam_30_paginated_18_12:true},full_exam:{count:examCount,prepare_ms:elapsed,...full},pdf:{render_ms:pdfMs,bytes:pdf.length},exam_30:small,checked_at_utc:new Date().toISOString()};
+            fs.mkdirSync('audit',{recursive:true});
+            fs.writeFileSync('audit/EXAM_MEMORY_PRINT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
+            console.log(JSON.stringify(status,null,2));
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+      - name: Commit exam memory print audit
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add audit/EXAM_MEMORY_PRINT_SMOKE.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'test: record exam memory print live pass'
+          git push origin HEAD:main
