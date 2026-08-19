@@ -83,6 +83,19 @@ jobs:
           grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.validation.json
           grep -q '"full_record_equality": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
           grep -q '"canonical_order_preserved": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+
+      - name: Representative target-family spot-check
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/spotcheck_mikami_answer_gpt_knowledge.mjs \
+            /tmp/mikami-repaired.html \
+            dist/gpt/mikami_english_question_bank_knowledge.jsonl \
+            dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"families_required": 9' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"families_passed": 9' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"full_record_match_required": true' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
           cp gpt/mikami_answer_analysis_gpt_instructions.md dist/gpt/
           cp gpt/mikami_answer_analysis_output_schema.json dist/gpt/
           cp gpt/README.md dist/gpt/README_答案分析GPT.md
@@ -97,6 +110,7 @@ jobs:
             mikami_english_question_bank_knowledge.jsonl \
             mikami_english_question_bank_knowledge.manifest.json \
             mikami_english_question_bank_knowledge.validation.json \
+            mikami_english_question_bank_knowledge.spotcheck.json \
             mikami_answer_analysis_gpt_instructions.md \
             mikami_answer_analysis_output_schema.json \
             README_答案分析GPT.md \
@@ -111,7 +125,10 @@ jobs:
           ZIP='dist/みかみ塾答案分析GPT_知識パック_20260819.zip'
           MAN='dist/gpt/mikami_english_question_bank_knowledge.manifest.json'
           VAL='dist/gpt/mikami_english_question_bank_knowledge.validation.json'
-          if test -s "$ZIP" && test -s "$MAN" && test -s "$VAL" && grep -q '"full_record_equality": true' "$VAL"; then STATUS=PASS; else STATUS=FAIL; fi
+          SPOT='dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json'
+          if test -s "$ZIP" && test -s "$MAN" && test -s "$VAL" && test -s "$SPOT" \
+            && grep -q '"full_record_equality": true' "$VAL" \
+            && grep -q '"families_passed": 9' "$SPOT"; then STATUS=PASS; else STATUS=FAIL; fi
           {
             echo "STATUS=$STATUS"
             echo "RUN_ID=$GITHUB_RUN_ID"
@@ -121,6 +138,7 @@ jobs:
             echo "EXPECTED_CANONICAL_TOTAL=10513"
             echo "EXPECTED_ENGLISH_RECORDS=10511"
             echo "LOSSLESS_RECORD_EQUALITY_REQUIRED=true"
+            echo "REPRESENTATIVE_FAMILY_SPOTCHECK_REQUIRED=9"
             echo "PURPOSE=MIKAMI_ANSWER_ANALYSIS_GPT_KNOWLEDGE"
           } > release/generated/answer_gpt_knowledge_20260819.status.txt
           git config user.name 'github-actions[bot]'
