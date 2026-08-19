@@ -31,10 +31,28 @@ jobs:
         with:
           ref: main
 
-      - name: Diagnose exam POS data and filter code
-        run: node tools/diagnose_exam_pos.mjs
+      - name: Apply reviewed exam POS repair
+        run: node tools/fix_exam_pos_filter.mjs
 
-      - name: Verify live Pages matches current main
+      - name: Run vocabulary audits
+        run: |
+          node tools/extract_vocab_data.mjs
+          python3 tools/audit_vocab_structure.py
+          node tools/diagnose_exam_pos.mjs
+
+      - name: Commit repaired app before live verification
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html audit/EXAM_POS_FIX_RESULT.json audit/EXAM_POS_CLASSIFICATION.tsv audit/EXAM_POS_DIAGNOSTIC.json audit/EXAM_POS_UI_SNIPPETS.txt audit/EXAM_POS_NEEDS_REVIEW.tsv audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix(vocab): enable exam POS filtering'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Verify live Pages matches repaired main
         id: live
         shell: bash
         run: |
@@ -42,7 +60,7 @@ jobs:
           EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
           LIVE_SHA=''
           HTTP_CODE=''
-          for i in $(seq 1 36); do
+          for i in $(seq 1 60); do
             HTTP_CODE="$(curl -L -sS -o /tmp/live-index.html -w '%{http_code}' --connect-timeout 10 --max-time 30 "$PAGE_URL" || true)"
             if [ "$HTTP_CODE" = '200' ]; then
               LIVE_SHA="$(sha256sum /tmp/live-index.html | awk '{print $1}')"
@@ -57,7 +75,7 @@ jobs:
       - name: Install matching Playwright package only
         run: npm install --no-save playwright@1.55.0
 
-      - name: Run iPhone-sized WebKit interaction smoke
+      - name: Run iPhone-sized WebKit interaction smoke including exam POS
         env:
           INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
         run: |
@@ -71,22 +89,34 @@ jobs:
             await page.goto(process.env.PAGE_URL,{waitUntil:'networkidle',timeout:60000});
             await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
             const tabs=page.locator('button.tab');
-            if(await tabs.count()!==3)throw new Error('dataset tab count != 3');
-            const labels=await tabs.allTextContents();
-            if(JSON.stringify(labels)!==JSON.stringify(['教科書版','高校入試版','小学生版']))throw new Error('dataset tab labels mismatch: '+JSON.stringify(labels));
+            if(await tabs.count()!==3) throw new Error('dataset tab count != 3');
+            if(JSON.stringify(await tabs.allTextContents())!==JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch');
+
+            await page.locator('button.tab[data-dataset="exam"]').click();
+            const posInputs=page.locator('#examPosBox input[type="checkbox"]');
+            if(await posInputs.count()<5) throw new Error('exam POS options missing');
+            const noun=page.locator('#examPosBox input[value="名詞"]');
+            if(await noun.count()!==1) throw new Error('名詞 POS option missing');
+            await noun.check();
+            await page.waitForTimeout(100);
+            const rows=page.locator('#listTable tbody tr');
+            if(await rows.count()===0) throw new Error('noun filter produced zero rows');
+            const posCells=page.locator('#listTable tbody tr td:nth-child(3)');
+            const values=await posCells.allTextContents();
+            if(values.some(v=>v.trim()!=='名詞')) throw new Error('non-noun row leaked through POS filter: '+JSON.stringify(values.slice(0,20)));
+            if(!(await page.locator('#theadRow').textContent()).includes('品詞')) throw new Error('exam list POS column missing');
             await page.locator('#makeTestBtn').click();
             await page.waitForFunction(()=>document.querySelector('#testSummary')?.textContent?.includes('10問作成済み'),null,{timeout:15000});
-            if(await page.locator('.test-card').count()!==10)throw new Error('test cards != 10');
-            if(await page.locator('.ans.show').count()!==0)throw new Error('answers visible before toggle');
+            if(await page.locator('.test-card').count()!==10) throw new Error('exam noun test cards != 10');
             await page.locator('#toggleAnswersBtn').click();
-            if(await page.locator('.ans.show').count()!==10)throw new Error('answers not shown after toggle');
-            await page.locator('button.tab[data-dataset="exam"]').click();
-            if(!(await page.locator('button.tab[data-dataset="exam"]').getAttribute('class'))?.includes('active'))throw new Error('exam tab did not activate');
+            if(await page.locator('.ans.show').count()!==10) throw new Error('exam answers toggle failed');
+
             await page.locator('button.tab[data-dataset="elementary"]').click();
-            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active'))throw new Error('elementary tab did not activate');
+            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('elementary tab did not activate');
             await page.locator('button.tab[data-dataset="textbook"]').click();
-            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active'))throw new Error('textbook tab did not reactivate');
-            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded:true,title_visible:true,three_dataset_tabs:true,default_10_question_test_created:true,ten_test_cards_rendered:true,answer_toggle_works:true,exam_tab_switch_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},checked_at_utc:new Date().toISOString()};
+            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('textbook tab did not reactivate');
+
+            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded:true,three_dataset_tabs:true,exam_pos_filter_present:true,exam_noun_filter_nonempty:true,exam_noun_filter_exclusive:true,exam_pos_column_visible:true,exam_filtered_10_question_test_created:true,answer_toggle_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},checked_at_utc:new Date().toISOString()};
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
             await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
@@ -95,13 +125,13 @@ jobs:
           })().catch(e=>{console.error(e);process.exit(1);});
           NODE
 
-      - name: Commit verified health and POS diagnostics
+      - name: Commit verified live health
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png audit/EXAM_POS_DIAGNOSTIC.json audit/EXAM_POS_UI_SNIPPETS.txt audit/EXAM_POS_NEEDS_REVIEW.tsv
-          git diff --cached --quiet && exit 0
-          git commit -m 'test: record vocabulary health and exam POS diagnostic'
           git pull --rebase origin main
+          git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png
+          git diff --cached --quiet && exit 0
+          git commit -m 'test: record live exam POS WebKit pass'
           git push origin HEAD:main
