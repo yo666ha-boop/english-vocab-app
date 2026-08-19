@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v6",
-  "updated_at_jst": "2026-08-19T22:10:00+09:00",
+  "updated_at_jst": "2026-08-19T23:31:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -41,19 +41,19 @@
     "status": "IN_PROGRESS",
     "purpose": "eliminate the old copy-prompt / paste-ChatGPT-response round trip; analyze answer photos directly against the repaired question-bank knowledge and produce a printable report in GPT",
     "completed_foundation": [
-      "tools/export_mikami_answer_gpt_knowledge.mjs: exact-canonical English Knowledge exporter with 10513/10511/unique-ID invariants and SHA manifest",
-      "tools/validate_mikami_answer_gpt_knowledge.mjs: lossless validator requiring full-record deep equality and canonical order preservation",
-      "tools/spotcheck_mikami_answer_gpt_knowledge.mjs: first/middle/last exact-record spot checks across 9 required families",
-      "gpt/mikami_answer_analysis_gpt_instructions.md: exact-ID photo analysis, held/unreadable handling, prerequisite diagnosis, return-instruction and print-report rules",
-      "gpt/mikami_answer_analysis_output_schema.json: stable structured output schema",
-      "gpt/README.md: no-pasteback operating flow and completion gates",
-      ".github/workflows/build-mikami-answer-gpt-knowledge.yml: exact canonical -> V4 repair -> final audit -> Knowledge -> lossless validation -> 9-family spot-check -> package"
+      "tools/export_mikami_answer_gpt_knowledge.mjs",
+      "tools/validate_mikami_answer_gpt_knowledge.mjs",
+      "tools/spotcheck_mikami_answer_gpt_knowledge.mjs",
+      "gpt/mikami_answer_analysis_gpt_instructions.md",
+      "gpt/mikami_answer_analysis_output_schema.json",
+      "gpt/README.md",
+      ".github/workflows/build-mikami-answer-gpt-knowledge.yml"
     ],
     "latest_green_ci": {
       "run_id": 32254331178,
       "source_sha": "3c5151637639218ba85271236dc524ffe9c8489c",
       "status": "success",
-      "reverified_at_jst": "2026-08-19T22:10:00+09:00",
+      "reverified_at_jst": "2026-08-19T23:31:00+09:00",
       "gates": [
         "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
         "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
@@ -62,34 +62,40 @@
       ]
     },
     "private_canonical_transfer": {
-      "status": "PASS_PREVIOUSLY_CONFIRMED",
+      "status": "PASS_RECONFIRMED",
       "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
       "file_size_bytes": 4035500,
+      "retrieved_at_jst": "2026-08-19T23:31:00+09:00",
       "public_exposure": false,
       "security_rule": "never make the canonical public or commit the 4MB private canonical to the public repository merely to unblock CI"
     },
     "latest_runtime_probe": {
-      "checked_at_jst": "2026-08-19T22:10:00+09:00",
-      "branch_head_before_checkpoint_update": "eece1c46cb92c0fa94af1be4ab31a5a6cb22f6fb",
+      "checked_at_jst": "2026-08-19T23:31:00+09:00",
+      "branch_head_before_checkpoint_update": "251b320492d9f3a755259b2483fab689aa7fe36b",
       "ci_run_32254331178_reverified": "completed/success",
-      "answer_gpt_real_build_status_file": "ABSENT_404",
+      "answer_gpt_real_build_status_file": "ABSENT",
       "answer_gpt_build_workflow": "READY_REQUIRES_TEMP_AUTHENTICATED_SIGNED_SOURCE_URL",
       "execution_transport": {
-        "container": "ClientError",
-        "conclusion": "local executable transport remains unavailable in this cycle; exact private canonical Knowledge build cannot be run locally yet"
+        "container": "RECOVERED",
+        "node": "v22.16.0",
+        "git": "2.47.3",
+        "github_connector": "AVAILABLE",
+        "direct_git_clone": "FAILED_DNS_COULD_NOT_RESOLVE_GITHUB_COM"
       },
+      "canonical_local_mount": "/mnt/data/TEMP_GITHUB_TRANSFER_mikami_canonical.html",
+      "canonical_local_bytes": 4035500,
       "safe_github_actions_source_url": "not available",
-      "security_decision": "did not make canonical public and did not commit the private canonical to the public repository"
+      "security_decision": "canonical remains private; no public commit/upload workaround used"
     },
     "current_blocker": {
       "stage": "execute Knowledge build against exact private canonical",
-      "detail": "The answer-GPT workflow and all regression contracts are ready, but local executable transport still returns ClientError. The GitHub Actions build requires a fresh temporary authenticated/signed URL. No real answer_gpt_knowledge_20260819.status.txt exists yet, confirming the exact private canonical Knowledge build has not completed.",
-      "last_confirmed_local_error": "2026-08-19 22:10 JST: container ClientError",
+      "detail": "Local execution recovered and the exact 4,035,500-byte Drive canonical is mounted. GitHub connector access is healthy, but direct git clone from the container fails DNS, so the repo runtime scripts are not yet available locally as a checkout. GitHub Actions still requires a temporary authenticated/signed source URL. Next safe path is to materialize the required branch scripts through the GitHub connector or obtain a safe authenticated source handoff, then run V4 and the production Knowledge build.",
+      "last_confirmed_error": "2026-08-19 23:31 JST: git clone failed: Could not resolve host github.com",
       "code_readiness": "PASS"
     },
     "next_actions": [
-      "retry executable local layer first; when it recovers, run V4 on the exact 4,035,500-byte canonical, export 10,511 Knowledge JSONL records, require full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
-      "if a safe temporary authenticated/signed source URL becomes available first, dispatch build-mikami-answer-gpt-knowledge.yml without exposing the canonical publicly",
+      "materialize the V4 pipeline and required dependent scripts from branch mikami-canonical-repair through the GitHub connector into the recovered local runtime, then run them against the mounted exact canonical",
+      "export exactly 10,511 Knowledge JSONL records and require full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
       "inspect the real spotcheck report for actual IDs/q/a/category across all 9 families",
       "assemble/register the finished Knowledge bundle in the answer-analysis GPT",
       "test a fully correct original answer photo, a multi-category wrong-answer photo, an unreadable photo, and a school-test photo",
@@ -97,8 +103,8 @@
       "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_READY_REAL_KNOWLEDGE_BUILD_BLOCKED_BY_EXECUTION_TRANSPORT",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_RUNTIME_RECOVERED_CANONICAL_MOUNTED_REPO_CHECKOUT_BLOCKED_BY_DNS",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Problem-bank repair remains complete. At 22:10 JST the answer-GPT regression CI was reverified green and the production Knowledge workflow was rechecked. No real Knowledge-build status exists yet. Local container execution still returns ClientError, so resume by probing execution transport and immediately run the exact private canonical Knowledge build when it recovers."
+  "completion_note": "At 23:31 JST the exact private canonical was re-fetched from Drive at 4,035,500 bytes and local Node/container execution recovered. GitHub connector and branch access are healthy, but direct git clone is blocked by container DNS. Continue by materializing the required branch scripts via the connector and immediately run the exact production Knowledge build; do not revisit the completed problem-bank repair and do not modify main."
 }
