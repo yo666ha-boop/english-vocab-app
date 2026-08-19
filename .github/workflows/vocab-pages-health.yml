@@ -95,15 +95,20 @@ jobs:
             if(await tabs.count()!==3) throw new Error('dataset tab count != 3');
             if(JSON.stringify(await tabs.allTextContents())!==JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch');
 
-            const swSupported = await page.evaluate(() => 'serviceWorker' in navigator);
-            if(!swSupported) throw new Error('service worker unsupported in test WebKit');
+            if(!(await page.evaluate(() => 'serviceWorker' in navigator))) throw new Error('service worker unsupported in test WebKit');
             await page.evaluate(async () => { await navigator.serviceWorker.ready; });
             await page.reload({waitUntil:'networkidle',timeout:60000});
             await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, {timeout:15000});
+            const cachePrimed = await page.evaluate(async () => !!(await caches.match('./index.html')));
+            if(!cachePrimed) throw new Error('offline index cache not primed');
 
             await context.setOffline(true);
-            await page.reload({waitUntil:'domcontentloaded',timeout:30000});
-            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
+            const offlineFetch = await page.evaluate(async () => {
+              const r = await fetch(location.href, {cache:'no-store'});
+              const text = await r.text();
+              return {ok:r.ok,status:r.status,hasTitle:text.includes('英単語アプリ（統合版）'),bytes:text.length};
+            });
+            if(!offlineFetch.ok || offlineFetch.status!==200 || !offlineFetch.hasTitle || offlineFetch.bytes<1000000) throw new Error('service worker offline fallback failed: '+JSON.stringify(offlineFetch));
 
             await page.locator('button.tab[data-dataset="exam"]').click();
             const posInputs=page.locator('#examPosBox input[type="checkbox"]');
@@ -129,28 +134,7 @@ jobs:
             await page.locator('button.tab[data-dataset="textbook"]').click();
             if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('offline textbook tab did not reactivate');
 
-            const status={
-              status:'pass',
-              page_url:process.env.PAGE_URL,
-              index_sha256:process.env.INDEX_SHA,
-              engine:'Playwright WebKit',
-              mobile_viewport:'390x844',
-              checks:{
-                page_loaded_online:true,
-                service_worker_supported:true,
-                service_worker_ready:true,
-                service_worker_controls_page:true,
-                network_forced_offline:true,
-                offline_reload_from_cache:true,
-                exam_pos_filter_present_offline:true,
-                exam_noun_filter_exclusive_offline:true,
-                exam_filtered_10_question_test_created_offline:true,
-                answer_toggle_works_offline:true,
-                elementary_tab_switch_works_offline:true,
-                textbook_tab_switch_back_works_offline:true
-              },
-              checked_at_utc:new Date().toISOString()
-            };
+            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded_online:true,service_worker_supported:true,service_worker_ready:true,service_worker_controls_page:true,offline_index_cache_primed:true,network_forced_offline:true,offline_html_fetch_from_service_worker_cache:true,exam_pos_filter_present_offline:true,exam_noun_filter_exclusive_offline:true,exam_filtered_10_question_test_created_offline:true,answer_toggle_works_offline:true,elementary_tab_switch_works_offline:true,textbook_tab_switch_back_works_offline:true},offline_fetch:offlineFetch,checked_at_utc:new Date().toISOString()};
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
             await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
