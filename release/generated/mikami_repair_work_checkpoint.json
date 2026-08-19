@@ -1,24 +1,14 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v6",
-  "updated_at_jst": "2026-08-20T00:42:41+09:00",
+  "checkpoint_schema": "mikami-repair-work-v7",
+  "updated_at_jst": "2026-08-20T00:55:00+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_branch_head_before_checkpoint_update": "00442ec58e82cd823b0abb9e4fb1686c6476ba32",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
-  "canonical": {
-    "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
-    "expected_bytes": 4035500,
-    "actual_bytes": 4035500,
-    "expected_question_count": 10513,
-    "expected_english_question_count": 10511,
-    "actual_question_count": 10513,
-    "actual_english_question_count": 10511,
-    "actual_unique_ids": 10513,
-    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
-    "public_exposure": false
-  },
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
-    "execution_commit": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
+    "canonical_drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
+    "source_bytes": 4035500,
+    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
+    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
     "question_count": 10513,
     "english_question_count": 10511,
     "unique_question_ids": 10513,
@@ -31,70 +21,13 @@
     "relative_unique_blank_gate": true,
     "mid_sentence_blank_case_gate": true,
     "final_canonical_audit": "PASS",
-    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
-    "historical_failed_run": "32228306116 superseded"
+    "historical_failed_run": "32228306116 superseded",
+    "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_BUILD_PASS_PRIVATE_DRIVE_ASSETS_REVALIDATED_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
-    "completed_foundation": [
-      "exporter",
-      "lossless validator",
-      "9-family exact-record spotcheck",
-      "GPT instructions/schema/README",
-      "production Knowledge workflow",
-      "GitHub-only branch-source diagnostic",
-      "safe GitHub Actions runtime-artifact route",
-      "exact private canonical V4 execution",
-      "real 10511-record Knowledge export",
-      "real full-record equality and canonical-order validation",
-      "real 9-family first/middle/last spotcheck",
-      "real tamper-rejection test",
-      "Knowledge bundle packaging",
-      "private Drive upload of Knowledge bundle, JSONL, instructions and output schema",
-      "private Drive Knowledge JSONL re-downloaded and locally revalidated on 2026-08-20"
-    ],
-    "latest_green_ci": {
-      "run_id": 32266313529,
-      "status": "success",
-      "job_id": 96111562533,
-      "gates": [
-        "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
-        "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
-        "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK",
-        "ANSWER_GPT_ASSET_CONTRACT_REGRESSION"
-      ]
-    },
-    "branch_source_diagnostic": {
-      "run_id": 32266314330,
-      "status": "FAIL_AT_SOURCE_GATE_EXPECTED_REJECTION",
-      "exact_error": "qb-data not found in branch index.html",
-      "decision": "REJECT_BRANCH_INDEX_AS_ANSWER_GPT_KNOWLEDGE_SOURCE",
-      "private_canonical_exposed": false
-    },
-    "runtime_artifact": {
-      "workflow": ".github/workflows/package-mikami-runtime-v2.yml",
-      "first_consumed_run_id": 32266896824,
-      "first_consumed_artifact_id": 9370551027,
-      "artifact_name": "mikami-runtime-v2",
-      "artifact_upload_step": "success",
-      "consumed_runtime_zip_sha256": "3c85bf21bb841c8aa64438561f3f7560a580cc9abc1fc646239148096ed44b7a",
-      "latest_repo_status_run_id": 32266941924,
-      "latest_repo_status": "PASS",
-      "latest_runtime_zip_sha256": "e5fb32a6fd02a1012e8a52356a6426c63f43e37de418c5ea77080871c60203b4",
-      "files": {"tools": 61, "data": 2, "gpt": 3},
-      "private_canonical_in_artifact": false
-    },
+    "status": "KNOWLEDGE_AND_PRE_RUNTIME_ACCEPTANCE_PASS_CUSTOM_GPT_REGISTRATION_AND_REAL_PHOTO_RUNTIME_TESTS_PENDING",
     "exact_private_knowledge_build": {
       "status": "PASS",
-      "source_bytes": 4035500,
-      "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
-      "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
-      "question_count": 10513,
-      "english_question_count": 10511,
-      "unique_question_ids": 10513,
-      "final_quality_errors": 0,
-      "id_set_preserved": true,
-      "subject_grade_preserved": true,
       "knowledge_records": 10511,
       "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "full_record_equality": true,
@@ -103,7 +36,6 @@
       "families_passed": 9,
       "representative_records_checked": 27,
       "tamper_rejection": true,
-      "bundle_name": "みかみ塾答案分析GPT_知識パック_20260819.zip",
       "bundle_sha256": "c8d699adbef04f286e7b09736452ecac4ae77bae6ed7235cb7b23e54c2be0c23",
       "public_repo_contains_private_knowledge": false
     },
@@ -113,62 +45,74 @@
       "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
       "output_schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
       "public_exposure": false,
-      "upload_status": "PASS",
-      "knowledge_revalidation_20260820": {
-        "download_status": "PASS",
+      "knowledge_revalidation": {
+        "status": "PASS",
         "bytes": 3028093,
         "records": 10511,
         "unique_ids": 10511,
-        "first_id": "E1-BQ-001",
-        "last_id": "M3N-02400",
-        "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
-        "matches_build_manifest_sha": true
+        "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213"
       }
     },
-    "spotcheck_real_samples": {
-      "R1_PRON": ["R1-PRON-0001", "R1-PRON-0006", "R1-PRON-0012"],
-      "GEN_PRS": ["GEN-PRS-0553", "GEN-PRS-0681", "GEN-PRS-0808"],
-      "M2_GER2": ["M2-GER2-0797", "M2-GER2-1026", "M2-GER2-1252"],
-      "M2_COMP2": ["M2-COMP2-1453", "M2-COMP2-1500", "M2-COMP2-1548"],
-      "M2X_INF": ["M2X-INF-0469", "M2X-INF-0528", "M2X-INF-0600"],
-      "M2_RD2": ["M2-RD2-1549", "M2-RD2-1554", "M2-RD2-1560"],
-      "PRESENT_PERFECT": ["R2-PERF-0091", "M3C-00833", "M3N-01920"],
-      "RELATIVE": ["M3C-01321", "M3N-02188", "M3N-02280"],
-      "M3N_REVIEW": ["M3N-00001", "M3N-01200", "M3N-02400"]
+    "github_pre_runtime_acceptance": {
+      "status": "PASS",
+      "workflow": ".github/workflows/test-mikami-answer-gpt-photo-acceptance.yml",
+      "run_id": 32272791009,
+      "source_sha": "6fc8a7000bd06d561353a81ead2d3d42d86562ac",
+      "cases_file": "gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json",
+      "validator": "tools/test_mikami_answer_gpt_photo_acceptance_contract.mjs",
+      "photo_cases": [
+        "fully-correct original answer",
+        "multi-category wrong answers",
+        "unreadable/held answer",
+        "school-test/non-canonical photo"
+      ],
+      "photo_case_count": 4,
+      "a4_contract": "portrait 1-2 pages",
+      "checks": [
+        "exact-ID lookup contract",
+        "no guessing unreadable answers",
+        "held status support",
+        "school-test source separation",
+        "root causes max 3",
+        "return points max 3",
+        "next actions max 3",
+        "required A4 report sections",
+        "avoid wide tables"
+      ],
+      "custom_gpt_runtime_test": false,
+      "real_photo_test_pending": true
     },
-    "current_run": {
-      "started_from_checkpoint_updated_at_jst": "2026-08-20T00:03:00+09:00",
-      "observed_branch_head": "00442ec58e82cd823b0abb9e4fb1686c6476ba32",
-      "observed_head_message": "record answer GPT public index probe status",
-      "local_execution_layer": "RECOVERED",
-      "drive_knowledge_revalidation": "PASS",
-      "instruction_asset_fetch": "PASS",
-      "main_touched": false,
-      "private_assets_exposed": false,
-      "new_blocker": "No available tool surface can mutate the user's Custom GPT configuration or attach Knowledge to that GPT; no direct-answer photo inputs are available in this automation run."
-    },
+    "completed_this_run": [
+      "added four-case direct-photo acceptance specification",
+      "added machine-readable A4 report acceptance contract",
+      "added Node contract regression test",
+      "added GitHub Actions workflow",
+      "GitHub Actions contract run PASS"
+    ],
     "current_blocker": {
-      "stage": "register finished private Knowledge assets in answer-analysis GPT and perform direct photo/A4 tests",
-      "detail": "Critical data/build blocker is fully resolved. This run additionally re-downloaded the private Drive Knowledge JSONL and independently confirmed 10511 records, 10511 unique IDs and SHA256 be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213. The remaining blocker is the target Custom GPT editor/configuration surface itself: no available connector or local browser automation session exposes mutation of that GPT's Knowledge/Instructions. Direct photo tests also require actual answer images in a surface this run can access. Do not alter main or expose private Knowledge publicly.",
-      "last_normal_completion": "private Drive Knowledge revalidated against recorded build SHA",
+      "stage": "Custom GPT registration and true runtime photo/A4 verification",
+      "detail": "All work that can be validated in GitHub without mutating the user's Custom GPT has now passed. The remaining checks require the actual Custom GPT Knowledge/Instructions configuration and real answer images. GitHub cannot itself attach Knowledge to the user's Custom GPT editor or exercise that private GPT runtime. Do not mark these runtime tests PASS until executed in the actual GPT.",
       "code_readiness": "PASS",
       "data_readiness": "PASS",
-      "configuration_readiness": "ASSETS_READY_TARGET_GPT_MUTATION_PENDING",
-      "test_readiness": "WAITING_FOR_TARGET_GPT_REGISTRATION_AND_REAL_PHOTOS"
+      "pre_runtime_acceptance": "PASS",
+      "custom_gpt_registration": "PENDING",
+      "real_photo_runtime_tests": "PENDING",
+      "a4_runtime_render_test": "PENDING"
     },
-    "next_actions": [
-      "register private Drive Knowledge JSONL in the answer-analysis GPT Knowledge area",
-      "apply mikami_answer_analysis_gpt_instructions.md and output schema to the GPT configuration",
-      "run fully-correct original-answer photo test",
-      "run multi-category wrong-answer photo test",
-      "run unreadable/held-answer photo test",
-      "run school-test photo test",
-      "verify prerequisite return-point accuracy and A4 print quality",
-      "only after all direct-GPT tests PASS decide whether to remove or demote legacy copy/paste photo-analysis UI"
-    ]
+    "remaining_work": [
+      "register private Knowledge JSONL in target answer-analysis Custom GPT",
+      "apply formal instructions and output schema in target GPT",
+      "execute fully-correct original-answer photo test",
+      "execute multi-category wrong-answer photo test",
+      "execute unreadable/held-answer photo test",
+      "execute school-test photo test",
+      "verify prerequisite return-point accuracy",
+      "verify actual A4 print/render quality",
+      "only after all runtime tests PASS decide whether legacy copy/paste UI is removed or demoted"
+    ],
+    "resume_from": "register private Knowledge JSONL in target answer-analysis Custom GPT"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_EXACT_PRIVATE_KNOWLEDGE_PASS_PRIVATE_DRIVE_REVALIDATED_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
-  "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_GITHUB_PHOTO_A4_CONTRACT_PASS_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "Question bank remains PASS COMPLETE and was not reworked. Exact private Knowledge build remains PASS; this run independently revalidated the private Drive JSONL at 10511 records / 10511 unique IDs / SHA256 be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213. Remaining work is target Custom GPT registration plus direct photo and A4 report testing. main remains untouched."
+  "completion_note": "GitHub-side work advanced further: four required photo scenarios plus A4 1-2 page report behavior are now encoded and machine-validated in Actions run 32272791009. Remaining work is only the actual Custom GPT registration and true runtime photo/A4 tests. main remains untouched."
 }
