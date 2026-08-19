@@ -1,7 +1,8 @@
 {
   "checkpoint_schema": "mikami-repair-work-v6",
-  "updated_at_jst": "2026-08-20T00:03:00+09:00",
+  "updated_at_jst": "2026-08-20T00:42:41+09:00",
   "branch": "mikami-canonical-repair",
+  "observed_branch_head_before_checkpoint_update": "00442ec58e82cd823b0abb9e4fb1686c6476ba32",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
     "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
@@ -34,7 +35,7 @@
     "historical_failed_run": "32228306116 superseded"
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_BUILD_PASS_PRIVATE_DRIVE_ASSETS_READY_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
+    "status": "KNOWLEDGE_BUILD_PASS_PRIVATE_DRIVE_ASSETS_REVALIDATED_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
     "completed_foundation": [
       "exporter",
       "lossless validator",
@@ -49,11 +50,13 @@
       "real 9-family first/middle/last spotcheck",
       "real tamper-rejection test",
       "Knowledge bundle packaging",
-      "private Drive upload of Knowledge bundle, JSONL, instructions and output schema"
+      "private Drive upload of Knowledge bundle, JSONL, instructions and output schema",
+      "private Drive Knowledge JSONL re-downloaded and locally revalidated on 2026-08-20"
     ],
     "latest_green_ci": {
       "run_id": 32266313529,
       "status": "success",
+      "job_id": 96111562533,
       "gates": [
         "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
         "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
@@ -79,8 +82,7 @@
       "latest_repo_status": "PASS",
       "latest_runtime_zip_sha256": "e5fb32a6fd02a1012e8a52356a6426c63f43e37de418c5ea77080871c60203b4",
       "files": {"tools": 61, "data": 2, "gpt": 3},
-      "private_canonical_in_artifact": false,
-      "note": "The consumed run uploaded the runtime artifact successfully; its job failure occurred only at the final status git push because another workflow advanced the branch ref. A later V2 run recorded PASS in repo."
+      "private_canonical_in_artifact": false
     },
     "exact_private_knowledge_build": {
       "status": "PASS",
@@ -111,7 +113,17 @@
       "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
       "output_schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
       "public_exposure": false,
-      "upload_status": "PASS"
+      "upload_status": "PASS",
+      "knowledge_revalidation_20260820": {
+        "download_status": "PASS",
+        "bytes": 3028093,
+        "records": 10511,
+        "unique_ids": 10511,
+        "first_id": "E1-BQ-001",
+        "last_id": "M3N-02400",
+        "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
+        "matches_build_manifest_sha": true
+      }
     },
     "spotcheck_real_samples": {
       "R1_PRON": ["R1-PRON-0001", "R1-PRON-0006", "R1-PRON-0012"],
@@ -124,12 +136,25 @@
       "RELATIVE": ["M3C-01321", "M3N-02188", "M3N-02280"],
       "M3N_REVIEW": ["M3N-00001", "M3N-01200", "M3N-02400"]
     },
+    "current_run": {
+      "started_from_checkpoint_updated_at_jst": "2026-08-20T00:03:00+09:00",
+      "observed_branch_head": "00442ec58e82cd823b0abb9e4fb1686c6476ba32",
+      "observed_head_message": "record answer GPT public index probe status",
+      "local_execution_layer": "RECOVERED",
+      "drive_knowledge_revalidation": "PASS",
+      "instruction_asset_fetch": "PASS",
+      "main_touched": false,
+      "private_assets_exposed": false,
+      "new_blocker": "No available tool surface can mutate the user's Custom GPT configuration or attach Knowledge to that GPT; no direct-answer photo inputs are available in this automation run."
+    },
     "current_blocker": {
       "stage": "register finished private Knowledge assets in answer-analysis GPT and perform direct photo/A4 tests",
-      "detail": "The critical data/build blocker is fully resolved and all private Knowledge assets are now saved in Google Drive. Remaining work is configuration of the target Custom GPT itself and direct photo/A4 verification. No available connector in this execution surface exposes the user's Custom GPT editor, so the GPT-side registration cannot be mutated here. Continue immediately when that surface is available or when direct photo test inputs are supplied; do not alter main or expose the Knowledge publicly.",
-      "last_normal_completion": "private Drive Knowledge assets uploaded and checkpointed",
+      "detail": "Critical data/build blocker is fully resolved. This run additionally re-downloaded the private Drive Knowledge JSONL and independently confirmed 10511 records, 10511 unique IDs and SHA256 be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213. The remaining blocker is the target Custom GPT editor/configuration surface itself: no available connector or local browser automation session exposes mutation of that GPT's Knowledge/Instructions. Direct photo tests also require actual answer images in a surface this run can access. Do not alter main or expose private Knowledge publicly.",
+      "last_normal_completion": "private Drive Knowledge revalidated against recorded build SHA",
       "code_readiness": "PASS",
-      "data_readiness": "PASS"
+      "data_readiness": "PASS",
+      "configuration_readiness": "ASSETS_READY_TARGET_GPT_MUTATION_PENDING",
+      "test_readiness": "WAITING_FOR_TARGET_GPT_REGISTRATION_AND_REAL_PHOTOS"
     },
     "next_actions": [
       "register private Drive Knowledge JSONL in the answer-analysis GPT Knowledge area",
@@ -142,8 +167,8 @@
       "only after all direct-GPT tests PASS decide whether to remove or demote legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_EXACT_PRIVATE_KNOWLEDGE_PASS_PRIVATE_DRIVE_ASSETS_READY_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_EXACT_PRIVATE_KNOWLEDGE_PASS_PRIVATE_DRIVE_REVALIDATED_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Critical blocker resolved. Exact private canonical V4 reproduced repaired SHA exactly; real Knowledge has 10511 records with deep-equal/order PASS, all 9 families/27 representative records exact-match PASS, and tampering is rejected. Bundle/JSONL/instructions/schema are stored privately in Google Drive. The only remaining phase is target Custom GPT registration plus direct photo and A4 report testing. main remains untouched."
+  "completion_note": "Question bank remains PASS COMPLETE and was not reworked. Exact private Knowledge build remains PASS; this run independently revalidated the private Drive JSONL at 10511 records / 10511 unique IDs / SHA256 be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213. Remaining work is target Custom GPT registration plus direct photo and A4 report testing. main remains untouched."
 }
