@@ -28,6 +28,7 @@ jobs:
           node --check tools/run_mikami_pipeline_v4.mjs
           node --check tools/audit_final_canonical.mjs
           node --check tools/export_mikami_answer_gpt_knowledge.mjs
+          node --check tools/validate_mikami_answer_gpt_knowledge.mjs
           node --check tools/test_targeted_patterns_v4.mjs
           node --check tools/test_relative_pronouns_v4.mjs
           node --check tools/test_mid_sentence_blank_case_v4.mjs
@@ -50,7 +51,7 @@ jobs:
         run: node tools/test_pipeline_v4_integration.mjs
       - name: Final canonical invariant audit regression
         run: node tools/test_final_canonical_audit.mjs
-      - name: Answer GPT knowledge exporter regression
+      - name: Answer GPT knowledge exporter + lossless validator regression
         run: node tools/test_export_mikami_answer_gpt_knowledge.mjs
       - name: Safety stop against unrelated app V4
         run: |
@@ -89,6 +90,7 @@ jobs:
           GLOBAL_LEGACY_QUALITY_V5=enabled
           FINAL_CANONICAL_INVARIANT_AUDIT=enabled
           ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION=enabled
+          ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR=enabled
           INHERITS_V3=enabled
           EOF
           git config user.name 'github-actions[bot]'
