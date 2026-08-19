@@ -45,7 +45,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html audit/EXAM_POS_FIX_RESULT.json audit/EXAM_POS_CLASSIFICATION.tsv audit/EXAM_POS_DIAGNOSTIC.json audit/EXAM_POS_UI_SNIPPETS.txt audit/EXAM_POS_NEEDS_REVIEW.tsv audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
+          git add index.html audit
           if ! git diff --cached --quiet; then
             git commit -m 'fix(vocab): enable exam POS filtering'
             git pull --rebase origin main
@@ -91,7 +91,6 @@ jobs:
             const tabs=page.locator('button.tab');
             if(await tabs.count()!==3) throw new Error('dataset tab count != 3');
             if(JSON.stringify(await tabs.allTextContents())!==JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch');
-
             await page.locator('button.tab[data-dataset="exam"]').click();
             const posInputs=page.locator('#examPosBox input[type="checkbox"]');
             if(await posInputs.count()<5) throw new Error('exam POS options missing');
@@ -110,12 +109,10 @@ jobs:
             if(await page.locator('.test-card').count()!==10) throw new Error('exam noun test cards != 10');
             await page.locator('#toggleAnswersBtn').click();
             if(await page.locator('.ans.show').count()!==10) throw new Error('exam answers toggle failed');
-
             await page.locator('button.tab[data-dataset="elementary"]').click();
             if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('elementary tab did not activate');
             await page.locator('button.tab[data-dataset="textbook"]').click();
             if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('textbook tab did not reactivate');
-
             const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded:true,three_dataset_tabs:true,exam_pos_filter_present:true,exam_noun_filter_nonempty:true,exam_noun_filter_exclusive:true,exam_pos_column_visible:true,exam_filtered_10_question_test_created:true,answer_toggle_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},checked_at_utc:new Date().toISOString()};
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
@@ -130,7 +127,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
           git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png
           git diff --cached --quiet && exit 0
           git commit -m 'test: record live exam POS WebKit pass'
