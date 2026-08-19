@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v6",
-  "updated_at_jst": "2026-08-20T00:00:00+09:00",
+  "updated_at_jst": "2026-08-20T00:03:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -34,7 +34,7 @@
     "historical_failed_run": "32228306116 superseded"
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_BUILD_PASS_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
+    "status": "KNOWLEDGE_BUILD_PASS_PRIVATE_DRIVE_ASSETS_READY_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
     "completed_foundation": [
       "exporter",
       "lossless validator",
@@ -48,7 +48,8 @@
       "real full-record equality and canonical-order validation",
       "real 9-family first/middle/last spotcheck",
       "real tamper-rejection test",
-      "Knowledge bundle packaging"
+      "Knowledge bundle packaging",
+      "private Drive upload of Knowledge bundle, JSONL, instructions and output schema"
     ],
     "latest_green_ci": {
       "run_id": 32266313529,
@@ -69,14 +70,17 @@
     },
     "runtime_artifact": {
       "workflow": ".github/workflows/package-mikami-runtime-v2.yml",
-      "run_id": 32266896824,
-      "artifact_id": 9370551027,
+      "first_consumed_run_id": 32266896824,
+      "first_consumed_artifact_id": 9370551027,
       "artifact_name": "mikami-runtime-v2",
       "artifact_upload_step": "success",
-      "runtime_zip_sha256": "3c85bf21bb841c8aa64438561f3f7560a580cc9abc1fc646239148096ed44b7a",
+      "consumed_runtime_zip_sha256": "3c85bf21bb841c8aa64438561f3f7560a580cc9abc1fc646239148096ed44b7a",
+      "latest_repo_status_run_id": 32266941924,
+      "latest_repo_status": "PASS",
+      "latest_runtime_zip_sha256": "e5fb32a6fd02a1012e8a52356a6426c63f43e37de418c5ea77080871c60203b4",
       "files": {"tools": 61, "data": 2, "gpt": 3},
       "private_canonical_in_artifact": false,
-      "note": "job conclusion was failure only because final PASS status git push raced with concurrent branch writes; package and artifact upload steps were success"
+      "note": "The consumed run uploaded the runtime artifact successfully; its job failure occurred only at the final status git push because another workflow advanced the branch ref. A later V2 run recorded PASS in repo."
     },
     "exact_private_knowledge_build": {
       "status": "PASS",
@@ -101,6 +105,14 @@
       "bundle_sha256": "c8d699adbef04f286e7b09736452ecac4ae77bae6ed7235cb7b23e54c2be0c23",
       "public_repo_contains_private_knowledge": false
     },
+    "private_drive_assets": {
+      "bundle_drive_id": "1o_PKIUvWAZXniX8ohJLcov7RZmnM77rz",
+      "knowledge_jsonl_drive_id": "1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC",
+      "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
+      "output_schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
+      "public_exposure": false,
+      "upload_status": "PASS"
+    },
     "spotcheck_real_samples": {
       "R1_PRON": ["R1-PRON-0001", "R1-PRON-0006", "R1-PRON-0012"],
       "GEN_PRS": ["GEN-PRS-0553", "GEN-PRS-0681", "GEN-PRS-0808"],
@@ -113,14 +125,15 @@
       "M3N_REVIEW": ["M3N-00001", "M3N-01200", "M3N-02400"]
     },
     "current_blocker": {
-      "stage": "register finished private Knowledge bundle in answer-analysis GPT and perform real photo/A4 tests",
-      "detail": "The critical Knowledge-build blocker is resolved. The exact private canonical has been run through V4 locally using runtime scripts safely delivered by GitHub Actions; repaired SHA matches the established canonical repaired SHA exactly. Knowledge export/validation/spotcheck/tamper rejection all pass. Remaining work is platform-side Knowledge registration and direct photo tests, which require access to the target GPT configuration and actual/synthetic test images; do not alter main or expose the Knowledge publicly.",
-      "last_normal_completion": "exact private canonical Knowledge bundle PASS",
-      "code_readiness": "PASS"
+      "stage": "register finished private Knowledge assets in answer-analysis GPT and perform direct photo/A4 tests",
+      "detail": "The critical data/build blocker is fully resolved and all private Knowledge assets are now saved in Google Drive. Remaining work is configuration of the target Custom GPT itself and direct photo/A4 verification. No available connector in this execution surface exposes the user's Custom GPT editor, so the GPT-side registration cannot be mutated here. Continue immediately when that surface is available or when direct photo test inputs are supplied; do not alter main or expose the Knowledge publicly.",
+      "last_normal_completion": "private Drive Knowledge assets uploaded and checkpointed",
+      "code_readiness": "PASS",
+      "data_readiness": "PASS"
     },
     "next_actions": [
-      "register the finished private Knowledge bundle in the answer-analysis GPT Knowledge area without publishing it",
-      "apply gpt/mikami_answer_analysis_gpt_instructions.md and output schema to the GPT configuration",
+      "register private Drive Knowledge JSONL in the answer-analysis GPT Knowledge area",
+      "apply mikami_answer_analysis_gpt_instructions.md and output schema to the GPT configuration",
       "run fully-correct original-answer photo test",
       "run multi-category wrong-answer photo test",
       "run unreadable/held-answer photo test",
@@ -129,8 +142,8 @@
       "only after all direct-GPT tests PASS decide whether to remove or demote legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_EXACT_PRIVATE_KNOWLEDGE_PASS_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_EXACT_PRIVATE_KNOWLEDGE_PASS_PRIVATE_DRIVE_ASSETS_READY_GPT_REGISTRATION_AND_REAL_PHOTO_TESTS_PENDING",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Critical blocker resolved at 2026-08-20 00:00 JST. GitHub Actions safely delivered only public runtime assets, exact private canonical V4 execution reproduced repaired SHA 0f0c76c2..., real Knowledge has 10511 records with deep-equal and canonical order PASS, all 9 representative families/27 records exact-match PASS, and a real tampered record is rejected. Knowledge bundle is packaged privately. Next: register it in the answer-analysis GPT and perform direct photo plus A4 report tests. main remains untouched."
+  "completion_note": "Critical blocker resolved. Exact private canonical V4 reproduced repaired SHA exactly; real Knowledge has 10511 records with deep-equal/order PASS, all 9 families/27 representative records exact-match PASS, and tampering is rejected. Bundle/JSONL/instructions/schema are stored privately in Google Drive. The only remaining phase is target Custom GPT registration plus direct photo and A4 report testing. main remains untouched."
 }
