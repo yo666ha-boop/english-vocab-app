@@ -52,14 +52,18 @@ jobs:
           const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
           if(!m) throw new Error('qb-data not found');
           const qb=JSON.parse(m[1]);
-          if(!Array.isArray(qb) || qb.length<10000) throw new Error('question bank too small: '+(qb?.length??'invalid'));
+          const english=qb.filter(x=>x?.subject==='英語').length;
+          if(!Array.isArray(qb) || qb.length!==10513) throw new Error('canonical question count mismatch: '+(qb?.length??'invalid'));
+          if(english!==10511) throw new Error('canonical English question count mismatch: '+english);
           console.log('canonical_question_count='+qb.length);
+          console.log('canonical_english_question_count='+english);
           NODE
 
           mkdir -p dist/final
           node tools/run_mikami_pipeline_v4.mjs /tmp/mikami-canonical.html 'dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
           OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
           AUDIT="$OUT.pipeline-v4.audit.json"
+          FINAL_AUDIT="$OUT.final-audit.json"
           test -s "$OUT"
           test -s "$AUDIT"
           grep -q '"status": "OK"' "$AUDIT"
@@ -73,9 +77,23 @@ jobs:
           grep -q '"relative_pronoun_unique_blank": true' "$AUDIT"
           grep -q '"mid_sentence_blank_case": true' "$AUDIT"
           if grep -Eqi 'This is (he|she|we)\b|\bthan He\b|否定文または疑問文|\bHe gots up\b|\bwents there\b' "$OUT"; then exit 1; fi
+
+          node tools/audit_final_canonical.mjs "$OUT" /tmp/mikami-canonical.html "$FINAL_AUDIT" --canonical
+          test -s "$FINAL_AUDIT"
+          grep -q '"status": "OK"' "$FINAL_AUDIT"
+          grep -q '"canonical_mode": true' "$FINAL_AUDIT"
+          grep -q '"question_count": 10513' "$FINAL_AUDIT"
+          grep -q '"english_question_count": 10511' "$FINAL_AUDIT"
+          grep -q '"unique_question_ids": 10513' "$FINAL_AUDIT"
+          grep -q '"final_quality_errors": 0' "$FINAL_AUDIT"
+
           cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
           cd dist/final
-          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' 'みかみ塾英語問題アプリ_正本修正版_20260819.html' 'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v4.audit.json' 'README_修正内容.txt'
+          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' \
+            'みかみ塾英語問題アプリ_正本修正版_20260819.html' \
+            'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v4.audit.json' \
+            'みかみ塾英語問題アプリ_正本修正版_20260819.html.final-audit.json' \
+            'README_修正内容.txt'
 
       - name: Publish status and generated audit to branch
         if: always()
@@ -86,14 +104,25 @@ jobs:
           cp /tmp/mikami-finalize.log release/generated/finalize_20260819.log 2>/dev/null || true
           OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
           AUDIT="$OUT.pipeline-v4.audit.json"
+          FINAL_AUDIT="$OUT.final-audit.json"
           ZIP='dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip'
-          if test -s "$ZIP" && test -s "$AUDIT"; then STATUS='PASS'; cp "$AUDIT" release/generated/finalize_20260819.audit.json; else STATUS='FAIL'; rm -f release/generated/finalize_20260819.audit.json; fi
+          if test -s "$ZIP" && test -s "$AUDIT" && test -s "$FINAL_AUDIT"; then
+            STATUS='PASS'
+            cp "$AUDIT" release/generated/finalize_20260819.audit.json
+            cp "$FINAL_AUDIT" release/generated/finalize_20260819.final-audit.json
+          else
+            STATUS='FAIL'
+            rm -f release/generated/finalize_20260819.audit.json release/generated/finalize_20260819.final-audit.json
+          fi
           {
             echo "STATUS=$STATUS"
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
             echo "HEAD_SHA=$GITHUB_SHA"
             echo "PIPELINE=V4"
+            echo "FINAL_CANONICAL_INVARIANT_AUDIT=required"
+            echo "EXPECTED_QUESTION_COUNT=10513"
+            echo "EXPECTED_ENGLISH_QUESTION_COUNT=10511"
             echo "SOURCE_DRIVE_ID=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4"
             echo "EXPECTED_SOURCE_BYTES=4035500"
           } > release/generated/finalize_20260819.status.txt
@@ -102,6 +131,7 @@ jobs:
           git add release/generated/finalize_20260819.status.txt release/generated/finalize_20260819.log
           git add -u release/generated || true
           test ! -f release/generated/finalize_20260819.audit.json || git add release/generated/finalize_20260819.audit.json
+          test ! -f release/generated/finalize_20260819.final-audit.json || git add release/generated/finalize_20260819.final-audit.json
           git commit -m "record canonical finalize diagnosis 20260819" || true
           git push origin HEAD:mikami-canonical-repair
 
