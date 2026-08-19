@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'manifest.webmanifest'
+      - 'sw.js'
       - 'tools/diagnose_exam_pos.mjs'
       - '.github/workflows/vocab-pages-health.yml'
   workflow_dispatch:
@@ -31,11 +33,16 @@ jobs:
         with:
           ref: main
 
-      - name: Run vocabulary audits
+      - name: Run vocabulary and PWA structure audits
         run: |
           node tools/extract_vocab_data.mjs
           python3 tools/audit_vocab_structure.py
           node tools/diagnose_exam_pos.mjs
+          test -f manifest.webmanifest
+          test -f sw.js
+          grep -q 'rel="manifest" href="./manifest.webmanifest"' index.html
+          grep -q "navigator.serviceWorker.register('./sw.js'" index.html
+          grep -q "mikami-vocab-offline-" sw.js
 
       - name: Verify live Pages matches current main
         id: live
@@ -55,12 +62,16 @@ jobs:
           done
           test "$HTTP_CODE" = '200'
           test "$LIVE_SHA" = "$EXPECTED_SHA"
+          test "$(curl -L -sS -o /tmp/live-manifest -w '%{http_code}' "${PAGE_URL}manifest.webmanifest")" = '200'
+          test "$(curl -L -sS -o /tmp/live-sw -w '%{http_code}' "${PAGE_URL}sw.js")" = '200'
+          grep -q 'みかみ塾 英単語アプリ' /tmp/live-manifest
+          grep -q 'mikami-vocab-offline-' /tmp/live-sw
           echo "index_sha256=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Install matching Playwright package only
         run: npm install --no-save playwright@1.55.0
 
-      - name: Run iPhone-sized WebKit interaction smoke including exam POS
+      - name: Run online and true-offline iPhone-sized WebKit smoke
         env:
           INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
         run: |
@@ -74,6 +85,7 @@ jobs:
               deviceScaleFactor:3,
               isMobile:true,
               hasTouch:true,
+              serviceWorkers:'allow',
               userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1'
             });
             const page = await context.newPage();
@@ -83,30 +95,39 @@ jobs:
             if(await tabs.count()!==3) throw new Error('dataset tab count != 3');
             if(JSON.stringify(await tabs.allTextContents())!==JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch');
 
+            const swSupported = await page.evaluate(() => 'serviceWorker' in navigator);
+            if(!swSupported) throw new Error('service worker unsupported in test WebKit');
+            await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+            await page.reload({waitUntil:'networkidle',timeout:60000});
+            await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, {timeout:15000});
+
+            await context.setOffline(true);
+            await page.reload({waitUntil:'domcontentloaded',timeout:30000});
+            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
+
             await page.locator('button.tab[data-dataset="exam"]').click();
             const posInputs=page.locator('#examPosBox input[type="checkbox"]');
-            if(await posInputs.count()<5) throw new Error('exam POS options missing');
+            if(await posInputs.count()<5) throw new Error('exam POS options missing offline');
             const noun=page.locator('#examPosBox input[value="名詞"]');
-            if(await noun.count()!==1) throw new Error('名詞 POS option missing');
+            if(await noun.count()!==1) throw new Error('名詞 POS option missing offline');
             await noun.check();
             await page.waitForTimeout(100);
-
             const rows=page.locator('#listTable tbody tr');
-            if(await rows.count()===0) throw new Error('noun filter produced zero rows');
+            if(await rows.count()===0) throw new Error('noun filter produced zero rows offline');
             const values=await page.locator('#listTable tbody tr td:nth-child(3)').allTextContents();
-            if(values.some(v=>v.trim()!=='名詞')) throw new Error('non-noun row leaked through POS filter: '+JSON.stringify(values.slice(0,20)));
-            if(!(await page.locator('#theadRow').textContent()).includes('品詞')) throw new Error('exam list POS column missing');
+            if(values.some(v=>v.trim()!=='名詞')) throw new Error('non-noun row leaked through offline POS filter');
+            if(!(await page.locator('#theadRow').textContent()).includes('品詞')) throw new Error('exam list POS column missing offline');
 
             await page.locator('#makeTestBtn').click();
             await page.waitForFunction(()=>document.querySelector('#testSummary')?.textContent?.includes('10問作成済み'),null,{timeout:15000});
-            if(await page.locator('.test-card').count()!==10) throw new Error('exam noun test cards != 10');
+            if(await page.locator('.test-card').count()!==10) throw new Error('offline exam noun test cards != 10');
             await page.locator('#toggleAnswersBtn').click();
-            if(await page.locator('.ans.show').count()!==10) throw new Error('exam answers toggle failed');
+            if(await page.locator('.ans.show').count()!==10) throw new Error('offline answer toggle failed');
 
             await page.locator('button.tab[data-dataset="elementary"]').click();
-            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('elementary tab did not activate');
+            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('offline elementary tab did not activate');
             await page.locator('button.tab[data-dataset="textbook"]').click();
-            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('textbook tab did not reactivate');
+            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('offline textbook tab did not reactivate');
 
             const status={
               status:'pass',
@@ -115,22 +136,25 @@ jobs:
               engine:'Playwright WebKit',
               mobile_viewport:'390x844',
               checks:{
-                page_loaded:true,
-                three_dataset_tabs:true,
-                exam_pos_filter_present:true,
-                exam_noun_filter_nonempty:true,
-                exam_noun_filter_exclusive:true,
-                exam_pos_column_visible:true,
-                exam_filtered_10_question_test_created:true,
-                answer_toggle_works:true,
-                elementary_tab_switch_works:true,
-                textbook_tab_switch_back_works:true
+                page_loaded_online:true,
+                service_worker_supported:true,
+                service_worker_ready:true,
+                service_worker_controls_page:true,
+                network_forced_offline:true,
+                offline_reload_from_cache:true,
+                exam_pos_filter_present_offline:true,
+                exam_noun_filter_exclusive_offline:true,
+                exam_filtered_10_question_test_created_offline:true,
+                answer_toggle_works_offline:true,
+                elementary_tab_switch_works_offline:true,
+                textbook_tab_switch_back_works_offline:true
               },
               checked_at_utc:new Date().toISOString()
             };
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
             await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
+            await context.setOffline(false);
             await browser.close();
             console.log(JSON.stringify(status,null,2));
           })().catch(e=>{console.error(e);process.exit(1);});
@@ -144,5 +168,5 @@ jobs:
           git pull --rebase --autostash origin main
           git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
           git diff --cached --quiet && exit 0
-          git commit -m 'test: record live exam POS health pass'
+          git commit -m 'test: record true offline WebKit pass'
           git push origin HEAD:main
