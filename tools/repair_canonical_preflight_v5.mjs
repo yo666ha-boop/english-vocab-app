@@ -7,8 +7,11 @@ if(!inputPath){
   process.exit(2);
 }
 let html=fs.readFileSync(inputPath,'utf8');
-for(const marker of ['id="qb-data"','id="meta-data"','GEN-PRS-','M2-COMP-']){
+for(const marker of ['id="qb-data"','id="meta-data"','GEN-PRS-']){
   if(!html.includes(marker)) throw new Error(`NOT CANONICAL: missing ${marker}`);
+}
+if(!html.includes('M2-COMP-')&&!html.includes('M2-COMP2-')){
+  throw new Error('NOT CANONICAL: missing M2-COMP-/M2-COMP2-');
 }
 const re=/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/;
 const m=html.match(re);
