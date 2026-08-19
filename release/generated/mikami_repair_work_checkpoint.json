@@ -1,0 +1,43 @@
+{
+  "checkpoint_schema": "mikami-repair-work-v1",
+  "updated_at_jst": "2026-08-19T19:04:00+09:00",
+  "branch": "mikami-canonical-repair",
+  "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
+  "canonical": {
+    "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
+    "title": "TEMP_GITHUB_TRANSFER_mikami_canonical.html",
+    "expected_bytes": 4035500,
+    "expected_question_count": 10513,
+    "expected_english_question_count": 10511
+  },
+  "durable_resume": {
+    "enabled": true,
+    "runner": "tools/run_mikami_pipeline_v4.mjs",
+    "checkpoint_version": "mikami-v4-resume-1",
+    "checkpoint_directory_default": "<output.html>.checkpoints",
+    "behavior": [
+      "source SHA-256 is recorded and mismatched source checkpoints are rejected",
+      "each major V4 stage writes persistent output and audit before the next stage",
+      "completed valid stages are skipped on rerun",
+      "failed/running stage and error are recorded in state.json",
+      "checkpoint files are intentionally not deleted after failure or success"
+    ]
+  },
+  "last_completed_work": [
+    "integrated targeted-pattern V4 repairs",
+    "added relative-pronoun V4 and mid-sentence blank-case V4 gates",
+    "added final canonical invariant audit tooling",
+    "made V4 runner durable/resumable",
+    "fixed syntax error in test_fix_mikami_global_quality_v5.mjs"
+  ],
+  "current_state": "WAITING_FOR_V4_CI_AFTER_RESUME_AND_V5_TEST_FIX",
+  "next_actions": [
+    "confirm V4 CI passes with resumable runner",
+    "continue canonical-source defect audit against authenticated Drive source",
+    "run repaired V4 pipeline on exact 4035500-byte canonical when execution path can access authenticated source",
+    "verify 10513 total / 10511 English / zero final quality errors / vocab and grammar gates",
+    "package repaired HTML plus audits and README as ZIP"
+  ],
+  "known_blocker": "GitHub Actions cannot anonymously download the private Google Drive canonical; unauthenticated curl receives a Google login page instead of the 4035500-byte source. Do not make the Drive source public without explicit permission.",
+  "resume_instruction": "On any later chat/message timeout, read this file first, then continue from current_state/next_actions instead of restarting or guessing."
+}
