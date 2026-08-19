@@ -31,62 +31,7 @@ jobs:
           ref: main
 
       - name: Diagnose exam POS data and filter code
-        run: |
-          node - <<'NODE'
-          const fs = require('fs');
-          const html = fs.readFileSync('index.html','utf8');
-          const marker = 'const DATA=';
-          const start = html.indexOf(marker);
-          if (start < 0) throw new Error('const DATA not found');
-          let i = start + marker.length;
-          while (/\s/.test(html[i])) i++;
-          if (html[i] !== '[') throw new Error('DATA array start not found');
-          let depth=0, inStr=false, esc=false, end=-1;
-          for (let j=i;j<html.length;j++) {
-            const ch=html[j];
-            if (inStr) {
-              if (esc) esc=false;
-              else if (ch==='\\') esc=true;
-              else if (ch==='"') inStr=false;
-              continue;
-            }
-            if (ch==='"') { inStr=true; continue; }
-            if (ch==='[') depth++;
-            else if (ch===']') { depth--; if (depth===0) { end=j+1; break; } }
-          }
-          if (end<0) throw new Error('DATA array end not found');
-          const data = JSON.parse(html.slice(i,end));
-          const exam = data.filter(x=>x.dataset==='exam');
-          const freq = key => Object.entries(exam.reduce((a,x)=>{const v=String(x[key]??'').trim()||'(blank)'; a[v]=(a[v]||0)+1; return a;},{})).sort((a,b)=>b[1]-a[1]);
-          const terms=['品詞','posFilter','pos_filter','examPos','exam-pos','pos_raw','posSelect','pos-select'];
-          const snippets=[];
-          for (const term of terms) {
-            let from=0;
-            while (true) {
-              const idx=html.indexOf(term,from);
-              if(idx<0) break;
-              snippets.push({term,index:idx,text:html.slice(Math.max(0,idx-900),Math.min(html.length,idx+1800))});
-              from=idx+term.length;
-              if(snippets.length>=80) break;
-            }
-          }
-          const report={
-            total_count:data.length,
-            textbook_count:data.filter(x=>x.dataset==='textbook').length,
-            exam_count:exam.length,
-            elementary_count:data.filter(x=>x.dataset==='elementary').length,
-            exam_pos_blank:exam.filter(x=>!String(x.pos??'').trim()).length,
-            exam_pos_raw_blank:exam.filter(x=>!String(x.pos_raw??'').trim()).length,
-            pos_frequency:freq('pos'),
-            pos_raw_frequency:freq('pos_raw'),
-            sample_exam:exam.slice(0,12),
-            snippet_count:snippets.length
-          };
-          fs.mkdirSync('audit',{recursive:true});
-          fs.writeFileSync('audit/EXAM_POS_DIAGNOSTIC.json',JSON.stringify(report,null,2)+'\n');
-          fs.writeFileSync('audit/EXAM_POS_UI_SNIPPETS.txt',snippets.map((s,n)=>`===== ${n+1} ${s.term} @ ${s.index} =====\n${s.text}\n`).join('\n'));
-          console.log(JSON.stringify(report,null,2));
-          NODE
+        run: node tools/diagnose_exam_pos.mjs
 
       - name: Verify live Pages matches current main
         id: live
@@ -147,22 +92,9 @@ jobs:
             await page.locator('button.tab[data-dataset="textbook"]').click();
             if (!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('textbook tab did not reactivate');
             const status = {
-              status: 'pass',
-              page_url: process.env.PAGE_URL,
-              index_sha256: process.env.INDEX_SHA,
-              engine: 'Playwright WebKit',
-              mobile_viewport: '390x844',
-              checks: {
-                page_loaded: true,
-                title_visible: true,
-                three_dataset_tabs: true,
-                default_10_question_test_created: true,
-                ten_test_cards_rendered: true,
-                answer_toggle_works: true,
-                exam_tab_switch_works: true,
-                elementary_tab_switch_works: true,
-                textbook_tab_switch_back_works: true
-              },
+              status: 'pass', page_url: process.env.PAGE_URL, index_sha256: process.env.INDEX_SHA,
+              engine: 'Playwright WebKit', mobile_viewport: '390x844',
+              checks: {page_loaded:true,title_visible:true,three_dataset_tabs:true,default_10_question_test_created:true,ten_test_cards_rendered:true,answer_toggle_works:true,exam_tab_switch_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},
               checked_at_utc: new Date().toISOString()
             };
             fs.mkdirSync('audit',{recursive:true});
