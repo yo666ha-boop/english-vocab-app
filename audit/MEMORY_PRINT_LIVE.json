@@ -1,13 +1,13 @@
 {
   "status": "pass",
   "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
-  "index_sha256": "3bc88122f06dd6a27d776e152b093bb0cd77857c1c1e9579f641bf95821d1d11",
+  "index_sha256": "80d29e2d901a2da3ca5b912c38fd50e5e812091177a7cb22b0ac95a5e093f56e",
   "live_matches_main": true,
-  "max_rows": 300,
+  "max_rows": 1000,
   "rows_per_page": 18,
   "large_selection_guard_present": true,
   "pagination_present": true,
   "elementary_group_key_fix_present": true,
   "final_runtime_guard_present": true,
-  "checked_at_utc": "2026-08-19T07:25:50Z"
+  "checked_at_utc": "2026-08-19T07:35:46Z"
 }
