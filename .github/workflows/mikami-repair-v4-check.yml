@@ -31,6 +31,7 @@ jobs:
           node --check tools/test_relative_pronouns_v4.mjs
           node --check tools/test_mid_sentence_blank_case_v4.mjs
           node --check tools/test_relative_runtime_gate_v4.mjs
+          node --check tools/test_fix_mikami_global_quality_v5.mjs
           node --check tools/test_pipeline_v4_integration.mjs
           node --check tools/test_final_canonical_audit.mjs
       - name: Targeted patterns V4 regression
@@ -41,6 +42,8 @@ jobs:
         run: node tools/test_mid_sentence_blank_case_v4.mjs
       - name: Relative runtime gate V4 regression
         run: node tools/test_relative_runtime_gate_v4.mjs
+      - name: Global legacy quality V5 regression
+        run: node tools/test_fix_mikami_global_quality_v5.mjs
       - name: Full V4 pipeline integration
         run: node tools/test_pipeline_v4_integration.mjs
       - name: Final canonical invariant audit regression
@@ -79,6 +82,7 @@ jobs:
           RELATIVE_PRONOUN_V4=enabled
           RELATIVE_UNIQUE_BLANK_GATE=enabled
           MID_SENTENCE_BLANK_CASE_V4=enabled
+          GLOBAL_LEGACY_QUALITY_V5=enabled
           FINAL_CANONICAL_INVARIANT_AUDIT=enabled
           INHERITS_V3=enabled
           EOF
