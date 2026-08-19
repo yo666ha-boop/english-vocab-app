@@ -1,19 +1,20 @@
 {
   "status": "pass",
   "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
-  "index_sha256": "020f584357dc5298c27ebd9501014a766e8371416db4f3fdf492ed27e76206e7",
+  "index_sha256": "c57d3d5756140d9a819d52f046d72800df40b868d9d79364b333d8e1a072c9a6",
   "engine": "Playwright WebKit",
   "mobile_viewport": "390x844",
   "checks": {
     "page_loaded": true,
-    "title_visible": true,
     "three_dataset_tabs": true,
-    "default_10_question_test_created": true,
-    "ten_test_cards_rendered": true,
+    "exam_pos_filter_present": true,
+    "exam_noun_filter_nonempty": true,
+    "exam_noun_filter_exclusive": true,
+    "exam_pos_column_visible": true,
+    "exam_filtered_10_question_test_created": true,
     "answer_toggle_works": true,
-    "exam_tab_switch_works": true,
     "elementary_tab_switch_works": true,
     "textbook_tab_switch_back_works": true
   },
-  "checked_at_utc": "2026-08-19T04:29:22.790Z"
+  "checked_at_utc": "2026-08-19T04:41:12.232Z"
 }
