@@ -27,6 +27,7 @@ jobs:
           node --check tools/fix_relative_runtime_gate_v4.mjs
           node --check tools/run_mikami_pipeline_v4.mjs
           node --check tools/audit_final_canonical.mjs
+          node --check tools/export_mikami_answer_gpt_knowledge.mjs
           node --check tools/test_targeted_patterns_v4.mjs
           node --check tools/test_relative_pronouns_v4.mjs
           node --check tools/test_mid_sentence_blank_case_v4.mjs
@@ -34,6 +35,7 @@ jobs:
           node --check tools/test_fix_mikami_global_quality_v5.mjs
           node --check tools/test_pipeline_v4_integration.mjs
           node --check tools/test_final_canonical_audit.mjs
+          node --check tools/test_export_mikami_answer_gpt_knowledge.mjs
       - name: Targeted patterns V4 regression
         run: node tools/test_targeted_patterns_v4.mjs
       - name: Relative-pronoun V4 regression
@@ -48,6 +50,8 @@ jobs:
         run: node tools/test_pipeline_v4_integration.mjs
       - name: Final canonical invariant audit regression
         run: node tools/test_final_canonical_audit.mjs
+      - name: Answer GPT knowledge exporter regression
+        run: node tools/test_export_mikami_answer_gpt_knowledge.mjs
       - name: Safety stop against unrelated app V4
         run: |
           if node tools/run_mikami_pipeline_v4.mjs index.html /tmp/not-canonical-v4.html 2>/tmp/v4.err; then
@@ -84,6 +88,7 @@ jobs:
           MID_SENTENCE_BLANK_CASE_V4=enabled
           GLOBAL_LEGACY_QUALITY_V5=enabled
           FINAL_CANONICAL_INVARIANT_AUDIT=enabled
+          ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION=enabled
           INHERITS_V3=enabled
           EOF
           git config user.name 'github-actions[bot]'
