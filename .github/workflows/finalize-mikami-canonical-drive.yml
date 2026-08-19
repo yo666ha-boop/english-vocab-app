@@ -57,21 +57,25 @@ jobs:
           NODE
 
           mkdir -p dist/final
-          node tools/run_mikami_pipeline_v3.mjs /tmp/mikami-canonical.html 'dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
+          node tools/run_mikami_pipeline_v4.mjs /tmp/mikami-canonical.html 'dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
           OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
-          AUDIT="$OUT.pipeline-v3.audit.json"
+          AUDIT="$OUT.pipeline-v4.audit.json"
           test -s "$OUT"
           test -s "$AUDIT"
           grep -q '"status": "OK"' "$AUDIT"
+          grep -q '"inherited_pipeline": "V3"' "$AUDIT"
+          grep -q '"final_quality_errors": 0' "$AUDIT"
           grep -q 'v7-2026-08-18-1based' "$OUT"
           grep -q 'passesPrereqGrammar(item)' "$OUT"
           grep -q 'passesQualityGate(item)' "$OUT"
           grep -q 'const infinitiveBlank =' "$OUT"
           grep -q '"m2_infinitive_bank_v4_changed"' "$AUDIT"
+          grep -q '"relative_pronoun_unique_blank": true' "$AUDIT"
+          grep -q '"mid_sentence_blank_case": true' "$AUDIT"
           if grep -Eqi 'This is (he|she|we)\b|\bthan He\b|否定文または疑問文|\bHe gots up\b|\bwents there\b' "$OUT"; then exit 1; fi
           cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
           cd dist/final
-          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' 'みかみ塾英語問題アプリ_正本修正版_20260819.html' 'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v3.audit.json' 'README_修正内容.txt'
+          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' 'みかみ塾英語問題アプリ_正本修正版_20260819.html' 'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v4.audit.json' 'README_修正内容.txt'
 
       - name: Publish status and generated audit to branch
         if: always()
@@ -81,7 +85,7 @@ jobs:
           mkdir -p release/generated
           cp /tmp/mikami-finalize.log release/generated/finalize_20260819.log 2>/dev/null || true
           OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
-          AUDIT="$OUT.pipeline-v3.audit.json"
+          AUDIT="$OUT.pipeline-v4.audit.json"
           ZIP='dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip'
           if test -s "$ZIP" && test -s "$AUDIT"; then STATUS='PASS'; cp "$AUDIT" release/generated/finalize_20260819.audit.json; else STATUS='FAIL'; rm -f release/generated/finalize_20260819.audit.json; fi
           {
@@ -89,6 +93,7 @@ jobs:
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
             echo "HEAD_SHA=$GITHUB_SHA"
+            echo "PIPELINE=V4"
             echo "SOURCE_DRIVE_ID=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4"
             echo "EXPECTED_SOURCE_BYTES=4035500"
           } > release/generated/finalize_20260819.status.txt
@@ -104,6 +109,6 @@ jobs:
         if: steps.build.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: mikami-english-question-app-canonical-repaired-20260819
+          name: mikami-english-question-app-canonical-repaired-v4-20260819
           path: dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip
           if-no-files-found: error
