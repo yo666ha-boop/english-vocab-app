@@ -17,347 +17,3497 @@
       534
     ]
   ],
-  "sample_exam": [
+  "textbook_exact_pos_recoverable_count": 285,
+  "textbook_exact_pos_ambiguous_count": 15,
+  "manual_or_other_source_needed_count": 234,
+  "recoverable": [
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "did",
-      "japanese": "do の過去",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ディド"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "and",
-      "japanese": "そして",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "アンド"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "be (am / is / are)",
-      "japanese": "〜である",
-      "star": "0",
-      "phrase": "1",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ビー（アム／イズ／アー）"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "read",
-      "japanese": "読む",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "リード"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "because",
-      "japanese": "〜なので",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ビコーズ"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "do",
       "japanese": "する（疑問・否定にも使う）",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ドゥー"
+      "pos": "助動詞",
+      "match_count": 3
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "has",
       "japanese": "have の三単現",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ハズ"
+      "pos": "動詞",
+      "match_count": 1
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "study",
       "japanese": "勉強する",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "スタディ"
+      "pos": "動詞",
+      "match_count": 3
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "feel",
       "japanese": "感じる",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "フィール"
+      "pos": "動詞",
+      "match_count": 1
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "so",
       "japanese": "だから",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ソー"
+      "pos": "接続詞",
+      "match_count": 3
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "but",
       "japanese": "しかし",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "バット"
+      "pos": "接続詞",
+      "match_count": 2
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "this",
-      "japanese": "これ",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ディス"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
-      "english": "had",
-      "japanese": "have の過去",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ハド"
-    },
-    {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "will",
       "japanese": "〜するつもり／だろう",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ウィル"
+      "pos": "助動詞",
+      "match_count": 2
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "like",
       "japanese": "好き／〜のような",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ライク"
+      "pos": "動詞",
+      "match_count": 4
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "help",
       "japanese": "助ける",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ヘルプ"
+      "pos": "動詞",
+      "match_count": 2
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "start",
       "japanese": "始める",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "スタート"
+      "pos": "動詞",
+      "match_count": 2
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "say",
       "japanese": "言う",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "セイ"
+      "pos": "動詞",
+      "match_count": 3
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "make",
       "japanese": "作る",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "メイク"
+      "pos": "動詞",
+      "match_count": 3
     },
     {
-      "dataset": "exam",
-      "textbook": "",
-      "grade": "nan",
-      "major_unit": "",
-      "section": "",
       "english": "look",
       "japanese": "見る／〜に見える",
-      "star": "0",
-      "phrase": "0",
-      "pos": "",
-      "pos_raw": "",
-      "exam_category": "書ける最優先",
-      "exam_subcategory": "",
-      "current_confirmed": "0",
-      "kana": "ルック"
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "come",
+      "japanese": "来る",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "when",
+      "japanese": "〜するとき",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "after",
+      "japanese": "〜の後に",
+      "pos": "前置詞",
+      "match_count": 3
+    },
+    {
+      "english": "while",
+      "japanese": "〜している間",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "or",
+      "japanese": "または",
+      "pos": "接続詞",
+      "match_count": 2
+    },
+    {
+      "english": "also",
+      "japanese": "〜もまた",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "however",
+      "japanese": "しかしながら",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "important",
+      "japanese": "重要な",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "soon",
+      "japanese": "すぐに",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "then",
+      "japanese": "そのとき／それから",
+      "pos": "副詞",
+      "match_count": 5
+    },
+    {
+      "english": "there",
+      "japanese": "そこ",
+      "pos": "副詞",
+      "match_count": 4
+    },
+    {
+      "english": "my",
+      "japanese": "私の",
+      "pos": "代名詞",
+      "match_count": 2
+    },
+    {
+      "english": "everyone",
+      "japanese": "みんな",
+      "pos": "代名詞",
+      "match_count": 1
+    },
+    {
+      "english": "many",
+      "japanese": "たくさんの",
+      "pos": "形容詞",
+      "match_count": 4
+    },
+    {
+      "english": "school",
+      "japanese": "学校",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "student",
+      "japanese": "生徒",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "idea",
+      "japanese": "考え",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "information",
+      "japanese": "情報",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "little",
+      "japanese": "少しの（量）",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "next",
+      "japanese": "次に",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "does",
+      "japanese": "do の三単現",
+      "pos": "助動詞",
+      "match_count": 1
+    },
+    {
+      "english": "have",
+      "japanese": "持つ・経験する（完了にも）",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "can",
+      "japanese": "〜できる",
+      "pos": "助動詞",
+      "match_count": 6
+    },
+    {
+      "english": "must",
+      "japanese": "〜しなければならない",
+      "pos": "助動詞",
+      "match_count": 2
+    },
+    {
+      "english": "should",
+      "japanese": "〜したほうがよい",
+      "pos": "助動詞",
+      "match_count": 2
+    },
+    {
+      "english": "love",
+      "japanese": "大好き",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "finish",
+      "japanese": "終える",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "stop",
+      "japanese": "やめる",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "wait",
+      "japanese": "待つ",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "choose",
+      "japanese": "選ぶ",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "decide",
+      "japanese": "決める",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "plan",
+      "japanese": "計画する／計画",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "hope",
+      "japanese": "望む",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "know",
+      "japanese": "知っている",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "understand",
+      "japanese": "理解する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "remember",
+      "japanese": "覚えている",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "forget",
+      "japanese": "忘れる",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "tell",
+      "japanese": "（人に）伝える",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "talk",
+      "japanese": "話す",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "speak",
+      "japanese": "話す（言語）",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "ask",
+      "japanese": "たずねる",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "write",
+      "japanese": "書く",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "learn",
+      "japanese": "学ぶ",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "teach",
+      "japanese": "教える",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "use",
+      "japanese": "使う",
+      "pos": "動詞",
+      "match_count": 5
+    },
+    {
+      "english": "take",
+      "japanese": "取る／連れて行く",
+      "pos": "動詞",
+      "match_count": 7
+    },
+    {
+      "english": "get",
+      "japanese": "得る／着く／買う",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "put",
+      "japanese": "置く",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "keep",
+      "japanese": "保つ／続ける",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "show",
+      "japanese": "見せる",
+      "pos": "名詞",
+      "match_count": 6
+    },
+    {
+      "english": "explain",
+      "japanese": "説明する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "mean",
+      "japanese": "意味する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "become",
+      "japanese": "〜になる",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "seem",
+      "japanese": "〜のように見える",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "watch",
+      "japanese": "（注意して）見る",
+      "pos": "動詞",
+      "match_count": 5
+    },
+    {
+      "english": "see",
+      "japanese": "見える／会う",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "meet",
+      "japanese": "会う",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "visit",
+      "japanese": "訪ねる",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "stay",
+      "japanese": "滞在する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "live",
+      "japanese": "住む",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "move",
+      "japanese": "動く／引っ越す",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "go",
+      "japanese": "行く",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "arrive",
+      "japanese": "到着する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "leave",
+      "japanese": "出発する／去る",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "return",
+      "japanese": "戻る",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "travel",
+      "japanese": "旅行する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "bring",
+      "japanese": "持ってくる",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "carry",
+      "japanese": "運ぶ",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "buy",
+      "japanese": "買う",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "sell",
+      "japanese": "売る",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "pay",
+      "japanese": "払う",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "cost",
+      "japanese": "費用がかかる",
+      "pos": "名詞",
+      "match_count": 5
+    },
+    {
+      "english": "spend",
+      "japanese": "（時間・お金を）使う／（時間を）過ごす",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "save",
+      "japanese": "節約する／救う",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "open",
+      "japanese": "開ける",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "close",
+      "japanese": "閉める",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "end",
+      "japanese": "終わる",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "if",
+      "japanese": "もし〜なら",
+      "pos": "接続詞",
+      "match_count": 1
+    },
+    {
+      "english": "before",
+      "japanese": "〜の前に",
+      "pos": "前置詞",
+      "match_count": 2
+    },
+    {
+      "english": "for example",
+      "japanese": "たとえば",
+      "pos": "熟語・表現",
+      "match_count": 3
+    },
+    {
+      "english": "in my opinion",
+      "japanese": "私の意見では",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "agree",
+      "japanese": "賛成する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "necessary",
+      "japanese": "必要な",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "possible",
+      "japanese": "可能な",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "different",
+      "japanese": "ちがう",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "same",
+      "japanese": "同じ",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "easy",
+      "japanese": "かんたんな",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "difficult",
+      "japanese": "むずかしい",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "interesting",
+      "japanese": "おもしろい",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "useful",
+      "japanese": "役に立つ",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "kind",
+      "japanese": "親切な／種類",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "careful",
+      "japanese": "注意深い",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "free",
+      "japanese": "ひまな／無料の",
+      "pos": "形容詞",
+      "match_count": 4
+    },
+    {
+      "english": "busy",
+      "japanese": "いそがしい",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "early",
+      "japanese": "早い",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "late",
+      "japanese": "遅い",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "always",
+      "japanese": "いつも",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "often",
+      "japanese": "よく",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "sometimes",
+      "japanese": "ときどき",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "never",
+      "japanese": "決して〜ない",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "already",
+      "japanese": "すでに",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "still",
+      "japanese": "まだ",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "now",
+      "japanese": "今",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "here",
+      "japanese": "ここ",
+      "pos": "副詞",
+      "match_count": 4
+    },
+    {
+      "english": "that",
+      "japanese": "あれ／〜という",
+      "pos": "代名詞",
+      "match_count": 4
+    },
+    {
+      "english": "these",
+      "japanese": "これら",
+      "pos": "代名詞",
+      "match_count": 6
+    },
+    {
+      "english": "your",
+      "japanese": "あなたの",
+      "pos": "代名詞",
+      "match_count": 1
+    },
+    {
+      "english": "his",
+      "japanese": "彼の",
+      "pos": "代名詞",
+      "match_count": 5
+    },
+    {
+      "english": "her",
+      "japanese": "彼女の",
+      "pos": "代名詞",
+      "match_count": 3
+    },
+    {
+      "english": "our",
+      "japanese": "私たちの",
+      "pos": "代名詞",
+      "match_count": 2
+    },
+    {
+      "english": "their",
+      "japanese": "彼らの",
+      "pos": "代名詞",
+      "match_count": 1
+    },
+    {
+      "english": "someone",
+      "japanese": "だれか",
+      "pos": "代名詞",
+      "match_count": 3
+    },
+    {
+      "english": "something",
+      "japanese": "何か",
+      "pos": "代名詞",
+      "match_count": 3
+    },
+    {
+      "english": "everything",
+      "japanese": "すべて",
+      "pos": "代名詞",
+      "match_count": 4
+    },
+    {
+      "english": "much",
+      "japanese": "たくさんの（数えない）",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "some",
+      "japanese": "いくつかの",
+      "pos": "形容詞",
+      "match_count": 6
+    },
+    {
+      "english": "any",
+      "japanese": "いくつかの（疑問・否定）",
+      "pos": "形容詞",
+      "match_count": 5
+    },
+    {
+      "english": "more",
+      "japanese": "より多くの",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "most",
+      "japanese": "最も",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "less",
+      "japanese": "より少ない",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "a lot of",
+      "japanese": "たくさんの",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "teacher",
+      "japanese": "先生",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "class",
+      "japanese": "授業／クラス",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "homework",
+      "japanese": "宿題",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "question",
+      "japanese": "質問",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "example",
+      "japanese": "例",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "reason",
+      "japanese": "理由",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "problem",
+      "japanese": "問題",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "practice",
+      "japanese": "練習",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "contest",
+      "japanese": "コンテスト",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "speech",
+      "japanese": "スピーチ",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "until",
+      "japanese": "〜まで",
+      "pos": "前置詞",
+      "match_count": 1
+    },
+    {
+      "english": "too",
+      "japanese": "〜も（〜もまた）",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "either",
+      "japanese": "（否定文で）〜もまた",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "each",
+      "japanese": "それぞれの",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "every",
+      "japanese": "毎〜／すべての",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "probably",
+      "japanese": "たぶん",
+      "pos": "副詞",
+      "match_count": 1
+    },
+    {
+      "english": "maybe",
+      "japanese": "たぶん／もしかすると",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "finally",
+      "japanese": "最後に",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "change",
+      "japanese": "変化／変える",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "chance",
+      "japanese": "機会",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "person",
+      "japanese": "人",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "people",
+      "japanese": "人々／人たち",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "country",
+      "japanese": "国",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "city",
+      "japanese": "市／都市",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "village",
+      "japanese": "村",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "other",
+      "japanese": "ほかの／別の",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "join",
+      "japanese": "参加する／加わる",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "work",
+      "japanese": "仕事／活動する",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "life",
+      "japanese": "生活／命",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "lunch",
+      "japanese": "昼食",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "better",
+      "japanese": "よりよい",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "action",
+      "japanese": "行動",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "walk",
+      "japanese": "歩く",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "share",
+      "japanese": "共有する／分け合う",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "world",
+      "japanese": "世界",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "paint",
+      "japanese": "塗る",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "full",
+      "japanese": "いっぱいの",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "environment",
+      "japanese": "環境",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "plastic",
+      "japanese": "プラスチック",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "volunteer",
+      "japanese": "ボランティア",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "local",
+      "japanese": "地元の",
+      "pos": "形容詞",
+      "match_count": 4
+    },
+    {
+      "english": "homestay",
+      "japanese": "ホームステイ",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "experience",
+      "japanese": "経験",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "dream",
+      "japanese": "夢",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "library",
+      "japanese": "図書館",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "nature",
+      "japanese": "自然",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "earth",
+      "japanese": "地球",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "energy",
+      "japanese": "エネルギー",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "renewable",
+      "japanese": "再生可能な",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "recycle",
+      "japanese": "再利用する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "reduce",
+      "japanese": "減らす",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "waste",
+      "japanese": "無駄／ごみ",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "pollution",
+      "japanese": "汚染",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "ocean",
+      "japanese": "海",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "forest",
+      "japanese": "森",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "protect",
+      "japanese": "守る",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "climate",
+      "japanese": "気候",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "disaster",
+      "japanese": "災害",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "earthquake",
+      "japanese": "地震",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "typhoon",
+      "japanese": "台風",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "rescue",
+      "japanese": "救助",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "damage",
+      "japanese": "被害",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "charity",
+      "japanese": "慈善",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "donate",
+      "japanese": "寄付する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "international",
+      "japanese": "国際的な",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "foreign",
+      "japanese": "外国の",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "exchange",
+      "japanese": "交換／交流",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "host family",
+      "japanese": "ホストファミリー",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "culture",
+      "japanese": "文化",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "tradition",
+      "japanese": "伝統",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "festival",
+      "japanese": "祭り",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "museum",
+      "japanese": "博物館",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "history",
+      "japanese": "歴史",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "tourist",
+      "japanese": "観光客",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "map",
+      "japanese": "地図",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "direction",
+      "japanese": "方向",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "airport",
+      "japanese": "空港",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "hotel",
+      "japanese": "ホテル",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "reservation",
+      "japanese": "予約",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "customer",
+      "japanese": "客",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "service",
+      "japanese": "サービス",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "recommend",
+      "japanese": "おすすめする",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "challenge",
+      "japanese": "挑戦",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "goal",
+      "japanese": "目標",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "failure",
+      "japanese": "失敗",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "mistake",
+      "japanese": "まちがい",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "advice",
+      "japanese": "助言",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "technology",
+      "japanese": "技術",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "research",
+      "japanese": "研究",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "invent",
+      "japanese": "発明する",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "invention",
+      "japanese": "発明",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "robot",
+      "japanese": "ロボット",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "computer",
+      "japanese": "コンピューター",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "online",
+      "japanese": "オンラインの",
+      "pos": "副詞",
+      "match_count": 3
+    },
+    {
+      "english": "website",
+      "japanese": "ウェブサイト",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "message",
+      "japanese": "メッセージ",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "data",
+      "japanese": "データ",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "rule",
+      "japanese": "規則",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "law",
+      "japanese": "法律",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "safe",
+      "japanese": "安全な",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "dangerous",
+      "japanese": "危険な",
+      "pos": "形容詞",
+      "match_count": 3
+    },
+    {
+      "english": "accident",
+      "japanese": "事故",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "traffic accident",
+      "japanese": "交通事故",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "health",
+      "japanese": "健康",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "exercise",
+      "japanese": "運動",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "medicine",
+      "japanese": "薬",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "hospital",
+      "japanese": "病院",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "doctor",
+      "japanese": "医者",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "sleep",
+      "japanese": "睡眠",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "sport",
+      "japanese": "スポーツ",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "team",
+      "japanese": "チーム",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "match",
+      "japanese": "試合",
+      "pos": "動詞",
+      "match_count": 1
+    },
+    {
+      "english": "practice",
+      "japanese": "練習",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "event",
+      "japanese": "行事",
+      "pos": "名詞",
+      "match_count": 4
+    },
+    {
+      "english": "club",
+      "japanese": "部活動",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "concert",
+      "japanese": "コンサート",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "performance",
+      "japanese": "公演",
+      "pos": "名詞",
+      "match_count": 3
+    },
+    {
+      "english": "enter",
+      "japanese": "参加する",
+      "pos": "動詞",
+      "match_count": 4
+    },
+    {
+      "english": "prize",
+      "japanese": "賞",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "winner",
+      "japanese": "勝者",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "prepare",
+      "japanese": "準備する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "introduce",
+      "japanese": "紹介する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "improve",
+      "japanese": "改善する",
+      "pos": "動詞",
+      "match_count": 2
+    },
+    {
+      "english": "develop",
+      "japanese": "発展させる",
+      "pos": "動詞",
+      "match_count": 3
+    },
+    {
+      "english": "eco-friendly",
+      "japanese": "環境にやさしい",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "station",
+      "japanese": "駅",
+      "pos": "名詞",
+      "match_count": 1
+    },
+    {
+      "english": "market",
+      "japanese": "市場",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "view",
+      "japanese": "景色／眺め",
+      "pos": "名詞",
+      "match_count": 2
+    },
+    {
+      "english": "convenient",
+      "japanese": "便利な",
+      "pos": "形容詞",
+      "match_count": 1
+    },
+    {
+      "english": "expensive",
+      "japanese": "高価な",
+      "pos": "形容詞",
+      "match_count": 2
+    },
+    {
+      "english": "in addition",
+      "japanese": "さらに（追加で）",
+      "pos": "熟語・表現",
+      "match_count": 2
+    },
+    {
+      "english": "at least",
+      "japanese": "少なくとも",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "in fact",
+      "japanese": "実は／実際は",
+      "pos": "熟語・表現",
+      "match_count": 2
+    },
+    {
+      "english": "actually",
+      "japanese": "実は",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "especially",
+      "japanese": "特に",
+      "pos": "副詞",
+      "match_count": 2
+    },
+    {
+      "english": "on the other hand",
+      "japanese": "一方で",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "in order to",
+      "japanese": "〜するために",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "each other",
+      "japanese": "お互い（に）",
+      "pos": "熟語・表現",
+      "match_count": 2
+    },
+    {
+      "english": "another",
+      "japanese": "もう一つの／別の",
+      "pos": "形容詞",
+      "match_count": 5
+    },
+    {
+      "english": "by the way",
+      "japanese": "ところで",
+      "pos": "熟語・表現",
+      "match_count": 2
+    },
+    {
+      "english": "right away",
+      "japanese": "すぐに",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "for a while",
+      "japanese": "しばらくの間",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "for a long time",
+      "japanese": "長い間",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "all the time",
+      "japanese": "いつも",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "from now on",
+      "japanese": "これから先",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "at first",
+      "japanese": "最初は",
+      "pos": "熟語・表現",
+      "match_count": 3
+    },
+    {
+      "english": "in the future",
+      "japanese": "将来",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "in the end",
+      "japanese": "結局",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "little by little",
+      "japanese": "少しずつ",
+      "pos": "熟語・表現",
+      "match_count": 2
+    },
+    {
+      "english": "not only A but also B",
+      "japanese": "AだけでなくBも",
+      "pos": "熟語・表現",
+      "match_count": 1
+    },
+    {
+      "english": "more and more",
+      "japanese": "ますます",
+      "pos": "熟語・表現",
+      "match_count": 2
     }
   ],
-  "snippet_count": 120
+  "ambiguous": [
+    {
+      "english": "this",
+      "japanese": "これ",
+      "poses": [
+        "代名詞",
+        "形容詞"
+      ],
+      "match_count": 3
+    },
+    {
+      "english": "today",
+      "japanese": "今日",
+      "poses": [
+        "名詞",
+        "副詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "may",
+      "japanese": "〜してもよい／かもしれない",
+      "poses": [
+        "名詞",
+        "助動詞"
+      ],
+      "match_count": 6
+    },
+    {
+      "english": "need",
+      "japanese": "必要とする",
+      "poses": [
+        "名詞",
+        "動詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "answer",
+      "japanese": "答える／答え",
+      "poses": [
+        "動詞",
+        "名詞"
+      ],
+      "match_count": 3
+    },
+    {
+      "english": "turn",
+      "japanese": "曲がる／回す",
+      "poses": [
+        "名詞",
+        "動詞"
+      ],
+      "match_count": 6
+    },
+    {
+      "english": "tomorrow",
+      "japanese": "明日",
+      "poses": [
+        "名詞",
+        "副詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "yesterday",
+      "japanese": "昨日",
+      "poses": [
+        "名詞",
+        "副詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "those",
+      "japanese": "それら",
+      "poses": [
+        "形容詞",
+        "代名詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "enough",
+      "japanese": "十分な",
+      "poses": [
+        "形容詞",
+        "副詞"
+      ],
+      "match_count": 5
+    },
+    {
+      "english": "future",
+      "japanese": "未来",
+      "poses": [
+        "名詞",
+        "形容詞"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "all",
+      "japanese": "すべての",
+      "poses": [
+        "代名詞",
+        "形容詞"
+      ],
+      "match_count": 3
+    },
+    {
+      "english": "light",
+      "japanese": "光",
+      "poses": [
+        "名詞",
+        "形容詞"
+      ],
+      "match_count": 5
+    },
+    {
+      "english": "global warming",
+      "japanese": "地球温暖化",
+      "poses": [
+        "名詞",
+        "熟語・表現"
+      ],
+      "match_count": 2
+    },
+    {
+      "english": "guide",
+      "japanese": "案内人／案内する",
+      "poses": [
+        "名詞",
+        "動詞"
+      ],
+      "match_count": 2
+    }
+  ],
+  "unresolved": [
+    {
+      "english": "did",
+      "japanese": "do の過去",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "and",
+      "japanese": "そして",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 1
+    },
+    {
+      "english": "be (am / is / are)",
+      "japanese": "〜である",
+      "phrase": "1",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "read",
+      "japanese": "読む",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 4
+    },
+    {
+      "english": "because",
+      "japanese": "〜なので",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "had",
+      "japanese": "have の過去",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "both",
+      "japanese": "両方とも",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "would",
+      "japanese": "will の過去／ていねい",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "want",
+      "japanese": "〜したい",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 1
+    },
+    {
+      "english": "try",
+      "japanese": "やってみる",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "think",
+      "japanese": "思う",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "give",
+      "japanese": "与える",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "hear",
+      "japanese": "聞こえる",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 1
+    },
+    {
+      "english": "listen",
+      "japanese": "聞く",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "begin",
+      "japanese": "始まる",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "disagree",
+      "japanese": "反対する",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "few",
+      "japanese": "少しの（数える）",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 1
+    },
+    {
+      "english": "test",
+      "japanese": "テスト",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "opinion",
+      "japanese": "意見",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "solution",
+      "japanese": "解決",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "schedule",
+      "japanese": "予定",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "script",
+      "japanese": "台本／原稿",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "since",
+      "japanese": "〜以来（優先）／〜なので",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "unless",
+      "japanese": "もし〜でなければ",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "difference",
+      "japanese": "違い",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "town",
+      "japanese": "町",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "first",
+      "japanese": "最初の／まず",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 2
+    },
+    {
+      "english": "fix",
+      "japanese": "修理する／直す",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 0
+    },
+    {
+      "english": "shop",
+      "japanese": "店",
+      "phrase": "0",
+      "exam_category": "書ける最優先",
+      "match_count": 2
+    },
+    {
+      "english": "solar",
+      "japanese": "太陽の",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "wind",
+      "japanese": "風の",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "reuse",
+      "japanese": "再使用する",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "wildlife",
+      "japanese": "野生生物",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "save the earth",
+      "japanese": "地球を守る",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "flood",
+      "japanese": "洪水",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "evacuation",
+      "japanese": "避難",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "community",
+      "japanese": "地域社会",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "local community",
+      "japanese": "地域社会",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "take part in",
+      "japanese": "参加する",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "traditional culture",
+      "japanese": "伝統文化",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "temple",
+      "japanese": "寺",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "shrine",
+      "japanese": "神社",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "sightseeing",
+      "japanese": "観光",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "traffic",
+      "japanese": "交通／渋滞",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "passport",
+      "japanese": "パスポート",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "customs",
+      "japanese": "税関",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "success",
+      "japanese": "成功",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "opportunity",
+      "japanese": "機会",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "science",
+      "japanese": "科学",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "experiment",
+      "japanese": "実験",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "AI",
+      "japanese": "人工知能",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 1
+    },
+    {
+      "english": "internet",
+      "japanese": "インターネット",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "social media",
+      "japanese": "SNS",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "smartphone",
+      "japanese": "スマホ",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "app",
+      "japanese": "アプリ",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "privacy",
+      "japanese": "プライバシー",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "diet",
+      "japanese": "食事・食生活",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "symptom",
+      "japanese": "症状",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "stress",
+      "japanese": "ストレス",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "audience",
+      "japanese": "観客",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "instrument",
+      "japanese": "楽器",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "speech contest",
+      "japanese": "スピーチコンテスト",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "pamphlet",
+      "japanese": "小冊子／案内パンフレット",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "plain",
+      "japanese": "わかりやすい／平易な",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "pair",
+      "japanese": "組み合わせ／対",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "easy Japanese",
+      "japanese": "やさしい日本語",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "local festival",
+      "japanese": "地域の祭り",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "lantern",
+      "japanese": "ちょうちん",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "lantern walk",
+      "japanese": "ちょうちん行列",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "community center",
+      "japanese": "公民館／地域センター",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "ocean view",
+      "japanese": "海の見える景色",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "summer camp",
+      "japanese": "夏のキャンプ",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "opera",
+      "japanese": "オペラ",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "special teacher",
+      "japanese": "特別講師",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "science class",
+      "japanese": "科学教室",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "volunteer work",
+      "japanese": "ボランティア活動",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "percentage",
+      "japanese": "割合",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "result",
+      "japanese": "結果",
+      "phrase": "0",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "local problem(s)",
+      "japanese": "地域の問題",
+      "phrase": "1",
+      "exam_category": "長文テーマ語",
+      "match_count": 0
+    },
+    {
+      "english": "Because ...",
+      "japanese": "なぜなら〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I think (that) ...",
+      "japanese": "私は〜と思います（※thatは省略可）",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "In my opinion, ...",
+      "japanese": "私の意見では〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I agree with ...",
+      "japanese": "〜に賛成です",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I disagree with ...",
+      "japanese": "〜に反対です",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "First, ...",
+      "japanese": "まず",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Second, ...",
+      "japanese": "次に",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Finally, ...",
+      "japanese": "最後に",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Also, ...",
+      "japanese": "それに／また",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "However, ...",
+      "japanese": "しかし",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "For example, ...",
+      "japanese": "たとえば",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "So ...",
+      "japanese": "だから〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "That is why ...",
+      "japanese": "だからこそ〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is important to ...",
+      "japanese": "〜することは大切だ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is necessary to ...",
+      "japanese": "〜する必要がある",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is good for ...",
+      "japanese": "〜に良い",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It helps me (us) ...",
+      "japanese": "（私たちの）助けになる",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It makes me ...",
+      "japanese": "私を〜な気持ちにする",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I want to ...",
+      "japanese": "〜したい",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I would like to ...",
+      "japanese": "〜したい（丁寧）",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I am going to ...",
+      "japanese": "〜するつもりだ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I plan to ...",
+      "japanese": "〜する予定だ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I hope to ...",
+      "japanese": "〜したいと思う（望む）",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We should ...",
+      "japanese": "私たちは〜すべきだ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We must ...",
+      "japanese": "私たちは〜しなければならない",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We can ...",
+      "japanese": "私たちは〜できる",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "If I have time, ...",
+      "japanese": "もし時間があれば〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "If I were you, ...",
+      "japanese": "もし私があなたなら〜",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "When I ..., I ...",
+      "japanese": "私が〜するとき、…",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I am good at ...",
+      "japanese": "〜が得意だ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I am not good at ...",
+      "japanese": "〜が苦手だ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I am interested in ...",
+      "japanese": "〜に興味がある",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I like ... because ...",
+      "japanese": "私は…が好き。なぜなら…",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I learned (that) ...",
+      "japanese": "〜を学んだ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I was surprised (that) ...",
+      "japanese": "〜に驚いた",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I was happy to ...",
+      "japanese": "〜できてうれしかった",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I was able to ...",
+      "japanese": "〜できた",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I couldn't ...",
+      "japanese": "〜できなかった",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is hard to ...",
+      "japanese": "〜するのは難しい",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is easy to ...",
+      "japanese": "〜するのは簡単だ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I think it is better to ...",
+      "japanese": "〜したほうがよいと思う",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We need to ...",
+      "japanese": "私たちは〜する必要がある",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We don't have to ...",
+      "japanese": "〜する必要はない",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I recommend ...",
+      "japanese": "〜をおすすめする",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Why don't we ...?",
+      "japanese": "〜しませんか？",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "How about ...?",
+      "japanese": "〜はどう？",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Let's ...",
+      "japanese": "〜しよう",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "It is a good idea to ...",
+      "japanese": "〜するのはよい考えだ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I prefer A to B.",
+      "japanese": "私はBよりAが好き",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "A is better than B.",
+      "japanese": "AはBよりよい",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I have to ...",
+      "japanese": "〜しなければならない",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I have been to ...",
+      "japanese": "〜に行ったことがある",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I have never ...",
+      "japanese": "一度も〜ない",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I am looking forward to ...",
+      "japanese": "〜を楽しみにしている",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "Thank you for ...",
+      "japanese": "〜してくれてありがとう",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I think we can ...",
+      "japanese": "私たちは〜できると思う",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "What can we do for ...?",
+      "japanese": "〜のために何ができますか",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "To make our country/community better, ...",
+      "japanese": "国や地域をよりよくするために、…",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We should take action to ...",
+      "japanese": "〜するために行動すべきだ",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "We can help by ...",
+      "japanese": "〜することで役立てる",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "If we help each other, ...",
+      "japanese": "もし助け合えば、…",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "I want to join ...",
+      "japanese": "〜に参加したい",
+      "phrase": "1",
+      "exam_category": "英作文の型",
+      "match_count": 0
+    },
+    {
+      "english": "because of",
+      "japanese": "〜のために",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "although",
+      "japanese": "〜だけれども",
+      "phrase": "0",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "even if",
+      "japanese": "たとえ〜でも",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "such as",
+      "japanese": "〜のような（例として）",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "instead",
+      "japanese": "その代わりに",
+      "phrase": "0",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "in that case",
+      "japanese": "その場合は",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "besides",
+      "japanese": "その上／〜に加えて",
+      "phrase": "0",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "for that reason",
+      "japanese": "その理由で",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "as soon as",
+      "japanese": "〜するとすぐ",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "not ... anymore",
+      "japanese": "もう〜ない",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "as well as",
+      "japanese": "〜だけでなく…も",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "neither",
+      "japanese": "どちらも〜ない",
+      "phrase": "0",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "neither A nor B",
+      "japanese": "AもBも〜ない",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "either A or B",
+      "japanese": "AかBのどちらか",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "one of",
+      "japanese": "〜のうちの一つ",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "the same as",
+      "japanese": "〜と同じ",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "different from",
+      "japanese": "〜と違う",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "one another",
+      "japanese": "お互い（に）",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "the other",
+      "japanese": "もう一方の",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "at times",
+      "japanese": "ときどき",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "at once",
+      "japanese": "すぐに／いっぺんに",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "at the same time",
+      "japanese": "同時に",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "in the beginning",
+      "japanese": "最初に",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "in the past",
+      "japanese": "過去に",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "at last",
+      "japanese": "ついに",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "at the end",
+      "japanese": "最後に",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "helpful",
+      "japanese": "役に立つ",
+      "phrase": "0",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "in my case",
+      "japanese": "私の場合は",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "all over the world",
+      "japanese": "世界中で",
+      "phrase": "1",
+      "exam_category": "40点超え追加",
+      "match_count": 0
+    },
+    {
+      "english": "cut - cut - cut",
+      "japanese": "切る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "read - read - read",
+      "japanese": "読む",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "put - put - put",
+      "japanese": "置く",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "let - let - let",
+      "japanese": "〜させる / 許す",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "hit - hit - hit",
+      "japanese": "打つ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "cost - cost - cost",
+      "japanese": "（費用が）かかる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "have - had - had",
+      "japanese": "持っている／〜がある",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "get - got - got",
+      "japanese": "得る / 手に入れる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "make - made - made",
+      "japanese": "作る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "hear - heard - heard",
+      "japanese": "聞く",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "say - said - said",
+      "japanese": "言う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "tell - told - told",
+      "japanese": "話す / 教える",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "think - thought - thought",
+      "japanese": "思う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "find - found - found",
+      "japanese": "見つける",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "feel - felt - felt",
+      "japanese": "感じる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "bring - brought - brought",
+      "japanese": "持ってくる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "build - built - built",
+      "japanese": "建てる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "buy - bought - bought",
+      "japanese": "買う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "catch - caught - caught",
+      "japanese": "つかまえる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "hold - held - held",
+      "japanese": "持つ／開催する",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "keep - kept - kept",
+      "japanese": "保つ / 飼う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "leave - left - left",
+      "japanese": "去る / 置いていく",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "lend - lent - lent",
+      "japanese": "貸す",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "lose - lost - lost",
+      "japanese": "失う / 負ける",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "meet - met - met",
+      "japanese": "会う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "pay - paid - paid",
+      "japanese": "払う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "sell - sold - sold",
+      "japanese": "売る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "send - sent - sent",
+      "japanese": "送る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "sit - sat - sat",
+      "japanese": "座る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "sleep - slept - slept",
+      "japanese": "眠る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "spend - spent - spent",
+      "japanese": "（時間・お金を）使う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "stand - stood - stood",
+      "japanese": "立つ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "teach - taught - taught",
+      "japanese": "教える",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "understand - understood - understood",
+      "japanese": "理解する",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "win - won - won",
+      "japanese": "勝つ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "come - came - come",
+      "japanese": "来る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "become - became - become",
+      "japanese": "〜になる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "run - ran - run",
+      "japanese": "走る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "be - was/were - been",
+      "japanese": "〜である / いる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "do - did - done",
+      "japanese": "する",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "go - went - gone",
+      "japanese": "行く",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "take - took - taken",
+      "japanese": "取る / 連れていく",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "give - gave - given",
+      "japanese": "与える",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "see - saw - seen",
+      "japanese": "見る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "know - knew - known",
+      "japanese": "知っている",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "begin - began - begun",
+      "japanese": "始まる / 始める",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "break - broke - broken",
+      "japanese": "こわす / 壊れる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "choose - chose - chosen",
+      "japanese": "選ぶ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "draw - drew - drawn",
+      "japanese": "描く",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "drink - drank - drunk",
+      "japanese": "飲む",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "drive - drove - driven",
+      "japanese": "運転する",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "eat - ate - eaten",
+      "japanese": "食べる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "fall - fell - fallen",
+      "japanese": "落ちる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "fly - flew - flown",
+      "japanese": "飛ぶ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "forget - forgot - forgotten",
+      "japanese": "忘れる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "ride - rode - ridden",
+      "japanese": "乗る",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "ring - rang - rung",
+      "japanese": "鳴る / 鳴らす",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "sing - sang - sung",
+      "japanese": "歌う",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "speak - spoke - spoken",
+      "japanese": "話す",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "swim - swam - swum",
+      "japanese": "泳ぐ",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "wear - wore - worn",
+      "japanese": "着る / 身につける",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "write - wrote - written",
+      "japanese": "書く",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "grow - grew - grown",
+      "japanese": "育つ / 育てる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    },
+    {
+      "english": "throw - threw - thrown",
+      "japanese": "投げる",
+      "phrase": "1",
+      "exam_category": "不規則動詞",
+      "match_count": 0
+    }
+  ],
+  "snippet_count": 17
 }
