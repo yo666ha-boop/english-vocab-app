@@ -1,20 +1,23 @@
 {
   "status": "pass",
   "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
-  "index_sha256": "c57d3d5756140d9a819d52f046d72800df40b868d9d79364b333d8e1a072c9a6",
-  "engine": "Playwright WebKit",
-  "mobile_viewport": "390x844",
-  "checks": {
-    "page_loaded": true,
-    "three_dataset_tabs": true,
-    "exam_pos_filter_present": true,
-    "exam_noun_filter_nonempty": true,
-    "exam_noun_filter_exclusive": true,
-    "exam_pos_column_visible": true,
-    "exam_filtered_10_question_test_created": true,
-    "answer_toggle_works": true,
-    "elementary_tab_switch_works": true,
-    "textbook_tab_switch_back_works": true
+  "index_sha256": "a5d9662f9900f5013b94b8a63d9ee91f0c18a4a9d5a2eeb277064b3eef1b239d",
+  "webkit": {
+    "service_worker_supported": true,
+    "service_worker_ready": true,
+    "service_worker_controls_page": true,
+    "index_cache_primed": true,
+    "exam_pos_filter_works": true
   },
-  "checked_at_utc": "2026-08-19T04:44:35.673Z"
+  "strict_offline": {
+    "engine": "Chromium",
+    "network_forced_offline": true,
+    "new_page_opened_offline": true,
+    "offline_navigation_from_service_worker_cache": true,
+    "exam_noun_filter_works_offline": true,
+    "ten_question_test_created_offline": true,
+    "answer_toggle_works_offline": true,
+    "dataset_switching_works_offline": true
+  },
+  "checked_at_utc": "2026-08-19T06:54:12.022Z"
 }
