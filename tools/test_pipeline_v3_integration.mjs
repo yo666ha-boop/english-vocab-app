@@ -38,6 +38,16 @@ replaceOne(
   'M2 infinitive bank expectation'
 );
 replaceOne(
+  "  {id:'M2-RD2-1549',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'I will play soccer tomorrow.'},",
+  "  {id:'M2-RD2-1549',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'I will play soccer tomorrow.'},\n  {id:'M2-RD2-1551',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'Yes, I have.'},\n  {id:'M2-RD2-1553',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'May.'},\n  {id:'M2-RD2-1555',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'2015.'},\n  {id:'M2-RD2-1557',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'Yes, I did.'},\n  {id:'M2-RD2-1559',subject:'英語',grade:'中2',category:'読解',type:'読解',q:'本文の内容を日本語で説明しなさい。',a:'Two years.'},",
+  'reading Japanese-answer fixtures'
+);
+replaceOne(
+  " 'M2-RD2-1549':{a:'明日、サッカーをします。'},",
+  " 'M2-RD2-1549':{a:'明日、サッカーをします。'},\n 'M2-RD2-1551':{a:'はい、住んだことがあります。'},\n 'M2-RD2-1553':{a:'5月です。'},\n 'M2-RD2-1555':{a:'2015年です。'},\n 'M2-RD2-1557':{a:'はい、しました。'},\n 'M2-RD2-1559':{a:'2年です。'},",
+  'reading Japanese-answer expectations'
+);
+replaceOne(
   "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'}\n];",
   "  {id:'M3N-00246',subject:'英語',grade:'中3',category:'be動詞と一般動詞（過去形）',type:'変形',q:'I played tennis yesterday. を疑問文にしなさい。',a:'Did you play tennis yesterday?'},\n  {id:'M3N-WORD-TEST',subject:'英語',grade:'中3',category:'英語の語順',type:'読解',q:'This dog play tennis at six. 問い：この英文の意味を書きなさい。',a:'This dogはat sixにtennisをします。'},\n  {id:'M3N-INF2-TEST',subject:'英語',grade:'中3',category:'不定詞②',type:'間違い直し',q:'My father went there to played swimming. の誤りを直しなさい。',a:'My father went there to go swimming.'}\n];",
   'M3 word-order + infinitive II fixture'
