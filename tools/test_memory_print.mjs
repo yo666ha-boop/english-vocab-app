@@ -29,44 +29,32 @@ try {
 
   const initialCount = await page.evaluate(() => state.currentList.length);
   status.initial_current_list_count = initialCount;
-  if (initialCount <= 300) throw new Error(`expected default selection >300, got ${initialCount}`);
+  if (initialCount !== 662) throw new Error(`expected default 662-word selection, got ${initialCount}`);
 
-  const t0 = Date.now();
+  // Final desired behavior: the normal 662-word range prints directly because it is paginated.
+  const defaultStart = Date.now();
   await page.locator('#memoryPrintBtn').click();
-  await page.waitForTimeout(120);
-  const guardMs = Date.now() - t0;
-  const guard = await page.evaluate(() => ({ alerts: window.__alerts.slice(), prints: window.__printCalled }));
-  status.guard_ms = guardMs;
-  status.guard_message = guard.alerts[0] || '';
-  if (guardMs > 2500) throw new Error(`default click too slow: ${guardMs}ms`);
-  if (guard.prints !== 0) throw new Error('default full selection unexpectedly invoked print');
-  if (!guard.alerts.some(x => x.includes('300 語以下'))) throw new Error(`safety guidance missing: ${JSON.stringify(guard)}`);
-  status.checks.default_full_selection_returns_quickly = true;
-  status.checks.default_full_selection_does_not_open_print = true;
-  status.checks.large_selection_guidance = true;
-
-  // Bypass only the safety gate to measure whether the new pagination itself can
-  // render the user's full default 662-word range through Chromium's print engine.
-  await page.evaluate(() => {
-    state.dataset = 'textbook';
-    const defaultRows = state.currentList.length;
-    const source = DATA.filter(r => r.dataset === 'textbook');
-    state.currentList = source.slice(0, defaultRows);
-    const sheet = document.getElementById('printSheet');
-    sheet.innerHTML = buildMemoryPrintHtml();
-    document.body.classList.remove('test-print','answer-print','memory-print','answer-sheet');
-    document.body.classList.add('print-sheet');
-  });
-  const fullLayout = await page.evaluate(() => ({
-    rows: document.querySelectorAll('#printSheet .rb-mem-row').length,
+  await page.waitForFunction(() => window.__printCalled === 1, null, { timeout: 10000 });
+  const defaultMs = Date.now() - defaultStart;
+  const defaultPrint = await page.evaluate(() => ({
+    alerts: window.__alerts.slice(),
+    prints: window.__printCalled,
     pages: document.querySelectorAll('#printSheet .rb-memory-page').length,
-    maxRowsOnPage: Math.max(...[...document.querySelectorAll('#printSheet .rb-memory-page')].map(p => p.querySelectorAll('.rb-mem-row').length))
+    rows: document.querySelectorAll('#printSheet .rb-mem-row').length,
+    rowsPerPage: [...document.querySelectorAll('#printSheet .rb-memory-page')].map(p => p.querySelectorAll('.rb-mem-row').length)
   }));
-  status.full_default_layout = fullLayout;
-  if (fullLayout.rows !== initialCount) throw new Error(`full layout row count mismatch: ${JSON.stringify(fullLayout)}`);
-  if (fullLayout.pages !== Math.ceil(initialCount / 18)) throw new Error(`full layout page count mismatch: ${JSON.stringify(fullLayout)}`);
-  if (fullLayout.maxRowsOnPage > 18) throw new Error(`full layout exceeds 18 rows/page: ${JSON.stringify(fullLayout)}`);
+  status.default_662 = { elapsed_ms: defaultMs, ...defaultPrint };
+  if (defaultPrint.alerts.length) throw new Error(`default 662 unexpectedly alerted: ${JSON.stringify(defaultPrint.alerts)}`);
+  if (defaultPrint.prints !== 1) throw new Error('default 662 did not invoke print exactly once');
+  if (defaultPrint.pages !== 37) throw new Error(`default 662 should make 37 pages: ${JSON.stringify(defaultPrint)}`);
+  if (defaultPrint.rows !== 662) throw new Error(`default 662 row count mismatch: ${defaultPrint.rows}`);
+  if (Math.max(...defaultPrint.rowsPerPage) > 18) throw new Error(`default page exceeds 18 rows: ${JSON.stringify(defaultPrint.rowsPerPage)}`);
+  if (defaultMs > 5000) throw new Error(`default 662 print preparation too slow: ${defaultMs}ms`);
+  status.checks.default_662_prints_directly = true;
+  status.checks.default_662_paginated_37_pages = true;
+  status.checks.default_max_18_rows_per_page = true;
 
+  // Exercise Chromium's real print compositor on the generated 37-page document.
   await page.emulateMedia({ media: 'print' });
   const pdfStart = Date.now();
   const pdf = await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
@@ -74,12 +62,32 @@ try {
   status.full_default_pdf = { render_ms: pdfMs, bytes: pdf.length };
   if (pdfMs > 30000) throw new Error(`full default PDF render too slow: ${pdfMs}ms`);
   if (pdf.length < 100000) throw new Error(`full default PDF unexpectedly small: ${pdf.length}`);
-  status.checks.full_default_662_paginated_layout = true;
   status.checks.full_default_print_engine_render = true;
-
   await page.emulateMedia({ media: 'screen' });
+
+  // Above the final safety limit, return immediately instead of entering print layout.
   await page.evaluate(() => {
     document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
+    state.dataset = 'textbook';
+    state.currentList = DATA.filter(r => r.dataset === 'textbook').slice(0, 1001);
+    window.__alerts = [];
+    window.__printCalled = 0;
+  });
+  const guardStart = Date.now();
+  await page.locator('#memoryPrintBtn').click();
+  await page.waitForTimeout(120);
+  const guardMs = Date.now() - guardStart;
+  const guard = await page.evaluate(() => ({ alerts: window.__alerts.slice(), prints: window.__printCalled }));
+  status.over_1000_guard = { elapsed_ms: guardMs, ...guard };
+  if (guard.prints !== 0) throw new Error('1001-word selection unexpectedly invoked print');
+  if (!guard.alerts.some(x => x.includes('1000 語以下'))) throw new Error(`1000-word safety guidance missing: ${JSON.stringify(guard)}`);
+  if (guardMs > 2500) throw new Error(`1001-word guard too slow: ${guardMs}ms`);
+  status.checks.over_1000_returns_quickly = true;
+  status.checks.over_1000_does_not_open_print = true;
+  status.checks.over_1000_guidance = true;
+
+  // Normal smaller range pagination remains exact.
+  await page.evaluate(() => {
     state.dataset = 'textbook';
     state.currentList = DATA.filter(r => r.dataset === 'textbook').slice(0, 45);
     window.__alerts = [];
@@ -95,10 +103,10 @@ try {
   status.textbook_45 = textbook;
   if (textbook.pages !== 3) throw new Error(`45 rows should make 3 pages: ${JSON.stringify(textbook)}`);
   if (textbook.rows.join(',') !== '18,18,9') throw new Error(`wrong pagination: ${JSON.stringify(textbook)}`);
-  if (textbook.prints !== 1) throw new Error('safe selection print was not invoked exactly once');
+  if (textbook.prints !== 1) throw new Error('45-word selection did not invoke print exactly once');
   status.checks.textbook_45_paginated_18_18_9 = true;
-  status.checks.print_invoked_for_safe_selection = true;
 
+  // Elementary grouping must use its real category fields, not fall back to その他.
   await page.evaluate(() => {
     document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
     state.dataset = 'elementary';
