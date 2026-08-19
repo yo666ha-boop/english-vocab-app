@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MikamiAnswerAnalysisReport",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_mode",
+    "summary",
+    "question_results",
+    "root_causes",
+    "return_points",
+    "next_actions"
+  ],
+  "properties": {
+    "schema_version": {"const": "mikami-answer-analysis-v1"},
+    "source_mode": {
+      "type": "string",
+      "enum": ["mikami_canonical", "school_test", "mixed"]
+    },
+    "student": {
+      "type": "object",
+      "properties": {
+        "name": {"type": ["string", "null"]},
+        "grade": {"type": ["string", "null"]},
+        "school": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "test": {
+      "type": "object",
+      "properties": {
+        "title": {"type": ["string", "null"]},
+        "date": {"type": ["string", "null"]},
+        "visible_question_count": {"type": "integer", "minimum": 0},
+        "judged_question_count": {"type": "integer", "minimum": 0},
+        "held_question_count": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["strengths", "weak_areas"],
+      "properties": {
+        "score": {"type": ["number", "null"]},
+        "max_score": {"type": ["number", "null"]},
+        "correct_count": {"type": ["integer", "null"], "minimum": 0},
+        "judged_count": {"type": ["integer", "null"], "minimum": 0},
+        "accuracy_percent": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "strengths": {"type": "array", "items": {"type": "string"}},
+        "weak_areas": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "question_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_no", "status", "confidence"],
+        "properties": {
+          "question_no": {"type": ["integer", "string"]},
+          "id": {"type": ["string", "null"]},
+          "status": {"type": "string", "enum": ["correct", "wrong", "blank", "held"]},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+          "student_answer": {"type": ["string", "null"]},
+          "correct_answer": {"type": ["string", "null"]},
+          "grade": {"type": ["string", "null"]},
+          "category": {"type": ["string", "null"]},
+          "question_type": {"type": ["string", "null"]},
+          "error_class": {
+            "type": ["string", "null"],
+            "enum": [
+              "grammar",
+              "prerequisite_grammar",
+              "vocabulary",
+              "reading",
+              "instruction_processing",
+              "spelling",
+              "blank",
+              "held",
+              null
+            ]
+          },
+          "reason": {"type": ["string", "null"]},
+          "evidence": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "root_causes": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["label", "evidence_questions", "confidence"],
+        "properties": {
+          "label": {"type": "string"},
+          "explanation": {"type": "string"},
+          "evidence_questions": {
+            "type": "array",
+            "items": {"type": ["integer", "string"]}
+          },
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "return_points": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["priority", "unit", "reason"],
+        "properties": {
+          "priority": {"type": "integer", "minimum": 1, "maximum": 3},
+          "unit": {"type": "string"},
+          "check": {"type": "string"},
+          "reason": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["priority", "action"],
+        "properties": {
+          "priority": {"type": "integer", "minimum": 1, "maximum": 3},
+          "action": {"type": "string"},
+          "amount": {"type": ["string", "null"]},
+          "success_check": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "student_message": {"type": "string"},
+    "teacher_parent_note": {"type": "string"},
+    "unreadable_or_missing": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false
+}
