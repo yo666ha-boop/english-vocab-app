@@ -1,0 +1,66 @@
+name: Package Mikami Runtime For Exact Local Build
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/package-mikami-runtime-for-local.yml'
+      - 'release/generated/mikami_runtime_package_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - name: Package non-canonical runtime assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          zip -r -9 dist/mikami_runtime_for_exact_local_build.zip tools data gpt >/tmp/runtime-zip.log
+          test -s dist/mikami_runtime_for_exact_local_build.zip
+          sha256sum dist/mikami_runtime_for_exact_local_build.zip | tee dist/mikami_runtime_for_exact_local_build.sha256
+          if unzip -l dist/mikami_runtime_for_exact_local_build.zip | grep -q 'TEMP_GITHUB_TRANSFER_mikami_canonical'; then
+            echo 'private canonical unexpectedly present' >&2
+            exit 9
+          fi
+      - name: Record runtime package status
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          SHA=$(awk '{print $1}' dist/mikami_runtime_for_exact_local_build.sha256)
+          {
+            echo 'STATUS=PASS'
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "RUNTIME_ZIP_SHA256=$SHA"
+            echo 'INCLUDES=tools,data,gpt'
+            echo 'PRIVATE_CANONICAL_INCLUDED=false'
+            echo 'PURPOSE=EXACT_PRIVATE_CANONICAL_LOCAL_V4_KNOWLEDGE_BUILD'
+          } > release/generated/mikami_runtime_package.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/mikami_runtime_package.status.txt
+          git commit -m 'record Mikami runtime package status' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            git pull --rebase origin mikami-canonical-repair
+            sleep 2
+          done
+          exit 1
+      - name: Upload runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-runtime-for-exact-local-build
+          path: |
+            dist/mikami_runtime_for_exact_local_build.zip
+            dist/mikami_runtime_for_exact_local_build.sha256
+          if-no-files-found: error
