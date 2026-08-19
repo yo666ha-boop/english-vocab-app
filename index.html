@@ -1732,6 +1732,7 @@ async function rbWaitImages(root) {
   })));
 }
 async function rbNextPaint() { return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); }
+/* memory-print-safe-final */
 runPrint = async function(mode) {
   const oldClasses = ['test-print', 'answer-print', 'memory-print', 'print-sheet'];
   document.body.classList.remove(...oldClasses);
@@ -1739,6 +1740,10 @@ runPrint = async function(mode) {
   if (mode === 'memory') {
     if (state.dataset === 'exam') { alert('高校入試版は暗記プリントではなく、問題印刷または解答印刷を使ってください。'); return; }
     if (!state.currentList.length) { alert('印刷する単語がありません。条件を確認してください。'); return; }
+    if (state.currentList.length > MEMORY_PRINT_MAX_ROWS) {
+      alert('現在 ' + state.currentList.length + ' 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 300 語以下に絞ってから「暗記プリントを印刷」を押してください。');
+      return;
+    }
     sheet.innerHTML = buildMemoryPrintHtml();
   } else {
     if (!state.currentTest.length) { alert('先に「テスト作成」を押してください。'); return; }

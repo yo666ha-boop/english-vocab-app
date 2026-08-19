@@ -1,7 +1,8 @@
 {
   "status": "pass",
-  "bytes": 4160652,
+  "bytes": 4161101,
   "max_rows": 300,
-  "rows_per_page": 18
+  "rows_per_page": 18,
+  "final_runtime_guard": true
 }
 exit_code=0
