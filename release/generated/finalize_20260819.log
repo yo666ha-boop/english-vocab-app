@@ -1,58 +1,4 @@
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100  148k    0  148k    0     0   278k      0 --:--:-- --:--:-- --:--:--  278k
-downloaded_bytes=902836
---- response headers ---
-strict-transport-security: max-age=31536000; includeSubDomains
-content-security-policy: require-trusted-types-for 'script';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport
-content-security-policy: script-src 'nonce-f1ITuMxoriMP1RA3CNubig' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/AccountsSigninPassiveLoginHttp/cspreport;worker-src 'self'
-permissions-policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
-cross-origin-resource-policy: cross-origin
-accept-ch: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
-cross-origin-opener-policy: unsafe-none
-server: ESF
-content-length: 0
-x-xss-protection: 0
-x-content-type-options: nosniff
-alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-
-HTTP/2 200 
-content-type: text/html; charset=utf-8
-x-frame-options: DENY
-set-cookie: __Host-GAPS=1:JmuB8ErX8eoRU_c9CvHhwxt9qR2xKA:IeL6ARhJ5UX0rzqR; Expires=Fri, 18-Aug-2028 06:52:24 GMT; Path=/; Secure; HttpOnly; Priority=HIGH
-vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site
-x-auto-login: realm=com.google&args=service%3Dwise%26continue%3Dhttps://drive.usercontent.google.com/download?id%253D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%2526export%253Ddownload%2526confirm%253Dt
-link: <https://www.google.com/intl/en-US/drive/>; rel="canonical"
-x-ua-compatible: IE=edge
-cache-control: no-cache, no-store, max-age=0, must-revalidate
-pragma: no-cache
-expires: Mon, 01 Jan 1990 00:00:00 GMT
-date: Wed, 19 Aug 2026 06:52:24 GMT
-strict-transport-security: max-age=31536000; includeSubDomains
-accept-ch: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
-cross-origin-resource-policy: same-site
-content-security-policy: require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport
-content-security-policy: script-src 'nonce--U8adr5IftjLpb0pAlXzpg' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /v3/signin/_/AccountsSignInUi/cspreport;worker-src 'self'
-permissions-policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
-report-to: {"group":"AccountsSignInUi","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/AccountsSignInUi"}]}
-cross-origin-opener-policy-report-only: same-origin; report-to="AccountsSignInUi"
-reporting-endpoints: default="/v3/signin/_/AccountsSignInUi/web-reports?context=eJwNw2tIU2EABuA19r2EGEy7aAtChKAFszlqCRUhErJ2cevs7Ea5lC0c2Kbb2fASqYn-sIgovFBBEFmKWCRREUh_jLLQLi6ay-pPSWJhRUqRUO8DT86EZkeOTnV4u041XvxQXX70k_og9-UuqC9x1-y0uMjKtRfiNPfwANcdeyXqubTotTjANu-McHK8MC3aWV-WFgae0GfEU_7ZkhHa1oyoWMmISt6UfSd0PJmeE1O8zvFe5PFquwWqDgu-VFrxlZXnVjRxG3fy8kcr_vBdgw0P-OaMDRfmbehjfYkdBl5J2KFR7FjsdmCJR3oduM237lVhjDXfqqBzObGVt7GeTWzm4U4nRjnLHzh634k4P37rxCQHilyo5t1uFyr4Wb0L03z9nAtDHHvkQoK_b5Twi7WFEjbwD7OEZT60T4KDP9dIWODfvMrrayUUsG9QwhFO_ZPQEHRD4VZu49hJN2z9brTkyTjFmXwZc_ymQMYspyIyLE0ybHy1WYaxW8YuXjwjY4kbn8hIcs-UjIjfgxPcMe5BF5_l89zPl9mzxYsAD2S9uMJ7Nvuwl_eP-FDOw_N-jHLorx_VlgDyc9cODfamoX1558bYmuKdtbHGYCQUjioRpfl4PBZVwtFQTVKpS0YS4XgqHA-ajCazsazUXGI0BhuM_wF3Reb2"
-content-encoding: gzip
-server: ESF
-x-xss-protection: 0
-x-content-type-options: nosniff
-alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-
---- html diagnosis ---
-<title>Google Drive: Sign-in
-accounts.google.com
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S-1439349757:1787122344268520&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;rhlk=js&amp;rrk=47&amp;service=wise
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S-1439349757:1787122344268520&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S-1439349757:1787122344268520&amp;flowEntry=ServiceLogin&amp;flowName=WebLiteSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
-ServiceLogin
-drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;dsh=S-1439349757:1787122344268520&amp;flowEntry=SignUp&amp;flowName=GlifWebSignIn&amp;followup=https://drive.usercontent.google.com/download?id%3D1MoArYnD3Npy-LePUrH8a82lg4uKyhND4%26export%3Ddownload%26confirm%3Dt&amp;service=wise
-accounts.google.com
-accounts.google.com
-SOURCE_SIZE_MISMATCH
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (22) The requested URL returned error: 403
