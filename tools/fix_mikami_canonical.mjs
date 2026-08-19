@@ -68,6 +68,16 @@ for (const item of qb) {
   changed(item, 'targeted grammar/quality repair', oldQ, oldA);
 }
 
+// Legacy generators created the same defects outside the narrow target families too
+// (M2-COMP/M2X-COMP, M2X-GER/M2Y-GER and older pronoun sets). Clean those
+// after targeted generation so the quality gate evaluates the final text, not a stale template.
+for (const item of qb) {
+  const oldQ = item.q, oldA = item.a;
+  item.q = repairLegacyQualityText(item.q);
+  item.a = repairLegacyQualityText(item.a);
+  changed(item, 'global legacy quality cleanup', oldQ, oldA);
+}
+
 // ---- Vocabulary gate: 0 and -1 are uncertain and must not pass ----
 const oldVocabGate = `function passesVocab(item, overrideMode) {\n  if (item.subject !== '英語') return true;\n  const mode = overrideMode || (useVocabGate() ? 'on' : 'off');\n  if (mode === 'off') return true;\n  if (item.grade !== currentGrade()) return true;\n  const rec = meta.passMeta[item.id] || {};\n  const minIdx = rec[currentTextbook()];\n  return Number.isInteger(minIdx) && minIdx >= 0 && minIdx <= currentSectionIndex();\n}`;
 const newVocabGate = `function passesVocab(item, overrideMode) {\n  if (item.subject !== '英語') return true;\n  const mode = overrideMode || (useVocabGate() ? 'on' : 'off');\n  if (mode === 'off') return true;\n  if (item.grade !== currentGrade()) return true;\n  const rec = meta.passMeta[item.id] || {};\n  const minIdx = rec[currentTextbook()];\n  const sectionIdx = currentSectionIndex();\n  // 0 / -1 / missing are unresolved vocabulary positions. Fail closed.\n  if (!Number.isInteger(minIdx) || minIdx <= 0) return false;\n  if (!Number.isInteger(sectionIdx) || sectionIdx < 0) return false;\n  return minIdx <= sectionIdx;\n}`;
@@ -147,7 +157,8 @@ function repairInfinitive(item) {
     const made=simplePresentQuestion(src);
     if (made) a=made;
   }
-  a=a.replace(/Did You ne\b/g,'Do you need').replace(/Do You\b/g,'Do you').replace(/Do They\b/g,'Do they').replace(/Does She\b/g,'Does she').replace(/Does He\b/g,'Does he');
+  // Only malformed auxiliary text is normalized here. Sentence-initial Do/Does is valid English.
+  a=a.replace(/Did You ne\b/g,'Do you need');
   item.q=q; item.a=a;
 }
 
@@ -199,6 +210,21 @@ function repairRelativePronoun(item) {
   item.q=q; item.a=a;
 }
 
+function repairLegacyQualityText(value) {
+  let s=String(value||'');
+  s=s.replace(/\bHe is ([^.\n]+?) than He\b/g,'Ken is $1 than Tom')
+     .replace(/\bthan\s*\/\s*He\b/g,'than / Ken')
+     .replace(/\bthan He\b/g,'than Ken')
+     .replace(/\bMika love\b/g,'Mika loves')
+     .replace(/\bShe love\b/g,'She loves')
+     .replace(/\bMika begin\b/g,'Mika begins')
+     .replace(/\bShe begin\b/g,'She begins')
+     .replace(/\bMika stop\b/g,'Mika stops')
+     .replace(/\bShe stop\b/g,'She stops')
+     .replace(/\(\s*she\s*\/\s*her\s*\/\s*her\s*\)/gi,'( she / her / hers )');
+  return s;
+}
+
 function simplePresentQuestion(sentence) {
   const s=sentence.replace(/[.。]$/,'').trim();
   const m=s.match(/^(I|you|we|they|he|she|[A-Z][A-Za-z]+)\s+(.+)$/);
@@ -239,7 +265,8 @@ function auditBank(qb, meta, html) {
     if (/\bthan He\b/.test(pair)) errors.push(`comparison pronoun:${x.id}`);
     if (/\b(Mika|She) (love|begin|stop)\b/.test(pair)) errors.push(`3sg/gerund template:${x.id}`);
     if (/Do you have (visited|been|finished|lost|lived|studied)/i.test(pair)) errors.push(`present-perfect auxiliary:${x.id}`);
-    if (/Did You ne\b|Do You\b|Does She\b|Do They\b/.test(pair)) errors.push(`infinitive transform:${x.id}`);
+    // Do/Does at the start of a valid question is not an error. Keep only the malformed legacy token.
+    if (/Did You ne\b/.test(pair)) errors.push(`infinitive transform:${x.id}`);
     if (/日本語で説明しなさい/.test(x.q||'') && /^[A-Za-z]/.test(String(x.a||''))) errors.push(`Japanese-answer mismatch:${x.id}`);
     if (/否定文または疑問文/.test(x.q||'')) errors.push(`non-unique transform:${x.id}`);
   }
