@@ -19,44 +19,57 @@ jobs:
         with:
           ref: mikami-canonical-repair
       - name: Package non-canonical runtime assets
+        id: pack
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p dist
-          zip -r -9 dist/mikami_runtime_for_exact_local_build.zip tools data gpt >/tmp/runtime-zip.log
+          zip -r -9 dist/mikami_runtime_for_exact_local_build.zip tools data gpt > /tmp/runtime-zip.log
           test -s dist/mikami_runtime_for_exact_local_build.zip
           sha256sum dist/mikami_runtime_for_exact_local_build.zip | tee dist/mikami_runtime_for_exact_local_build.sha256
           if unzip -l dist/mikami_runtime_for_exact_local_build.zip | grep -q 'TEMP_GITHUB_TRANSFER_mikami_canonical'; then
             echo 'private canonical unexpectedly present' >&2
             exit 9
           fi
+          echo 'ok=true' >> "$GITHUB_OUTPUT"
       - name: Record runtime package status
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p release/generated
-          SHA=$(awk '{print $1}' dist/mikami_runtime_for_exact_local_build.sha256)
+          if test -s dist/mikami_runtime_for_exact_local_build.zip && test -s dist/mikami_runtime_for_exact_local_build.sha256; then
+            STATUS=PASS
+            SHA=$(awk '{print $1}' dist/mikami_runtime_for_exact_local_build.sha256)
+          else
+            STATUS=FAIL
+            SHA=ABSENT
+          fi
           {
-            echo 'STATUS=PASS'
+            echo "STATUS=$STATUS"
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "HEAD_SHA=$GITHUB_SHA"
+            echo "PACK_STEP_OUTCOME=${{ steps.pack.outcome }}"
             echo "RUNTIME_ZIP_SHA256=$SHA"
             echo 'INCLUDES=tools,data,gpt'
             echo 'PRIVATE_CANONICAL_INCLUDED=false'
             echo 'PURPOSE=EXACT_PRIVATE_CANONICAL_LOCAL_V4_KNOWLEDGE_BUILD'
           } > release/generated/mikami_runtime_package.status.txt
+          test -f /tmp/runtime-zip.log && cp /tmp/runtime-zip.log release/generated/mikami_runtime_package.log || true
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release/generated/mikami_runtime_package.status.txt
+          test -f release/generated/mikami_runtime_package.log && git add release/generated/mikami_runtime_package.log || true
           git commit -m 'record Mikami runtime package status' || true
           git pull --rebase origin mikami-canonical-repair || true
           for i in 1 2 3; do
-            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
             git pull --rebase origin mikami-canonical-repair
             sleep 2
           done
-          exit 1
+          test "$STATUS" = PASS
       - name: Upload runtime artifact
+        if: steps.pack.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: mikami-runtime-for-exact-local-build
