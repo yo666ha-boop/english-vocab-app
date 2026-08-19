@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v6",
-  "updated_at_jst": "2026-08-19T23:44:16+09:00",
+  "updated_at_jst": "2026-08-19T23:53:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -12,7 +12,8 @@
     "actual_question_count": 10513,
     "actual_english_question_count": 10511,
     "actual_unique_ids": 10513,
-    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432"
+    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
+    "public_exposure": false
   },
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -39,11 +40,13 @@
       "lossless validator",
       "9-family exact-record spotcheck",
       "GPT instructions/schema/README",
-      "production Knowledge workflow"
+      "production Knowledge workflow",
+      "GitHub-only branch-source diagnostic",
+      "safe non-canonical runtime-artifact packaging workflow"
     ],
     "latest_green_ci": {
-      "run_id": 32265763956,
-      "source_sha": "0fedb5f935fc3ae8d3c4e4573eb366a6b644969a",
+      "run_id": 32266313529,
+      "source_sha": "cd4c92fab95f41ee226b5c3f20d6854dfe052f79",
       "status": "success",
       "gates": [
         "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
@@ -61,34 +64,47 @@
       "direct_git_clone": "FAILED_DNS_COULD_NOT_RESOLVE_GITHUB_COM",
       "github_connector": "AVAILABLE"
     },
-    "verified_public_index_probe": {
-      "workflow": ".github/workflows/build-answer-gpt-from-public-repaired-index.yml",
-      "run_id": 32265764524,
-      "status": "HASH_MISMATCH",
-      "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
-      "actual_public_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
-      "decision": "REJECT_PUBLIC_INDEX_AS_KNOWLEDGE_SOURCE",
+    "branch_source_diagnostic": {
+      "workflow": ".github/workflows/diagnose-mikami-answer-branch-v4.yml",
+      "run_id": 32266314330,
+      "source_head_sha": "cd4c92fab95f41ee226b5c3f20d6854dfe052f79",
+      "status": "FAIL_AT_SOURCE_GATE",
+      "source_rc": 1,
+      "v4_rc": 99,
+      "exact_error": "qb-data not found in branch index.html",
+      "decision": "REJECT_BRANCH_INDEX_AS_ANSWER_GPT_KNOWLEDGE_SOURCE",
       "private_canonical_exposed": false
     },
+    "runtime_artifact_route": {
+      "workflow": ".github/workflows/package-mikami-runtime-for-local.yml",
+      "workflow_commit": "9fbee5086ae4bf46e5eb0607d174db8431d17b97",
+      "trigger_commit": "29c044189f9cb623ce0b7046940d54252efee0ef",
+      "packages": ["tools", "data", "gpt"],
+      "private_canonical_in_artifact": false,
+      "purpose": "download public runtime assets through GitHub Actions artifact and run exact private canonical V4/Knowledge build locally without git clone",
+      "status": "DISPATCHED_STATUS_PENDING"
+    },
     "current_blocker": {
-      "stage": "execute Knowledge build against exact repaired canonical",
-      "detail": "Local execution and exact private canonical are available, but direct git clone is DNS-blocked. The already-public branch index was safely probed and rejected because its SHA256 does not equal the known repaired canonical SHA256. Do not use it as the Knowledge source. Continue by materializing the branch V4/runtime scripts through the GitHub connector into the local runtime, then execute V4 on the mounted exact canonical and build Knowledge.",
-      "last_error": "public index SHA mismatch; prior git clone DNS failure",
+      "stage": "obtain runtime artifact then execute exact private canonical locally",
+      "detail": "The public branch index cannot be used because it contains no qb-data. This is now proven by diagnostic run 32266314330. The next safe route has been implemented and triggered: GitHub Actions packages only tools/data/gpt into a runtime artifact, explicitly excluding the private canonical. Once its status provides RUN_ID, download that artifact through the GitHub connector, extract locally, run V4 against the already-mounted exact 4,035,500-byte private canonical, then export and validate the 10,511-record Knowledge bundle.",
+      "last_error": "branch-derived Knowledge source gate failed: qb-data not found in branch index.html",
+      "last_normal_completion": "runtime artifact workflow created and trigger committed",
       "code_readiness": "PASS"
     },
     "next_actions": [
-      "materialize required V4 pipeline/runtime scripts and data files via GitHub connector into local runtime",
+      "fetch release/generated/mikami_runtime_package.status.txt and obtain RUN_ID",
+      "download mikami-runtime-for-exact-local-build Actions artifact through GitHub connector and extract locally",
       "run V4 against exact 4,035,500-byte private canonical and verify repaired SHA256 equals 0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
       "export exactly 10511 Knowledge JSONL records and require full-record equality, canonical order, manifest SHA and 9-family spotcheck PASS",
-      "inspect real spotcheck IDs/q/a/category",
+      "inspect real spotcheck IDs/q/a/category across all 9 families",
       "assemble/register Knowledge bundle in answer-analysis GPT",
       "run correct/multi-error/unreadable/school-test photo tests",
       "verify prerequisite return point and A4 print quality",
       "only after direct-GPT PASS demote/remove legacy copy-paste UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_GPT_RUNTIME_RECOVERED_PUBLIC_INDEX_REJECTED_MATERIALIZE_RUNTIME_NEXT",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_GPT_BRANCH_SOURCE_REJECTED_SAFE_RUNTIME_ARTIFACT_ROUTE_DISPATCHED",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "This run advanced the blocker: local runtime is confirmed recovered, exact canonical remains mounted and private, and a new GitHub Actions SHA-gated probe proved the existing public branch index is not the repaired canonical. Unsafe reuse was rejected. Resume by materializing branch runtime scripts via the GitHub connector and run the exact V4/Knowledge build locally."
+  "completion_note": "This cycle proved the public branch index is not a valid answer-GPT bank source because qb-data is absent, so the branch-derived workaround was rejected safely. A new GitHub Actions workflow now packages only public runtime assets (tools/data/gpt) for local execution, with the private canonical explicitly excluded. The trigger is committed; resume by fetching its status/RUN_ID, downloading the artifact, and immediately running the exact private canonical V4/Knowledge build locally. main remains untouched."
 }
