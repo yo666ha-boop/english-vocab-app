@@ -1603,7 +1603,7 @@ function waitForPrintImages(sheet) {
 function nextPaint() {
   return new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 }
-const MEMORY_PRINT_MAX_ROWS = 300;
+const MEMORY_PRINT_MAX_ROWS = 1000;
 const MEMORY_PRINT_ROWS_PER_PAGE = 18;
 
 async function runPrint(mode) {
@@ -1621,7 +1621,7 @@ async function runPrint(mode) {
       return;
     }
     if (state.currentList.length > MEMORY_PRINT_MAX_ROWS) {
-      alert('現在 ' + state.currentList.length + ' 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 300 語以下に絞ってから「暗記プリントを印刷」を押してください。');
+      alert('現在 ' + state.currentList.length + ' 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 1000 語以下に絞ってから「暗記プリントを印刷」を押してください。');
       return;
     }
     sheet.innerHTML = buildMemoryPrintHtml();
@@ -1741,7 +1741,7 @@ runPrint = async function(mode) {
     if (state.dataset === 'exam') { alert('高校入試版は暗記プリントではなく、問題印刷または解答印刷を使ってください。'); return; }
     if (!state.currentList.length) { alert('印刷する単語がありません。条件を確認してください。'); return; }
     if (state.currentList.length > MEMORY_PRINT_MAX_ROWS) {
-      alert('現在 ' + state.currentList.length + ' 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 300 語以下に絞ってから「暗記プリントを印刷」を押してください。');
+      alert('現在 ' + state.currentList.length + ' 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 1000 語以下に絞ってから「暗記プリントを印刷」を押してください。');
       return;
     }
     sheet.innerHTML = buildMemoryPrintHtml();
