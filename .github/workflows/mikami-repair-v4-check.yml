@@ -21,6 +21,7 @@ jobs:
           node-version: '22'
       - name: Syntax check V4
         run: |
+          node --check tools/repair_targeted_patterns_v4.mjs
           node --check tools/repair_relative_pronouns_v4.mjs
           node --check tools/repair_mid_sentence_blank_case_v4.mjs
           node --check tools/fix_relative_runtime_gate_v4.mjs
@@ -67,6 +68,7 @@ jobs:
           RUN_ID=$GITHUB_RUN_ID
           RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT
           SOURCE_SHA=$GITHUB_SHA
+          TARGETED_PATTERNS_V4=enabled
           RELATIVE_PRONOUN_V4=enabled
           RELATIVE_UNIQUE_BLANK_GATE=enabled
           MID_SENTENCE_BLANK_CASE_V4=enabled
