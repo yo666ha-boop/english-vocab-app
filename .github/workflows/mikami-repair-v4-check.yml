@@ -1,0 +1,74 @@
+name: Mikami Canonical Repair V4 Check
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths-ignore:
+      - 'release/generated/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-v4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check V4
+        run: |
+          node --check tools/repair_relative_pronouns_v4.mjs
+          node --check tools/fix_relative_runtime_gate_v4.mjs
+          node --check tools/run_mikami_pipeline_v4.mjs
+          node --check tools/test_relative_pronouns_v4.mjs
+          node --check tools/test_relative_runtime_gate_v4.mjs
+          node --check tools/test_pipeline_v4_integration.mjs
+      - name: Relative-pronoun V4 regression
+        run: node tools/test_relative_pronouns_v4.mjs
+      - name: Relative runtime gate V4 regression
+        run: node tools/test_relative_runtime_gate_v4.mjs
+      - name: Full V4 pipeline integration
+        run: node tools/test_pipeline_v4_integration.mjs
+      - name: Safety stop against unrelated app V4
+        run: |
+          if node tools/run_mikami_pipeline_v4.mjs index.html /tmp/not-canonical-v4.html 2>/tmp/v4.err; then
+            echo 'ERROR: V4 pipeline accepted unrelated index.html'
+            exit 1
+          fi
+          grep -q 'NOT CANONICAL' /tmp/v4.err
+      - name: Build V4 repair bundle
+        run: |
+          mkdir -p dist/mikami-canonical-repair-v4/tools dist/mikami-canonical-repair-v4/data dist/mikami-canonical-repair-v4/release
+          cp tools/*.mjs dist/mikami-canonical-repair-v4/tools/
+          cp data/v7_app_sections.json data/old_section_to_v7_rules.json dist/mikami-canonical-repair-v4/data/
+          cp release/FINALIZE_正本.bat release/README_FINALIZE.txt dist/mikami-canonical-repair-v4/
+      - name: Upload V4 repair bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-canonical-repair-v4-bundle-20260819
+          path: dist/mikami-canonical-repair-v4
+          if-no-files-found: error
+      - name: Publish V4 CI status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          cat > release/generated/repair_v4_ci_20260819.status.txt <<EOF
+          STATUS=${{ job.status }}
+          RUN_ID=$GITHUB_RUN_ID
+          RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT
+          SOURCE_SHA=$GITHUB_SHA
+          RELATIVE_PRONOUN_V4=enabled
+          RELATIVE_UNIQUE_BLANK_GATE=enabled
+          INHERITS_V3=enabled
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/repair_v4_ci_20260819.status.txt
+          git commit -m 'record Mikami repair V4 CI result 20260819' || true
+          git push origin HEAD:mikami-canonical-repair
