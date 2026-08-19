@@ -1,4 +1,4 @@
-name: Diagnose exam POS filtering
+name: Apply exam POS repair
 
 on:
   push:
@@ -11,39 +11,24 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
           ref: main
-      - name: Extract exact patch contexts
-        run: |
-          node - <<'NODE'
-          const fs=require('fs');
-          const s=fs.readFileSync('index.html','utf8');
-          const markers=[
-            'const state', 'let state', 'var state',
-            'const els', 'let els', 'var els',
-            'function filteredRows', 'filteredRows =',
-            'function renderList', 'renderList =',
-            'function renderFilter', 'function refreshFilter',
-            'examCategoryBox', 'posBox',
-            'function setDataset', 'function activateDataset',
-            "state.dataset = 'exam'", 'data-dataset="exam"'
-          ];
-          const out=[]; const seen=new Set();
-          for(const m of markers){let p=0,n=0;while(true){const i=s.indexOf(m,p);if(i<0)break;const key=Math.floor(i/1000);if(!seen.has(key)){seen.add(key);out.push(`===== ${m} @ ${i} =====\n`+s.slice(Math.max(0,i-3000),Math.min(s.length,i+7000)));}p=i+m.length;if(++n>=8)break;}}
-          fs.mkdirSync('audit',{recursive:true});
-          fs.writeFileSync('audit/EXAM_POS_PATCH_CONTEXT.txt',out.join('\n\n'));
-          console.log('contexts='+out.length);
-          NODE
-      - name: Commit context
+      - name: Apply reviewed exam POS data and UI filter
+        run: node tools/fix_exam_pos_filter.mjs
+      - name: Run primary embedded-data audit
+        run: node tools/extract_vocab_data.mjs
+      - name: Run secondary structure audit
+        run: python3 tools/audit_vocab_structure.py
+      - name: Commit repaired app
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/EXAM_POS_PATCH_CONTEXT.txt
+          git add index.html audit/EXAM_POS_FIX_RESULT.json audit/EXAM_POS_CLASSIFICATION.tsv audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
           git diff --cached --quiet && exit 0
-          git commit -m 'chore: record exam POS patch context'
+          git commit -m 'fix(vocab): enable exam POS filtering'
           git pull --rebase origin main
           git push origin HEAD:main
