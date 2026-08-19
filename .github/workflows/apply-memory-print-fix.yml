@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'tools/fix_memory_print.mjs'
       - '.github/workflows/apply-memory-print-fix.yml'
   workflow_dispatch:
 
@@ -41,5 +42,5 @@ jobs:
           git pull --rebase --autostash origin main
           git add index.html audit/MEMORY_PRINT_FIX_RUN.txt audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
           git diff --cached --quiet && exit 0
-          git commit -m 'fix: prevent memory print freeze and paginate output'
+          git commit -m 'fix: apply final memory print runtime guard'
           git push origin HEAD:main
