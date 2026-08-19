@@ -3,18 +3,82 @@
   "textbook_count": 3975,
   "exam_count": 534,
   "elementary_count": 104,
-  "exam_pos_blank": 534,
-  "exam_pos_raw_blank": 534,
+  "exam_pos_blank": 0,
+  "exam_pos_raw_blank": 0,
   "pos_frequency": [
     [
-      "(blank)",
-      534
+      "動詞",
+      164
+    ],
+    [
+      "名詞",
+      151
+    ],
+    [
+      "熟語・表現",
+      108
+    ],
+    [
+      "形容詞",
+      41
+    ],
+    [
+      "副詞",
+      33
+    ],
+    [
+      "代名詞",
+      18
+    ],
+    [
+      "接続詞",
+      8
+    ],
+    [
+      "助動詞",
+      7
+    ],
+    [
+      "前置詞",
+      4
     ]
   ],
   "pos_raw_frequency": [
     [
-      "(blank)",
-      534
+      "動",
+      164
+    ],
+    [
+      "名",
+      151
+    ],
+    [
+      "熟語・表現",
+      108
+    ],
+    [
+      "形",
+      41
+    ],
+    [
+      "副",
+      33
+    ],
+    [
+      "代",
+      18
+    ],
+    [
+      "接",
+      8
+    ],
+    [
+      "助",
+      7
+    ],
+    [
+      "前",
+      4
     ]
   ],
   "textbook_exact_pos_recoverable_count": 285,
@@ -5177,5 +5241,5 @@
       "match_count": 0
     }
   ],
-  "snippet_count": 17
+  "snippet_count": 21
 }

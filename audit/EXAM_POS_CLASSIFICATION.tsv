@@ -1,0 +1,535 @@
+exam_index	english	japanese	exam_category	pos	pos_raw	source
+0	did	do の過去	書ける最優先	動詞	動	reviewed-meaning
+1	and	そして	書ける最優先	接続詞	接	reviewed-meaning
+2	be (am / is / are)	〜である	書ける最優先	動詞	動	reviewed-meaning
+3	read	読む	書ける最優先	動詞	動	reviewed-meaning
+4	because	〜なので	書ける最優先	接続詞	接	reviewed-meaning
+5	do	する（疑問・否定にも使う）	書ける最優先	動詞	動	reviewed-meaning
+6	has	have の三単現	書ける最優先	動詞	動	textbook-consensus
+7	study	勉強する	書ける最優先	動詞	動	textbook-consensus
+8	feel	感じる	書ける最優先	動詞	動	textbook-consensus
+9	so	だから	書ける最優先	接続詞	接	textbook-consensus
+10	but	しかし	書ける最優先	接続詞	接	textbook-consensus
+11	this	これ	書ける最優先	代名詞	代	reviewed-meaning
+12	had	have の過去	書ける最優先	動詞	動	reviewed-meaning
+13	will	〜するつもり／だろう	書ける最優先	助動詞	助	textbook-consensus
+14	like	好き／〜のような	書ける最優先	動詞	動	textbook-consensus
+15	help	助ける	書ける最優先	動詞	動	textbook-consensus
+16	start	始める	書ける最優先	動詞	動	textbook-consensus
+17	say	言う	書ける最優先	動詞	動	textbook-consensus
+18	make	作る	書ける最優先	動詞	動	textbook-consensus
+19	look	見る／〜に見える	書ける最優先	動詞	動	textbook-consensus
+20	come	来る	書ける最優先	動詞	動	textbook-consensus
+21	when	〜するとき	書ける最優先	副詞	副	textbook-consensus
+22	after	〜の後に	書ける最優先	前置詞	前	textbook-consensus
+23	while	〜している間	書ける最優先	名詞	名	textbook-consensus
+24	or	または	書ける最優先	接続詞	接	textbook-consensus
+25	also	〜もまた	書ける最優先	副詞	副	textbook-consensus
+26	however	しかしながら	書ける最優先	副詞	副	textbook-consensus
+27	important	重要な	書ける最優先	形容詞	形	textbook-consensus
+28	soon	すぐに	書ける最優先	副詞	副	textbook-consensus
+29	today	今日	書ける最優先	副詞	副	reviewed-meaning
+30	then	そのとき／それから	書ける最優先	副詞	副	textbook-consensus
+31	there	そこ	書ける最優先	副詞	副	textbook-consensus
+32	my	私の	書ける最優先	代名詞	代	textbook-consensus
+33	everyone	みんな	書ける最優先	代名詞	代	textbook-consensus
+34	many	たくさんの	書ける最優先	形容詞	形	textbook-consensus
+35	school	学校	書ける最優先	名詞	名	textbook-consensus
+36	student	生徒	書ける最優先	名詞	名	textbook-consensus
+37	idea	考え	書ける最優先	名詞	名	textbook-consensus
+38	information	情報	書ける最優先	名詞	名	textbook-consensus
+39	both	両方とも	書ける最優先	代名詞	代	reviewed-meaning
+40	little	少しの（量）	書ける最優先	副詞	副	textbook-consensus
+41	next	次に	書ける最優先	形容詞	形	textbook-consensus
+42	does	do の三単現	書ける最優先	助動詞	助	textbook-consensus
+43	have	持つ・経験する（完了にも）	書ける最優先	動詞	動	textbook-consensus
+44	can	〜できる	書ける最優先	助動詞	助	textbook-consensus
+45	would	will の過去／ていねい	書ける最優先	助動詞	助	reviewed-meaning
+46	must	〜しなければならない	書ける最優先	助動詞	助	textbook-consensus
+47	should	〜したほうがよい	書ける最優先	助動詞	助	textbook-consensus
+48	may	〜してもよい／かもしれない	書ける最優先	助動詞	助	reviewed-meaning
+49	need	必要とする	書ける最優先	動詞	動	reviewed-meaning
+50	want	〜したい	書ける最優先	動詞	動	reviewed-meaning
+51	love	大好き	書ける最優先	動詞	動	textbook-consensus
+52	try	やってみる	書ける最優先	動詞	動	reviewed-meaning
+53	finish	終える	書ける最優先	動詞	動	textbook-consensus
+54	stop	やめる	書ける最優先	動詞	動	textbook-consensus
+55	wait	待つ	書ける最優先	動詞	動	textbook-consensus
+56	choose	選ぶ	書ける最優先	動詞	動	textbook-consensus
+57	decide	決める	書ける最優先	動詞	動	textbook-consensus
+58	plan	計画する／計画	書ける最優先	名詞	名	textbook-consensus
+59	hope	望む	書ける最優先	動詞	動	textbook-consensus
+60	think	思う	書ける最優先	動詞	動	reviewed-meaning
+61	know	知っている	書ける最優先	動詞	動	textbook-consensus
+62	understand	理解する	書ける最優先	動詞	動	textbook-consensus
+63	remember	覚えている	書ける最優先	動詞	動	textbook-consensus
+64	forget	忘れる	書ける最優先	動詞	動	textbook-consensus
+65	tell	（人に）伝える	書ける最優先	動詞	動	textbook-consensus
+66	talk	話す	書ける最優先	動詞	動	textbook-consensus
+67	speak	話す（言語）	書ける最優先	動詞	動	textbook-consensus
+68	ask	たずねる	書ける最優先	動詞	動	textbook-consensus
+69	answer	答える／答え	書ける最優先	動詞	動	reviewed-meaning
+70	write	書く	書ける最優先	動詞	動	textbook-consensus
+71	learn	学ぶ	書ける最優先	動詞	動	textbook-consensus
+72	teach	教える	書ける最優先	動詞	動	textbook-consensus
+73	use	使う	書ける最優先	動詞	動	textbook-consensus
+74	take	取る／連れて行く	書ける最優先	動詞	動	textbook-consensus
+75	give	与える	書ける最優先	動詞	動	reviewed-meaning
+76	get	得る／着く／買う	書ける最優先	動詞	動	textbook-consensus
+77	put	置く	書ける最優先	動詞	動	textbook-consensus
+78	keep	保つ／続ける	書ける最優先	動詞	動	textbook-consensus
+79	show	見せる	書ける最優先	名詞	名	textbook-consensus
+80	explain	説明する	書ける最優先	動詞	動	textbook-consensus
+81	mean	意味する	書ける最優先	動詞	動	textbook-consensus
+82	become	〜になる	書ける最優先	動詞	動	textbook-consensus
+83	seem	〜のように見える	書ける最優先	動詞	動	textbook-consensus
+84	watch	（注意して）見る	書ける最優先	動詞	動	textbook-consensus
+85	see	見える／会う	書ける最優先	動詞	動	textbook-consensus
+86	hear	聞こえる	書ける最優先	動詞	動	reviewed-meaning
+87	listen	聞く	書ける最優先	動詞	動	reviewed-meaning
+88	meet	会う	書ける最優先	動詞	動	textbook-consensus
+89	visit	訪ねる	書ける最優先	動詞	動	textbook-consensus
+90	stay	滞在する	書ける最優先	動詞	動	textbook-consensus
+91	live	住む	書ける最優先	動詞	動	textbook-consensus
+92	move	動く／引っ越す	書ける最優先	動詞	動	textbook-consensus
+93	go	行く	書ける最優先	動詞	動	textbook-consensus
+94	arrive	到着する	書ける最優先	動詞	動	textbook-consensus
+95	leave	出発する／去る	書ける最優先	動詞	動	textbook-consensus
+96	return	戻る	書ける最優先	動詞	動	textbook-consensus
+97	travel	旅行する	書ける最優先	動詞	動	textbook-consensus
+98	bring	持ってくる	書ける最優先	動詞	動	textbook-consensus
+99	carry	運ぶ	書ける最優先	動詞	動	textbook-consensus
+100	buy	買う	書ける最優先	動詞	動	textbook-consensus
+101	sell	売る	書ける最優先	動詞	動	textbook-consensus
+102	pay	払う	書ける最優先	動詞	動	textbook-consensus
+103	cost	費用がかかる	書ける最優先	名詞	名	textbook-consensus
+104	spend	（時間・お金を）使う／（時間を）過ごす	書ける最優先	動詞	動	textbook-consensus
+105	save	節約する／救う	書ける最優先	動詞	動	textbook-consensus
+106	open	開ける	書ける最優先	動詞	動	textbook-consensus
+107	close	閉める	書ける最優先	動詞	動	textbook-consensus
+108	turn	曲がる／回す	書ける最優先	動詞	動	reviewed-meaning
+109	begin	始まる	書ける最優先	動詞	動	reviewed-meaning
+110	end	終わる	書ける最優先	名詞	名	textbook-consensus
+111	if	もし〜なら	書ける最優先	接続詞	接	textbook-consensus
+112	before	〜の前に	書ける最優先	前置詞	前	textbook-consensus
+113	for example	たとえば	書ける最優先	熟語・表現	熟語・表現	textbook-consensus
+114	in my opinion	私の意見では	書ける最優先	熟語・表現	熟語・表現	textbook-consensus
+115	agree	賛成する	書ける最優先	動詞	動	textbook-consensus
+116	disagree	反対する	書ける最優先	動詞	動	reviewed-meaning
+117	necessary	必要な	書ける最優先	形容詞	形	textbook-consensus
+118	possible	可能な	書ける最優先	形容詞	形	textbook-consensus
+119	different	ちがう	書ける最優先	形容詞	形	textbook-consensus
+120	same	同じ	書ける最優先	形容詞	形	textbook-consensus
+121	easy	かんたんな	書ける最優先	形容詞	形	textbook-consensus
+122	difficult	むずかしい	書ける最優先	形容詞	形	textbook-consensus
+123	interesting	おもしろい	書ける最優先	形容詞	形	textbook-consensus
+124	useful	役に立つ	書ける最優先	形容詞	形	textbook-consensus
+125	kind	親切な／種類	書ける最優先	形容詞	形	textbook-consensus
+126	careful	注意深い	書ける最優先	形容詞	形	textbook-consensus
+127	free	ひまな／無料の	書ける最優先	形容詞	形	textbook-consensus
+128	busy	いそがしい	書ける最優先	形容詞	形	textbook-consensus
+129	early	早い	書ける最優先	副詞	副	textbook-consensus
+130	late	遅い	書ける最優先	形容詞	形	textbook-consensus
+131	always	いつも	書ける最優先	副詞	副	textbook-consensus
+132	often	よく	書ける最優先	副詞	副	textbook-consensus
+133	sometimes	ときどき	書ける最優先	副詞	副	textbook-consensus
+134	never	決して〜ない	書ける最優先	副詞	副	textbook-consensus
+135	already	すでに	書ける最優先	副詞	副	textbook-consensus
+136	still	まだ	書ける最優先	副詞	副	textbook-consensus
+137	tomorrow	明日	書ける最優先	副詞	副	reviewed-meaning
+138	yesterday	昨日	書ける最優先	副詞	副	reviewed-meaning
+139	now	今	書ける最優先	副詞	副	textbook-consensus
+140	here	ここ	書ける最優先	副詞	副	textbook-consensus
+141	that	あれ／〜という	書ける最優先	代名詞	代	textbook-consensus
+142	these	これら	書ける最優先	代名詞	代	textbook-consensus
+143	those	それら	書ける最優先	代名詞	代	reviewed-meaning
+144	your	あなたの	書ける最優先	代名詞	代	textbook-consensus
+145	his	彼の	書ける最優先	代名詞	代	textbook-consensus
+146	her	彼女の	書ける最優先	代名詞	代	textbook-consensus
+147	our	私たちの	書ける最優先	代名詞	代	textbook-consensus
+148	their	彼らの	書ける最優先	代名詞	代	textbook-consensus
+149	someone	だれか	書ける最優先	代名詞	代	textbook-consensus
+150	something	何か	書ける最優先	代名詞	代	textbook-consensus
+151	everything	すべて	書ける最優先	代名詞	代	textbook-consensus
+152	much	たくさんの（数えない）	書ける最優先	副詞	副	textbook-consensus
+153	some	いくつかの	書ける最優先	形容詞	形	textbook-consensus
+154	any	いくつかの（疑問・否定）	書ける最優先	形容詞	形	textbook-consensus
+155	enough	十分な	書ける最優先	形容詞	形	reviewed-meaning
+156	more	より多くの	書ける最優先	副詞	副	textbook-consensus
+157	most	最も	書ける最優先	副詞	副	textbook-consensus
+158	less	より少ない	書ける最優先	形容詞	形	textbook-consensus
+159	few	少しの（数える）	書ける最優先	形容詞	形	reviewed-meaning
+160	a lot of	たくさんの	書ける最優先	熟語・表現	熟語・表現	textbook-consensus
+161	teacher	先生	書ける最優先	名詞	名	textbook-consensus
+162	class	授業／クラス	書ける最優先	名詞	名	textbook-consensus
+163	homework	宿題	書ける最優先	名詞	名	textbook-consensus
+164	test	テスト	書ける最優先	名詞	名	reviewed-meaning
+165	question	質問	書ける最優先	名詞	名	textbook-consensus
+166	example	例	書ける最優先	名詞	名	textbook-consensus
+167	reason	理由	書ける最優先	名詞	名	textbook-consensus
+168	opinion	意見	書ける最優先	名詞	名	reviewed-meaning
+169	future	未来	書ける最優先	名詞	名	reviewed-meaning
+170	problem	問題	書ける最優先	名詞	名	textbook-consensus
+171	solution	解決	書ける最優先	名詞	名	reviewed-meaning
+172	schedule	予定	書ける最優先	名詞	名	reviewed-meaning
+173	practice	練習	書ける最優先	動詞	動	textbook-consensus
+174	contest	コンテスト	書ける最優先	名詞	名	textbook-consensus
+175	speech	スピーチ	書ける最優先	名詞	名	textbook-consensus
+176	script	台本／原稿	書ける最優先	名詞	名	reviewed-meaning
+177	until	〜まで	書ける最優先	前置詞	前	textbook-consensus
+178	since	〜以来（優先）／〜なので	書ける最優先	前置詞	前	reviewed-meaning
+179	unless	もし〜でなければ	書ける最優先	接続詞	接	reviewed-meaning
+180	too	〜も（〜もまた）	書ける最優先	副詞	副	textbook-consensus
+181	either	（否定文で）〜もまた	書ける最優先	副詞	副	textbook-consensus
+182	each	それぞれの	書ける最優先	形容詞	形	textbook-consensus
+183	every	毎〜／すべての	書ける最優先	形容詞	形	textbook-consensus
+184	all	すべての	書ける最優先	形容詞	形	reviewed-meaning
+185	probably	たぶん	書ける最優先	副詞	副	textbook-consensus
+186	maybe	たぶん／もしかすると	書ける最優先	副詞	副	textbook-consensus
+187	finally	最後に	書ける最優先	副詞	副	textbook-consensus
+188	difference	違い	書ける最優先	名詞	名	reviewed-meaning
+189	change	変化／変える	書ける最優先	動詞	動	textbook-consensus
+190	chance	機会	書ける最優先	名詞	名	textbook-consensus
+191	person	人	書ける最優先	名詞	名	textbook-consensus
+192	people	人々／人たち	書ける最優先	名詞	名	textbook-consensus
+193	country	国	書ける最優先	名詞	名	textbook-consensus
+194	city	市／都市	書ける最優先	名詞	名	textbook-consensus
+195	town	町	書ける最優先	名詞	名	reviewed-meaning
+196	village	村	書ける最優先	名詞	名	textbook-consensus
+197	other	ほかの／別の	書ける最優先	形容詞	形	textbook-consensus
+198	join	参加する／加わる	書ける最優先	動詞	動	textbook-consensus
+199	work	仕事／活動する	書ける最優先	動詞	動	textbook-consensus
+200	life	生活／命	書ける最優先	名詞	名	textbook-consensus
+201	lunch	昼食	書ける最優先	名詞	名	textbook-consensus
+202	better	よりよい	書ける最優先	副詞	副	textbook-consensus
+203	action	行動	書ける最優先	名詞	名	textbook-consensus
+204	first	最初の／まず	書ける最優先	形容詞	形	reviewed-meaning
+205	walk	歩く	書ける最優先	動詞	動	textbook-consensus
+206	share	共有する／分け合う	書ける最優先	動詞	動	textbook-consensus
+207	world	世界	書ける最優先	名詞	名	textbook-consensus
+208	light	光	書ける最優先	名詞	名	reviewed-meaning
+209	fix	修理する／直す	書ける最優先	動詞	動	reviewed-meaning
+210	paint	塗る	書ける最優先	動詞	動	textbook-consensus
+211	shop	店	書ける最優先	名詞	名	reviewed-meaning
+212	full	いっぱいの	書ける最優先	形容詞	形	textbook-consensus
+213	environment	環境	長文テーマ語	名詞	名	textbook-consensus
+214	plastic	プラスチック	長文テーマ語	形容詞	形	textbook-consensus
+215	volunteer	ボランティア	長文テーマ語	名詞	名	textbook-consensus
+216	local	地元の	長文テーマ語	形容詞	形	textbook-consensus
+217	homestay	ホームステイ	長文テーマ語	名詞	名	textbook-consensus
+218	experience	経験	長文テーマ語	名詞	名	textbook-consensus
+219	dream	夢	長文テーマ語	名詞	名	textbook-consensus
+220	library	図書館	長文テーマ語	名詞	名	textbook-consensus
+221	nature	自然	長文テーマ語	名詞	名	textbook-consensus
+222	earth	地球	長文テーマ語	名詞	名	textbook-consensus
+223	energy	エネルギー	長文テーマ語	名詞	名	textbook-consensus
+224	renewable	再生可能な	長文テーマ語	形容詞	形	textbook-consensus
+225	solar	太陽の	長文テーマ語	形容詞	形	reviewed-meaning
+226	wind	風の	長文テーマ語	名詞	名	reviewed-meaning
+227	recycle	再利用する	長文テーマ語	動詞	動	textbook-consensus
+228	reduce	減らす	長文テーマ語	動詞	動	textbook-consensus
+229	reuse	再使用する	長文テーマ語	動詞	動	reviewed-meaning
+230	waste	無駄／ごみ	長文テーマ語	名詞	名	textbook-consensus
+231	pollution	汚染	長文テーマ語	名詞	名	textbook-consensus
+232	ocean	海	長文テーマ語	名詞	名	textbook-consensus
+233	forest	森	長文テーマ語	名詞	名	textbook-consensus
+234	wildlife	野生生物	長文テーマ語	名詞	名	reviewed-meaning
+235	protect	守る	長文テーマ語	動詞	動	textbook-consensus
+236	save the earth	地球を守る	長文テーマ語	熟語・表現	熟語・表現	reviewed-meaning
+237	global warming	地球温暖化	長文テーマ語	名詞	名	reviewed-meaning
+238	climate	気候	長文テーマ語	名詞	名	textbook-consensus
+239	disaster	災害	長文テーマ語	名詞	名	textbook-consensus
+240	earthquake	地震	長文テーマ語	名詞	名	textbook-consensus
+241	typhoon	台風	長文テーマ語	名詞	名	textbook-consensus
+242	flood	洪水	長文テーマ語	名詞	名	reviewed-meaning
+243	evacuation	避難	長文テーマ語	名詞	名	reviewed-meaning
+244	rescue	救助	長文テーマ語	名詞	名	textbook-consensus
+245	damage	被害	長文テーマ語	動詞	動	textbook-consensus
+246	charity	慈善	長文テーマ語	名詞	名	textbook-consensus
+247	donate	寄付する	長文テーマ語	動詞	動	textbook-consensus
+248	community	地域社会	長文テーマ語	名詞	名	reviewed-meaning
+249	local community	地域社会	長文テーマ語	名詞	名	reviewed-meaning
+250	take part in	参加する	長文テーマ語	熟語・表現	熟語・表現	reviewed-meaning
+251	international	国際的な	長文テーマ語	形容詞	形	textbook-consensus
+252	foreign	外国の	長文テーマ語	形容詞	形	textbook-consensus
+253	exchange	交換／交流	長文テーマ語	名詞	名	textbook-consensus
+254	host family	ホストファミリー	長文テーマ語	熟語・表現	熟語・表現	textbook-consensus
+255	culture	文化	長文テーマ語	名詞	名	textbook-consensus
+256	tradition	伝統	長文テーマ語	名詞	名	textbook-consensus
+257	traditional culture	伝統文化	長文テーマ語	名詞	名	reviewed-meaning
+258	festival	祭り	長文テーマ語	名詞	名	textbook-consensus
+259	temple	寺	長文テーマ語	名詞	名	reviewed-meaning
+260	shrine	神社	長文テーマ語	名詞	名	reviewed-meaning
+261	museum	博物館	長文テーマ語	名詞	名	textbook-consensus
+262	history	歴史	長文テーマ語	名詞	名	textbook-consensus
+263	tourist	観光客	長文テーマ語	名詞	名	textbook-consensus
+264	sightseeing	観光	長文テーマ語	名詞	名	reviewed-meaning
+265	guide	案内人／案内する	長文テーマ語	名詞	名	reviewed-meaning
+266	map	地図	長文テーマ語	名詞	名	textbook-consensus
+267	direction	方向	長文テーマ語	名詞	名	textbook-consensus
+268	traffic	交通／渋滞	長文テーマ語	名詞	名	reviewed-meaning
+269	airport	空港	長文テーマ語	名詞	名	textbook-consensus
+270	passport	パスポート	長文テーマ語	名詞	名	reviewed-meaning
+271	customs	税関	長文テーマ語	名詞	名	reviewed-meaning
+272	hotel	ホテル	長文テーマ語	名詞	名	textbook-consensus
+273	reservation	予約	長文テーマ語	名詞	名	textbook-consensus
+274	customer	客	長文テーマ語	名詞	名	textbook-consensus
+275	service	サービス	長文テーマ語	名詞	名	textbook-consensus
+276	recommend	おすすめする	長文テーマ語	動詞	動	textbook-consensus
+277	challenge	挑戦	長文テーマ語	名詞	名	textbook-consensus
+278	goal	目標	長文テーマ語	名詞	名	textbook-consensus
+279	success	成功	長文テーマ語	名詞	名	reviewed-meaning
+280	failure	失敗	長文テーマ語	名詞	名	textbook-consensus
+281	mistake	まちがい	長文テーマ語	名詞	名	textbook-consensus
+282	advice	助言	長文テーマ語	名詞	名	textbook-consensus
+283	opportunity	機会	長文テーマ語	名詞	名	reviewed-meaning
+284	technology	技術	長文テーマ語	名詞	名	textbook-consensus
+285	science	科学	長文テーマ語	名詞	名	reviewed-meaning
+286	research	研究	長文テーマ語	名詞	名	textbook-consensus
+287	experiment	実験	長文テーマ語	名詞	名	reviewed-meaning
+288	invent	発明する	長文テーマ語	動詞	動	textbook-consensus
+289	invention	発明	長文テーマ語	名詞	名	textbook-consensus
+290	robot	ロボット	長文テーマ語	名詞	名	textbook-consensus
+291	AI	人工知能	長文テーマ語	名詞	名	reviewed-meaning
+292	computer	コンピューター	長文テーマ語	名詞	名	textbook-consensus
+293	internet	インターネット	長文テーマ語	名詞	名	reviewed-meaning
+294	online	オンラインの	長文テーマ語	副詞	副	textbook-consensus
+295	website	ウェブサイト	長文テーマ語	名詞	名	textbook-consensus
+296	social media	SNS	長文テーマ語	名詞	名	reviewed-meaning
+297	smartphone	スマホ	長文テーマ語	名詞	名	reviewed-meaning
+298	app	アプリ	長文テーマ語	名詞	名	reviewed-meaning
+299	message	メッセージ	長文テーマ語	名詞	名	textbook-consensus
+300	privacy	プライバシー	長文テーマ語	名詞	名	reviewed-meaning
+301	data	データ	長文テーマ語	名詞	名	textbook-consensus
+302	rule	規則	長文テーマ語	名詞	名	textbook-consensus
+303	law	法律	長文テーマ語	名詞	名	textbook-consensus
+304	safe	安全な	長文テーマ語	形容詞	形	textbook-consensus
+305	dangerous	危険な	長文テーマ語	形容詞	形	textbook-consensus
+306	accident	事故	長文テーマ語	名詞	名	textbook-consensus
+307	traffic accident	交通事故	長文テーマ語	名詞	名	textbook-consensus
+308	health	健康	長文テーマ語	名詞	名	textbook-consensus
+309	exercise	運動	長文テーマ語	名詞	名	textbook-consensus
+310	diet	食事・食生活	長文テーマ語	名詞	名	reviewed-meaning
+311	medicine	薬	長文テーマ語	名詞	名	textbook-consensus
+312	hospital	病院	長文テーマ語	名詞	名	textbook-consensus
+313	doctor	医者	長文テーマ語	名詞	名	textbook-consensus
+314	symptom	症状	長文テーマ語	名詞	名	reviewed-meaning
+315	stress	ストレス	長文テーマ語	名詞	名	reviewed-meaning
+316	sleep	睡眠	長文テーマ語	動詞	動	textbook-consensus
+317	sport	スポーツ	長文テーマ語	名詞	名	textbook-consensus
+318	team	チーム	長文テーマ語	名詞	名	textbook-consensus
+319	match	試合	長文テーマ語	動詞	動	textbook-consensus
+320	practice	練習	長文テーマ語	動詞	動	textbook-consensus
+321	event	行事	長文テーマ語	名詞	名	textbook-consensus
+322	club	部活動	長文テーマ語	名詞	名	textbook-consensus
+323	concert	コンサート	長文テーマ語	名詞	名	textbook-consensus
+324	performance	公演	長文テーマ語	名詞	名	textbook-consensus
+325	audience	観客	長文テーマ語	名詞	名	reviewed-meaning
+326	instrument	楽器	長文テーマ語	名詞	名	reviewed-meaning
+327	speech contest	スピーチコンテスト	長文テーマ語	名詞	名	reviewed-meaning
+328	enter	参加する	長文テーマ語	動詞	動	textbook-consensus
+329	prize	賞	長文テーマ語	名詞	名	textbook-consensus
+330	winner	勝者	長文テーマ語	名詞	名	textbook-consensus
+331	prepare	準備する	長文テーマ語	動詞	動	textbook-consensus
+332	introduce	紹介する	長文テーマ語	動詞	動	textbook-consensus
+333	improve	改善する	長文テーマ語	動詞	動	textbook-consensus
+334	develop	発展させる	長文テーマ語	動詞	動	textbook-consensus
+335	pamphlet	小冊子／案内パンフレット	長文テーマ語	名詞	名	reviewed-meaning
+336	plain	わかりやすい／平易な	長文テーマ語	形容詞	形	reviewed-meaning
+337	pair	組み合わせ／対	長文テーマ語	名詞	名	reviewed-meaning
+338	easy Japanese	やさしい日本語	長文テーマ語	名詞	名	reviewed-meaning
+339	eco-friendly	環境にやさしい	長文テーマ語	形容詞	形	textbook-consensus
+340	local festival	地域の祭り	長文テーマ語	名詞	名	reviewed-meaning
+341	lantern	ちょうちん	長文テーマ語	名詞	名	reviewed-meaning
+342	lantern walk	ちょうちん行列	長文テーマ語	名詞	名	reviewed-meaning
+343	community center	公民館／地域センター	長文テーマ語	名詞	名	reviewed-meaning
+344	station	駅	長文テーマ語	名詞	名	textbook-consensus
+345	market	市場	長文テーマ語	名詞	名	textbook-consensus
+346	view	景色／眺め	長文テーマ語	名詞	名	textbook-consensus
+347	ocean view	海の見える景色	長文テーマ語	名詞	名	reviewed-meaning
+348	convenient	便利な	長文テーマ語	形容詞	形	textbook-consensus
+349	expensive	高価な	長文テーマ語	形容詞	形	textbook-consensus
+350	summer camp	夏のキャンプ	長文テーマ語	名詞	名	reviewed-meaning
+351	opera	オペラ	長文テーマ語	名詞	名	reviewed-meaning
+352	special teacher	特別講師	長文テーマ語	名詞	名	reviewed-meaning
+353	science class	科学教室	長文テーマ語	名詞	名	reviewed-meaning
+354	volunteer work	ボランティア活動	長文テーマ語	名詞	名	reviewed-meaning
+355	percentage	割合	長文テーマ語	名詞	名	reviewed-meaning
+356	result	結果	長文テーマ語	名詞	名	reviewed-meaning
+357	local problem(s)	地域の問題	長文テーマ語	名詞	名	reviewed-meaning
+358	Because ...	なぜなら〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+359	I think (that) ...	私は〜と思います（※thatは省略可）	英作文の型	熟語・表現	熟語・表現	reviewed-category
+360	In my opinion, ...	私の意見では〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+361	I agree with ...	〜に賛成です	英作文の型	熟語・表現	熟語・表現	reviewed-category
+362	I disagree with ...	〜に反対です	英作文の型	熟語・表現	熟語・表現	reviewed-category
+363	First, ...	まず	英作文の型	熟語・表現	熟語・表現	reviewed-category
+364	Second, ...	次に	英作文の型	熟語・表現	熟語・表現	reviewed-category
+365	Finally, ...	最後に	英作文の型	熟語・表現	熟語・表現	reviewed-category
+366	Also, ...	それに／また	英作文の型	熟語・表現	熟語・表現	reviewed-category
+367	However, ...	しかし	英作文の型	熟語・表現	熟語・表現	reviewed-category
+368	For example, ...	たとえば	英作文の型	熟語・表現	熟語・表現	reviewed-category
+369	So ...	だから〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+370	That is why ...	だからこそ〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+371	It is important to ...	〜することは大切だ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+372	It is necessary to ...	〜する必要がある	英作文の型	熟語・表現	熟語・表現	reviewed-category
+373	It is good for ...	〜に良い	英作文の型	熟語・表現	熟語・表現	reviewed-category
+374	It helps me (us) ...	（私たちの）助けになる	英作文の型	熟語・表現	熟語・表現	reviewed-category
+375	It makes me ...	私を〜な気持ちにする	英作文の型	熟語・表現	熟語・表現	reviewed-category
+376	I want to ...	〜したい	英作文の型	熟語・表現	熟語・表現	reviewed-category
+377	I would like to ...	〜したい（丁寧）	英作文の型	熟語・表現	熟語・表現	reviewed-category
+378	I am going to ...	〜するつもりだ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+379	I plan to ...	〜する予定だ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+380	I hope to ...	〜したいと思う（望む）	英作文の型	熟語・表現	熟語・表現	reviewed-category
+381	We should ...	私たちは〜すべきだ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+382	We must ...	私たちは〜しなければならない	英作文の型	熟語・表現	熟語・表現	reviewed-category
+383	We can ...	私たちは〜できる	英作文の型	熟語・表現	熟語・表現	reviewed-category
+384	If I have time, ...	もし時間があれば〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+385	If I were you, ...	もし私があなたなら〜	英作文の型	熟語・表現	熟語・表現	reviewed-category
+386	When I ..., I ...	私が〜するとき、…	英作文の型	熟語・表現	熟語・表現	reviewed-category
+387	I am good at ...	〜が得意だ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+388	I am not good at ...	〜が苦手だ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+389	I am interested in ...	〜に興味がある	英作文の型	熟語・表現	熟語・表現	reviewed-category
+390	I like ... because ...	私は…が好き。なぜなら…	英作文の型	熟語・表現	熟語・表現	reviewed-category
+391	I learned (that) ...	〜を学んだ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+392	I was surprised (that) ...	〜に驚いた	英作文の型	熟語・表現	熟語・表現	reviewed-category
+393	I was happy to ...	〜できてうれしかった	英作文の型	熟語・表現	熟語・表現	reviewed-category
+394	I was able to ...	〜できた	英作文の型	熟語・表現	熟語・表現	reviewed-category
+395	I couldn't ...	〜できなかった	英作文の型	熟語・表現	熟語・表現	reviewed-category
+396	It is hard to ...	〜するのは難しい	英作文の型	熟語・表現	熟語・表現	reviewed-category
+397	It is easy to ...	〜するのは簡単だ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+398	I think it is better to ...	〜したほうがよいと思う	英作文の型	熟語・表現	熟語・表現	reviewed-category
+399	We need to ...	私たちは〜する必要がある	英作文の型	熟語・表現	熟語・表現	reviewed-category
+400	We don't have to ...	〜する必要はない	英作文の型	熟語・表現	熟語・表現	reviewed-category
+401	I recommend ...	〜をおすすめする	英作文の型	熟語・表現	熟語・表現	reviewed-category
+402	Why don't we ...?	〜しませんか？	英作文の型	熟語・表現	熟語・表現	reviewed-category
+403	How about ...?	〜はどう？	英作文の型	熟語・表現	熟語・表現	reviewed-category
+404	Let's ...	〜しよう	英作文の型	熟語・表現	熟語・表現	reviewed-category
+405	It is a good idea to ...	〜するのはよい考えだ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+406	I prefer A to B.	私はBよりAが好き	英作文の型	熟語・表現	熟語・表現	reviewed-category
+407	A is better than B.	AはBよりよい	英作文の型	熟語・表現	熟語・表現	reviewed-category
+408	I have to ...	〜しなければならない	英作文の型	熟語・表現	熟語・表現	reviewed-category
+409	I have been to ...	〜に行ったことがある	英作文の型	熟語・表現	熟語・表現	reviewed-category
+410	I have never ...	一度も〜ない	英作文の型	熟語・表現	熟語・表現	reviewed-category
+411	I am looking forward to ...	〜を楽しみにしている	英作文の型	熟語・表現	熟語・表現	reviewed-category
+412	Thank you for ...	〜してくれてありがとう	英作文の型	熟語・表現	熟語・表現	reviewed-category
+413	I think we can ...	私たちは〜できると思う	英作文の型	熟語・表現	熟語・表現	reviewed-category
+414	What can we do for ...?	〜のために何ができますか	英作文の型	熟語・表現	熟語・表現	reviewed-category
+415	To make our country/community better, ...	国や地域をよりよくするために、…	英作文の型	熟語・表現	熟語・表現	reviewed-category
+416	We should take action to ...	〜するために行動すべきだ	英作文の型	熟語・表現	熟語・表現	reviewed-category
+417	We can help by ...	〜することで役立てる	英作文の型	熟語・表現	熟語・表現	reviewed-category
+418	If we help each other, ...	もし助け合えば、…	英作文の型	熟語・表現	熟語・表現	reviewed-category
+419	I want to join ...	〜に参加したい	英作文の型	熟語・表現	熟語・表現	reviewed-category
+420	because of	〜のために	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+421	although	〜だけれども	40点超え追加	接続詞	接	reviewed-meaning
+422	even if	たとえ〜でも	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+423	in addition	さらに（追加で）	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+424	such as	〜のような（例として）	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+425	instead	その代わりに	40点超え追加	副詞	副	reviewed-meaning
+426	in that case	その場合は	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+427	at least	少なくとも	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+428	in fact	実は／実際は	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+429	actually	実は	40点超え追加	副詞	副	textbook-consensus
+430	especially	特に	40点超え追加	副詞	副	textbook-consensus
+431	besides	その上／〜に加えて	40点超え追加	副詞	副	reviewed-meaning
+432	on the other hand	一方で	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+433	for that reason	その理由で	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+434	as soon as	〜するとすぐ	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+435	not ... anymore	もう〜ない	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+436	in order to	〜するために	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+437	as well as	〜だけでなく…も	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+438	neither	どちらも〜ない	40点超え追加	代名詞	代	reviewed-meaning
+439	neither A nor B	AもBも〜ない	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+440	either A or B	AかBのどちらか	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+441	one of	〜のうちの一つ	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+442	the same as	〜と同じ	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+443	different from	〜と違う	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+444	each other	お互い（に）	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+445	one another	お互い（に）	40点超え追加	代名詞	代	reviewed-meaning
+446	another	もう一つの／別の	40点超え追加	形容詞	形	textbook-consensus
+447	the other	もう一方の	40点超え追加	代名詞	代	reviewed-meaning
+448	by the way	ところで	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+449	at times	ときどき	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+450	right away	すぐに	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+451	at once	すぐに／いっぺんに	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+452	for a while	しばらくの間	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+453	for a long time	長い間	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+454	all the time	いつも	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+455	from now on	これから先	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+456	at the same time	同時に	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+457	in the beginning	最初に	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+458	at first	最初は	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+459	in the past	過去に	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+460	in the future	将来	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+461	in the end	結局	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+462	at last	ついに	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+463	at the end	最後に	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+464	helpful	役に立つ	40点超え追加	形容詞	形	reviewed-meaning
+465	in my case	私の場合は	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+466	little by little	少しずつ	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+467	not only A but also B	AだけでなくBも	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+468	more and more	ますます	40点超え追加	熟語・表現	熟語・表現	textbook-consensus
+469	all over the world	世界中で	40点超え追加	熟語・表現	熟語・表現	reviewed-meaning
+470	cut - cut - cut	切る	不規則動詞	動詞	動	reviewed-category
+471	read - read - read	読む	不規則動詞	動詞	動	reviewed-category
+472	put - put - put	置く	不規則動詞	動詞	動	reviewed-category
+473	let - let - let	〜させる / 許す	不規則動詞	動詞	動	reviewed-category
+474	hit - hit - hit	打つ	不規則動詞	動詞	動	reviewed-category
+475	cost - cost - cost	（費用が）かかる	不規則動詞	動詞	動	reviewed-category
+476	have - had - had	持っている／〜がある	不規則動詞	動詞	動	reviewed-category
+477	get - got - got	得る / 手に入れる	不規則動詞	動詞	動	reviewed-category
+478	make - made - made	作る	不規則動詞	動詞	動	reviewed-category
+479	hear - heard - heard	聞く	不規則動詞	動詞	動	reviewed-category
+480	say - said - said	言う	不規則動詞	動詞	動	reviewed-category
+481	tell - told - told	話す / 教える	不規則動詞	動詞	動	reviewed-category
+482	think - thought - thought	思う	不規則動詞	動詞	動	reviewed-category
+483	find - found - found	見つける	不規則動詞	動詞	動	reviewed-category
+484	feel - felt - felt	感じる	不規則動詞	動詞	動	reviewed-category
+485	bring - brought - brought	持ってくる	不規則動詞	動詞	動	reviewed-category
+486	build - built - built	建てる	不規則動詞	動詞	動	reviewed-category
+487	buy - bought - bought	買う	不規則動詞	動詞	動	reviewed-category
+488	catch - caught - caught	つかまえる	不規則動詞	動詞	動	reviewed-category
+489	hold - held - held	持つ／開催する	不規則動詞	動詞	動	reviewed-category
+490	keep - kept - kept	保つ / 飼う	不規則動詞	動詞	動	reviewed-category
+491	leave - left - left	去る / 置いていく	不規則動詞	動詞	動	reviewed-category
+492	lend - lent - lent	貸す	不規則動詞	動詞	動	reviewed-category
+493	lose - lost - lost	失う / 負ける	不規則動詞	動詞	動	reviewed-category
+494	meet - met - met	会う	不規則動詞	動詞	動	reviewed-category
+495	pay - paid - paid	払う	不規則動詞	動詞	動	reviewed-category
+496	sell - sold - sold	売る	不規則動詞	動詞	動	reviewed-category
+497	send - sent - sent	送る	不規則動詞	動詞	動	reviewed-category
+498	sit - sat - sat	座る	不規則動詞	動詞	動	reviewed-category
+499	sleep - slept - slept	眠る	不規則動詞	動詞	動	reviewed-category
+500	spend - spent - spent	（時間・お金を）使う	不規則動詞	動詞	動	reviewed-category
+501	stand - stood - stood	立つ	不規則動詞	動詞	動	reviewed-category
+502	teach - taught - taught	教える	不規則動詞	動詞	動	reviewed-category
+503	understand - understood - understood	理解する	不規則動詞	動詞	動	reviewed-category
+504	win - won - won	勝つ	不規則動詞	動詞	動	reviewed-category
+505	come - came - come	来る	不規則動詞	動詞	動	reviewed-category
+506	become - became - become	〜になる	不規則動詞	動詞	動	reviewed-category
+507	run - ran - run	走る	不規則動詞	動詞	動	reviewed-category
+508	be - was/were - been	〜である / いる	不規則動詞	動詞	動	reviewed-category
+509	do - did - done	する	不規則動詞	動詞	動	reviewed-category
+510	go - went - gone	行く	不規則動詞	動詞	動	reviewed-category
+511	take - took - taken	取る / 連れていく	不規則動詞	動詞	動	reviewed-category
+512	give - gave - given	与える	不規則動詞	動詞	動	reviewed-category
+513	see - saw - seen	見る	不規則動詞	動詞	動	reviewed-category
+514	know - knew - known	知っている	不規則動詞	動詞	動	reviewed-category
+515	begin - began - begun	始まる / 始める	不規則動詞	動詞	動	reviewed-category
+516	break - broke - broken	こわす / 壊れる	不規則動詞	動詞	動	reviewed-category
+517	choose - chose - chosen	選ぶ	不規則動詞	動詞	動	reviewed-category
+518	draw - drew - drawn	描く	不規則動詞	動詞	動	reviewed-category
+519	drink - drank - drunk	飲む	不規則動詞	動詞	動	reviewed-category
+520	drive - drove - driven	運転する	不規則動詞	動詞	動	reviewed-category
+521	eat - ate - eaten	食べる	不規則動詞	動詞	動	reviewed-category
+522	fall - fell - fallen	落ちる	不規則動詞	動詞	動	reviewed-category
+523	fly - flew - flown	飛ぶ	不規則動詞	動詞	動	reviewed-category
+524	forget - forgot - forgotten	忘れる	不規則動詞	動詞	動	reviewed-category
+525	ride - rode - ridden	乗る	不規則動詞	動詞	動	reviewed-category
+526	ring - rang - rung	鳴る / 鳴らす	不規則動詞	動詞	動	reviewed-category
+527	sing - sang - sung	歌う	不規則動詞	動詞	動	reviewed-category
+528	speak - spoke - spoken	話す	不規則動詞	動詞	動	reviewed-category
+529	swim - swam - swum	泳ぐ	不規則動詞	動詞	動	reviewed-category
+530	wear - wore - worn	着る / 身につける	不規則動詞	動詞	動	reviewed-category
+531	write - wrote - written	書く	不規則動詞	動詞	動	reviewed-category
+532	grow - grew - grown	育つ / 育てる	不規則動詞	動詞	動	reviewed-category
+533	throw - threw - thrown	投げる	不規則動詞	動詞	動	reviewed-category

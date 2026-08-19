@@ -1,0 +1,47 @@
+data_array_count=4613
+dataset_counts={"elementary": 104, "exam": 534, "textbook": 3975}
+record_count=3975
+parse_error_count=0
+missing_english=0
+missing_japanese=0
+missing_kana=0
+pos_raw_blank=1611
+full_duplicate_group_count=0
+fields=current_confirmed,dataset,english,exam_category,exam_subcategory,grade,japanese,kana,major_unit,phrase,pos,pos_raw,section,star,textbook
+
+[counts_by_textbook_grade]
+サンシャイン	中1	count=662	star=361	phrase=108
+サンシャイン	中2	count=673	star=219	phrase=143
+サンシャイン	中3	count=527	star=149	phrase=126
+ニューホライズン	中1	count=832	star=515	phrase=139
+ニューホライズン	中2	count=673	star=229	phrase=136
+ニューホライズン	中3	count=608	star=154	phrase=119
+
+[known_terms]
+sweet(s)	rows=0
+friend(s)	rows=0
+English	rows=3
+  {"current_confirmed": "1", "dataset": "textbook", "english": "English", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "英語", "kana": "イングリッシュ", "major_unit": "プレステップ", "phrase": "0", "pos": "名詞", "pos_raw": "名", "section": "プレステップ2 アルファベットと英語のきまり", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "1", "dataset": "textbook", "english": "English", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "英語の", "kana": "イングリッシュ", "major_unit": "Unit2", "phrase": "0", "pos": "名詞", "pos_raw": "名", "section": "Unit2 Part1", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "1", "dataset": "textbook", "english": "English", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "英語", "kana": "イングリッシュ", "major_unit": "プレステップ", "phrase": "0", "pos": "名詞", "pos_raw": "名", "section": "プレステップ2 アルファベットと英語のきまり", "star": "1", "textbook": "サンシャイン"}
+want to	rows=2
+  {"current_confirmed": "0", "dataset": "textbook", "english": "want to ~", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "~したい", "kana": "ウォント トゥ ～", "major_unit": "Unit1", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit1 Part1", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "0", "dataset": "textbook", "english": "want to ~", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "~したい", "kana": "ウォント トゥ ～", "major_unit": "PROGRAM1", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "PROGRAM1 1-2", "star": "1", "textbook": "サンシャイン"}
+How about you?	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "How about you?", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "あなたはどうですか。", "kana": "ハウ アバウト ユー", "major_unit": "Unit1", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit1 Part3", "star": "1", "textbook": "ニューホライズン"}
+don't	rows=6
+  {"current_confirmed": "0", "dataset": "textbook", "english": "don't", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "do notの短縮形", "kana": "ドント", "major_unit": "Unit1", "phrase": "0", "pos": "熟語・表現", "pos_raw": "", "section": "Unit1 Part2", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Why don't we ~?", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "~しませんか。", "kana": "ワイ ドント ウィー ～", "major_unit": "Unit6", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit6 Part1", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "0", "dataset": "textbook", "english": "don't have to ~", "exam_category": "", "exam_subcategory": "", "grade": "2", "japanese": "~しなくてよい, ~する必要がない", "kana": "ドント ハブ トゥ ～", "major_unit": "Unit4", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit4 Part1", "star": "1", "textbook": "ニューホライズン"}
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Don't worry.", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "心配しないで。", "kana": "ドント ウォーリー", "major_unit": "Let's", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "PROGRAM4 4-1", "star": "1", "textbook": "サンシャイン"}
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Why don't we ~?", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "(提案して)~しませんか。", "kana": "ワイ ドント ウィー ～", "major_unit": "Happy", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "PROGRAM8 8-2", "star": "1", "textbook": "サンシャイン"}
+Malala Yousafzai	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Malala Yousafzai", "exam_category": "", "exam_subcategory": "", "grade": "3", "japanese": "マララ・ユスフザイ(人名)", "kana": "マララ ユスフザイ", "major_unit": "Malala's", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Reading2 教科書本文", "star": "0", "textbook": "サンシャイン"}
+Cafe Maria	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Cafe Maria", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "カフェ マリア[架空のカフェの名前]", "kana": "カフェ マリア", "major_unit": "Unit5", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit5 教科書本文", "star": "0", "textbook": "ニューホライズン"}
+Diane Kichijitsu	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "Diane Kichijitsu", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "ダイアン 吉日[イギリス出身の落語家]", "kana": "ダイアン キチジツ", "major_unit": "Unit6", "phrase": "1", "pos": "熟語・表現", "pos_raw": "", "section": "Unit6 教科書本文", "star": "0", "textbook": "ニューホライズン"}
+South Africa	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "South Africa", "exam_category": "", "exam_subcategory": "", "grade": "1", "japanese": "南アフリカ共和国", "kana": "サウス アフリカ", "major_unit": "Unit1", "phrase": "1", "pos": "名詞", "pos_raw": "名", "section": "Unit1 Part1", "star": "0", "textbook": "ニューホライズン"}
+natural gas	rows=1
+  {"current_confirmed": "0", "dataset": "textbook", "english": "natural gas", "exam_category": "", "exam_subcategory": "", "grade": "3", "japanese": "天然ガス", "kana": "ナチュラル ガス", "major_unit": "Power", "phrase": "1", "pos": "名詞", "pos_raw": "名", "section": "Let's Read 2 教科書本文", "star": "0", "textbook": "ニューホライズン"}

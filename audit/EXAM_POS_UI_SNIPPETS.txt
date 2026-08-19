@@ -24,6 +24,7 @@ ck-btn secondary" id="exam40Btn">40点以上目標</button>
       <div id="examFilters" class="hide">
         <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
         <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
       </div>
 
       <div id="elementaryFilters" class="hide">
@@ -73,180 +74,10 @@ ck-btn secondary" id="exam40Btn">40点以上目標</button>
       <div class="section inline">
         <button class="action-btn primary" id="refreshBtn">一覧更新</button>
         <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
-        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
-        <button class="action-btn" id="printBtn">問題を印刷</button>
-        <button class="ac
+        <button c
 
-===== 2 品詞 @ 1352216 =====
-sh();
-        current = title;
-        intro = nextIntro;
-        rows = [];
-      }
-      if (state.dataset === 'elementary') rows.push(`<tr><td>${esc(r.english)}</td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`);
-      else rows.push(`<tr><td>${esc(r.english)}</td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td></tr>`);
-    });
-    flush();
-    els.memoryGroupedArea.innerHTML = blocks.join('');
-    return;
-  }
-  els.listArea.classList.remove('hide');
-  els.memoryGroupedArea.classList.add('hide');
-  els.memoryGroupedArea.innerHTML = '';
-  if (state.dataset === 'textbook') {
-    if (state.memoryMode) {
-      els.headRow.innerHTML = `<th>学年</th><th>英語</th><th>カタカナ読み</th><th>日本語</th><th>現行確認</th><th>☆</th>`;
-      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>中${esc(String(r.grade).replace('.0',''))}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
-    } else {
-      els.headRow.innerHTML = `<th>教科書</th><th>学年</th><th>大単元</th><th>小単元</th><th>品詞</th><th>英語</th><th>日本語</th><th>現行</th><th>☆</th>`;
-      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.textbook)}</td><td>中${esc(String(r.grade).replace('.0',''))}</td><td>${esc(r.major_unit)}</td><td>${esc(r.section)}</td><td>${esc(r.pos)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
-    }
-  } else if (state.dataset === 'exam') {
-    els.headRow.innerHTML = `<th>カテゴリ</th><th>分類</th><th>英語</th><th>日本語</th>`;
-    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.exam_category)}</td><td>${esc(r.exam_subcategory || '')}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td></tr>`).join('');
-  } else {
-    els.headRow.innerHTML = `<th>テスト区分</th><th>カテゴリー</th><th>英語</th><th>日本語</th><th>コツ・セット</th>`;
-    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.elem_type)}</td><td>${esc(r.elem_category_short || r.elem_category)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`).join('');
-  }
-}
-function shuffle(arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-function createTest() {
-  state.currentList = filteredRows();
-  renderSummary();
-  renderList();
-  const rows = state.currentList.slice();
-  if (rows.length === 0) {
-    state.currentTest = [];
-    els.testSummary.textContent = '該当語がありません';
-    els.testArea.innerHTML = '';
-    return;
-  }
-  const specialRule = els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read';
-  const candidates = [];
-  if (specialRule) {
-    rows.forEach(r => {
-      if (String(r.star || '') === '1') {
-        candidates.push({ row: r, fixedMode: 'en2jp' });
-        candidates.push({ row: r, fixedMode: 'jp2en' });
-      } else {
-        candidates.push({ row: r, fixedMode: 'en2jp' });
-      }
-    });
-  } else {
-    rows.forEach(r => candidates.push({ row: r, fixedMode: '' }));
-  }
-  const count = Math.min(parseInt(els.qCount.value, 10), candidates.length);
-  const picked = shuffle(candidates).slice(0, count).map((item, idx) => {
-    const r = item.row;
-    let mode = item.fixedMode || els.quizMode.value;
-    if (mode === 'random') mode = Math.random() < 0.5 ? 'en2jp' : 'jp2en';
-    const prompt = mode === 'en2jp' ? r.english : r.japanese;
-    const answer = mode === 'en2jp' ? r.japanese : r.english;
-    retur
-
-===== 3 品詞 @ 1360566 =====
-Rule].forEach(sel => {
-  if (sel) sel.addEventListener('change', () => { clearCurrentTest(); renderTest(); });
-});
-function compactList(arr, emptyLabel='すべて') {
-  const vals = Array.from(arr || []).filter(v => String(v || '').trim());
-  if (!vals.length) return emptyLabel;
-  if (vals.length <= 6) return vals.join('、');
-  return vals.slice(0, 6).join('、') + `、ほか${vals.length - 6}件`;
-}
-function currentDatasetLabel() {
-  if (state.dataset === 'textbook') return '教科書版';
-  if (state.dataset === 'exam') return '高校入試版';
-  return '小学生版';
-}
-function quizModeTextForPrint() {
-  if (els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read') return '☆は読み・書き／それ以外は読みだけ';
-  const opt = els.quizMode.options[els.quizMode.selectedIndex];
-  return opt ? opt.textContent : '';
-}
-function buildRangeRowsForPrint() {
-  const rows = [];
-  rows.push(['モード', currentDatasetLabel()]);
-  if (state.dataset === 'textbook') {
-    rows.push(['教科書', compactList(state.filters.textbook, 'すべて')]);
-    rows.push(['学年', compactList(state.filters.grade, 'すべて')]);
-    rows.push(['大単元', compactList(state.filters.major, 'すべて')]);
-    rows.push(['小単元', compactList(state.filters.section, 'すべて')]);
-    rows.push(['品詞', compactList(state.filters.pos, 'すべて')]);
-    const cond = [];
-    if (state.toggles.starOnly) cond.push('☆のみ');
-    if (state.toggles.phraseOnly) cond.push('熟語・表現のみ');
-    if (state.toggles.currentOnly) cond.push('現行確認済みのみ');
-    rows.push(['条件', cond.length ? cond.join('、') : '指定なし']);
-  } else if (state.dataset === 'exam') {
-    rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);
-    rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);
-  } else {
-    rows.push(['テスト区分', compactList(state.filters.elemType, 'すべて')]);
-    rows.push(['カテゴリー', compactList(state.filters.elemCategory, 'すべて')]);
-  }
-  rows.push(['対象語数', `${state.currentList.length}語`]);
-  rows.push(['出題形式', quizModeTextForPrint()]);
-  rows.push(['問題数', state.currentTest.length ? `${state.currentTest.length}問` : '未作成']);
-  return rows;
-}
-function normalizeGradeLabelForPrint(v) {
-  const s = String(v || '').replace(/\.0$/, '').trim();
-  if (!s) return '';
-  return /^\d+$/.test(s) ? `中${s}` : s;
-}
-function uniqueFromCurrentList(key) {
-  const out = [];
-  const seen = new Set();
-  (state.currentList || []).forEach(r => {
-    const v = String(r[key] || '').replace(/\.0$/, '').trim();
-    if (v && !seen.has(v)) { seen.add(v); out.push(v); }
-  });
-  return out;
-}
-function shortItemsForPrint(items, emptyLabel='全範囲') {
-  const vals = (items || []).filter(v => String(v || '').trim());
-  if (!vals.length) return emptyLabel;
-  if (vals.length === 1) return vals[0];
-  if (vals.length <= 3) return vals.join('、');
-  return `${vals[0]}〜${vals[vals.length - 1]}`;
-}
-function buildPrintRangeLine() {
-  if (state.dataset === 'textbook') {
-    const textbooks = shortItemsForPrint(uniqueFromCurrentList('textbook'), '全教科書');
-    const grades = shortItemsForPrint(uniqueFromCurrentList('grade').map(normalizeGradeLabelForPrint), '全学年');
-    const sections = shortItemsForPrint(uniqueFromCurrentList('section'), '全単元');
-    return `${textbooks}｜${grades}｜${sections}`;
-  }
-  if (state.dataset === 'exam') {
-    const cats = shortItemsForPrint(uniqueFromCurrentList('exam_category'), '全範囲');
-    return `高校入試版｜${cats}`;
-  }
-  const types = shortItemsForPrint(uniqueFromCurrentList('elem_type'), '全範囲');
-  const cats = shortItemsForPrint(uniqueFromCurrentList('elem_category'), '全カテゴリー');
-  return `小学生版｜${types}｜${cats}`;
-}
-
-const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wgARCAGuBwgDASIAA
-
-===== 4 posBox @ 45830 =====
-k-btn" id="examIrregularBtn">不規則動詞だけ</button>
-        </div>
-      </div>
-
-      <div id="elemQuick" class="section hide">
-        <div class="quick-buttons">
-          <button class="quick-btn secondary" id="elemWriteBtn">書けるようにする単語</button>
-          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
-          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
-          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
+===== 2 品詞 @ 46235 =====
+      <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
         </div>
       </div>
 
@@ -261,509 +92,7 @@ k-btn" id="examIrregularBtn">不規則動詞だけ</button>
       <div id="examFilters" class="hide">
         <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
         <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
-      </div>
-
-      <div id="elementaryFilters" class="hide">
-        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
-        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">問題数</label>
-        <select id="qCount">
-          <option value="5">5問</option>
-          <option value="10" selected>10問</option>
-          <option value="15">15問</option>
-          <option value="20">20問</option>
-          <option value="30">30問</option>
-          <option value="99999">全部</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">印刷配置</label>
-        <select id="printLayout">
-          <option value="normal" selected>通常</option>
-          <option value="duplex10">表10問・裏10問</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">出題形式</label>
-        <select id="quizMode">
-          <option value="en2jp">英語→日本語</option>
-          <option value="jp2en">日本語→英語</option>
-          <option value="random">ランダム</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">☆とそれ以外の出題ルール</label>
-        <select id="starQuizRule">
-          <option value="normal" selected>通常（出題形式どおり）</option>
-          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
-      </div>
-
-      <div class="section inline">
-        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
-        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
-        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
-        <button class="action-btn" id="printBtn">問題を印刷</button>
-        <button class="action-btn primary" id="pdfPreviewBtn">PDFで表示</button>
-        <button class="act
-
-===== 5 posBox @ 1343343 =====
-,
-  starBtn: document.getElementById('starBtn'),
-  phraseBtn: document.getElementById('phraseBtn'),
-  currentBtn: document.getElementById('currentBtn'),
-  exam30Btn: document.getElementById('exam30Btn'),
-  exam40Btn: document.getElementById('exam40Btn'),
-  examIrregularBtn: document.getElementById('examIrregularBtn'),
-  elemWriteBtn: document.getElementById('elemWriteBtn'),
-  elemMeaningBtn: document.getElementById('elemMeaningBtn'),
-  elemAllBtn: document.getElementById('elemAllBtn'),
-  elemMemoryBtn: document.getElementById('elemMemoryBtn'),
-  refreshBtn: document.getElementById('refreshBtn'),
-  makeTestBtn: document.getElementById('makeTestBtn'),
-  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
-  printBtn: document.getElementById('printBtn'),
-  answerPrintBtn: document.getElementById('answerPrintBtn'),
-  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
-  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
-  boxes: {
-    textbook: document.getElementById('textbookBox'),
-    grade: document.getElementById('gradeBox'),
-    major: document.getElementById('majorBox'),
-    section: document.getElementById('sectionBox'),
-    pos: document.getElementById('posBox'),
-    examCategory: document.getElementById('examCategoryBox'),
-    examSub: document.getElementById('examSubBox'),
-    elemType: document.getElementById('elemTypeBox'),
-    elemCategory: document.getElementById('elemCategoryBox')
-  },
-  metas: {
-    textbook: document.getElementById('textbookMeta'),
-    grade: document.getElementById('gradeMeta'),
-    major: document.getElementById('majorMeta'),
-    section: document.getElementById('sectionMeta'),
-    pos: document.getElementById('posMeta'),
-    examCategory: document.getElementById('examCategoryMeta'),
-    examSub: document.getElementById('examSubMeta'),
-    elemType: document.getElementById('elemTypeMeta'),
-    elemCategory: document.getElementById('elemCategoryMeta')
-  }
-};
-
-function esc(s) {
-  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-}
-function uniqueKeepOrder(values) {
-  const out = [];
-  const seen = new Set();
-  values.forEach(v => {
-    const sv = String(v ?? '');
-    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
-  });
-  return out;
-}
-function rowsForDataset() {
-  return DATA.filter(r => r.dataset === state.dataset);
-}
-function selectedArray(key) {
-  return Array.from(state.filters[key] || []);
-}
-function matches(setObj, value) {
-  if (!setObj || setObj.size === 0) return true;
-  return setObj.has(String(value ?? ''));
-}
-function renderChecklist(box, key, values) {
-  const selected = state.filters[key];
-  box.innerHTML = values.map(v => {
-    const sv = String(v);
-    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
-  }).join('');
-  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
-    input.addEventListener('change', e => {
-      const k = e.target.dataset.filter;
-      const val = e.target.value;
-      if (e.target.checked) state.filters[k].add(val);
-      else state.filters[k].delete(val);
-      clearCurrentTest();
-      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
-      if (state.dataset === 'exam' && ['examCategory'].includes(k)) renderAllFilters();
-      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
-      refresh();
-    });
-  });
-  updateMeta(key);
-}
-function updateMeta(key) {
-  const count = state.filters[key] ? state.filters[key].size : 0;
-  if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未選択';
-}
-function renderAllFilters() {
-  const rows = rowsForDat
-
-===== 6 posMeta @ 45777 =====
-40Btn">40点以上目標</button>
-          <button class="quick-btn" id="examIrregularBtn">不規則動詞だけ</button>
-        </div>
-      </div>
-
-      <div id="elemQuick" class="section hide">
-        <div class="quick-buttons">
-          <button class="quick-btn secondary" id="elemWriteBtn">書けるようにする単語</button>
-          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
-          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
-          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
-        </div>
-      </div>
-
-      <div id="textbookFilters">
-        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
-        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
-        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
-        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
-        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
-      </div>
-
-      <div id="examFilters" class="hide">
-        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
-        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
-      </div>
-
-      <div id="elementaryFilters" class="hide">
-        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
-        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">問題数</label>
-        <select id="qCount">
-          <option value="5">5問</option>
-          <option value="10" selected>10問</option>
-          <option value="15">15問</option>
-          <option value="20">20問</option>
-          <option value="30">30問</option>
-          <option value="99999">全部</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">印刷配置</label>
-        <select id="printLayout">
-          <option value="normal" selected>通常</option>
-          <option value="duplex10">表10問・裏10問</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">出題形式</label>
-        <select id="quizMode">
-          <option value="en2jp">英語→日本語</option>
-          <option value="jp2en">日本語→英語</option>
-          <option value="random">ランダム</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">☆とそれ以外の出題ルール</label>
-        <select id="starQuizRule">
-          <option value="normal" selected>通常（出題形式どおり）</option>
-          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
-      </div>
-
-      <div class="section inline">
-        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
-        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
-        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
-        <button class="action-btn" id="printBtn">問題を印刷</button>
-        <button class="action-btn primary" id="pdfP
-
-===== 7 posMeta @ 1343838 =====
-emMemoryBtn: document.getElementById('elemMemoryBtn'),
-  refreshBtn: document.getElementById('refreshBtn'),
-  makeTestBtn: document.getElementById('makeTestBtn'),
-  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
-  printBtn: document.getElementById('printBtn'),
-  answerPrintBtn: document.getElementById('answerPrintBtn'),
-  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
-  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
-  boxes: {
-    textbook: document.getElementById('textbookBox'),
-    grade: document.getElementById('gradeBox'),
-    major: document.getElementById('majorBox'),
-    section: document.getElementById('sectionBox'),
-    pos: document.getElementById('posBox'),
-    examCategory: document.getElementById('examCategoryBox'),
-    examSub: document.getElementById('examSubBox'),
-    elemType: document.getElementById('elemTypeBox'),
-    elemCategory: document.getElementById('elemCategoryBox')
-  },
-  metas: {
-    textbook: document.getElementById('textbookMeta'),
-    grade: document.getElementById('gradeMeta'),
-    major: document.getElementById('majorMeta'),
-    section: document.getElementById('sectionMeta'),
-    pos: document.getElementById('posMeta'),
-    examCategory: document.getElementById('examCategoryMeta'),
-    examSub: document.getElementById('examSubMeta'),
-    elemType: document.getElementById('elemTypeMeta'),
-    elemCategory: document.getElementById('elemCategoryMeta')
-  }
-};
-
-function esc(s) {
-  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-}
-function uniqueKeepOrder(values) {
-  const out = [];
-  const seen = new Set();
-  values.forEach(v => {
-    const sv = String(v ?? '');
-    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
-  });
-  return out;
-}
-function rowsForDataset() {
-  return DATA.filter(r => r.dataset === state.dataset);
-}
-function selectedArray(key) {
-  return Array.from(state.filters[key] || []);
-}
-function matches(setObj, value) {
-  if (!setObj || setObj.size === 0) return true;
-  return setObj.has(String(value ?? ''));
-}
-function renderChecklist(box, key, values) {
-  const selected = state.filters[key];
-  box.innerHTML = values.map(v => {
-    const sv = String(v);
-    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
-  }).join('');
-  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
-    input.addEventListener('change', e => {
-      const k = e.target.dataset.filter;
-      const val = e.target.value;
-      if (e.target.checked) state.filters[k].add(val);
-      else state.filters[k].delete(val);
-      clearCurrentTest();
-      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
-      if (state.dataset === 'exam' && ['examCategory'].includes(k)) renderAllFilters();
-      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
-      refresh();
-    });
-  });
-  updateMeta(key);
-}
-function updateMeta(key) {
-  const count = state.filters[key] ? state.filters[key].size : 0;
-  if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未選択';
-}
-function renderAllFilters() {
-  const rows = rowsForDataset();
-  if (state.dataset === 'textbook') {
-    renderChecklist(els.boxes.textbook, 'textbook', ['サンシャイン','ニューホライズン']);
-    renderChecklist(els.boxes.grade, 'grade', ['1','2','3']);
-    const base1 = rows.filter(r => matches(state.filters.textbook, r.textbook) && matches(state.filters.grade, String(r.grade).replace('.0','')));
-    const majors = uniqueKeepOrder(base1.map(r => r.major_unit));
-    // prune invalid selected
-    state.filters.major = new Set(selectedArray('major').filter(v =>
-
-===== 8 examCategoryBox @ 46032 =====
-y" id="elemWriteBtn">書けるようにする単語</button>
-          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
-          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
-          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
-        </div>
-      </div>
-
-      <div id="textbookFilters">
-        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
-        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
-        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
-        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
-        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
-      </div>
-
-      <div id="examFilters" class="hide">
-        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
-        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
-      </div>
-
-      <div id="elementaryFilters" class="hide">
-        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
-        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">問題数</label>
-        <select id="qCount">
-          <option value="5">5問</option>
-          <option value="10" selected>10問</option>
-          <option value="15">15問</option>
-          <option value="20">20問</option>
-          <option value="30">30問</option>
-          <option value="99999">全部</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">印刷配置</label>
-        <select id="printLayout">
-          <option value="normal" selected>通常</option>
-          <option value="duplex10">表10問・裏10問</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">出題形式</label>
-        <select id="quizMode">
-          <option value="en2jp">英語→日本語</option>
-          <option value="jp2en">日本語→英語</option>
-          <option value="random">ランダム</option>
-        </select>
-      </div>
-
-      <div class="section">
-        <label class="smallnote">☆とそれ以外の出題ルール</label>
-        <select id="starQuizRule">
-          <option value="normal" selected>通常（出題形式どおり）</option>
-          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
-        </select>
-        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
-      </div>
-
-      <div class="section inline">
-        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
-        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
-        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
-        <button class="action-btn" id="printBtn">問題を印刷</button>
-        <button class="action-btn primary" id="pdfPreviewBtn">PDFで表示</button>
-        <button class="action-btn" id="answerPrintBtn">解答を印刷</button>
-        <button class="action-btn" id="memoryPrintBtn">暗記プリントを印刷</button>
-      </div>
-      <div class="smallnote">小学生版は「書ける」と「意味・イメージ」を分けてテスト化できます。</div>
-  
-
-===== 9 examCategoryBox @ 1343396 =====
-raseBtn: document.getElementById('phraseBtn'),
-  currentBtn: document.getElementById('currentBtn'),
-  exam30Btn: document.getElementById('exam30Btn'),
-  exam40Btn: document.getElementById('exam40Btn'),
-  examIrregularBtn: document.getElementById('examIrregularBtn'),
-  elemWriteBtn: document.getElementById('elemWriteBtn'),
-  elemMeaningBtn: document.getElementById('elemMeaningBtn'),
-  elemAllBtn: document.getElementById('elemAllBtn'),
-  elemMemoryBtn: document.getElementById('elemMemoryBtn'),
-  refreshBtn: document.getElementById('refreshBtn'),
-  makeTestBtn: document.getElementById('makeTestBtn'),
-  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
-  printBtn: document.getElementById('printBtn'),
-  answerPrintBtn: document.getElementById('answerPrintBtn'),
-  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
-  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
-  boxes: {
-    textbook: document.getElementById('textbookBox'),
-    grade: document.getElementById('gradeBox'),
-    major: document.getElementById('majorBox'),
-    section: document.getElementById('sectionBox'),
-    pos: document.getElementById('posBox'),
-    examCategory: document.getElementById('examCategoryBox'),
-    examSub: document.getElementById('examSubBox'),
-    elemType: document.getElementById('elemTypeBox'),
-    elemCategory: document.getElementById('elemCategoryBox')
-  },
-  metas: {
-    textbook: document.getElementById('textbookMeta'),
-    grade: document.getElementById('gradeMeta'),
-    major: document.getElementById('majorMeta'),
-    section: document.getElementById('sectionMeta'),
-    pos: document.getElementById('posMeta'),
-    examCategory: document.getElementById('examCategoryMeta'),
-    examSub: document.getElementById('examSubMeta'),
-    elemType: document.getElementById('elemTypeMeta'),
-    elemCategory: document.getElementById('elemCategoryMeta')
-  }
-};
-
-function esc(s) {
-  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-}
-function uniqueKeepOrder(values) {
-  const out = [];
-  const seen = new Set();
-  values.forEach(v => {
-    const sv = String(v ?? '');
-    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
-  });
-  return out;
-}
-function rowsForDataset() {
-  return DATA.filter(r => r.dataset === state.dataset);
-}
-function selectedArray(key) {
-  return Array.from(state.filters[key] || []);
-}
-function matches(setObj, value) {
-  if (!setObj || setObj.size === 0) return true;
-  return setObj.has(String(value ?? ''));
-}
-function renderChecklist(box, key, values) {
-  const selected = state.filters[key];
-  box.innerHTML = values.map(v => {
-    const sv = String(v);
-    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
-  }).join('');
-  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
-    input.addEventListener('change', e => {
-      const k = e.target.dataset.filter;
-      const val = e.target.value;
-      if (e.target.checked) state.filters[k].add(val);
-      else state.filters[k].delete(val);
-      clearCurrentTest();
-      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
-      if (state.dataset === 'exam' && ['examCategory'].includes(k)) renderAllFilters();
-      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
-      refresh();
-    });
-  });
-  updateMeta(key);
-}
-function updateMeta(key) {
-  const count = state.filters[key] ? state.filters[key].size : 0;
-  if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未選択';
-}
-function renderAllFilters() {
-  const rows = rowsForDataset();
-  if (state.dataset === 'textbook') {
-    ren
-
-===== 10 examSubBox @ 46175 =====
-tton class="quick-btn" id="elemAllBtn">小学生版を全部</button>
-          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
-        </div>
-      </div>
-
-      <div id="textbookFilters">
-        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
-        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
-        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
-        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
-        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
-      </div>
-
-      <div id="examFilters" class="hide">
-        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
-        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
       </div>
 
       <div id="elementaryFilters" class="hide">
@@ -823,12 +152,437 @@ tton class="quick-btn" id="elemAllBtn">小学生版を全部</button>
     </div>
 
     <div class="panel">
-      <div class="main-top no-print">
-        <span class="badge" id="datasetBadge">教科書版</span>
-        <span
+      <div class="main-top
 
-===== 11 examSubBox @ 1343453 =====
-tn: document.getElementById('currentBtn'),
+===== 3 品詞 @ 1355299 =====
+sh();
+        current = title;
+        intro = nextIntro;
+        rows = [];
+      }
+      if (state.dataset === 'elementary') rows.push(`<tr><td>${esc(r.english)}</td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`);
+      else rows.push(`<tr><td>${esc(r.english)}</td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td></tr>`);
+    });
+    flush();
+    els.memoryGroupedArea.innerHTML = blocks.join('');
+    return;
+  }
+  els.listArea.classList.remove('hide');
+  els.memoryGroupedArea.classList.add('hide');
+  els.memoryGroupedArea.innerHTML = '';
+  if (state.dataset === 'textbook') {
+    if (state.memoryMode) {
+      els.headRow.innerHTML = `<th>学年</th><th>英語</th><th>カタカナ読み</th><th>日本語</th><th>現行確認</th><th>☆</th>`;
+      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>中${esc(String(r.grade).replace('.0',''))}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
+    } else {
+      els.headRow.innerHTML = `<th>教科書</th><th>学年</th><th>大単元</th><th>小単元</th><th>品詞</th><th>英語</th><th>日本語</th><th>現行</th><th>☆</th>`;
+      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.textbook)}</td><td>中${esc(String(r.grade).replace('.0',''))}</td><td>${esc(r.major_unit)}</td><td>${esc(r.section)}</td><td>${esc(r.pos)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
+    }
+  } else if (state.dataset === 'exam') {
+    els.headRow.innerHTML = `<th>カテゴリ</th><th>分類</th><th>品詞</th><th>英語</th><th>日本語</th>`;
+    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.exam_category)}</td><td>${esc(r.exam_subcategory || '')}</td><td>${esc(r.pos || '')}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td></tr>`).join('');
+  } else {
+    els.headRow.innerHTML = `<th>テスト区分</th><th>カテゴリー</th><th>英語</th><th>日本語</th><th>コツ・セット</th>`;
+    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.elem_type)}</td><td>${esc(r.elem_category_short || r.elem_category)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`).join('');
+  }
+}
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function createTest() {
+  state.currentList = filteredRows();
+  renderSummary();
+  renderList();
+  const rows = state.currentList.slice();
+  if (rows.length === 0) {
+    state.currentTest = [];
+    els.testSummary.textContent = '該当語がありません';
+    els.testArea.innerHTML = '';
+    return;
+  }
+  const specialRule = els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read';
+  const candidates = [];
+  if (specialRule) {
+    rows.forEach(r => {
+      if (String(r.star || '') === '1') {
+        candidates.push({ row: r, fixedMode: 'en2jp' });
+        candidates.push({ row: r, fixedMode: 'jp2en' });
+      } else {
+        candidates.push({ row: r, fixedMode: 'en2jp' });
+      }
+    });
+  } else {
+    rows.forEach(r => candidates.push({ row: r, fixedMode: '' }));
+  }
+  const count = Math.min(parseInt(els.qCount.value, 10), candidates.length);
+  const picked = shuffle(candidates).slice(0, count).map((item, idx) => {
+    const r = item.row;
+    let mode = item.fixedMode || els.quizMode.value;
+    if (mode === 'random') mode = Math.random() < 0.5 ? 'en2jp' : 'jp2en';
+    const prompt = mode === 'en2jp' ? r.english : r.japanese;
+    const answer = mode === 'en2
+
+===== 4 品詞 @ 1355861 =====
+;
+  els.memoryGroupedArea.innerHTML = '';
+  if (state.dataset === 'textbook') {
+    if (state.memoryMode) {
+      els.headRow.innerHTML = `<th>学年</th><th>英語</th><th>カタカナ読み</th><th>日本語</th><th>現行確認</th><th>☆</th>`;
+      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>中${esc(String(r.grade).replace('.0',''))}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.kana || '')}</td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
+    } else {
+      els.headRow.innerHTML = `<th>教科書</th><th>学年</th><th>大単元</th><th>小単元</th><th>品詞</th><th>英語</th><th>日本語</th><th>現行</th><th>☆</th>`;
+      els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.textbook)}</td><td>中${esc(String(r.grade).replace('.0',''))}</td><td>${esc(r.major_unit)}</td><td>${esc(r.section)}</td><td>${esc(r.pos)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
+    }
+  } else if (state.dataset === 'exam') {
+    els.headRow.innerHTML = `<th>カテゴリ</th><th>分類</th><th>品詞</th><th>英語</th><th>日本語</th>`;
+    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.exam_category)}</td><td>${esc(r.exam_subcategory || '')}</td><td>${esc(r.pos || '')}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td></tr>`).join('');
+  } else {
+    els.headRow.innerHTML = `<th>テスト区分</th><th>カテゴリー</th><th>英語</th><th>日本語</th><th>コツ・セット</th>`;
+    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.elem_type)}</td><td>${esc(r.elem_category_short || r.elem_category)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`).join('');
+  }
+}
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function createTest() {
+  state.currentList = filteredRows();
+  renderSummary();
+  renderList();
+  const rows = state.currentList.slice();
+  if (rows.length === 0) {
+    state.currentTest = [];
+    els.testSummary.textContent = '該当語がありません';
+    els.testArea.innerHTML = '';
+    return;
+  }
+  const specialRule = els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read';
+  const candidates = [];
+  if (specialRule) {
+    rows.forEach(r => {
+      if (String(r.star || '') === '1') {
+        candidates.push({ row: r, fixedMode: 'en2jp' });
+        candidates.push({ row: r, fixedMode: 'jp2en' });
+      } else {
+        candidates.push({ row: r, fixedMode: 'en2jp' });
+      }
+    });
+  } else {
+    rows.forEach(r => candidates.push({ row: r, fixedMode: '' }));
+  }
+  const count = Math.min(parseInt(els.qCount.value, 10), candidates.length);
+  const picked = shuffle(candidates).slice(0, count).map((item, idx) => {
+    const r = item.row;
+    let mode = item.fixedMode || els.quizMode.value;
+    if (mode === 'random') mode = Math.random() < 0.5 ? 'en2jp' : 'jp2en';
+    const prompt = mode === 'en2jp' ? r.english : r.japanese;
+    const answer = mode === 'en2jp' ? r.japanese : r.english;
+    return { no: idx + 1, mode, prompt, answer, kana: '', extra: '', star: String(r.star || '') === '1' };
+  });
+  state.currentTest = picked;
+  state.answersVisible = false;
+  renderTest();
+}
+function renderTest() {
+  els.testSummary.textContent = state.currentTest.length ? `${state.currentTest.length}問作成済み` : 'テスト未作成';
+  els.testArea.innerHTML = state.currentTest.map(q => {
+    const label = q.mode === 'en2jp' ? '英語→日本語' : '日本語→英語';
+    return `<div class="test-card"><div class="qline">Q${q.no} <span class="badge">${label}</
+
+===== 5 品詞 @ 1363725 =====
+Rule].forEach(sel => {
+  if (sel) sel.addEventListener('change', () => { clearCurrentTest(); renderTest(); });
+});
+function compactList(arr, emptyLabel='すべて') {
+  const vals = Array.from(arr || []).filter(v => String(v || '').trim());
+  if (!vals.length) return emptyLabel;
+  if (vals.length <= 6) return vals.join('、');
+  return vals.slice(0, 6).join('、') + `、ほか${vals.length - 6}件`;
+}
+function currentDatasetLabel() {
+  if (state.dataset === 'textbook') return '教科書版';
+  if (state.dataset === 'exam') return '高校入試版';
+  return '小学生版';
+}
+function quizModeTextForPrint() {
+  if (els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read') return '☆は読み・書き／それ以外は読みだけ';
+  const opt = els.quizMode.options[els.quizMode.selectedIndex];
+  return opt ? opt.textContent : '';
+}
+function buildRangeRowsForPrint() {
+  const rows = [];
+  rows.push(['モード', currentDatasetLabel()]);
+  if (state.dataset === 'textbook') {
+    rows.push(['教科書', compactList(state.filters.textbook, 'すべて')]);
+    rows.push(['学年', compactList(state.filters.grade, 'すべて')]);
+    rows.push(['大単元', compactList(state.filters.major, 'すべて')]);
+    rows.push(['小単元', compactList(state.filters.section, 'すべて')]);
+    rows.push(['品詞', compactList(state.filters.pos, 'すべて')]);
+    const cond = [];
+    if (state.toggles.starOnly) cond.push('☆のみ');
+    if (state.toggles.phraseOnly) cond.push('熟語・表現のみ');
+    if (state.toggles.currentOnly) cond.push('現行確認済みのみ');
+    rows.push(['条件', cond.length ? cond.join('、') : '指定なし']);
+  } else if (state.dataset === 'exam') {
+    rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);
+    rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);
+    rows.push(['品詞', compactList(state.filters.examPos, 'すべて')]);
+  } else {
+    rows.push(['テスト区分', compactList(state.filters.elemType, 'すべて')]);
+    rows.push(['カテゴリー', compactList(state.filters.elemCategory, 'すべて')]);
+  }
+  rows.push(['対象語数', `${state.currentList.length}語`]);
+  rows.push(['出題形式', quizModeTextForPrint()]);
+  rows.push(['問題数', state.currentTest.length ? `${state.currentTest.length}問` : '未作成']);
+  return rows;
+}
+function normalizeGradeLabelForPrint(v) {
+  const s = String(v || '').replace(/\.0$/, '').trim();
+  if (!s) return '';
+  return /^\d+$/.test(s) ? `中${s}` : s;
+}
+function uniqueFromCurrentList(key) {
+  const out = [];
+  const seen = new Set();
+  (state.currentList || []).forEach(r => {
+    const v = String(r[key] || '').replace(/\.0$/, '').trim();
+    if (v && !seen.has(v)) { seen.add(v); out.push(v); }
+  });
+  return out;
+}
+function shortItemsForPrint(items, emptyLabel='全範囲') {
+  const vals = (items || []).filter(v => String(v || '').trim());
+  if (!vals.length) return emptyLabel;
+  if (vals.length === 1) return vals[0];
+  if (vals.length <= 3) return vals.join('、');
+  return `${vals[0]}〜${vals[vals.length - 1]}`;
+}
+function buildPrintRangeLine() {
+  if (state.dataset === 'textbook') {
+    const textbooks = shortItemsForPrint(uniqueFromCurrentList('textbook'), '全教科書');
+    const grades = shortItemsForPrint(uniqueFromCurrentList('grade').map(normalizeGradeLabelForPrint), '全学年');
+    const sections = shortItemsForPrint(uniqueFromCurrentList('section'), '全単元');
+    return `${textbooks}｜${grades}｜${sections}`;
+  }
+  if (state.dataset === 'exam') {
+    const cats = shortItemsForPrint(uniqueFromCurrentList('exam_category'), '全範囲');
+    const poses = shortItemsForPrint(uniqueFromCurrentList('pos'), '全品詞');
+    return `高校入試版｜${cats}｜${poses}`;
+  }
+  const types = shortItemsForPrint(uniqueFromCurrentList('elem_type'), '全範囲');
+  const cats = shortItemsForPrint(uniqueFromCurrentList('elem_category'), '全カテゴリー');
+  return `小学生版｜${types}｜${cats}`;
+}
+
+const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8
+
+===== 6 品詞 @ 1364216 =====
+=== 'exam') return '高校入試版';
+  return '小学生版';
+}
+function quizModeTextForPrint() {
+  if (els.starQuizRule && els.starQuizRule.value === 'star_both_nonstar_read') return '☆は読み・書き／それ以外は読みだけ';
+  const opt = els.quizMode.options[els.quizMode.selectedIndex];
+  return opt ? opt.textContent : '';
+}
+function buildRangeRowsForPrint() {
+  const rows = [];
+  rows.push(['モード', currentDatasetLabel()]);
+  if (state.dataset === 'textbook') {
+    rows.push(['教科書', compactList(state.filters.textbook, 'すべて')]);
+    rows.push(['学年', compactList(state.filters.grade, 'すべて')]);
+    rows.push(['大単元', compactList(state.filters.major, 'すべて')]);
+    rows.push(['小単元', compactList(state.filters.section, 'すべて')]);
+    rows.push(['品詞', compactList(state.filters.pos, 'すべて')]);
+    const cond = [];
+    if (state.toggles.starOnly) cond.push('☆のみ');
+    if (state.toggles.phraseOnly) cond.push('熟語・表現のみ');
+    if (state.toggles.currentOnly) cond.push('現行確認済みのみ');
+    rows.push(['条件', cond.length ? cond.join('、') : '指定なし']);
+  } else if (state.dataset === 'exam') {
+    rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);
+    rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);
+    rows.push(['品詞', compactList(state.filters.examPos, 'すべて')]);
+  } else {
+    rows.push(['テスト区分', compactList(state.filters.elemType, 'すべて')]);
+    rows.push(['カテゴリー', compactList(state.filters.elemCategory, 'すべて')]);
+  }
+  rows.push(['対象語数', `${state.currentList.length}語`]);
+  rows.push(['出題形式', quizModeTextForPrint()]);
+  rows.push(['問題数', state.currentTest.length ? `${state.currentTest.length}問` : '未作成']);
+  return rows;
+}
+function normalizeGradeLabelForPrint(v) {
+  const s = String(v || '').replace(/\.0$/, '').trim();
+  if (!s) return '';
+  return /^\d+$/.test(s) ? `中${s}` : s;
+}
+function uniqueFromCurrentList(key) {
+  const out = [];
+  const seen = new Set();
+  (state.currentList || []).forEach(r => {
+    const v = String(r[key] || '').replace(/\.0$/, '').trim();
+    if (v && !seen.has(v)) { seen.add(v); out.push(v); }
+  });
+  return out;
+}
+function shortItemsForPrint(items, emptyLabel='全範囲') {
+  const vals = (items || []).filter(v => String(v || '').trim());
+  if (!vals.length) return emptyLabel;
+  if (vals.length === 1) return vals[0];
+  if (vals.length <= 3) return vals.join('、');
+  return `${vals[0]}〜${vals[vals.length - 1]}`;
+}
+function buildPrintRangeLine() {
+  if (state.dataset === 'textbook') {
+    const textbooks = shortItemsForPrint(uniqueFromCurrentList('textbook'), '全教科書');
+    const grades = shortItemsForPrint(uniqueFromCurrentList('grade').map(normalizeGradeLabelForPrint), '全学年');
+    const sections = shortItemsForPrint(uniqueFromCurrentList('section'), '全単元');
+    return `${textbooks}｜${grades}｜${sections}`;
+  }
+  if (state.dataset === 'exam') {
+    const cats = shortItemsForPrint(uniqueFromCurrentList('exam_category'), '全範囲');
+    const poses = shortItemsForPrint(uniqueFromCurrentList('pos'), '全品詞');
+    return `高校入試版｜${cats}｜${poses}`;
+  }
+  const types = shortItemsForPrint(uniqueFromCurrentList('elem_type'), '全範囲');
+  const cats = shortItemsForPrint(uniqueFromCurrentList('elem_category'), '全カテゴリー');
+  return `小学生版｜${types}｜${cats}`;
+}
+
+const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wgARCAGuBwgDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAECBQYHCAME/8QAGwEBAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/2gAMAwEAAhADEAAAAd/gAAAAAARMAAAAAAAAAAAAgkAAAAAgkAAAAAgkAgJAgkAAglAkABEgESAAglEgESAAAAESAAgkgkAAAACJAgkAAglEgAABEgAABEgAAAgkABEgAAAAAAAAAAAgkAAAAAAEJAEgAAAAAAAAAAAAAARMESABEgCJCJAAABEggkAglEkTEkJAgkAAgkgkAAAAAAAgkAAAABEhEhAkBAkESAAAAAgmAkAAgkAAACJAgkCJAg
+
+===== 7 品詞 @ 1365948 =====
+'';
+  return /^\d+$/.test(s) ? `中${s}` : s;
+}
+function uniqueFromCurrentList(key) {
+  const out = [];
+  const seen = new Set();
+  (state.currentList || []).forEach(r => {
+    const v = String(r[key] || '').replace(/\.0$/, '').trim();
+    if (v && !seen.has(v)) { seen.add(v); out.push(v); }
+  });
+  return out;
+}
+function shortItemsForPrint(items, emptyLabel='全範囲') {
+  const vals = (items || []).filter(v => String(v || '').trim());
+  if (!vals.length) return emptyLabel;
+  if (vals.length === 1) return vals[0];
+  if (vals.length <= 3) return vals.join('、');
+  return `${vals[0]}〜${vals[vals.length - 1]}`;
+}
+function buildPrintRangeLine() {
+  if (state.dataset === 'textbook') {
+    const textbooks = shortItemsForPrint(uniqueFromCurrentList('textbook'), '全教科書');
+    const grades = shortItemsForPrint(uniqueFromCurrentList('grade').map(normalizeGradeLabelForPrint), '全学年');
+    const sections = shortItemsForPrint(uniqueFromCurrentList('section'), '全単元');
+    return `${textbooks}｜${grades}｜${sections}`;
+  }
+  if (state.dataset === 'exam') {
+    const cats = shortItemsForPrint(uniqueFromCurrentList('exam_category'), '全範囲');
+    const poses = shortItemsForPrint(uniqueFromCurrentList('pos'), '全品詞');
+    return `高校入試版｜${cats}｜${poses}`;
+  }
+  const types = shortItemsForPrint(uniqueFromCurrentList('elem_type'), '全範囲');
+  const cats = shortItemsForPrint(uniqueFromCurrentList('elem_category'), '全カテゴリー');
+  return `小学生版｜${types}｜${cats}`;
+}
+
+const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wgARCAGuBwgDASIAAhEBAxEB/8QAHAABAAEFAQEAAAAAAAAAAAAAAAECBQYHCAME/8QAGwEBAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/2gAMAwEAAhADEAAAAd/gAAAAAARMAAAAAAAAAAAAgkAAAAAgkAAAAAgkAgJAgkAAglAkABEgESAAglEgESAAAAESAAgkgkAAAACJAgkAAglEgAABEgAABEgAAAgkABEgAAAAAAAAAAAgkAAAAAAEJAEgAAAAAAAAAAAAAARMESABEgCJCJAAABEggkAglEkTEkJAgkAAgkgkAAAAAAAgkAAAABEhEhAkBAkESAAAAAgmAkAAgkAAACJAgkCJAgkESETAkAAESAgSAAAAAACJAAACJAAETAmJglEgAESAABEggkACJAAAEgAAAAAAAAAAAAAARMAAAAAgkCJAAgkAAgkgkBEgAABEgAAESAAAAAAAAESAgkAEEggmJAESESAAAACEggkACJESAAgkETEgESAAESAAAABEgCJBEgABAkCJAEJABEgAAAETEgAAESAAABEgACJESBEgAEgAAAAAAAAAAAAAARMAgSACJACJAACJBEgAABAkAgkAAAAESACJCEhEiJCJAESESCJAETEgAgmJETEgCJCJAABEgBEkSAAAAAAAAETEgCJAAAAAETEggkETEgAgkEJEJESAACJAAAESACJAAABEgAgkAESABEiJAAESEgAAAAAAAAAAAAAARNIiryrNahVWoFagVqBWoFbzkrUwVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWokqUCtQK1ArUCtQK1ArnzFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqBWoFagVqJKlArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUCtQK1ArUSeg0iQAAAAAAAAAAAAAAImB5evlSQrIAAAQFJM857OtGfxMRIAAAAAAAAAAAAAAEwBMEwAAAABIhIhMAEwCYkEAkhIhIgAAAAAAAAAAABMAAkhMEwAkRIhMBIhIAhIhIIAAkhMBIgAAABIRMAEomEJiQAAAQCQAAAAkhIhIgkgBMCQ9BrWQAAAAAAAAAAAAAAImB5evlSQrIAxoyViX1Sv2G3fjc7XuHD2QS87P9FUTkXRfJ/wAqO4aeccTmOvHyfPE3MQAAAAAAAAACBMABMSAAJgAAJgmCASAACASmAAlCBKUACASAACAEoCYSEwgASTAAAmAEkTACCYEokgSEwhKUTEkSgJEAJiBMAACYEoCYAAAASACAAAABMSAAkAEJESESAgTEnoNayAAAAAAAAAAAAAABEwPL186TArIDlPqnWlo5mnzvNb23yu8xNUwpb5PT1SElr9LhVMZRhcfNenUOwuH+rJrmjDMzrIAAAAgxOyc9bG7+fP5welGdRgkxOdsEgztggzqnB4M4nBplnTBUM7YIM6YIM7YLBnbBBnkYKM7pwUZ0wUZ3OCDO2CDO2CDO2BpZ3OCDOmCoZ0wWZZ0wSIZ2wQZ2wUZ0wOTPGByZ2wSDPIwQZ1OCSZ2wSDO4wVLOmCRDO2CSZ3OBjPWByZ1OCJZ0wWIZ3OBjO2CJZ3GCyZ0wWIZ2wSTOoweJZ0wUZzVgcwzuMEGdMEGdzglUs6jBohnTBRnbBBnbBBnbBJM5nAxntOCwZ2wSozqMGgzqcEGdRgoztggzxggzpgqWdsFgztggztgsmcxg8ozn0wHArR1z6682JwdMCsgJiREgCJCJACJiT0GtZAAAAAAAAAAAAAAAiaSfL186TArPhoTfvNsxgPwRc4v8/wBdM0uAQJgJQJQAPO33TytWvtHhzsC+eSisgAATj995w3zw7sHTW6taQxb6MNMiY8MhY+MgY+MgY/BkLHhkLHhkLHkshY6hkTHRkTHoMiY6MhY8MhnHRkLHhkLHoMiY+MgWCDIGPDIWPwZDOOjIWOyZCx4ZCx4ZCx4ZEx0ZCx4ZFGPSZAsIvs2X64n7lM1mQA
+
+===== 8 posBox @ 45830 =====
+k-btn" id="examIrregularBtn">不規則動詞だけ</button>
+        </div>
+      </div>
+
+      <div id="elemQuick" class="section hide">
+        <div class="quick-buttons">
+          <button class="quick-btn secondary" id="elemWriteBtn">書けるようにする単語</button>
+          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
+          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
+          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
+        </div>
+      </div>
+
+      <div id="textbookFilters">
+        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
+        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
+        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
+        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
+        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
+      </div>
+
+      <div id="examFilters" class="hide">
+        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
+        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
+      </div>
+
+      <div id="elementaryFilters" class="hide">
+        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
+        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">問題数</label>
+        <select id="qCount">
+          <option value="5">5問</option>
+          <option value="10" selected>10問</option>
+          <option value="15">15問</option>
+          <option value="20">20問</option>
+          <option value="30">30問</option>
+          <option value="99999">全部</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">印刷配置</label>
+        <select id="printLayout">
+          <option value="normal" selected>通常</option>
+          <option value="duplex10">表10問・裏10問</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">出題形式</label>
+        <select id="quizMode">
+          <option value="en2jp">英語→日本語</option>
+          <option value="jp2en">日本語→英語</option>
+          <option value="random">ランダム</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">☆とそれ以外の出題ルール</label>
+        <select id="starQuizRule">
+          <option value="normal" selected>通常（出題形式どおり）</option>
+          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
+      </div>
+
+      <div class="section inline">
+        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
+        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
+        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
+        <button class="ac
+
+===== 9 posBox @ 1345946 =====
+,
+  starBtn: document.getElementById('starBtn'),
+  phraseBtn: document.getElementById('phraseBtn'),
+  currentBtn: document.getElementById('currentBtn'),
   exam30Btn: document.getElementById('exam30Btn'),
   exam40Btn: document.getElementById('exam40Btn'),
   examIrregularBtn: document.getElementById('examIrregularBtn'),
@@ -851,6 +605,7 @@ tn: document.getElementById('currentBtn'),
     pos: document.getElementById('posBox'),
     examCategory: document.getElementById('examCategoryBox'),
     examSub: document.getElementById('examSubBox'),
+    examPos: document.getElementById('examPosBox'),
     elemType: document.getElementById('elemTypeBox'),
     elemCategory: document.getElementById('elemCategoryBox')
   },
@@ -862,6 +617,7 @@ tn: document.getElementById('currentBtn'),
     pos: document.getElementById('posMeta'),
     examCategory: document.getElementById('examCategoryMeta'),
     examSub: document.getElementById('examSubMeta'),
+    examPos: document.getElementById('examPosMeta'),
     elemType: document.getElementById('elemTypeMeta'),
     elemCategory: document.getElementById('elemCategoryMeta')
   }
@@ -903,7 +659,167 @@ function renderChecklist(box, key, values) {
       else state.filters[k].delete(val);
       clearCurrentTest();
       if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
-      if (state.dataset === 'exam' && ['examCategory'].includes(k)) renderAllFilters();
+      if (state.dataset === 'exam' && ['examCategory','examSub'].includes(k)) renderAllFilters();
+      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
+      refresh();
+    });
+  });
+  updateMeta(key);
+}
+function updateMeta(key) {
+  const count = state.filters[key] ? state.filters[key].size : 0;
+  if (els.metas[key]) el
+
+===== 10 posMeta @ 45777 =====
+40Btn">40点以上目標</button>
+          <button class="quick-btn" id="examIrregularBtn">不規則動詞だけ</button>
+        </div>
+      </div>
+
+      <div id="elemQuick" class="section hide">
+        <div class="quick-buttons">
+          <button class="quick-btn secondary" id="elemWriteBtn">書けるようにする単語</button>
+          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
+          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
+          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
+        </div>
+      </div>
+
+      <div id="textbookFilters">
+        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
+        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
+        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
+        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
+        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
+      </div>
+
+      <div id="examFilters" class="hide">
+        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
+        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
+      </div>
+
+      <div id="elementaryFilters" class="hide">
+        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
+        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">問題数</label>
+        <select id="qCount">
+          <option value="5">5問</option>
+          <option value="10" selected>10問</option>
+          <option value="15">15問</option>
+          <option value="20">20問</option>
+          <option value="30">30問</option>
+          <option value="99999">全部</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">印刷配置</label>
+        <select id="printLayout">
+          <option value="normal" selected>通常</option>
+          <option value="duplex10">表10問・裏10問</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">出題形式</label>
+        <select id="quizMode">
+          <option value="en2jp">英語→日本語</option>
+          <option value="jp2en">日本語→英語</option>
+          <option value="random">ランダム</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">☆とそれ以外の出題ルール</label>
+        <select id="starQuizRule">
+          <option value="normal" selected>通常（出題形式どおり）</option>
+          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
+      </div>
+
+      <div class="section inline">
+        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
+        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
+        <button class="action-btn" id="togg
+
+===== 11 posMeta @ 1346493 =====
+),
+  refreshBtn: document.getElementById('refreshBtn'),
+  makeTestBtn: document.getElementById('makeTestBtn'),
+  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
+  printBtn: document.getElementById('printBtn'),
+  answerPrintBtn: document.getElementById('answerPrintBtn'),
+  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
+  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
+  boxes: {
+    textbook: document.getElementById('textbookBox'),
+    grade: document.getElementById('gradeBox'),
+    major: document.getElementById('majorBox'),
+    section: document.getElementById('sectionBox'),
+    pos: document.getElementById('posBox'),
+    examCategory: document.getElementById('examCategoryBox'),
+    examSub: document.getElementById('examSubBox'),
+    examPos: document.getElementById('examPosBox'),
+    elemType: document.getElementById('elemTypeBox'),
+    elemCategory: document.getElementById('elemCategoryBox')
+  },
+  metas: {
+    textbook: document.getElementById('textbookMeta'),
+    grade: document.getElementById('gradeMeta'),
+    major: document.getElementById('majorMeta'),
+    section: document.getElementById('sectionMeta'),
+    pos: document.getElementById('posMeta'),
+    examCategory: document.getElementById('examCategoryMeta'),
+    examSub: document.getElementById('examSubMeta'),
+    examPos: document.getElementById('examPosMeta'),
+    elemType: document.getElementById('elemTypeMeta'),
+    elemCategory: document.getElementById('elemCategoryMeta')
+  }
+};
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function uniqueKeepOrder(values) {
+  const out = [];
+  const seen = new Set();
+  values.forEach(v => {
+    const sv = String(v ?? '');
+    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
+  });
+  return out;
+}
+function rowsForDataset() {
+  return DATA.filter(r => r.dataset === state.dataset);
+}
+function selectedArray(key) {
+  return Array.from(state.filters[key] || []);
+}
+function matches(setObj, value) {
+  if (!setObj || setObj.size === 0) return true;
+  return setObj.has(String(value ?? ''));
+}
+function renderChecklist(box, key, values) {
+  const selected = state.filters[key];
+  box.innerHTML = values.map(v => {
+    const sv = String(v);
+    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
+  }).join('');
+  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', e => {
+      const k = e.target.dataset.filter;
+      const val = e.target.value;
+      if (e.target.checked) state.filters[k].add(val);
+      else state.filters[k].delete(val);
+      clearCurrentTest();
+      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
+      if (state.dataset === 'exam' && ['examCategory','examSub'].includes(k)) renderAllFilters();
       if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
       refresh();
     });
@@ -917,19 +833,356 @@ function updateMeta(key) {
 function renderAllFilters() {
   const rows = rowsForDataset();
   if (state.dataset === 'textbook') {
-    renderChecklist(els.boxes.textbook, 'textbook', ['サンシャイン','ニ
+    renderChecklist(els.boxes.textbook, 'textbook', ['サンシャイン','ニューホライズン']);
+    renderChecklist(els.boxes.grade, 'grade', ['1','2','3']);
+    const base1 = rows.filter(r => matches(state.filters.textbook, r.textbook) && matches(state.filters.grade, String(r.grade).replace('.0','')));
+    const majors = uniqueKeepOrder(base1.map(r => r.major_unit));
+    // prune invalid selected
+    s
 
-===== 12 filteredRows @ 1348253 =====
-(v)));
-    renderChecklist(els.boxes.pos, 'pos', poses);
-  } else if (state.dataset === 'exam') {
-    const cats = ['書ける最優先','長文テーマ語','英作文の型','40点超え追加','不規則動詞'];
-    if (state.filters.examCategory.size === 0) state.filters.examCategory = new Set(cats);
-    renderChecklist(els.boxes.examCategory, 'examCategory', cats);
+===== 12 examCategoryBox @ 46032 =====
+y" id="elemWriteBtn">書けるようにする単語</button>
+          <button class="quick-btn secondary" id="elemMeaningBtn">意味・イメージでわかる単語</button>
+          <button class="quick-btn" id="elemAllBtn">小学生版を全部</button>
+          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
+        </div>
+      </div>
+
+      <div id="textbookFilters">
+        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
+        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
+        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
+        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
+        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
+      </div>
+
+      <div id="examFilters" class="hide">
+        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
+        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
+      </div>
+
+      <div id="elementaryFilters" class="hide">
+        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
+        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">問題数</label>
+        <select id="qCount">
+          <option value="5">5問</option>
+          <option value="10" selected>10問</option>
+          <option value="15">15問</option>
+          <option value="20">20問</option>
+          <option value="30">30問</option>
+          <option value="99999">全部</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">印刷配置</label>
+        <select id="printLayout">
+          <option value="normal" selected>通常</option>
+          <option value="duplex10">表10問・裏10問</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">出題形式</label>
+        <select id="quizMode">
+          <option value="en2jp">英語→日本語</option>
+          <option value="jp2en">日本語→英語</option>
+          <option value="random">ランダム</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">☆とそれ以外の出題ルール</label>
+        <select id="starQuizRule">
+          <option value="normal" selected>通常（出題形式どおり）</option>
+          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
+      </div>
+
+      <div class="section inline">
+        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
+        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
+        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
+        <button class="action-btn" id="printBtn">問題を印刷</button>
+        <button class="action-btn primary" id="pdfPreviewBtn">PDFで表示</button>
+        <button class="action-btn" id="answerPrintBtn">解答を印刷</button>
+        <button
+
+===== 13 examCategoryBox @ 1345999 =====
+raseBtn: document.getElementById('phraseBtn'),
+  currentBtn: document.getElementById('currentBtn'),
+  exam30Btn: document.getElementById('exam30Btn'),
+  exam40Btn: document.getElementById('exam40Btn'),
+  examIrregularBtn: document.getElementById('examIrregularBtn'),
+  elemWriteBtn: document.getElementById('elemWriteBtn'),
+  elemMeaningBtn: document.getElementById('elemMeaningBtn'),
+  elemAllBtn: document.getElementById('elemAllBtn'),
+  elemMemoryBtn: document.getElementById('elemMemoryBtn'),
+  refreshBtn: document.getElementById('refreshBtn'),
+  makeTestBtn: document.getElementById('makeTestBtn'),
+  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
+  printBtn: document.getElementById('printBtn'),
+  answerPrintBtn: document.getElementById('answerPrintBtn'),
+  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
+  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
+  boxes: {
+    textbook: document.getElementById('textbookBox'),
+    grade: document.getElementById('gradeBox'),
+    major: document.getElementById('majorBox'),
+    section: document.getElementById('sectionBox'),
+    pos: document.getElementById('posBox'),
+    examCategory: document.getElementById('examCategoryBox'),
+    examSub: document.getElementById('examSubBox'),
+    examPos: document.getElementById('examPosBox'),
+    elemType: document.getElementById('elemTypeBox'),
+    elemCategory: document.getElementById('elemCategoryBox')
+  },
+  metas: {
+    textbook: document.getElementById('textbookMeta'),
+    grade: document.getElementById('gradeMeta'),
+    major: document.getElementById('majorMeta'),
+    section: document.getElementById('sectionMeta'),
+    pos: document.getElementById('posMeta'),
+    examCategory: document.getElementById('examCategoryMeta'),
+    examSub: document.getElementById('examSubMeta'),
+    examPos: document.getElementById('examPosMeta'),
+    elemType: document.getElementById('elemTypeMeta'),
+    elemCategory: document.getElementById('elemCategoryMeta')
+  }
+};
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function uniqueKeepOrder(values) {
+  const out = [];
+  const seen = new Set();
+  values.forEach(v => {
+    const sv = String(v ?? '');
+    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
+  });
+  return out;
+}
+function rowsForDataset() {
+  return DATA.filter(r => r.dataset === state.dataset);
+}
+function selectedArray(key) {
+  return Array.from(state.filters[key] || []);
+}
+function matches(setObj, value) {
+  if (!setObj || setObj.size === 0) return true;
+  return setObj.has(String(value ?? ''));
+}
+function renderChecklist(box, key, values) {
+  const selected = state.filters[key];
+  box.innerHTML = values.map(v => {
+    const sv = String(v);
+    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
+  }).join('');
+  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', e => {
+      const k = e.target.dataset.filter;
+      const val = e.target.value;
+      if (e.target.checked) state.filters[k].add(val);
+      else state.filters[k].delete(val);
+      clearCurrentTest();
+      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
+      if (state.dataset === 'exam' && ['examCategory','examSub'].includes(k)) renderAllFilters();
+      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
+      refresh();
+    });
+  });
+  updateMeta(key);
+}
+function updateMeta(key) {
+  const count = state.filters[key] ? state.filters[key].size : 0;
+  if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未
+
+===== 14 examSubBox @ 46175 =====
+tton class="quick-btn" id="elemAllBtn">小学生版を全部</button>
+          <button class="quick-btn" id="elemMemoryBtn">暗記練習用にする</button>
+        </div>
+      </div>
+
+      <div id="textbookFilters">
+        <details open><summary>教科書 <span class="meta" id="textbookMeta"></span></summary><div class="checklist" id="textbookBox"></div></details>
+        <details open><summary>学年 <span class="meta" id="gradeMeta"></span></summary><div class="checklist" id="gradeBox"></div></details>
+        <details><summary>大単元 <span class="meta" id="majorMeta"></span></summary><div class="checklist" id="majorBox"></div></details>
+        <details><summary>小単元 <span class="meta" id="sectionMeta"></span></summary><div class="checklist" id="sectionBox"></div></details>
+        <details><summary>品詞 <span class="meta" id="posMeta"></span></summary><div class="checklist" id="posBox"></div></details>
+      </div>
+
+      <div id="examFilters" class="hide">
+        <details open><summary>カテゴリ <span class="meta" id="examCategoryMeta"></span></summary><div class="checklist" id="examCategoryBox"></div></details>
+        <details><summary>分類 <span class="meta" id="examSubMeta"></span></summary><div class="checklist" id="examSubBox"></div></details>
+        <details open><summary>品詞 <span class="meta" id="examPosMeta"></span></summary><div class="checklist" id="examPosBox"></div></details>
+      </div>
+
+      <div id="elementaryFilters" class="hide">
+        <details open><summary>テスト区分 <span class="meta" id="elemTypeMeta"></span></summary><div class="checklist" id="elemTypeBox"></div></details>
+        <details open><summary>カテゴリー <span class="meta" id="elemCategoryMeta"></span></summary><div class="checklist" id="elemCategoryBox"></div></details>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">問題数</label>
+        <select id="qCount">
+          <option value="5">5問</option>
+          <option value="10" selected>10問</option>
+          <option value="15">15問</option>
+          <option value="20">20問</option>
+          <option value="30">30問</option>
+          <option value="99999">全部</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">印刷配置</label>
+        <select id="printLayout">
+          <option value="normal" selected>通常</option>
+          <option value="duplex10">表10問・裏10問</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">20問テストのときは、1枚目に1〜10、2枚目に11〜20が出ます。両面印刷向けです。</div>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">出題形式</label>
+        <select id="quizMode">
+          <option value="en2jp">英語→日本語</option>
+          <option value="jp2en">日本語→英語</option>
+          <option value="random">ランダム</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label class="smallnote">☆とそれ以外の出題ルール</label>
+        <select id="starQuizRule">
+          <option value="normal" selected>通常（出題形式どおり）</option>
+          <option value="star_both_nonstar_read">☆は読み・書き／それ以外は読みだけ</option>
+        </select>
+        <div class="smallnote" style="margin-top:6px">読み＝英語→日本語、書き＝日本語→英語。特別ルールでは☆語は両方、☆なし語は読みだけで出します。</div>
+      </div>
+
+      <div class="section inline">
+        <button class="action-btn primary" id="refreshBtn">一覧更新</button>
+        <button class="action-btn primary" id="makeTestBtn">テスト作成</button>
+        <button class="action-btn" id="toggleAnswersBtn">答え表示</button>
+        <button class="action-btn" id="printBtn">問題を印刷</button>
+        <button class="action-btn primary" id="pdfPreviewBtn">PDFで表示</button>
+        <button class="action-btn" id="answerPrintBtn">解答を印刷</button>
+        <button class="action-btn" id="memoryPrintBtn">暗記プリントを印刷</button>
+      </div>
+      <div class="smallnote">小学生版は「書ける」と「意味・イメージ」を分けてテスト化できます。</div>
+  
+
+===== 15 examSubBox @ 1346056 =====
+tn: document.getElementById('currentBtn'),
+  exam30Btn: document.getElementById('exam30Btn'),
+  exam40Btn: document.getElementById('exam40Btn'),
+  examIrregularBtn: document.getElementById('examIrregularBtn'),
+  elemWriteBtn: document.getElementById('elemWriteBtn'),
+  elemMeaningBtn: document.getElementById('elemMeaningBtn'),
+  elemAllBtn: document.getElementById('elemAllBtn'),
+  elemMemoryBtn: document.getElementById('elemMemoryBtn'),
+  refreshBtn: document.getElementById('refreshBtn'),
+  makeTestBtn: document.getElementById('makeTestBtn'),
+  toggleAnswersBtn: document.getElementById('toggleAnswersBtn'),
+  printBtn: document.getElementById('printBtn'),
+  answerPrintBtn: document.getElementById('answerPrintBtn'),
+  memoryPrintBtn: document.getElementById('memoryPrintBtn'),
+  pdfPreviewBtn: document.getElementById('pdfPreviewBtn'),
+  boxes: {
+    textbook: document.getElementById('textbookBox'),
+    grade: document.getElementById('gradeBox'),
+    major: document.getElementById('majorBox'),
+    section: document.getElementById('sectionBox'),
+    pos: document.getElementById('posBox'),
+    examCategory: document.getElementById('examCategoryBox'),
+    examSub: document.getElementById('examSubBox'),
+    examPos: document.getElementById('examPosBox'),
+    elemType: document.getElementById('elemTypeBox'),
+    elemCategory: document.getElementById('elemCategoryBox')
+  },
+  metas: {
+    textbook: document.getElementById('textbookMeta'),
+    grade: document.getElementById('gradeMeta'),
+    major: document.getElementById('majorMeta'),
+    section: document.getElementById('sectionMeta'),
+    pos: document.getElementById('posMeta'),
+    examCategory: document.getElementById('examCategoryMeta'),
+    examSub: document.getElementById('examSubMeta'),
+    examPos: document.getElementById('examPosMeta'),
+    elemType: document.getElementById('elemTypeMeta'),
+    elemCategory: document.getElementById('elemCategoryMeta')
+  }
+};
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function uniqueKeepOrder(values) {
+  const out = [];
+  const seen = new Set();
+  values.forEach(v => {
+    const sv = String(v ?? '');
+    if (sv && !seen.has(sv)) { seen.add(sv); out.push(sv); }
+  });
+  return out;
+}
+function rowsForDataset() {
+  return DATA.filter(r => r.dataset === state.dataset);
+}
+function selectedArray(key) {
+  return Array.from(state.filters[key] || []);
+}
+function matches(setObj, value) {
+  if (!setObj || setObj.size === 0) return true;
+  return setObj.has(String(value ?? ''));
+}
+function renderChecklist(box, key, values) {
+  const selected = state.filters[key];
+  box.innerHTML = values.map(v => {
+    const sv = String(v);
+    return `<label class="checkitem"><input type="checkbox" data-filter="${key}" value="${esc(sv)}" ${selected.has(sv) ? 'checked' : ''}> <span>${esc(sv)}</span></label>`;
+  }).join('');
+  box.querySelectorAll('input[type="checkbox"]').forEach(input => {
+    input.addEventListener('change', e => {
+      const k = e.target.dataset.filter;
+      const val = e.target.value;
+      if (e.target.checked) state.filters[k].add(val);
+      else state.filters[k].delete(val);
+      clearCurrentTest();
+      if (state.dataset === 'textbook' && ['textbook','grade','major','section'].includes(k)) renderAllFilters();
+      if (state.dataset === 'exam' && ['examCategory','examSub'].includes(k)) renderAllFilters();
+      if (state.dataset === 'elementary' && ['elemType'].includes(k)) renderAllFilters();
+      refresh();
+    });
+  });
+  updateMeta(key);
+}
+function updateMeta(key) {
+  const count = state.filters[key] ? state.filters[key].size : 0;
+  if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未選択';
+}
+function renderAllFilters() {
+  const rows = rowsF
+
+===== 16 filteredRows @ 1351289 =====
+;
     const base = rows.filter(r => matches(state.filters.examCategory, r.exam_category));
     const subs = uniqueKeepOrder(base.map(r => r.exam_subcategory).filter(Boolean));
     state.filters.examSub = new Set(selectedArray('examSub').filter(v => subs.includes(v)));
     renderChecklist(els.boxes.examSub, 'examSub', subs);
+    const basePos = base.filter(r => matches(state.filters.examSub, r.exam_subcategory));
+    const poses = uniqueKeepOrder(basePos.map(r => r.pos).filter(Boolean));
+    state.filters.examPos = new Set(selectedArray('examPos').filter(v => poses.includes(v)));
+    renderChecklist(els.boxes.examPos, 'examPos', poses);
   } else {
     const types = ['書けるようにする','意味・イメージでわかる'];
     renderChecklist(els.boxes.elemType, 'elemType', types);
@@ -957,7 +1210,8 @@ function filteredRows() {
   if (state.dataset === 'exam') {
     return rows.filter(r =>
       matches(state.filters.examCategory, r.exam_category) &&
-      matches(state.filters.examSub, r.exam_subcategory)
+      matches(state.filters.examSub, r.exam_subcategory) &&
+      matches(state.filters.examPos, r.pos)
     );
   }
   return rows.filter(r =>
@@ -996,15 +1250,14 @@ function renderList() {
       const introHtml = intro ? `<div class="memory-intro">${esc(intro)}</div>` : '';
       blocks.push(`<div class="memory-section"><div class="memory-title">${esc(current)}</div>${introHtml}<table class="memory-table">${head}<tbody>${rows.join('')}</tbody></table></div>`);
     };
-    state.currentList.forEach(r => {
-      const title = state.dataset === 'elemen
+    state.currentList.forEach(r => 
 
-===== 13 filteredRows @ 1353645 =====
-esc(r.section)}</td><td>${esc(r.pos)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
+===== 17 filteredRows @ 1356767 =====
+td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${String(r.current_confirmed)==='1' ? '○' : ''}</td><td>${String(r.star)==='1' ? '☆' : ''}</td></tr>`).join('');
     }
   } else if (state.dataset === 'exam') {
-    els.headRow.innerHTML = `<th>カテゴリ</th><th>分類</th><th>英語</th><th>日本語</th>`;
-    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.exam_category)}</td><td>${esc(r.exam_subcategory || '')}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td></tr>`).join('');
+    els.headRow.innerHTML = `<th>カテゴリ</th><th>分類</th><th>品詞</th><th>英語</th><th>日本語</th>`;
+    els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.exam_category)}</td><td>${esc(r.exam_subcategory || '')}</td><td>${esc(r.pos || '')}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td></tr>`).join('');
   } else {
     els.headRow.innerHTML = `<th>テスト区分</th><th>カテゴリー</th><th>英語</th><th>日本語</th><th>コツ・セット</th>`;
     els.listBody.innerHTML = state.currentList.map(r => `<tr><td>${esc(r.elem_type)}</td><td>${esc(r.elem_category_short || r.elem_category)}</td><td><strong>${esc(r.english)}</strong></td><td>${esc(r.japanese)}</td><td>${esc(r.elem_hint || '')}</td></tr>`).join('');
@@ -1089,7 +1342,7 @@ function setDataset(name) {
   els.examFilters.classList.toggle('hide', name !== 'exam');
   els.elementaryFilters.classList.toggle('hide', name !== 'eleme
 
-===== 14 filteredRows @ 1355617 =====
+===== 18 filteredRows @ 1358739 =====
 .qCount.value, 10), candidates.length);
   const picked = shuffle(candidates).slice(0, count).map((item, idx) => {
     const r = item.row;
@@ -1159,6 +1412,7 @@ function setExamTarget(target) {
   else if (target === '40') state.filters.examCategory = new Set(['書ける最優先','長文テーマ語','英作文の型','40点超え追加']);
   else if (target === 'irregular') state.filters.examCategory = new Set(['不規則動詞']);
   state.filters.examSub = new Set();
+  state.filters.examPos = new Set();
   clearCurrentTest();
   renderAllFilters();
   refresh();
@@ -1175,9 +1429,9 @@ function setElementaryType(mode) {
 els.tabs.forEach(btn => btn.addEventListener('click', () => setDataset(btn.dataset.dataset)));
 els.memoryToggleBtn.addEventListener('click', () => { state.memoryMode = !state.memoryMode; clearCurrentTest(); updateQuickButtons(); refresh(); });
 els.elemMemoryBtn.addEventListener('click', () => { state.memoryMode = !state.memoryMode; clearCurrentTest(); updateQuickButtons(); refresh(); });
-els.starBtn.addEventListener('click', () => { state.toggles.starOnly = !state.
+els.starBtn.addEventListener('click', () 
 
-===== 15 state.filters.pos @ 1346978 =====
+===== 19 state.filters.pos @ 1349696 =====
 te.filters[key].size : 0;
   if (els.metas[key]) els.metas[key].textContent = count ? `${count}件選択` : '未選択';
 }
@@ -1207,6 +1461,10 @@ function renderAllFilters() {
     const subs = uniqueKeepOrder(base.map(r => r.exam_subcategory).filter(Boolean));
     state.filters.examSub = new Set(selectedArray('examSub').filter(v => subs.includes(v)));
     renderChecklist(els.boxes.examSub, 'examSub', subs);
+    const basePos = base.filter(r => matches(state.filters.examSub, r.exam_subcategory));
+    const poses = uniqueKeepOrder(basePos.map(r => r.pos).filter(Boolean));
+    state.filters.examPos = new Set(selectedArray('examPos').filter(v => poses.includes(v)));
+    renderChecklist(els.boxes.examPos, 'examPos', poses);
   } else {
     const types = ['書けるようにする','意味・イメージでわかる'];
     renderChecklist(els.boxes.elemType, 'elemType', types);
@@ -1234,29 +1492,20 @@ function filteredRows() {
   if (state.dataset === 'exam') {
     return rows.filter(r =>
       matches(state.filters.examCategory, r.exam_category) &&
-      matches(state.filters.examSub, r.exam_subcategory)
+      matches(state.filters.examSub, r.exam_subcategory) &&
+      matches(state.filters.examPos, r.pos)
     );
   }
   return rows.filter(r =>
     matches(state.filters.elemType, r.elem_type) &&
     matches(state.filters.elemCategory, r.elem_category) &&
-    (!state.toggles.phraseOnly || String(r.phrase) === '1')
-  );
-}
-function renderSummary() {
-  const n = state.currentList.length;
-  if (state.dataset === 'textbook') {
-    els.summary.textContent = `教科書版 / ${state.memoryMode ? '暗記練習用' : '通常一覧'} / ${n}語`;
-    els.badge.textContent = '教科書版';
-  } else if (state.dataset === 'exam') {
-    els.summary.textContent = `高校入試版 / ${n}語・表現`;
-    els.badge
+    (!state.toggles.phraseOnly |
 
-===== 16 state.filters.pos @ 1348611 =====
-hes(state.filters.examCategory, r.exam_category));
-    const subs = uniqueKeepOrder(base.map(r => r.exam_subcategory).filter(Boolean));
-    state.filters.examSub = new Set(selectedArray('examSub').filter(v => subs.includes(v)));
-    renderChecklist(els.boxes.examSub, 'examSub', subs);
+===== 20 state.filters.pos @ 1351647 =====
+r => matches(state.filters.examSub, r.exam_subcategory));
+    const poses = uniqueKeepOrder(basePos.map(r => r.pos).filter(Boolean));
+    state.filters.examPos = new Set(selectedArray('examPos').filter(v => poses.includes(v)));
+    renderChecklist(els.boxes.examPos, 'examPos', poses);
   } else {
     const types = ['書けるようにする','意味・イメージでわかる'];
     renderChecklist(els.boxes.elemType, 'elemType', types);
@@ -1284,7 +1533,8 @@ function filteredRows() {
   if (state.dataset === 'exam') {
     return rows.filter(r =>
       matches(state.filters.examCategory, r.exam_category) &&
-      matches(state.filters.examSub, r.exam_subcategory)
+      matches(state.filters.examSub, r.exam_subcategory) &&
+      matches(state.filters.examPos, r.pos)
     );
   }
   return rows.filter(r =>
@@ -1332,9 +1582,9 @@ function renderList() {
         intro = nextIntro;
         rows = [];
       }
-      if (state.dataset === 'elementary') rows.push(`<tr><td>${esc(r.english)}</td><td>${esc(r.kana || '')}</t
+      if (state.dataset === 'elementary') rows.push(`<tr><td>${
 
-===== 17 state.filters.pos @ 1360583 =====
+===== 21 state.filters.pos @ 1363742 =====
  => {
   if (sel) sel.addEventListener('change', () => { clearCurrentTest(); renderTest(); });
 });
@@ -1371,6 +1621,7 @@ function buildRangeRowsForPrint() {
   } else if (state.dataset === 'exam') {
     rows.push(['入試カテゴリ', compactList(state.filters.examCategory, 'すべて')]);
     rows.push(['分類', compactList(state.filters.examSub, 'すべて')]);
+    rows.push(['品詞', compactList(state.filters.examPos, 'すべて')]);
   } else {
     rows.push(['テスト区分', compactList(state.filters.elemType, 'すべて')]);
     rows.push(['カテゴリー', compactList(state.filters.elemCategory, 'すべて')]);
@@ -1410,11 +1661,12 @@ function buildPrintRangeLine() {
   }
   if (state.dataset === 'exam') {
     const cats = shortItemsForPrint(uniqueFromCurrentList('exam_category'), '全範囲');
-    return `高校入試版｜${cats}`;
+    const poses = shortItemsForPrint(uniqueFromCurrentList('pos'), '全品詞');
+    return `高校入試版｜${cats}｜${poses}`;
   }
   const types = shortItemsForPrint(uniqueFromCurrentList('elem_type'), '全範囲');
   const cats = shortItemsForPrint(uniqueFromCurrentList('elem_category'), '全カテゴリー');
   return `小学生版｜${types}｜${cats}`;
 }
 
-const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wgARCAGuBwgDASIAAhEBAxEB/8QAHAABAA
+const MK_HEADER_ART_SRC = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8X

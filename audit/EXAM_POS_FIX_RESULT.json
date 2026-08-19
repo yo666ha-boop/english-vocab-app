@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "total_count": 4613,
+  "textbook_count": 3975,
+  "exam_count": 534,
+  "elementary_count": 104,
+  "exam_pos_blank": 0,
+  "exam_pos_raw_blank": 0,
+  "pos_counts": {
+    "名詞": 151,
+    "代名詞": 18,
+    "動詞": 164,
+    "助動詞": 7,
+    "形容詞": 41,
+    "副詞": 33,
+    "前置詞": 4,
+    "接続詞": 8,
+    "熟語・表現": 108
+  },
+  "classification_source_counts": {
+    "reviewed-meaning": 124,
+    "textbook-consensus": 284,
+    "reviewed-category": 126
+  },
+  "non_exam_data_sha256_unchanged": true,
+  "ui_changes": [
+    "高校入試版に品詞フィルター追加",
+    "カテゴリ・分類・品詞の同時絞り込み",
+    "高校入試一覧に品詞列追加",
+    "印刷条件に品詞追加"
+  ],
+  "checked_at_utc": "2026-08-19T04:40:13.043Z"
+}
