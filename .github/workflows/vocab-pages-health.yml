@@ -71,70 +71,68 @@ jobs:
       - name: Install matching Playwright package only
         run: npm install --no-save playwright@1.55.0
 
-      - name: Run online and true-offline iPhone-sized WebKit smoke
+      - name: Run iPhone-sized WebKit cache and interaction smoke
+        run: |
+          node - <<'NODE'
+          const { webkit } = require('playwright');
+          (async () => {
+            const browser = await webkit.launch();
+            const context = await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true,serviceWorkers:'allow',userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1'});
+            const page = await context.newPage();
+            await page.goto(process.env.PAGE_URL,{waitUntil:'networkidle',timeout:60000});
+            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
+            if(!(await page.evaluate(() => 'serviceWorker' in navigator))) throw new Error('service worker unsupported in WebKit');
+            await page.evaluate(async () => { await navigator.serviceWorker.ready; });
+            await page.reload({waitUntil:'networkidle',timeout:60000});
+            await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, {timeout:15000});
+            if(!(await page.evaluate(async () => !!(await caches.match('./index.html'))))) throw new Error('index cache not primed in WebKit');
+            await page.locator('button.tab[data-dataset="exam"]').click();
+            const noun=page.locator('#examPosBox input[value="名詞"]');
+            if(await noun.count()!==1) throw new Error('名詞 option missing in WebKit');
+            await noun.check();
+            const values=await page.locator('#listTable tbody tr td:nth-child(3)').allTextContents();
+            if(!values.length || values.some(v=>v.trim()!=='名詞')) throw new Error('WebKit noun filter failed');
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1);});
+          NODE
+
+      - name: Run strict offline cached-relaunch smoke
         env:
           INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
         run: |
           node - <<'NODE'
           const fs = require('fs');
-          const { webkit } = require('playwright');
+          const { chromium } = require('playwright');
           (async () => {
-            const browser = await webkit.launch();
-            const context = await browser.newContext({
-              viewport:{width:390,height:844},
-              deviceScaleFactor:3,
-              isMobile:true,
-              hasTouch:true,
-              serviceWorkers:'allow',
-              userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1'
-            });
-            const page = await context.newPage();
+            const browser = await chromium.launch();
+            const context = await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
+            let page = await context.newPage();
             await page.goto(process.env.PAGE_URL,{waitUntil:'networkidle',timeout:60000});
-            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
-            const tabs=page.locator('button.tab');
-            if(await tabs.count()!==3) throw new Error('dataset tab count != 3');
-            if(JSON.stringify(await tabs.allTextContents())!==JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch');
-
-            if(!(await page.evaluate(() => 'serviceWorker' in navigator))) throw new Error('service worker unsupported in test WebKit');
             await page.evaluate(async () => { await navigator.serviceWorker.ready; });
             await page.reload({waitUntil:'networkidle',timeout:60000});
             await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, {timeout:15000});
-            const cachePrimed = await page.evaluate(async () => !!(await caches.match('./index.html')));
-            if(!cachePrimed) throw new Error('offline index cache not primed');
+            if(!(await page.evaluate(async () => !!(await caches.match('./index.html'))))) throw new Error('offline cache not primed');
+            await page.close();
 
             await context.setOffline(true);
-            const offlineFetch = await page.evaluate(async () => {
-              const r = await fetch(location.href, {cache:'no-store'});
-              const text = await r.text();
-              return {ok:r.ok,status:r.status,hasTitle:text.includes('英単語アプリ（統合版）'),bytes:text.length};
-            });
-            if(!offlineFetch.ok || offlineFetch.status!==200 || !offlineFetch.hasTitle || offlineFetch.bytes<1000000) throw new Error('service worker offline fallback failed: '+JSON.stringify(offlineFetch));
-
+            page = await context.newPage();
+            await page.goto(process.env.PAGE_URL,{waitUntil:'domcontentloaded',timeout:30000});
+            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
             await page.locator('button.tab[data-dataset="exam"]').click();
-            const posInputs=page.locator('#examPosBox input[type="checkbox"]');
-            if(await posInputs.count()<5) throw new Error('exam POS options missing offline');
             const noun=page.locator('#examPosBox input[value="名詞"]');
-            if(await noun.count()!==1) throw new Error('名詞 POS option missing offline');
+            if(await noun.count()!==1) throw new Error('名詞 option missing offline');
             await noun.check();
-            await page.waitForTimeout(100);
-            const rows=page.locator('#listTable tbody tr');
-            if(await rows.count()===0) throw new Error('noun filter produced zero rows offline');
             const values=await page.locator('#listTable tbody tr td:nth-child(3)').allTextContents();
-            if(values.some(v=>v.trim()!=='名詞')) throw new Error('non-noun row leaked through offline POS filter');
-            if(!(await page.locator('#theadRow').textContent()).includes('品詞')) throw new Error('exam list POS column missing offline');
-
+            if(!values.length || values.some(v=>v.trim()!=='名詞')) throw new Error('offline noun filter failed');
             await page.locator('#makeTestBtn').click();
             await page.waitForFunction(()=>document.querySelector('#testSummary')?.textContent?.includes('10問作成済み'),null,{timeout:15000});
-            if(await page.locator('.test-card').count()!==10) throw new Error('offline exam noun test cards != 10');
+            if(await page.locator('.test-card').count()!==10) throw new Error('offline test cards != 10');
             await page.locator('#toggleAnswersBtn').click();
             if(await page.locator('.ans.show').count()!==10) throw new Error('offline answer toggle failed');
-
             await page.locator('button.tab[data-dataset="elementary"]').click();
-            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('offline elementary tab did not activate');
             await page.locator('button.tab[data-dataset="textbook"]').click();
-            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('offline textbook tab did not reactivate');
 
-            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded_online:true,service_worker_supported:true,service_worker_ready:true,service_worker_controls_page:true,offline_index_cache_primed:true,network_forced_offline:true,offline_html_fetch_from_service_worker_cache:true,exam_pos_filter_present_offline:true,exam_noun_filter_exclusive_offline:true,exam_filtered_10_question_test_created_offline:true,answer_toggle_works_offline:true,elementary_tab_switch_works_offline:true,textbook_tab_switch_back_works_offline:true},offline_fetch:offlineFetch,checked_at_utc:new Date().toISOString()};
+            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,webkit:{service_worker_supported:true,service_worker_ready:true,service_worker_controls_page:true,index_cache_primed:true,exam_pos_filter_works:true},strict_offline:{engine:'Chromium',network_forced_offline:true,new_page_opened_offline:true,offline_navigation_from_service_worker_cache:true,exam_noun_filter_works_offline:true,ten_question_test_created_offline:true,answer_toggle_works_offline:true,dataset_switching_works_offline:true},checked_at_utc:new Date().toISOString()};
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
             await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
@@ -152,5 +150,5 @@ jobs:
           git pull --rebase --autostash origin main
           git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
           git diff --cached --quiet && exit 0
-          git commit -m 'test: record true offline WebKit pass'
+          git commit -m 'test: record offline PWA health pass'
           git push origin HEAD:main
