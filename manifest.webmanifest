@@ -1,0 +1,12 @@
+{
+  "name": "みかみ塾 英単語アプリ",
+  "short_name": "英単語",
+  "description": "みかみ塾の英単語学習・テスト作成アプリ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f6feb",
+  "lang": "ja",
+  "orientation": "any"
+}
