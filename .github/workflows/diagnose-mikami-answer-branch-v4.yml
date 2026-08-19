@@ -1,0 +1,81 @@
+name: Diagnose Mikami Answer Branch V4
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/diagnose-mikami-answer-branch-v4.yml'
+      - 'release/generated/answer_gpt_branch_v4_diag_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Diagnose source and V4
+        shell: bash
+        run: |
+          set +e
+          mkdir -p release/generated /tmp/mikami-diag
+          node <<'NODE' > release/generated/answer_gpt_branch_v4_diag_source.txt 2>&1
+          const fs=require('fs'),crypto=require('crypto');
+          const s=fs.readFileSync('index.html','utf8');
+          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/i);
+          if(!m) throw new Error('qb-data not found');
+          const qb=JSON.parse(m[1]);
+          const eng=qb.filter(x=>x?.subject==='英語');
+          console.log('TOTAL='+qb.length);
+          console.log('ENGLISH='+eng.length);
+          console.log('UNIQUE='+new Set(qb.map(x=>x?.id)).size);
+          console.log('INDEX_SHA256='+crypto.createHash('sha256').update(s).digest('hex'));
+          console.log('ENGLISH_SHA256='+crypto.createHash('sha256').update(JSON.stringify(eng)).digest('hex'));
+          if(qb.length!==10513||eng.length!==10511||new Set(qb.map(x=>x?.id)).size!==10513) process.exit(11);
+          NODE
+          SRC_RC=$?
+          if [ "$SRC_RC" -eq 0 ]; then
+            node tools/run_mikami_pipeline_v4.mjs index.html /tmp/mikami-diag/out.html --reset-checkpoints > release/generated/answer_gpt_branch_v4_diag.log 2>&1
+            V4_RC=$?
+          else
+            V4_RC=99
+            echo "V4_NOT_RUN_SOURCE_FAILED" > release/generated/answer_gpt_branch_v4_diag.log
+          fi
+          STATE=ABSENT
+          FAILED_STAGE=UNKNOWN
+          LAST_STAGE=UNKNOWN
+          if [ -f /tmp/mikami-diag/out.html.checkpoints/state.json ]; then
+            cp /tmp/mikami-diag/out.html.checkpoints/state.json release/generated/answer_gpt_branch_v4_diag_state.json
+            STATE=PRESENT
+            FAILED_STAGE=$(node -e "const s=require('./release/generated/answer_gpt_branch_v4_diag_state.json'); console.log(s.failed_stage??'NONE')")
+            LAST_STAGE=$(node -e "const s=require('./release/generated/answer_gpt_branch_v4_diag_state.json'); console.log(s.last_stage??'NONE')")
+          fi
+          {
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "SOURCE_RC=$SRC_RC"
+            echo "V4_RC=$V4_RC"
+            echo "CHECKPOINT_STATE=$STATE"
+            echo "FAILED_STAGE=$FAILED_STAGE"
+            echo "LAST_STAGE=$LAST_STAGE"
+            if [ "$SRC_RC" -eq 0 ] && [ "$V4_RC" -eq 0 ]; then echo "STATUS=PASS"; else echo "STATUS=FAIL"; fi
+          } > release/generated/answer_gpt_branch_v4_diag.status.txt
+      - name: Commit diagnostic
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_branch_v4_diag.status.txt release/generated/answer_gpt_branch_v4_diag_source.txt release/generated/answer_gpt_branch_v4_diag.log
+          test -f release/generated/answer_gpt_branch_v4_diag_state.json && git add release/generated/answer_gpt_branch_v4_diag_state.json || true
+          git commit -m 'record answer GPT branch V4 diagnostic' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          git push origin HEAD:mikami-canonical-repair
