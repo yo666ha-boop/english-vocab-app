@@ -48,4 +48,23 @@ if (!/^[a-f0-9]{64}$/.test(man.source_sha256) || !/^[a-f0-9]{64}$/.test(man.know
   throw new Error('manifest SHA256 missing');
 }
 
-console.log('Mikami answer GPT knowledge exporter regression: OK');
+// Prove that the exported Knowledge is a lossless English-only projection of qb-data,
+// not merely a file with the expected number of lines.
+execFileSync(process.execPath, ['tools/validate_mikami_answer_gpt_knowledge.mjs', input, out, manifest], {stdio: 'inherit'});
+
+// Negative regression: one altered answer must be rejected by the lossless validator.
+const tampered = lines.slice();
+const tamperedRecord = JSON.parse(tampered[123]);
+tamperedRecord.a = 'tampered-answer';
+tampered[123] = JSON.stringify(tamperedRecord);
+const tamperedPath = path.join(dir, 'knowledge-tampered.jsonl');
+fs.writeFileSync(tamperedPath, tampered.join('\n') + '\n', 'utf8');
+let rejected = false;
+try {
+  execFileSync(process.execPath, ['tools/validate_mikami_answer_gpt_knowledge.mjs', input, tamperedPath, manifest], {stdio: 'pipe'});
+} catch {
+  rejected = true;
+}
+if (!rejected) throw new Error('validator accepted tampered knowledge');
+
+console.log('Mikami answer GPT knowledge exporter + lossless validator regression: OK');
