@@ -1,0 +1,133 @@
+name: Build Mikami Answer GPT Knowledge
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: 'Temporary authenticated/signed URL for the exact 4,035,500-byte canonical HTML'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Download and verify exact canonical
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='${{ inputs.source_url }}'
+          test -n "$URL"
+          curl --compressed -fL --retry 2 --connect-timeout 20 --max-time 120 "$URL" -o /tmp/mikami-canonical.html
+          BYTES=$(wc -c < /tmp/mikami-canonical.html)
+          echo "downloaded_bytes=$BYTES"
+          test "$BYTES" -eq 4035500
+          node <<'NODE'
+          const fs=require('fs');
+          const s=fs.readFileSync('/tmp/mikami-canonical.html','utf8');
+          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/i);
+          if(!m) throw new Error('qb-data not found');
+          const qb=JSON.parse(m[1]);
+          const english=qb.filter(x=>x?.subject==='英語').length;
+          const unique=new Set(qb.map(x=>x?.id)).size;
+          if(qb.length!==10513||english!==10511||unique!==10513){
+            throw new Error(`canonical invariant mismatch total=${qb.length} english=${english} unique=${unique}`);
+          }
+          console.log(`canonical total=${qb.length} english=${english} unique=${unique}`);
+          NODE
+
+      - name: Rebuild repaired canonical and final-audit it
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/gpt
+          node tools/run_mikami_pipeline_v4.mjs /tmp/mikami-canonical.html /tmp/mikami-repaired.html --reset-checkpoints
+          node tools/audit_final_canonical.mjs /tmp/mikami-repaired.html /tmp/mikami-canonical.html /tmp/mikami-final-audit.json --canonical
+          grep -q '"status": "OK"' /tmp/mikami-repaired.html.pipeline-v4.audit.json
+          grep -q '"final_quality_errors": 0' /tmp/mikami-repaired.html.pipeline-v4.audit.json
+          grep -q '"status": "OK"' /tmp/mikami-final-audit.json
+          grep -q '"question_count": 10513' /tmp/mikami-final-audit.json
+          grep -q '"english_question_count": 10511' /tmp/mikami-final-audit.json
+          grep -q '"unique_question_ids": 10513' /tmp/mikami-final-audit.json
+
+      - name: Export GPT knowledge from repaired canonical
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/export_mikami_answer_gpt_knowledge.mjs \
+            /tmp/mikami-repaired.html \
+            dist/gpt/mikami_english_question_bank_knowledge.jsonl \
+            dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          grep -q '"canonical_total_questions": 10513' dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          grep -q '"canonical_english_questions": 10511' dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          grep -q '"canonical_unique_ids": 10513' dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          grep -q '"exported_records": 10511' dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          LINES=$(wc -l < dist/gpt/mikami_english_question_bank_knowledge.jsonl)
+          test "$LINES" -eq 10511
+          cp gpt/mikami_answer_analysis_gpt_instructions.md dist/gpt/
+          cp gpt/mikami_answer_analysis_output_schema.json dist/gpt/
+          cp gpt/README.md dist/gpt/README_答案分析GPT.md
+          cp /tmp/mikami-final-audit.json dist/gpt/mikami_canonical_final_audit.json
+
+      - name: Package knowledge bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd dist/gpt
+          zip -9 ../みかみ塾答案分析GPT_知識パック_20260819.zip \
+            mikami_english_question_bank_knowledge.jsonl \
+            mikami_english_question_bank_knowledge.manifest.json \
+            mikami_answer_analysis_gpt_instructions.md \
+            mikami_answer_analysis_output_schema.json \
+            README_答案分析GPT.md \
+            mikami_canonical_final_audit.json
+
+      - name: Record build status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          ZIP='dist/みかみ塾答案分析GPT_知識パック_20260819.zip'
+          MAN='dist/gpt/mikami_english_question_bank_knowledge.manifest.json'
+          if test -s "$ZIP" && test -s "$MAN"; then STATUS=PASS; else STATUS=FAIL; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "SOURCE_DRIVE_ID=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4"
+            echo "EXPECTED_SOURCE_BYTES=4035500"
+            echo "EXPECTED_CANONICAL_TOTAL=10513"
+            echo "EXPECTED_ENGLISH_RECORDS=10511"
+            echo "PURPOSE=MIKAMI_ANSWER_ANALYSIS_GPT_KNOWLEDGE"
+          } > release/generated/answer_gpt_knowledge_20260819.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_knowledge_20260819.status.txt
+          git commit -m "record answer GPT knowledge build status" || true
+          git pull --rebase origin mikami-canonical-repair || true
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            git pull --rebase origin mikami-canonical-repair
+            sleep 2
+          done
+          exit 1
+
+      - name: Upload answer GPT knowledge bundle
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-answer-analysis-gpt-knowledge-20260819
+          path: dist/みかみ塾答案分析GPT_知識パック_20260819.zip
+          if-no-files-found: error
