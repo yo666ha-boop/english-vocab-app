@@ -91,34 +91,34 @@ function specFromLooseSentence(src,allowNoTime=false){
 function specFromCorrectSentence(s){return specFromLooseSentence(String(s||'').trim().replace(/[.。]$/,''),true);}
 function splitTime(src){
   const s=clean(src);
-  const patterns=[/\s+(every day)$/i,/\s+(every morning)$/i,/\s+(every evening)$/i,/\s+(every night)$/i,/\s+(in the morning)$/i,/\s+(in the afternoon)$/i,/\s+(in the evening)$/i,/\s+(after class)$/i,/\s+(after school)$/i,/\s+(before breakfast)$/i,/\s+(before dinner)$/i,/\s+(on Sunday)$/i,/\s+(on weekends)$/i,/\s+(at noon)$/i,/\s+(at midnight)$/i,/\s+(at (?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve))$/i];
+  const patterns=[/\s+(every day)$/i,/\s+(every morning)$/i,/\s+(every evening)$/i,/\s+(every night)$/i,/\s+(in the morning)$/i,/\s+(in the afternoon)$/i,/\s+(in the evening)$/i,/\s+(after class)$/i,/\s+(after school)$/i,/\s+(before breakfast)$/i,/\s+(before dinner)$/i,/\s+(after dinner)$/i,/\s+(before school)$/i,/\s+(after lunch)$/i,/\s+(after breakfast)$/i,/\s+(before lunch)$/i,/\s+(at night)$/i,/\s+(on Sunday)$/i,/\s+(on weekends)$/i,/\s+(at noon)$/i,/\s+(at midnight)$/i,/\s+(at (?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve))$/i];
   for(const re of patterns){const m=s.match(re);if(m)return{core:s.slice(0,m.index).trim(),time:clean(m[1])};}
   return{core:s,time:null};
 }
 function isTimePhrase(t){return !!splitTime(`X ${t}`).time;}
 function detectKnownSubject(core){
-  const list=['The student','The teacher','Our team','This dog','My mother','My father','My brother','My sister','My friend','Ken and Emi','Tom and Ken','They','We','You','I','He','She','Yuki','Mika','Ken','Emi','Tom'];
+  const list=['The student','The teacher','The boy','The girl','Our team','This dog','My mother','My father','My brother','My sister','My friend','Ken and Emi','Tom and Ken','They','We','You','I','He','She','Yuki','Mika','Ken','Emi','Tom'];
   for(const s of list.sort((a,b)=>b.length-a.length))if(core.toLowerCase().startsWith(s.toLowerCase()+' '))return normalizeSubjectCapitalization(s);
   const m=core.match(/^((?:The|This|Our|My)\s+\w+|[A-Z][A-Za-z]+)\s+/);return m?normalizeSubjectCapitalization(m[1]):null;
 }
-function activityKind(c){const x=clean(c).toLowerCase();if(['running','swimming'].includes(x))return'go-activity';if(/^the\s+/.test(x))return'destination';return'play-sport';}
+function activityKind(c){const x=clean(c).toLowerCase();if(['running','swimming','skiing','skating'].includes(x))return'go-activity';if(/^the\s+/.test(x))return'destination';return'play-sport';}
 function buildSentence(s){const tail=s.time?` ${s.time}`:'';if(s.kind==='destination')return`${s.subject} ${isThird(s.subject)?'goes':'go'} to ${s.complement.replace(/^to\s+/i,'')}${tail}.`;if(s.kind==='go-activity')return`${s.subject} ${isThird(s.subject)?'goes':'go'} ${s.complement}${tail}.`;return`${s.subject} ${isThird(s.subject)?'plays':'play'} ${s.complement}${tail}.`;}
 function normalizeTokenForSpec(t,s){if(/^(?:play|plays)$/i.test(t))return isThird(s.subject)?'plays':'play';if(/^(?:go|goes)$/i.test(t))return isThird(s.subject)?'goes':'go';return t;}
 function toJapanese(s){
   const subj=jpSubject(s.subject),time=jpTime(s.time);if(!subj||!time)return null;
   if(s.kind==='destination'){const dest=jpDestination(s.complement);return dest?`${subj}は${time}${dest}へ行きます。`:null;}
-  if(s.kind==='go-activity'){const act={running:'走りに',swimming:'泳ぎに'}[s.complement.toLowerCase()];return act?`${subj}は${time}${act}行きます。`:null;}
+  if(s.kind==='go-activity'){const act={running:'走りに',swimming:'泳ぎに',skiing:'スキーをしに',skating:'スケートをしに'}[s.complement.toLowerCase()];return act?`${subj}は${time}${act}行きます。`:null;}
   const sport=jpSport(s.complement);return sport?`${subj}は${time}${sport}をします。`:null;
 }
-function jpSubject(s){return{'The student':'その生徒','The teacher':'その先生','Our team':'私たちのチーム','This dog':'この犬','My mother':'私の母','My father':'私の父','My brother':'私の兄弟','My sister':'私の姉妹','My friend':'私の友達','He':'彼','She':'彼女','Yuki':'ユキ','Mika':'ミカ','Ken':'ケン','Emi':'エミ','Tom':'トム','I':'私','You':'あなた','We':'私たち','They':'彼ら'}[s]||null;}
-function jpTime(t){if(!t)return null;const x=t.toLowerCase();const map={'every day':'毎日','every morning':'毎朝','every evening':'毎晩','every night':'毎晩','in the morning':'朝に','in the afternoon':'午後に','in the evening':'夕方に','after class':'授業の後に','after school':'放課後に','before breakfast':'朝食前に','before dinner':'夕食前に','on sunday':'日曜日に','on weekends':'週末に','at noon':'正午に','at midnight':'真夜中に','at one':'1時に','at two':'2時に','at three':'3時に','at four':'4時に','at five':'5時に','at six':'6時に','at seven':'7時に','at eight':'8時に','at nine':'9時に','at ten':'10時に','at eleven':'11時に','at twelve':'12時に'};return map[x]||null;}
-function jpDestination(c){const x=c.replace(/^to\s+/i,'').toLowerCase();return{'the station':'駅','the library':'図書館','the room':'部屋','the park':'公園','the school':'学校','the pool':'プール','the office':'事務所','the zoo':'動物園','the gym':'体育館','the store':'店'}[x]||null;}
-function jpSport(c){return{soccer:'サッカー',tennis:'テニス',baseball:'野球',basketball:'バスケットボール',volleyball:'バレーボール'}[c.toLowerCase()]||null;}
+function jpSubject(s){return{'The student':'その生徒','The teacher':'その先生','Our team':'私たちのチーム','This dog':'この犬','The boy':'その少年','The girl':'その少女','My mother':'私の母','My father':'私の父','My brother':'私の兄弟','My sister':'私の姉妹','My friend':'私の友達','He':'彼','She':'彼女','Yuki':'ユキ','Mika':'ミカ','Ken':'ケン','Emi':'エミ','Tom':'トム','I':'私','You':'あなた','We':'私たち','They':'彼ら'}[s]||null;}
+function jpTime(t){if(!t)return null;const x=t.toLowerCase();const map={'every day':'毎日','every morning':'毎朝','every evening':'毎晩','every night':'毎晩','in the morning':'朝に','in the afternoon':'午後に','in the evening':'夕方に','after class':'授業の後に','after school':'放課後に','before breakfast':'朝食前に','before dinner':'夕食前に','after dinner':'夕食後に','before school':'学校の前に','after lunch':'昼食後に','after breakfast':'朝食後に','before lunch':'昼食前に','at night':'夜に','on sunday':'日曜日に','on weekends':'週末に','at noon':'正午に','at midnight':'真夜中に','at one':'1時に','at two':'2時に','at three':'3時に','at four':'4時に','at five':'5時に','at six':'6時に','at seven':'7時に','at eight':'8時に','at nine':'9時に','at ten':'10時に','at eleven':'11時に','at twelve':'12時に'};return map[x]||null;}
+function jpDestination(c){const x=c.replace(/^to\s+/i,'').toLowerCase();return{'the station':'駅','the library':'図書館','the room':'部屋','the park':'公園','the school':'学校','the pool':'プール','the office':'事務所','the zoo':'動物園','the gym':'体育館','the store':'店','the hospital':'病院','the museum':'博物館','the classroom':'教室','the kitchen':'台所','the town':'町','the city':'市街地'}[x]||null;}
+function jpSport(c){return{soccer:'サッカー',tennis:'テニス',baseball:'野球',basketball:'バスケットボール',volleyball:'バレーボール',badminton:'バドミントン'}[c.toLowerCase()]||null;}
 function isThird(s){return !['I','You','We','They'].includes(s)&&! /\band\b/i.test(s);}
 function normalizeSubjectCapitalization(s){const x=clean(s);const map={'the student':'The student','the teacher':'The teacher','our team':'Our team','this dog':'This dog','he':'He','she':'She','you':'You','we':'We','they':'They','i':'I','yuki':'Yuki','mika':'Mika','ken':'Ken','emi':'Emi','tom':'Tom'};return map[x.toLowerCase()]||x;}
 function clean(s){return String(s||'').trim().replace(/\s+/g,' ');}
 function lowerFirst(s){s=String(s||'');return /^[A-Z]/.test(s)?s[0].toLowerCase()+s.slice(1):s;}
-function singularSubjectsPattern(){return'(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|Our team|This dog|My mother|My father|My brother|My sister|My friend)';}
+function singularSubjectsPattern(){return'(?:He|She|Yuki|Mika|Ken|Emi|Tom|The student|The teacher|The boy|The girl|Our team|This dog|My mother|My father|My brother|My sister|My friend)';}
 
 function auditWordOrder(qb){
   const errors=[],sing=singularSubjectsPattern();
