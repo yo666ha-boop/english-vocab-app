@@ -37,6 +37,7 @@ jobs:
           grep -q '300 語以下' /tmp/live.html
           grep -q 'rb-memory-page' /tmp/live.html
           grep -q 'r.elem_category_short || r.elem_category || r.elem_type' /tmp/live.html
+          grep -q 'memory-print-safe-final' /tmp/live.html
           mkdir -p audit
           cat > audit/MEMORY_PRINT_LIVE.json <<JSON
           {
@@ -49,6 +50,7 @@ jobs:
             "large_selection_guard_present": true,
             "pagination_present": true,
             "elementary_group_key_fix_present": true,
+            "final_runtime_guard_present": true,
             "checked_at_utc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           }
           JSON
@@ -59,5 +61,5 @@ jobs:
           git pull --rebase --autostash origin main
           git add audit/MEMORY_PRINT_LIVE.json
           git diff --cached --quiet && exit 0
-          git commit -m 'test: record live memory print fix'
+          git commit -m 'test: record live memory print final fix'
           git push origin HEAD:main
