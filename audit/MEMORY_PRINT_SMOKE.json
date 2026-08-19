@@ -8,14 +8,25 @@
     "default_full_selection_returns_quickly": true,
     "default_full_selection_does_not_open_print": true,
     "large_selection_guidance": true,
+    "full_default_662_paginated_layout": true,
+    "full_default_print_engine_render": true,
     "textbook_45_paginated_18_18_9": true,
     "print_invoked_for_safe_selection": true,
     "elementary_group_heading_fixed": true
   },
-  "checked_at_utc": "2026-08-19T07:28:33.392Z",
+  "checked_at_utc": "2026-08-19T07:32:20.866Z",
   "initial_current_list_count": 662,
-  "guard_ms": 147,
+  "guard_ms": 144,
   "guard_message": "現在 662 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 300 語以下に絞ってから「暗記プリントを印刷」を押してください。",
+  "full_default_layout": {
+    "rows": 662,
+    "pages": 37,
+    "maxRowsOnPage": 18
+  },
+  "full_default_pdf": {
+    "render_ms": 520,
+    "bytes": 1712106
+  },
   "textbook_45": {
     "pages": 3,
     "rows": [
