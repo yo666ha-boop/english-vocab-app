@@ -1,0 +1,31 @@
+name: Diagnose memory print
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/extract_memory_print_context.mjs'
+      - '.github/workflows/diagnose-memory-print.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Extract memory print implementation
+        run: node tools/extract_memory_print_context.mjs
+      - name: Commit diagnostic context
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add audit/MEMORY_PRINT_CONTEXT.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'diag: record memory print context'
+          git push origin HEAD:main
