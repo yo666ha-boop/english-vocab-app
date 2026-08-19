@@ -44,7 +44,7 @@ try{
   }
   const valid=byId.get('GEN-PRS-0001');
   if(!valid || valid.a!=='Do You play tennis?') throw new Error('valid sentence-initial Do You was incorrectly rejected/rewritten');
-  if(!html.includes('minIdx <= 0) return false') throw new Error('vocab fail-closed gate missing');
+  if(!html.includes('minIdx <= 0) return false')) throw new Error('vocab fail-closed gate missing');
   console.log('Mikami global legacy quality V5 regression: OK');
 } finally {
   fs.rmSync(dir,{recursive:true,force:true});
