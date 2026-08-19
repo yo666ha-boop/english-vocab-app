@@ -791,6 +791,12 @@
 }
 
 </style>
+<meta name="mikami-offline-pwa" content="v1">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#1f6feb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="みかみ塾 英単語">
 </head>
 <body>
 <div class="app">
@@ -1720,6 +1726,14 @@ runPrint = async function(mode) {
   await rbWaitImages(sheet); await rbNextPaint(); window.print();
 };
 
+</script>
+
+<script data-mikami-sw="v1">
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(err => console.error('Service Worker registration failed:', err));
+  });
+}
 </script>
 </body>
 </html>
