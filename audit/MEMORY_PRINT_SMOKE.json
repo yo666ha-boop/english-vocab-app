@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
+  "index_sha256": "77cee12a5a8c5eb1ed8abd05eb10685060f7b103a44777aafb4617f01b797ae5",
+  "engine": "Chromium (Edge-equivalent)",
+  "checks": {
+    "page_loaded": true
+  },
+  "checked_at_utc": "2026-08-19T07:21:40.440Z",
+  "initial_current_list_count": 662,
+  "guard_ms": 179,
+  "guard_message": "",
+  "error": "Error: default full selection unexpectedly invoked print\n    at file:///__w/english-vocab-app/english-vocab-app/tools/test_memory_print.mjs:42:33"
+}
