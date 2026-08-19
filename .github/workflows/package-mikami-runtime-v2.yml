@@ -1,0 +1,79 @@
+name: Package Mikami Runtime V2
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/package-mikami-runtime-v2.yml'
+      - 'release/generated/mikami_runtime_v2_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+
+      - name: Record run id immediately
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          {
+            echo 'STATUS=STARTED'
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo 'PRIVATE_CANONICAL_INCLUDED=false'
+            echo 'INCLUDES=tools,data,gpt'
+          } > release/generated/mikami_runtime_v2.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/mikami_runtime_v2.status.txt
+          git commit -m 'record Mikami runtime v2 started' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          git push origin HEAD:mikami-canonical-repair
+
+      - name: Package runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          zip -r -9 dist/mikami_runtime_v2.zip tools data gpt
+          test -s dist/mikami_runtime_v2.zip
+          sha256sum dist/mikami_runtime_v2.zip > dist/mikami_runtime_v2.sha256
+          ! unzip -l dist/mikami_runtime_v2.zip | grep -q 'TEMP_GITHUB_TRANSFER_mikami_canonical'
+
+      - name: Upload runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-runtime-v2
+          path: |
+            dist/mikami_runtime_v2.zip
+            dist/mikami_runtime_v2.sha256
+          if-no-files-found: error
+
+      - name: Record pass
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          SHA=$(awk '{print $1}' dist/mikami_runtime_v2.sha256)
+          {
+            echo 'STATUS=PASS'
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "RUNTIME_ZIP_SHA256=$SHA"
+            echo 'PRIVATE_CANONICAL_INCLUDED=false'
+            echo 'INCLUDES=tools,data,gpt'
+          } > release/generated/mikami_runtime_v2.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/mikami_runtime_v2.status.txt
+          git commit -m 'record Mikami runtime v2 pass' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          git push origin HEAD:mikami-canonical-repair
