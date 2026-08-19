@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
+  "index_sha256": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
+  "engine": "Chromium (Edge-equivalent)",
+  "checks": {
+    "exam_memory_print_enabled": true,
+    "full_exam_534_prints": true,
+    "full_exam_534_paginated_30_pages": true,
+    "max_18_rows_per_page": true,
+    "exam_group_heading_works": true,
+    "exam_pdf_compositor_works": true,
+    "exam_30_paginated_18_12": true
+  },
+  "full_exam": {
+    "count": 534,
+    "prepare_ms": 82,
+    "alerts": [],
+    "prints": 1,
+    "pages": 30,
+    "rows": 534,
+    "maxRows": 18,
+    "firstHeading": "書ける最優先"
+  },
+  "pdf": {
+    "render_ms": 374,
+    "bytes": 1381183
+  },
+  "exam_30": {
+    "pages": 2,
+    "rows": [
+      18,
+      12
+    ],
+    "heading": "書ける最優先"
+  },
+  "checked_at_utc": "2026-08-19T09:53:16.877Z"
+}
