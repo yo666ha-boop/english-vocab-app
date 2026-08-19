@@ -1,38 +1,54 @@
 import fs from 'node:fs';
 
 const html = fs.readFileSync('index.html', 'utf8');
-const terms = [
-  'memoryPrintBtn',
-  'memoryPrint',
-  'memoryMode',
-  'window.print',
-  '暗記',
-  'printMemory',
-  'memoryGroupedArea'
+
+function extractBalanced(startIdx) {
+  const brace = html.indexOf('{', startIdx);
+  if (brace < 0) return '';
+  let depth = 0;
+  let quote = '';
+  let escape = false;
+  let templateDepth = 0;
+  for (let i = brace; i < html.length; i++) {
+    const ch = html[i];
+    if (escape) { escape = false; continue; }
+    if (quote) {
+      if (ch === '\\') { escape = true; continue; }
+      if (ch === quote) quote = '';
+      continue;
+    }
+    if (ch === '"' || ch === "'" || ch === '`') { quote = ch; continue; }
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) return html.slice(startIdx, i + 1);
+    }
+  }
+  return html.slice(startIdx, Math.min(html.length, startIdx + 30000));
+}
+
+const targets = [
+  'function buildMemoryPrintHtml()',
+  'buildMemoryPrintHtml = function()',
+  'async function runPrint(mode)',
+  "els.memoryPrintBtn.addEventListener('click'"
 ];
 
-const chunks = [];
-const seen = new Set();
-for (const term of terms) {
-  let from = 0;
-  let count = 0;
-  while (true) {
-    const idx = html.indexOf(term, from);
-    if (idx < 0) break;
-    const key = `${Math.floor(idx / 2000)}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      const start = Math.max(0, idx - 5000);
-      const end = Math.min(html.length, idx + 9000);
-      chunks.push(`\n===== ${term} @ ${idx} =====\n${html.slice(start, end)}\n`);
-    }
-    count++;
-    if (count >= 20) break;
-    from = idx + term.length;
+const out = [];
+for (const t of targets) {
+  let p = 0;
+  let n = 0;
+  while ((p = html.indexOf(t, p)) >= 0) {
+    n++;
+    let block;
+    if (t.startsWith('els.')) block = html.slice(Math.max(0,p-1200), Math.min(html.length,p+1600));
+    else block = extractBalanced(p);
+    out.push(`\n===== ${t} occurrence ${n} @ ${p} =====\n${block}\n`);
+    p += t.length;
   }
 }
 
-if (!chunks.length) throw new Error('No memory/print markers found');
+if (!out.length) throw new Error('No target functions found');
 fs.mkdirSync('audit', {recursive:true});
-fs.writeFileSync('audit/MEMORY_PRINT_CONTEXT.txt', chunks.join('\n'), 'utf8');
-console.log(JSON.stringify({status:'pass', html_bytes:Buffer.byteLength(html), chunks:chunks.length, terms}, null, 2));
+fs.writeFileSync('audit/MEMORY_PRINT_CONTEXT.txt', out.join('\n'), 'utf8');
+console.log(JSON.stringify({status:'pass', html_bytes:Buffer.byteLength(html), blocks:out.length}, null, 2));
