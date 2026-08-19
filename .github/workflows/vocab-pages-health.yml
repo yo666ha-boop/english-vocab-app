@@ -109,7 +109,7 @@ jobs:
             };
             fs.mkdirSync('audit', {recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json', JSON.stringify(status,null,2)+'\n');
-            await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png', fullPage:true});
+            await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
             await browser.close();
             console.log(JSON.stringify(status,null,2));
           })().catch(e => { console.error(e); process.exit(1); });
