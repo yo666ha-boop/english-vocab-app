@@ -28,16 +28,11 @@ jobs:
         run: |
           set -euo pipefail
           exec > >(tee /tmp/mikami-finalize.log) 2>&1
-          URL='https://drive.usercontent.google.com/download?id=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4&export=download&confirm=t'
+          URL='https://sdmntprwestus2.oaiusercontent.com/files/00000000-271c-81f8-b15f-b33df266f3ed/raw?se=2026-08-19T07%3A28%3A38Z&sp=r&sv=2026-02-06&sr=b&scid=8381b024-637d-54af-bb07-8b8cdfef9e6b&skoid=fe2e0858-51c5-47e9-acb7-46ebb9a0f396&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-19T00%3A09%3A50Z&ske=2026-08-20T00%3A09%3A50Z&sks=b&skv=2026-02-06&sig=fgAV7uY%2BnTlRU3P40vfCcYmdQGE0o4chLfZZxj%2Bq%2Bho%3D'
           curl --compressed -fL --retry 2 --connect-timeout 20 --max-time 120 -D /tmp/drive-headers.txt "$URL" -o /tmp/mikami-canonical.html
           test -s /tmp/mikami-canonical.html
           BYTES=$(wc -c < /tmp/mikami-canonical.html)
           echo "downloaded_bytes=$BYTES"
-          echo '--- response headers ---'
-          tail -40 /tmp/drive-headers.txt || true
-          echo '--- html diagnosis ---'
-          grep -aoi '<title>[^<]*' /tmp/mikami-canonical.html | head -5 || true
-          grep -aoiE 'accounts\.google\.com|ServiceLogin|download-warning|confirm=[A-Za-z0-9_-]+|uc-download-link|drive\.usercontent\.google\.com[^" ]+' /tmp/mikami-canonical.html | head -20 || true
           if test "$BYTES" -ne 4035500; then
             echo 'SOURCE_SIZE_MISMATCH'
             exit 1
