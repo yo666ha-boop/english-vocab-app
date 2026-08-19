@@ -1,7 +1,7 @@
 {
   "status": "pass",
   "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
-  "index_sha256": "80d29e2d901a2da3ca5b912c38fd50e5e812091177a7cb22b0ac95a5e093f56e",
+  "index_sha256": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
   "engine": "Chromium (Edge-equivalent)",
   "checks": {
     "page_loaded": true,
@@ -13,12 +13,15 @@
     "over_1000_does_not_open_print": true,
     "over_1000_guidance": true,
     "textbook_45_paginated_18_18_9": true,
+    "exam_memory_print_enabled": true,
+    "exam_30_paginated_18_12": true,
+    "exam_group_heading_works": true,
     "elementary_group_heading_fixed": true
   },
-  "checked_at_utc": "2026-08-19T07:35:25.304Z",
+  "checked_at_utc": "2026-08-19T09:53:19.230Z",
   "initial_current_list_count": 662,
   "default_662": {
-    "elapsed_ms": 68,
+    "elapsed_ms": 66,
     "alerts": [],
     "prints": 1,
     "pages": 37,
@@ -64,11 +67,11 @@
     ]
   },
   "full_default_pdf": {
-    "render_ms": 368,
+    "render_ms": 458,
     "bytes": 1792950
   },
   "over_1000_guard": {
-    "elapsed_ms": 262,
+    "elapsed_ms": 287,
     "alerts": [
       "現在 1001 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 1000 語以下に絞ってから「暗記プリントを印刷」を押してください。"
     ],
@@ -82,6 +85,16 @@
       9
     ],
     "prints": 1
+  },
+  "exam_30": {
+    "pages": 2,
+    "rows": [
+      18,
+      12
+    ],
+    "prints": 1,
+    "alerts": [],
+    "firstHeading": "書ける最優先"
   },
   "elementary_20": {
     "pages": 2,
