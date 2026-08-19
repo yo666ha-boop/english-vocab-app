@@ -1,0 +1,132 @@
+name: Build Answer GPT From Verified Repaired Index
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths-ignore:
+      - 'release/generated/answer_gpt_public_index_probe.status.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify public index is the exact repaired canonical
+        id: verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED='0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f'
+          ACTUAL=$(sha256sum index.html | awk '{print $1}')
+          echo "expected_sha256=$EXPECTED" >> "$GITHUB_OUTPUT"
+          echo "actual_sha256=$ACTUAL" >> "$GITHUB_OUTPUT"
+          if [ "$ACTUAL" = "$EXPECTED" ]; then
+            echo "match=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "match=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "index_sha256=$ACTUAL"
+
+      - name: Export exact Knowledge from verified repaired index
+        if: steps.verify.outputs.match == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/gpt
+          node tools/export_mikami_answer_gpt_knowledge.mjs \
+            index.html \
+            dist/gpt/mikami_english_question_bank_knowledge.jsonl \
+            dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          test "$(wc -l < dist/gpt/mikami_english_question_bank_knowledge.jsonl)" -eq 10511
+          node tools/validate_mikami_answer_gpt_knowledge.mjs \
+            index.html \
+            dist/gpt/mikami_english_question_bank_knowledge.jsonl \
+            dist/gpt/mikami_english_question_bank_knowledge.manifest.json \
+            | tee dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"full_record_equality": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"canonical_order_preserved": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          node tools/spotcheck_mikami_answer_gpt_knowledge.mjs \
+            index.html \
+            dist/gpt/mikami_english_question_bank_knowledge.jsonl \
+            dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"families_passed": 9' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          cp gpt/mikami_answer_analysis_gpt_instructions.md dist/gpt/
+          cp gpt/mikami_answer_analysis_output_schema.json dist/gpt/
+          cp gpt/README.md dist/gpt/README_答案分析GPT.md
+          cd dist/gpt
+          zip -9 ../みかみ塾答案分析GPT_知識パック_20260819.zip \
+            mikami_english_question_bank_knowledge.jsonl \
+            mikami_english_question_bank_knowledge.manifest.json \
+            mikami_english_question_bank_knowledge.validation.json \
+            mikami_english_question_bank_knowledge.spotcheck.json \
+            mikami_answer_analysis_gpt_instructions.md \
+            mikami_answer_analysis_output_schema.json \
+            README_答案分析GPT.md
+
+      - name: Record probe/build status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          MATCH='${{ steps.verify.outputs.match }}'
+          EXPECTED='${{ steps.verify.outputs.expected_sha256 }}'
+          ACTUAL='${{ steps.verify.outputs.actual_sha256 }}'
+          ZIP='dist/みかみ塾答案分析GPT_知識パック_20260819.zip'
+          VAL='dist/gpt/mikami_english_question_bank_knowledge.validation.json'
+          SPOT='dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json'
+          if [ "$MATCH" = 'true' ] && test -s "$ZIP" && test -s "$VAL" && test -s "$SPOT" \
+            && grep -q '"full_record_equality": true' "$VAL" \
+            && grep -q '"canonical_order_preserved": true' "$VAL" \
+            && grep -q '"families_passed": 9' "$SPOT"; then
+            STATUS=PASS
+          elif [ "$MATCH" != 'true' ]; then
+            STATUS=HASH_MISMATCH
+          else
+            STATUS=BUILD_FAIL
+          fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "SOURCE=PUBLIC_BRANCH_INDEX_ALREADY_PRESENT"
+            echo "EXPECTED_REPAIRED_SHA256=$EXPECTED"
+            echo "ACTUAL_INDEX_SHA256=$ACTUAL"
+            echo "REPAIRED_SHA_MATCH=$MATCH"
+            echo "EXPECTED_ENGLISH_RECORDS=10511"
+            echo "LOSSLESS_RECORD_EQUALITY_REQUIRED=true"
+            echo "CANONICAL_ORDER_REQUIRED=true"
+            echo "REPRESENTATIVE_FAMILY_SPOTCHECK_REQUIRED=9"
+            echo "PRIVATE_CANONICAL_EXPOSED=false"
+          } > release/generated/answer_gpt_public_index_probe.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_public_index_probe.status.txt
+          git commit -m "record answer GPT public index probe status" || true
+          git pull --rebase origin mikami-canonical-repair || true
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            git pull --rebase origin mikami-canonical-repair
+            sleep 2
+          done
+          exit 1
+
+      - name: Upload verified Knowledge bundle
+        if: steps.verify.outputs.match == 'true' && success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-answer-analysis-gpt-knowledge-verified-index-20260819
+          path: dist/みかみ塾答案分析GPT_知識パック_20260819.zip
+          if-no-files-found: error
