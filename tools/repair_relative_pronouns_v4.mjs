@@ -33,16 +33,14 @@ console.log(JSON.stringify({status:'OK',changed:changes.length,audit},null,2));
 function repairRelative(x){
   let q=String(x.q||''), a=String(x.a||'');
 
-  // M3C generated who/which bank: make the answer unique by explicitly limiting
-  // the choice to who/which.  The original open blank also allowed "that".
-  if(String(x.id||'').startsWith('M3C-') && x.type==='空所補充'){
-    // The generator incorrectly treated dog as a person and produced sentences
-    // such as "The dog who plays tennis ...". Keep the target grammar/vocabulary
-    // stable by using a human antecedent for this broken sub-family.
+  if(String(x.id||'').startsWith('M3C-')){
     if(/^The dog\s*\(/i.test(q)) q=q.replace(/^The dog\b/i,'The boy');
+    q=q.replace(/^(This is the (?:chair|picture|bag|bike)\s*\([^)]*\)\s*)you read last week\./i,'$1you used last week.');
+    q=q.replace(/^(This is the (?:chair|bike)\s*\([^)]*\)\s*)is on the desk\./i,'$1is in this room.');
+  }
 
-    // Remove clear noun/predicate mismatches from the object sub-family without
-    // introducing advanced vocabulary.
+  if(String(x.id||'').startsWith('M3C-') && x.type==='空所補充'){
+    if(/^The dog\s*\(/i.test(q)) q=q.replace(/^The dog\b/i,'The boy');
     q=q.replace(/^(This is the (?:chair|picture|bag|bike)\s*\([^)]*\)\s*)you read last week\./i,'$1you used last week.');
     q=q.replace(/^(This is the (?:chair|bike)\s*\([^)]*\)\s*)is on the desk\./i,'$1is in this room.');
 
@@ -55,8 +53,6 @@ function repairRelative(x){
     }
   }
 
-  // M3N also contains open blanks whose accepted answer is not unique because
-  // "that" is possible. Restrict those prompts to who/which too.
   if(String(x.id||'').startsWith('M3N-') && x.type==='空所補充' && /\(\s*\)/.test(q)){
     const antecedent=detectAntecedent(q);
     if(antecedent==='person') a='who';
@@ -65,8 +61,6 @@ function repairRelative(x){
     if(!/who\s*\/\s*which/i.test(q)) q += ' 空所に入る語を who / which から選びなさい。';
   }
 
-  // Natural Japanese in composition prompts: generated data leaked English
-  // nouns into Japanese quotations (e.g. "...作ったbikeです").
   if(String(x.id||'').startsWith('M3N-') && /『[^』]*』/.test(q)){
     const jp={
       bike:'自転車',book:'本',bag:'かばん',picture:'写真',camera:'カメラ',chair:'いす',
