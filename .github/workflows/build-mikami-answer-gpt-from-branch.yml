@@ -1,0 +1,158 @@
+name: Build Mikami Answer GPT Knowledge From Repaired Branch
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/build-mikami-answer-gpt-from-branch.yml'
+      - 'release/generated/answer_gpt_branch_build_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify repaired branch source invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s index.html
+          node <<'NODE'
+          const fs=require('fs'),crypto=require('crypto');
+          const s=fs.readFileSync('index.html','utf8');
+          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/i);
+          if(!m) throw new Error('qb-data not found in branch index.html');
+          const qb=JSON.parse(m[1]);
+          const eng=qb.filter(x=>x?.subject==='英語');
+          const uniq=new Set(qb.map(x=>x?.id));
+          if(qb.length!==10513||eng.length!==10511||uniq.size!==10513) throw new Error(`branch invariant mismatch total=${qb.length} english=${eng.length} unique=${uniq.size}`);
+          const stable=JSON.stringify(eng);
+          fs.writeFileSync('/tmp/branch-english-before.json',stable);
+          console.log(`branch_total=${qb.length}`);
+          console.log(`branch_english=${eng.length}`);
+          console.log(`branch_unique=${uniq.size}`);
+          console.log(`branch_english_sha256=${crypto.createHash('sha256').update(stable).digest('hex')}`);
+          NODE
+
+      - name: V4 revalidation and final audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/gpt
+          node tools/run_mikami_pipeline_v4.mjs index.html /tmp/mikami-repaired-from-branch.html --reset-checkpoints
+          node tools/audit_final_canonical.mjs /tmp/mikami-repaired-from-branch.html index.html /tmp/mikami-branch-final-audit.json --canonical
+          grep -q '"status": "OK"' /tmp/mikami-repaired-from-branch.html.pipeline-v4.audit.json
+          grep -q '"final_quality_errors": 0' /tmp/mikami-repaired-from-branch.html.pipeline-v4.audit.json
+          grep -q '"status": "OK"' /tmp/mikami-branch-final-audit.json
+
+      - name: Check English record idempotence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs=require('fs'),crypto=require('crypto');
+          function q(path){const s=fs.readFileSync(path,'utf8');const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/i);if(!m)throw new Error('qb-data missing '+path);return JSON.parse(m[1]).filter(x=>x?.subject==='英語');}
+          const before=q('index.html');
+          const after=q('/tmp/mikami-repaired-from-branch.html');
+          const same=JSON.stringify(before)===JSON.stringify(after);
+          const report={status:same?'OK':'CHANGED_BY_V4',english_records:after.length,deep_equal_before_after:same,before_sha256:crypto.createHash('sha256').update(JSON.stringify(before)).digest('hex'),after_sha256:crypto.createHash('sha256').update(JSON.stringify(after)).digest('hex')};
+          fs.writeFileSync('dist/gpt/mikami_branch_v4_idempotence.json',JSON.stringify(report,null,2));
+          console.log(JSON.stringify(report,null,2));
+          if(!same) process.exit(8);
+          NODE
+
+      - name: Export and losslessly validate Knowledge
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/export_mikami_answer_gpt_knowledge.mjs /tmp/mikami-repaired-from-branch.html dist/gpt/mikami_english_question_bank_knowledge.jsonl dist/gpt/mikami_english_question_bank_knowledge.manifest.json
+          test "$(wc -l < dist/gpt/mikami_english_question_bank_knowledge.jsonl)" -eq 10511
+          node tools/validate_mikami_answer_gpt_knowledge.mjs /tmp/mikami-repaired-from-branch.html dist/gpt/mikami_english_question_bank_knowledge.jsonl dist/gpt/mikami_english_question_bank_knowledge.manifest.json | tee dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"full_record_equality": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+          grep -q '"canonical_order_preserved": true' dist/gpt/mikami_english_question_bank_knowledge.validation.json
+
+      - name: Nine-family representative spot-check
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/spotcheck_mikami_answer_gpt_knowledge.mjs /tmp/mikami-repaired-from-branch.html dist/gpt/mikami_english_question_bank_knowledge.jsonl dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"status": "OK"' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"families_required": 9' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          grep -q '"families_passed": 9' dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json
+          cp gpt/mikami_answer_analysis_gpt_instructions.md dist/gpt/
+          cp gpt/mikami_answer_analysis_output_schema.json dist/gpt/
+          cp gpt/README.md dist/gpt/README_答案分析GPT.md
+          cp /tmp/mikami-branch-final-audit.json dist/gpt/mikami_branch_final_audit.json
+
+      - name: Package branch-derived Knowledge bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd dist/gpt
+          zip -9 ../mikami_answer_gpt_branch_knowledge_20260819.zip \
+            mikami_english_question_bank_knowledge.jsonl \
+            mikami_english_question_bank_knowledge.manifest.json \
+            mikami_english_question_bank_knowledge.validation.json \
+            mikami_english_question_bank_knowledge.spotcheck.json \
+            mikami_branch_v4_idempotence.json \
+            mikami_answer_analysis_gpt_instructions.md \
+            mikami_answer_analysis_output_schema.json \
+            README_答案分析GPT.md \
+            mikami_branch_final_audit.json
+
+      - name: Record branch-derived build status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          ZIP='dist/mikami_answer_gpt_branch_knowledge_20260819.zip'
+          VAL='dist/gpt/mikami_english_question_bank_knowledge.validation.json'
+          SPOT='dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json'
+          IDEM='dist/gpt/mikami_branch_v4_idempotence.json'
+          if test -s "$ZIP" && test -s "$VAL" && test -s "$SPOT" && test -s "$IDEM" \
+            && grep -q '"full_record_equality": true' "$VAL" \
+            && grep -q '"canonical_order_preserved": true' "$VAL" \
+            && grep -q '"families_passed": 9' "$SPOT" \
+            && grep -q '"deep_equal_before_after": true' "$IDEM"; then STATUS=PASS; else STATUS=FAIL; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "PROVENANCE=REPAIRED_BRANCH_INDEX_HTML"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "EXPECTED_TOTAL=10513"
+            echo "EXPECTED_ENGLISH=10511"
+            echo "LOSSLESS_RECORD_EQUALITY_REQUIRED=true"
+            echo "CANONICAL_ORDER_REQUIRED=true"
+            echo "V4_IDEMPOTENCE_REQUIRED=true"
+            echo "REPRESENTATIVE_FAMILY_SPOTCHECK_REQUIRED=9"
+            echo "PRIVATE_CANONICAL_EXPOSURE=false"
+            echo "FINAL_PRIVATE_CANONICAL_PROVENANCE_STILL_REQUIRED=true"
+          } > release/generated/answer_gpt_branch_knowledge_20260819.status.txt
+          if test -s "$SPOT"; then cp "$SPOT" release/generated/answer_gpt_branch_knowledge_20260819.spotcheck.json; fi
+          if test -s "$IDEM"; then cp "$IDEM" release/generated/answer_gpt_branch_knowledge_20260819.idempotence.json; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_branch_knowledge_20260819.status.txt release/generated/answer_gpt_branch_knowledge_20260819.spotcheck.json release/generated/answer_gpt_branch_knowledge_20260819.idempotence.json 2>/dev/null || true
+          git commit -m 'record branch-derived answer GPT knowledge build' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          git push origin HEAD:mikami-canonical-repair
+          test "$STATUS" = PASS
+
+      - name: Upload branch-derived Knowledge artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-answer-gpt-branch-knowledge-20260819
+          path: dist/mikami_answer_gpt_branch_knowledge_20260819.zip
+          if-no-files-found: error
