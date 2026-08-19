@@ -45,7 +45,41 @@ try {
   status.checks.default_full_selection_does_not_open_print = true;
   status.checks.large_selection_guidance = true;
 
+  // Bypass only the safety gate to measure whether the new pagination itself can
+  // render the user's full default 662-word range through Chromium's print engine.
   await page.evaluate(() => {
+    state.dataset = 'textbook';
+    const defaultRows = state.currentList.length;
+    const source = DATA.filter(r => r.dataset === 'textbook');
+    state.currentList = source.slice(0, defaultRows);
+    const sheet = document.getElementById('printSheet');
+    sheet.innerHTML = buildMemoryPrintHtml();
+    document.body.classList.remove('test-print','answer-print','memory-print','answer-sheet');
+    document.body.classList.add('print-sheet');
+  });
+  const fullLayout = await page.evaluate(() => ({
+    rows: document.querySelectorAll('#printSheet .rb-mem-row').length,
+    pages: document.querySelectorAll('#printSheet .rb-memory-page').length,
+    maxRowsOnPage: Math.max(...[...document.querySelectorAll('#printSheet .rb-memory-page')].map(p => p.querySelectorAll('.rb-mem-row').length))
+  }));
+  status.full_default_layout = fullLayout;
+  if (fullLayout.rows !== initialCount) throw new Error(`full layout row count mismatch: ${JSON.stringify(fullLayout)}`);
+  if (fullLayout.pages !== Math.ceil(initialCount / 18)) throw new Error(`full layout page count mismatch: ${JSON.stringify(fullLayout)}`);
+  if (fullLayout.maxRowsOnPage > 18) throw new Error(`full layout exceeds 18 rows/page: ${JSON.stringify(fullLayout)}`);
+
+  await page.emulateMedia({ media: 'print' });
+  const pdfStart = Date.now();
+  const pdf = await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
+  const pdfMs = Date.now() - pdfStart;
+  status.full_default_pdf = { render_ms: pdfMs, bytes: pdf.length };
+  if (pdfMs > 30000) throw new Error(`full default PDF render too slow: ${pdfMs}ms`);
+  if (pdf.length < 100000) throw new Error(`full default PDF unexpectedly small: ${pdf.length}`);
+  status.checks.full_default_662_paginated_layout = true;
+  status.checks.full_default_print_engine_render = true;
+
+  await page.emulateMedia({ media: 'screen' });
+  await page.evaluate(() => {
+    document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
     state.dataset = 'textbook';
     state.currentList = DATA.filter(r => r.dataset === 'textbook').slice(0, 45);
     window.__alerts = [];
