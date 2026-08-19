@@ -39,6 +39,7 @@ jobs:
           node --check tools/test_final_canonical_audit.mjs
           node --check tools/test_export_mikami_answer_gpt_knowledge.mjs
           node --check tools/test_spotcheck_mikami_answer_gpt_knowledge.mjs
+          node --check tools/test_mikami_answer_gpt_assets.mjs
       - name: Targeted patterns V4 regression
         run: node tools/test_targeted_patterns_v4.mjs
       - name: Relative-pronoun V4 regression
@@ -57,6 +58,8 @@ jobs:
         run: node tools/test_export_mikami_answer_gpt_knowledge.mjs
       - name: Answer GPT representative family spot-check regression
         run: node tools/test_spotcheck_mikami_answer_gpt_knowledge.mjs
+      - name: Answer GPT instruction + schema contract regression
+        run: node tools/test_mikami_answer_gpt_assets.mjs
       - name: Safety stop against unrelated app V4
         run: |
           if node tools/run_mikami_pipeline_v4.mjs index.html /tmp/not-canonical-v4.html 2>/tmp/v4.err; then
@@ -96,6 +99,7 @@ jobs:
           ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION=enabled
           ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR=enabled
           ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK=enabled
+          ANSWER_GPT_ASSET_CONTRACT_REGRESSION=enabled
           INHERITS_V3=enabled
           EOF
           git config user.name 'github-actions[bot]'
