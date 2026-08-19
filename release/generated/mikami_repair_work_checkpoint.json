@@ -1,7 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v1",
-  "updated_at_jst": "2026-08-19T19:28:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v2",
+  "updated_at_jst": "2026-08-19T19:37:00+09:00",
   "branch": "mikami-canonical-repair",
+  "branch_head_before_checkpoint_update": "50faba8d64c0495521131ff8e896171122543bb6",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
     "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
@@ -9,41 +10,57 @@
     "expected_bytes": 4035500,
     "expected_question_count": 10513,
     "expected_english_question_count": 10511,
-    "authenticated_drive_metadata_verified_at_jst": "2026-08-19T19:26:00+09:00",
-    "authenticated_drive_size_verified": 4035500
+    "authenticated_drive_size_verified": 4035500,
+    "verified_real_run_sha256": "27454418852917b12153d90a0267715c9fcf1456b179a1ed620395eedde603e3"
+  },
+  "authoritative_real_canonical_run": {
+    "run_id": 32228306116,
+    "commit": "cc5a4ed056691d10d7c80c1fa34e6f58da0c92f5",
+    "status": "FAIL",
+    "source_downloaded_bytes": 4035500,
+    "question_count_verified": 10513,
+    "english_question_count_verified": 10511,
+    "failed_stage": "V4/01-v3 -> run_mikami_pipeline_v3 -> fix_mikami_canonical quality gate",
+    "failure_classes": [
+      "legacy infinitive-transform validator false positives around normal Do/Does questions",
+      "comparison placeholder/pronoun defects",
+      "legacy 3sg/gerund defects",
+      "duplicate pronoun choices"
+    ],
+    "important": "This exact-canonical failure predates the post-failure repair commits on the current branch. A green workflow conclusion from this run is not a PASS; release/generated/finalize_20260819.status.txt is authoritative."
+  },
+  "post_failure_repairs_verified_in_current_repo": [
+    "repair_canonical_preflight_v5.mjs exists and repairs malformed auxiliary/case, comparison, 3sg/gerund and duplicate-choice legacy patterns before strict repair",
+    "repair_targeted_patterns_v3.mjs now runs the V5 preflight before repair_targeted_patterns_v4.mjs",
+    "fix_mikami_canonical.mjs no longer treats normal sentence-initial Do/Does questions as infinitive-transform errors; only malformed legacy token handling remains",
+    "global legacy quality cleanup and additional GEN/M2/M3 repair stages are present",
+    "durable V3/V4 checkpoint runners are present"
+  ],
+  "latest_regression_ci": {
+    "run_id": 32241779841,
+    "source_commit": "97c52b7673efc1ee6f823a5b3a5bf291b4ba09ae",
+    "status": "PASS",
+    "scope": "regression/integration/safety/audit fixtures; this is not proof that the exact canonical passes",
+    "artifact_id": 9361060217,
+    "artifact_name": "mikami-canonical-repair-v4-bundle-20260819",
+    "artifact_sha256": "9c05b4ff1970454cb91fc91fa4c48a0e54c72b441ec01284b09ae99718813c55"
   },
   "durable_resume": {
     "enabled": true,
     "runner": "tools/run_mikami_pipeline_v4.mjs",
     "checkpoint_version": "mikami-v4-resume-1",
-    "checkpoint_directory_default": "<output.html>.checkpoints",
-    "behavior": [
-      "source SHA-256 is recorded and mismatched source checkpoints are rejected",
-      "each major V4 stage writes persistent output and audit before the next stage",
-      "completed valid stages are skipped on rerun",
-      "failed/running stage and error are recorded in state.json",
-      "checkpoint files are intentionally not deleted after failure or success"
-    ]
+    "checkpoint_directory_default": "<output.html>.checkpoints"
   },
-  "last_completed_work": [
-    "integrated targeted-pattern V4 repairs",
-    "added relative-pronoun V4 and mid-sentence blank-case V4 gates",
-    "added final canonical invariant audit tooling",
-    "made V4 runner durable/resumable",
-    "fixed syntax error in test_fix_mikami_global_quality_v5.mjs",
-    "confirmed GitHub Actions V4 CI run 32241779841 passed all regression/integration/safety/audit steps",
-    "confirmed V4 CI artifact mikami-canonical-repair-v4-bundle-20260819 id 9361060217 digest sha256:9c05b4ff1970454cb91fc91fa4c48a0e54c72b441ec01284b09ae99718813c55",
-    "verified the authenticated Google Drive canonical is still exactly 4035500 bytes and streamed it into the current ChatGPT runtime"
-  ],
-  "current_state": "V4_CI_PASS_CANONICAL_AUTH_VERIFIED_WAITING_LOCAL_EXECUTION_RETRY",
+  "current_state": "CURRENT_BRANCH_POST_FAILURE_FIXES_READY_NEEDS_EXACT_CANONICAL_RERUN",
+  "current_blocker": "The exact canonical is authenticated and verified in connected Google Drive, but the prior temporary signed transfer URL embedded in finalize-mikami-canonical-drive.yml expired. The local container/python execution layer has also returned ClientResponseError. Do not publish the private canonical just to unblock CI.",
   "next_actions": [
-    "retry local execution of tools/run_mikami_pipeline_v4.mjs against the authenticated 4035500-byte Drive canonical as soon as the local execution layer recovers",
-    "resume from the V4 durable checkpoint rather than restarting if a partial run exists",
-    "verify 10513 total / 10511 English / zero final quality errors / vocab and grammar gates",
-    "run final canonical invariant audit in canonical mode",
-    "package repaired HTML plus pipeline audit, final audit and README as ZIP",
+    "run the CURRENT branch, not cc5a4ed, against the exact 4035500-byte canonical",
+    "if it fails, record the first current failing stage and exact IDs; do not rely on the old failure list",
+    "verify 10513 total / 10511 English / unique IDs 10513 / final_quality_errors=0",
+    "verify vocab coordinate v7, prerequisite grammar gate, quality gate, relative unique-blank gate, and mid-sentence blank-case gate",
+    "run tools/audit_final_canonical.mjs in canonical mode",
+    "package repaired HTML, pipeline audit, final audit and README as ZIP",
     "do not modify or merge main"
   ],
-  "known_blocker": "At 2026-08-19T19:26+09:00, ChatGPT local container/python execution returned ClientResponseError even though the connected Google Drive source was successfully authenticated and downloaded. GitHub Actions itself cannot anonymously fetch the private Drive canonical. Do not make the Drive source public without explicit permission. Retry local execution on the next continuation run.",
-  "resume_instruction": "On any later chat/message timeout, read this file first, then continue from current_state/next_actions instead of restarting or guessing."
+  "resume_instruction": "Always inspect finalize_20260819.status.txt/log and current branch head before trusting this checkpoint. Resume from current_state and never report exact-canonical PASS until a current-branch real canonical run passes."
 }
