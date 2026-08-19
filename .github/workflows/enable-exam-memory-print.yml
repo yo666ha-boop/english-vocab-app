@@ -1,0 +1,36 @@
+name: Enable exam memory print
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/enable_exam_memory_print.mjs'
+      - '.github/workflows/enable-exam-memory-print.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Enable exam memory print
+        run: node tools/enable_exam_memory_print.mjs
+      - name: Audit vocabulary data unchanged
+        run: |
+          node tools/extract_vocab_data.mjs
+          python3 tools/audit_vocab_structure.py
+          node tools/diagnose_exam_pos.mjs
+      - name: Commit updated app
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add index.html audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'fix: enable memory print for exam vocabulary'
+          git push origin HEAD:main
