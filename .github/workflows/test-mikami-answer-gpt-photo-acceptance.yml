@@ -1,0 +1,55 @@
+name: Test Mikami Answer GPT Photo Acceptance Contract
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json'
+      - 'gpt/mikami_answer_analysis_gpt_instructions.md'
+      - 'gpt/mikami_answer_analysis_output_schema.json'
+      - 'tools/test_mikami_answer_gpt_photo_acceptance_contract.mjs'
+      - '.github/workflows/test-mikami-answer-gpt-photo-acceptance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run photo/A4 acceptance contract
+        run: node tools/test_mikami_answer_gpt_photo_acceptance_contract.mjs | tee /tmp/photo-contract.json
+      - name: Record status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          if test -s /tmp/photo-contract.json && grep -q '"status": "PASS"' /tmp/photo-contract.json; then STATUS=PASS; else STATUS=FAIL; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "PHOTO_CASES=4"
+            echo "A4_CONTRACT=portrait_1_to_2_pages"
+            echo "CUSTOM_GPT_RUNTIME_TEST=false"
+            echo "REAL_PHOTO_TEST_PENDING=true"
+          } > release/generated/answer_gpt_photo_acceptance_contract.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_photo_acceptance_contract.status.txt
+          git commit -m 'record answer GPT photo acceptance contract' || true
+          git pull --rebase origin mikami-canonical-repair || true
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            git pull --rebase origin mikami-canonical-repair || true
+            sleep 2
+          done
+          test "$STATUS" = PASS
