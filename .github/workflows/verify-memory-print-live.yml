@@ -32,9 +32,9 @@ jobs:
             sleep 5
           done
           test "$LIVE" = "$EXPECTED"
-          grep -q 'MEMORY_PRINT_MAX_ROWS = 300' /tmp/live.html
+          grep -q 'MEMORY_PRINT_MAX_ROWS = 1000' /tmp/live.html
           grep -q 'MEMORY_PRINT_ROWS_PER_PAGE = 18' /tmp/live.html
-          grep -q '300 語以下' /tmp/live.html
+          grep -q '1000 語以下' /tmp/live.html
           grep -q 'rb-memory-page' /tmp/live.html
           grep -q 'r.elem_category_short || r.elem_category || r.elem_type' /tmp/live.html
           grep -q 'memory-print-safe-final' /tmp/live.html
@@ -45,7 +45,7 @@ jobs:
             "page_url": "$PAGE_URL",
             "index_sha256": "$EXPECTED",
             "live_matches_main": true,
-            "max_rows": 300,
+            "max_rows": 1000,
             "rows_per_page": 18,
             "large_selection_guard_present": true,
             "pagination_present": true,
@@ -61,5 +61,5 @@ jobs:
           git pull --rebase --autostash origin main
           git add audit/MEMORY_PRINT_LIVE.json
           git diff --cached --quiet && exit 0
-          git commit -m 'test: record live memory print final fix'
+          git commit -m 'test: record live 1000-word memory print fix'
           git push origin HEAD:main
