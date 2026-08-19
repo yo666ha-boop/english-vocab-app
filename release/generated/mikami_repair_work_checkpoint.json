@@ -1,8 +1,7 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v3",
-  "updated_at_jst": "2026-08-19T20:22:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v4",
+  "updated_at_jst": "2026-08-19T20:45:00+09:00",
   "branch": "mikami-canonical-repair",
-  "branch_head_before_checkpoint_update": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
     "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
@@ -16,17 +15,10 @@
     "actual_unique_ids": 10513,
     "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432"
   },
-  "previous_authoritative_failure": {
-    "run_id": 32228306116,
-    "commit": "cc5a4ed056691d10d7c80c1fa34e6f58da0c92f5",
-    "status": "FAIL",
-    "failed_stage": "V4/01-v3 -> run_mikami_pipeline_v3 -> fix_mikami_canonical quality gate",
-    "note": "Historical only; superseded by the current-branch exact canonical PASS below."
-  },
-  "current_exact_canonical_run": {
-    "status": "PASS",
-    "branch_commit": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
-    "execution_source": "connected Google Drive raw file, 4035500 bytes",
+  "question_bank_completion": {
+    "status": "PASS_COMPLETE",
+    "execution_commit": "5f203d6c254e167ebb0b0e3a5c24852f78778a83",
+    "status_reconciled_commit": "2d906c678dbc432616908831816dda657ff99f9a",
     "runner": "tools/run_mikami_pipeline_v4.mjs",
     "question_count": 10513,
     "english_question_count": 10511,
@@ -40,43 +32,58 @@
     "relative_unique_blank_gate": true,
     "mid_sentence_blank_case_gate": true,
     "final_canonical_audit": "PASS",
-    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f"
+    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
+    "package_name": "みかみ塾英語問題アプリ_正本修正版_20260819.zip",
+    "package_sha256": "ebb2f2435d85d6c95da4ce01ec7686bd13a702e3092037f7870788d48303b63e",
+    "historical_failed_run": "32228306116 is superseded by this exact-current-branch PASS"
   },
-  "current_branch_exact_run_repairs": [
-    "extended M3 word-order repair for additional subjects, times, destinations, sports and go-activities",
-    "preserved source subjects across M3 progressive/future/present-perfect question transformations and fixed sleepy be-verb repair",
-    "removed legacy practice / the / tennis token sequences during canonical preflight",
-    "applied M3C relative-pronoun semantic repairs to selection items as well as blanks",
-    "included had in mid-sentence blank capitalization normalization"
-  ],
-  "regression_verification_after_repairs": {
-    "status": "PASS",
-    "tests": [
-      "test_m3_word_order_v4.mjs",
-      "test_relative_pronouns_v4.mjs",
-      "test_mid_sentence_blank_case_v4.mjs",
-      "test_m3_review_v2.mjs",
-      "test_pipeline_v4_integration.mjs",
-      "test_final_canonical_audit.mjs"
+  "answer_analysis_gpt_phase": {
+    "status": "IN_PROGRESS",
+    "purpose": "eliminate the old copy-prompt / paste-ChatGPT-response round trip; analyze answer photos directly against the repaired question-bank knowledge and produce a printable report in GPT",
+    "completed_this_cycle": [
+      {
+        "commit": "79fcb51f5d67e0c0d1bf58bbdc622259d07b2b54",
+        "file": "tools/export_mikami_answer_gpt_knowledge.mjs",
+        "result": "added exact-canonical English knowledge exporter with 10513/10511/unique-ID invariants and SHA manifest"
+      },
+      {
+        "commit": "8aee029d59d518dce8b387a53d2d6727f6d26a11",
+        "file": "gpt/mikami_answer_analysis_gpt_instructions.md",
+        "result": "added formal ID-based photo-analysis, prerequisite diagnosis, return-instruction and print-report rules"
+      },
+      {
+        "commit": "afa6666a60a4989edf113091b7620092aa2e4961",
+        "file": "gpt/mikami_answer_analysis_output_schema.json",
+        "result": "added stable structured report schema for future app linkage"
+      },
+      {
+        "commit": "097362c56e3406c2bcae37536593826e2002671d",
+        "file": "gpt/README.md",
+        "result": "documented no-pasteback operating flow and completion gates"
+      },
+      {
+        "commit": "5f51e5bf1f6a25a8e9f651a725b3ed14a72d9d76",
+        "file": ".github/workflows/build-mikami-answer-gpt-knowledge.yml",
+        "result": "added reproducible workflow: exact canonical -> V4 repair -> final audit -> 10511-record GPT knowledge -> ZIP artifact"
+      }
+    ],
+    "source_app_observation": {
+      "current_print_layout_includes_question_id": true,
+      "current_photo_flow": "manual prompt copy -> ChatGPT -> response pasteback",
+      "migration_rule": "keep old UI only as fallback until the direct GPT workflow is tested"
+    },
+    "current_blocker": "The knowledge JSONL/bundle still needs an execution against the repaired exact canonical and a real answer-photo test. The build workflow is ready; do not claim the GPT phase complete before those checks pass.",
+    "next_actions": [
+      "execute the knowledge exporter on the exact repaired canonical and verify exactly 10511 JSONL records plus manifest SHA",
+      "spot-check multiple known IDs against canonical q/a/category metadata",
+      "assemble/upload the knowledge bundle to the answer-analysis GPT",
+      "test a fully correct original answer photo, a multi-category wrong-answer photo, an unreadable photo, and a school-test photo",
+      "verify A4 printable report quality and prerequisite return-point accuracy",
+      "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "package": {
-    "name": "みかみ塾英語問題アプリ_正本修正版_20260819.zip",
-    "contains": [
-      "repaired HTML",
-      "pipeline V4 audit",
-      "final canonical audit",
-      "README"
-    ],
-    "sha256": "ebb2f2435d85d6c95da4ce01ec7686bd13a702e3092037f7870788d48303b63e"
-  },
-  "durable_resume": {
-    "enabled": true,
-    "runner": "tools/run_mikami_pipeline_v4.mjs",
-    "checkpoint_version": "mikami-v4-resume-1"
-  },
-  "current_state": "EXACT_CANONICAL_CURRENT_BRANCH_PASS_COMPLETE",
-  "current_blocker": null,
-  "next_actions": [],
-  "completion": "All requested exact-canonical completion gates passed. Keep main unchanged."
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_IN_PROGRESS",
+  "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
+  "overall_completion": false,
+  "completion_note": "The question-bank repair itself is complete and verified. The wider follow-on answer-analysis GPT workflow has started and must not be marked complete until knowledge generation and real photo tests pass."
 }
