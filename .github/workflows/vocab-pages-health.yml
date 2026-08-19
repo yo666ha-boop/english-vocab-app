@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'tools/diagnose_exam_pos.mjs'
       - '.github/workflows/vocab-pages-health.yml'
   workflow_dispatch:
 
@@ -65,38 +66,27 @@ jobs:
           const { webkit } = require('playwright');
           (async () => {
             const browser = await webkit.launch();
-            const context = await browser.newContext({
-              viewport: { width: 390, height: 844 },
-              deviceScaleFactor: 3,
-              isMobile: true,
-              hasTouch: true,
-              userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1'
-            });
+            const context = await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true,userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 26_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1'});
             const page = await context.newPage();
-            await page.goto(process.env.PAGE_URL, { waitUntil: 'networkidle', timeout: 60000 });
-            await page.locator('.title', { hasText: '英単語アプリ（統合版）' }).waitFor({ timeout: 15000 });
-            const tabs = page.locator('button.tab');
-            if (await tabs.count() !== 3) throw new Error('dataset tab count != 3');
-            const labels = await tabs.allTextContents();
-            if (JSON.stringify(labels) !== JSON.stringify(['教科書版','高校入試版','小学生版'])) throw new Error('dataset tab labels mismatch: '+JSON.stringify(labels));
+            await page.goto(process.env.PAGE_URL,{waitUntil:'networkidle',timeout:60000});
+            await page.locator('.title',{hasText:'英単語アプリ（統合版）'}).waitFor({timeout:15000});
+            const tabs=page.locator('button.tab');
+            if(await tabs.count()!==3)throw new Error('dataset tab count != 3');
+            const labels=await tabs.allTextContents();
+            if(JSON.stringify(labels)!==JSON.stringify(['教科書版','高校入試版','小学生版']))throw new Error('dataset tab labels mismatch: '+JSON.stringify(labels));
             await page.locator('#makeTestBtn').click();
-            await page.waitForFunction(() => document.querySelector('#testSummary')?.textContent?.includes('10問作成済み'), null, { timeout: 15000 });
-            if (await page.locator('.test-card').count() !== 10) throw new Error('test cards != 10');
-            if (await page.locator('.ans.show').count() !== 0) throw new Error('answers visible before toggle');
+            await page.waitForFunction(()=>document.querySelector('#testSummary')?.textContent?.includes('10問作成済み'),null,{timeout:15000});
+            if(await page.locator('.test-card').count()!==10)throw new Error('test cards != 10');
+            if(await page.locator('.ans.show').count()!==0)throw new Error('answers visible before toggle');
             await page.locator('#toggleAnswersBtn').click();
-            if (await page.locator('.ans.show').count() !== 10) throw new Error('answers not shown after toggle');
+            if(await page.locator('.ans.show').count()!==10)throw new Error('answers not shown after toggle');
             await page.locator('button.tab[data-dataset="exam"]').click();
-            if (!(await page.locator('button.tab[data-dataset="exam"]').getAttribute('class'))?.includes('active')) throw new Error('exam tab did not activate');
+            if(!(await page.locator('button.tab[data-dataset="exam"]').getAttribute('class'))?.includes('active'))throw new Error('exam tab did not activate');
             await page.locator('button.tab[data-dataset="elementary"]').click();
-            if (!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active')) throw new Error('elementary tab did not activate');
+            if(!(await page.locator('button.tab[data-dataset="elementary"]').getAttribute('class'))?.includes('active'))throw new Error('elementary tab did not activate');
             await page.locator('button.tab[data-dataset="textbook"]').click();
-            if (!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active')) throw new Error('textbook tab did not reactivate');
-            const status = {
-              status: 'pass', page_url: process.env.PAGE_URL, index_sha256: process.env.INDEX_SHA,
-              engine: 'Playwright WebKit', mobile_viewport: '390x844',
-              checks: {page_loaded:true,title_visible:true,three_dataset_tabs:true,default_10_question_test_created:true,ten_test_cards_rendered:true,answer_toggle_works:true,exam_tab_switch_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},
-              checked_at_utc: new Date().toISOString()
-            };
+            if(!(await page.locator('button.tab[data-dataset="textbook"]').getAttribute('class'))?.includes('active'))throw new Error('textbook tab did not reactivate');
+            const status={status:'pass',page_url:process.env.PAGE_URL,index_sha256:process.env.INDEX_SHA,engine:'Playwright WebKit',mobile_viewport:'390x844',checks:{page_loaded:true,title_visible:true,three_dataset_tabs:true,default_10_question_test_created:true,ten_test_cards_rendered:true,answer_toggle_works:true,exam_tab_switch_works:true,elementary_tab_switch_works:true,textbook_tab_switch_back_works:true},checked_at_utc:new Date().toISOString()};
             fs.mkdirSync('audit',{recursive:true});
             fs.writeFileSync('audit/PAGES_WEBKIT_SMOKE.json',JSON.stringify(status,null,2)+'\n');
             await page.screenshot({path:'audit/PAGES_WEBKIT_SMOKE.png'});
