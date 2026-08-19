@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v5",
-  "updated_at_jst": "2026-08-19T21:46:00+09:00",
+  "updated_at_jst": "2026-08-19T21:52:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -99,6 +99,26 @@
         ]
       }
     ],
+    "latest_runtime_probe": {
+      "checked_at_jst": "2026-08-19T21:52:00+09:00",
+      "branch_head_before_checkpoint_update": "386e5086ce5e0d73eab1b2670b25423a956b2cdc",
+      "ci_run_32254331178_reverified": "completed/success",
+      "private_drive_fetch": {
+        "status": "PASS",
+        "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
+        "file_size_bytes": 4035500,
+        "user_scoped_file_id": "sediment://file_00000000d6b881f6a24adabe8eecac2c",
+        "public_exposure": false
+      },
+      "execution_transport": {
+        "container": "ClientError",
+        "python": "ClientError",
+        "python_user_visible": "ClientError",
+        "conclusion": "execution transport remains unavailable; the exact private canonical and answer-GPT code are ready, but Node V4/Knowledge generation cannot be executed in this cycle"
+      },
+      "safe_github_actions_source_url": "not available",
+      "security_decision": "did not make canonical public and did not commit the 4MB private canonical to the public repository"
+    },
     "source_app_observation": {
       "current_print_layout_includes_question_id": true,
       "current_photo_flow": "manual prompt copy -> ChatGPT -> response pasteback",
@@ -106,13 +126,13 @@
     },
     "current_blocker": {
       "stage": "execute Knowledge build against exact private canonical",
-      "detail": "The exact private canonical can now be safely fetched through the authenticated Drive connector as the exact 4,035,500-byte raw file without public exposure. However, both container and python execution transports still fail with ClientError/ClientResponseError, so the existing Node V4 -> Knowledge exporter -> validator -> spot-check pipeline cannot yet be executed against that mounted file. GitHub Actions still requires a fresh authenticated/signed source URL and must not be unblocked by making the canonical public or committing it to the public repo.",
-      "last_confirmed_local_error": "container ClientError and python ClientError while attempting to inspect/run the mounted exact canonical during this cycle",
-      "important_progress": "private-source transfer itself is no longer the local-path blocker; once execution transport recovers, the exact canonical is directly available for the real build",
+      "detail": "The exact private canonical is safely retrievable through the authenticated Drive connector as the exact 4,035,500-byte raw file without public exposure. The execution transports remain unavailable with ClientError across container, python and python_user_visible, so the existing Node V4 -> Knowledge exporter -> validator -> spot-check pipeline cannot yet be executed against that mounted file. GitHub Actions still requires a fresh authenticated/signed source URL and must not be unblocked by making the canonical public or committing it to the public repo.",
+      "last_confirmed_local_error": "2026-08-19 21:52 JST: container ClientError; python ClientError; python_user_visible ClientError",
+      "important_progress": "private-source transfer is confirmed healthy again; current V4 CI and answer-GPT asset contracts remain green",
       "code_readiness": "PASS: exporter, lossless validator, 9-family spot-check, instruction/schema contract and current V4 CI all pass"
     },
     "next_actions": [
-      "retry executable local layer first; when it recovers, use the already authenticated private canonical transfer path, run V4 on the exact 4,035,500-byte source, export Knowledge, and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
+      "retry executable local layer first; when it recovers, use the authenticated private canonical transfer path, run V4 on the exact 4,035,500-byte source, export Knowledge, and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
       "if a safe temporary authenticated/signed source URL becomes available before local execution recovers, dispatch build-mikami-answer-gpt-knowledge.yml; never make the Drive source public merely to run CI",
       "inspect the real spotcheck report for actual IDs/q/a/category across all 9 families",
       "assemble/register the finished Knowledge bundle in the answer-analysis GPT",
@@ -121,8 +141,8 @@
       "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_PRIVATE_CANONICAL_MOUNT_READY_WAITING_EXECUTION_TRANSPORT",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_PRIVATE_CANONICAL_FETCH_READY_EXECUTION_TRANSPORT_STILL_BLOCKED",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Problem-bank repair is complete. The private exact canonical is now safely retrievable into a mounted file path, and the answer-GPT instruction/schema contract was added and passed in CI. The remaining critical path is execution of the real Knowledge build against that exact private canonical, followed by real photo tests and print-quality validation."
+  "completion_note": "Problem-bank repair remains complete and answer-GPT code/regressions remain green. In this cycle the exact private canonical was re-fetched safely at 4,035,500 bytes and CI 32254331178 was reverified successful. Execution transport is still the only critical blocker; resume by probing it, then immediately perform the real Knowledge build and proceed to real photo/A4 tests."
 }
