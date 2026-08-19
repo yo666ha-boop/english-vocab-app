@@ -26,11 +26,13 @@ jobs:
           node --check tools/repair_mid_sentence_blank_case_v4.mjs
           node --check tools/fix_relative_runtime_gate_v4.mjs
           node --check tools/run_mikami_pipeline_v4.mjs
+          node --check tools/audit_final_canonical.mjs
           node --check tools/test_targeted_patterns_v4.mjs
           node --check tools/test_relative_pronouns_v4.mjs
           node --check tools/test_mid_sentence_blank_case_v4.mjs
           node --check tools/test_relative_runtime_gate_v4.mjs
           node --check tools/test_pipeline_v4_integration.mjs
+          node --check tools/test_final_canonical_audit.mjs
       - name: Targeted patterns V4 regression
         run: node tools/test_targeted_patterns_v4.mjs
       - name: Relative-pronoun V4 regression
@@ -41,6 +43,8 @@ jobs:
         run: node tools/test_relative_runtime_gate_v4.mjs
       - name: Full V4 pipeline integration
         run: node tools/test_pipeline_v4_integration.mjs
+      - name: Final canonical invariant audit regression
+        run: node tools/test_final_canonical_audit.mjs
       - name: Safety stop against unrelated app V4
         run: |
           if node tools/run_mikami_pipeline_v4.mjs index.html /tmp/not-canonical-v4.html 2>/tmp/v4.err; then
@@ -75,6 +79,7 @@ jobs:
           RELATIVE_PRONOUN_V4=enabled
           RELATIVE_UNIQUE_BLANK_GATE=enabled
           MID_SENTENCE_BLANK_CASE_V4=enabled
+          FINAL_CANONICAL_INVARIANT_AUDIT=enabled
           INHERITS_V3=enabled
           EOF
           git config user.name 'github-actions[bot]'
