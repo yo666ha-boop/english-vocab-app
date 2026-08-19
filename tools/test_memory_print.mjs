@@ -31,7 +31,6 @@ try {
   status.initial_current_list_count = initialCount;
   if (initialCount !== 662) throw new Error(`expected default 662-word selection, got ${initialCount}`);
 
-  // Final desired behavior: the normal 662-word range prints directly because it is paginated.
   const defaultStart = Date.now();
   await page.locator('#memoryPrintBtn').click();
   await page.waitForFunction(() => window.__printCalled === 1, null, { timeout: 10000 });
@@ -54,7 +53,6 @@ try {
   status.checks.default_662_paginated_37_pages = true;
   status.checks.default_max_18_rows_per_page = true;
 
-  // Exercise Chromium's real print compositor on the generated 37-page document.
   await page.emulateMedia({ media: 'print' });
   const pdfStart = Date.now();
   const pdf = await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
@@ -65,7 +63,6 @@ try {
   status.checks.full_default_print_engine_render = true;
   await page.emulateMedia({ media: 'screen' });
 
-  // Above the final safety limit, return immediately instead of entering print layout.
   await page.evaluate(() => {
     document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
     state.dataset = 'textbook';
@@ -86,7 +83,6 @@ try {
   status.checks.over_1000_does_not_open_print = true;
   status.checks.over_1000_guidance = true;
 
-  // Normal smaller range pagination remains exact.
   await page.evaluate(() => {
     state.dataset = 'textbook';
     state.currentList = DATA.filter(r => r.dataset === 'textbook').slice(0, 45);
@@ -106,7 +102,34 @@ try {
   if (textbook.prints !== 1) throw new Error('45-word selection did not invoke print exactly once');
   status.checks.textbook_45_paginated_18_18_9 = true;
 
-  // Elementary grouping must use its real category fields, not fall back to その他.
+  // Exam vocabulary must support the same memory-print workflow, grouped by exam classification.
+  await page.locator('button.tab[data-dataset="exam"]').click();
+  await page.evaluate(() => {
+    document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
+    state.dataset = 'exam';
+    state.currentList = DATA.filter(r => r.dataset === 'exam').slice(0, 30);
+    window.__alerts = [];
+    window.__printCalled = 0;
+  });
+  await page.locator('#memoryPrintBtn').click();
+  await page.waitForFunction(() => window.__printCalled === 1, null, { timeout: 10000 });
+  const exam = await page.evaluate(() => ({
+    pages: document.querySelectorAll('#printSheet .rb-memory-page').length,
+    rows: [...document.querySelectorAll('#printSheet .rb-memory-page')].map(p => p.querySelectorAll('.rb-mem-row').length),
+    prints: window.__printCalled,
+    alerts: window.__alerts.slice(),
+    firstHeading: document.querySelector('#printSheet .rb-memory-group h3')?.textContent?.trim() || ''
+  }));
+  status.exam_30 = exam;
+  if (exam.alerts.length) throw new Error(`exam memory print unexpectedly alerted: ${JSON.stringify(exam.alerts)}`);
+  if (exam.prints !== 1) throw new Error('exam memory print did not invoke print exactly once');
+  if (exam.pages !== 2) throw new Error(`30 exam rows should make 2 pages: ${JSON.stringify(exam)}`);
+  if (exam.rows.join(',') !== '18,12') throw new Error(`wrong exam pagination: ${JSON.stringify(exam)}`);
+  if (!exam.firstHeading || exam.firstHeading === 'その他') throw new Error(`exam memory group heading broken: ${exam.firstHeading}`);
+  status.checks.exam_memory_print_enabled = true;
+  status.checks.exam_30_paginated_18_12 = true;
+  status.checks.exam_group_heading_works = true;
+
   await page.evaluate(() => {
     document.body.classList.remove('test-print','answer-print','memory-print','print-sheet','answer-sheet');
     state.dataset = 'elementary';
