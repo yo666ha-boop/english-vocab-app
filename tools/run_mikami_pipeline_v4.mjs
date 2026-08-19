@@ -11,12 +11,14 @@ if(!inputPath){
 }
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-v4-pipeline-'));
 const v3=path.join(tmp,'01-v3.html');
-const rel=path.join(tmp,'02-relative.html');
-const blankCase=path.join(tmp,'03-blank-case.html');
+const targeted=path.join(tmp,'02-targeted-v4.html');
+const rel=path.join(tmp,'03-relative.html');
+const blankCase=path.join(tmp,'04-blank-case.html');
 const run=(script,args)=>execFileSync(process.execPath,[script,...args],{stdio:'inherit'});
 try{
   run('tools/run_mikami_pipeline_v3.mjs',[inputPath,v3]);
-  run('tools/repair_relative_pronouns_v4.mjs',[v3,rel]);
+  run('tools/repair_targeted_patterns_v4.mjs',[v3,targeted]);
+  run('tools/repair_relative_pronouns_v4.mjs',[targeted,rel]);
   run('tools/repair_mid_sentence_blank_case_v4.mjs',[rel,blankCase]);
   run('tools/fix_relative_runtime_gate_v4.mjs',[blankCase,outputPath]);
 
@@ -50,6 +52,7 @@ try{
   if(!out.includes("if (!/who\\s*\\/\\s*which/i.test(q)) return false;")) throw new Error('FINAL V4 relative runtime gate missing');
 
   const v3Audit=JSON.parse(fs.readFileSync(v3+'.pipeline-v3.audit.json','utf8'));
+  const targetedAudit=JSON.parse(fs.readFileSync(targeted+'.targeted-v3.audit.json','utf8'));
   const relAudit=JSON.parse(fs.readFileSync(rel+'.relative-pronoun-v4.audit.json','utf8'));
   const blankAudit=JSON.parse(fs.readFileSync(blankCase+'.mid-sentence-blank-case-v4.audit.json','utf8'));
   const report={
@@ -58,10 +61,10 @@ try{
     output:outputPath,
     question_count:v3Audit.question_count,
     inherited_pipeline:'V3',
-    v3:v3Audit,
+    targeted_patterns_v4_changed:targetedAudit.changed,
     relative_pronoun_v4_changed:relAudit.changed,
     mid_sentence_blank_case_v4_changed:blankAudit.changed,
-    gates:{...v3Audit.gates,relative_pronoun_unique_blank:true,mid_sentence_blank_case:true},
+    gates:{...v3Audit.gates,targeted_patterns_v4:true,relative_pronoun_unique_blank:true,mid_sentence_blank_case:true},
     final_quality_errors:0
   };
   fs.writeFileSync(outputPath+'.pipeline-v4.audit.json',JSON.stringify(report,null,2),'utf8');
