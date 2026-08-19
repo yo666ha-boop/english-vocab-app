@@ -1,0 +1,75 @@
+{
+  "version": "mikami-answer-gpt-photo-acceptance-v1",
+  "cases": [
+    {
+      "id": "correct_original",
+      "source_mode": "mikami_canonical",
+      "description": "みかみ塾オリジナル答案・全問正解",
+      "required_behaviors": [
+        "visible_problem_ids_are_exact_matched_to_knowledge",
+        "no_wrong_answer_is_invented",
+        "correct_count_equals_judged_count_when_all_visible_answers_are_correct",
+        "root_causes_may_be_empty",
+        "next_actions_remain_concrete_and_non_punitive"
+      ]
+    },
+    {
+      "id": "multi_category_errors",
+      "source_mode": "mikami_canonical",
+      "description": "複数カテゴリの誤答を含む答案",
+      "required_behaviors": [
+        "each_visible_problem_id_is_exact_matched_to_knowledge",
+        "wrong_answers_are_classified_per_question",
+        "root_causes_are_limited_to_three",
+        "return_points_are_limited_to_three",
+        "surface_unit_is_not_automatically_used_as_return_point",
+        "evidence_question_numbers_or_ids_are_attached"
+      ]
+    },
+    {
+      "id": "unreadable_answer",
+      "source_mode": "mikami_canonical",
+      "description": "不鮮明・判読不能箇所を含む答案",
+      "required_behaviors": [
+        "unreadable_text_is_not_guessed",
+        "unreadable_questions_use_held_status",
+        "held_questions_are_excluded_from_accuracy_denominator",
+        "unreadable_or_missing_is_reported",
+        "unclear_id_is_not_inferred_from_similar_problem"
+      ]
+    },
+    {
+      "id": "school_test",
+      "source_mode": "school_test",
+      "description": "学校テスト写真・正本外問題",
+      "required_behaviors": [
+        "canonical_knowledge_is_not_falsely_claimed_as_source",
+        "only_visible_problem_text_student_answer_and_marking_are_used",
+        "missing_regions_are_not_scored",
+        "general_grammar_judgment_is_labeled_when_used",
+        "reading_errors_are_separated_into_vocabulary_structure_reference_timeline_content_evidence"
+      ]
+    }
+  ],
+  "a4_report_acceptance": {
+    "orientation": "portrait",
+    "target_pages_min": 1,
+    "target_pages_max": 2,
+    "required_sections": [
+      "みかみ塾 英語答案分析レポート",
+      "基本情報",
+      "1. 今回できていたこと",
+      "2. 間違いが集中したところ",
+      "3. いちばん大きな原因",
+      "4. 戻るならここ",
+      "5. 次にやること",
+      "6. 生徒へのひとこと"
+    ],
+    "rules": [
+      "avoid_wide_tables",
+      "do_not_reprint_large_numbers_of_full_questions",
+      "show_held_or_unreadable_items",
+      "use_short_headings_and_paragraphs"
+    ]
+  }
+}
