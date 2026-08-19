@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
+import path from 'node:path';
 import assert from 'node:assert/strict';
 
 const [repairedHtmlPath, knowledgePath, outputPath='dist/gpt/mikami_english_question_bank_knowledge.spotcheck.json'] = process.argv.slice(2);
@@ -95,6 +96,6 @@ const report = {
   families: familyReports
 };
 
-fs.mkdirSync(new URL('.', `file://${process.cwd()}/${outputPath}`).pathname, {recursive:true});
+fs.mkdirSync(path.dirname(outputPath), {recursive:true});
 fs.writeFileSync(outputPath, JSON.stringify(report, null, 2) + '\n', 'utf8');
 console.log(JSON.stringify(report, null, 2));
