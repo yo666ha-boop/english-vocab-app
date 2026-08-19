@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v4",
-  "updated_at_jst": "2026-08-19T21:10:49+09:00",
+  "checkpoint_schema": "mikami-repair-work-v5",
+  "updated_at_jst": "2026-08-19T21:46:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -54,27 +54,11 @@
       },
       {
         "file": "tools/test_export_mikami_answer_gpt_knowledge.mjs",
-        "result": "regression now proves lossless validation and rejects a tampered answer record"
+        "result": "regression proves lossless validation and rejects a tampered answer record"
       },
       {
         "file": "tools/spotcheck_mikami_answer_gpt_knowledge.mjs",
-        "commits": ["7b81b26b1c6d68f033c6d0dd44e0ca72cc16588e", "213f672595bff1a2640c0febea314074b5dfdd3f"],
-        "result": "added representative first/middle/last exact-record checks for 9 target families: R1-PRON, GEN-PRS, M2-GER2, M2-COMP2, M2X-INF, M2-RD2, current perfect, relative pronoun, M3N review"
-      },
-      {
-        "file": "tools/test_spotcheck_mikami_answer_gpt_knowledge.mjs",
-        "commit": "f9ca61d4f0a868220d877d47516f89d5d9795d07",
-        "result": "synthetic 10513/10511 regression verifies all 9 families and requires rejection when a critical family ID disappears"
-      },
-      {
-        "file": ".github/workflows/mikami-repair-v4-check.yml",
-        "commit": "cf8f0d70c90f9e479704974bac67760cb2107452",
-        "result": "CI now syntax-checks and executes exporter, lossless validator, tamper rejection, and representative-family spot-check"
-      },
-      {
-        "file": ".github/workflows/build-mikami-answer-gpt-knowledge.yml",
-        "commit": "5a767878644bb728646840ab2e59e13e5c0cddea",
-        "result": "real Knowledge bundle now requires full-record equality plus all 9 representative family spot-checks and packages both validation reports"
+        "result": "representative first/middle/last exact-record checks for 9 target families: R1-PRON, GEN-PRS, M2-GER2, M2-COMP2, M2X-INF, M2-RD2, current perfect, relative pronoun, M3N review"
       },
       {
         "ci_run_id": 32251213411,
@@ -85,6 +69,34 @@
           "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
           "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK"
         ]
+      },
+      {
+        "private_canonical_transfer": "PASS",
+        "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
+        "file_size_bytes": 4035500,
+        "method": "authenticated Google Drive connector raw fetch with include_base64=false",
+        "result": "private canonical was transferred without making it public and materialized as a user-scoped file reference/mounted file for execution once the local runner recovers"
+      },
+      {
+        "file": "tools/test_mikami_answer_gpt_assets.mjs",
+        "commit": "af9fe206ffbd0f96b29b751d8bbfd76212b92dfb",
+        "result": "added regression contract for exact-ID lookup, no-guessing/held behavior, school-test mode, A4 report sections, max-three priorities, and output-schema enums/required fields"
+      },
+      {
+        "file": ".github/workflows/mikami-repair-v4-check.yml",
+        "commit": "3c5151637639218ba85271236dc524ffe9c8489c",
+        "result": "V4 CI now syntax-checks and runs the answer-GPT instruction/schema contract regression"
+      },
+      {
+        "ci_run_id": 32254331178,
+        "source_sha": "3c5151637639218ba85271236dc524ffe9c8489c",
+        "status": "success",
+        "gates": [
+          "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
+          "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
+          "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK",
+          "ANSWER_GPT_ASSET_CONTRACT_REGRESSION"
+        ]
       }
     ],
     "source_app_observation": {
@@ -94,22 +106,23 @@
     },
     "current_blocker": {
       "stage": "execute Knowledge build against exact private canonical",
-      "detail": "Google Drive exact canonical remains private. The connector confirms/downloads the exact 4,035,500-byte source, but local container/python execution still returns ClientResponseError. GitHub Actions cannot fetch the private Drive file without a fresh authenticated/signed source URL. Do not make the Drive file public and do not commit the 4MB canonical to a public repo as a workaround.",
-      "last_confirmed_local_error": "ClientResponseError from both container and python execution at 2026-08-19 21:10 JST",
-      "code_readiness": "PASS: exporter/validator/spot-check regressions and current V4 CI all pass"
+      "detail": "The exact private canonical can now be safely fetched through the authenticated Drive connector as the exact 4,035,500-byte raw file without public exposure. However, both container and python execution transports still fail with ClientError/ClientResponseError, so the existing Node V4 -> Knowledge exporter -> validator -> spot-check pipeline cannot yet be executed against that mounted file. GitHub Actions still requires a fresh authenticated/signed source URL and must not be unblocked by making the canonical public or committing it to the public repo.",
+      "last_confirmed_local_error": "container ClientError and python ClientError while attempting to inspect/run the mounted exact canonical during this cycle",
+      "important_progress": "private-source transfer itself is no longer the local-path blocker; once execution transport recovers, the exact canonical is directly available for the real build",
+      "code_readiness": "PASS: exporter, lossless validator, 9-family spot-check, instruction/schema contract and current V4 CI all pass"
     },
     "next_actions": [
-      "when executable local layer recovers, run V4 on the exact 4,035,500-byte canonical, then export Knowledge and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
-      "if a safe temporary authenticated/signed source URL becomes available before local recovery, dispatch build-mikami-answer-gpt-knowledge.yml instead; never make the Drive source public merely to run CI",
-      "inspect the resulting spotcheck report for actual IDs/q/a/category across all 9 families",
+      "retry executable local layer first; when it recovers, use the already authenticated private canonical transfer path, run V4 on the exact 4,035,500-byte source, export Knowledge, and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
+      "if a safe temporary authenticated/signed source URL becomes available before local execution recovers, dispatch build-mikami-answer-gpt-knowledge.yml; never make the Drive source public merely to run CI",
+      "inspect the real spotcheck report for actual IDs/q/a/category across all 9 families",
       "assemble/register the finished Knowledge bundle in the answer-analysis GPT",
       "test a fully correct original answer photo, a multi-category wrong-answer photo, an unreadable photo, and a school-test photo",
       "verify A4 printable report quality and prerequisite return-point accuracy",
       "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_WAITING_REAL_CANONICAL_KNOWLEDGE_EXECUTION",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_PRIVATE_CANONICAL_MOUNT_READY_WAITING_EXECUTION_TRANSPORT",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Problem-bank repair is complete. Answer-analysis GPT implementation and regression gates are substantially advanced and passing. The remaining critical path is a real execution against the exact private canonical, then real photo tests and print-quality validation."
+  "completion_note": "Problem-bank repair is complete. The private exact canonical is now safely retrievable into a mounted file path, and the answer-GPT instruction/schema contract was added and passed in CI. The remaining critical path is execution of the real Knowledge build against that exact private canonical, followed by real photo tests and print-quality validation."
 }
