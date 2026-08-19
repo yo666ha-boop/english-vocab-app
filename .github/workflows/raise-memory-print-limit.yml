@@ -1,0 +1,49 @@
+name: Raise memory print limit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/raise-memory-print-limit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Raise safe limit to 1000 words
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const p='index.html';
+          let s=fs.readFileSync(p,'utf8');
+          const before=s;
+          s=s.replace('const MEMORY_PRINT_MAX_ROWS = 300;','const MEMORY_PRINT_MAX_ROWS = 1000;');
+          s=s.replaceAll('300 語以下','1000 語以下');
+          if(!s.includes('const MEMORY_PRINT_MAX_ROWS = 1000;')) throw new Error('1000-row limit marker missing');
+          if(!s.includes('1000 語以下')) throw new Error('1000-row guidance missing');
+          if(s.includes('const MEMORY_PRINT_MAX_ROWS = 300;')) throw new Error('old 300-row limit remains');
+          if(s===before) throw new Error('index was not changed');
+          fs.writeFileSync(p,s);
+          console.log(JSON.stringify({status:'pass',limit:1000,bytes:Buffer.byteLength(s)},null,2));
+          NODE
+      - name: Audit vocabulary data unchanged
+        run: |
+          node tools/extract_vocab_data.mjs
+          python3 tools/audit_vocab_structure.py
+          node tools/diagnose_exam_pos.mjs
+      - name: Commit 1000-word safe print limit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add index.html audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'fix: allow paginated memory printing up to 1000 words'
+          git push origin HEAD:main
