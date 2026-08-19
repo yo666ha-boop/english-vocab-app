@@ -71,6 +71,9 @@ function repairText(value){
      .replace(/\bMika stop\b/g,'Mika stops')
      .replace(/\bShe stop\b/g,'She stops');
 
+  // Remove legacy article tokens from activity names in word-order choices.
+  s=s.replace(/\bpractice\s*\/\s*the\s*\/\s*tennis\b/gi,'practice / tennis');
+
   // Restore the missing possessive-pronoun option instead of leaving a duplicated choice.
   s=s.replace(/\(\s*she\s*\/\s*her\s*\/\s*her\s*\)/gi,'( she / her / hers )');
   return s;
