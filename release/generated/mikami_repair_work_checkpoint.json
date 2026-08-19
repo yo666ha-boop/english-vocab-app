@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v5",
-  "updated_at_jst": "2026-08-19T21:52:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v6",
+  "updated_at_jst": "2026-08-19T22:10:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -42,98 +42,54 @@
     "purpose": "eliminate the old copy-prompt / paste-ChatGPT-response round trip; analyze answer photos directly against the repaired question-bank knowledge and produce a printable report in GPT",
     "completed_foundation": [
       "tools/export_mikami_answer_gpt_knowledge.mjs: exact-canonical English Knowledge exporter with 10513/10511/unique-ID invariants and SHA manifest",
+      "tools/validate_mikami_answer_gpt_knowledge.mjs: lossless validator requiring full-record deep equality and canonical order preservation",
+      "tools/spotcheck_mikami_answer_gpt_knowledge.mjs: first/middle/last exact-record spot checks across 9 required families",
       "gpt/mikami_answer_analysis_gpt_instructions.md: exact-ID photo analysis, held/unreadable handling, prerequisite diagnosis, return-instruction and print-report rules",
       "gpt/mikami_answer_analysis_output_schema.json: stable structured output schema",
       "gpt/README.md: no-pasteback operating flow and completion gates",
-      ".github/workflows/build-mikami-answer-gpt-knowledge.yml: exact canonical -> V4 repair -> final audit -> Knowledge -> validation -> package"
+      ".github/workflows/build-mikami-answer-gpt-knowledge.yml: exact canonical -> V4 repair -> final audit -> Knowledge -> lossless validation -> 9-family spot-check -> package"
     ],
-    "completed_latest_cycle": [
-      {
-        "file": "tools/validate_mikami_answer_gpt_knowledge.mjs",
-        "result": "lossless validator requires every exported English record to deep-equal repaired canonical qb-data, preserves canonical order, verifies counts and actual SHA256"
-      },
-      {
-        "file": "tools/test_export_mikami_answer_gpt_knowledge.mjs",
-        "result": "regression proves lossless validation and rejects a tampered answer record"
-      },
-      {
-        "file": "tools/spotcheck_mikami_answer_gpt_knowledge.mjs",
-        "result": "representative first/middle/last exact-record checks for 9 target families: R1-PRON, GEN-PRS, M2-GER2, M2-COMP2, M2X-INF, M2-RD2, current perfect, relative pronoun, M3N review"
-      },
-      {
-        "ci_run_id": 32251213411,
-        "source_sha": "5a767878644bb728646840ab2e59e13e5c0cddea",
-        "status": "success",
-        "gates": [
-          "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
-          "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
-          "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK"
-        ]
-      },
-      {
-        "private_canonical_transfer": "PASS",
-        "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
-        "file_size_bytes": 4035500,
-        "method": "authenticated Google Drive connector raw fetch with include_base64=false",
-        "result": "private canonical was transferred without making it public and materialized as a user-scoped file reference/mounted file for execution once the local runner recovers"
-      },
-      {
-        "file": "tools/test_mikami_answer_gpt_assets.mjs",
-        "commit": "af9fe206ffbd0f96b29b751d8bbfd76212b92dfb",
-        "result": "added regression contract for exact-ID lookup, no-guessing/held behavior, school-test mode, A4 report sections, max-three priorities, and output-schema enums/required fields"
-      },
-      {
-        "file": ".github/workflows/mikami-repair-v4-check.yml",
-        "commit": "3c5151637639218ba85271236dc524ffe9c8489c",
-        "result": "V4 CI now syntax-checks and runs the answer-GPT instruction/schema contract regression"
-      },
-      {
-        "ci_run_id": 32254331178,
-        "source_sha": "3c5151637639218ba85271236dc524ffe9c8489c",
-        "status": "success",
-        "gates": [
-          "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
-          "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
-          "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK",
-          "ANSWER_GPT_ASSET_CONTRACT_REGRESSION"
-        ]
-      }
-    ],
+    "latest_green_ci": {
+      "run_id": 32254331178,
+      "source_sha": "3c5151637639218ba85271236dc524ffe9c8489c",
+      "status": "success",
+      "reverified_at_jst": "2026-08-19T22:10:00+09:00",
+      "gates": [
+        "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
+        "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
+        "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK",
+        "ANSWER_GPT_ASSET_CONTRACT_REGRESSION"
+      ]
+    },
+    "private_canonical_transfer": {
+      "status": "PASS_PREVIOUSLY_CONFIRMED",
+      "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
+      "file_size_bytes": 4035500,
+      "public_exposure": false,
+      "security_rule": "never make the canonical public or commit the 4MB private canonical to the public repository merely to unblock CI"
+    },
     "latest_runtime_probe": {
-      "checked_at_jst": "2026-08-19T21:52:00+09:00",
-      "branch_head_before_checkpoint_update": "386e5086ce5e0d73eab1b2670b25423a956b2cdc",
+      "checked_at_jst": "2026-08-19T22:10:00+09:00",
+      "branch_head_before_checkpoint_update": "eece1c46cb92c0fa94af1be4ab31a5a6cb22f6fb",
       "ci_run_32254331178_reverified": "completed/success",
-      "private_drive_fetch": {
-        "status": "PASS",
-        "drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
-        "file_size_bytes": 4035500,
-        "user_scoped_file_id": "sediment://file_00000000d6b881f6a24adabe8eecac2c",
-        "public_exposure": false
-      },
+      "answer_gpt_real_build_status_file": "ABSENT_404",
+      "answer_gpt_build_workflow": "READY_REQUIRES_TEMP_AUTHENTICATED_SIGNED_SOURCE_URL",
       "execution_transport": {
         "container": "ClientError",
-        "python": "ClientError",
-        "python_user_visible": "ClientError",
-        "conclusion": "execution transport remains unavailable; the exact private canonical and answer-GPT code are ready, but Node V4/Knowledge generation cannot be executed in this cycle"
+        "conclusion": "local executable transport remains unavailable in this cycle; exact private canonical Knowledge build cannot be run locally yet"
       },
       "safe_github_actions_source_url": "not available",
-      "security_decision": "did not make canonical public and did not commit the 4MB private canonical to the public repository"
-    },
-    "source_app_observation": {
-      "current_print_layout_includes_question_id": true,
-      "current_photo_flow": "manual prompt copy -> ChatGPT -> response pasteback",
-      "migration_rule": "keep old UI only as fallback until the direct GPT workflow is tested"
+      "security_decision": "did not make canonical public and did not commit the private canonical to the public repository"
     },
     "current_blocker": {
       "stage": "execute Knowledge build against exact private canonical",
-      "detail": "The exact private canonical is safely retrievable through the authenticated Drive connector as the exact 4,035,500-byte raw file without public exposure. The execution transports remain unavailable with ClientError across container, python and python_user_visible, so the existing Node V4 -> Knowledge exporter -> validator -> spot-check pipeline cannot yet be executed against that mounted file. GitHub Actions still requires a fresh authenticated/signed source URL and must not be unblocked by making the canonical public or committing it to the public repo.",
-      "last_confirmed_local_error": "2026-08-19 21:52 JST: container ClientError; python ClientError; python_user_visible ClientError",
-      "important_progress": "private-source transfer is confirmed healthy again; current V4 CI and answer-GPT asset contracts remain green",
-      "code_readiness": "PASS: exporter, lossless validator, 9-family spot-check, instruction/schema contract and current V4 CI all pass"
+      "detail": "The answer-GPT workflow and all regression contracts are ready, but local executable transport still returns ClientError. The GitHub Actions build requires a fresh temporary authenticated/signed URL. No real answer_gpt_knowledge_20260819.status.txt exists yet, confirming the exact private canonical Knowledge build has not completed.",
+      "last_confirmed_local_error": "2026-08-19 22:10 JST: container ClientError",
+      "code_readiness": "PASS"
     },
     "next_actions": [
-      "retry executable local layer first; when it recovers, use the authenticated private canonical transfer path, run V4 on the exact 4,035,500-byte source, export Knowledge, and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
-      "if a safe temporary authenticated/signed source URL becomes available before local execution recovers, dispatch build-mikami-answer-gpt-knowledge.yml; never make the Drive source public merely to run CI",
+      "retry executable local layer first; when it recovers, run V4 on the exact 4,035,500-byte canonical, export 10,511 Knowledge JSONL records, require full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
+      "if a safe temporary authenticated/signed source URL becomes available first, dispatch build-mikami-answer-gpt-knowledge.yml without exposing the canonical publicly",
       "inspect the real spotcheck report for actual IDs/q/a/category across all 9 families",
       "assemble/register the finished Knowledge bundle in the answer-analysis GPT",
       "test a fully correct original answer photo, a multi-category wrong-answer photo, an unreadable photo, and a school-test photo",
@@ -141,8 +97,8 @@
       "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_PRIVATE_CANONICAL_FETCH_READY_EXECUTION_TRANSPORT_STILL_BLOCKED",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_READY_REAL_KNOWLEDGE_BUILD_BLOCKED_BY_EXECUTION_TRANSPORT",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "Problem-bank repair remains complete and answer-GPT code/regressions remain green. In this cycle the exact private canonical was re-fetched safely at 4,035,500 bytes and CI 32254331178 was reverified successful. Execution transport is still the only critical blocker; resume by probing it, then immediately perform the real Knowledge build and proceed to real photo/A4 tests."
+  "completion_note": "Problem-bank repair remains complete. At 22:10 JST the answer-GPT regression CI was reverified green and the production Knowledge workflow was rechecked. No real Knowledge-build status exists yet. Local container execution still returns ClientError, so resume by probing execution transport and immediately run the exact private canonical Knowledge build when it recovers."
 }
