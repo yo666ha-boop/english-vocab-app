@@ -1,14 +1,32 @@
 {
-  "status": "fail",
+  "status": "pass",
   "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
-  "index_sha256": "77cee12a5a8c5eb1ed8abd05eb10685060f7b103a44777aafb4617f01b797ae5",
+  "index_sha256": "3bc88122f06dd6a27d776e152b093bb0cd77857c1c1e9579f641bf95821d1d11",
   "engine": "Chromium (Edge-equivalent)",
   "checks": {
-    "page_loaded": true
+    "page_loaded": true,
+    "default_full_selection_returns_quickly": true,
+    "default_full_selection_does_not_open_print": true,
+    "large_selection_guidance": true,
+    "textbook_45_paginated_18_18_9": true,
+    "print_invoked_for_safe_selection": true,
+    "elementary_group_heading_fixed": true
   },
-  "checked_at_utc": "2026-08-19T07:21:40.440Z",
+  "checked_at_utc": "2026-08-19T07:28:33.392Z",
   "initial_current_list_count": 662,
-  "guard_ms": 179,
-  "guard_message": "",
-  "error": "Error: default full selection unexpectedly invoked print\n    at file:///__w/english-vocab-app/english-vocab-app/tools/test_memory_print.mjs:42:33"
+  "guard_ms": 147,
+  "guard_message": "現在 662 語が選択されています。\nこのまま印刷するとページ数が多くなり、ブラウザが重くなるため印刷を止めました。\n教科書・学年・単元などで 300 語以下に絞ってから「暗記プリントを印刷」を押してください。",
+  "textbook_45": {
+    "pages": 3,
+    "rows": [
+      18,
+      18,
+      9
+    ],
+    "prints": 1
+  },
+  "elementary_20": {
+    "pages": 2,
+    "firstHeading": "カテゴリーA"
+  }
 }
