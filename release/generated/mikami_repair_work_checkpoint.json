@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v4",
-  "updated_at_jst": "2026-08-19T20:45:00+09:00",
+  "updated_at_jst": "2026-08-19T21:10:49+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "canonical": {
@@ -40,31 +40,51 @@
   "answer_analysis_gpt_phase": {
     "status": "IN_PROGRESS",
     "purpose": "eliminate the old copy-prompt / paste-ChatGPT-response round trip; analyze answer photos directly against the repaired question-bank knowledge and produce a printable report in GPT",
-    "completed_this_cycle": [
+    "completed_foundation": [
+      "tools/export_mikami_answer_gpt_knowledge.mjs: exact-canonical English Knowledge exporter with 10513/10511/unique-ID invariants and SHA manifest",
+      "gpt/mikami_answer_analysis_gpt_instructions.md: exact-ID photo analysis, held/unreadable handling, prerequisite diagnosis, return-instruction and print-report rules",
+      "gpt/mikami_answer_analysis_output_schema.json: stable structured output schema",
+      "gpt/README.md: no-pasteback operating flow and completion gates",
+      ".github/workflows/build-mikami-answer-gpt-knowledge.yml: exact canonical -> V4 repair -> final audit -> Knowledge -> validation -> package"
+    ],
+    "completed_latest_cycle": [
       {
-        "commit": "79fcb51f5d67e0c0d1bf58bbdc622259d07b2b54",
-        "file": "tools/export_mikami_answer_gpt_knowledge.mjs",
-        "result": "added exact-canonical English knowledge exporter with 10513/10511/unique-ID invariants and SHA manifest"
+        "file": "tools/validate_mikami_answer_gpt_knowledge.mjs",
+        "result": "lossless validator requires every exported English record to deep-equal repaired canonical qb-data, preserves canonical order, verifies counts and actual SHA256"
       },
       {
-        "commit": "8aee029d59d518dce8b387a53d2d6727f6d26a11",
-        "file": "gpt/mikami_answer_analysis_gpt_instructions.md",
-        "result": "added formal ID-based photo-analysis, prerequisite diagnosis, return-instruction and print-report rules"
+        "file": "tools/test_export_mikami_answer_gpt_knowledge.mjs",
+        "result": "regression now proves lossless validation and rejects a tampered answer record"
       },
       {
-        "commit": "afa6666a60a4989edf113091b7620092aa2e4961",
-        "file": "gpt/mikami_answer_analysis_output_schema.json",
-        "result": "added stable structured report schema for future app linkage"
+        "file": "tools/spotcheck_mikami_answer_gpt_knowledge.mjs",
+        "commits": ["7b81b26b1c6d68f033c6d0dd44e0ca72cc16588e", "213f672595bff1a2640c0febea314074b5dfdd3f"],
+        "result": "added representative first/middle/last exact-record checks for 9 target families: R1-PRON, GEN-PRS, M2-GER2, M2-COMP2, M2X-INF, M2-RD2, current perfect, relative pronoun, M3N review"
       },
       {
-        "commit": "097362c56e3406c2bcae37536593826e2002671d",
-        "file": "gpt/README.md",
-        "result": "documented no-pasteback operating flow and completion gates"
+        "file": "tools/test_spotcheck_mikami_answer_gpt_knowledge.mjs",
+        "commit": "f9ca61d4f0a868220d877d47516f89d5d9795d07",
+        "result": "synthetic 10513/10511 regression verifies all 9 families and requires rejection when a critical family ID disappears"
       },
       {
-        "commit": "5f51e5bf1f6a25a8e9f651a725b3ed14a72d9d76",
+        "file": ".github/workflows/mikami-repair-v4-check.yml",
+        "commit": "cf8f0d70c90f9e479704974bac67760cb2107452",
+        "result": "CI now syntax-checks and executes exporter, lossless validator, tamper rejection, and representative-family spot-check"
+      },
+      {
         "file": ".github/workflows/build-mikami-answer-gpt-knowledge.yml",
-        "result": "added reproducible workflow: exact canonical -> V4 repair -> final audit -> 10511-record GPT knowledge -> ZIP artifact"
+        "commit": "5a767878644bb728646840ab2e59e13e5c0cddea",
+        "result": "real Knowledge bundle now requires full-record equality plus all 9 representative family spot-checks and packages both validation reports"
+      },
+      {
+        "ci_run_id": 32251213411,
+        "source_sha": "5a767878644bb728646840ab2e59e13e5c0cddea",
+        "status": "success",
+        "gates": [
+          "ANSWER_GPT_KNOWLEDGE_EXPORTER_REGRESSION",
+          "ANSWER_GPT_KNOWLEDGE_LOSSLESS_VALIDATOR",
+          "ANSWER_GPT_REPRESENTATIVE_FAMILY_SPOTCHECK"
+        ]
       }
     ],
     "source_app_observation": {
@@ -72,18 +92,24 @@
       "current_photo_flow": "manual prompt copy -> ChatGPT -> response pasteback",
       "migration_rule": "keep old UI only as fallback until the direct GPT workflow is tested"
     },
-    "current_blocker": "The knowledge JSONL/bundle still needs an execution against the repaired exact canonical and a real answer-photo test. The build workflow is ready; do not claim the GPT phase complete before those checks pass.",
+    "current_blocker": {
+      "stage": "execute Knowledge build against exact private canonical",
+      "detail": "Google Drive exact canonical remains private. The connector confirms/downloads the exact 4,035,500-byte source, but local container/python execution still returns ClientResponseError. GitHub Actions cannot fetch the private Drive file without a fresh authenticated/signed source URL. Do not make the Drive file public and do not commit the 4MB canonical to a public repo as a workaround.",
+      "last_confirmed_local_error": "ClientResponseError from both container and python execution at 2026-08-19 21:10 JST",
+      "code_readiness": "PASS: exporter/validator/spot-check regressions and current V4 CI all pass"
+    },
     "next_actions": [
-      "execute the knowledge exporter on the exact repaired canonical and verify exactly 10511 JSONL records plus manifest SHA",
-      "spot-check multiple known IDs against canonical q/a/category metadata",
-      "assemble/upload the knowledge bundle to the answer-analysis GPT",
+      "when executable local layer recovers, run V4 on the exact 4,035,500-byte canonical, then export Knowledge and require 10511 JSONL records, full-record equality, canonical order preservation, manifest SHA and 9-family spot-check PASS",
+      "if a safe temporary authenticated/signed source URL becomes available before local recovery, dispatch build-mikami-answer-gpt-knowledge.yml instead; never make the Drive source public merely to run CI",
+      "inspect the resulting spotcheck report for actual IDs/q/a/category across all 9 families",
+      "assemble/register the finished Knowledge bundle in the answer-analysis GPT",
       "test a fully correct original answer photo, a multi-category wrong-answer photo, an unreadable photo, and a school-test photo",
       "verify A4 printable report quality and prerequisite return-point accuracy",
       "after successful direct-GPT tests, decide whether to remove or demote the legacy copy/paste photo-analysis UI"
     ]
   },
-  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_IN_PROGRESS",
+  "current_state": "QUESTION_BANK_COMPLETE_ANSWER_ANALYSIS_GPT_CODE_AND_REGRESSION_READY_WAITING_REAL_CANONICAL_KNOWLEDGE_EXECUTION",
   "resume_from": "answer_analysis_gpt_phase.next_actions[0]",
   "overall_completion": false,
-  "completion_note": "The question-bank repair itself is complete and verified. The wider follow-on answer-analysis GPT workflow has started and must not be marked complete until knowledge generation and real photo tests pass."
+  "completion_note": "Problem-bank repair is complete. Answer-analysis GPT implementation and regression gates are substantially advanced and passing. The remaining critical path is a real execution against the exact private canonical, then real photo tests and print-quality validation."
 }
