@@ -100,7 +100,7 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png audit/EXAM_POS_DIAGNOSTIC.json audit/EXAM_POS_UI_SNIPPETS.txt
+          git add audit/PAGES_WEBKIT_SMOKE.json audit/PAGES_WEBKIT_SMOKE.png audit/EXAM_POS_DIAGNOSTIC.json audit/EXAM_POS_UI_SNIPPETS.txt audit/EXAM_POS_NEEDS_REVIEW.tsv
           git diff --cached --quiet && exit 0
           git commit -m 'test: record vocabulary health and exam POS diagnostic'
           git pull --rebase origin main
