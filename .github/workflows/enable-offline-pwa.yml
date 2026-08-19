@@ -1,0 +1,35 @@
+name: Enable offline PWA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/enable-offline-pwa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Patch index for offline PWA
+        run: node tools/enable_offline_pwa.mjs
+      - name: Run vocabulary audits
+        run: |
+          node tools/extract_vocab_data.mjs
+          python3 tools/audit_vocab_structure.py
+          node tools/diagnose_exam_pos.mjs
+      - name: Commit offline-enabled app
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html audit
+          git diff --cached --quiet && exit 0
+          git commit -m 'feat(vocab): enable offline PWA support'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
