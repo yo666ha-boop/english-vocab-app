@@ -1,0 +1,86 @@
+name: Probe Mikami Problem App Vercel
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/probe-mikami-problem-vercel.yml'
+      - 'release/generated/problem_app_publication.status.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+
+      - name: Probe public problem app
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://mikami-juku-english-problem-app.vercel.app/'
+          OUT="$RUNNER_TEMP/problem-app.html"
+          HDR="$RUNNER_TEMP/headers.txt"
+          CODE=$(curl -L --max-time 60 --connect-timeout 15 -sS -D "$HDR" -o "$OUT" -w '%{http_code}' "$URL" || true)
+          BYTES=$(wc -c < "$OUT" 2>/dev/null || echo 0)
+          SHA=$(sha256sum "$OUT" 2>/dev/null | awk '{print $1}' || true)
+          TITLE=$(python3 - "$OUT" <<'PY'
+import re,sys
+p=sys.argv[1]
+try: s=open(p,encoding='utf-8',errors='ignore').read()
+except: s=''
+m=re.search(r'<title[^>]*>(.*?)</title>',s,re.I|re.S)
+print(re.sub(r'\s+',' ',m.group(1)).strip() if m else '')
+PY
+          )
+          HAS_QB=$(grep -q 'id="qb-data"' "$OUT" && echo true || echo false)
+          HAS_APP_TITLE=$(grep -q 'みかみ塾 英語問題アプリ' "$OUT" && echo true || echo false)
+          HAS_MY_GPT=$(grep -q '答案分析My GPTを開く' "$OUT" && echo true || echo false)
+          HAS_HANDOFF_MARKER=$(grep -q 'mikami-answer-gpt-handoff-v1' "$OUT" && echo true || echo false)
+          HAS_OLD_PRIMARY=$(grep -q '>分析用プロンプトをコピー<' "$OUT" && echo true || echo false)
+          EXPECTED='c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+          HASH_MATCH=false
+          [ "$SHA" = "$EXPECTED" ] && HASH_MATCH=true
+          STATUS=FAIL_NOT_EXACT_UNIFIED
+          if [ "$CODE" = '200' ] && [ "$HASH_MATCH" = 'true' ] && [ "$HAS_QB" = 'true' ] && [ "$HAS_APP_TITLE" = 'true' ] && [ "$HAS_MY_GPT" = 'true' ] && [ "$HAS_HANDOFF_MARKER" = 'true' ]; then
+            STATUS=PASS_EXACT_UNIFIED_PUBLIC
+          fi
+          mkdir -p release/generated
+          cat > release/generated/problem_app_vercel_probe.status.txt <<EOF
+STATUS=$STATUS
+PROBED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+URL=$URL
+HTTP_CODE=$CODE
+BYTES=$BYTES
+SHA256=$SHA
+EXPECTED_UNIFIED_SHA256=$EXPECTED
+HASH_MATCH=$HASH_MATCH
+TITLE=$TITLE
+HAS_QB_DATA=$HAS_QB
+HAS_PROBLEM_APP_TITLE=$HAS_APP_TITLE
+HAS_MY_GPT_PRIMARY_BUTTON=$HAS_MY_GPT
+HAS_HANDOFF_MARKER=$HAS_HANDOFF_MARKER
+OLD_COPY_PROMPT_TEXT_PRESENT=$HAS_OLD_PRIMARY
+PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY
+APP_PHOTO_ANALYSIS_PRIMARY=false
+MAIN_ROOT_TOUCHED=false
+EOF
+          cat release/generated/problem_app_vercel_probe.status.txt
+
+      - name: Commit probe result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/problem_app_vercel_probe.status.txt
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'record problem app Vercel probe status'
+          git push origin HEAD:mikami-canonical-repair
