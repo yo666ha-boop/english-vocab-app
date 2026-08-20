@@ -35,7 +35,42 @@ jobs:
           rm -rf /tmp/mikami-runtime
           mkdir -p /tmp/mikami-runtime
           gh run download 32266896824 -n mikami-runtime-v2 -D /tmp/mikami-runtime
-          find /tmp/mikami-runtime -maxdepth 5 -type f -printf '%s %p\n' | sort -nr | head -100
+          mkdir -p /tmp/mikami-runtime/nested
+          n=0
+          while IFS= read -r -d '' z; do
+            n=$((n+1))
+            mkdir -p "/tmp/mikami-runtime/nested/$n"
+            unzip -o "$z" -d "/tmp/mikami-runtime/nested/$n" || true
+          done < <(find /tmp/mikami-runtime -maxdepth 3 -type f -name '*.zip' -print0)
+
+          mkdir -p release/generated
+          {
+            echo 'STATUS=ARTIFACT_DOWNLOADED'
+            echo 'RUN_ID=32266896824'
+            echo 'ARTIFACT_ID=9370551027'
+            echo 'ARTIFACT_NAME=mikami-runtime-v2'
+            echo '--- files ---'
+            while IFS= read -r -d '' f; do
+              size=$(wc -c < "$f")
+              sha=$(sha256sum "$f" | awk '{print $1}')
+              printf '%s\t%s\t%s\n' "$size" "$sha" "$f"
+            done < <(find /tmp/mikami-runtime -type f -print0)
+          } > release/generated/problem_app_artifact_diag.txt
+          cat release/generated/problem_app_artifact_diag.txt
+
+      - name: Persist artifact diagnostic on repair branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/problem_app_artifact_diag.txt
+          git commit -m 'diag: record problem app artifact contents' || true
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            git pull --rebase origin mikami-canonical-repair
+            sleep 2
+          done
 
       - name: Resolve exact HTML and build final V4 + My GPT app
         shell: bash
