@@ -1,0 +1,8 @@
+STATUS=PASS
+PATCH=tools/patch_mikami_answer_gpt_handoff.mjs
+SOURCE_SHA=a560e75f5f000ad88b58b13318f2259db15aa49f
+PRIMARY_UI=答案分析My GPTを開く
+HANDOFF=source_mode,target,question_ids,question_count
+PRIVATE_KNOWLEDGE_EMBEDDED=false
+LEGACY_COPY_PASTE=fallback_only
+QUESTION_GENERATION_CHANGED=false
