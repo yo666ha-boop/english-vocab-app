@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v15",
-  "updated_at_jst": "2026-08-20T14:24:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v16",
+  "updated_at_jst": "2026-08-20T14:55:59+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -43,45 +43,42 @@
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "validator": "tools/validate_mikami_answer_gpt_true_runtime.mjs",
       "validator_hardening_commit": "192ee8e72fa767c38efa1986d35a2edb3312ba26",
-      "validator_ci_workflow": ".github/workflows/test-mikami-answer-gpt-true-runtime-validator.yml",
       "validator_ci_run_id": 32335459190,
       "validator_ci_status": "PASS",
-      "status_file": "release/generated/answer_gpt_true_runtime_validator.status.txt",
-      "results_template": "gpt/tests/mikami_answer_gpt_true_runtime_results.template.json",
-      "acceptance_contract": "gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json",
       "required_photo_cases": 4,
       "a4_orientation": "portrait",
       "a4_page_range": "1-2",
       "actual_custom_gpt_registration_required": true,
       "actual_photo_attachment_required": true,
       "actual_a4_render_or_print_required": true,
-      "evidence_hashes_required": true,
-      "synthetic_self_test_not_runtime_pass": true,
-      "new_hardening": [
-        "SELF_TEST_ONLY placeholders are rejected in real runtime validation",
-        "gpt_url must be an HTTPS ChatGPT Custom GPT /g/ URL",
-        "registration/photo/transcript/PDF/manifest evidence SHA256 values must all be unique",
-        "duplicate evidence hashes are rejected"
-      ]
+      "synthetic_self_test_not_runtime_pass": true
+    },
+    "public_index_probe": {
+      "status": "HASH_MISMATCH_NON_CANONICAL",
+      "run_id": 32335505379,
+      "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
+      "actual_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
+      "private_canonical_exposed": false,
+      "release_policy": "PUBLIC_INDEX_MUST_NOT_BE_TREATED_AS_CANONICAL"
     },
     "release_readiness_gate": {
-      "status": "PASS_WITH_TRUE_RUNTIME_PENDING",
+      "status": "HARDENED_PUBLIC_INDEX_AWARE_TRUE_RUNTIME_PENDING",
       "validator": "tools/validate_mikami_answer_gpt_release_readiness.mjs",
+      "validator_commit": "b47c94d8e32c172a0127c5b921daed56997f7f33",
       "workflow": ".github/workflows/test-mikami-answer-gpt-release-readiness.yml",
-      "status_file": "release/generated/answer_gpt_release_readiness.status.txt"
+      "workflow_watch_commit": "71fe7549d896d0bb1df411a855e52161c59c745a",
+      "public_index_probe_is_now_checked": true
     },
     "completed_this_run": [
-      "re-read current branch HEAD and checkpoint before changing anything",
-      "confirmed question bank, Knowledge and unified app build remain PASS and were not rerun",
-      "reviewed the strict true-runtime validator and found a real evidence-integrity weakness",
-      "closed the weakness so SELF_TEST_ONLY evidence cannot be accepted as an actual runtime result",
-      "added HTTPS ChatGPT Custom GPT URL validation",
-      "made all registration/photo/transcript/A4 PDF/final-manifest evidence hashes globally unique",
-      "added dedicated GitHub Actions CI for the hardened true-runtime validator",
-      "triggered the CI and confirmed PASS in run 32335459190",
-      "kept main untouched and private Knowledge out of the public repository"
+      "re-read latest branch HEAD b4de8761cabb4c4dc26b23e86d1a9fac74fa7648 and all required checkpoint/status files",
+      "confirmed question bank, Knowledge, unified build and strict runtime gate remain at their prior PASS states without rerunning completed canonical work",
+      "re-checked available connected/plugin surfaces for an authenticated Custom GPT editor/runtime mutation tool; none was available",
+      "read the newly recorded public branch index probe and confirmed its SHA does not match the repaired canonical while private canonical remains unexposed",
+      "hardened release readiness validation so a public index hash mismatch is explicitly tracked as non-canonical instead of being silently ignored",
+      "updated the release-readiness workflow path filters so future public-index probe changes automatically trigger the cross-file release gate",
+      "kept main untouched and did not expose private Knowledge/canonical data"
     ],
-    "current_stage": "actual Custom GPT registration and evidence-backed true runtime verification",
+    "current_stage": "actual Custom GPT registration and evidence-backed true runtime verification; repository release gate now also protects against public-index/canonical confusion",
     "remaining_work": [
       "register private Knowledge JSONL, formal Instructions and schema in the actual Custom GPT",
       "capture actual Custom GPT URL and private registration evidence hash",
@@ -94,12 +91,12 @@
     "stopped_at": {
       "stage": "actual Custom GPT registration",
       "status": "BLOCKED_BY_AUTHENTICATED_EDITOR_RUNTIME_ACCESS",
-      "detail": "Repository-side work advanced again this run and the evidence gate is stronger. The only non-simulated blocker remains access to the authenticated Custom GPT editor/runtime needed to attach private Knowledge and execute real photos."
+      "detail": "No authenticated Custom GPT editor mutation/runtime surface is exposed in the currently available tools. This run still advanced repository safety by integrating the public-index mismatch into release readiness and workflow triggering."
     },
-    "next_start": "re-check for authenticated Custom GPT editor/runtime access; if still unavailable, continue preparing evidence capture and release-finalization tooling without rerunning completed canonical/Knowledge work",
+    "next_start": "re-check authenticated Custom GPT editor/runtime access first; if unavailable, inspect the next unresolved repository-side release/runtime evidence gap and implement a concrete guard or test without rerunning completed canonical/Knowledge work",
     "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_HARDENED_TRUE_RUNTIME_VALIDATOR_PASS_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_RUNTIME_GATE_PASS_PUBLIC_INDEX_NONCANONICAL_GUARDED_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run materially advanced the final gate: a placeholder-evidence weakness was found and fixed, dedicated GitHub Actions validation passed, and false self-test evidence can no longer satisfy the real-runtime validator. Actual Custom GPT registration/photo/A4 execution remains the only completion blocker. main remains untouched."
+  "completion_note": "This run materially advanced the final release gate by making the known public-index SHA mismatch an explicit non-canonical condition enforced by release readiness and its workflow. Actual Custom GPT registration/photo/A4 execution remains the non-simulated completion blocker; main remains untouched."
 }
