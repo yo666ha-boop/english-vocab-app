@@ -1,0 +1,190 @@
+name: Recover exact routing app from Drive and publish isolated path
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/recover-publish-mikami-routing-drive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+
+      - name: Recover exact current routing-lock HTML from Drive
+        id: recover
+        shell: bash
+        run: |
+          set -u
+          FILE_ID='19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0'
+          EXPECTED_BYTES='3812063'
+          EXPECTED_SHA='6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          OUT='/tmp/mikami-routing-lock.html'
+          COOKIE='/tmp/gdrive.cookies'
+          FIRST='/tmp/gdrive-first.html'
+          rm -f "$OUT" "$COOKIE" "$FIRST" /tmp/gdrive-headers.txt
+
+          exact() {
+            local f="$1"
+            test -s "$f" || return 1
+            local b s
+            b=$(wc -c < "$f" | tr -d ' ')
+            s=$(sha256sum "$f" | awk '{print $1}')
+            test "$b" = "$EXPECTED_BYTES" && test "$s" = "$EXPECTED_SHA"
+          }
+
+          # Direct usercontent endpoint first.
+          curl -sS -L --retry 1 --connect-timeout 20 --max-time 120 \
+            -c "$COOKIE" -b "$COOKIE" \
+            "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" \
+            -D /tmp/gdrive-headers.txt -o "$OUT" || true
+
+          if exact "$OUT"; then
+            echo 'method=usercontent-confirm-t' >> "$GITHUB_OUTPUT"
+          else
+            test -s "$OUT" && cp "$OUT" "$FIRST" || true
+            # Standard Drive download page with cookie jar.
+            curl -sS -L --retry 1 --connect-timeout 20 --max-time 120 \
+              -c "$COOKIE" -b "$COOKIE" \
+              "https://drive.google.com/uc?export=download&id=${FILE_ID}" \
+              -o "$FIRST" || true
+
+            CONFIRM=$(grep -oE 'name="confirm" value="[^"]+"' "$FIRST" 2>/dev/null | head -1 | sed -E 's/.*value="([^"]+)"/\1/' || true)
+            UUID=$(grep -oE 'name="uuid" value="[^"]+"' "$FIRST" 2>/dev/null | head -1 | sed -E 's/.*value="([^"]+)"/\1/' || true)
+            if test -z "$CONFIRM"; then
+              CONFIRM=$(grep -oE 'confirm=[0-9A-Za-z_-]+' "$FIRST" 2>/dev/null | head -1 | cut -d= -f2 || true)
+            fi
+            if test -z "$CONFIRM"; then
+              CONFIRM=$(awk '$6 ~ /download_warning/ {print $7}' "$COOKIE" 2>/dev/null | tail -1 || true)
+            fi
+
+            if test -n "$CONFIRM"; then
+              Q="https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=${CONFIRM}"
+              test -n "$UUID" && Q="${Q}&uuid=${UUID}"
+              curl -sS -L --retry 1 --connect-timeout 20 --max-time 180 \
+                -c "$COOKIE" -b "$COOKIE" "$Q" -o "$OUT" || true
+              if exact "$OUT"; then
+                echo 'method=parsed-confirm-token' >> "$GITHUB_OUTPUT"
+              fi
+            fi
+          fi
+
+          if exact "$OUT"; then
+            echo 'pass=true' >> "$GITHUB_OUTPUT"
+            echo "bytes=$EXPECTED_BYTES" >> "$GITHUB_OUTPUT"
+            echo "sha=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
+            echo 'EXACT_ROUTING_DRIVE_RECOVERY=PASS'
+          else
+            if test -s "$OUT"; then
+              BYTES=$(wc -c < "$OUT" | tr -d ' ')
+              SHA=$(sha256sum "$OUT" | awk '{print $1}')
+            elif test -s "$FIRST"; then
+              BYTES=$(wc -c < "$FIRST" | tr -d ' ')
+              SHA=$(sha256sum "$FIRST" | awk '{print $1}')
+            else
+              BYTES=0; SHA=''
+            fi
+            SRC="$OUT"; test -s "$SRC" || SRC="$FIRST"
+            SIGNIN=false; SCAN=false; FORM=false; ACCOUNTS=false
+            if test -s "$SRC"; then
+              grep -qiE 'sign in|ログイン' "$SRC" && SIGNIN=true || true
+              grep -qiE 'virus|scan|ウイルス|スキャン' "$SRC" && SCAN=true || true
+              grep -qiE 'download-form|name="confirm"|confirm=' "$SRC" && FORM=true || true
+              grep -qi 'accounts.google.com' "$SRC" && ACCOUNTS=true || true
+            fi
+            echo 'pass=false' >> "$GITHUB_OUTPUT"
+            echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+            echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+            echo "signin=$SIGNIN" >> "$GITHUB_OUTPUT"
+            echo "scan=$SCAN" >> "$GITHUB_OUTPUT"
+            echo "form=$FORM" >> "$GITHUB_OUTPUT"
+            echo "accounts=$ACCOUNTS" >> "$GITHUB_OUTPUT"
+            rm -f "$OUT"
+            echo 'EXACT_ROUTING_DRIVE_RECOVERY=FAIL'
+          fi
+
+      - name: Validate recovered app before any publication
+        if: steps.recover.outputs.pass == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          F='/tmp/mikami-routing-lock.html'
+          test "$(wc -c < "$F" | tr -d ' ')" = '3812063'
+          test "$(sha256sum "$F" | awk '{print $1}')" = '6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          grep -q 'id="qb-data"' "$F"
+          grep -q '答案分析My GPTを開く' "$F"
+          grep -q 'legacyPhotoAnalysisFallback' "$F"
+          grep -q 'mikamijuku_answer_gpt_url_v1' "$F"
+          ! grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$F"
+
+      - name: Publish only problem-app/index.html to main while preserving vocab root
+        if: steps.recover.outputs.pass == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT_BEFORE=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          git worktree add /tmp/mikami-main origin/main
+          cd /tmp/mikami-main
+          git switch -c mikami-problem-publish-temp origin/main
+          mkdir -p problem-app
+          cp /tmp/mikami-routing-lock.html problem-app/index.html
+          test "$(sha256sum problem-app/index.html | awk '{print $1}')" = '6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          ROOT_AFTER=$(sha256sum index.html | awk '{print $1}')
+          test "$ROOT_BEFORE" = "$ROOT_AFTER"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- problem-app/index.html
+          git commit -m 'publish: add isolated MyGPT English problem app'
+          git push origin HEAD:main
+
+      - name: Record recovery/publication status on repair branch
+        if: always()
+        shell: bash
+        env:
+          PASS: ${{ steps.recover.outputs.pass }}
+          BYTES: ${{ steps.recover.outputs.bytes }}
+          SHA: ${{ steps.recover.outputs.sha }}
+          METHOD: ${{ steps.recover.outputs.method }}
+          SIGNIN: ${{ steps.recover.outputs.signin }}
+          SCAN: ${{ steps.recover.outputs.scan }}
+          FORM: ${{ steps.recover.outputs.form }}
+          ACCOUNTS: ${{ steps.recover.outputs.accounts }}
+        run: |
+          set -euo pipefail
+          git switch mikami-canonical-repair
+          git pull --rebase origin mikami-canonical-repair
+          mkdir -p release/generated
+          if test "$PASS" = 'true'; then STATUS='RECOVERED_AND_MAIN_PROBLEM_PATH_PUBLISHED'; else STATUS='DRIVE_PUBLIC_RECOVERY_NOT_EXACT'; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "RECOVERY_PASS=${PASS:-false}"
+            echo "RECOVERY_METHOD=${METHOD:-none}"
+            echo "OBSERVED_BYTES=${BYTES:-0}"
+            echo "OBSERVED_SHA256=${SHA:-}"
+            echo 'EXPECTED_BYTES=3812063'
+            echo 'EXPECTED_SHA256=6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+            echo "SIGNIN_MARKER=${SIGNIN:-unknown}"
+            echo "VIRUS_SCAN_MARKER=${SCAN:-unknown}"
+            echo "CONFIRM_FORM_MARKER=${FORM:-unknown}"
+            echo "ACCOUNTS_GOOGLE_MARKER=${ACCOUNTS:-unknown}"
+            echo 'TARGET_PATH=main:problem-app/index.html'
+            echo 'ROOT_INDEX_POLICY=UNCHANGED_REQUIRED'
+            echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
+            echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
+          } > release/generated/problem_app_drive_recovery_publish.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/problem_app_drive_recovery_publish.status.txt
+          git commit -m 'record routing Drive recovery publication result' || exit 0
+          git pull --rebase origin mikami-canonical-repair
+          git push origin HEAD:mikami-canonical-repair
