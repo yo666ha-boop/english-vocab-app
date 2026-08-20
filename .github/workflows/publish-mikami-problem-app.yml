@@ -25,6 +25,7 @@ jobs:
           node-version: '22'
 
       - name: Recover exact canonical HTML from protected problem-app preview
+        id: recover
         shell: bash
         run: |
           set -euo pipefail
@@ -36,24 +37,28 @@ jobs:
             -c /tmp/vercel.cookies -b /tmp/vercel.cookies \
             -D /tmp/recover.headers \
             "$SRC" -o /tmp/mikami-canonical.html
-
           BYTES=$(wc -c < /tmp/mikami-canonical.html)
           SHA=$(sha256sum /tmp/mikami-canonical.html | awk '{print $1}')
           echo "recovered_bytes=$BYTES"
           echo "recovered_sha256=$SHA"
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
           test "$BYTES" -eq 4035500
           test "$SHA" = '03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
           grep -q 'id="qb-data"' /tmp/mikami-canonical.html
           grep -q '<title>みかみ塾 英語問題アプリ 安定版+写真分析レポート</title>' /tmp/mikami-canonical.html
 
       - name: Build exact V4 + My GPT handoff app
+        id: build
         shell: bash
         run: |
           set -euo pipefail
           OUT=/tmp/mikami-problem-app-index.html
           node tools/run_mikami_pipeline_v4_answer_gpt.mjs /tmp/mikami-canonical.html "$OUT"
           test -s "$OUT"
-          test "$(sha256sum "$OUT" | awk '{print $1}')" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+          OUT_SHA=$(sha256sum "$OUT" | awk '{print $1}')
+          echo "sha=$OUT_SHA" >> "$GITHUB_OUTPUT"
+          test "$OUT_SHA" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
           grep -q '答案分析My GPTを開く' "$OUT"
           grep -q '答案写真はMy GPTへ直接添付' "$OUT"
           grep -q 'id="legacyPhotoAnalysisFallback"' "$OUT"
@@ -61,16 +66,11 @@ jobs:
           grep -q '"photo_attachment_location": "MY_GPT_ONLY"' "$OUT.answer-gpt-integration.audit.json"
           grep -q '"app_photo_analysis_primary": false' "$OUT.answer-gpt-integration.audit.json"
           grep -q '"app_photo_input_scope": "legacy_fallback_only"' "$OUT.answer-gpt-integration.audit.json"
-          if grep -q 'mikami_english_question_bank_knowledge.jsonl' "$OUT"; then
-            echo 'private Knowledge filename leak' >&2
-            exit 1
-          fi
-          if grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT"; then
-            echo 'private Knowledge hash leak' >&2
-            exit 1
-          fi
+          if grep -q 'mikami_english_question_bank_knowledge.jsonl' "$OUT"; then exit 1; fi
+          if grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT"; then exit 1; fi
 
       - name: Publish only /problem-app/ to main and preserve vocab root
+        id: publish
         shell: bash
         run: |
           set -euo pipefail
@@ -92,14 +92,68 @@ jobs:
             git commit -m 'publish English problem app at /problem-app/'
             git push origin main
           fi
+          echo "root_sha=$ROOT_AFTER" >> "$GITHUB_OUTPUT"
 
       - name: Verify published source file on main
+        id: verify
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
           git show origin/main:problem-app/index.html > /tmp/published-problem-app.html
-          test "$(sha256sum /tmp/published-problem-app.html | awk '{print $1}')" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+          PUB_SHA=$(sha256sum /tmp/published-problem-app.html | awk '{print $1}')
+          echo "sha=$PUB_SHA" >> "$GITHUB_OUTPUT"
+          test "$PUB_SHA" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
           grep -q '答案分析My GPTを開く' /tmp/published-problem-app.html
           grep -q '答案写真はMy GPTへ直接添付' /tmp/published-problem-app.html
           echo 'PUBLISHED_PROBLEM_APP_GIT_SOURCE=PASS'
+
+      - name: Persist publication result on repair branch
+        if: always()
+        env:
+          RECOVER_OUTCOME: ${{ steps.recover.outcome }}
+          RECOVER_BYTES: ${{ steps.recover.outputs.bytes }}
+          RECOVER_SHA: ${{ steps.recover.outputs.sha }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          BUILD_SHA: ${{ steps.build.outputs.sha }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          VERIFY_SHA: ${{ steps.verify.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/mikami-repair-status
+          git fetch origin mikami-canonical-repair
+          git worktree add --detach /tmp/mikami-repair-status origin/mikami-canonical-repair
+          cd /tmp/mikami-repair-status
+          mkdir -p release/generated
+          if [ "$VERIFY_OUTCOME" = success ] && [ "$VERIFY_SHA" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f' ]; then STATUS=PASS_PUBLISHED; else STATUS=FAIL_OR_INCOMPLETE; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "RECOVER_OUTCOME=$RECOVER_OUTCOME"
+            echo "RECOVER_BYTES=$RECOVER_BYTES"
+            echo "RECOVER_SHA256=$RECOVER_SHA"
+            echo "BUILD_OUTCOME=$BUILD_OUTCOME"
+            echo "UNIFIED_HTML_SHA256=$BUILD_SHA"
+            echo "PUBLISH_OUTCOME=$PUBLISH_OUTCOME"
+            echo "VERIFY_OUTCOME=$VERIFY_OUTCOME"
+            echo "PUBLISHED_SHA256=$VERIFY_SHA"
+            echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
+            echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
+            echo 'APP_PHOTO_INPUT_SCOPE=legacy_fallback_only'
+            echo 'PUBLIC_PATH=/problem-app/'
+            echo 'VOCAB_ROOT_OVERWRITE=false'
+          } > release/generated/problem_app_publication_runtime.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/problem_app_publication_runtime.status.txt
+          git commit -m 'record problem app publication runtime status' || exit 0
+          for i in 1 2 3; do
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            git fetch origin mikami-canonical-repair
+            git rebase origin/mikami-canonical-repair
+          done
+          exit 1
