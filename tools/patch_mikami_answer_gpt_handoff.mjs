@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 const MARKER = 'mikami-answer-gpt-handoff-v1';
 
@@ -73,7 +74,8 @@ export function patchHtml(source){
     'id="photoPrompt"',
     'id="photoResponse"',
     `id="${MARKER}"`,
-    "question_ids: ids"
+    "question_ids: ids",
+    '答案写真はMy GPTへ直接添付'
   ]) {
     if (!out.includes(required)) throw new Error('patched output missing marker: ' + required);
   }
@@ -92,14 +94,24 @@ function selfTest(){
   if (!once.includes('旧方式（予備）')) throw new Error('fallback UI missing');
   if (!once.includes("source_mode: sourceMode()")) throw new Error('source mode missing');
   if (!once.includes("question_ids: ids")) throw new Error('question ID handoff missing');
+  if (!once.includes('答案写真はMy GPTへ直接添付')) throw new Error('My GPT direct photo instruction missing');
+  const openGptAt = once.indexOf('id="openAnswerGptBtn"');
+  const fallbackAt = once.indexOf('id="legacyPhotoAnalysisFallback"');
+  const fallbackCloseAt = once.indexOf('</details>', fallbackAt);
+  const photoInputAt = once.indexOf('id="photoInput"');
+  if (!(openGptAt >= 0 && openGptAt < fallbackAt)) throw new Error('My GPT route is not primary');
+  if (!(photoInputAt > fallbackAt && photoInputAt < fallbackCloseAt)) throw new Error('photo input escaped legacy fallback');
+  if (once.indexOf('id="photoInput"', photoInputAt + 1) !== -1) throw new Error('multiple photo inputs found');
   if (once.includes(' / 正答: ')) throw new Error('handoff patch must not add answers');
   console.log('PASS patch_mikami_answer_gpt_handoff self-test');
 }
 
-const args = process.argv.slice(2);
-if (args.includes('--self-test')) {
-  selfTest();
-} else {
+function runCli(){
+  const args = process.argv.slice(2);
+  if (args.includes('--self-test')) {
+    selfTest();
+    return;
+  }
   const [input, output] = args;
   if (!input || !output) {
     console.error(`Usage: node ${path.basename(process.argv[1])} <input.html> <output.html> | --self-test`);
@@ -110,3 +122,6 @@ if (args.includes('--self-test')) {
   fs.writeFileSync(output, patched, 'utf8');
   console.log(JSON.stringify({status:'PASS', input, output, changed: patched !== source, marker: MARKER}, null, 2));
 }
+
+const isDirectExecution = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+if (isDirectExecution) runCli();
