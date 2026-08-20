@@ -36,7 +36,7 @@ jobs:
       - name: Existing V4 repair integration regression
         run: node tools/test_pipeline_v4_integration.mjs
 
-      - name: Unified wiring safety contract
+      - name: Unified wiring and My GPT-only photo routing contract
         shell: bash
         run: |
           set -euo pipefail
@@ -51,8 +51,14 @@ jobs:
           grep -q 'audit_final_canonical.mjs' "$R"
           grep -q 'question_id_order_preserved: true' "$R"
           grep -q 'private_knowledge_embedded: false' "$R"
+          grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$R"
+          grep -q 'app_photo_analysis_primary: false' "$R"
+          grep -q "app_photo_input_scope: 'legacy_fallback_only'" "$R"
+          grep -q 'photoInputAt > fallbackAt' "$R"
+          grep -q 'do not add a primary photo-upload route' "$R"
           ! grep -q '1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC' "$F"
           echo PASS_UNIFIED_ANSWER_GPT_WIRING
+          echo PASS_PHOTO_ATTACHMENT_LOCATION_MY_GPT_ONLY
 
       - name: Record durable PASS
         shell: bash
@@ -68,8 +74,14 @@ jobs:
             echo 'FINALIZE_WIRING=PASS'
             echo 'QB_DATA_PRESERVATION_CHECK=ENFORCED'
             echo 'FINAL_CANONICAL_AUDIT=ENFORCED'
+            echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
+            echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
+            echo 'APP_PHOTO_INPUT_SCOPE=legacy_fallback_only'
+            echo 'MY_GPT_DIRECT_PHOTO_ATTACHMENT=true'
             echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
-            echo 'REAL_CANONICAL_UNIFIED_RUN=PENDING_AUTHENTICATED_SOURCE'
+            echo 'KNOWN_REAL_CANONICAL_UNIFIED_HTML_SHA256=c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+            echo 'KNOWN_REAL_CANONICAL_UNIFIED_ZIP_SHA256=79d7707b606d1f32e235f10997f62146178638cb0738dd8c41e6a085011747b6'
+            echo 'REAL_CANONICAL_UNIFIED_RUN=PASS_PREVIOUSLY_VERIFIED_NOT_REBUILT_BY_THIS_REGRESSION'
           } > release/generated/answer_gpt_unified_runner.status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
