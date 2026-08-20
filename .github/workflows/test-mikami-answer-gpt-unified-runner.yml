@@ -7,6 +7,7 @@ on:
     paths:
       - 'tools/run_mikami_pipeline_v4_answer_gpt.mjs'
       - 'tools/patch_mikami_answer_gpt_handoff.mjs'
+      - 'tools/test_mikami_answer_gpt_photo_routing_contract.mjs'
       - '.github/workflows/finalize-mikami-canonical-drive.yml'
       - '.github/workflows/test-mikami-answer-gpt-unified-runner.yml'
   workflow_dispatch:
@@ -29,9 +30,13 @@ jobs:
         run: |
           node --check tools/patch_mikami_answer_gpt_handoff.mjs
           node --check tools/run_mikami_pipeline_v4_answer_gpt.mjs
+          node --check tools/test_mikami_answer_gpt_photo_routing_contract.mjs
 
       - name: Handoff patch regression
         run: node tools/patch_mikami_answer_gpt_handoff.mjs --self-test
+
+      - name: My GPT-only photo routing regression
+        run: node tools/test_mikami_answer_gpt_photo_routing_contract.mjs
 
       - name: Existing V4 repair integration regression
         run: node tools/test_pipeline_v4_integration.mjs
@@ -42,6 +47,7 @@ jobs:
           set -euo pipefail
           F='.github/workflows/finalize-mikami-canonical-drive.yml'
           R='tools/run_mikami_pipeline_v4_answer_gpt.mjs'
+          T='tools/test_mikami_answer_gpt_photo_routing_contract.mjs'
           grep -q 'run_mikami_pipeline_v4_answer_gpt.mjs' "$F"
           grep -q 'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip' "$F"
           grep -q 'qb_data_unchanged_after_handoff_patch' "$F"
@@ -56,6 +62,8 @@ jobs:
           grep -q "app_photo_input_scope: 'legacy_fallback_only'" "$R"
           grep -q 'photoInputAt > fallbackAt' "$R"
           grep -q 'do not add a primary photo-upload route' "$R"
+          grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$T"
+          grep -q 'app_photo_analysis_primary: false' "$T"
           ! grep -q '1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC' "$F"
           echo PASS_UNIFIED_ANSWER_GPT_WIRING
           echo PASS_PHOTO_ATTACHMENT_LOCATION_MY_GPT_ONLY
@@ -70,6 +78,7 @@ jobs:
             echo "SOURCE_SHA=$GITHUB_SHA"
             echo 'V4_REGRESSION=PASS'
             echo 'HANDOFF_PATCH_SELF_TEST=PASS'
+            echo 'PHOTO_ROUTING_CONTRACT=PASS'
             echo 'UNIFIED_RUNNER_SYNTAX=PASS'
             echo 'FINALIZE_WIRING=PASS'
             echo 'QB_DATA_PRESERVATION_CHECK=ENFORCED'
