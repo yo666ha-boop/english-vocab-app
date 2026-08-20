@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v21",
-  "updated_at_jst": "2026-08-20T19:01:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v22",
+  "updated_at_jst": "2026-08-20T19:30:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -17,7 +17,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_V2_NON_CIRCULAR_BINDING_CI_PENDING_ACTUAL_RUNTIME_PENDING",
+    "status": "MY_GPT_ONLY_ROUTING_LOCKED_UNIFIED_BUILD_PASS_PUBLICATION_PENDING_ACTUAL_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -36,12 +36,43 @@
       "legacy_copy_paste": "fallback_only_until_true_runtime_pass",
       "main_touched": false
     },
+    "my_gpt_routing_contract": {
+      "status": "LOCKED_IN_CODE_AND_CI",
+      "photo_attachment_location": "MY_GPT_ONLY",
+      "app_photo_analysis_primary": false,
+      "app_photo_input_scope": "legacy_fallback_only",
+      "my_gpt_direct_photo_attachment": true,
+      "primary_handoff_fields": [
+        "source_mode",
+        "target",
+        "question_ids",
+        "question_count"
+      ],
+      "question_text_in_primary_handoff": false,
+      "answer_key_in_primary_handoff": false,
+      "photo_bytes_in_primary_handoff": false,
+      "runner_contract_commit": "fb5e2e6f9a466bdc42707757705a7ce6d57264c2",
+      "dedicated_test_commit": "07e17c1e7a6c8553a346c2dde24167f0aeb0a202",
+      "workflow_contract_commit": "ee847f7d4d710f15895186b3d63a7dbd5d1da6b8",
+      "latest_observed_ci_status": "PASS_FOR_RUNNER_COMMIT_fb5e2e6_WITH_NEW_FULL_ROUTING_WORKFLOW_RESULT_PENDING_WRITEBACK"
+    },
+    "publication": {
+      "status": "PUBLIC_PROBLEM_APP_URL_PENDING",
+      "wrong_vocab_alias": "https://mikami-juku-english-app.vercel.app/",
+      "wrong_alias_content": "ENGLISH_VOCAB_APP",
+      "do_not_present_wrong_alias_as_problem_app": true,
+      "target": "DISTINCT_PROBLEM_APP_URL_OR_MAIN_SUBPATH_WITHOUT_OVERWRITING_ROOT_VOCAB_APP",
+      "publication_status_file": "release/generated/problem_app_publication.status.txt",
+      "source_artifact_recovery_note": "runtime artifact 9370551027 was inspected and contains runtime tools/data/gpt rather than the 4,035,500-byte canonical HTML; do not publish it as the app",
+      "main_root_touched": false
+    },
     "true_runtime_gate": {
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "gate_version": "evidence-backed-v3-hardened",
       "validator_ci_run_id": 32335459190,
       "validator_ci_status": "PASS",
       "required_photo_cases": 4,
+      "photo_execution_location": "ACTUAL_CUSTOM_GPT",
       "a4_orientation": "portrait",
       "a4_page_range": "1-2",
       "synthetic_self_test_not_runtime_pass": true
@@ -68,58 +99,44 @@
       "runtime_results_file_required": true,
       "runtime_results_file_sha_recomputed": true,
       "non_circular_binding_required": true,
-      "binding_algorithm": "sha256-stable-json-excluding-runtime-results-sha-and-binding-digest",
-      "runtime_final_gate_binding_digest_match_required": true,
-      "manifest_runtime_registration_crosscheck_required": true,
-      "manifest_runtime_photo_hash_crosscheck_required": true,
-      "manifest_runtime_transcript_hash_crosscheck_required": true,
-      "manifest_runtime_execution_time_crosscheck_required": true,
-      "manifest_runtime_a4_crosscheck_required": true,
       "runtime_overall_pass_required": true,
-      "negative_cases_defined": 8,
-      "template_v2_commit": "77c3534d8dcf5895c80a5e551e0a1fbbab851828",
-      "validator_v2_commit": "e86001b5430d8e1c96902b3f4431cfdb9cac2e79",
-      "workflow_v2_commit": "7cc17a8e670b402f78c333229c35151e4d0717c6",
-      "status_record_commit": "c7e427da8b33a1f4aabc9f7eb3b983b63bb286fc",
-      "ci_status": "PENDING_WRITEBACK",
       "real_runtime_executed": false
     },
     "completed_this_run": [
-      "re-read latest branch HEAD, checkpoint, handoff, unified runner, real private build, true runtime gate and private registration kit statuses",
-      "confirmed all previously completed question-bank, Knowledge and unified-build work remains PASS and was not rerun",
-      "checked plugin/tool availability for a direct Custom GPT editor mutation surface; no usable authenticated Custom GPT editor action was found",
-      "re-read the evidence-chain validator/workflow and found a circular-hash design problem: runtime-results was expected to carry evidence-manifest SHA while the manifest also carried runtime-results SHA",
-      "upgraded evidence manifest schema to v2 with a deterministic non-circular binding digest",
-      "defined the digest as stable JSON SHA256 excluding runtime_results.results_json_sha256 and binding.binding_digest_sha256",
-      "updated evidence-chain validator so runtime final_gate.evidence_manifest_sha256 must equal that binding digest",
-      "kept actual runtime-results file SHA recomputation and all registration/photo/transcript/A4 cross-checks",
-      "expanded negative self-test definitions to 8 cases including wrong binding digest and runtime final-gate digest mismatch",
-      "updated the GitHub Actions workflow to record v2 non-circular-binding requirements and runtime-file-binding requirements",
-      "observed the new evidence-chain CI write-back was not yet visible before checkpoint update and recorded CI pending rather than claiming PASS",
-      "kept main untouched and private Knowledge out of the public repository"
+      "confirmed the intended architecture with the user: no new primary photo upload/analysis inside the problem app",
+      "fixed the permanent routing contract as problem app -> minimal question-ID handoff -> open 'みかみ塾 答案分析GPT' -> attach answer photo directly in My GPT",
+      "updated the hourly continuation automation so future runs cannot reinterpret the design as app-side photo analysis",
+      "added final-runner assertions that the My GPT button is the primary route and any app-side photo input stays only inside the collapsed legacy fallback",
+      "added forbidden handoff-field checks so question text, answer keys and photo/image payloads are not sent in the primary handoff",
+      "added a dedicated test_mikami_answer_gpt_photo_routing_contract.mjs regression test",
+      "updated the unified-runner CI workflow to execute and persist the My GPT-only routing contract",
+      "observed the earlier runner update CI status PASS; the newest workflow revision write-back was not yet visible at checkpoint time",
+      "reconfirmed problem-app publication remains pending at a distinct URL and the existing Vercel alias is the vocabulary app",
+      "kept GitHub main root untouched and private Knowledge out of the public repository"
     ],
-    "current_stage": "evidence-chain v2 CI verification, then actual Custom GPT registration using prepared private registration kit",
+    "current_stage": "confirm newest My GPT-only routing CI PASS, then publish the exact unified problem app to a distinct URL and register the actual Custom GPT when authenticated editor access is available",
     "remaining_work": [
-      "confirm evidence-chain v2 CI write-back PASS",
+      "confirm newest My GPT-only routing workflow write-back includes PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY and APP_PHOTO_ANALYSIS_PRIMARY=false",
+      "recover or materialize the exact unified HTML bytes for durable storage without rebuilding completed canonical content unnecessarily",
+      "publish the exact unified problem app to a distinct URL without touching the vocabulary app root/main",
       "obtain authenticated Custom GPT editor/runtime mutation access",
-      "register exact private Knowledge JSONL, formal Instructions and schema from the prepared registration kit",
+      "register exact private Knowledge JSONL and formal Instructions from the prepared private registration kit",
       "capture actual Custom GPT URL and registration evidence hash",
-      "run the four real answer-photo cases and capture unique photo/transcript hashes and timestamps",
+      "run the four real answer-photo cases in the actual Custom GPT and capture unique photo/transcript hashes and timestamps",
       "render or print an actual A4 portrait 1-2 page report and capture PDF evidence",
-      "fill actual runtime-results JSON and v2 evidence-chain manifest using the non-circular binding digest",
-      "run hardened true-runtime validator and evidence-chain-v2 validator to PASS",
-      "after true runtime PASS only, remove legacy copy/paste or keep it as permanent fallback",
-      "decide final release/main strategy without overwriting the completed vocabulary app"
+      "fill actual runtime-results JSON and evidence-chain manifest",
+      "run hardened true-runtime and evidence-chain validators to PASS",
+      "after true runtime PASS only, remove legacy copy/paste or keep it as permanent fallback"
     ],
     "stopped_at": {
-      "stage": "evidence-chain v2 CI write-back / authenticated Custom GPT editor mutation",
-      "status": "CI_PENDING_AND_EDITOR_ACCESS_UNAVAILABLE",
-      "detail": "This run fixed a real pre-runtime blocker: the previous mutual full-file hash design was circular and could not be finalized. Evidence-chain v2 now uses a deterministic non-circular binding digest and still cryptographically binds the actual runtime-results file. CI write-back has not yet appeared, and no authenticated Custom GPT editor mutation surface is exposed."
+      "stage": "new routing CI write-back / distinct problem-app publication / authenticated Custom GPT editor mutation",
+      "status": "ACTIVE_WITH_EXTERNAL_EXECUTION_LIMITS",
+      "detail": "The architecture is now locked so photos are attached in My GPT, not processed in the problem app. Publication still needs the exact unified HTML materialized into a public deployment path, and actual GPT registration still requires an authenticated Custom GPT editor action surface."
     },
-    "next_start": "first re-read evidence-chain status and confirm v2 CI PASS; then re-check authenticated Custom GPT editor access. If available, register immediately and execute the four actual photo/A4 runtime tests. If still unavailable, continue concrete release/evidence/print hardening without rerunning completed canonical work.",
-    "next_stage": "evidence-chain-v2 CI PASS -> actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS + evidence-chain-v2 PASS -> legacy fallback finalization -> release/main decision"
+    "next_start": "re-read latest branch and answer_gpt_unified_runner.status.txt; if the new routing CI write-back is PASS, keep the contract fixed and continue distinct problem-app publication. Re-check authenticated Custom GPT editor access and register immediately if available.",
+    "next_stage": "My GPT-only routing CI PASS -> distinct problem-app publication -> actual Custom GPT registration -> four real photo cases in My GPT -> A4 actual render/print -> hardened runtime/evidence PASS -> legacy fallback finalization"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_V2_NON_CIRCULAR_BINDING_CI_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_MY_GPT_ONLY_ROUTING_LOCKED_PUBLICATION_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run materially fixed the evidence chain by removing an impossible circular full-file hash dependency. The v2 binding digest is deterministic and can be referenced by runtime-results while the manifest independently records the final runtime-results file SHA. Actual authenticated Custom GPT registration and real-photo/A4 runtime tests remain the non-simulated completion blocker. main remains untouched."
+  "completion_note": "The answer-analysis architecture is explicitly locked: the problem app does not gain a new primary answer-photo upload/analysis flow. It only hands off minimal problem identifiers and opens the dedicated My GPT; the actual answer photo is attached and analyzed in My GPT. Distinct problem-app publication and actual authenticated Custom GPT runtime validation remain."
 }
