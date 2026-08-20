@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v17",
-  "updated_at_jst": "2026-08-20T16:03:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v18",
+  "updated_at_jst": "2026-08-20T16:31:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -17,7 +17,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_RUNTIME_AND_RELEASE_GATES_ALIGNED_V3_ACTUAL_RUNTIME_PENDING",
+    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_ACTUAL_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -59,6 +59,23 @@
       "actual_a4_render_or_print_required": true,
       "synthetic_self_test_not_runtime_pass": true
     },
+    "private_registration_kit": {
+      "status": "PASS_READY",
+      "status_file": "release/generated/answer_gpt_private_registration_kit.status.txt",
+      "status_commit": "4d64f3b68f87bc76645d01a8bc4079e9c839c0d4",
+      "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
+      "drive_folder_name": "みかみ塾_答案分析GPT_登録セット_20260820",
+      "guide_id": "1h7-RO6PsCWwUSMaRVFWGVC4DP817NSpWtlYzZgmORnw",
+      "knowledge_copy_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
+      "knowledge_copy_bytes": 3028093,
+      "instructions_copy_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
+      "instructions_copy_bytes": 7246,
+      "schema_copy_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
+      "schema_copy_bytes": 4703,
+      "all_files_private": true,
+      "all_files_shared": false,
+      "custom_gpt_url_found": false
+    },
     "public_index_probe": {
       "status": "HASH_MISMATCH_NON_CANONICAL",
       "latest_run_id": 32341767323,
@@ -79,18 +96,21 @@
       "workflow_run_verification": "PENDING_CONNECTOR_RUN_VISIBILITY"
     },
     "completed_this_run": [
-      "re-read latest branch HEAD and all required checkpoint/status files",
-      "confirmed question bank, Knowledge and real canonical unified build remain PASS without rerunning completed canonical work",
-      "detected stale true-runtime status file still claiming evidence-backed-v2 despite hardened v3 validator already being CI PASS",
-      "updated answer_gpt_true_runtime_gate.status.txt to evidence-backed-v3-hardened with validator hardening commit, CI run and evidence requirements",
-      "hardened release-readiness validator so any future regression from v3 gate metadata fails release readiness",
-      "updated answer_gpt_release_readiness.status.txt to v3-aligned state",
-      "confirmed latest public-index probe still reports HASH_MISMATCH, repaired SHA mismatch and private canonical not exposed",
-      "kept main untouched and did not expose private Knowledge/canonical data"
+      "re-checked latest branch and confirmed actual runtime remains the only completion blocker",
+      "re-tried local/container execution and observed ClientResponseError again without treating it as task completion",
+      "searched GitHub and Google Drive for an existing Custom GPT URL and found none",
+      "created private Google Drive folder みかみ塾_答案分析GPT_登録セット_20260820",
+      "copied the exact Knowledge, formal Instructions and output schema into the private registration folder",
+      "created a one-page registration and four-photo/A4 verification guide in the same private folder",
+      "verified folder contents and copied files are not shared",
+      "recorded the private registration kit in GitHub status file",
+      "updated the hourly continuation task so it resumes from the private registration kit rather than old runtime metadata",
+      "kept main untouched and did not expose private canonical or Knowledge data"
     ],
-    "current_stage": "actual Custom GPT registration and evidence-backed true runtime verification",
+    "current_stage": "actual Custom GPT registration using prepared private registration kit",
     "remaining_work": [
-      "register private Knowledge JSONL, formal Instructions and schema in the actual Custom GPT",
+      "open the authenticated Custom GPT editor and create/update みかみ塾 答案分析GPT",
+      "register the private Knowledge JSONL and schema and apply formal Instructions from the prepared private registration kit",
       "capture actual Custom GPT URL and private registration evidence hash",
       "run the four real answer-photo cases and capture unique photo/transcript hashes",
       "render or print an actual A4 portrait 1-2 page report and capture PDF evidence hash",
@@ -99,14 +119,14 @@
       "decide final release/main strategy without overwriting the completed vocabulary app"
     ],
     "stopped_at": {
-      "stage": "actual Custom GPT registration",
+      "stage": "authenticated Custom GPT editor mutation",
       "status": "BLOCKED_BY_AUTHENTICATED_EDITOR_RUNTIME_ACCESS",
-      "detail": "No authenticated Custom GPT editor mutation/runtime action is exposed in the currently available tools. Repository-side runtime/release metadata was still materially advanced and aligned to hardened v3 in this run."
+      "detail": "The private registration kit is now complete and verified not shared, but the available tool surface still does not expose authenticated Custom GPT editor mutation. A direct web open reaches the editor URL surface but does not provide authenticated mutation controls."
     },
-    "next_start": "re-check authenticated Custom GPT editor/runtime access first; if unavailable, inspect the next unresolved repository-side runtime evidence, A4 handoff, fallback or release gap and implement a concrete test/guard without rerunning completed canonical/Knowledge work",
+    "next_start": "use the prepared private Drive registration kit immediately if authenticated Custom GPT editor access becomes available; otherwise continue concrete runtime evidence/fallback/release guard work without rerunning completed canonical work",
     "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_RUNTIME_RELEASE_METADATA_V3_ALIGNED_PUBLIC_INDEX_NONCANONICAL_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run eliminated a stale v2/v3 runtime-gate contradiction and made release readiness explicitly require the hardened v3 contract. Actual Custom GPT registration, four real-photo cases and A4 actual render/print remain the non-simulated completion blocker; main remains untouched."
+  "completion_note": "The private Custom GPT registration package is now prepared in one verified-private Drive folder with guide, Knowledge, Instructions and schema, and the continuation task/checkpoint point to it. The only non-simulated blocker remains authenticated Custom GPT editor access followed by four real-photo and A4 runtime tests. main remains untouched."
 }
