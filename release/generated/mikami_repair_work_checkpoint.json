@@ -1,7 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v7",
-  "updated_at_jst": "2026-08-20T10:45:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v8",
+  "updated_at_jst": "2026-08-20T10:46:47+09:00",
   "branch": "mikami-canonical-repair",
+  "observed_branch_head": "c8d59054ba2511cf2d9df4bb5fed6fce393262ad",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -21,11 +22,10 @@
     "relative_unique_blank_gate": true,
     "mid_sentence_blank_case_gate": true,
     "final_canonical_audit": "PASS",
-    "historical_failed_run": "32228306116 superseded",
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_AND_PRE_RUNTIME_ACCEPTANCE_PASS_CUSTOM_GPT_REGISTRATION_AND_REAL_PHOTO_RUNTIME_TESTS_PENDING",
+    "status": "KNOWLEDGE_AND_PRE_RUNTIME_ACCEPTANCE_PASS_CUSTOM_GPT_EDITOR_ACCESS_REQUIRED",
     "exact_private_knowledge_build": {
       "status": "PASS",
       "knowledge_records": 10511,
@@ -36,73 +36,43 @@
       "families_passed": 9,
       "representative_records_checked": 27,
       "tamper_rejection": true,
-      "bundle_sha256": "c8d699adbef04f286e7b09736452ecac4ae77bae6ed7235cb7b23e54c2be0c23",
       "public_repo_contains_private_knowledge": false
     },
     "private_drive_assets": {
-      "bundle_drive_id": "1o_PKIUvWAZXniX8ohJLcov7RZmnM77rz",
       "knowledge_jsonl_drive_id": "1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC",
       "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
       "output_schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
       "public_exposure": false,
-      "knowledge_revalidation": {
-        "status": "PASS",
-        "bytes": 3028093,
-        "records": 10511,
-        "unique_ids": 10511,
-        "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213"
-      }
+      "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213"
     },
     "github_pre_runtime_acceptance": {
       "status": "PASS",
-      "workflow": ".github/workflows/test-mikami-answer-gpt-photo-acceptance.yml",
       "run_id": 32272791009,
       "source_sha": "6fc8a7000bd06d561353a81ead2d3d42d86562ac",
-      "cases_file": "gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json",
-      "validator": "tools/test_mikami_answer_gpt_photo_acceptance_contract.mjs",
-      "photo_cases": [
-        "fully-correct original answer",
-        "multi-category wrong answers",
-        "unreadable/held answer",
-        "school-test/non-canonical photo"
-      ],
       "photo_case_count": 4,
       "a4_contract": "portrait 1-2 pages",
       "custom_gpt_runtime_test": false,
       "real_photo_test_pending": true
     },
-    "manual_resume_verification": {
-      "status": "PASS_READY_FOR_REGISTRATION",
-      "verified_at_jst": "2026-08-20T10:44:00+09:00",
-      "knowledge_refetched": true,
-      "knowledge_refetched_bytes": 3028093,
-      "instructions_refetched": true,
-      "instructions_refetched_bytes": 7246,
-      "output_schema_refetched": true,
-      "acceptance_cases_refetched": true,
-      "first_canonical_lookup_verified": "E1-BQ-001",
-      "first_canonical_lookup_answer": "He is not busy.",
-      "main_touched": false
-    },
     "completed_this_run": [
-      "confirmed branch HEAD and latest checkpoint before resuming",
-      "re-fetched private Knowledge JSONL from Drive (3,028,093 bytes)",
-      "re-fetched formal GPT instructions from Drive (7,246 bytes)",
-      "re-fetched output schema from Drive",
-      "re-fetched four-case photo/A4 acceptance specification",
-      "verified canonical exact-ID lookup path with E1-BQ-001",
-      "moved hourly continuation start to 10:45 JST so continuation does not wait until 11:29"
+      "confirmed latest mikami-canonical-repair HEAD c8d59054ba2511cf2d9df4bb5fed6fce393262ad",
+      "confirmed checkpoint still marks question bank PASS COMPLETE and pre-runtime acceptance PASS",
+      "confirmed no reason to re-audit or regenerate the completed question bank",
+      "checked available execution surfaces for target Custom GPT editor mutation",
+      "confirmed local agent-browser executable is unavailable in this automation runtime",
+      "confirmed installed connector surface exposes no Custom GPT editor/Knowledge mutation action",
+      "kept main untouched and private Knowledge out of the public repository"
     ],
     "current_blocker": {
-      "stage": "Custom GPT registration and true runtime photo/A4 verification",
-      "detail": "All registration assets are now re-fetched and ready. The actual GPT editor must receive the Knowledge file and Instructions before real-photo runtime tests can be truthfully marked PASS. Available GitHub/Drive connectors cannot mutate the user's private Custom GPT editor, so do not fake completion of this step.",
+      "stage": "register assets in the actual private Custom GPT editor, then run true photo/A4 tests",
+      "detail": "All code/data/pre-runtime gates are PASS. This runtime cannot reach an authenticated Custom GPT editor mutation surface: no Custom GPT configuration connector is exposed and no authenticated browser automation session/executable is available. Therefore Knowledge/Instructions cannot be truthfully registered and real-photo runtime/A4 tests cannot be truthfully executed in this run.",
       "code_readiness": "PASS",
       "data_readiness": "PASS",
       "pre_runtime_acceptance": "PASS",
       "registration_assets_ready": true,
-      "custom_gpt_registration": "PENDING",
-      "real_photo_runtime_tests": "PENDING",
-      "a4_runtime_render_test": "PENDING"
+      "custom_gpt_registration": "BLOCKED_BY_EDITOR_ACCESS",
+      "real_photo_runtime_tests": "BLOCKED_UNTIL_REGISTRATION_AND_PHOTO_INPUT",
+      "a4_runtime_render_test": "BLOCKED_UNTIL_TRUE_RUNTIME_OUTPUT"
     },
     "remaining_work": [
       "register private Knowledge JSONL in target answer-analysis Custom GPT",
@@ -115,9 +85,9 @@
       "verify actual A4 print/render quality",
       "only after all runtime tests PASS decide whether legacy copy/paste UI is removed or demoted"
     ],
-    "resume_from": "register private Knowledge JSONL and formal Instructions in the target Custom GPT editor; then run four real-photo cases"
+    "resume_from": "first run with authenticated target Custom GPT editor access: attach Drive Knowledge JSONL, apply formal Instructions/schema, then execute four true photo cases"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_REFETCHED_REGISTRATION_ASSETS_READY_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_PRE_RUNTIME_PASS_BLOCKED_ONLY_ON_AUTHENTICATED_CUSTOM_GPT_EDITOR_AND_REAL_PHOTOS",
   "overall_completion": false,
-  "completion_note": "Immediate manual continuation completed the registration-readiness recheck and re-fetched all private registration assets. Problem-bank work remains complete and main remains untouched. Next step is the actual private Custom GPT editor registration, followed by four true photo runtime cases and A4 rendering verification."
+  "completion_note": "No completed work was reopened. The only remaining path is the actual private Custom GPT editor plus real answer-photo runtime/A4 verification. This automation runtime has no tool surface to mutate that GPT, so completion cannot be claimed. main remains untouched and private Knowledge remains private."
 }
