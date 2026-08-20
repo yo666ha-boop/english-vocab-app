@@ -5,67 +5,115 @@ on:
     branches: [mikami-canonical-repair]
     paths:
       - '.github/workflows/publish-mikami-problem-app.yml'
+  workflow_dispatch:
 
 permissions:
+  actions: read
   contents: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repair branch
+        uses: actions/checkout@v4
         with:
           ref: mikami-canonical-repair
-      - uses: actions/setup-node@v4
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Fetch verified canonical source
+      - name: Download exact private runtime artifact from GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          SRC='https://mikami-juku-english-problem-69n8lrrgx-yo666ha-7357s-projects.vercel.app/'
-          curl --compressed -fL --retry 3 --connect-timeout 20 --max-time 180 "$SRC" -o /tmp/mikami-canonical.html
-          test "$(wc -c < /tmp/mikami-canonical.html)" -eq 4035500
-          echo '03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432  /tmp/mikami-canonical.html' | sha256sum -c -
+          rm -rf /tmp/mikami-runtime
+          mkdir -p /tmp/mikami-runtime
+          gh run download 32266896824 -n mikami-runtime-v2 -D /tmp/mikami-runtime
+          find /tmp/mikami-runtime -maxdepth 5 -type f -printf '%s %p\n' | sort -nr | head -100
 
-      - name: Build final V4 + My GPT handoff app
+      - name: Resolve exact HTML and build final V4 + My GPT app
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p release/public-problem-app
-          OUT='release/public-problem-app/index.html'
-          node tools/run_mikami_pipeline_v4_answer_gpt.mjs /tmp/mikami-canonical.html "$OUT"
-          test -s "$OUT"
-          echo 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f  release/public-problem-app/index.html' | sha256sum -c -
-          grep -q '答案分析My GPTを開く' "$OUT"
-          grep -q '旧方式（予備）' "$OUT"
-          if grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT"; then
-            echo 'private Knowledge hash leak'
+          CANONICAL_SHA='03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+          REPAIRED_SHA='0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f'
+          UNIFIED_SHA='c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+          SRC=''
+          MODE=''
+
+          while IFS= read -r -d '' f; do
+            sha=$(sha256sum "$f" | awk '{print $1}')
+            size=$(wc -c < "$f")
+            echo "candidate size=$size sha=$sha file=$f"
+            if [ "$sha" = "$UNIFIED_SHA" ]; then SRC="$f"; MODE='unified'; break; fi
+            if [ "$sha" = "$REPAIRED_SHA" ]; then SRC="$f"; MODE='repaired'; break; fi
+            if [ "$sha" = "$CANONICAL_SHA" ]; then SRC="$f"; MODE='canonical'; break; fi
+          done < <(find /tmp/mikami-runtime -type f -name '*.html' -print0)
+
+          if [ -z "$SRC" ]; then
+            echo 'No exact known HTML SHA found in runtime artifact.' >&2
             exit 1
           fi
-          {
-            echo 'STATUS=PASS'
-            echo 'SOURCE_SHA256=03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
-            echo 'UNIFIED_HTML_SHA256=c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
-            echo 'QUESTION_COUNT=10513'
-            echo 'ENGLISH_QUESTION_COUNT=10511'
-            echo 'MY_GPT_PRIMARY_UI=true'
-            echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
-          } > release/public-problem-app/status.txt
+          echo "resolved_mode=$MODE"
+          echo "resolved_file=$SRC"
 
-      - name: Commit public app artifact to repair branch
+          OUT=/tmp/mikami-problem-app-index.html
+          case "$MODE" in
+            unified) cp "$SRC" "$OUT" ;;
+            repaired) node tools/patch_mikami_answer_gpt_handoff.mjs "$SRC" "$OUT" ;;
+            canonical) node tools/run_mikami_pipeline_v4_answer_gpt.mjs "$SRC" "$OUT" ;;
+          esac
+
+          test -s "$OUT"
+          OUT_SHA=$(sha256sum "$OUT" | awk '{print $1}')
+          OUT_SIZE=$(wc -c < "$OUT")
+          echo "output_size=$OUT_SIZE"
+          echo "output_sha256=$OUT_SHA"
+          test "$OUT_SHA" = "$UNIFIED_SHA"
+          grep -q 'id="qb-data"' "$OUT"
+          grep -q '答案分析My GPTを開く' "$OUT"
+          grep -q '旧方式（予備）' "$OUT"
+          if grep -q 'mikami_english_question_bank_knowledge.jsonl' "$OUT"; then
+            echo 'Private Knowledge filename leak found.' >&2
+            exit 1
+          fi
+
+          node - "$OUT" <<'NODE'
+          const fs=require('fs');
+          const p=process.argv[2];
+          const s=fs.readFileSync(p,'utf8');
+          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
+          if(!m) throw new Error('qb-data not found');
+          const qb=JSON.parse(m[1]);
+          const english=qb.filter(x=>x?.subject==='英語').length;
+          const unique=new Set(qb.map(x=>x?.id)).size;
+          if(qb.length!==10513 || english!==10511 || unique!==10513) throw new Error(`invariant mismatch total=${qb.length} english=${english} unique=${unique}`);
+          console.log(`invariants PASS total=${qb.length} english=${english} unique=${unique}`);
+          NODE
+
+      - name: Publish only /problem-app/ to main
         shell: bash
         run: |
           set -euo pipefail
+          OUT=/tmp/mikami-problem-app-index.html
+          git fetch origin main
+          git checkout -B main origin/main
+          ROOT_BEFORE=$(sha256sum index.html | awk '{print $1}')
+          mkdir -p problem-app
+          cp "$OUT" problem-app/index.html
+          ROOT_AFTER=$(sha256sum index.html | awk '{print $1}')
+          test "$ROOT_BEFORE" = "$ROOT_AFTER"
+          test "$(sha256sum problem-app/index.html | awk '{print $1}')" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release/public-problem-app/index.html release/public-problem-app/status.txt
-          git commit -m 'publish final English problem app artifact' || true
-          git pull --rebase origin mikami-canonical-repair || true
-          for i in 1 2 3; do
-            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
-            git pull --rebase origin mikami-canonical-repair
-            sleep 2
-          done
-          exit 1
+          git add -- problem-app/index.html
+          CHANGED=$(git diff --cached --name-only)
+          test "$CHANGED" = 'problem-app/index.html'
+          git commit -m 'publish English problem app at /problem-app/' || true
+          git push origin main
