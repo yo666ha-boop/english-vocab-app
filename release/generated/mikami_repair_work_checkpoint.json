@@ -1,7 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v24",
-  "updated_at_jst": "2026-08-20T20:55:30+09:00",
+  "checkpoint_schema": "mikami-repair-work-v25",
+  "updated_at_jst": "2026-08-20T23:15:00+09:00",
   "branch": "mikami-canonical-repair",
+  "observed_head_before_checkpoint_write": "4954770e20216db04028ac2d99e6447b2cebd90a",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -17,7 +18,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "MY_GPT_ONLY_ROUTING_LOCKED_CURRENT_ARTIFACT_EXACT_LOCAL_AND_DRIVE_VERIFIED_DISTINCT_VERCEL_DEPLOYMENT_BROKEN_REPAIR_PENDING_EVIDENCE_CI_RETRIGGERED_ACTUAL_RUNTIME_PENDING",
+    "status": "MY_GPT_ONLY_ROUTING_LOCKED_GITHUB_XZ_CHUNK_BRIDGE_UPLOAD_IN_PROGRESS_4_OF_22",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -36,63 +37,54 @@
       "photo_bytes_in_primary_handoff": false
     },
     "current_routing_materialization": {
-      "status": "PASS",
-      "source_drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
-      "source_bytes": 4035500,
-      "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
-      "repaired_v4_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
+      "status": "PASS_EXACT_REVERIFIED_THIS_RUN",
+      "drive_storage_id": "19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0",
+      "file_name": "みかみ塾英語問題アプリ_MyGPT連携_ROUTING_LOCK_20260820.html",
       "current_html_bytes": 3812063,
       "current_html_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "drive_storage_id": "19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0",
-      "drive_redownload_bytes": 3812063,
-      "drive_redownload_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
       "local_materialized_path": "/mnt/data/みかみ塾英語問題アプリ_MyGPT連携_ROUTING_LOCK_20260820.html",
       "local_materialized_bytes": 3812063,
       "local_materialized_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "qb_data_unchanged": true,
-      "question_id_order_preserved": true,
-      "final_quality_errors": 0,
       "private_knowledge_embedded": false,
       "legacy_copy_paste": "fallback_only",
-      "old_pre_routing_lock_html_sha256": "c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f",
-      "old_pre_routing_lock_zip_sha256": "79d7707b606d1f32e235f10997f62146178638cb0738dd8c41e6a085011747b6",
-      "status_file": "release/generated/problem_app_current_routing_materialization.status.txt",
-      "status_commit": "1611675d47f86e702b1bd82e4c21a66c8cfaad9e"
+      "old_pre_routing_lock_html_sha256": "c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f"
     },
-    "runtime_packaging": {
-      "status": "PASS",
-      "workflow": ".github/workflows/package-mikami-current-runtime.yml",
-      "workflow_commit": "98eb19585e42032393648de228e1e46c1fdd9dc5",
-      "run_id": 32361648200,
-      "artifact_id": 9403726309,
-      "artifact_name": "mikami-current-runtime",
-      "zip_sha256": "a9fb64329648e2f2b15ba4dd5ee5f438ae97a414ec13f374ff696a458dbad4bf",
-      "private_canonical_included": false,
-      "private_knowledge_included": false
+    "github_xz_chunk_bridge": {
+      "status": "UPLOAD_IN_PROGRESS_4_OF_22_VERIFIED",
+      "workflow": ".github/workflows/publish-mikami-routing-from-xz-chunks.yml",
+      "workflow_commit": "3cfba625f6c338819e9a39c706b3c65ce702266b",
+      "transfer_dir": "release/transfer/mikami-routing-xz",
+      "progress_status_file": "release/generated/problem_app_xz_chunk_bridge_progress.status.txt",
+      "xz_bytes": 130020,
+      "base64_chars": 173360,
+      "base64_sha256": "83e27afb5288315eb1785f40c8f658e599646e4402b84564a2326af0f713665f",
+      "chunk_size_chars": 8000,
+      "total_chunks": 22,
+      "uploaded_chunks": 4,
+      "next_chunk": 4,
+      "last_chunk_chars": 5360,
+      "ready_created": false,
+      "publication_workflow_triggered": false,
+      "reason_for_8k_chunks": "48k and 24k command/tool output was truncated; 8k content is safely representable through the GitHub create_file text surface without ellipsis corruption.",
+      "uploaded": [
+        {"id":"0000","chars":8000,"sha256":"1e7cd86d39feac110c84a6047be0e3930635dd8e4574fa1bef65bbe1ef2e69df","git_blob_sha1":"0aa48faeed7c9b13c1140bdd30b256684c3fbd66","commit":"133bbe84ad0b42b5887198f0dc4582b957b8d264","byte_exact_verified":true},
+        {"id":"0001","chars":8000,"sha256":"74e8c0e55c737d25ff880b6765c4e341ac4044e1a9124c03f931e66d8a46bf76","git_blob_sha1":"7c0b4e7e3c1b3df9f5c85ff14425574fcf092a71","commit":"4a62a858509d89d9ab579cd4d834efabe0caf89e","byte_exact_verified":true},
+        {"id":"0002","chars":8000,"sha256":"1f29c060b395a3c4033024b2608116b3cd0bc7b0d081412fa4b682b2af247b38","git_blob_sha1":"9a130ef3560959d9696e04ab49f80ff7f41ab7ca","commit":"36e5361bc039edc6b809f3732020090f35822d1c","byte_exact_verified":true},
+        {"id":"0003","chars":8000,"sha256":"3eab6149bc5d70be4d218fb70f1543721889bc4317daea595559a6425e870aa5","git_blob_sha1":"00b3522e772d726eb83425382e0c74db157f2e66","commit":"faff8f66611b52d9f7934d22af63d03b37ac49d2","byte_exact_verified":true}
+      ],
+      "ready_required_content": {
+        "EXPECTED_HTML_BYTES": 3812063,
+        "EXPECTED_HTML_SHA256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
+        "CHUNK_COUNT": 22
+      }
     },
     "publication": {
-      "status": "DISTINCT_VERCEL_PROJECT_EXISTS_BUT_PRODUCTION_BODY_BROKEN_CONFIRMED_AGAIN",
-      "wrong_vocab_alias": "https://mikami-juku-english-app.vercel.app/",
-      "do_not_present_wrong_alias_as_problem_app": true,
-      "project_name": "mikami-juku-english-problem-app",
-      "project_id": "prj_ASDW860nSY72X0OZ93xCyvOjQB1a",
-      "team_id": "team_LXgcBDLoBpU1lMxZrMyxUQlg",
-      "public_url": "https://mikami-juku-english-problem-app.vercel.app/",
-      "deployment_id": "dpl_7sb4wj7QhGEEoSwtypuqZ8Nd5s9b",
-      "deployment_state": "READY",
-      "observed_http_status": 200,
-      "observed_response_bytes": 52,
-      "observed_response_sha256": "347bf7b493d9cc32cfeb18e3700bf460849131f85e88ada96f96e033c3ecf357",
-      "observed_response_body": "/mnt/data/TEMP_GITHUB_TRANSFER_mikami_canonical.html",
-      "failure": "production serves a local path string instead of HTML bytes",
-      "publication_status_file": "release/generated/problem_app_publication.status.txt",
-      "strict_probe_script": "tools/probe_mikami_problem_app_publication.mjs",
-      "strict_probe_workflow": ".github/workflows/probe-mikami-problem-app-publication.yml",
-      "strict_probe_run_id": 32361964978,
-      "strict_probe_status": "FAIL_EXPECTED_UNTIL_REDEPLOY",
-      "strict_probe_exact_body_pass": false,
-      "strict_probe_path_string_only": true,
-      "strict_probe_private_knowledge_leak": false,
+      "priority_route": "GITHUB_PAGES_XZ_CHUNK_BRIDGE",
+      "target_pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+      "dedicated_vercel_project_id": "prj_ASDW860nSY72X0OZ93xCyvOjQB1a",
+      "dedicated_vercel_current_state": "BROKEN_52_BYTE_PATH_STRING",
+      "dedicated_vercel_repair_required_for_completion": false,
+      "vocabulary_app_project_id_protected": "prj_k85GEgd76tQvHoL8YC9IDjnq553e",
       "main_root_touched": false
     },
     "private_registration_kit": {
@@ -101,66 +93,53 @@
       "knowledge_copy_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
       "instructions_copy_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
       "schema_copy_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
-      "custom_gpt_url_found": false,
       "actual_custom_gpt_registration": false
     },
     "true_runtime_gate": {
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "validator_ci_run_id": 32335459190,
-      "validator_ci_status": "PASS",
       "required_photo_cases": 4,
       "photo_execution_location": "ACTUAL_CUSTOM_GPT",
       "a4_orientation": "portrait",
-      "a4_page_range": "1-2",
-      "synthetic_self_test_not_runtime_pass": true
-    },
-    "evidence_chain_gate": {
-      "status": "NON_CIRCULAR_BINDING_V2_CI_RETRIGGERED_WRITEBACK_PENDING",
-      "version": "evidence-chain-v2",
-      "retrigger_commit": "51b39a693a7cd7acbca1b26367b2c2a36a9d7588",
-      "runtime_overall_pass_required": true,
-      "real_runtime_executed": false
+      "a4_page_range": "1-2"
     },
     "completed_this_run": [
-      "re-read latest branch HEAD/checkpoint before work and followed v23 instead of stale memory",
-      "confirmed the exact dedicated Vercel project prj_ASDW860nSY72X0OZ93xCyvOjQB1a under team team_LXgcBDLoBpU1lMxZrMyxUQlg; did not touch the vocabulary app project",
-      "listed dedicated project deployments and confirmed production deployment dpl_7sb4wj7QhGEEoSwtypuqZ8Nd5s9b remains READY",
-      "re-fetched production and reproduced HTTP 200 / 52-byte local path string failure",
-      "read strict publication probe writeback run 32361964978 and confirmed exact-body FAIL, path-string-only=true, private Knowledge leak=false",
-      "downloaded the exact current routing-lock HTML from Drive ID 19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0 into the local execution layer",
-      "independently recomputed local file size 3,812,063 bytes and SHA256 6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81; exact match to the publication target",
-      "checked local execution environment for VERCEL/NOW credentials, Vercel CLI, and linked .vercel state; no safe authenticated file-targeted deploy path was found",
-      "did not use generic deploy_to_vercel because its target/current workspace is not parameterized and could affect an unrelated project",
-      "retriggered evidence-chain v2 CI by touching only its existing workflow on the same branch; commit 51b39a693a7cd7acbca1b26367b2c2a36a9d7588",
-      "re-read evidence-chain status after retrigger; writeback remains pending at this run cutoff",
-      "kept PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY, APP_PHOTO_ANALYSIS_PRIMARY=false, private Knowledge unexposed, and main untouched"
+      "re-read latest branch HEAD/checkpoint and followed current xz-chunk publication route instead of stale Vercel-first stage",
+      "re-downloaded exact publication artifact from Drive ID 19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0 and verified 3812063 bytes / SHA256 6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
+      "reproduced xz -9e output at 130020 bytes and base64 stream at 173360 chars / SHA256 83e27afb5288315eb1785f40c8f658e599646e4402b84564a2326af0f713665f",
+      "changed transfer granularity from unsafe truncated 48k/24k tool output to deterministic 8000-character chunks, yielding 22 chunks with final chunk 5360 chars",
+      "uploaded chunk-0000 through chunk-0003 to GitHub",
+      "verified all four uploaded chunks are byte-exact by matching GitHub blob SHA1 to locally computed git blob SHA1",
+      "updated xz chunk progress status to 4/22, next_chunk=4",
+      "did not create READY and did not trigger publication workflow before complete transfer",
+      "kept PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY, APP_PHOTO_ANALYSIS_PRIMARY=false, APP_PHOTO_INPUT_SCOPE=legacy_fallback_only, private Knowledge unexposed, vocabulary app root/main untouched"
     ],
-    "current_stage": "dedicated Vercel publication repair using exact 3,812,063-byte artifact; evidence-chain v2 CI writeback also pending; actual Custom GPT runtime remains after publication",
+    "current_stage": "GitHub xz chunk bridge upload in progress: 4/22 chunks verified",
     "remaining_work": [
-      "obtain a safe authenticated file-targeted deployment mutation surface for only project prj_ASDW860nSY72X0OZ93xCyvOjQB1a",
-      "deploy the exact 3812063-byte / SHA 6c3c5c6e... HTML to the dedicated problem-app project",
-      "confirm strict publication probe PASS against https://mikami-juku-english-problem-app.vercel.app/",
-      "collect evidence-chain v2 CI PASS writeback",
-      "obtain authenticated Custom GPT editor/runtime mutation access",
-      "register private Knowledge, formal Instructions and schema from the prepared private kit",
-      "capture actual Custom GPT URL and registration evidence",
+      "upload and verify chunk-0004 through chunk-0021",
+      "create READY.txt only after all 22 chunks are verified",
+      "read release/generated/problem_app_xz_chunk_publication.status.txt and require PASS",
+      "re-read main/problem-app/index.html and verify exact problem-app artifact without changing root index.html",
+      "verify GitHub Pages problem-app URL by real HTTP/body checks, MyGPT UI/qb-data markers and no private Knowledge leak",
+      "register private Knowledge, Instructions and schema in actual My GPT when authenticated editor access is available",
       "run four real answer-photo cases in actual My GPT",
       "render/print actual A4 portrait 1-2 page report",
-      "fill actual runtime-results and evidence-chain manifest",
-      "run hardened true-runtime and evidence-chain validators to PASS",
-      "after true runtime PASS only, remove legacy copy/paste or lock it as permanent fallback"
+      "run hardened runtime/evidence validators to PASS",
+      "after true runtime PASS only, finalize legacy fallback decision"
     ],
     "stopped_at": {
-      "stage": "dedicated Vercel production deployment repair",
-      "status": "BLOCKED_BY_SAFE_FILE_TARGETED_DEPLOYMENT_MUTATION_SURFACE",
-      "detail": "The exact target artifact is now present in the local execution layer and independently hash-verified, and the dedicated Vercel project/deployment are known exactly. However, the connected Vercel tool exposes only a parameterless deploy_current_project action for writes; local runtime has no VERCEL token/CLI/.vercel linkage. Using the generic action would violate the project-isolation requirement, so no unsafe deployment was attempted."
+      "stage": "GitHub xz chunk bridge transfer",
+      "status": "IN_PROGRESS_NOT_BLOCKED",
+      "detail": "Chunks 0000-0003 of 22 are uploaded and byte-exact verified. READY is intentionally absent."
     },
-    "next_start": "read latest HEAD/checkpoint and evidence-chain status first; if evidence-chain writeback appeared, record it. Re-check for a project-id/file-targeted Vercel write action or authenticated local Vercel runtime. If available, deploy the exact local/Drive artifact only to prj_ASDW860nSY72X0OZ93xCyvOjQB1a and immediately run the strict public probe. Do not touch the vocabulary app/main.",
-    "next_stage": "repair dedicated problem-app publication -> strict public probe PASS -> actual Custom GPT registration -> four real photos -> A4 actual render/print -> hardened runtime/evidence PASS -> legacy fallback finalization"
+    "next_start": "re-read latest HEAD/checkpoint/progress status and transfer directory; continue from chunk-0004, never re-upload verified chunks unless their GitHub size/blob/content validation fails",
+    "next_stage": "complete chunks 0004-0021 -> READY -> publication workflow PASS -> GitHub Pages verification -> actual My GPT registration/runtime"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_ONLY_ROUTING_LOCKED_CURRENT_ARTIFACT_EXACT_VERIFIED_DEDICATED_VERCEL_PRODUCTION_BROKEN_REPAIR_PENDING_EVIDENCE_CI_PENDING_ACTUAL_RUNTIME_PENDING",
+  "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
+  "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_ONLY_ROUTING_LOCKED_XZ_CHUNK_TRANSFER_4_OF_22_PUBLICATION_PENDING_ACTUAL_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run advanced the exact publication handoff: the dedicated Vercel project was revalidated, the broken 52-byte production body and strict-probe FAIL were reconfirmed, the exact 3,812,063-byte routing-lock artifact was materialized locally from Drive and hash-verified, and evidence-chain v2 CI was retriggered. Deployment was not attempted because no project-id/file-targeted authenticated write surface exists in the current tools, and the generic deployment action could target the wrong workspace."
+  "completion_note": "Publication transfer is actively progressing through the safe GitHub xz chunk bridge. Four of 22 deterministic chunks are now uploaded and byte-exact verified; next is chunk 0004. No READY/workflow trigger yet, no private Knowledge exposure, and vocabulary-app main root remains untouched."
 }
