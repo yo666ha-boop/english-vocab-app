@@ -1,0 +1,35 @@
+name: Test Mikami Answer GPT True Runtime Gate
+
+on:
+  push:
+    branches:
+      - mikami-canonical-repair
+    paths:
+      - 'tools/validate_mikami_answer_gpt_true_runtime.mjs'
+      - 'gpt/tests/mikami_answer_gpt_true_runtime_results.template.json'
+      - 'gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json'
+      - '.github/workflows/test-mikami-answer-gpt-true-runtime-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate strict runtime gate self-test
+        run: node tools/validate_mikami_answer_gpt_true_runtime.mjs --self-test
+      - name: Confirm incomplete template is rejected
+        shell: bash
+        run: |
+          set -euo pipefail
+          if node tools/validate_mikami_answer_gpt_true_runtime.mjs gpt/tests/mikami_answer_gpt_true_runtime_results.template.json; then
+            echo 'ERROR: incomplete runtime template was incorrectly accepted'
+            exit 1
+          fi
+          echo PASS_INCOMPLETE_TEMPLATE_REJECTED
