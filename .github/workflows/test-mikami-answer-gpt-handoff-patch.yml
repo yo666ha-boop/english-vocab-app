@@ -10,13 +10,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   self-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,3 +33,24 @@ jobs:
           grep -q '旧方式（予備）' tools/patch_mikami_answer_gpt_handoff.mjs
           ! grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' tools/patch_mikami_answer_gpt_handoff.mjs
           echo PASS_HANDOFF_PATCH_SAFETY
+      - name: Record durable PASS status
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          {
+            echo 'STATUS=PASS'
+            echo 'PATCH=tools/patch_mikami_answer_gpt_handoff.mjs'
+            echo "SOURCE_SHA=$GITHUB_SHA"
+            echo 'PRIMARY_UI=答案分析My GPTを開く'
+            echo 'HANDOFF=source_mode,target,question_ids,question_count'
+            echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
+            echo 'LEGACY_COPY_PASTE=fallback_only'
+            echo 'QUESTION_GENERATION_CHANGED=false'
+          } > release/generated/answer_gpt_handoff_patch.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/answer_gpt_handoff_patch.status.txt
+          git commit -m 'record My GPT handoff patch PASS' || exit 0
+          git pull --rebase origin mikami-canonical-repair
+          git push origin HEAD:mikami-canonical-repair
