@@ -11,6 +11,8 @@ const EXPECTED = {
   schema_file_id: '1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE',
   case_ids: ['correct_original','multi_category_errors','unreadable_answer','school_test']
 };
+const SCHEMA_VERSION='mikami-answer-gpt-evidence-chain-v2';
+const BINDING_ALGORITHM='sha256-stable-json-excluding-runtime-results-sha-and-binding-digest';
 const SHA_RE = /^[0-9a-f]{64}$/;
 function assert(c,m){ if(!c) throw new Error(m); }
 function isIso(v){ return typeof v === 'string' && v && !Number.isNaN(Date.parse(v)); }
@@ -20,9 +22,27 @@ function noPlaceholder(v){
   return s && !s.includes('SELF_TEST') && !s.includes('PLACEHOLDER') && !s.includes('TODO') && !s.includes('PENDING');
 }
 function sha256(buf){ return crypto.createHash('sha256').update(buf).digest('hex'); }
+function stable(value){
+  if(Array.isArray(value)) return value.map(stable);
+  if(value && typeof value==='object') return Object.fromEntries(Object.keys(value).sort().map(k=>[k,stable(value[k])]));
+  return value;
+}
+function bindingDigest(manifest){
+  const copy=structuredClone(manifest);
+  copy.binding ||= {};
+  copy.binding.binding_digest_sha256='';
+  copy.runtime_results ||= {};
+  copy.runtime_results.results_json_sha256='';
+  return sha256(Buffer.from(JSON.stringify(stable(copy)),'utf8'));
+}
 
 function validate(m, runtimeRaw, runtime){
-  assert(m?.schema_version === 'mikami-answer-gpt-evidence-chain-v1','schema_version mismatch');
+  assert(m?.schema_version === SCHEMA_VERSION,'schema_version mismatch');
+  assert(m?.binding?.algorithm===BINDING_ALGORITHM,'binding algorithm mismatch');
+  assert(validSha(m?.binding?.binding_digest_sha256),'binding digest invalid');
+  const computedBinding=bindingDigest(m);
+  assert(m.binding.binding_digest_sha256===computedBinding,'binding digest mismatch');
+
   const k=m.registration_kit||{};
   for(const key of ['drive_folder_id','knowledge_file_id','knowledge_sha256','instructions_file_id','schema_file_id']) assert(k[key]===EXPECTED[key],`registration kit mismatch: ${key}`);
   assert(k.knowledge_records===EXPECTED.knowledge_records,'registration kit mismatch: knowledge_records');
@@ -60,7 +80,7 @@ function validate(m, runtimeRaw, runtime){
   const runtimeById=new Map(runtimeCases.map(c=>[c?.id,c]));
   assert(runtimeById.size===4,'runtime cases contain duplicate ids');
 
-  const hashes=[g.registration_evidence_sha256];
+  const hashes=[g.registration_evidence_sha256,m.binding.binding_digest_sha256];
   for(const c of cases){
     assert(validSha(c.photo_sha256),`${c.id}: photo_sha256 invalid`);
     assert(validSha(c.response_transcript_sha256),`${c.id}: response_transcript_sha256 invalid`);
@@ -91,9 +111,10 @@ function validate(m, runtimeRaw, runtime){
   assert(ra.render_or_print_evidence_ref===a.evidence_ref,'manifest/runtime A4 evidence ref mismatch');
   hashes.push(a.rendered_pdf_sha256,r.results_json_sha256);
 
+  assert(runtime.final_gate?.evidence_manifest_sha256===m.binding.binding_digest_sha256,'runtime final_gate evidence_manifest_sha256 must equal non-circular binding digest');
   assert(new Set(hashes).size===hashes.length,'evidence SHA collision detected');
   assert(runtime.final_gate?.overall_runtime_pass===true,'runtime final gate overall_runtime_pass must be true');
-  return {status:'PASS',photo_cases:4,evidence_hashes:hashes.length,registration_kit_bound:true,runtime_file_bound:true,a4_pages:a.page_count};
+  return {status:'PASS',photo_cases:4,evidence_hashes:hashes.length,registration_kit_bound:true,runtime_file_bound:true,non_circular_binding:true,a4_pages:a.page_count};
 }
 
 function synthetic(){
@@ -112,21 +133,24 @@ function synthetic(){
     behaviors:{ok:true},
     result_summary:'synthetic-validator-self-test'
   }));
-  const runtime={
-    registration:{actual_custom_gpt:true,knowledge_registered:true,knowledge_records:EXPECTED.knowledge_records,knowledge_sha256:EXPECTED.knowledge_sha256,instructions_applied:true,output_schema_applied:true,gpt_url:gptUrl,verified_at:verifiedAt,registration_evidence_sha256:registrationEvidence},
-    cases,
-    a4_report:{actual_render_or_print_test:true,orientation:'portrait',page_count:1,checked_at:'2026-08-20T16:50:00+09:00',rendered_pdf_sha256:h(30),render_or_print_evidence_ref:'private-drive://a4-proof',sections_present:[],rules:{}},
-    final_gate:{overall_runtime_pass:true}
-  };
-  const raw=Buffer.from(JSON.stringify(runtime,null,2)+'\n','utf8');
   const manifest={
-    schema_version:'mikami-answer-gpt-evidence-chain-v1',
+    schema_version:SCHEMA_VERSION,
+    binding:{algorithm:BINDING_ALGORITHM,binding_digest_sha256:''},
     registration_kit:{...EXPECTED},
     custom_gpt:{gpt_url:gptUrl,registration_verified_at:verifiedAt,registration_evidence_sha256:registrationEvidence},
     photo_cases:cases.map(c=>({id:c.id,photo_sha256:c.photo_sha256,response_transcript_sha256:c.response_transcript_sha256,executed_at:c.executed_at})),
     a4_report:{rendered_pdf_sha256:h(30),checked_at:'2026-08-20T16:50:00+09:00',page_count:1,orientation:'portrait',evidence_ref:'private-drive://a4-proof'},
-    runtime_results:{results_json_sha256:sha256(raw)}
+    runtime_results:{results_json_sha256:''}
   };
+  manifest.binding.binding_digest_sha256=bindingDigest(manifest);
+  const runtime={
+    registration:{actual_custom_gpt:true,knowledge_registered:true,knowledge_records:EXPECTED.knowledge_records,knowledge_sha256:EXPECTED.knowledge_sha256,instructions_applied:true,output_schema_applied:true,gpt_url:gptUrl,verified_at:verifiedAt,registration_evidence_sha256:registrationEvidence},
+    cases,
+    a4_report:{actual_render_or_print_test:true,orientation:'portrait',page_count:1,checked_at:'2026-08-20T16:50:00+09:00',rendered_pdf_sha256:h(30),render_or_print_evidence_ref:'private-drive://a4-proof',sections_present:[],rules:{}},
+    final_gate:{evidence_manifest_sha256:manifest.binding.binding_digest_sha256,overall_runtime_pass:true}
+  };
+  const raw=Buffer.from(JSON.stringify(runtime,null,2)+'\n','utf8');
+  manifest.runtime_results.results_json_sha256=sha256(raw);
   return {manifest,runtime,raw};
 }
 
@@ -140,7 +164,9 @@ try{
       x=>x.manifest.photo_cases[1].photo_sha256=x.manifest.photo_cases[0].photo_sha256,
       x=>x.manifest.a4_report.page_count=3,
       x=>x.manifest.runtime_results.results_json_sha256='f'.repeat(64),
-      x=>x.manifest.photo_cases[0].response_transcript_sha256='e'.repeat(64)
+      x=>x.manifest.photo_cases[0].response_transcript_sha256='e'.repeat(64),
+      x=>x.manifest.binding.binding_digest_sha256='d'.repeat(64),
+      x=>x.runtime.final_gate.evidence_manifest_sha256='c'.repeat(64)
     ];
     for(const mutate of tests){
       const bad=structuredClone({manifest:good.manifest,runtime:good.runtime});
@@ -152,6 +178,7 @@ try{
     }
     console.log('PASS_ANSWER_GPT_EVIDENCE_CHAIN_SELF_TEST');
     console.log('RUNTIME_RESULTS_FILE_BINDING=PASS');
+    console.log('NON_CIRCULAR_MANIFEST_BINDING=PASS');
     console.log(`NEGATIVE_CASES_REJECTED=${tests.length}`);
   } else {
     assert(args[0]&&args[1],'Usage: node tools/validate_mikami_answer_gpt_evidence_chain.mjs <manifest.json> <runtime-results.json>');
