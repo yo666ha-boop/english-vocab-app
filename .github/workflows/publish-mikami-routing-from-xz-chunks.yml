@@ -1,0 +1,117 @@
+name: Publish exact MyGPT problem app from compressed chunks
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'release/transfer/mikami-routing-xz/READY.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+
+      - name: Reconstruct exact routing-lock app
+        id: reconstruct
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR='release/transfer/mikami-routing-xz'
+          READY="$DIR/READY.txt"
+          EXPECTED_BYTES='3812063'
+          EXPECTED_SHA='6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          test -s "$READY"
+          grep -qx "EXPECTED_HTML_BYTES=$EXPECTED_BYTES" "$READY"
+          grep -qx "EXPECTED_HTML_SHA256=$EXPECTED_SHA" "$READY"
+          CHUNK_COUNT=$(awk -F= '$1=="CHUNK_COUNT"{print $2}' "$READY")
+          test "$CHUNK_COUNT" -ge 1
+          ACTUAL_COUNT=$(find "$DIR" -maxdepth 1 -type f -name 'chunk-*.b64' | wc -l | tr -d ' ')
+          test "$ACTUAL_COUNT" = "$CHUNK_COUNT"
+          mkdir -p /tmp/mikami-reconstruct
+          find "$DIR" -maxdepth 1 -type f -name 'chunk-*.b64' -print0 | sort -z | xargs -0 cat | tr -d '\r\n ' > /tmp/mikami-reconstruct/payload.xz.b64
+          base64 -d /tmp/mikami-reconstruct/payload.xz.b64 > /tmp/mikami-reconstruct/payload.xz
+          xz -dc /tmp/mikami-reconstruct/payload.xz > /tmp/mikami-reconstruct/index.html
+          BYTES=$(wc -c < /tmp/mikami-reconstruct/index.html | tr -d ' ')
+          SHA=$(sha256sum /tmp/mikami-reconstruct/index.html | awk '{print $1}')
+          test "$BYTES" = "$EXPECTED_BYTES"
+          test "$SHA" = "$EXPECTED_SHA"
+          F='/tmp/mikami-reconstruct/index.html'
+          grep -q 'id="qb-data"' "$F"
+          grep -q '答案分析My GPTを開く' "$F"
+          grep -q 'legacyPhotoAnalysisFallback' "$F"
+          grep -q 'mikamijuku_answer_gpt_url_v1' "$F"
+          ! grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$F"
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo 'pass=true' >> "$GITHUB_OUTPUT"
+
+      - name: Publish only problem-app/index.html to main and preserve vocab root
+        if: steps.reconstruct.outputs.pass == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          ROOT_BEFORE=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          rm -rf /tmp/mikami-main
+          git worktree add /tmp/mikami-main origin/main
+          cd /tmp/mikami-main
+          git switch -c mikami-problem-publish-xz origin/main
+          mkdir -p problem-app
+          cp /tmp/mikami-reconstruct/index.html problem-app/index.html
+          test "$(wc -c < problem-app/index.html | tr -d ' ')" = '3812063'
+          test "$(sha256sum problem-app/index.html | awk '{print $1}')" = '6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          ROOT_AFTER=$(sha256sum index.html | awk '{print $1}')
+          test "$ROOT_BEFORE" = "$ROOT_AFTER"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- problem-app/index.html
+          if git diff --cached --quiet; then
+            echo 'problem-app already exact on main'
+          else
+            git commit -m 'publish: add isolated MyGPT English problem app'
+            git push origin HEAD:main
+          fi
+
+      - name: Record reconstruction/publication result on repair branch
+        if: always()
+        shell: bash
+        env:
+          PASS: ${{ steps.reconstruct.outputs.pass }}
+          BYTES: ${{ steps.reconstruct.outputs.bytes }}
+          SHA: ${{ steps.reconstruct.outputs.sha }}
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE"
+          git switch mikami-canonical-repair
+          git pull --rebase origin mikami-canonical-repair
+          mkdir -p release/generated
+          if test "${PASS:-false}" = 'true'; then STATUS='XZ_CHUNKS_RECONSTRUCTED_AND_MAIN_PROBLEM_PATH_PUBLISHED'; else STATUS='XZ_CHUNK_RECONSTRUCTION_FAILED'; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "TRIGGER_SHA=$GITHUB_SHA"
+            echo "RECONSTRUCT_PASS=${PASS:-false}"
+            echo "OBSERVED_HTML_BYTES=${BYTES:-0}"
+            echo "OBSERVED_HTML_SHA256=${SHA:-}"
+            echo 'EXPECTED_HTML_BYTES=3812063'
+            echo 'EXPECTED_HTML_SHA256=6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+            echo 'TARGET_PATH=main:problem-app/index.html'
+            echo 'ROOT_INDEX_POLICY=UNCHANGED_REQUIRED'
+            echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
+            echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
+            echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
+          } > release/generated/problem_app_xz_chunk_publication.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/problem_app_xz_chunk_publication.status.txt
+          git commit -m 'record xz chunk problem-app publication result' || exit 0
+          git pull --rebase origin mikami-canonical-repair
+          git push origin HEAD:mikami-canonical-repair
