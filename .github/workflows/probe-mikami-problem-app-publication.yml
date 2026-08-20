@@ -23,21 +23,23 @@ jobs:
         id: probe
         continue-on-error: true
         run: |
-          set -o pipefail
+          set +e
           node tools/probe_mikami_problem_app_publication.mjs > /tmp/probe.json 2>&1
-          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          CODE=$?
+          echo "exit=$CODE" >> "$GITHUB_OUTPUT"
           cat /tmp/probe.json
+          exit $CODE
 
-      - name: Record exact publication probe status
+      - name: Record exact publication probe status from response truth
         run: |
           set -euo pipefail
           mkdir -p release/generated
-          STATUS=FAIL
-          if [ "${{ steps.probe.outputs.exit }}" = "0" ]; then STATUS=PASS; fi
           node - <<'NODE'
           const fs=require('fs');
-          let p={}; try { p=JSON.parse(fs.readFileSync('/tmp/probe.json','utf8')); } catch(e) { p={error:fs.readFileSync('/tmp/probe.json','utf8')}; }
-          const status=process.env.PROBE_STATUS;
+          let p={};
+          try { p=JSON.parse(fs.readFileSync('/tmp/probe.json','utf8')); }
+          catch(e) { p={pass:false,error:fs.readFileSync('/tmp/probe.json','utf8')}; }
+          const status=p.pass === true ? 'PASS' : 'FAIL';
           const lines=[
             `STATUS=${status}`,
             `RUN_ID=${process.env.GITHUB_RUN_ID}`,
@@ -48,6 +50,7 @@ jobs:
             `RESPONSE_SHA256=${p.sha256??''}`,
             `EXPECTED_BYTES=${p.expectedBytes??3812063}`,
             `EXPECTED_SHA256=${p.expectedSha||'6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'}`,
+            `EXACT_BODY_PASS=${p.pass===true}`,
             `PATH_STRING_ONLY=${p.pathStringOnly??''}`,
             `PRIVATE_KNOWLEDGE_LEAK=${p.privateKnowledgeLeak??''}`,
             `PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY`,
@@ -56,6 +59,7 @@ jobs:
           ];
           fs.writeFileSync('release/generated/problem_app_publication_probe.status.txt', lines.join('\n')+'\n');
           NODE
+          cat release/generated/problem_app_publication_probe.status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- release/generated/problem_app_publication_probe.status.txt
@@ -63,5 +67,15 @@ jobs:
             git commit -m 'record problem app publication probe status'
             git push origin HEAD:mikami-canonical-repair
           fi
-        env:
-          PROBE_STATUS: ${{ steps.probe.outputs.exit == '0' && 'PASS' || 'FAIL' }}
+
+      - name: Fail CI unless exact public app is live
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const p=JSON.parse(fs.readFileSync('/tmp/probe.json','utf8'));
+          if (p.pass !== true) {
+            console.error('PUBLICATION_PROBE_FAIL', JSON.stringify({httpStatus:p.httpStatus,bytes:p.bytes,sha256:p.sha256,pathStringOnly:p.pathStringOnly,privateKnowledgeLeak:p.privateKnowledgeLeak}));
+            process.exit(1);
+          }
+          console.log('PUBLICATION_PROBE_PASS');
+          NODE
