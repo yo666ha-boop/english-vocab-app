@@ -1,4 +1,4 @@
-name: Finalize Mikami Canonical From Authenticated Transfer
+name: Finalize Mikami Canonical + Answer GPT Handoff
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Build final repaired app from exact canonical
+      - name: Build final unified app from exact canonical
         id: build
         shell: bash
         run: |
@@ -59,12 +59,15 @@ jobs:
           NODE
 
           mkdir -p dist/final
-          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
-          node tools/run_mikami_pipeline_v4.mjs /tmp/mikami-canonical.html "$OUT"
+          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html'
+          node tools/run_mikami_pipeline_v4_answer_gpt.mjs /tmp/mikami-canonical.html "$OUT"
           AUDIT="$OUT.pipeline-v4.audit.json"
           FINAL_AUDIT="$OUT.final-audit.json"
+          GPT_AUDIT="$OUT.answer-gpt-integration.audit.json"
           test -s "$OUT"
           test -s "$AUDIT"
+          test -s "$FINAL_AUDIT"
+          test -s "$GPT_AUDIT"
           grep -q '"status": "OK"' "$AUDIT"
           grep -q '"inherited_pipeline": "V3"' "$AUDIT"
           grep -q '"final_quality_errors": 0' "$AUDIT"
@@ -75,13 +78,21 @@ jobs:
           grep -q '"m2_infinitive_bank_v4_changed"' "$AUDIT"
           grep -q '"relative_pronoun_unique_blank": true' "$AUDIT"
           grep -q '"mid_sentence_blank_case": true' "$AUDIT"
+          grep -q '"status": "PASS"' "$GPT_AUDIT"
+          grep -q '"qb_data_unchanged_after_handoff_patch": true' "$GPT_AUDIT"
+          grep -q '"question_id_order_preserved": true' "$GPT_AUDIT"
+          grep -q '"private_knowledge_embedded": false' "$GPT_AUDIT"
+          grep -q '答案分析My GPTを開く' "$OUT"
+          grep -q '旧方式（予備）' "$OUT"
           if grep -Eqi 'This is (he|she|we)\b|\bthan He\b|否定文または疑問文|\bHe gots up\b|\bwents there\b' "$OUT"; then
             echo 'FINAL_KNOWN_BAD_PATTERN_FOUND'
             exit 1
           fi
+          if grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT"; then
+            echo 'PRIVATE_KNOWLEDGE_HASH_LEAK_FOUND'
+            exit 1
+          fi
 
-          node tools/audit_final_canonical.mjs "$OUT" /tmp/mikami-canonical.html "$FINAL_AUDIT" --canonical
-          test -s "$FINAL_AUDIT"
           grep -q '"status": "OK"' "$FINAL_AUDIT"
           grep -q '"canonical_mode": true' "$FINAL_AUDIT"
           grep -q '"question_count": 10513' "$FINAL_AUDIT"
@@ -90,52 +101,79 @@ jobs:
           grep -q '"final_quality_errors": 0' "$FINAL_AUDIT"
 
           cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
+          cat >> dist/final/README_修正内容.txt <<'EOF'
+
+【答案分析My GPT一本化】
+・写真分析の主導線を「答案分析My GPTを開く」へ変更。
+・handoffは source_mode / target / question_ids / question_count のみ。
+・private Knowledge本体・Knowledge SHA・正答一覧は公開HTMLへ埋め込まない。
+・旧コピー/貼り戻し方式は実Custom GPTランタイム確認完了まで「旧方式（予備）」として残す。
+・問題作成・印刷・qb-data・問題ID順は変更しない。
+EOF
+
           cd dist/final
-          zip -9 '../みかみ塾英語問題アプリ_正本修正版_20260819.zip' \
-            'みかみ塾英語問題アプリ_正本修正版_20260819.html' \
-            'みかみ塾英語問題アプリ_正本修正版_20260819.html.pipeline-v4.audit.json' \
-            'みかみ塾英語問題アプリ_正本修正版_20260819.html.final-audit.json' \
+          zip -9 '../みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.pipeline-v4.audit.json' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.final-audit.json' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.answer-gpt-integration.audit.json' \
             'README_修正内容.txt'
 
-      - name: Publish status and generated audit to branch
+      - name: Publish status and generated audits to branch
         if: always()
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p release/generated
-          cp /tmp/mikami-finalize.log release/generated/finalize_20260819.log 2>/dev/null || true
-          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_20260819.html'
+          cp /tmp/mikami-finalize.log release/generated/finalize_answer_gpt_20260820.log 2>/dev/null || true
+          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html'
           AUDIT="$OUT.pipeline-v4.audit.json"
           FINAL_AUDIT="$OUT.final-audit.json"
-          ZIP='dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip'
-          if test -s "$ZIP" && test -s "$AUDIT" && test -s "$FINAL_AUDIT"; then
+          GPT_AUDIT="$OUT.answer-gpt-integration.audit.json"
+          ZIP='dist/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip'
+          if test -s "$ZIP" && test -s "$AUDIT" && test -s "$FINAL_AUDIT" && test -s "$GPT_AUDIT"; then
             STATUS='PASS'
-            cp "$AUDIT" release/generated/finalize_20260819.audit.json
-            cp "$FINAL_AUDIT" release/generated/finalize_20260819.final-audit.json
+            cp "$AUDIT" release/generated/finalize_answer_gpt_20260820.audit.json
+            cp "$FINAL_AUDIT" release/generated/finalize_answer_gpt_20260820.final-audit.json
+            cp "$GPT_AUDIT" release/generated/finalize_answer_gpt_20260820.integration-audit.json
+            ZIP_SHA=$(sha256sum "$ZIP" | awk '{print $1}')
+            OUT_SHA=$(sha256sum "$OUT" | awk '{print $1}')
           else
             STATUS='FAIL'
-            rm -f release/generated/finalize_20260819.audit.json release/generated/finalize_20260819.final-audit.json
+            ZIP_SHA=''
+            OUT_SHA=''
+            rm -f release/generated/finalize_answer_gpt_20260820.audit.json \
+                  release/generated/finalize_answer_gpt_20260820.final-audit.json \
+                  release/generated/finalize_answer_gpt_20260820.integration-audit.json
           fi
           {
             echo "STATUS=$STATUS"
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
             echo "HEAD_SHA=$GITHUB_SHA"
-            echo "PIPELINE=V4"
+            echo "PIPELINE=V4_PLUS_ANSWER_GPT_HANDOFF"
             echo "FINAL_CANONICAL_INVARIANT_AUDIT=required"
             echo "EXPECTED_QUESTION_COUNT=10513"
             echo "EXPECTED_ENGLISH_QUESTION_COUNT=10511"
             echo "EXPECTED_UNIQUE_ID_COUNT=10513"
             echo "SOURCE_DRIVE_ID=1MoArYnD3Npy-LePUrH8a82lg4uKyhND4"
             echo "EXPECTED_SOURCE_BYTES=4035500"
-          } > release/generated/finalize_20260819.status.txt
+            echo "QUESTION_BANK_CHANGED=false"
+            echo "PRIVATE_KNOWLEDGE_EMBEDDED=false"
+            echo "LEGACY_COPY_PASTE=fallback_only"
+            echo "CUSTOM_GPT_RUNTIME_TEST=false"
+            echo "REAL_PHOTO_TEST_PENDING=true"
+            echo "OUTPUT_SHA256=$OUT_SHA"
+            echo "PACKAGE_SHA256=$ZIP_SHA"
+          } > release/generated/finalize_answer_gpt_20260820.status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release/generated/finalize_20260819.status.txt release/generated/finalize_20260819.log
-          git add -u release/generated || true
-          test ! -f release/generated/finalize_20260819.audit.json || git add release/generated/finalize_20260819.audit.json
-          test ! -f release/generated/finalize_20260819.final-audit.json || git add release/generated/finalize_20260819.final-audit.json
-          git commit -m "record canonical finalize diagnosis 20260819" || true
+          git add -- release/generated/finalize_answer_gpt_20260820.status.txt release/generated/finalize_answer_gpt_20260820.log
+          test ! -f release/generated/finalize_answer_gpt_20260820.audit.json || git add -- release/generated/finalize_answer_gpt_20260820.audit.json
+          test ! -f release/generated/finalize_answer_gpt_20260820.final-audit.json || git add -- release/generated/finalize_answer_gpt_20260820.final-audit.json
+          test ! -f release/generated/finalize_answer_gpt_20260820.integration-audit.json || git add -- release/generated/finalize_answer_gpt_20260820.integration-audit.json
+          git add -u -- release/generated || true
+          git commit -m "record unified canonical + My GPT finalize status" || true
           git pull --rebase origin mikami-canonical-repair || true
           for i in 1 2 3; do
             if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
@@ -144,10 +182,10 @@ jobs:
           done
           exit 1
 
-      - name: Upload final repaired app
+      - name: Upload final unified app
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: mikami-english-question-app-canonical-repaired-v4-20260819
-          path: dist/みかみ塾英語問題アプリ_正本修正版_20260819.zip
+          name: mikami-english-question-app-canonical-v4-answer-gpt-20260820
+          path: dist/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip
           if-no-files-found: error
