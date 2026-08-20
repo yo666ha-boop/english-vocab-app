@@ -1,0 +1,60 @@
+{
+  "registration": {
+    "actual_custom_gpt": false,
+    "knowledge_registered": false,
+    "knowledge_records": 10511,
+    "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
+    "instructions_applied": false,
+    "output_schema_applied": false,
+    "gpt_url": ""
+  },
+  "cases": [
+    {
+      "id": "correct_original",
+      "source_mode": "mikami_canonical",
+      "executed_in_actual_custom_gpt": false,
+      "photo_attached": false,
+      "behaviors": {},
+      "result_summary": ""
+    },
+    {
+      "id": "multi_category_errors",
+      "source_mode": "mikami_canonical",
+      "executed_in_actual_custom_gpt": false,
+      "photo_attached": false,
+      "behaviors": {},
+      "result_summary": ""
+    },
+    {
+      "id": "unreadable_answer",
+      "source_mode": "mikami_canonical",
+      "executed_in_actual_custom_gpt": false,
+      "photo_attached": false,
+      "behaviors": {},
+      "result_summary": ""
+    },
+    {
+      "id": "school_test",
+      "source_mode": "school_test",
+      "executed_in_actual_custom_gpt": false,
+      "photo_attached": false,
+      "behaviors": {},
+      "result_summary": ""
+    }
+  ],
+  "a4_report": {
+    "actual_render_or_print_test": false,
+    "orientation": "portrait",
+    "page_count": 0,
+    "sections_present": [],
+    "rules": {}
+  },
+  "final_gate": {
+    "exact_id_lookup_verified": false,
+    "prerequisite_return_point_verified": false,
+    "held_handling_verified": false,
+    "school_test_separation_verified": false,
+    "legacy_copy_paste_decision": "",
+    "overall_runtime_pass": false
+  }
+}
