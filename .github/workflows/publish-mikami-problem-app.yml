@@ -8,7 +8,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: read
   contents: write
 
 jobs:
@@ -21,118 +20,57 @@ jobs:
           ref: mikami-canonical-repair
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Download exact private runtime artifact from GitHub
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Recover exact canonical HTML from protected problem-app preview
         shell: bash
         run: |
           set -euo pipefail
-          rm -rf /tmp/mikami-runtime
-          mkdir -p /tmp/mikami-runtime
-          gh run download 32266896824 -n mikami-runtime-v2 -D /tmp/mikami-runtime
-          mkdir -p /tmp/mikami-runtime/nested
-          n=0
-          while IFS= read -r -d '' z; do
-            n=$((n+1))
-            mkdir -p "/tmp/mikami-runtime/nested/$n"
-            unzip -o "$z" -d "/tmp/mikami-runtime/nested/$n" || true
-          done < <(find /tmp/mikami-runtime -maxdepth 3 -type f -name '*.zip' -print0)
+          SRC='https://mikami-juku-english-problem-69n8lrrgx-yo666ha-7357s-projects.vercel.app/?_vercel_share=8L0M4lm0rWKgiqf2vaD0iaxa4Q14nn6T'
+          rm -f /tmp/vercel.cookies /tmp/mikami-canonical.html /tmp/recover.headers
+          curl --compressed -fL \
+            --retry 3 --retry-all-errors \
+            --connect-timeout 20 --max-time 180 \
+            -c /tmp/vercel.cookies -b /tmp/vercel.cookies \
+            -D /tmp/recover.headers \
+            "$SRC" -o /tmp/mikami-canonical.html
 
-          mkdir -p release/generated
-          {
-            echo 'STATUS=ARTIFACT_DOWNLOADED'
-            echo 'RUN_ID=32266896824'
-            echo 'ARTIFACT_ID=9370551027'
-            echo 'ARTIFACT_NAME=mikami-runtime-v2'
-            echo '--- files ---'
-            while IFS= read -r -d '' f; do
-              size=$(wc -c < "$f")
-              sha=$(sha256sum "$f" | awk '{print $1}')
-              printf '%s\t%s\t%s\n' "$size" "$sha" "$f"
-            done < <(find /tmp/mikami-runtime -type f -print0)
-          } > release/generated/problem_app_artifact_diag.txt
-          cat release/generated/problem_app_artifact_diag.txt
+          BYTES=$(wc -c < /tmp/mikami-canonical.html)
+          SHA=$(sha256sum /tmp/mikami-canonical.html | awk '{print $1}')
+          echo "recovered_bytes=$BYTES"
+          echo "recovered_sha256=$SHA"
+          test "$BYTES" -eq 4035500
+          test "$SHA" = '03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+          grep -q 'id="qb-data"' /tmp/mikami-canonical.html
+          grep -q '<title>みかみ塾 英語問題アプリ 安定版+写真分析レポート</title>' /tmp/mikami-canonical.html
 
-      - name: Persist artifact diagnostic on repair branch
+      - name: Build exact V4 + My GPT handoff app
         shell: bash
         run: |
           set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release/generated/problem_app_artifact_diag.txt
-          git commit -m 'diag: record problem app artifact contents' || true
-          for i in 1 2 3; do
-            if git push origin HEAD:mikami-canonical-repair; then break; fi
-            git pull --rebase origin mikami-canonical-repair
-            sleep 2
-          done
-
-      - name: Resolve exact HTML and build final V4 + My GPT app
-        shell: bash
-        run: |
-          set -euo pipefail
-          CANONICAL_SHA='03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
-          REPAIRED_SHA='0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f'
-          UNIFIED_SHA='c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
-          SRC=''
-          MODE=''
-
-          while IFS= read -r -d '' f; do
-            sha=$(sha256sum "$f" | awk '{print $1}')
-            size=$(wc -c < "$f")
-            echo "candidate size=$size sha=$sha file=$f"
-            if [ "$sha" = "$UNIFIED_SHA" ]; then SRC="$f"; MODE='unified'; break; fi
-            if [ "$sha" = "$REPAIRED_SHA" ]; then SRC="$f"; MODE='repaired'; break; fi
-            if [ "$sha" = "$CANONICAL_SHA" ]; then SRC="$f"; MODE='canonical'; break; fi
-          done < <(find /tmp/mikami-runtime -type f -name '*.html' -print0)
-
-          if [ -z "$SRC" ]; then
-            echo 'No exact known HTML SHA found in runtime artifact.' >&2
-            exit 1
-          fi
-          echo "resolved_mode=$MODE"
-          echo "resolved_file=$SRC"
-
           OUT=/tmp/mikami-problem-app-index.html
-          case "$MODE" in
-            unified) cp "$SRC" "$OUT" ;;
-            repaired) node tools/patch_mikami_answer_gpt_handoff.mjs "$SRC" "$OUT" ;;
-            canonical) node tools/run_mikami_pipeline_v4_answer_gpt.mjs "$SRC" "$OUT" ;;
-          esac
-
+          node tools/run_mikami_pipeline_v4_answer_gpt.mjs /tmp/mikami-canonical.html "$OUT"
           test -s "$OUT"
-          OUT_SHA=$(sha256sum "$OUT" | awk '{print $1}')
-          OUT_SIZE=$(wc -c < "$OUT")
-          echo "output_size=$OUT_SIZE"
-          echo "output_sha256=$OUT_SHA"
-          test "$OUT_SHA" = "$UNIFIED_SHA"
-          grep -q 'id="qb-data"' "$OUT"
+          test "$(sha256sum "$OUT" | awk '{print $1}')" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
           grep -q '答案分析My GPTを開く' "$OUT"
-          grep -q '旧方式（予備）' "$OUT"
+          grep -q '答案写真はMy GPTへ直接添付' "$OUT"
+          grep -q 'id="legacyPhotoAnalysisFallback"' "$OUT"
+          grep -q 'id="photoInput"' "$OUT"
+          grep -q '"photo_attachment_location": "MY_GPT_ONLY"' "$OUT.answer-gpt-integration.audit.json"
+          grep -q '"app_photo_analysis_primary": false' "$OUT.answer-gpt-integration.audit.json"
+          grep -q '"app_photo_input_scope": "legacy_fallback_only"' "$OUT.answer-gpt-integration.audit.json"
           if grep -q 'mikami_english_question_bank_knowledge.jsonl' "$OUT"; then
-            echo 'Private Knowledge filename leak found.' >&2
+            echo 'private Knowledge filename leak' >&2
+            exit 1
+          fi
+          if grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT"; then
+            echo 'private Knowledge hash leak' >&2
             exit 1
           fi
 
-          node - "$OUT" <<'NODE'
-          const fs=require('fs');
-          const p=process.argv[2];
-          const s=fs.readFileSync(p,'utf8');
-          const m=s.match(/<script\s+id=["']qb-data["']\s+type=["']application\/json["']>([\s\S]*?)<\/script>/);
-          if(!m) throw new Error('qb-data not found');
-          const qb=JSON.parse(m[1]);
-          const english=qb.filter(x=>x?.subject==='英語').length;
-          const unique=new Set(qb.map(x=>x?.id)).size;
-          if(qb.length!==10513 || english!==10511 || unique!==10513) throw new Error(`invariant mismatch total=${qb.length} english=${english} unique=${unique}`);
-          console.log(`invariants PASS total=${qb.length} english=${english} unique=${unique}`);
-          NODE
-
-      - name: Publish only /problem-app/ to main
+      - name: Publish only /problem-app/ to main and preserve vocab root
         shell: bash
         run: |
           set -euo pipefail
@@ -149,6 +87,19 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- problem-app/index.html
           CHANGED=$(git diff --cached --name-only)
-          test "$CHANGED" = 'problem-app/index.html'
-          git commit -m 'publish English problem app at /problem-app/' || true
-          git push origin main
+          if [ -n "$CHANGED" ]; then
+            test "$CHANGED" = 'problem-app/index.html'
+            git commit -m 'publish English problem app at /problem-app/'
+            git push origin main
+          fi
+
+      - name: Verify published source file on main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git show origin/main:problem-app/index.html > /tmp/published-problem-app.html
+          test "$(sha256sum /tmp/published-problem-app.html | awk '{print $1}')" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
+          grep -q '答案分析My GPTを開く' /tmp/published-problem-app.html
+          grep -q '答案写真はMy GPTへ直接添付' /tmp/published-problem-app.html
+          echo 'PUBLISHED_PROBLEM_APP_GIT_SOURCE=PASS'
