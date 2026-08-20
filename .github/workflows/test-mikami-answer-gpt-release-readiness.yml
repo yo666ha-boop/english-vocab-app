@@ -10,6 +10,7 @@ on:
       - 'release/generated/answer_gpt_unified_runner.status.txt'
       - 'release/generated/answer_gpt_real_private_build.status.txt'
       - 'release/generated/answer_gpt_true_runtime_gate.status.txt'
+      - 'release/generated/answer_gpt_public_index_probe.status.txt'
       - '.github/workflows/test-mikami-answer-gpt-release-readiness.yml'
   workflow_dispatch:
 
