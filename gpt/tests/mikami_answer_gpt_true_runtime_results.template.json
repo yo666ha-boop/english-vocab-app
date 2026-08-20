@@ -6,7 +6,9 @@
     "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
     "instructions_applied": false,
     "output_schema_applied": false,
-    "gpt_url": ""
+    "gpt_url": "",
+    "verified_at": "",
+    "registration_evidence_sha256": ""
   },
   "cases": [
     {
@@ -14,6 +16,9 @@
       "source_mode": "mikami_canonical",
       "executed_in_actual_custom_gpt": false,
       "photo_attached": false,
+      "executed_at": "",
+      "photo_sha256": "",
+      "response_transcript_sha256": "",
       "behaviors": {},
       "result_summary": ""
     },
@@ -22,6 +27,9 @@
       "source_mode": "mikami_canonical",
       "executed_in_actual_custom_gpt": false,
       "photo_attached": false,
+      "executed_at": "",
+      "photo_sha256": "",
+      "response_transcript_sha256": "",
       "behaviors": {},
       "result_summary": ""
     },
@@ -30,6 +38,9 @@
       "source_mode": "mikami_canonical",
       "executed_in_actual_custom_gpt": false,
       "photo_attached": false,
+      "executed_at": "",
+      "photo_sha256": "",
+      "response_transcript_sha256": "",
       "behaviors": {},
       "result_summary": ""
     },
@@ -38,6 +49,9 @@
       "source_mode": "school_test",
       "executed_in_actual_custom_gpt": false,
       "photo_attached": false,
+      "executed_at": "",
+      "photo_sha256": "",
+      "response_transcript_sha256": "",
       "behaviors": {},
       "result_summary": ""
     }
@@ -46,6 +60,9 @@
     "actual_render_or_print_test": false,
     "orientation": "portrait",
     "page_count": 0,
+    "checked_at": "",
+    "rendered_pdf_sha256": "",
+    "render_or_print_evidence_ref": "",
     "sections_present": [],
     "rules": {}
   },
@@ -55,6 +72,8 @@
     "held_handling_verified": false,
     "school_test_separation_verified": false,
     "legacy_copy_paste_decision": "",
+    "evidence_manifest_sha256": "",
+    "private_evidence_ref": "",
     "overall_runtime_pass": false
   }
 }
