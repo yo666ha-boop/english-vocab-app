@@ -15,8 +15,14 @@ const fixture = `<!doctype html><html><body>
           <button id="openReportBtn">レポートを開く</button>
         </div>
         <div id="photoStatus" class="status">旧</div>
-        <div class="resultBox"><label>分析用プロンプト</label><textarea id="photoPrompt" style="min-height:180px"></textarea></div>
-        <div class="resultBox"><label>チャッピーの返答を貼る</label><textarea id="photoResponse" style="min-height:240px" placeholder="見出しつきの返答をそのまま貼ってください。"></textarea></div>
+        <div class="resultBox">
+          <label>分析用プロンプト</label>
+          <textarea id="photoPrompt" style="min-height:180px"></textarea>
+        </div>
+        <div class="resultBox">
+          <label>チャッピーの返答を貼る</label>
+          <textarea id="photoResponse" style="min-height:240px" placeholder="見出しつきの返答をそのまま貼ってください。"></textarea>
+        </div>
 </div>
 </body></html>`;
 
