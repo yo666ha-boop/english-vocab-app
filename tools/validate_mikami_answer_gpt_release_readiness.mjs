@@ -5,6 +5,7 @@ const files = {
   runner: 'release/generated/answer_gpt_unified_runner.status.txt',
   real: 'release/generated/answer_gpt_real_private_build.status.txt',
   runtime: 'release/generated/answer_gpt_true_runtime_gate.status.txt',
+  publicIndex: 'release/generated/answer_gpt_public_index_probe.status.txt',
 };
 
 function parse(path) {
@@ -48,6 +49,17 @@ req(s.runner.REAL_CANONICAL_SOURCE_SHA256 === s.real.SOURCE_SHA256, 'runner/real
 req(s.runner.REAL_CANONICAL_UNIFIED_HTML_SHA256 === s.real.UNIFIED_HTML_SHA256, 'runner/real HTML SHA disagree');
 req(s.runner.REAL_CANONICAL_UNIFIED_ZIP_SHA256 === s.real.UNIFIED_ZIP_SHA256, 'runner/real ZIP SHA disagree');
 
+// A public branch index is not a substitute for the authenticated private canonical source.
+// If one is present, explicitly require that it is treated as non-canonical when hashes differ.
+req(s.publicIndex.PRIVATE_CANONICAL_EXPOSED === 'false', 'public probe must confirm private canonical is not exposed');
+if (s.publicIndex.STATUS === 'HASH_MISMATCH') {
+  req(s.publicIndex.REPAIRED_SHA_MATCH === 'false', 'public index HASH_MISMATCH must record REPAIRED_SHA_MATCH=false');
+  req(s.publicIndex.ACTUAL_INDEX_SHA256 !== s.publicIndex.EXPECTED_REPAIRED_SHA256, 'public index mismatch hashes unexpectedly equal');
+} else {
+  req(s.publicIndex.STATUS === 'PASS', 'public index probe must be PASS or explicit HASH_MISMATCH');
+  req(s.publicIndex.REPAIRED_SHA_MATCH === 'true', 'public index PASS must record repaired SHA match');
+}
+
 if (errors.length) {
   console.error('MIKAMI_ANSWER_GPT_RELEASE_READINESS=FAIL');
   for (const e of errors) console.error(`- ${e}`);
@@ -56,7 +68,9 @@ if (errors.length) {
 
 const runtimePending = s.real.CUSTOM_GPT_RUNTIME_TEST !== 'true' || s.real.REAL_PHOTO_TEST_PENDING === 'true';
 console.log('MIKAMI_ANSWER_GPT_RELEASE_READINESS=PASS');
-console.log(`REAL_CANONICAL_BUILD=PASS`);
+console.log('REAL_CANONICAL_BUILD=PASS');
 console.log(`TRUE_RUNTIME=${runtimePending ? 'PENDING' : 'PASS'}`);
+console.log(`PUBLIC_INDEX=${s.publicIndex.STATUS}`);
+console.log('PUBLIC_INDEX_CANONICAL=false');
 console.log('PRIVATE_KNOWLEDGE_PUBLIC_EMBED=false');
 console.log('MAIN_TOUCHED=false');
