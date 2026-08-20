@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v13",
-  "updated_at_jst": "2026-08-20T12:58:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v14",
+  "updated_at_jst": "2026-08-20T13:57:20+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -18,7 +18,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "EXACT_PRIVATE_CANONICAL_UNIFIED_BUILD_PASS_EVIDENCE_BACKED_TRUE_RUNTIME_PENDING",
+    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_RELEASE_READINESS_CONSISTENT_TRUE_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -42,46 +42,49 @@
     },
     "true_runtime_gate": {
       "status": "EVIDENCE_BACKED_V2_IMPLEMENTED_RUNTIME_PENDING",
-      "status_file": "release/generated/answer_gpt_true_runtime_gate.status.txt",
       "validator": "tools/validate_mikami_answer_gpt_true_runtime.mjs",
       "results_template": "gpt/tests/mikami_answer_gpt_true_runtime_results.template.json",
       "acceptance_contract": "gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json",
-      "validator_commit": "dcbb1850dcccbc5d76ef6c5a173ee55e68087393",
-      "template_commit": "9ed644501139da3147ec81352e4b0b99907fc807",
-      "status_commit": "40233fadee62d87339db90127ec39f7a36fdf5fd",
       "required_photo_cases": 4,
       "a4_orientation": "portrait",
       "a4_page_range": "1-2",
-      "strict_requirements": [
-        "actual Custom GPT registration",
-        "Knowledge 10511 records and exact SHA256",
-        "formal Instructions and output schema applied",
-        "registration evidence SHA256 plus verification timestamp",
-        "exactly four actual photo cases with unique photo and response transcript SHA256 hashes",
-        "required behavior checks for each case",
-        "actual A4 render/print with rendered PDF SHA256 and evidence reference",
-        "final private evidence manifest SHA256/reference",
-        "legacy copy/paste final decision",
-        "overall_runtime_pass=true"
+      "actual_custom_gpt_registration_required": true,
+      "actual_photo_attachment_required": true,
+      "actual_a4_render_or_print_required": true,
+      "evidence_hashes_required": true,
+      "synthetic_self_test_not_runtime_pass": true
+    },
+    "release_readiness_gate": {
+      "status": "PASS_WITH_TRUE_RUNTIME_PENDING",
+      "validator": "tools/validate_mikami_answer_gpt_release_readiness.mjs",
+      "workflow": ".github/workflows/test-mikami-answer-gpt-release-readiness.yml",
+      "status_file": "release/generated/answer_gpt_release_readiness.status.txt",
+      "runner_status_alignment_commit": "a2d3449653167aec98ac79b3d71ea6477f6515b9",
+      "validator_commit": "9c20b48e2b8093d4948ef24603d5555cafd3907e",
+      "workflow_commit": "94f4709cca42ababc4dcc275ef01af2883349a3d",
+      "status_commit": "63788c184d8b526710670c30074fbf257b093a85",
+      "cross_checks": [
+        "handoff PASS",
+        "real canonical unified run acknowledged as PASS by unified runner status",
+        "real private build source bytes/SHA match expected canonical",
+        "unified HTML/ZIP SHA agree across runner and real build status",
+        "private Knowledge remains unembedded",
+        "legacy copy/paste remains fallback_only before true runtime PASS",
+        "evidence-backed-v2 true runtime requirements remain enforced",
+        "main remains untouched"
       ],
-      "anti_false_pass": {
-        "incomplete_template_rejected": true,
-        "duplicate_case_ids_rejected": true,
-        "unknown_case_ids_rejected": true,
-        "missing_evidence_hashes_rejected": true,
-        "synthetic_self_test_not_runtime_pass": true
-      }
+      "workflow_run_verification": "PENDING_CONNECTOR_RUN_VISIBILITY"
     },
     "completed_this_run": [
-      "re-read current branch HEAD, checkpoint and all required status files",
-      "confirmed real private canonical unified build remains PASS and was not rerun",
-      "checked current execution surface for authenticated Custom GPT editor/browser mutation access",
-      "confirmed no exposed Custom GPT mutation connector and no usable authenticated agent-browser CLI/state in current runtime",
-      "reviewed true-runtime validator/template and found boolean-only evidence weakness",
-      "hardened validator to require evidence hashes, timestamps, exact case count, unique case IDs, unique photo/transcript evidence, A4 PDF evidence and final private evidence manifest",
-      "updated incomplete runtime template with required evidence fields",
-      "updated true-runtime gate status to evidence-backed-v2",
-      "kept private Knowledge out of public repo and kept main untouched"
+      "re-read latest branch HEAD, checkpoint and all five required status files",
+      "confirmed question bank, Knowledge and real canonical unified build remain PASS without rerunning them",
+      "confirmed authenticated Custom GPT editor/runtime mutation surface is still not exposed by available connectors",
+      "detected stale contradiction: unified runner status still said REAL_CANONICAL_UNIFIED_RUN=PENDING_AUTHENTICATED_SOURCE despite later real build PASS",
+      "updated unified runner status to acknowledge exact real canonical run PASS and exact source/HTML/ZIP hashes",
+      "added release-readiness cross-file consistency validator",
+      "added GitHub Actions workflow for release-readiness consistency",
+      "recorded release-readiness status as PASS_WITH_TRUE_RUNTIME_PENDING",
+      "kept private Knowledge out of public repo, legacy copy/paste fallback-only, and main untouched"
     ],
     "current_stage": "actual Custom GPT registration and evidence-backed true runtime verification",
     "remaining_work": [
@@ -96,11 +99,12 @@
     "stopped_at": {
       "stage": "actual Custom GPT registration",
       "status": "BLOCKED_BY_AUTHENTICATED_EDITOR_RUNTIME_ACCESS",
-      "detail": "Available tool surface still does not expose authenticated mutation of the user's Custom GPT Knowledge/Instructions/schema or direct execution of the four photo tests in that GPT. This run progressed the strict gate instead of marking runtime PASS synthetically."
+      "detail": "No exposed connector/action can mutate the user's authenticated Custom GPT Knowledge/Instructions/schema or run the required four real-photo tests in that GPT. This run still advanced repository state by eliminating a stale status contradiction and adding a release-readiness consistency gate."
     },
-    "resume_from": "check again for authenticated Custom GPT editor/runtime access; if still absent, continue non-runtime regression/handoff/print/evidence tooling work without rerunning the already-PASS exact canonical build"
+    "next_start": "re-check authenticated Custom GPT editor/runtime access; if unavailable, continue hardening non-runtime handoff/print/evidence/release validation without rerunning the already-PASS canonical build",
+    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> strict true-runtime PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_APP_UNIFICATION_PASS_REAL_PRIVATE_CANONICAL_UNIFIED_BUILD_PASS_EVIDENCE_BACKED_TRUE_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_REAL_CANONICAL_UNIFIED_BUILD_PASS_RELEASE_READINESS_CONSISTENT_EVIDENCE_BACKED_TRUE_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "Actual Custom GPT registration and four real-photo/A4 tests remain the only completion blockers. The true-runtime gate is now stricter: boolean-only or synthetic claims cannot pass without evidence hashes/timestamps and exact four-case/A4 evidence. main remains untouched."
+  "completion_note": "This run removed a stale release-state contradiction and added a cross-file release-readiness consistency gate. Actual Custom GPT registration plus four real-photo/A4 runtime tests remain the final completion blocker. main remains untouched and private Knowledge remains private."
 }
