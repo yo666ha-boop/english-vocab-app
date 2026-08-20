@@ -37,10 +37,17 @@ req(s.real.UNIFIED_HTML_SHA256 === 'c9ac67b8063efff248fd2b4913503ef712ad268e0a47
 req(s.real.UNIFIED_ZIP_SHA256 === '79d7707b606d1f32e235f10997f62146178638cb0738dd8c41e6a085011747b6', 'unified ZIP SHA mismatch');
 req(s.real.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'real build must not embed private Knowledge');
 req(s.real.MAIN_TOUCHED === 'false', 'real build must keep main untouched');
-req(s.runtime.GATE_VERSION === 'evidence-backed-v2', 'true runtime gate must be evidence-backed-v2');
+
+// The release gate must stay aligned with the hardened true-runtime contract.
+req(s.runtime.GATE_VERSION === 'evidence-backed-v3-hardened', 'true runtime gate must be evidence-backed-v3-hardened');
+req(s.runtime.VALIDATOR_HARDENING_COMMIT === '192ee8e72fa767c38efa1986d35a2edb3312ba26', 'runtime gate hardening commit mismatch');
+req(s.runtime.VALIDATOR_CI_STATUS === 'PASS', 'hardened runtime validator CI must PASS');
+req(s.runtime.SELF_TEST_PLACEHOLDER_REJECTION_REQUIRED === 'true', 'runtime gate must reject self-test placeholders');
+req(s.runtime.CUSTOM_GPT_URL_VALIDATION_REQUIRED === 'true', 'runtime gate must validate actual Custom GPT URL');
 req(s.runtime.ACTUAL_CUSTOM_GPT_REGISTRATION_REQUIRED === 'true', 'actual Custom GPT registration must remain required');
 req(s.runtime.ACTUAL_PHOTO_ATTACHMENT_REQUIRED === 'true', 'actual photo attachment must remain required');
 req(s.runtime.ACTUAL_A4_RENDER_OR_PRINT_REQUIRED === 'true', 'actual A4 render/print must remain required');
+req(s.runtime.ALL_EVIDENCE_HASHES_UNIQUE_REQUIRED === 'true', 'all runtime evidence hashes must remain unique');
 req(s.runtime.OVERALL_RUNTIME_PASS_REQUIRED === 'true', 'overall runtime PASS must remain required');
 req(s.runtime.MAIN_TOUCHED === 'false', 'runtime gate must keep main untouched');
 
@@ -50,7 +57,6 @@ req(s.runner.REAL_CANONICAL_UNIFIED_HTML_SHA256 === s.real.UNIFIED_HTML_SHA256, 
 req(s.runner.REAL_CANONICAL_UNIFIED_ZIP_SHA256 === s.real.UNIFIED_ZIP_SHA256, 'runner/real ZIP SHA disagree');
 
 // A public branch index is not a substitute for the authenticated private canonical source.
-// If one is present, explicitly require that it is treated as non-canonical when hashes differ.
 req(s.publicIndex.PRIVATE_CANONICAL_EXPOSED === 'false', 'public probe must confirm private canonical is not exposed');
 if (s.publicIndex.STATUS === 'HASH_MISMATCH') {
   req(s.publicIndex.REPAIRED_SHA_MATCH === 'false', 'public index HASH_MISMATCH must record REPAIRED_SHA_MATCH=false');
@@ -70,6 +76,7 @@ const runtimePending = s.real.CUSTOM_GPT_RUNTIME_TEST !== 'true' || s.real.REAL_
 console.log('MIKAMI_ANSWER_GPT_RELEASE_READINESS=PASS');
 console.log('REAL_CANONICAL_BUILD=PASS');
 console.log(`TRUE_RUNTIME=${runtimePending ? 'PENDING' : 'PASS'}`);
+console.log(`TRUE_RUNTIME_GATE_VERSION=${s.runtime.GATE_VERSION}`);
 console.log(`PUBLIC_INDEX=${s.publicIndex.STATUS}`);
 console.log('PUBLIC_INDEX_CANONICAL=false');
 console.log('PRIVATE_KNOWLEDGE_PUBLIC_EMBED=false');
