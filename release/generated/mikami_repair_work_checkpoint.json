@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v20",
-  "updated_at_jst": "2026-08-20T18:03:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v21",
+  "updated_at_jst": "2026-08-20T19:01:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -17,7 +17,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_RUNTIME_FILE_BOUND_CI_PENDING_ACTUAL_RUNTIME_PENDING",
+    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_V2_NON_CIRCULAR_BINDING_CI_PENDING_ACTUAL_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -39,15 +39,11 @@
     "true_runtime_gate": {
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "gate_version": "evidence-backed-v3-hardened",
-      "validator": "tools/validate_mikami_answer_gpt_true_runtime.mjs",
       "validator_ci_run_id": 32335459190,
       "validator_ci_status": "PASS",
       "required_photo_cases": 4,
       "a4_orientation": "portrait",
       "a4_page_range": "1-2",
-      "actual_custom_gpt_registration_required": true,
-      "actual_photo_attachment_required": true,
-      "actual_a4_render_or_print_required": true,
       "synthetic_self_test_not_runtime_pass": true
     },
     "private_registration_kit": {
@@ -62,8 +58,8 @@
       "custom_gpt_url_found": false
     },
     "evidence_chain_gate": {
-      "status": "HARDENED_RUNTIME_FILE_BINDING_CI_PENDING",
-      "version": "evidence-chain-v1",
+      "status": "NON_CIRCULAR_BINDING_V2_CI_PENDING",
+      "version": "evidence-chain-v2",
       "manifest_template": "gpt/tests/mikami_answer_gpt_evidence_manifest.template.json",
       "validator": "tools/validate_mikami_answer_gpt_evidence_chain.mjs",
       "workflow": ".github/workflows/test-mikami-answer-gpt-evidence-chain.yml",
@@ -71,52 +67,59 @@
       "registration_kit_bound": true,
       "runtime_results_file_required": true,
       "runtime_results_file_sha_recomputed": true,
+      "non_circular_binding_required": true,
+      "binding_algorithm": "sha256-stable-json-excluding-runtime-results-sha-and-binding-digest",
+      "runtime_final_gate_binding_digest_match_required": true,
       "manifest_runtime_registration_crosscheck_required": true,
       "manifest_runtime_photo_hash_crosscheck_required": true,
       "manifest_runtime_transcript_hash_crosscheck_required": true,
       "manifest_runtime_execution_time_crosscheck_required": true,
       "manifest_runtime_a4_crosscheck_required": true,
       "runtime_overall_pass_required": true,
-      "workflow_status_recording_hardening_commit": "9cc13ad4adde654303e93dd09ad2fc0266354527",
-      "runtime_file_binding_commit": "754123f9ae50a78b4214211647998dca5fdea751",
-      "status_record_commit": "ade6130e278d2b5af9d358ad3ac780ceb886dd49",
-      "ci_status": "PENDING_VISIBILITY",
+      "negative_cases_defined": 8,
+      "template_v2_commit": "77c3534d8dcf5895c80a5e551e0a1fbbab851828",
+      "validator_v2_commit": "e86001b5430d8e1c96902b3f4431cfdb9cac2e79",
+      "workflow_v2_commit": "7cc17a8e670b402f78c333229c35151e4d0717c6",
+      "status_record_commit": "c7e427da8b33a1f4aabc9f7eb3b983b63bb286fc",
+      "ci_status": "PENDING_WRITEBACK",
       "real_runtime_executed": false
     },
     "completed_this_run": [
-      "re-read latest branch HEAD, checkpoint and all required answer-GPT status files",
-      "confirmed question bank, Knowledge, real canonical unified build, private registration kit and evidence-backed-v3 true-runtime gate remain unchanged/PASS where previously completed",
-      "checked available authenticated browser/tool surface and confirmed no Custom GPT editor mutation control is exposed in this run",
-      "hardened evidence-chain GitHub Actions status write-back to include CI run id, tested head SHA, registration-kit binding, expected Knowledge identity and A4/runtime flags",
-      "hardened the evidence-chain validator so a manifest hash string alone is insufficient: the actual runtime-results JSON file is now required and its SHA256 is recomputed",
-      "added strict manifest/runtime cross-checks for actual Custom GPT registration URL/evidence/timestamp, four photo hashes, four response transcript hashes, execution timestamps, A4 PDF hash/page count/orientation/evidence ref, and overall_runtime_pass",
-      "expanded evidence-chain negative self-test definitions to include wrong runtime-results file SHA and manifest/runtime transcript mismatch",
-      "observed evidence-chain CI write-back was still not visible before this run ended, so did not claim CI PASS",
-      "recorded the strengthened gate status honestly as CI pending",
+      "re-read latest branch HEAD, checkpoint, handoff, unified runner, real private build, true runtime gate and private registration kit statuses",
+      "confirmed all previously completed question-bank, Knowledge and unified-build work remains PASS and was not rerun",
+      "checked plugin/tool availability for a direct Custom GPT editor mutation surface; no usable authenticated Custom GPT editor action was found",
+      "re-read the evidence-chain validator/workflow and found a circular-hash design problem: runtime-results was expected to carry evidence-manifest SHA while the manifest also carried runtime-results SHA",
+      "upgraded evidence manifest schema to v2 with a deterministic non-circular binding digest",
+      "defined the digest as stable JSON SHA256 excluding runtime_results.results_json_sha256 and binding.binding_digest_sha256",
+      "updated evidence-chain validator so runtime final_gate.evidence_manifest_sha256 must equal that binding digest",
+      "kept actual runtime-results file SHA recomputation and all registration/photo/transcript/A4 cross-checks",
+      "expanded negative self-test definitions to 8 cases including wrong binding digest and runtime final-gate digest mismatch",
+      "updated the GitHub Actions workflow to record v2 non-circular-binding requirements and runtime-file-binding requirements",
+      "observed the new evidence-chain CI write-back was not yet visible before checkpoint update and recorded CI pending rather than claiming PASS",
       "kept main untouched and private Knowledge out of the public repository"
     ],
-    "current_stage": "actual Custom GPT registration using prepared private registration kit; evidence chain now also binds the actual runtime-results file",
+    "current_stage": "evidence-chain v2 CI verification, then actual Custom GPT registration using prepared private registration kit",
     "remaining_work": [
-      "confirm evidence-chain CI write-back PASS for runtime-file-binding validator",
+      "confirm evidence-chain v2 CI write-back PASS",
       "obtain authenticated Custom GPT editor/runtime mutation access",
       "register exact private Knowledge JSONL, formal Instructions and schema from the prepared registration kit",
       "capture actual Custom GPT URL and registration evidence hash",
       "run the four real answer-photo cases and capture unique photo/transcript hashes and timestamps",
       "render or print an actual A4 portrait 1-2 page report and capture PDF evidence",
-      "fill actual runtime-results JSON and evidence-chain manifest",
-      "run hardened true-runtime validator and runtime-file-bound evidence-chain validator to PASS",
+      "fill actual runtime-results JSON and v2 evidence-chain manifest using the non-circular binding digest",
+      "run hardened true-runtime validator and evidence-chain-v2 validator to PASS",
       "after true runtime PASS only, remove legacy copy/paste or keep it as permanent fallback",
       "decide final release/main strategy without overwriting the completed vocabulary app"
     ],
     "stopped_at": {
-      "stage": "evidence-chain CI result visibility / authenticated Custom GPT editor mutation",
+      "stage": "evidence-chain v2 CI write-back / authenticated Custom GPT editor mutation",
       "status": "CI_PENDING_AND_EDITOR_ACCESS_UNAVAILABLE",
-      "detail": "Repository work advanced: evidence-chain now cryptographically binds the actual runtime-results file to registration/photo/transcript/A4 evidence. The new CI status write-back was not visible before run end, and no authenticated Custom GPT editor mutation surface is exposed. No completed canonical work was rerun."
+      "detail": "This run fixed a real pre-runtime blocker: the previous mutual full-file hash design was circular and could not be finalized. Evidence-chain v2 now uses a deterministic non-circular binding digest and still cryptographically binds the actual runtime-results file. CI write-back has not yet appeared, and no authenticated Custom GPT editor mutation surface is exposed."
     },
-    "next_start": "first re-read evidence-chain status for CI PASS; then check authenticated Custom GPT editor access. If editor becomes available, register immediately and execute the four actual photo/A4 runtime tests. If still unavailable, continue concrete release/evidence/print hardening without rerunning completed canonical work.",
-    "next_stage": "evidence-chain CI PASS -> actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS + runtime-file-bound evidence-chain PASS -> legacy fallback finalization -> release/main decision"
+    "next_start": "first re-read evidence-chain status and confirm v2 CI PASS; then re-check authenticated Custom GPT editor access. If available, register immediately and execute the four actual photo/A4 runtime tests. If still unavailable, continue concrete release/evidence/print hardening without rerunning completed canonical work.",
+    "next_stage": "evidence-chain-v2 CI PASS -> actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS + evidence-chain-v2 PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_RUNTIME_FILE_BOUND_CI_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_V2_NON_CIRCULAR_BINDING_CI_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run materially strengthened evidence integrity by requiring and hashing the actual runtime-results JSON and cross-checking it against registration, four photo/transcript pairs and A4 evidence. CI write-back is still pending visibility. Actual authenticated Custom GPT registration and real-photo/A4 runtime tests remain the non-simulated completion blocker. main remains untouched."
+  "completion_note": "This run materially fixed the evidence chain by removing an impossible circular full-file hash dependency. The v2 binding digest is deterministic and can be referenced by runtime-results while the manifest independently records the final runtime-results file SHA. Actual authenticated Custom GPT registration and real-photo/A4 runtime tests remain the non-simulated completion blocker. main remains untouched."
 }
