@@ -1,0 +1,53 @@
+name: Test Mikami Answer GPT True Runtime Validator
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/validate_mikami_answer_gpt_true_runtime.mjs'
+      - 'gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json'
+      - '.github/workflows/test-mikami-answer-gpt-true-runtime-validator.yml'
+      - 'release/generated/answer_gpt_true_runtime_validator_trigger.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run hardened validator self-test
+        run: node tools/validate_mikami_answer_gpt_true_runtime.mjs --self-test
+      - name: Record validator CI status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          if node tools/validate_mikami_answer_gpt_true_runtime.mjs --self-test >/tmp/true-runtime-self-test.log 2>&1; then STATUS=PASS; else STATUS=FAIL; fi
+          {
+            echo "STATUS=$STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "HEAD_SHA=$GITHUB_SHA"
+            echo "SELF_TEST_PLACEHOLDER_REJECTION_REQUIRED=true"
+            echo "CUSTOM_GPT_URL_VALIDATION_REQUIRED=true"
+            echo "ALL_EVIDENCE_HASHES_UNIQUE_REQUIRED=true"
+            echo "REAL_RUNTIME_EXECUTED=false"
+          } > release/generated/answer_gpt_true_runtime_validator.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/generated/answer_gpt_true_runtime_validator.status.txt
+          git commit -m 'record hardened true runtime validator status' || true
+          for i in 1 2 3; do
+            git pull --rebase origin mikami-canonical-repair || true
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            sleep 2
+          done
+          test "$STATUS" = PASS
