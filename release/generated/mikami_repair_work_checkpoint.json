@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v14",
-  "updated_at_jst": "2026-08-20T13:57:20+09:00",
+  "checkpoint_schema": "mikami-repair-work-v15",
+  "updated_at_jst": "2026-08-20T14:24:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -13,12 +13,11 @@
     "english_question_count": 10511,
     "unique_question_ids": 10513,
     "final_quality_errors": 0,
-    "vocab_coordinate_version": "v7-2026-08-18-1based",
     "all_quality_gates_pass": true,
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_RELEASE_READINESS_CONSISTENT_TRUE_RUNTIME_PENDING",
+    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_HARDENED_TRUE_RUNTIME_EVIDENCE_GATE_PASS_ACTUAL_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -41,8 +40,13 @@
       "main_touched": false
     },
     "true_runtime_gate": {
-      "status": "EVIDENCE_BACKED_V2_IMPLEMENTED_RUNTIME_PENDING",
+      "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "validator": "tools/validate_mikami_answer_gpt_true_runtime.mjs",
+      "validator_hardening_commit": "192ee8e72fa767c38efa1986d35a2edb3312ba26",
+      "validator_ci_workflow": ".github/workflows/test-mikami-answer-gpt-true-runtime-validator.yml",
+      "validator_ci_run_id": 32335459190,
+      "validator_ci_status": "PASS",
+      "status_file": "release/generated/answer_gpt_true_runtime_validator.status.txt",
       "results_template": "gpt/tests/mikami_answer_gpt_true_runtime_results.template.json",
       "acceptance_contract": "gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json",
       "required_photo_cases": 4,
@@ -52,59 +56,50 @@
       "actual_photo_attachment_required": true,
       "actual_a4_render_or_print_required": true,
       "evidence_hashes_required": true,
-      "synthetic_self_test_not_runtime_pass": true
+      "synthetic_self_test_not_runtime_pass": true,
+      "new_hardening": [
+        "SELF_TEST_ONLY placeholders are rejected in real runtime validation",
+        "gpt_url must be an HTTPS ChatGPT Custom GPT /g/ URL",
+        "registration/photo/transcript/PDF/manifest evidence SHA256 values must all be unique",
+        "duplicate evidence hashes are rejected"
+      ]
     },
     "release_readiness_gate": {
       "status": "PASS_WITH_TRUE_RUNTIME_PENDING",
       "validator": "tools/validate_mikami_answer_gpt_release_readiness.mjs",
       "workflow": ".github/workflows/test-mikami-answer-gpt-release-readiness.yml",
-      "status_file": "release/generated/answer_gpt_release_readiness.status.txt",
-      "runner_status_alignment_commit": "a2d3449653167aec98ac79b3d71ea6477f6515b9",
-      "validator_commit": "9c20b48e2b8093d4948ef24603d5555cafd3907e",
-      "workflow_commit": "94f4709cca42ababc4dcc275ef01af2883349a3d",
-      "status_commit": "63788c184d8b526710670c30074fbf257b093a85",
-      "cross_checks": [
-        "handoff PASS",
-        "real canonical unified run acknowledged as PASS by unified runner status",
-        "real private build source bytes/SHA match expected canonical",
-        "unified HTML/ZIP SHA agree across runner and real build status",
-        "private Knowledge remains unembedded",
-        "legacy copy/paste remains fallback_only before true runtime PASS",
-        "evidence-backed-v2 true runtime requirements remain enforced",
-        "main remains untouched"
-      ],
-      "workflow_run_verification": "PENDING_CONNECTOR_RUN_VISIBILITY"
+      "status_file": "release/generated/answer_gpt_release_readiness.status.txt"
     },
     "completed_this_run": [
-      "re-read latest branch HEAD, checkpoint and all five required status files",
-      "confirmed question bank, Knowledge and real canonical unified build remain PASS without rerunning them",
-      "confirmed authenticated Custom GPT editor/runtime mutation surface is still not exposed by available connectors",
-      "detected stale contradiction: unified runner status still said REAL_CANONICAL_UNIFIED_RUN=PENDING_AUTHENTICATED_SOURCE despite later real build PASS",
-      "updated unified runner status to acknowledge exact real canonical run PASS and exact source/HTML/ZIP hashes",
-      "added release-readiness cross-file consistency validator",
-      "added GitHub Actions workflow for release-readiness consistency",
-      "recorded release-readiness status as PASS_WITH_TRUE_RUNTIME_PENDING",
-      "kept private Knowledge out of public repo, legacy copy/paste fallback-only, and main untouched"
+      "re-read current branch HEAD and checkpoint before changing anything",
+      "confirmed question bank, Knowledge and unified app build remain PASS and were not rerun",
+      "reviewed the strict true-runtime validator and found a real evidence-integrity weakness",
+      "closed the weakness so SELF_TEST_ONLY evidence cannot be accepted as an actual runtime result",
+      "added HTTPS ChatGPT Custom GPT URL validation",
+      "made all registration/photo/transcript/A4 PDF/final-manifest evidence hashes globally unique",
+      "added dedicated GitHub Actions CI for the hardened true-runtime validator",
+      "triggered the CI and confirmed PASS in run 32335459190",
+      "kept main untouched and private Knowledge out of the public repository"
     ],
     "current_stage": "actual Custom GPT registration and evidence-backed true runtime verification",
     "remaining_work": [
       "register private Knowledge JSONL, formal Instructions and schema in the actual Custom GPT",
-      "capture registration evidence hash/reference",
-      "run four real answer-photo cases in the actual Custom GPT and capture photo/transcript hashes and behavior results",
-      "render/print actual A4 portrait report and capture PDF hash/evidence reference",
-      "fill actual runtime-results JSON and run strict validator to PASS",
-      "after true runtime PASS only, remove legacy copy/paste or lock it as permanent fallback",
+      "capture actual Custom GPT URL and private registration evidence hash",
+      "run the four real answer-photo cases and capture unique photo/transcript hashes",
+      "render or print an actual A4 portrait 1-2 page report and capture PDF evidence hash",
+      "fill actual runtime-results JSON and run hardened validator to PASS",
+      "after true runtime PASS only, remove legacy copy/paste or keep it as permanent fallback",
       "decide final release/main strategy without overwriting the completed vocabulary app"
     ],
     "stopped_at": {
       "stage": "actual Custom GPT registration",
       "status": "BLOCKED_BY_AUTHENTICATED_EDITOR_RUNTIME_ACCESS",
-      "detail": "No exposed connector/action can mutate the user's authenticated Custom GPT Knowledge/Instructions/schema or run the required four real-photo tests in that GPT. This run still advanced repository state by eliminating a stale status contradiction and adding a release-readiness consistency gate."
+      "detail": "Repository-side work advanced again this run and the evidence gate is stronger. The only non-simulated blocker remains access to the authenticated Custom GPT editor/runtime needed to attach private Knowledge and execute real photos."
     },
-    "next_start": "re-check authenticated Custom GPT editor/runtime access; if unavailable, continue hardening non-runtime handoff/print/evidence/release validation without rerunning the already-PASS canonical build",
-    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> strict true-runtime PASS -> legacy fallback finalization -> release/main decision"
+    "next_start": "re-check for authenticated Custom GPT editor/runtime access; if still unavailable, continue preparing evidence capture and release-finalization tooling without rerunning completed canonical/Knowledge work",
+    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_REAL_CANONICAL_UNIFIED_BUILD_PASS_RELEASE_READINESS_CONSISTENT_EVIDENCE_BACKED_TRUE_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_HARDENED_TRUE_RUNTIME_VALIDATOR_PASS_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "This run removed a stale release-state contradiction and added a cross-file release-readiness consistency gate. Actual Custom GPT registration plus four real-photo/A4 runtime tests remain the final completion blocker. main remains untouched and private Knowledge remains private."
+  "completion_note": "This run materially advanced the final gate: a placeholder-evidence weakness was found and fixed, dedicated GitHub Actions validation passed, and false self-test evidence can no longer satisfy the real-runtime validator. Actual Custom GPT registration/photo/A4 execution remains the only completion blocker. main remains untouched."
 }
