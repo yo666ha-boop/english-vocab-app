@@ -34,8 +34,10 @@ try {
   assert(v4Audit.status === 'OK', 'V4 pipeline is not PASS');
   assert(v4Audit.final_quality_errors === 0, 'V4 final quality errors are not zero');
 
-  // 2) Change only the photo-analysis handoff UI. The patcher preserves the old
-  // copy/paste flow inside a fallback section until true Custom GPT runtime PASS.
+  // 2) Change only the answer-analysis handoff UI. The primary route must NOT
+  // upload/analyze photos inside the problem app. The answer photo is attached
+  // directly in the dedicated My GPT. The old app-side photo/copy-paste flow
+  // remains only inside a collapsed fallback until true Custom GPT runtime PASS.
   run('tools/patch_mikami_answer_gpt_handoff.mjs', [repaired, outputPath]);
 
   // 3) Prove that the problem bank itself is byte-for-byte equivalent after
@@ -58,9 +60,38 @@ try {
     'id="legacyPhotoAnalysisFallback"',
     '旧方式（予備）',
     'mikami-answer-gpt-handoff-v1',
-    'question_ids: ids'
+    'question_ids: ids',
+    '答案写真はMy GPTへ直接添付'
   ];
   for (const marker of requiredMarkers) assert(html.includes(marker), `missing My GPT marker: ${marker}`);
+
+  // Permanent routing contract:
+  // - primary app route only opens My GPT / copies minimal IDs
+  // - answer photo attachment happens in My GPT, not in the app
+  // - any legacy <input type=file> must stay inside the collapsed fallback only
+  const openGptAt = html.indexOf('id="openAnswerGptBtn"');
+  const fallbackAt = html.indexOf('id="legacyPhotoAnalysisFallback"');
+  const fallbackCloseAt = html.indexOf('</details>', fallbackAt);
+  const photoInputAt = html.indexOf('id="photoInput"');
+  assert(openGptAt >= 0 && fallbackAt >= 0 && openGptAt < fallbackAt,
+    'My GPT open button must be the primary route before legacy fallback');
+  assert(fallbackCloseAt > fallbackAt, 'legacy fallback closing tag not found');
+  assert(photoInputAt > fallbackAt && photoInputAt < fallbackCloseAt,
+    'app-side photo input escaped legacy fallback; primary route must be My GPT only');
+  assert(html.indexOf('id="photoInput"', photoInputAt + 1) === -1,
+    'multiple app-side photo inputs found; do not add a primary photo-upload route');
+
+  const minimalHandoffForbidden = [
+    'question_texts:',
+    'correct_answers:',
+    'answer_key:',
+    'photo_base64:',
+    'photo_file:',
+    'image_data:'
+  ];
+  for (const marker of minimalHandoffForbidden) {
+    assert(!html.includes(marker), `forbidden primary handoff field found: ${marker}`);
+  }
 
   // Handoff must never publish the private Knowledge payload or its verified hash.
   assert(!html.includes('be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213'), 'private Knowledge hash leaked into HTML');
@@ -94,6 +125,10 @@ try {
     final_quality_errors: 0,
     my_gpt_primary_ui: true,
     handoff_fields: ['source_mode','target','question_ids','question_count'],
+    photo_attachment_location: 'MY_GPT_ONLY',
+    app_photo_analysis_primary: false,
+    app_photo_input_scope: 'legacy_fallback_only',
+    my_gpt_direct_photo_attachment: true,
     private_knowledge_embedded: false,
     legacy_copy_paste: 'fallback_only',
     custom_gpt_runtime_test: false,
