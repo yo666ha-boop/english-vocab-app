@@ -54,12 +54,14 @@ jobs:
           echo 'pass=true' >> "$GITHUB_OUTPUT"
 
       - name: Publish only problem-app/index.html to main and preserve vocab root
+        id: publish
         if: steps.reconstruct.outputs.pass == 'true'
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin main
           ROOT_BEFORE=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          echo "root_sha_before=$ROOT_BEFORE" >> "$GITHUB_OUTPUT"
           rm -rf /tmp/mikami-main
           git worktree add /tmp/mikami-main origin/main
           cd /tmp/mikami-main
@@ -70,6 +72,7 @@ jobs:
           test "$(sha256sum problem-app/index.html | awk '{print $1}')" = '6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
           ROOT_AFTER=$(sha256sum index.html | awk '{print $1}')
           test "$ROOT_BEFORE" = "$ROOT_AFTER"
+          echo "root_sha_after=$ROOT_AFTER" >> "$GITHUB_OUTPUT"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- problem-app/index.html
@@ -79,32 +82,92 @@ jobs:
             git commit -m 'publish: add isolated MyGPT English problem app'
             git push origin HEAD:main
           fi
+          echo 'pass=true' >> "$GITHUB_OUTPUT"
+
+      - name: Verify exact GitHub Pages publication
+        id: pages
+        if: steps.publish.outputs.pass == 'true'
+        shell: bash
+        run: |
+          set -u
+          URL='https://yo666ha-boop.github.io/english-vocab-app/problem-app/'
+          EXPECTED_BYTES='3812063'
+          EXPECTED_SHA='6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
+          OUT='/tmp/mikami-pages.html'
+          PASS=false
+          HTTP='000'; BYTES='0'; SHA=''
+          for i in $(seq 1 15); do
+            HTTP=$(curl -sS -L --connect-timeout 15 --max-time 45 -w '%{http_code}' -o "$OUT" "$URL" || echo 000)
+            if test -s "$OUT"; then
+              BYTES=$(wc -c < "$OUT" | tr -d ' ')
+              SHA=$(sha256sum "$OUT" | awk '{print $1}')
+            else
+              BYTES=0; SHA=''
+            fi
+            if test "$HTTP" = '200' && test "$BYTES" = "$EXPECTED_BYTES" && test "$SHA" = "$EXPECTED_SHA"; then
+              grep -q 'id="qb-data"' "$OUT" && \
+              grep -q '答案分析My GPTを開く' "$OUT" && \
+              grep -q 'legacyPhotoAnalysisFallback' "$OUT" && \
+              grep -q 'mikamijuku_answer_gpt_url_v1' "$OUT" && \
+              ! grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' "$OUT" && PASS=true
+            fi
+            test "$PASS" = true && break
+            sleep 8
+          done
+          echo "pass=$PASS" >> "$GITHUB_OUTPUT"
+          echo "http=$HTTP" >> "$GITHUB_OUTPUT"
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          test "$PASS" = true
 
       - name: Record reconstruction/publication result on repair branch
         if: always()
         shell: bash
         env:
-          PASS: ${{ steps.reconstruct.outputs.pass }}
-          BYTES: ${{ steps.reconstruct.outputs.bytes }}
-          SHA: ${{ steps.reconstruct.outputs.sha }}
+          RECON_PASS: ${{ steps.reconstruct.outputs.pass }}
+          RECON_BYTES: ${{ steps.reconstruct.outputs.bytes }}
+          RECON_SHA: ${{ steps.reconstruct.outputs.sha }}
+          PUBLISH_PASS: ${{ steps.publish.outputs.pass }}
+          ROOT_BEFORE: ${{ steps.publish.outputs.root_sha_before }}
+          ROOT_AFTER: ${{ steps.publish.outputs.root_sha_after }}
+          PAGES_PASS: ${{ steps.pages.outputs.pass }}
+          PAGES_HTTP: ${{ steps.pages.outputs.http }}
+          PAGES_BYTES: ${{ steps.pages.outputs.bytes }}
+          PAGES_SHA: ${{ steps.pages.outputs.sha }}
+          PAGES_URL: ${{ steps.pages.outputs.url }}
         run: |
           set -euo pipefail
           cd "$GITHUB_WORKSPACE"
           git switch mikami-canonical-repair
           git pull --rebase origin mikami-canonical-repair
           mkdir -p release/generated
-          if test "${PASS:-false}" = 'true'; then STATUS='XZ_CHUNKS_RECONSTRUCTED_AND_MAIN_PROBLEM_PATH_PUBLISHED'; else STATUS='XZ_CHUNK_RECONSTRUCTION_FAILED'; fi
+          if test "${RECON_PASS:-false}" = 'true' && test "${PUBLISH_PASS:-false}" = 'true' && test "${PAGES_PASS:-false}" = 'true'; then
+            STATUS='XZ_CHUNKS_PUBLISHED_AND_GITHUB_PAGES_EXACT_PASS'
+          elif test "${RECON_PASS:-false}" = 'true' && test "${PUBLISH_PASS:-false}" = 'true'; then
+            STATUS='XZ_CHUNKS_MAIN_PUBLISHED_PAGES_NOT_EXACT_YET'
+          else
+            STATUS='XZ_CHUNK_RECONSTRUCTION_OR_PUBLICATION_FAILED'
+          fi
           {
             echo "STATUS=$STATUS"
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "TRIGGER_SHA=$GITHUB_SHA"
-            echo "RECONSTRUCT_PASS=${PASS:-false}"
-            echo "OBSERVED_HTML_BYTES=${BYTES:-0}"
-            echo "OBSERVED_HTML_SHA256=${SHA:-}"
+            echo "RECONSTRUCT_PASS=${RECON_PASS:-false}"
+            echo "OBSERVED_HTML_BYTES=${RECON_BYTES:-0}"
+            echo "OBSERVED_HTML_SHA256=${RECON_SHA:-}"
             echo 'EXPECTED_HTML_BYTES=3812063'
             echo 'EXPECTED_HTML_SHA256=6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'
-            echo 'TARGET_PATH=main:problem-app/index.html'
+            echo "MAIN_PROBLEM_PATH_PUBLISH_PASS=${PUBLISH_PASS:-false}"
+            echo "ROOT_INDEX_SHA_BEFORE=${ROOT_BEFORE:-}"
+            echo "ROOT_INDEX_SHA_AFTER=${ROOT_AFTER:-}"
             echo 'ROOT_INDEX_POLICY=UNCHANGED_REQUIRED'
+            echo 'TARGET_PATH=main:problem-app/index.html'
+            echo "PAGES_PASS=${PAGES_PASS:-false}"
+            echo "PAGES_HTTP=${PAGES_HTTP:-000}"
+            echo "PAGES_BYTES=${PAGES_BYTES:-0}"
+            echo "PAGES_SHA256=${PAGES_SHA:-}"
+            echo "PAGES_URL=${PAGES_URL:-https://yo666ha-boop.github.io/english-vocab-app/problem-app/}"
             echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
             echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
             echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
