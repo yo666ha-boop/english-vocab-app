@@ -1,0 +1,28 @@
+name: Test Mikami Answer GPT Release Readiness
+
+on:
+  push:
+    branches:
+      - mikami-canonical-repair
+    paths:
+      - 'tools/validate_mikami_answer_gpt_release_readiness.mjs'
+      - 'release/generated/answer_gpt_handoff_patch.status.txt'
+      - 'release/generated/answer_gpt_unified_runner.status.txt'
+      - 'release/generated/answer_gpt_real_private_build.status.txt'
+      - 'release/generated/answer_gpt_true_runtime_gate.status.txt'
+      - '.github/workflows/test-mikami-answer-gpt-release-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-release-readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Cross-check answer GPT release state
+        run: node tools/validate_mikami_answer_gpt_release_readiness.mjs
