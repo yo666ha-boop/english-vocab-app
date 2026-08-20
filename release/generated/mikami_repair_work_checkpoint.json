@@ -1,6 +1,6 @@
 {
   "checkpoint_schema": "mikami-repair-work-v7",
-  "updated_at_jst": "2026-08-20T00:55:00+09:00",
+  "updated_at_jst": "2026-08-20T10:45:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -68,33 +68,38 @@
       ],
       "photo_case_count": 4,
       "a4_contract": "portrait 1-2 pages",
-      "checks": [
-        "exact-ID lookup contract",
-        "no guessing unreadable answers",
-        "held status support",
-        "school-test source separation",
-        "root causes max 3",
-        "return points max 3",
-        "next actions max 3",
-        "required A4 report sections",
-        "avoid wide tables"
-      ],
       "custom_gpt_runtime_test": false,
       "real_photo_test_pending": true
     },
+    "manual_resume_verification": {
+      "status": "PASS_READY_FOR_REGISTRATION",
+      "verified_at_jst": "2026-08-20T10:44:00+09:00",
+      "knowledge_refetched": true,
+      "knowledge_refetched_bytes": 3028093,
+      "instructions_refetched": true,
+      "instructions_refetched_bytes": 7246,
+      "output_schema_refetched": true,
+      "acceptance_cases_refetched": true,
+      "first_canonical_lookup_verified": "E1-BQ-001",
+      "first_canonical_lookup_answer": "He is not busy.",
+      "main_touched": false
+    },
     "completed_this_run": [
-      "added four-case direct-photo acceptance specification",
-      "added machine-readable A4 report acceptance contract",
-      "added Node contract regression test",
-      "added GitHub Actions workflow",
-      "GitHub Actions contract run PASS"
+      "confirmed branch HEAD and latest checkpoint before resuming",
+      "re-fetched private Knowledge JSONL from Drive (3,028,093 bytes)",
+      "re-fetched formal GPT instructions from Drive (7,246 bytes)",
+      "re-fetched output schema from Drive",
+      "re-fetched four-case photo/A4 acceptance specification",
+      "verified canonical exact-ID lookup path with E1-BQ-001",
+      "moved hourly continuation start to 10:45 JST so continuation does not wait until 11:29"
     ],
     "current_blocker": {
       "stage": "Custom GPT registration and true runtime photo/A4 verification",
-      "detail": "All work that can be validated in GitHub without mutating the user's Custom GPT has now passed. The remaining checks require the actual Custom GPT Knowledge/Instructions configuration and real answer images. GitHub cannot itself attach Knowledge to the user's Custom GPT editor or exercise that private GPT runtime. Do not mark these runtime tests PASS until executed in the actual GPT.",
+      "detail": "All registration assets are now re-fetched and ready. The actual GPT editor must receive the Knowledge file and Instructions before real-photo runtime tests can be truthfully marked PASS. Available GitHub/Drive connectors cannot mutate the user's private Custom GPT editor, so do not fake completion of this step.",
       "code_readiness": "PASS",
       "data_readiness": "PASS",
       "pre_runtime_acceptance": "PASS",
+      "registration_assets_ready": true,
       "custom_gpt_registration": "PENDING",
       "real_photo_runtime_tests": "PENDING",
       "a4_runtime_render_test": "PENDING"
@@ -110,9 +115,9 @@
       "verify actual A4 print/render quality",
       "only after all runtime tests PASS decide whether legacy copy/paste UI is removed or demoted"
     ],
-    "resume_from": "register private Knowledge JSONL in target answer-analysis Custom GPT"
+    "resume_from": "register private Knowledge JSONL and formal Instructions in the target Custom GPT editor; then run four real-photo cases"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_GITHUB_PHOTO_A4_CONTRACT_PASS_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_REFETCHED_REGISTRATION_ASSETS_READY_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "GitHub-side work advanced further: four required photo scenarios plus A4 1-2 page report behavior are now encoded and machine-validated in Actions run 32272791009. Remaining work is only the actual Custom GPT registration and true runtime photo/A4 tests. main remains untouched."
+  "completion_note": "Immediate manual continuation completed the registration-readiness recheck and re-fetched all private registration assets. Problem-bank work remains complete and main remains untouched. Next step is the actual private Custom GPT editor registration, followed by four true photo runtime cases and A4 rendering verification."
 }
