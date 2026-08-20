@@ -1,0 +1,33 @@
+name: Test Mikami Answer GPT Handoff Patch
+
+on:
+  push:
+    branches:
+      - mikami-canonical-repair
+    paths:
+      - 'tools/patch_mikami_answer_gpt_handoff.mjs'
+      - '.github/workflows/test-mikami-answer-gpt-handoff-patch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run handoff patch self-test
+        run: node tools/patch_mikami_answer_gpt_handoff.mjs --self-test
+      - name: Safety markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '答案分析My GPTを開く' tools/patch_mikami_answer_gpt_handoff.mjs
+          grep -q 'question_ids: ids' tools/patch_mikami_answer_gpt_handoff.mjs
+          grep -q '旧方式（予備）' tools/patch_mikami_answer_gpt_handoff.mjs
+          ! grep -q 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' tools/patch_mikami_answer_gpt_handoff.mjs
+          echo PASS_HANDOFF_PATCH_SAFETY
