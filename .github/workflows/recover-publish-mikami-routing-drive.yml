@@ -1,3 +1,4 @@
+# retrigger: 2026-08-20T20:53:00+09:00
 name: Recover exact routing app from Drive and publish isolated path
 
 on:
@@ -41,7 +42,6 @@ jobs:
             test "$b" = "$EXPECTED_BYTES" && test "$s" = "$EXPECTED_SHA"
           }
 
-          # Direct usercontent endpoint first.
           curl -sS -L --retry 1 --connect-timeout 20 --max-time 120 \
             -c "$COOKIE" -b "$COOKIE" \
             "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" \
@@ -51,7 +51,6 @@ jobs:
             echo 'method=usercontent-confirm-t' >> "$GITHUB_OUTPUT"
           else
             test -s "$OUT" && cp "$OUT" "$FIRST" || true
-            # Standard Drive download page with cookie jar.
             curl -sS -L --retry 1 --connect-timeout 20 --max-time 120 \
               -c "$COOKIE" -b "$COOKIE" \
               "https://drive.google.com/uc?export=download&id=${FILE_ID}" \
