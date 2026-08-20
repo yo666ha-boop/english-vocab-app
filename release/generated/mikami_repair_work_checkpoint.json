@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v10",
-  "updated_at_jst": "2026-08-20T11:52:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v11",
+  "updated_at_jst": "2026-08-20T11:57:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -24,7 +24,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_PRE_RUNTIME_APP_HANDOFF_AND_UNIFIED_RUNNER_REGRESSION_PASS_TRUE_RUNTIME_PENDING",
+    "status": "KNOWLEDGE_PRE_RUNTIME_APP_HANDOFF_AND_UNIFIED_RUNNER_CI_PASS_PRIVATE_CANONICAL_EXECUTION_AND_CUSTOM_GPT_RUNTIME_PENDING",
     "exact_private_knowledge_build": {
       "status": "PASS",
       "knowledge_records": 10511,
@@ -75,42 +75,57 @@
       "private_knowledge_embedded": false,
       "finalize_workflow": ".github/workflows/finalize-mikami-canonical-drive.yml",
       "finalize_output": "みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip",
-      "real_canonical_unified_run": "PENDING_AUTHENTICATED_OR_DIRECT_SOURCE_TRANSFER"
+      "real_canonical_unified_run": "PENDING_PRIVATE_AUTHENTICATED_SOURCE"
+    },
+    "direct_drive_probe": {
+      "status": "REJECTED_NOT_CANONICAL",
+      "run_id": 32326233035,
+      "source_commit": "d371059cc1478bb041aa8338932474def231366f",
+      "probed_bytes": 902242,
+      "probed_sha256": "f0f7f1ad2884fbee4fc87ea9787e0034e637428ad7a08e87c0cf2cc94c6021fc",
+      "expected_bytes": 4035500,
+      "expected_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
+      "exact_match": false,
+      "package_built": false,
+      "source_published": false,
+      "decision": "reject and do not use the 902242-byte unauthenticated response"
     },
     "completed_this_run": [
-      "reconfirmed question bank PASS COMPLETE; no re-audit performed",
+      "reconfirmed problem bank PASS COMPLETE without reopening audit",
       "implemented and PASS-tested My GPT primary handoff patcher",
       "made handoff problem-ID-only and kept private Knowledge out of public HTML",
-      "demoted legacy copy/paste UI to fallback",
-      "implemented unified V4 + My GPT runner",
-      "rewired canonical finalize workflow to unified output ZIP",
-      "unified runner regression workflow PASS: V4 regression, patch self-test, syntax, finalize wiring, qb-data preservation, final audit enforcement",
-      "kept main untouched",
-      "retried local execution layer; ClientResponseError remains"
+      "demoted old copy/paste UI to fallback",
+      "implemented unified V4 + My GPT runner and unified final ZIP workflow",
+      "unified-runner CI regression PASS",
+      "attempted safe direct Drive-ID retrieval with exact byte/SHA gate",
+      "rejected 902242-byte wrong response; no package built and no private source published",
+      "retried local execution layer; ClientResponseError remains",
+      "kept main untouched"
     ],
     "current_blockers": [
       {
         "stage": "real exact-canonical unified build",
-        "status": "BLOCKED_BY_EXECUTION_TRANSFER_SURFACE",
-        "detail": "The private 4,035,500-byte canonical exists in connected Drive, but local container/python still returns ClientResponseError. GitHub unified workflow is ready; next step is to test a safe direct Drive-ID retrieval and otherwise wait for authenticated/signed transfer without publishing the private canonical."
+        "status": "BLOCKED_UNTIL_PRIVATE_AUTHENTICATED_SOURCE_OR_LOCAL_EXECUTION_RECOVERS",
+        "detail": "Unauthenticated Drive-ID access returned 902242 bytes with a noncanonical SHA and was correctly rejected. The exact 4035500-byte private canonical remains accessible only through the connected Drive surface while local container/python currently fails with ClientResponseError."
       },
       {
         "stage": "actual Custom GPT registration and true runtime verification",
         "status": "BLOCKED_BY_CUSTOM_GPT_EDITOR_ACCESS",
-        "detail": "No authenticated Custom GPT editor mutation connector is exposed. Do not claim true photo/A4 runtime PASS before actual registration and tests."
+        "detail": "No authenticated Custom GPT editor mutation connector is exposed. Knowledge/Instructions registration and true photo/A4 tests must not be marked PASS until run in the actual GPT."
       }
     ],
     "remaining_work": [
-      "try safe direct Drive-ID retrieval inside GitHub Actions without publishing the canonical; require exact byte count and SHA before use",
-      "execute real canonical through unified runner and verify unified ZIP/audits",
-      "register private Knowledge and formal Instructions/schema in target Custom GPT",
-      "run four true answer-photo cases",
-      "verify prerequisite return-point accuracy and A4 portrait 1-2 page render",
-      "after runtime PASS, remove or permanently demote legacy copy/paste fallback"
+      "on each continuation, first retry local execution layer; if recovered, fetch/materialize the exact private Drive canonical and run tools/run_mikami_pipeline_v4_answer_gpt.mjs immediately",
+      "if a fresh authenticated/signed 4035500-byte source transfer becomes available, dispatch the unified finalize workflow and require exact SHA before build",
+      "verify unified ZIP has unchanged qb-data, preserved IDs and final canonical audit PASS",
+      "register private Knowledge and formal Instructions/schema in target Custom GPT when editor access is available",
+      "run four true answer-photo cases and verify return-point accuracy",
+      "verify actual A4 portrait 1-2 page output",
+      "after all true runtime gates PASS, remove or permanently demote legacy copy/paste fallback"
     ],
-    "resume_from": "probe safe direct Drive-ID source retrieval; if exact 4035500 bytes and expected SHA match, immediately run unified finalizer; otherwise preserve privacy and continue from Custom GPT/editor or signed-transfer availability"
+    "resume_from": "retry local execution layer first; do not repeat or trust the rejected unauthenticated 902242-byte Drive response; use only exact 4035500-byte source with expected SHA"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_HANDOFF_PASS_UNIFIED_RUNNER_CI_PASS_REAL_CANONICAL_AND_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_HANDOFF_PASS_UNIFIED_RUNNER_CI_PASS_DIRECT_PUBLIC_DRIVE_REJECTED_PRIVATE_EXECUTION_AND_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "App-side unification is now coded and regression-PASS. The next executable gate is the real private canonical unified run, followed by actual Custom GPT registration and four real-photo/A4 tests. main remains untouched."
+  "completion_note": "App-side unification and regression are complete. Safe direct public Drive retrieval was tested and rejected by exact-match gates, so privacy/integrity were preserved. Remaining work is a real private-canonical unified build plus actual Custom GPT registration and four real-photo/A4 runtime tests. main remains untouched."
 }
