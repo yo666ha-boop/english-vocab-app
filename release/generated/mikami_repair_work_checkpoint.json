@@ -1,8 +1,7 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v8",
-  "updated_at_jst": "2026-08-20T10:46:47+09:00",
+  "checkpoint_schema": "mikami-repair-work-v9",
+  "updated_at_jst": "2026-08-20T11:50:00+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_branch_head": "c8d59054ba2511cf2d9df4bb5fed6fce393262ad",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -25,7 +24,7 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "KNOWLEDGE_AND_PRE_RUNTIME_ACCEPTANCE_PASS_CUSTOM_GPT_EDITOR_ACCESS_REQUIRED",
+    "status": "KNOWLEDGE_PRE_RUNTIME_AND_APP_HANDOFF_IMPLEMENTATION_ADVANCED_CUSTOM_GPT_RUNTIME_PENDING",
     "exact_private_knowledge_build": {
       "status": "PASS",
       "knowledge_records": 10511,
@@ -42,52 +41,85 @@
       "knowledge_jsonl_drive_id": "1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC",
       "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
       "output_schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
-      "public_exposure": false,
-      "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213"
+      "public_exposure": false
     },
     "github_pre_runtime_acceptance": {
       "status": "PASS",
       "run_id": 32272791009,
-      "source_sha": "6fc8a7000bd06d561353a81ead2d3d42d86562ac",
       "photo_case_count": 4,
       "a4_contract": "portrait 1-2 pages",
       "custom_gpt_runtime_test": false,
       "real_photo_test_pending": true
     },
-    "completed_this_run": [
-      "confirmed latest mikami-canonical-repair HEAD c8d59054ba2511cf2d9df4bb5fed6fce393262ad",
-      "confirmed checkpoint still marks question bank PASS COMPLETE and pre-runtime acceptance PASS",
-      "confirmed no reason to re-audit or regenerate the completed question bank",
-      "checked available execution surfaces for target Custom GPT editor mutation",
-      "confirmed local agent-browser executable is unavailable in this automation runtime",
-      "confirmed installed connector surface exposes no Custom GPT editor/Knowledge mutation action",
-      "kept main untouched and private Knowledge out of the public repository"
-    ],
-    "current_blocker": {
-      "stage": "register assets in the actual private Custom GPT editor, then run true photo/A4 tests",
-      "detail": "All code/data/pre-runtime gates are PASS. This runtime cannot reach an authenticated Custom GPT editor mutation surface: no Custom GPT configuration connector is exposed and no authenticated browser automation session/executable is available. Therefore Knowledge/Instructions cannot be truthfully registered and real-photo runtime/A4 tests cannot be truthfully executed in this run.",
-      "code_readiness": "PASS",
-      "data_readiness": "PASS",
-      "pre_runtime_acceptance": "PASS",
-      "registration_assets_ready": true,
-      "custom_gpt_registration": "BLOCKED_BY_EDITOR_ACCESS",
-      "real_photo_runtime_tests": "BLOCKED_UNTIL_REGISTRATION_AND_PHOTO_INPUT",
-      "a4_runtime_render_test": "BLOCKED_UNTIL_TRUE_RUNTIME_OUTPUT"
+    "app_unification": {
+      "handoff_patcher": "tools/patch_mikami_answer_gpt_handoff.mjs",
+      "handoff_patch_test": "PASS",
+      "handoff_patch_status_file": "release/generated/answer_gpt_handoff_patch.status.txt",
+      "primary_ui": "答案分析My GPTを開く",
+      "handoff_fields": ["source_mode", "target", "question_ids", "question_count"],
+      "private_knowledge_embedded": false,
+      "answers_embedded_in_handoff": false,
+      "legacy_copy_paste": "fallback_only_until_true_runtime_pass",
+      "question_generation_changed": false,
+      "gpt_url_storage": "localStorage per browser; no private Knowledge in public HTML"
     },
+    "unified_canonical_runner": {
+      "runner": "tools/run_mikami_pipeline_v4_answer_gpt.mjs",
+      "status": "IMPLEMENTED_CI_REGRESSION_PENDING",
+      "pipeline": [
+        "exact canonical source validation",
+        "V4 repaired problem bank build",
+        "My GPT handoff UI patch",
+        "qb-data deep equality check",
+        "question ID order preservation check",
+        "private Knowledge leakage check",
+        "final canonical invariant audit",
+        "unified integration audit"
+      ],
+      "finalize_workflow": ".github/workflows/finalize-mikami-canonical-drive.yml",
+      "finalize_output": "みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip",
+      "regression_workflow": ".github/workflows/test-mikami-answer-gpt-unified-runner.yml",
+      "real_canonical_unified_run": "PENDING_EXECUTION_SOURCE"
+    },
+    "completed_this_run": [
+      "reconfirmed question bank PASS COMPLETE; no re-audit performed",
+      "confirmed old photo-analysis UI copied q/a into a manual ChatGPT prompt and required paste-back",
+      "implemented My GPT primary handoff patcher",
+      "handoff patcher self-test and safety contract PASS",
+      "made handoff problem-ID-only; no full answers or private Knowledge are added",
+      "demoted legacy copy/paste UI to fallback while preserving recovery compatibility",
+      "implemented unified V4 + My GPT runner with qb-data deep-equality and canonical final audit",
+      "rewired authenticated canonical finalize workflow to produce unified My GPT package",
+      "added automatic unified-runner regression workflow",
+      "kept main untouched and private Knowledge outside public repository",
+      "retried local execution layer; ClientResponseError remains"
+    ],
+    "current_blockers": [
+      {
+        "stage": "real exact-canonical unified build",
+        "detail": "The 4,035,500-byte private canonical is available through connected Google Drive, but the local container/python execution layer still returns ClientResponseError and GitHub Actions cannot consume the connector-only sediment file reference. The workflow is ready for the next authenticated/signed source transfer.",
+        "status": "BLOCKED_BY_EXECUTION_TRANSFER_SURFACE"
+      },
+      {
+        "stage": "actual Custom GPT registration and true runtime verification",
+        "detail": "No authenticated Custom GPT editor mutation connector is exposed in this runtime. Knowledge/Instructions registration and true photo/A4 tests must not be marked PASS until executed in the target GPT.",
+        "status": "BLOCKED_BY_CUSTOM_GPT_EDITOR_ACCESS"
+      }
+    ],
     "remaining_work": [
+      "confirm unified-runner CI regression PASS and record durable status",
+      "execute the real 4,035,500-byte canonical through V4 + My GPT unified runner when execution/transfer surface is available",
+      "verify unified ZIP question bank unchanged and final canonical audit PASS",
       "register private Knowledge JSONL in target answer-analysis Custom GPT",
       "apply formal instructions and output schema in target GPT",
-      "execute fully-correct original-answer photo test",
-      "execute multi-category wrong-answer photo test",
-      "execute unreadable/held-answer photo test",
-      "execute school-test photo test",
+      "run four true answer-photo cases",
       "verify prerequisite return-point accuracy",
-      "verify actual A4 print/render quality",
-      "only after all runtime tests PASS decide whether legacy copy/paste UI is removed or demoted"
+      "verify actual A4 portrait 1-2 page render/print quality",
+      "after all runtime gates PASS, remove or permanently demote the legacy copy/paste fallback"
     ],
-    "resume_from": "first run with authenticated target Custom GPT editor access: attach Drive Knowledge JSONL, apply formal Instructions/schema, then execute four true photo cases"
+    "resume_from": "first check release/generated/answer_gpt_unified_runner.status.txt; if PASS, retry real canonical unified execution, otherwise inspect exact CI failure and fix it"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_PRE_RUNTIME_PASS_BLOCKED_ONLY_ON_AUTHENTICATED_CUSTOM_GPT_EDITOR_AND_REAL_PHOTOS",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_HANDOFF_PATCH_PASS_UNIFIED_RUNNER_IMPLEMENTED_CI_AND_TRUE_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "No completed work was reopened. The only remaining path is the actual private Custom GPT editor plus real answer-photo runtime/A4 verification. This automation runtime has no tool surface to mutate that GPT, so completion cannot be claimed. main remains untouched and private Knowledge remains private."
+  "completion_note": "Work advanced beyond the prior Custom-GPT-only blocker: the app-side My GPT handoff is implemented and PASS-tested, and the exact-canonical unified build path is coded. Remaining work is the unified runner CI/real canonical run plus actual private Custom GPT registration and four real-photo/A4 runtime tests. main remains untouched."
 }
