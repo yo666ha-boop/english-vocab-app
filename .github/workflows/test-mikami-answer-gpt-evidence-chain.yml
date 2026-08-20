@@ -68,3 +68,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'record answer GPT evidence chain v2 CI status'
           git push
+
+# retrigger 2026-08-20T20:53:20+09:00 after pending writeback recovery
