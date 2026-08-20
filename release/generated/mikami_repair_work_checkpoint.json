@@ -1,8 +1,7 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v25",
-  "updated_at_jst": "2026-08-20T23:15:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v26",
+  "updated_at_jst": "2026-08-21T00:25:00+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_head_before_checkpoint_write": "4954770e20216db04028ac2d99e6447b2cebd90a",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -12,13 +11,10 @@
     "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
     "question_count": 10513,
     "english_question_count": 10511,
-    "unique_question_ids": 10513,
-    "final_quality_errors": 0,
-    "all_quality_gates_pass": true,
-    "rework_required": false
+    "final_quality_errors": 0
   },
   "answer_analysis_gpt_phase": {
-    "status": "MY_GPT_ONLY_ROUTING_LOCKED_GITHUB_XZ_CHUNK_BRIDGE_UPLOAD_IN_PROGRESS_4_OF_22",
+    "status": "MY_GPT_ONLY_ROUTING_LOCKED_GITHUB_XZ_CHUNK_BRIDGE_UPLOAD_IN_PROGRESS_19_OF_22",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
@@ -31,115 +27,88 @@
       "app_photo_analysis_primary": false,
       "app_photo_input_scope": "legacy_fallback_only",
       "my_gpt_direct_photo_attachment": true,
-      "primary_handoff_fields": ["source_mode", "target", "question_ids", "question_count"],
-      "question_text_in_primary_handoff": false,
-      "answer_key_in_primary_handoff": false,
-      "photo_bytes_in_primary_handoff": false
+      "primary_handoff_fields": ["source_mode", "target", "question_ids", "question_count"]
     },
     "current_routing_materialization": {
       "status": "PASS_EXACT_REVERIFIED_THIS_RUN",
       "drive_storage_id": "19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0",
-      "file_name": "みかみ塾英語問題アプリ_MyGPT連携_ROUTING_LOCK_20260820.html",
       "current_html_bytes": 3812063,
       "current_html_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "local_materialized_path": "/mnt/data/みかみ塾英語問題アプリ_MyGPT連携_ROUTING_LOCK_20260820.html",
-      "local_materialized_bytes": 3812063,
-      "local_materialized_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
       "private_knowledge_embedded": false,
-      "legacy_copy_paste": "fallback_only",
-      "old_pre_routing_lock_html_sha256": "c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f"
+      "legacy_copy_paste": "fallback_only"
     },
     "github_xz_chunk_bridge": {
-      "status": "UPLOAD_IN_PROGRESS_4_OF_22_VERIFIED",
+      "status": "UPLOAD_IN_PROGRESS_19_OF_22_VERIFIED",
       "workflow": ".github/workflows/publish-mikami-routing-from-xz-chunks.yml",
-      "workflow_commit": "3cfba625f6c338819e9a39c706b3c65ce702266b",
       "transfer_dir": "release/transfer/mikami-routing-xz",
+      "manifest": "release/transfer/mikami-routing-xz/MANIFEST.sha256",
       "progress_status_file": "release/generated/problem_app_xz_chunk_bridge_progress.status.txt",
       "xz_bytes": 130020,
       "base64_chars": 173360,
       "base64_sha256": "83e27afb5288315eb1785f40c8f658e599646e4402b84564a2326af0f713665f",
       "chunk_size_chars": 8000,
       "total_chunks": 22,
-      "uploaded_chunks": 4,
-      "next_chunk": 4,
+      "uploaded_chunks": 19,
+      "contiguous_verified_range": "0000-0018",
+      "next_chunk": 19,
       "last_chunk_chars": 5360,
       "ready_created": false,
       "publication_workflow_triggered": false,
-      "reason_for_8k_chunks": "48k and 24k command/tool output was truncated; 8k content is safely representable through the GitHub create_file text surface without ellipsis corruption.",
-      "uploaded": [
-        {"id":"0000","chars":8000,"sha256":"1e7cd86d39feac110c84a6047be0e3930635dd8e4574fa1bef65bbe1ef2e69df","git_blob_sha1":"0aa48faeed7c9b13c1140bdd30b256684c3fbd66","commit":"133bbe84ad0b42b5887198f0dc4582b957b8d264","byte_exact_verified":true},
-        {"id":"0001","chars":8000,"sha256":"74e8c0e55c737d25ff880b6765c4e341ac4044e1a9124c03f931e66d8a46bf76","git_blob_sha1":"7c0b4e7e3c1b3df9f5c85ff14425574fcf092a71","commit":"4a62a858509d89d9ab579cd4d834efabe0caf89e","byte_exact_verified":true},
-        {"id":"0002","chars":8000,"sha256":"1f29c060b395a3c4033024b2608116b3cd0bc7b0d081412fa4b682b2af247b38","git_blob_sha1":"9a130ef3560959d9696e04ab49f80ff7f41ab7ca","commit":"36e5361bc039edc6b809f3732020090f35822d1c","byte_exact_verified":true},
-        {"id":"0003","chars":8000,"sha256":"3eab6149bc5d70be4d218fb70f1543721889bc4317daea595559a6425e870aa5","git_blob_sha1":"00b3522e772d726eb83425382e0c74db157f2e66","commit":"faff8f66611b52d9f7934d22af63d03b37ac49d2","byte_exact_verified":true}
-      ],
-      "ready_required_content": {
-        "EXPECTED_HTML_BYTES": 3812063,
-        "EXPECTED_HTML_SHA256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-        "CHUNK_COUNT": 22
+      "new_batch_commit": "9745464c056459ff1c6267e1e2ffd278a6ad3810",
+      "new_batch_range": "0012-0018",
+      "new_batch_byte_exact": true,
+      "remaining_chunk_sha256": {
+        "0019": "629ff854cfb6967d69cc0b5b716c64f3eee5fce4dcc88e3b89465e04b2541063",
+        "0020": "55ce34f36fb00165897c105f006dc9fcaff6b4031394d880810177934036b869",
+        "0021": "d497a27caa5dbc08dc4cabb30b0acd354b2a5bdd38ae6fcc8d783ec6bffe21d2"
       }
     },
     "publication": {
       "priority_route": "GITHUB_PAGES_XZ_CHUNK_BRIDGE",
       "target_pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
-      "dedicated_vercel_project_id": "prj_ASDW860nSY72X0OZ93xCyvOjQB1a",
-      "dedicated_vercel_current_state": "BROKEN_52_BYTE_PATH_STRING",
-      "dedicated_vercel_repair_required_for_completion": false,
       "vocabulary_app_project_id_protected": "prj_k85GEgd76tQvHoL8YC9IDjnq553e",
       "main_root_touched": false
-    },
-    "private_registration_kit": {
-      "status": "PASS_READY",
-      "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
-      "knowledge_copy_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
-      "instructions_copy_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
-      "schema_copy_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
-      "actual_custom_gpt_registration": false
     },
     "true_runtime_gate": {
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
       "validator_ci_run_id": 32335459190,
       "required_photo_cases": 4,
-      "photo_execution_location": "ACTUAL_CUSTOM_GPT",
       "a4_orientation": "portrait",
       "a4_page_range": "1-2"
     },
     "completed_this_run": [
-      "re-read latest branch HEAD/checkpoint and followed current xz-chunk publication route instead of stale Vercel-first stage",
-      "re-downloaded exact publication artifact from Drive ID 19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0 and verified 3812063 bytes / SHA256 6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "reproduced xz -9e output at 130020 bytes and base64 stream at 173360 chars / SHA256 83e27afb5288315eb1785f40c8f658e599646e4402b84564a2326af0f713665f",
-      "changed transfer granularity from unsafe truncated 48k/24k tool output to deterministic 8000-character chunks, yielding 22 chunks with final chunk 5360 chars",
-      "uploaded chunk-0000 through chunk-0003 to GitHub",
-      "verified all four uploaded chunks are byte-exact by matching GitHub blob SHA1 to locally computed git blob SHA1",
-      "updated xz chunk progress status to 4/22, next_chunk=4",
-      "did not create READY and did not trigger publication workflow before complete transfer",
-      "kept PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY, APP_PHOTO_ANALYSIS_PRIMARY=false, APP_PHOTO_INPUT_SCOPE=legacy_fallback_only, private Knowledge unexposed, vocabulary app root/main untouched"
+      "re-read checkpoint, progress status, MANIFEST and transfer directory",
+      "re-downloaded Drive artifact and reverified exact 3812063-byte SHA256 identity",
+      "regenerated deterministic xz/base64/chunks and matched all 22 expected MANIFEST SHA256 values",
+      "detected stale checkpoint: branch already contained verified chunks 0000-0011",
+      "created exact Git blobs for chunks 0012-0018 and verified every blob SHA1 against local git hash-object",
+      "fast-forwarded one batch commit 9745464c056459ff1c6267e1e2ffd278a6ad3810 containing chunks 0012-0018",
+      "advanced contiguous verified transfer to 19/22 without creating READY",
+      "kept private Knowledge unexposed and vocabulary app root/main untouched"
     ],
-    "current_stage": "GitHub xz chunk bridge upload in progress: 4/22 chunks verified",
     "remaining_work": [
-      "upload and verify chunk-0004 through chunk-0021",
-      "create READY.txt only after all 22 chunks are verified",
-      "read release/generated/problem_app_xz_chunk_publication.status.txt and require PASS",
-      "re-read main/problem-app/index.html and verify exact problem-app artifact without changing root index.html",
-      "verify GitHub Pages problem-app URL by real HTTP/body checks, MyGPT UI/qb-data markers and no private Knowledge leak",
-      "register private Knowledge, Instructions and schema in actual My GPT when authenticated editor access is available",
-      "run four real answer-photo cases in actual My GPT",
-      "render/print actual A4 portrait 1-2 page report",
-      "run hardened runtime/evidence validators to PASS",
-      "after true runtime PASS only, finalize legacy fallback decision"
+      "upload and verify chunks 0019-0021",
+      "create READY.txt only after 22/22 exact verification",
+      "require publication workflow PASS and exact main/problem-app/index.html",
+      "verify GitHub Pages problem-app URL actual HTTP/body markers and no private Knowledge leak",
+      "register private Knowledge/Instructions/schema in actual My GPT when editor access is available",
+      "run four real answer-photo cases and A4 portrait 1-2 page render/print",
+      "run hardened runtime/evidence validators to PASS"
     ],
+    "current_stage": "GitHub xz chunk bridge: 19/22 contiguous chunks verified",
     "stopped_at": {
       "stage": "GitHub xz chunk bridge transfer",
       "status": "IN_PROGRESS_NOT_BLOCKED",
-      "detail": "Chunks 0000-0003 of 22 are uploaded and byte-exact verified. READY is intentionally absent."
+      "detail": "Chunks 0000-0018 are present and byte-exact verified. READY remains intentionally absent."
     },
-    "next_start": "re-read latest HEAD/checkpoint/progress status and transfer directory; continue from chunk-0004, never re-upload verified chunks unless their GitHub size/blob/content validation fails",
-    "next_stage": "complete chunks 0004-0021 -> READY -> publication workflow PASS -> GitHub Pages verification -> actual My GPT registration/runtime"
+    "next_start": "re-read latest HEAD/checkpoint/progress and continue at chunk-0019; do not reupload 0000-0018 unless validation fails",
+    "next_stage": "chunks 0019-0021 -> READY -> publication workflow PASS -> GitHub Pages verification -> actual My GPT registration/runtime"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
   "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_ONLY_ROUTING_LOCKED_XZ_CHUNK_TRANSFER_4_OF_22_PUBLICATION_PENDING_ACTUAL_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_ONLY_ROUTING_LOCKED_XZ_CHUNK_TRANSFER_19_OF_22_PUBLICATION_PENDING_ACTUAL_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "Publication transfer is actively progressing through the safe GitHub xz chunk bridge. Four of 22 deterministic chunks are now uploaded and byte-exact verified; next is chunk 0004. No READY/workflow trigger yet, no private Knowledge exposure, and vocabulary-app main root remains untouched."
+  "completion_note": "XZ chunk bridge advanced from the stale recorded 4/22 state to a verified contiguous 19/22. Next is chunk 0019; READY/publication have not been triggered prematurely."
 }
