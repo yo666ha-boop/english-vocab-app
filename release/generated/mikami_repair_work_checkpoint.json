@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v18",
-  "updated_at_jst": "2026-08-20T16:31:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v19",
+  "updated_at_jst": "2026-08-20T17:01:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_MERGE_OR_OVERWRITE_VOCAB_APP",
   "question_bank_completion": {
@@ -17,14 +17,11 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_ACTUAL_RUNTIME_PENDING",
+    "status": "REAL_CANONICAL_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_HARDENED_ACTUAL_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
       "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
-      "knowledge_drive_id": "1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC",
-      "instructions_drive_id": "1FjssDJB45edZ71mLvivp1uHciGHQUJ5y",
-      "schema_drive_id": "1dfhrzpCg62DlKtvMjnqEoYsaRAxTRhmt",
       "public_exposure": false
     },
     "app_unification": {
@@ -41,16 +38,10 @@
     },
     "true_runtime_gate": {
       "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
-      "gate_status_file": "release/generated/answer_gpt_true_runtime_gate.status.txt",
       "gate_version": "evidence-backed-v3-hardened",
-      "status_alignment_commit": "100aae000100ae41565d937a2113e9bf37937bb1",
       "validator": "tools/validate_mikami_answer_gpt_true_runtime.mjs",
-      "validator_hardening_commit": "192ee8e72fa767c38efa1986d35a2edb3312ba26",
       "validator_ci_run_id": 32335459190,
       "validator_ci_status": "PASS",
-      "self_test_placeholder_rejection_required": true,
-      "custom_gpt_url_validation_required": true,
-      "all_evidence_hashes_unique_required": true,
       "required_photo_cases": 4,
       "a4_orientation": "portrait",
       "a4_page_range": "1-2",
@@ -61,72 +52,66 @@
     },
     "private_registration_kit": {
       "status": "PASS_READY",
-      "status_file": "release/generated/answer_gpt_private_registration_kit.status.txt",
-      "status_commit": "4d64f3b68f87bc76645d01a8bc4079e9c839c0d4",
       "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
-      "drive_folder_name": "みかみ塾_答案分析GPT_登録セット_20260820",
-      "guide_id": "1h7-RO6PsCWwUSMaRVFWGVC4DP817NSpWtlYzZgmORnw",
       "knowledge_copy_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
       "knowledge_copy_bytes": 3028093,
       "instructions_copy_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
-      "instructions_copy_bytes": 7246,
       "schema_copy_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
-      "schema_copy_bytes": 4703,
-      "all_files_private": true,
       "all_files_shared": false,
       "custom_gpt_url_found": false
     },
-    "public_index_probe": {
-      "status": "HASH_MISMATCH_NON_CANONICAL",
-      "latest_run_id": 32341767323,
-      "latest_probe_head_sha": "abc94912a698348ed1b9261223ca9d252b5a4409",
-      "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
-      "actual_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
-      "private_canonical_exposed": false,
-      "release_policy": "PUBLIC_INDEX_MUST_NOT_BE_TREATED_AS_CANONICAL"
-    },
-    "release_readiness_gate": {
-      "status": "V3_ALIGNED_PASS_WITH_TRUE_RUNTIME_PENDING",
-      "validator": "tools/validate_mikami_answer_gpt_release_readiness.mjs",
-      "v3_alignment_validator_commit": "abc94912a698348ed1b9261223ca9d252b5a4409",
-      "status_alignment_commit": "07767b2f0d14304b9ae83f6c8f56db5a1c1277cd",
-      "workflow": ".github/workflows/test-mikami-answer-gpt-release-readiness.yml",
-      "true_runtime_gate_version_required": "evidence-backed-v3-hardened",
-      "public_index_probe_checked": true,
-      "workflow_run_verification": "PENDING_CONNECTOR_RUN_VISIBILITY"
+    "evidence_chain_gate": {
+      "status": "SELF_TEST_PASS_CI_PENDING",
+      "version": "evidence-chain-v1",
+      "manifest_template": "gpt/tests/mikami_answer_gpt_evidence_manifest.template.json",
+      "validator": "tools/validate_mikami_answer_gpt_evidence_chain.mjs",
+      "workflow": ".github/workflows/test-mikami-answer-gpt-evidence-chain.yml",
+      "status_file": "release/generated/answer_gpt_evidence_chain.status.txt",
+      "template_commit": "57a36f3c062050a2a3e7a2e1fdd5c740ca5cf003",
+      "validator_commit": "28b016907af134276e1704c0fa964207df6a8f15",
+      "workflow_commit": "d495923eb1132a0bdaa80db9c4c7dca5d014db7b",
+      "status_commit": "2838f0a329dc88f6292021c8ff986338cd6baaee",
+      "local_self_test": "PASS",
+      "negative_wrong_gpt_url_rejected": true,
+      "negative_wrong_registration_kit_rejected": true,
+      "negative_evidence_hash_collision_rejected": true,
+      "negative_a4_page_count_rejected": true,
+      "registration_kit_bound": true,
+      "ci_status": "PENDING_VISIBILITY",
+      "real_runtime_executed": false
     },
     "completed_this_run": [
-      "re-checked latest branch and confirmed actual runtime remains the only completion blocker",
-      "re-tried local/container execution and observed ClientResponseError again without treating it as task completion",
-      "searched GitHub and Google Drive for an existing Custom GPT URL and found none",
-      "created private Google Drive folder みかみ塾_答案分析GPT_登録セット_20260820",
-      "copied the exact Knowledge, formal Instructions and output schema into the private registration folder",
-      "created a one-page registration and four-photo/A4 verification guide in the same private folder",
-      "verified folder contents and copied files are not shared",
-      "recorded the private registration kit in GitHub status file",
-      "updated the hourly continuation task so it resumes from the private registration kit rather than old runtime metadata",
-      "kept main untouched and did not expose private canonical or Knowledge data"
+      "re-read latest branch HEAD and all seven required checkpoint/status files",
+      "confirmed question bank, Knowledge, real canonical unified build and evidence-backed-v3 true-runtime gate remain PASS without rerunning canonical work",
+      "confirmed available browser/tool surface still does not expose authenticated Custom GPT editor mutation controls",
+      "added an evidence-chain manifest template that binds the exact private registration-kit Drive IDs to the actual Custom GPT registration, four photo/transcript hashes, A4 PDF hash and runtime-results hash",
+      "added an evidence-chain validator that rejects wrong registration-kit IDs, non-Custom-GPT URLs/placeholders, duplicate evidence hashes, wrong case set and A4 pages outside 1-2",
+      "added GitHub Actions workflow for evidence-chain self-test",
+      "ran the validator self-test in the available local execution layer and confirmed PASS plus four negative-case rejections",
+      "recorded evidence-chain status honestly as SELF_TEST_PASS_CI_PENDING because the Actions status write-back was not yet visible",
+      "kept main untouched and private Knowledge out of the public repository"
     ],
-    "current_stage": "actual Custom GPT registration using prepared private registration kit",
+    "current_stage": "actual Custom GPT registration using prepared private registration kit; evidence chain now ready to bind real artifacts",
     "remaining_work": [
-      "open the authenticated Custom GPT editor and create/update みかみ塾 答案分析GPT",
-      "register the private Knowledge JSONL and schema and apply formal Instructions from the prepared private registration kit",
-      "capture actual Custom GPT URL and private registration evidence hash",
+      "obtain authenticated Custom GPT editor/runtime mutation access",
+      "register exact private Knowledge JSONL, formal Instructions and schema from the prepared registration kit",
+      "capture actual Custom GPT URL and registration evidence hash",
       "run the four real answer-photo cases and capture unique photo/transcript hashes",
       "render or print an actual A4 portrait 1-2 page report and capture PDF evidence hash",
-      "fill actual runtime-results JSON and run hardened validator to PASS",
+      "fill actual runtime-results JSON and evidence-chain manifest",
+      "run hardened true-runtime validator and evidence-chain validator to PASS",
       "after true runtime PASS only, remove legacy copy/paste or keep it as permanent fallback",
       "decide final release/main strategy without overwriting the completed vocabulary app"
     ],
     "stopped_at": {
       "stage": "authenticated Custom GPT editor mutation",
       "status": "BLOCKED_BY_AUTHENTICATED_EDITOR_RUNTIME_ACCESS",
-      "detail": "The private registration kit is now complete and verified not shared, but the available tool surface still does not expose authenticated Custom GPT editor mutation. A direct web open reaches the editor URL surface but does not provide authenticated mutation controls."
+      "detail": "No available connector/browser action exposes authenticated Custom GPT editor mutation. This run nevertheless advanced the repository by adding an evidence-chain gate that binds the exact private registration kit to real runtime photos, transcripts, A4 PDF and results JSON."
     },
-    "next_start": "use the prepared private Drive registration kit immediately if authenticated Custom GPT editor access becomes available; otherwise continue concrete runtime evidence/fallback/release guard work without rerunning completed canonical work",
-    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS -> legacy fallback finalization -> release/main decision"
+    "next_start": "first check whether authenticated Custom GPT editor access is available; if available perform registration immediately and fill evidence chain; otherwise verify evidence-chain CI visibility and continue concrete handoff/runtime/release hardening without rerunning completed canonical work",
+    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime PASS + evidence-chain PASS -> legacy fallback finalization -> release/main decision"
   },
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_UNIFIED_BUILD_PASS_PRIVATE_REGISTRATION_KIT_READY_EVIDENCE_CHAIN_READY_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "The private Custom GPT registration package is now prepared in one verified-private Drive folder with guide, Knowledge, Instructions and schema, and the continuation task/checkpoint point to it. The only non-simulated blocker remains authenticated Custom GPT editor access followed by four real-photo and A4 runtime tests. main remains untouched."
+  "completion_note": "This run added and locally verified a strict evidence-chain gate that prevents mixing the wrong registration kit or duplicate/fake runtime evidence. Actual authenticated Custom GPT registration and four real-photo/A4 runtime tests remain the only non-simulated completion blocker. main remains untouched."
 }
