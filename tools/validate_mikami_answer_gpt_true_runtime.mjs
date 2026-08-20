@@ -7,6 +7,7 @@ const CONTRACT = path.join(ROOT, 'gpt/tests/mikami_answer_gpt_photo_acceptance_c
 const EXPECTED_KNOWLEDGE_SHA256 = 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213';
 const EXPECTED_RECORDS = 10511;
 const SHA256_RE = /^[0-9a-f]{64}$/;
+const SELF_TEST_MARKER = 'SELF_TEST_ONLY';
 
 function fail(msg){ throw new Error(msg); }
 function readJson(p){ return JSON.parse(fs.readFileSync(p, 'utf8')); }
@@ -20,8 +21,21 @@ function assertIsoDate(value, label){
 function assertNonEmpty(value, label){
   assert(typeof value === 'string' && value.trim().length > 0, `${label} missing`);
 }
+function assertNotSelfTest(value, label, allowSelfTest){
+  if(allowSelfTest) return;
+  assert(typeof value !== 'string' || !value.includes(SELF_TEST_MARKER), `${label} contains forbidden self-test placeholder`);
+}
+function assertActualGptUrl(value, allowSelfTest){
+  assertNonEmpty(value, 'gpt_url');
+  if(allowSelfTest) return;
+  let u;
+  try { u = new URL(value); } catch { fail('gpt_url must be an absolute URL'); }
+  assert(u.protocol === 'https:', 'gpt_url must use https');
+  assert(['chatgpt.com', 'chat.openai.com'].includes(u.hostname), 'gpt_url must point to ChatGPT');
+  assert(/\/g\//.test(u.pathname), 'gpt_url must identify a Custom GPT (/g/)');
+}
 
-export function validateRuntimeResult(result, contract){
+export function validateRuntimeResult(result, contract, {allowSelfTest=false} = {}){
   assert(result && typeof result === 'object', 'runtime result must be an object');
   const reg = result.registration || {};
   assert(reg.actual_custom_gpt === true, 'registration.actual_custom_gpt must be true');
@@ -30,9 +44,10 @@ export function validateRuntimeResult(result, contract){
   assert(reg.knowledge_sha256 === EXPECTED_KNOWLEDGE_SHA256, 'knowledge SHA256 mismatch');
   assert(reg.instructions_applied === true, 'formal Instructions not confirmed');
   assert(reg.output_schema_applied === true, 'output schema not confirmed');
-  assertNonEmpty(reg.gpt_url, 'gpt_url');
+  assertActualGptUrl(reg.gpt_url, allowSelfTest);
   assertIsoDate(reg.verified_at, 'registration.verified_at');
   assertSha(reg.registration_evidence_sha256, 'registration.registration_evidence_sha256');
+  assertNotSelfTest(reg.gpt_url, 'gpt_url', allowSelfTest);
 
   const cases = result.cases || [];
   assert(Array.isArray(cases), 'cases must be an array');
@@ -43,7 +58,7 @@ export function validateRuntimeResult(result, contract){
   for(const id of ids) assert(expectedIds.has(id), `unknown runtime case: ${id}`);
 
   const byId = new Map(cases.map(c => [c.id, c]));
-  const evidenceHashes = new Set();
+  const evidenceHashes = new Set([reg.registration_evidence_sha256]);
   for(const expected of contract.cases){
     const actual = byId.get(expected.id);
     assert(actual, `missing runtime case: ${expected.id}`);
@@ -54,15 +69,17 @@ export function validateRuntimeResult(result, contract){
     assertSha(actual.photo_sha256, `${expected.id}: photo_sha256`);
     assertSha(actual.response_transcript_sha256, `${expected.id}: response_transcript_sha256`);
     assert(actual.photo_sha256 !== actual.response_transcript_sha256, `${expected.id}: photo and response hashes must differ`);
+    assert(!evidenceHashes.has(actual.photo_sha256), `${expected.id}: photo_sha256 duplicates another evidence hash`);
     evidenceHashes.add(actual.photo_sha256);
+    assert(!evidenceHashes.has(actual.response_transcript_sha256), `${expected.id}: response_transcript_sha256 duplicates another evidence hash`);
     evidenceHashes.add(actual.response_transcript_sha256);
     const behaviors = actual.behaviors || {};
     for(const key of expected.required_behaviors){
       assert(behaviors[key] === true, `${expected.id}: required behavior failed/not verified: ${key}`);
     }
     assertNonEmpty(actual.result_summary, `${expected.id}: result_summary`);
+    assertNotSelfTest(actual.result_summary, `${expected.id}: result_summary`, allowSelfTest);
   }
-  assert(evidenceHashes.size === contract.cases.length * 2, 'runtime evidence hashes must be unique across all photos and response transcripts');
 
   const a4 = result.a4_report || {};
   assert(a4.actual_render_or_print_test === true, 'A4 actual render/print test not executed');
@@ -72,7 +89,10 @@ export function validateRuntimeResult(result, contract){
     `A4 page_count must be ${contract.a4_report_acceptance.target_pages_min}-${contract.a4_report_acceptance.target_pages_max}`);
   assertIsoDate(a4.checked_at, 'A4 checked_at');
   assertSha(a4.rendered_pdf_sha256, 'A4 rendered_pdf_sha256');
+  assert(!evidenceHashes.has(a4.rendered_pdf_sha256), 'A4 rendered_pdf_sha256 duplicates another evidence hash');
+  evidenceHashes.add(a4.rendered_pdf_sha256);
   assertNonEmpty(a4.render_or_print_evidence_ref, 'A4 render_or_print_evidence_ref');
+  assertNotSelfTest(a4.render_or_print_evidence_ref, 'A4 render_or_print_evidence_ref', allowSelfTest);
   const sections = new Set(a4.sections_present || []);
   for(const section of contract.a4_report_acceptance.required_sections){
     assert(sections.has(section), `A4 missing required section: ${section}`);
@@ -90,15 +110,20 @@ export function validateRuntimeResult(result, contract){
   assert(['remove_legacy', 'permanent_fallback'].includes(finalGate.legacy_copy_paste_decision),
     'final gate: legacy copy/paste decision must be remove_legacy or permanent_fallback');
   assertSha(finalGate.evidence_manifest_sha256, 'final gate: evidence_manifest_sha256');
+  assert(!evidenceHashes.has(finalGate.evidence_manifest_sha256), 'final gate: evidence_manifest_sha256 duplicates another evidence hash');
+  evidenceHashes.add(finalGate.evidence_manifest_sha256);
   assertNonEmpty(finalGate.private_evidence_ref, 'final gate: private_evidence_ref');
+  assertNotSelfTest(finalGate.private_evidence_ref, 'final gate: private_evidence_ref', allowSelfTest);
   assert(finalGate.overall_runtime_pass === true, 'overall_runtime_pass must be true');
+
+  assert(evidenceHashes.size === contract.cases.length * 2 + 3, 'all registration/photo/transcript/PDF/manifest evidence hashes must be unique');
 
   return {
     status: 'PASS',
     cases: contract.cases.length,
     knowledge_records: EXPECTED_RECORDS,
     a4_pages: a4.page_count,
-    evidence_hashes: evidenceHashes.size + 3,
+    evidence_hashes: evidenceHashes.size,
     legacy_copy_paste_decision: finalGate.legacy_copy_paste_decision
   };
 }
@@ -113,7 +138,7 @@ function syntheticPass(contract){
       knowledge_sha256: EXPECTED_KNOWLEDGE_SHA256,
       instructions_applied: true,
       output_schema_applied: true,
-      gpt_url: 'SELF_TEST_ONLY',
+      gpt_url: SELF_TEST_MARKER,
       verified_at: '2026-08-20T12:00:00+09:00',
       registration_evidence_sha256: hash(1)
     },
@@ -126,7 +151,7 @@ function syntheticPass(contract){
       photo_sha256: hash(10 + i * 2),
       response_transcript_sha256: hash(11 + i * 2),
       behaviors: Object.fromEntries(c.required_behaviors.map(k => [k, true])),
-      result_summary: 'SELF_TEST_ONLY'
+      result_summary: SELF_TEST_MARKER
     })),
     a4_report: {
       actual_render_or_print_test: true,
@@ -134,7 +159,7 @@ function syntheticPass(contract){
       page_count: 1,
       checked_at: '2026-08-20T12:10:00+09:00',
       rendered_pdf_sha256: hash(100),
-      render_or_print_evidence_ref: 'SELF_TEST_ONLY',
+      render_or_print_evidence_ref: SELF_TEST_MARKER,
       sections_present: [...contract.a4_report_acceptance.required_sections],
       rules: Object.fromEntries(contract.a4_report_acceptance.rules.map(k => [k, true]))
     },
@@ -145,7 +170,7 @@ function syntheticPass(contract){
       school_test_separation_verified: true,
       legacy_copy_paste_decision: 'permanent_fallback',
       evidence_manifest_sha256: hash(101),
-      private_evidence_ref: 'SELF_TEST_ONLY',
+      private_evidence_ref: SELF_TEST_MARKER,
       overall_runtime_pass: true
     }
   };
@@ -156,25 +181,35 @@ function main(){
   const args = process.argv.slice(2);
   if(args.includes('--self-test')){
     const good = syntheticPass(contract);
-    validateRuntimeResult(good, contract);
+    validateRuntimeResult(good, contract, {allowSelfTest:true});
+
+    let rejected = false;
+    try { validateRuntimeResult(good, contract); } catch { rejected = true; }
+    assert(rejected, 'self-test failed: synthetic placeholder evidence was accepted as real runtime');
 
     const behaviorBad = structuredClone(good);
     behaviorBad.cases[2].behaviors.unreadable_text_is_not_guessed = false;
-    let rejected = false;
-    try { validateRuntimeResult(behaviorBad, contract); } catch { rejected = true; }
+    rejected = false;
+    try { validateRuntimeResult(behaviorBad, contract, {allowSelfTest:true}); } catch { rejected = true; }
     assert(rejected, 'self-test failed: invalid behavior was accepted');
 
     const evidenceBad = structuredClone(good);
     evidenceBad.cases[0].photo_sha256 = '';
     rejected = false;
-    try { validateRuntimeResult(evidenceBad, contract); } catch { rejected = true; }
+    try { validateRuntimeResult(evidenceBad, contract, {allowSelfTest:true}); } catch { rejected = true; }
     assert(rejected, 'self-test failed: missing runtime evidence hash was accepted');
 
     const duplicateBad = structuredClone(good);
     duplicateBad.cases[1].id = duplicateBad.cases[0].id;
     rejected = false;
-    try { validateRuntimeResult(duplicateBad, contract); } catch { rejected = true; }
+    try { validateRuntimeResult(duplicateBad, contract, {allowSelfTest:true}); } catch { rejected = true; }
     assert(rejected, 'self-test failed: duplicate case id was accepted');
+
+    const duplicateHashBad = structuredClone(good);
+    duplicateHashBad.cases[1].photo_sha256 = duplicateHashBad.cases[0].photo_sha256;
+    rejected = false;
+    try { validateRuntimeResult(duplicateHashBad, contract, {allowSelfTest:true}); } catch { rejected = true; }
+    assert(rejected, 'self-test failed: duplicate evidence hash was accepted');
 
     console.log('PASS_TRUE_RUNTIME_GATE_SELF_TEST');
     return;
