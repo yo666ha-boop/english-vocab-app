@@ -1,0 +1,131 @@
+name: Probe Exact Canonical Drive ID + Build Unified App
+
+on:
+  push:
+    branches:
+      - mikami-canonical-repair
+    paths:
+      - '.github/workflows/probe-and-build-mikami-unified-from-drive-id.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Probe direct Drive-ID retrieval without publishing source
+        id: probe
+        shell: bash
+        run: |
+          set -u
+          FILE_ID='1MoArYnD3Npy-LePUrH8a82lg4uKyhND4'
+          EXPECTED_BYTES='4035500'
+          EXPECTED_SHA='03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+          rm -f /tmp/mikami-canonical.html
+
+          curl -fL --retry 1 --connect-timeout 20 --max-time 120 \
+            "https://drive.usercontent.google.com/download?id=${FILE_ID}&export=download&confirm=t" \
+            -o /tmp/mikami-canonical.html || true
+
+          if ! test -s /tmp/mikami-canonical.html; then
+            curl -fL --retry 1 --connect-timeout 20 --max-time 120 \
+              "https://drive.google.com/uc?export=download&id=${FILE_ID}&confirm=t" \
+              -o /tmp/mikami-canonical.html || true
+          fi
+
+          if test -s /tmp/mikami-canonical.html; then
+            BYTES=$(wc -c < /tmp/mikami-canonical.html | tr -d ' ')
+            SHA=$(sha256sum /tmp/mikami-canonical.html | awk '{print $1}')
+          else
+            BYTES=0
+            SHA=''
+          fi
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+          if test "$BYTES" = "$EXPECTED_BYTES" && test "$SHA" = "$EXPECTED_SHA"; then
+            echo 'pass=true' >> "$GITHUB_OUTPUT"
+            echo 'DIRECT_DRIVE_ID_EXACT_MATCH=PASS'
+          else
+            echo 'pass=false' >> "$GITHUB_OUTPUT"
+            rm -f /tmp/mikami-canonical.html
+            echo 'DIRECT_DRIVE_ID_EXACT_MATCH=FAIL'
+          fi
+
+      - name: Build unified exact-canonical package
+        if: steps.probe.outputs.pass == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/final
+          OUT='dist/final/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html'
+          node tools/run_mikami_pipeline_v4_answer_gpt.mjs /tmp/mikami-canonical.html "$OUT"
+          test -s "$OUT"
+          test -s "$OUT.pipeline-v4.audit.json"
+          test -s "$OUT.final-audit.json"
+          test -s "$OUT.answer-gpt-integration.audit.json"
+          grep -q '"status": "PASS"' "$OUT.answer-gpt-integration.audit.json"
+          grep -q '"qb_data_unchanged_after_handoff_patch": true' "$OUT.answer-gpt-integration.audit.json"
+          grep -q '"private_knowledge_embedded": false' "$OUT.answer-gpt-integration.audit.json"
+          cp release/README_FINALIZE.txt dist/final/README_修正内容.txt
+          cd dist/final
+          zip -9 '../みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.pipeline-v4.audit.json' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.final-audit.json' \
+            'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.html.answer-gpt-integration.audit.json' \
+            'README_修正内容.txt'
+
+      - name: Record probe/build status safely
+        if: always()
+        shell: bash
+        env:
+          PROBE_PASS: ${{ steps.probe.outputs.pass }}
+          PROBE_BYTES: ${{ steps.probe.outputs.bytes }}
+          PROBE_SHA: ${{ steps.probe.outputs.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          ZIP='dist/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip'
+          if test "$PROBE_PASS" = 'true' && test -s "$ZIP"; then
+            BUILD_STATUS='PASS'
+            ZIP_SHA=$(sha256sum "$ZIP" | awk '{print $1}')
+          else
+            BUILD_STATUS='NOT_BUILT'
+            ZIP_SHA=''
+          fi
+          {
+            echo "STATUS=$BUILD_STATUS"
+            echo "RUN_ID=$GITHUB_RUN_ID"
+            echo "SOURCE_SHA=$GITHUB_SHA"
+            echo "DIRECT_DRIVE_ID_EXACT_MATCH=$PROBE_PASS"
+            echo "PROBED_BYTES=$PROBE_BYTES"
+            echo "PROBED_SHA=$PROBE_SHA"
+            echo 'EXPECTED_BYTES=4035500'
+            echo 'EXPECTED_SHA256=03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+            echo "PACKAGE_SHA256=$ZIP_SHA"
+            echo 'SOURCE_PUBLISHED=false'
+          } > release/generated/answer_gpt_direct_drive_probe.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/answer_gpt_direct_drive_probe.status.txt
+          git commit -m 'record direct Drive-ID canonical probe result' || exit 0
+          git pull --rebase origin mikami-canonical-repair
+          git push origin HEAD:mikami-canonical-repair
+
+      - name: Upload unified package
+        if: steps.probe.outputs.pass == 'true' && success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-english-question-app-unified-from-exact-drive-20260820
+          path: dist/みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip
+          if-no-files-found: error
