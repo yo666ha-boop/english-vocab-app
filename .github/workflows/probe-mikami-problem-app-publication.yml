@@ -1,0 +1,67 @@
+name: Probe Mikami Problem App Publication
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/probe_mikami_problem_app_publication.mjs'
+      - '.github/workflows/probe-mikami-problem-app-publication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+
+      - name: Probe production body without accepting broken deployment
+        id: probe
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node tools/probe_mikami_problem_app_publication.mjs > /tmp/probe.json 2>&1
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          cat /tmp/probe.json
+
+      - name: Record exact publication probe status
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          STATUS=FAIL
+          if [ "${{ steps.probe.outputs.exit }}" = "0" ]; then STATUS=PASS; fi
+          node - <<'NODE'
+          const fs=require('fs');
+          let p={}; try { p=JSON.parse(fs.readFileSync('/tmp/probe.json','utf8')); } catch(e) { p={error:fs.readFileSync('/tmp/probe.json','utf8')}; }
+          const status=process.env.PROBE_STATUS;
+          const lines=[
+            `STATUS=${status}`,
+            `RUN_ID=${process.env.GITHUB_RUN_ID}`,
+            `TESTED_HEAD_SHA=${process.env.GITHUB_SHA}`,
+            `URL=${p.url||'https://mikami-juku-english-problem-app.vercel.app/'}`,
+            `HTTP_STATUS=${p.httpStatus??''}`,
+            `RESPONSE_BYTES=${p.bytes??''}`,
+            `RESPONSE_SHA256=${p.sha256??''}`,
+            `EXPECTED_BYTES=${p.expectedBytes??3812063}`,
+            `EXPECTED_SHA256=${p.expectedSha||'6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81'}`,
+            `PATH_STRING_ONLY=${p.pathStringOnly??''}`,
+            `PRIVATE_KNOWLEDGE_LEAK=${p.privateKnowledgeLeak??''}`,
+            `PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY`,
+            `APP_PHOTO_ANALYSIS_PRIMARY=false`,
+            `MAIN_TOUCHED=false`
+          ];
+          fs.writeFileSync('release/generated/problem_app_publication_probe.status.txt', lines.join('\n')+'\n');
+          NODE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/problem_app_publication_probe.status.txt
+          if ! git diff --cached --quiet; then
+            git commit -m 'record problem app publication probe status'
+            git push origin HEAD:mikami-canonical-repair
+          fi
+        env:
+          PROBE_STATUS: ${{ steps.probe.outputs.exit == '0' && 'PASS' || 'FAIL' }}
