@@ -28,7 +28,7 @@ jobs:
           cat > release/generated/answer_gpt_evidence_chain.status.txt <<EOF
           STATUS=PASS
           UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          GATE_VERSION=evidence-chain-v1
+          GATE_VERSION=evidence-chain-v2
           CI_RUN_ID=${GITHUB_RUN_ID}
           CI_RUN_ATTEMPT=${GITHUB_RUN_ATTEMPT}
           TESTED_HEAD_SHA=${GITHUB_SHA}
@@ -40,9 +40,21 @@ jobs:
           EXPECTED_KNOWLEDGE_SHA256=be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213
           REGISTRATION_KIT_BOUND=true
           REQUIRED_PHOTO_CASES=4
+          RUNTIME_RESULTS_FILE_REQUIRED=true
+          RUNTIME_RESULTS_FILE_SHA_RECOMPUTED=true
+          NON_CIRCULAR_MANIFEST_BINDING_REQUIRED=true
+          BINDING_ALGORITHM=sha256-stable-json-excluding-runtime-results-sha-and-binding-digest
+          RUNTIME_FINAL_GATE_BINDING_DIGEST_MATCH_REQUIRED=true
+          MANIFEST_RUNTIME_REGISTRATION_CROSSCHECK_REQUIRED=true
+          MANIFEST_RUNTIME_PHOTO_HASH_CROSSCHECK_REQUIRED=true
+          MANIFEST_RUNTIME_TRANSCRIPT_HASH_CROSSCHECK_REQUIRED=true
+          MANIFEST_RUNTIME_EXECUTION_TIME_CROSSCHECK_REQUIRED=true
+          MANIFEST_RUNTIME_A4_CROSSCHECK_REQUIRED=true
+          RUNTIME_OVERALL_PASS_REQUIRED=true
           EVIDENCE_SHA_COLLISION_REJECTED=true
           WRONG_REGISTRATION_KIT_REJECTED=true
           PLACEHOLDER_GPT_URL_REJECTED=true
+          NEGATIVE_CASES_REJECTED=8
           A4_PAGE_RANGE=1-2
           A4_ORIENTATION=portrait
           REAL_RUNTIME_EXECUTED=false
@@ -54,5 +66,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release/generated/answer_gpt_evidence_chain.status.txt
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'record answer GPT evidence chain CI status'
+          git commit -m 'record answer GPT evidence chain v2 CI status'
           git push
