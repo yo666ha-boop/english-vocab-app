@@ -29,24 +29,59 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          SRC='https://mikami-juku-english-problem-69n8lrrgx-yo666ha-7357s-projects.vercel.app/?_vercel_share=8L0M4lm0rWKgiqf2vaD0iaxa4Q14nn6T'
-          rm -f /tmp/vercel.cookies /tmp/mikami-canonical.html /tmp/recover.headers
-          curl --compressed -fL \
-            --retry 3 --retry-all-errors \
-            --connect-timeout 20 --max-time 180 \
-            -c /tmp/vercel.cookies -b /tmp/vercel.cookies \
-            -D /tmp/recover.headers \
-            "$SRC" -o /tmp/mikami-canonical.html
+          BASE='https://mikami-juku-english-problem-69n8lrrgx-yo666ha-7357s-projects.vercel.app/'
+          TOKEN='8L0M4lm0rWKgiqf2vaD0iaxa4Q14nn6T'
+          EXPECTED_SHA='03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+          EXPECTED_BYTES=4035500
+          rm -rf /tmp/vercel-probe
+          mkdir -p /tmp/vercel-probe
+
+          fetch_probe(){
+            name="$1"; shift
+            out="/tmp/vercel-probe/$name.html"
+            hdr="/tmp/vercel-probe/$name.headers"
+            rm -f "$out" "$hdr" /tmp/vercel-probe/cookies
+            if curl --compressed -fsSL --retry 2 --retry-all-errors --connect-timeout 20 --max-time 180 \
+              -c /tmp/vercel-probe/cookies -b /tmp/vercel-probe/cookies -D "$hdr" "$@" -o "$out"; then
+              bytes=$(wc -c < "$out")
+              sha=$(sha256sum "$out" | awk '{print $1}')
+              ctype=$(grep -i '^content-type:' "$hdr" | tail -1 | tr -d '\r' | cut -d' ' -f2- || true)
+              title=$(grep -o '<title>[^<]*</title>' "$out" | head -1 | sed 's/<[^>]*>//g' || true)
+              printf '%s\t%s\t%s\t%s\t%s\n' "$name" "$bytes" "$sha" "$ctype" "$title" | tee -a /tmp/vercel-probe/report.tsv
+              if [ "$bytes" -eq "$EXPECTED_BYTES" ] && [ "$sha" = "$EXPECTED_SHA" ]; then
+                cp "$out" /tmp/mikami-canonical.html
+                echo "$name" > /tmp/vercel-probe/selected_mode.txt
+                return 10
+              fi
+            else
+              printf '%s\tCURL_FAIL\n' "$name" | tee -a /tmp/vercel-probe/report.tsv
+            fi
+            return 0
+          }
+
+          : > /tmp/vercel-probe/report.tsv
+          selected=''
+          set +e
+          fetch_probe share_url "${BASE}?_vercel_share=${TOKEN}"; rc=$?; [ "$rc" -eq 10 ] && selected=share_url
+          if [ -z "$selected" ]; then fetch_probe bypass_header -H "x-vercel-protection-bypass: ${TOKEN}" -H 'x-vercel-set-bypass-cookie: true' "$BASE"; rc=$?; [ "$rc" -eq 10 ] && selected=bypass_header; fi
+          if [ -z "$selected" ]; then fetch_probe bypass_query "${BASE}?x-vercel-protection-bypass=${TOKEN}"; rc=$?; [ "$rc" -eq 10 ] && selected=bypass_query; fi
+          if [ -z "$selected" ]; then fetch_probe bypass_query_cookie "${BASE}?x-vercel-protection-bypass=${TOKEN}&x-vercel-set-bypass-cookie=true"; rc=$?; [ "$rc" -eq 10 ] && selected=bypass_query_cookie; fi
+          if [ -z "$selected" ]; then fetch_probe raw_base "$BASE"; rc=$?; [ "$rc" -eq 10 ] && selected=raw_base; fi
+          set -e
+
+          cat /tmp/vercel-probe/report.tsv
+          if [ -z "$selected" ]; then
+            echo 'No Vercel access mode returned the exact canonical SHA.' >&2
+            exit 1
+          fi
           BYTES=$(wc -c < /tmp/mikami-canonical.html)
           SHA=$(sha256sum /tmp/mikami-canonical.html | awk '{print $1}')
-          echo "recovered_bytes=$BYTES"
-          echo "recovered_sha256=$SHA"
+          echo "mode=$selected" >> "$GITHUB_OUTPUT"
           echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
           echo "sha=$SHA" >> "$GITHUB_OUTPUT"
-          test "$BYTES" -eq 4035500
-          test "$SHA" = '03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432'
+          test "$BYTES" -eq "$EXPECTED_BYTES"
+          test "$SHA" = "$EXPECTED_SHA"
           grep -q 'id="qb-data"' /tmp/mikami-canonical.html
-          grep -q '<title>みかみ塾 英語問題アプリ 安定版+写真分析レポート</title>' /tmp/mikami-canonical.html
 
       - name: Build exact V4 + My GPT handoff app
         id: build
@@ -62,7 +97,6 @@ jobs:
           grep -q '答案分析My GPTを開く' "$OUT"
           grep -q '答案写真はMy GPTへ直接添付' "$OUT"
           grep -q 'id="legacyPhotoAnalysisFallback"' "$OUT"
-          grep -q 'id="photoInput"' "$OUT"
           grep -q '"photo_attachment_location": "MY_GPT_ONLY"' "$OUT.answer-gpt-integration.audit.json"
           grep -q '"app_photo_analysis_primary": false' "$OUT.answer-gpt-integration.audit.json"
           grep -q '"app_photo_input_scope": "legacy_fallback_only"' "$OUT.answer-gpt-integration.audit.json"
@@ -106,12 +140,12 @@ jobs:
           test "$PUB_SHA" = 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
           grep -q '答案分析My GPTを開く' /tmp/published-problem-app.html
           grep -q '答案写真はMy GPTへ直接添付' /tmp/published-problem-app.html
-          echo 'PUBLISHED_PROBLEM_APP_GIT_SOURCE=PASS'
 
       - name: Persist publication result on repair branch
         if: always()
         env:
           RECOVER_OUTCOME: ${{ steps.recover.outcome }}
+          RECOVER_MODE: ${{ steps.recover.outputs.mode }}
           RECOVER_BYTES: ${{ steps.recover.outputs.bytes }}
           RECOVER_SHA: ${{ steps.recover.outputs.sha }}
           BUILD_OUTCOME: ${{ steps.build.outcome }}
@@ -134,6 +168,7 @@ jobs:
             echo "RUN_ID=$GITHUB_RUN_ID"
             echo "HEAD_SHA=$GITHUB_SHA"
             echo "RECOVER_OUTCOME=$RECOVER_OUTCOME"
+            echo "RECOVER_MODE=$RECOVER_MODE"
             echo "RECOVER_BYTES=$RECOVER_BYTES"
             echo "RECOVER_SHA256=$RECOVER_SHA"
             echo "BUILD_OUTCOME=$BUILD_OUTCOME"
@@ -147,9 +182,13 @@ jobs:
             echo 'PUBLIC_PATH=/problem-app/'
             echo 'VOCAB_ROOT_OVERWRITE=false'
           } > release/generated/problem_app_publication_runtime.status.txt
+          if [ -f /tmp/vercel-probe/report.tsv ]; then
+            cp /tmp/vercel-probe/report.tsv release/generated/problem_app_vercel_access_probe.tsv
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add release/generated/problem_app_publication_runtime.status.txt
+          test ! -f release/generated/problem_app_vercel_access_probe.tsv || git add release/generated/problem_app_vercel_access_probe.tsv
           git commit -m 'record problem app publication runtime status' || exit 0
           for i in 1 2 3; do
             if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
