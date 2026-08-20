@@ -1,5 +1,9 @@
 {
-  "schema_version": "mikami-answer-gpt-evidence-chain-v1",
+  "schema_version": "mikami-answer-gpt-evidence-chain-v2",
+  "binding": {
+    "algorithm": "sha256-stable-json-excluding-runtime-results-sha-and-binding-digest",
+    "binding_digest_sha256": ""
+  },
   "registration_kit": {
     "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
     "knowledge_file_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
