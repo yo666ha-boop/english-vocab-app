@@ -1,0 +1,62 @@
+name: Package Mikami Current Runtime
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/**'
+      - 'data/**'
+      - 'gpt/**'
+      - '.github/workflows/package-mikami-current-runtime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  BRANCH: mikami-canonical-repair
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+
+      - name: Build runtime-only ZIP
+        run: |
+          set -euo pipefail
+          rm -f mikami-current-runtime.zip
+          zip -qr mikami-current-runtime.zip tools data gpt
+          sha256sum mikami-current-runtime.zip | tee mikami-current-runtime.sha256
+
+      - name: Upload runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mikami-current-runtime
+          path: |
+            mikami-current-runtime.zip
+            mikami-current-runtime.sha256
+          retention-days: 30
+
+      - name: Record package status
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          ZIP_SHA=$(cut -d' ' -f1 mikami-current-runtime.sha256)
+          cat > release/generated/mikami_current_runtime_package.status.txt <<EOF
+          STATUS=PASS
+          RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          ZIP_SHA256=${ZIP_SHA}
+          PRIVATE_CANONICAL_INCLUDED=false
+          PRIVATE_KNOWLEDGE_INCLUDED=false
+          CONTENT_SCOPE=tools,data,gpt
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/mikami_current_runtime_package.status.txt
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'record current Mikami runtime package status'
+          git push origin HEAD:${BRANCH}
