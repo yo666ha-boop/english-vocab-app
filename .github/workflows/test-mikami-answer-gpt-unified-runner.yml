@@ -1,0 +1,79 @@
+name: Test Mikami Unified V4 + Answer GPT Runner
+
+on:
+  push:
+    branches:
+      - mikami-canonical-repair
+    paths:
+      - 'tools/run_mikami_pipeline_v4_answer_gpt.mjs'
+      - 'tools/patch_mikami_answer_gpt_handoff.mjs'
+      - '.github/workflows/finalize-mikami-canonical-drive.yml'
+      - '.github/workflows/test-mikami-answer-gpt-unified-runner.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Syntax checks
+        run: |
+          node --check tools/patch_mikami_answer_gpt_handoff.mjs
+          node --check tools/run_mikami_pipeline_v4_answer_gpt.mjs
+
+      - name: Handoff patch regression
+        run: node tools/patch_mikami_answer_gpt_handoff.mjs --self-test
+
+      - name: Existing V4 repair integration regression
+        run: node tools/test_pipeline_v4_integration.mjs
+
+      - name: Unified wiring safety contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          F='.github/workflows/finalize-mikami-canonical-drive.yml'
+          R='tools/run_mikami_pipeline_v4_answer_gpt.mjs'
+          grep -q 'run_mikami_pipeline_v4_answer_gpt.mjs' "$F"
+          grep -q 'みかみ塾英語問題アプリ_正本修正版_MyGPT連携_20260820.zip' "$F"
+          grep -q 'qb_data_unchanged_after_handoff_patch' "$F"
+          grep -q 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$F"
+          grep -q 'QUESTION_BANK_CHANGED=false' "$F"
+          grep -q 'JSON.stringify(beforeQb) === JSON.stringify(afterQb)' "$R"
+          grep -q 'audit_final_canonical.mjs' "$R"
+          grep -q 'question_id_order_preserved: true' "$R"
+          grep -q 'private_knowledge_embedded: false' "$R"
+          ! grep -q '1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC' "$F"
+          echo PASS_UNIFIED_ANSWER_GPT_WIRING
+
+      - name: Record durable PASS
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release/generated
+          {
+            echo 'STATUS=PASS'
+            echo "SOURCE_SHA=$GITHUB_SHA"
+            echo 'V4_REGRESSION=PASS'
+            echo 'HANDOFF_PATCH_SELF_TEST=PASS'
+            echo 'UNIFIED_RUNNER_SYNTAX=PASS'
+            echo 'FINALIZE_WIRING=PASS'
+            echo 'QB_DATA_PRESERVATION_CHECK=ENFORCED'
+            echo 'FINAL_CANONICAL_AUDIT=ENFORCED'
+            echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
+            echo 'REAL_CANONICAL_UNIFIED_RUN=PENDING_AUTHENTICATED_SOURCE'
+          } > release/generated/answer_gpt_unified_runner.status.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- release/generated/answer_gpt_unified_runner.status.txt
+          git commit -m 'record unified V4 + My GPT runner PASS' || exit 0
+          git pull --rebase origin mikami-canonical-repair
+          git push origin HEAD:mikami-canonical-repair
