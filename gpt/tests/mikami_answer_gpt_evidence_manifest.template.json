@@ -10,7 +10,9 @@
     "knowledge_records": 10511,
     "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
     "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
-    "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE"
+    "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
+    "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
+    "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b"
   },
   "custom_gpt": {
     "gpt_url": "",
