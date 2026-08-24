@@ -13,6 +13,7 @@ on:
       - 'release/generated/answer_gpt_true_runtime_gate.status.txt'
       - 'release/generated/answer_gpt_evidence_chain.status.txt'
       - 'release/generated/answer_gpt_registration_asset_identity.status.txt'
+      - 'release/generated/answer_gpt_runtime_evidence_finalizer.status.txt'
       - 'release/generated/problem_app_handoff_v2_build_diagnostic.status.txt'
       - 'release/generated/problem_app_handoff_v2_publication.status.txt'
       - 'release/generated/answer_gpt_public_index_probe.status.txt'
@@ -33,14 +34,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Cross-check answer GPT release state
+      - name: Cross-check answer GPT release state and runtime finalizer prep
         id: validate
         shell: bash
         run: |
           set +e
           node tools/validate_mikami_answer_gpt_release_readiness.mjs > /tmp/release-readiness.out 2>&1
           CODE=$?
+          F='release/generated/answer_gpt_runtime_evidence_finalizer.status.txt'
+          if test "$CODE" = 0; then
+            grep -qx 'STATUS=PASS' "$F" || CODE=21
+            grep -qx 'ACTUAL_REGISTRATION_CONFIRMATION_REQUIRED=true' "$F" || CODE=22
+            grep -qx 'EXACT_REGISTRATION_ASSET_IDENTITY_REQUIRED=true' "$F" || CODE=23
+            grep -qx 'EXACT_FOUR_CASE_BEHAVIORS_REQUIRED=true' "$F" || CODE=24
+            grep -qx 'ACTUAL_PHOTO_ATTACHMENT_CONFIRMATION_REQUIRED=true' "$F" || CODE=25
+            grep -qx 'A4_ACTUAL_RENDER_PRINT_CONFIRMATION_REQUIRED=true' "$F" || CODE=26
+            grep -qx 'NON_CIRCULAR_EVIDENCE_BINDING_ASSEMBLED=true' "$F" || CODE=27
+            grep -qx 'TRUE_RUNTIME_VALIDATOR_IN_FINALIZER=true' "$F" || CODE=28
+            grep -qx 'EVIDENCE_CHAIN_VALIDATOR_IN_FINALIZER=true' "$F" || CODE=29
+            grep -qx 'SYNTHETIC_SELF_TEST_ONLY=true' "$F" || CODE=30
+            grep -qx 'REAL_RUNTIME_EXECUTED=false' "$F" || CODE=31
+          fi
           cat /tmp/release-readiness.out
+          echo "RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
           echo "code=$CODE" >> "$GITHUB_OUTPUT"
           exit 0
       - name: Record durable readiness status
@@ -69,6 +85,8 @@ jobs:
           GITHUB_PAGES_EXACT_V2_REQUIRED=true
           REGISTRATION_ASSET_IDENTITY_REQUIRED=true
           EVIDENCE_CHAIN_V2_REQUIRED=true
+          RUNTIME_EVIDENCE_FINALIZER_PREP_REQUIRED=true
+          RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "${VALIDATE_CODE}" = 0 ] && echo PASS || echo FAIL)
           TRUE_RUNTIME_STILL_REQUIRED=true
           EXPECTED_PAGES_BYTES=3812209
           EXPECTED_PAGES_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
