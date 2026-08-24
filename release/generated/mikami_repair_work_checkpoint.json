@@ -1,20 +1,18 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v32",
-  "updated_at_jst": "2026-08-24T21:25:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v33",
+  "updated_at_jst": "2026-08-24T23:11:14+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_branch_head_before_checkpoint": "eed05671236299ae567a0cb1261364839900863f",
+  "observed_branch_head_before_checkpoint": "8a599c02a9eeab0573c8c3fc1c3f408bd26d91a9",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
-    "canonical_drive_id": "1MoArYnD3Npy-LePUrH8a82lg4uKyhND4",
-    "source_bytes": 4035500,
-    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
-    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
     "question_count": 10513,
     "english_question_count": 10511,
     "unique_question_ids": 10513,
     "final_quality_errors": 0,
-    "rework_required": false
+    "rework_required": false,
+    "source_sha256": "03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432",
+    "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f"
   },
   "answer_analysis_gpt_phase": {
     "status": "ALL_PRE_RUNTIME_GATES_PASS_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTOS_PENDING",
@@ -32,45 +30,36 @@
       "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
       "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
       "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
-      "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b",
-      "identity_ci_run_id": 32718769797,
-      "identity_ci_status": "PASS"
+      "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b"
     },
     "routing_and_publication": {
-      "status": "PASS_EXACT_V2",
+      "status": "PASS_EXACT_V3",
       "photo_attachment_location": "MY_GPT_ONLY",
       "app_photo_analysis_primary": false,
       "app_photo_input_scope": "legacy_fallback_only",
       "custom_gpt_url_hosts": ["chatgpt.com", "chat.openai.com"],
       "custom_gpt_url_path": "/g/<id>",
       "arbitrary_https_url_rejected": true,
-      "publication_run_id": 32721155600,
-      "main_publish_commit": "831dc3e592a1f2b45fb586c9d9e5632f696882f0",
-      "problem_app_bytes": 3812209,
-      "problem_app_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
+      "publication_run_id": 32729121659,
+      "main_publish_commit": "442c45536e83a87ee0f785a57b2abf1586f0a820",
+      "problem_app_bytes": 3812347,
+      "problem_app_sha256": "2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0",
       "pages_http": 200,
-      "pages_bytes": 3812209,
-      "pages_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
-      "pages_last_exact_probe_jst": "2026-08-24T21:11:40+09:00",
-      "pages_probe_this_run": "CONTAINER_DNS_UNAVAILABLE; main HEAD unchanged at exact publish commit",
+      "pages_bytes": 3812347,
+      "pages_sha256": "2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0",
+      "pages_exact_v3_proof": "PASS",
+      "pages_probe_this_run": "DIRECT_CONTAINER_DNS_UNAVAILABLE; latest exact workflow proof remains PASS and main HEAD equals v3 publish commit",
       "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_vocabulary_app_unchanged": true,
-      "private_knowledge_embedded": false
-    },
-    "composed_v2_proof": {
-      "status": "PASS",
-      "diagnostic_run_id": 32719756428,
-      "qb_data_sha_before": "c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee",
-      "qb_data_sha_after": "c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee",
-      "qb_data_unchanged": true
+      "private_knowledge_embedded": false,
+      "noopener_false_failure_fixed": true
     },
     "release_readiness": {
       "status": "PASS_TRUE_RUNTIME_PENDING",
-      "ci_run_id": 32725361262,
-      "private_canonical_v4_proof": "PASS",
-      "handoff_v2_composed_proof": "PASS",
-      "github_pages_exact_v2": "PASS",
+      "ci_run_id": 32729748741,
+      "current_problem_app_v3": "PASS",
+      "problem_app_ui_contract": "PASS",
       "registration_asset_identity": "PASS",
       "evidence_chain_v2": "PASS",
       "runtime_evidence_finalizer_prep": "PASS",
@@ -78,11 +67,6 @@
     },
     "runtime_evidence_finalizer": {
       "status": "PASS_SELF_TEST_ONLY_REAL_RUNTIME_PENDING",
-      "ci_run_id": 32725279639,
-      "input_validator_self_test": "PASS",
-      "input_negative_cases_rejected": 6,
-      "assembler_self_test": "PASS",
-      "finalizer_self_test": "PASS",
       "synthetic_self_test_only": true,
       "real_runtime_executed": false,
       "input_template": "gpt/tests/mikami_answer_gpt_runtime_evidence_input.template.json",
@@ -95,53 +79,37 @@
       "status": "PASS_PRIVATE_STORAGE_READY",
       "root_folder_id": "16Kdshw0reVkmqeNaYvI_y5PsXKsQJdhh",
       "shared": false,
-      "registration_folder_id": "1Co8ESJex7DQieSqy-Zu8v_V07J-uL1Gh",
       "correct_original_folder_id": "14fh-cpdbSGB0lMYFdhLphG_dYrt7vrIt",
       "multi_category_errors_folder_id": "1vQf0Wzuo6w4wtbJGSXtYhUHH7sT9ANlT",
       "unreadable_answer_folder_id": "18z2LLcnsI7YPUMm9128mntrrZKp7Jt5M",
       "school_test_folder_id": "1IGGKQsHh65jBR3hWAnND32vw0gGkJ9k4",
       "a4_report_folder_id": "1cv2CXh99k6kqv2SlpDqRj4dKRGQP_8no",
       "finalized_audit_folder_id": "13vQfNrj8uUUb00G4nMoc7T11yPIW9kOm",
-      "real_runtime_evidence_present": false,
-      "status_file": "release/generated/answer_gpt_private_runtime_evidence_storage.status.txt"
+      "real_runtime_evidence_present": false
     },
     "runtime_materials_inventory": {
       "status": "INCOMPLETE",
       "drive_search_executed": true,
-      "prior_interaction_search_executed": true,
       "actual_custom_gpt_url_found": false,
+      "correct_original_folder_rechecked_this_run": "EMPTY",
       "validated_correct_original_photo_found": false,
-      "validated_multi_category_errors_photo_found": false,
-      "validated_unreadable_answer_photo_found": false,
-      "validated_school_test_answer_photo_found": false,
       "real_four_case_photo_set_ready": false,
-      "rejected_candidate_drive_id": "1GCpnmSmRa26Tt5RkbtDBbznPqN9w_O73",
-      "rejected_candidate_reason": "range_sheet_or_test_schedule_not_student_answer_sheet",
-      "synthetic_or_generated_images_must_not_count_as_real_runtime": true,
-      "status_file": "release/generated/answer_gpt_runtime_materials_inventory.status.txt"
+      "synthetic_or_generated_images_must_not_count_as_real_runtime": true
     },
     "authenticated_custom_gpt_access": {
       "status": "UNAVAILABLE_IN_CURRENT_RUNTIME",
       "actual_custom_gpt_url_found": false,
       "authenticated_editor_session_available": false,
       "custom_gpt_editor_write_connector_available": false,
-      "browser_automation_plugin_available": false,
+      "plugin_catalog_custom_gpt_editor_found": false,
       "agent_browser_cli_available": false,
+      "playwright_available": true,
+      "chromium_available": true,
       "saved_browser_auth_state_found": false,
+      "playwright_editor_probe_result": "ERR_BLOCKED_BY_ADMINISTRATOR",
       "public_editor_url_reachable_via_web_fetch": true,
       "public_editor_url": "https://chatgpt.com/gpts/editor",
-      "plugin_catalog_custom_gpt_editor_found": false,
       "registration_claimed": false
-    },
-    "local_execution_layer": {
-      "status": "PARTIALLY_RECOVERED",
-      "canonical_drive_fetch": "PASS",
-      "canonical_local_bytes": 4035500,
-      "container_exec_available": true,
-      "container_external_dns_available": false,
-      "git_clone_error": "Could not resolve host: github.com",
-      "problem_bank_rerun_needed": false,
-      "safe_signed_drive_url_for_github_actions_available": false
     },
     "true_runtime": {
       "status": "PENDING_EXTERNAL_ACTUAL_RUNTIME",
@@ -153,39 +121,41 @@
       "legacy_finalization": "PENDING_TRUE_RUNTIME"
     },
     "completed_this_run": [
-      "read GitHub actual checkpoint v31 and actual branch HEAD before doing any work; did not redo completed problem-bank/publication gates",
-      "confirmed main HEAD remains exact problem-app publish commit 831dc3e592a1f2b45fb586c9d9e5632f696882f0",
-      "checked the currently exposed connected/plugin surface for a Custom GPT editor path; no Custom GPT editor plugin/connector exists",
-      "checked the installed browser-automation route; agent-browser skill documentation exists but no executable agent-browser CLI or saved browser auth state is exposed in this runtime",
-      "confirmed the public ChatGPT GPT editor URL itself is web-reachable, but no authenticated editor session/write surface is exposed, so registration was not falsely claimed",
-      "attempted a direct Pages HTTP probe from the execution container; external DNS is unavailable in this runtime, so the prior exact Pages PASS remains the latest actual content probe and main HEAD was used as a non-destructive continuity check",
-      "preserved root vocabulary app and Vercel vocabulary project untouched"
+      "read actual branch HEAD and checkpoint first; found checkpoint v32 and branch HEAD 8a599c02a9eeab0573c8c3fc1c3f408bd26d91a9, superseding prompt v27",
+      "discovered and accepted newer actual v3 publication proof from branch HEAD: run 32729121659, main publish commit 442c45536e83a87ee0f785a57b2abf1586f0a820, 3812347 bytes, sha256 2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0, Pages exact PASS",
+      "confirmed current main HEAD is exact v3 publish commit and root vocabulary index remained unchanged",
+      "confirmed current release-readiness run 32729748741 PASS with true-runtime still pending",
+      "searched plugin catalog for Custom GPT editor capability; none found",
+      "found Playwright and Chromium executables as a newly exposed browser route and attempted direct editor navigation; blocked by administrator before authenticated UI access",
+      "searched Drive for an actual Custom GPT /g/<id>; none found",
+      "rechecked correct_original private evidence folder; no real answer photo present",
+      "attempted direct Pages HTTP from container; external DNS remained unavailable, so did not override latest exact workflow Pages proof",
+      "did not change root vocabulary app or Vercel vocabulary project"
     ],
     "remaining_work": [
       "obtain authenticated actual Custom GPT editor/runtime access",
-      "register exact Knowledge, Instructions and output schema as みかみ塾 答案分析GPT and capture actual /g/<id> plus registration proof",
+      "register exact private Knowledge, formal Instructions and output schema as みかみ塾 答案分析GPT and save /g/<id> plus registration evidence",
       "obtain four real answer photos: correct_original, multi_category_errors, unreadable_answer and school_test",
-      "execute all four photos in the actual registered Custom GPT and save full transcripts/timestamps into the prepared private evidence folders",
-      "perform actual A4 portrait 1-2 page render/print and save PDF/evidence",
-      "fill the private runtime-evidence input and run the one-shot finalizer to PASS actual asset-identity, true-runtime and evidence-chain validators",
-      "only after actual true-runtime PASS decide remove_legacy or permanent_fallback",
-      "mark overall_completion true and stop continuation only after all actual runtime conditions pass"
+      "execute all four photos in actual Custom GPT and save evidence",
+      "perform actual A4 portrait 1-2 page render/print and save evidence",
+      "populate runtime-results JSON and run hardened true-runtime/evidence validators to PASS",
+      "only after true-runtime PASS decide remove_legacy or permanent_fallback",
+      "mark overall_completion true and stop automation only after all actual runtime conditions pass"
     ],
     "current_stage": "actual Custom GPT registration and real four-photo runtime evidence",
     "stopped_at": {
       "stage": "external actual runtime access/materials",
       "status": "BLOCKED_ONLY_BY_REAL_CUSTOM_GPT_EDITOR_AND_REAL_ANSWER_PHOTOS",
-      "last_normal_completion": "all pre-runtime repository/publication/evidence-tooling gates PASS and private evidence storage ready",
-      "detail": "This run rechecked both connector/plugin and browser-automation surfaces. The public editor URL can be fetched, but there is still no authenticated Custom GPT editor write session, no Custom GPT write connector/plugin, no executable agent-browser route with saved authentication, and no four-real-photo set. Synthetic/generated evidence remains forbidden."
+      "detail": "A newly exposed Playwright/Chromium route was tested but ChatGPT editor navigation is blocked by administrator. No Custom GPT write connector/plugin or saved browser auth state is available, no actual /g/<id> was found in Drive, and the checked real-photo evidence folder is empty."
     },
-    "next_start": "read latest HEAD/checkpoint first. Do not redo completed problem-bank repair, v2 publication, release readiness, finalizer self-tests or private evidence folder setup while PASS. Immediately re-probe authenticated Custom GPT editor/runtime access and any newly exposed browser automation/auth state, then real four-photo availability. If access appears, register exact assets immediately, save registration proof and /g/<id>, execute four actual cases, render/print A4, populate private runtime-evidence input and run one-shot finalizer.",
-    "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> one-shot actual evidence finalizer PASS -> legacy decision -> overall completion"
+    "next_start": "read latest HEAD/checkpoint first; do not redo PASS gates. Immediately re-probe authenticated Custom GPT editor/runtime access, including Playwright/Chromium if policy exposure changes, then recheck real four-photo evidence. If access appears, register exact assets and continue through four real cases, A4 actual render/print, and one-shot hardened finalizer.",
+    "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> hardened finalizer PASS -> legacy decision -> overall completion"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
   "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
-  "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V2_RELEASE_READINESS_PASS_FINALIZER_PREP_PASS_PRIVATE_EVIDENCE_STORAGE_READY_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V3_RELEASE_READINESS_PASS_FINALIZER_PREP_PASS_PRIVATE_EVIDENCE_STORAGE_READY_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "All non-actual-runtime work remains PASS. Current blocking items are genuine external runtime evidence only: authenticated Custom GPT registration, four real answer photos, actual A4 render/print and final strict validators."
+  "completion_note": "All repository/publication/pre-runtime gates are PASS at current v3. Remaining blockers are genuine actual Custom GPT access and real runtime evidence only."
 }
