@@ -1,0 +1,92 @@
+{
+  "gpt_url": "",
+  "registration_verified_at": "",
+  "registration_evidence_file": "registration-proof.png",
+  "cases": [
+    {
+      "id": "correct_original",
+      "source_mode": "mikami_canonical",
+      "executed_at": "",
+      "photo_file": "cases/correct_original/photo.jpg",
+      "response_transcript_file": "cases/correct_original/response.txt",
+      "behaviors": {
+        "visible_problem_ids_are_exact_matched_to_knowledge": false,
+        "no_wrong_answer_is_invented": false,
+        "correct_count_equals_judged_count_when_all_visible_answers_are_correct": false,
+        "root_causes_may_be_empty": false,
+        "next_actions_remain_concrete_and_non_punitive": false
+      },
+      "result_summary": ""
+    },
+    {
+      "id": "multi_category_errors",
+      "source_mode": "mikami_canonical",
+      "executed_at": "",
+      "photo_file": "cases/multi_category_errors/photo.jpg",
+      "response_transcript_file": "cases/multi_category_errors/response.txt",
+      "behaviors": {
+        "each_visible_problem_id_is_exact_matched_to_knowledge": false,
+        "wrong_answers_are_classified_per_question": false,
+        "root_causes_are_limited_to_three": false,
+        "return_points_are_limited_to_three": false,
+        "surface_unit_is_not_automatically_used_as_return_point": false,
+        "evidence_question_numbers_or_ids_are_attached": false
+      },
+      "result_summary": ""
+    },
+    {
+      "id": "unreadable_answer",
+      "source_mode": "mikami_canonical",
+      "executed_at": "",
+      "photo_file": "cases/unreadable_answer/photo.jpg",
+      "response_transcript_file": "cases/unreadable_answer/response.txt",
+      "behaviors": {
+        "unreadable_text_is_not_guessed": false,
+        "unreadable_questions_use_held_status": false,
+        "held_questions_are_excluded_from_accuracy_denominator": false,
+        "unreadable_or_missing_is_reported": false,
+        "unclear_id_is_not_inferred_from_similar_problem": false
+      },
+      "result_summary": ""
+    },
+    {
+      "id": "school_test",
+      "source_mode": "school_test",
+      "executed_at": "",
+      "photo_file": "cases/school_test/photo.jpg",
+      "response_transcript_file": "cases/school_test/response.txt",
+      "behaviors": {
+        "canonical_knowledge_is_not_falsely_claimed_as_source": false,
+        "only_visible_problem_text_student_answer_and_marking_are_used": false,
+        "missing_regions_are_not_scored": false,
+        "general_grammar_judgment_is_labeled_when_used": false,
+        "reading_errors_are_separated_into_vocabulary_structure_reference_timeline_content_evidence": false
+      },
+      "result_summary": ""
+    }
+  ],
+  "a4_report": {
+    "actual_render_or_print_test": false,
+    "orientation": "portrait",
+    "page_count": 0,
+    "checked_at": "",
+    "rendered_pdf_file": "a4/report.pdf",
+    "evidence_ref": "",
+    "sections_present": [],
+    "rules": {
+      "avoid_wide_tables": false,
+      "do_not_reprint_large_numbers_of_full_questions": false,
+      "show_held_or_unreadable_items": false,
+      "use_short_headings_and_paragraphs": false
+    }
+  },
+  "final_gate": {
+    "exact_id_lookup_verified": false,
+    "prerequisite_return_point_verified": false,
+    "held_handling_verified": false,
+    "school_test_separation_verified": false,
+    "legacy_copy_paste_decision": "",
+    "private_evidence_ref": "",
+    "overall_runtime_pass": false
+  }
+}
