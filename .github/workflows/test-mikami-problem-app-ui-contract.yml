@@ -38,7 +38,13 @@ jobs:
           git show origin/main:index.html > /tmp/mikami-root-index.html
           C_FETCH_ROOT=$?
           ROOT_SHA=''
+          APP_BYTES=''
+          APP_SHA=''
           if test "$C_FETCH_ROOT" = 0; then ROOT_SHA=$(sha256sum /tmp/mikami-root-index.html | awk '{print $1}'); fi
+          if test "$C_FETCH_APP" = 0; then
+            APP_BYTES=$(wc -c < /tmp/mikami-problem-app.html | tr -d ' ')
+            APP_SHA=$(sha256sum /tmp/mikami-problem-app.html | awk '{print $1}')
+          fi
           node tools/validate_mikami_problem_app_ui_contract.mjs /tmp/mikami-problem-app.html > /tmp/ui-contract.log 2>&1
           C_VALIDATE=$?
           cat /tmp/ui-contract.log
@@ -52,6 +58,8 @@ jobs:
           echo "validate=$C_VALIDATE" >> "$GITHUB_OUTPUT"
           echo "root_check=$C_ROOT" >> "$GITHUB_OUTPUT"
           echo "root_sha=$ROOT_SHA" >> "$GITHUB_OUTPUT"
+          echo "app_bytes=$APP_BYTES" >> "$GITHUB_OUTPUT"
+          echo "app_sha=$APP_SHA" >> "$GITHUB_OUTPUT"
           exit 0
       - name: Record durable UI-contract status
         shell: bash
@@ -62,9 +70,11 @@ jobs:
           VALIDATE_CODE: ${{ steps.validate.outputs.validate }}
           ROOT_CHECK: ${{ steps.validate.outputs.root_check }}
           ROOT_SHA: ${{ steps.validate.outputs.root_sha }}
+          APP_BYTES: ${{ steps.validate.outputs.app_bytes }}
+          APP_SHA: ${{ steps.validate.outputs.app_sha }}
         run: |
           set -euo pipefail
-          LOG=$(tr '\n' ';' < /tmp/ui-contract.log | cut -c1-2500)
+          LOG=$(tr '\n' ';' < /tmp/ui-contract.log | cut -c1-3000)
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3 4 5; do
@@ -77,12 +87,16 @@ jobs:
           CI_RUN_ID=${GITHUB_RUN_ID}
           TESTED_BRANCH_HEAD=${GITHUB_SHA}
           TESTED_MAIN_REF=origin/main
+          ARTIFACT_VERSION=v3-opener-fix
           FETCH_PROBLEM_APP_EXIT=${FETCH_APP}
           FETCH_ROOT_INDEX_EXIT=${FETCH_ROOT}
           UI_VALIDATOR_EXIT=${VALIDATE_CODE}
           ROOT_SHA_CHECK_EXIT=${ROOT_CHECK}
-          EXPECTED_PROBLEM_APP_BYTES=3812209
-          EXPECTED_PROBLEM_APP_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          EXPECTED_PROBLEM_APP_BYTES=3812347
+          EXPECTED_PROBLEM_APP_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0
+          ACTUAL_PROBLEM_APP_BYTES=${APP_BYTES}
+          ACTUAL_PROBLEM_APP_SHA256=${APP_SHA}
+          EXPECTED_QB_DATA_SHA256=c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee
           EXPECTED_ROOT_INDEX_SHA256=4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6
           ACTUAL_ROOT_INDEX_SHA256=${ROOT_SHA}
           MY_GPT_PRIMARY_REQUIRED=true
@@ -93,16 +107,18 @@ jobs:
           OPTIONAL_HANDOFF_COPY_REQUIRED=true
           CHATGPT_HOST_GATE_REQUIRED=true
           CUSTOM_GPT_G_PATH_GATE_REQUIRED=true
+          NOOPENER_FALSE_FAILURE_FIXED_REQUIRED=true
+          SAFE_ANCHOR_NOOPENER_OPENER_REQUIRED=true
+          OLD_WINDOW_OPEN_NOOPENER_PATTERN_ALLOWED=false
+          OLD_IF_NOT_OPENED_BRANCH_ALLOWED=false
           PRIVATE_KNOWLEDGE_EMBEDDED=false
           MAIN_ROOT_TOUCHED=false
           VALIDATOR_OUTPUT=${LOG}
           EOF
             git add release/generated/problem_app_ui_contract.status.txt
             if git diff --cached --quiet; then break; fi
-            git commit -m "record problem app UI contract ${STATUS} (attempt ${attempt})"
+            git commit -m "record v3 problem app UI contract ${STATUS} (attempt ${attempt})"
             if git push origin HEAD:mikami-canonical-repair; then break; fi
             sleep $((attempt*2))
           done
           test "$STATUS" = PASS
-
-# retrigger after workflow registration: 2026-08-24T21:36:00+09:00
