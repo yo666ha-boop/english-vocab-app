@@ -8,6 +8,7 @@ on:
       - 'tools/run_mikami_pipeline_v4_answer_gpt.mjs'
       - 'tools/patch_mikami_answer_gpt_handoff.mjs'
       - 'tools/patch_mikami_answer_gpt_handoff_v2.mjs'
+      - 'tools/patch_mikami_answer_gpt_handoff_v3.mjs'
       - 'tools/test_mikami_answer_gpt_photo_routing_contract.mjs'
       - '.github/workflows/finalize-mikami-canonical-drive.yml'
       - '.github/workflows/test-mikami-answer-gpt-unified-runner.yml'
@@ -23,6 +24,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: mikami-canonical-repair
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,11 +33,12 @@ jobs:
         run: |
           node --check tools/patch_mikami_answer_gpt_handoff.mjs
           node --check tools/patch_mikami_answer_gpt_handoff_v2.mjs
+          node --check tools/patch_mikami_answer_gpt_handoff_v3.mjs
           node --check tools/run_mikami_pipeline_v4_answer_gpt.mjs
           node --check tools/test_mikami_answer_gpt_photo_routing_contract.mjs
 
-      - name: Handoff v2 patch regression
-        run: node tools/patch_mikami_answer_gpt_handoff_v2.mjs --self-test
+      - name: Handoff v3 patch regression
+        run: node tools/patch_mikami_answer_gpt_handoff_v3.mjs --self-test
 
       - name: My GPT-only photo routing regression
         run: node tools/test_mikami_answer_gpt_photo_routing_contract.mjs
@@ -55,53 +58,70 @@ jobs:
           grep -q 'qb_data_unchanged_after_handoff_patch' "$F"
           grep -q 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$F"
           grep -q 'QUESTION_BANK_CHANGED=false' "$F"
-          grep -q 'patch_mikami_answer_gpt_handoff_v2.mjs' "$R"
+          grep -q 'patch_mikami_answer_gpt_handoff_v3.mjs' "$R"
           grep -q 'JSON.stringify(beforeQb) === JSON.stringify(afterQb)' "$R"
           grep -q 'audit_final_canonical.mjs' "$R"
-          grep -q 'handoff_patch_version: 2' "$R"
+          grep -q 'handoff_patch_version: 3' "$R"
           grep -q 'arbitrary_https_url_rejected: true' "$R"
+          grep -q 'noopener_false_failure_fixed: true' "$R"
+          grep -q 'safe_anchor_noopener_opener: true' "$R"
+          grep -q 'old_window_open_noopener_pattern_present: false' "$R"
+          grep -q 'old_if_not_opened_branch_present: false' "$R"
           grep -q 'question_id_order_preserved: true' "$R"
           grep -q 'private_knowledge_embedded: false' "$R"
           grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$R"
           grep -q 'app_photo_analysis_primary: false' "$R"
           grep -q "app_photo_input_scope: 'legacy_fallback_only'" "$R"
           grep -q 'photoInputAt > fallbackAt' "$R"
+          grep -q 'legacy fallback must remain collapsed by default' "$R"
           grep -q 'do not add a primary photo-upload route' "$R"
+          ! grep -q "window.open(url, '_blank', 'noopener')" "$R"
           grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$T"
           grep -q 'app_photo_analysis_primary: false' "$T"
           ! grep -q '1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC' "$F"
-          echo PASS_UNIFIED_ANSWER_GPT_WIRING_V2
+          echo PASS_UNIFIED_ANSWER_GPT_WIRING_V3
+          echo PASS_NOOPENER_FALSE_FAILURE_FIX_WIRING
           echo PASS_PHOTO_ATTACHMENT_LOCATION_MY_GPT_ONLY
 
-      - name: Record durable PASS
+      - name: Record durable PASS race-safely
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p release/generated
-          {
-            echo 'STATUS=PASS'
-            echo "SOURCE_SHA=$GITHUB_SHA"
-            echo 'V4_REGRESSION=PASS'
-            echo 'HANDOFF_PATCH_VERSION=2'
-            echo 'HANDOFF_PATCH_SELF_TEST=PASS'
-            echo 'CUSTOM_GPT_URL_HOST_GATE=PASS'
-            echo 'CUSTOM_GPT_URL_G_PATH_GATE=PASS'
-            echo 'ARBITRARY_HTTPS_URL_REJECTED=true'
-            echo 'PHOTO_ROUTING_CONTRACT=PASS'
-            echo 'UNIFIED_RUNNER_SYNTAX=PASS'
-            echo 'FINALIZE_WIRING=PASS'
-            echo 'QB_DATA_PRESERVATION_CHECK=ENFORCED'
-            echo 'FINAL_CANONICAL_AUDIT=ENFORCED'
-            echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
-            echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
-            echo 'APP_PHOTO_INPUT_SCOPE=legacy_fallback_only'
-            echo 'MY_GPT_DIRECT_PHOTO_ATTACHMENT=true'
-            echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
-            echo 'REAL_CANONICAL_UNIFIED_RUN=PASS_PREVIOUSLY_VERIFIED_V1_ARTIFACT;V2_PUBLICATION_SEPARATE'
-          } > release/generated/answer_gpt_unified_runner.status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- release/generated/answer_gpt_unified_runner.status.txt
-          git commit -m 'record unified V4 + My GPT v2 runner PASS' || exit 0
-          git pull --rebase origin mikami-canonical-repair
-          git push origin HEAD:mikami-canonical-repair
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            {
+              echo 'STATUS=PASS'
+              echo "SOURCE_SHA=$GITHUB_SHA"
+              echo 'V4_REGRESSION=PASS'
+              echo 'HANDOFF_PATCH_VERSION=3'
+              echo 'HANDOFF_PATCH_SELF_TEST=PASS'
+              echo 'CUSTOM_GPT_URL_HOST_GATE=PASS'
+              echo 'CUSTOM_GPT_URL_G_PATH_GATE=PASS'
+              echo 'ARBITRARY_HTTPS_URL_REJECTED=true'
+              echo 'NOOPENER_FALSE_FAILURE_FIXED=true'
+              echo 'SAFE_ANCHOR_NOOPENER_OPENER=true'
+              echo 'OLD_WINDOW_OPEN_NOOPENER_PATTERN_PRESENT=false'
+              echo 'OLD_IF_NOT_OPENED_BRANCH_PRESENT=false'
+              echo 'PHOTO_ROUTING_CONTRACT=PASS'
+              echo 'UNIFIED_RUNNER_SYNTAX=PASS'
+              echo 'FINALIZE_WIRING=PASS'
+              echo 'QB_DATA_PRESERVATION_CHECK=ENFORCED'
+              echo 'FINAL_CANONICAL_AUDIT=ENFORCED'
+              echo 'PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY'
+              echo 'APP_PHOTO_ANALYSIS_PRIMARY=false'
+              echo 'APP_PHOTO_INPUT_SCOPE=legacy_fallback_only'
+              echo 'MY_GPT_DIRECT_PHOTO_ATTACHMENT=true'
+              echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
+              echo 'REAL_CANONICAL_UNIFIED_RUN=PASS_PREVIOUSLY_VERIFIED_V1_ARTIFACT;V2_COMPOSED_PROOF;V3_PUBLICATION_SEPARATE'
+            } > release/generated/answer_gpt_unified_runner.status.txt
+            git add -- release/generated/answer_gpt_unified_runner.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record unified V4 + My GPT v3 runner PASS (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
