@@ -104,3 +104,5 @@ jobs:
             sleep $((attempt*2))
           done
           test "$STATUS" = PASS
+
+# retrigger after workflow registration: 2026-08-24T21:36:00+09:00
