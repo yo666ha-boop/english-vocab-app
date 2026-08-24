@@ -1,8 +1,7 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v30",
-  "updated_at_jst": "2026-08-24T21:07:44+09:00",
+  "checkpoint_schema": "mikami-repair-work-v31",
+  "updated_at_jst": "2026-08-24T21:11:40+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_head_before_checkpoint": "7365871b3f0dc2e81ecd15ee391d577ace0a3130",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -17,120 +16,106 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "PRE_RUNTIME_INFRA_PASS_PAGES_EXACT_V2_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTOS_PENDING",
+    "status": "ALL_PRE_RUNTIME_GATES_PASS_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTOS_PENDING",
     "knowledge": {
       "status": "PASS_PRIVATE",
       "records": 10511,
       "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "public_exposure": false
     },
-    "routing_contract": {
-      "status": "PASS_LOCKED_IN_CODE_CI_AND_PUBLIC_V2",
-      "photo_attachment_location": "MY_GPT_ONLY",
-      "app_photo_analysis_primary": false,
-      "app_photo_input_scope": "legacy_fallback_only",
-      "my_gpt_direct_photo_attachment": true,
-      "handoff_fields": ["source_mode", "target", "question_ids", "question_count"],
-      "custom_gpt_url_hosts": ["chatgpt.com", "chat.openai.com"],
-      "custom_gpt_url_path": "/g/<id>",
-      "arbitrary_https_url_rejected": true
-    },
-    "private_registration_kit": {
+    "registration_kit": {
       "status": "PASS_EXACT_IDENTITY_RUNTIME_REGISTRATION_PENDING",
       "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
       "visibility": "not_shared",
       "knowledge_file_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
-      "knowledge_records": 10511,
-      "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
       "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
       "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
       "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b",
       "identity_ci_run_id": 32718769797,
-      "identity_ci_status": "PASS",
-      "actual_custom_gpt_url_found": false
+      "identity_ci_status": "PASS"
     },
-    "publication_v2": {
+    "routing_and_publication": {
       "status": "PASS_EXACT_V2",
+      "photo_attachment_location": "MY_GPT_ONLY",
+      "app_photo_analysis_primary": false,
+      "app_photo_input_scope": "legacy_fallback_only",
+      "custom_gpt_url_hosts": ["chatgpt.com", "chat.openai.com"],
+      "custom_gpt_url_path": "/g/<id>",
+      "arbitrary_https_url_rejected": true,
       "publication_run_id": 32721155600,
       "main_publish_commit": "831dc3e592a1f2b45fb586c9d9e5632f696882f0",
-      "problem_app_path": "main/problem-app/index.html",
-      "v2_bytes": 3812209,
-      "v2_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
-      "main_problem_blob_sha": "0234848086fd6212181ca51a1123acdef7be98a4",
-      "pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+      "problem_app_bytes": 3812209,
+      "problem_app_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
       "pages_http": 200,
       "pages_bytes": 3812209,
       "pages_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
-      "pages_pass": true,
-      "custom_gpt_url_host_gate": true,
-      "custom_gpt_url_g_path_gate": true,
       "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
-      "root_index_unchanged": true,
+      "root_vocabulary_app_unchanged": true,
       "private_knowledge_embedded": false
     },
     "composed_v2_proof": {
       "status": "PASS",
       "diagnostic_run_id": 32719756428,
-      "v1_bytes": 3812063,
-      "v1_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "v2_bytes": 3812209,
-      "v2_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
       "qb_data_sha_before": "c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee",
       "qb_data_sha_after": "c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee",
-      "qb_data_unchanged": true,
-      "main_touched_by_diagnostic": false
+      "qb_data_unchanged": true
     },
     "release_readiness": {
       "status": "PASS_TRUE_RUNTIME_PENDING",
       "ci_run_id": 32725361262,
-      "validator_exit_code": 0,
       "private_canonical_v4_proof": "PASS",
       "handoff_v2_composed_proof": "PASS",
       "github_pages_exact_v2": "PASS",
       "registration_asset_identity": "PASS",
       "evidence_chain_v2": "PASS",
       "runtime_evidence_finalizer_prep": "PASS",
-      "true_runtime": "PENDING",
-      "vocabulary_root_unchanged": true,
-      "private_knowledge_public_embed": false
+      "true_runtime": "PENDING"
     },
     "runtime_evidence_finalizer": {
       "status": "PASS_SELF_TEST_ONLY_REAL_RUNTIME_PENDING",
       "ci_run_id": 32725279639,
-      "tested_head_sha": "313152ca59eefa29637f8d83fd8e5bc53e915f16",
       "input_validator_self_test": "PASS",
       "input_negative_cases_rejected": 6,
       "assembler_self_test": "PASS",
       "finalizer_self_test": "PASS",
       "synthetic_self_test_only": true,
       "real_runtime_executed": false,
-      "actual_registration_confirmation_required": true,
-      "exact_registration_asset_identity_required": true,
-      "exact_four_case_behaviors_required": true,
-      "actual_photo_attachment_confirmation_required": true,
-      "a4_actual_render_print_confirmation_required": true,
-      "non_circular_evidence_binding_assembled": true,
-      "true_runtime_validator_in_finalizer": true,
-      "evidence_chain_validator_in_finalizer": true,
       "input_template": "gpt/tests/mikami_answer_gpt_runtime_evidence_input.template.json",
       "input_validator": "tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs",
       "assembler": "tools/assemble_mikami_answer_gpt_runtime_evidence.mjs",
       "finalizer": "tools/finalize_mikami_answer_gpt_runtime_evidence.mjs",
       "runbook": "gpt/mikami_answer_gpt_true_runtime_runbook.md"
     },
+    "private_runtime_evidence_storage": {
+      "status": "PASS_PRIVATE_STORAGE_READY",
+      "root_folder_id": "16Kdshw0reVkmqeNaYvI_y5PsXKsQJdhh",
+      "shared": false,
+      "registration_folder_id": "1Co8ESJex7DQieSqy-Zu8v_V07J-uL1Gh",
+      "correct_original_folder_id": "14fh-cpdbSGB0lMYFdhLphG_dYrt7vrIt",
+      "multi_category_errors_folder_id": "1vQf0Wzuo6w4wtbJGSXtYhUHH7sT9ANlT",
+      "unreadable_answer_folder_id": "18z2LLcnsI7YPUMm9128mntrrZKp7Jt5M",
+      "school_test_folder_id": "1IGGKQsHh65jBR3hWAnND32vw0gGkJ9k4",
+      "a4_report_folder_id": "1cv2CXh99k6kqv2SlpDqRj4dKRGQP_8no",
+      "finalized_audit_folder_id": "13vQfNrj8uUUb00G4nMoc7T11yPIW9kOm",
+      "real_runtime_evidence_present": false,
+      "status_file": "release/generated/answer_gpt_private_runtime_evidence_storage.status.txt"
+    },
     "runtime_materials_inventory": {
       "status": "INCOMPLETE",
+      "drive_search_executed": true,
+      "prior_interaction_search_executed": true,
+      "actual_custom_gpt_url_found": false,
       "validated_correct_original_photo_found": false,
       "validated_multi_category_errors_photo_found": false,
       "validated_unreadable_answer_photo_found": false,
       "validated_school_test_answer_photo_found": false,
       "real_four_case_photo_set_ready": false,
-      "rejected_school_test_candidate_drive_id": "1GCpnmSmRa26Tt5RkbtDBbznPqN9w_O73",
+      "rejected_candidate_drive_id": "1GCpnmSmRa26Tt5RkbtDBbznPqN9w_O73",
       "rejected_candidate_reason": "range_sheet_or_test_schedule_not_student_answer_sheet",
       "synthetic_or_generated_images_must_not_count_as_real_runtime": true,
-      "inventory_status_file": "release/generated/answer_gpt_runtime_materials_inventory.status.txt"
+      "status_file": "release/generated/answer_gpt_runtime_materials_inventory.status.txt"
     },
     "authenticated_custom_gpt_access": {
       "status": "UNAVAILABLE_IN_CURRENT_RUNTIME",
@@ -138,9 +123,7 @@
       "authenticated_editor_session_available": false,
       "custom_gpt_editor_write_connector_available": false,
       "browser_automation_plugin_available": false,
-      "registration_attempted": false,
-      "registration_claimed": false,
-      "detail": "No authenticated Custom GPT editor/runtime write surface or browser automation plugin is exposed. Do not claim registration until a real authenticated editor becomes available."
+      "registration_claimed": false
     },
     "local_execution_layer": {
       "status": "PARTIALLY_RECOVERED",
@@ -154,7 +137,6 @@
     },
     "true_runtime": {
       "status": "PENDING_EXTERNAL_ACTUAL_RUNTIME",
-      "real_runtime_executed": false,
       "actual_custom_gpt_registered": false,
       "four_real_answer_photo_cases_pass": false,
       "actual_a4_portrait_render_print_pass": false,
@@ -163,49 +145,46 @@
       "legacy_finalization": "PENDING_TRUE_RUNTIME"
     },
     "completed_this_run": [
-      "re-read actual latest branch HEAD/checkpoint/status files before continuing",
-      "confirmed GitHub Pages v2 propagation completed exactly: HTTP 200, 3812209 bytes, expected SHA256, URL host+/g/ gates present",
-      "confirmed root vocabulary index SHA unchanged across v2 publication and private Knowledge not embedded",
-      "confirmed release readiness with private canonical V4 proof + deterministic v2 composed proof + exact Pages v2 + registration asset identity + evidence-chain v2",
-      "made release readiness durable and obtained PASS run 32725361262 while keeping TRUE_RUNTIME=PENDING",
-      "retrieved exact 4035500-byte private canonical from Drive locally; container execution is available but repository clone is blocked by container DNS, so completed problem-bank work was not unnecessarily rerun",
-      "searched available connector/plugin surface again; no authenticated Custom GPT editor write path or browser automation plugin exists",
-      "searched Drive for real answer-photo runtime materials; no validated four-case set found",
-      "visually rejected Drive candidate DFFF963C-E6CC-41BE-8453-561B985B83FE.PNG because it is a range sheet/test schedule, not a student answer sheet",
-      "added strict runtime evidence input template with explicit false defaults for registration, four actual executions/photo attachments, A4 and final gate",
-      "added strict runtime evidence input validator bound to the existing photo acceptance contract and exact registration asset identities",
-      "added cryptographic runtime evidence assembler for photo/transcript/registration/A4 hashes, runtime-results SHA and non-circular evidence binding",
-      "added one-shot runtime evidence finalizer that runs input validation -> assembly -> registration asset identity -> hardened true-runtime -> evidence-chain",
-      "diagnostic CI initially caught and recorded one assembler CLI destructuring syntax bug; fixed it rather than hiding the failure",
-      "final runtime evidence finalizer CI then PASSed all syntax/self-tests and six input negative cases in run 32725279639",
-      "added exact true-runtime runbook so actual editor/photo access can proceed directly without repeating repository work"
+      "confirmed exact GitHub Pages v2 publication PASS with HTTP 200, exact 3812209 bytes and expected SHA256",
+      "confirmed vocabulary root SHA unchanged and private Knowledge not embedded",
+      "hardened and durably PASSed release readiness with exact Pages v2 and composed private-canonical proof",
+      "re-fetched the exact 4035500-byte private canonical locally without rerunning completed problem-bank repairs",
+      "rechecked connector/plugin surface and found no authenticated Custom GPT editor write path",
+      "searched Drive and prior project interactions for real runtime photos and actual Custom GPT URL; none valid found",
+      "rejected the only school-test search candidate because it is a range sheet/test schedule rather than a student answer sheet",
+      "added strict runtime evidence input validator and explicit false-default runtime input template",
+      "added cryptographic runtime evidence assembler and one-shot finalizer chaining asset identity, true-runtime and evidence-chain validators",
+      "diagnostic CI exposed one assembler CLI syntax error; fixed it and then obtained finalizer CI PASS run 32725279639",
+      "obtained release readiness PASS run 32725361262 with runtime evidence finalizer prep included",
+      "added exact true-runtime runbook",
+      "created a dedicated private Drive runtime-evidence folder tree and verified parent shared=false",
+      "recorded real-material inventory and private evidence storage layout as durable GitHub statuses"
     ],
     "remaining_work": [
-      "obtain an authenticated actual Custom GPT editor/runtime surface",
-      "register the exact private Knowledge, formal Instructions and output schema as みかみ塾 答案分析GPT and save actual /g/<id> URL plus registration evidence",
-      "obtain four real answer photos: correct_original, multi_category_errors, unreadable_answer, school_test; generated/synthetic images do not count",
-      "execute all four photos in the actual registered Custom GPT and save full response transcripts and execution times",
-      "verify exact ID lookup, prerequisite-grammar return point, held handling and school-test separation against the acceptance contract",
-      "render/print an actual A4 portrait 1-2 page report and save PDF/evidence",
-      "fill the private runtime-evidence input and run tools/finalize_mikami_answer_gpt_runtime_evidence.mjs to PASS all actual validators",
-      "only after actual true-runtime/evidence PASS decide remove_legacy or permanent_fallback",
-      "after all actual runtime conditions are PASS, mark overall_completion true and stop the continuation task"
+      "obtain authenticated actual Custom GPT editor/runtime access",
+      "register exact Knowledge, Instructions and output schema as みかみ塾 答案分析GPT and capture actual /g/<id> plus registration proof",
+      "obtain four real answer photos: correct_original, multi_category_errors, unreadable_answer and school_test",
+      "execute all four photos in the actual registered Custom GPT and save full transcripts/timestamps into the prepared private evidence folders",
+      "perform actual A4 portrait 1-2 page render/print and save PDF/evidence",
+      "fill the private runtime-evidence input and run the one-shot finalizer to PASS actual asset-identity, true-runtime and evidence-chain validators",
+      "only after actual true-runtime PASS decide remove_legacy or permanent_fallback",
+      "mark overall_completion true and stop continuation only after all actual runtime conditions pass"
     ],
     "current_stage": "actual Custom GPT registration and real four-photo runtime evidence",
     "stopped_at": {
       "stage": "external actual runtime access/materials",
       "status": "BLOCKED_ONLY_BY_REAL_CUSTOM_GPT_EDITOR_AND_REAL_ANSWER_PHOTOS",
-      "last_normal_completion": "release readiness PASS including runtime evidence finalizer prep",
-      "detail": "All repository, private-asset identity, deterministic v2 publication, Pages exactness, pre-runtime evidence tooling and CI gates are PASS. Actual Custom GPT registration cannot be performed without an authenticated editor write surface, and no valid four-case real answer-photo set is currently available. Synthetic evidence is explicitly rejected."
+      "last_normal_completion": "all pre-runtime repository/publication/evidence-tooling gates PASS and private evidence storage ready",
+      "detail": "No remaining repository or publication blocker is known. Actual Custom GPT registration requires an authenticated editor write surface not exposed here, and the required four real answer photos are not currently available. Synthetic/generated evidence is explicitly rejected."
     },
-    "next_start": "read latest HEAD/checkpoint; do not redo problem bank, v2 publication, release readiness or finalizer self-tests if their durable statuses remain PASS. First check for authenticated Custom GPT editor/runtime access and newly available real answer photos. If editor is available, register exact assets immediately and capture /g/<id> plus proof. If real photos are available, map them to the four acceptance cases. Then execute four actual cases, A4 actual render/print, populate private runtime-evidence input and run the one-shot finalizer.",
+    "next_start": "read latest HEAD/checkpoint and durable status files. Do not redo problem-bank repair, v2 publication, release readiness, finalizer self-tests or private evidence folder setup while their statuses remain PASS. First check for authenticated Custom GPT editor/runtime access and newly available real answer photos. If available, register exact assets immediately, save registration proof and /g/<id>, execute the four actual cases, render/print A4, populate private runtime-evidence input and run the one-shot finalizer.",
     "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> one-shot actual evidence finalizer PASS -> legacy decision -> overall completion"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
   "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
-  "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V2_RELEASE_READINESS_PASS_PRE_RUNTIME_TOOLING_PASS_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V2_RELEASE_READINESS_PASS_FINALIZER_PREP_PASS_PRIVATE_EVIDENCE_STORAGE_READY_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "Problem-bank repair is complete and unchanged. GitHub Pages now serves exact hardened v2 while the vocabulary root remains unchanged. Pre-runtime release readiness and the one-shot runtime evidence finalizer toolchain are PASS. The remaining work is irreducibly actual-runtime work: authenticated Custom GPT registration, four real answer photos, actual A4 render/print and final strict evidence validation."
+  "completion_note": "All non-actual-runtime work is now PASS: repaired question bank, private Knowledge identity, hardened v2 routing, exact GitHub Pages publication, release readiness, runtime evidence finalizer tooling/CI and private evidence storage. Remaining completion work is genuinely external actual-runtime evidence: authenticated Custom GPT registration, four real answer photos, actual A4 render/print and final strict validators."
 }
