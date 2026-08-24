@@ -6,6 +6,7 @@ on:
     paths:
       - 'tools/validate_mikami_answer_gpt_registration_asset_identity.mjs'
       - 'gpt/tests/mikami_answer_gpt_true_runtime_results.template.json'
+      - 'gpt/tests/mikami_answer_gpt_evidence_manifest.template.json'
       - '.github/workflows/test-mikami-answer-gpt-registration-asset-identity.yml'
   workflow_dispatch:
 
@@ -46,6 +47,8 @@ jobs:
           INSTRUCTIONS_SHA256=084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be
           OUTPUT_SCHEMA_FILE_ID=1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE
           OUTPUT_SCHEMA_SHA256=8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b
+          RUNTIME_TEMPLATE_IDENTITY=PASS
+          EVIDENCE_TEMPLATE_IDENTITY=PASS
           EXACT_ASSET_IDENTITY_REQUIRED=true
           REAL_RUNTIME_EXECUTED=false
           MAIN_TOUCHED=false
