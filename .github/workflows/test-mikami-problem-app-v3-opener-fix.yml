@@ -1,0 +1,121 @@
+name: Test Mikami Problem App V3 Opener Fix
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/patch_mikami_answer_gpt_handoff_v3.mjs'
+      - '.github/workflows/test-mikami-problem-app-v3-opener-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  derive-v3-from-actual-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and self-test
+        run: |
+          set -euo pipefail
+          node --check tools/patch_mikami_answer_gpt_handoff_v3.mjs
+          node tools/patch_mikami_answer_gpt_handoff_v3.mjs --self-test
+      - name: Derive v3 from exact actual main problem app
+        id: derive
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git show origin/main:problem-app/index.html > /tmp/problem-v2.html
+          git show origin/main:index.html > /tmp/root-before.html
+          V2_BYTES=$(wc -c < /tmp/problem-v2.html | tr -d ' ')
+          V2_SHA=$(sha256sum /tmp/problem-v2.html | awk '{print $1}')
+          ROOT_SHA=$(sha256sum /tmp/root-before.html | awk '{print $1}')
+          test "$V2_BYTES" = '3812209'
+          test "$V2_SHA" = '83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0'
+          test "$ROOT_SHA" = '4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6'
+          node tools/patch_mikami_answer_gpt_handoff_v3.mjs /tmp/problem-v2.html /tmp/problem-v3.html
+          V3_BYTES=$(wc -c < /tmp/problem-v3.html | tr -d ' ')
+          V3_SHA=$(sha256sum /tmp/problem-v3.html | awk '{print $1}')
+          V2_QB=$(node - /tmp/problem-v2.html <<'NODE'
+          const fs=require('fs'),crypto=require('crypto'); const h=fs.readFileSync(process.argv[2],'utf8');
+          const o='<script id="qb-data" type="application/json">', a=h.indexOf(o), b=h.indexOf('</script>',a+o.length);
+          if(a<0||b<0) process.exit(2); process.stdout.write(crypto.createHash('sha256').update(h.slice(a+o.length,b)).digest('hex'));
+          NODE
+          )
+          V3_QB=$(node - /tmp/problem-v3.html <<'NODE'
+          const fs=require('fs'),crypto=require('crypto'); const h=fs.readFileSync(process.argv[2],'utf8');
+          const o='<script id="qb-data" type="application/json">', a=h.indexOf(o), b=h.indexOf('</script>',a+o.length);
+          if(a<0||b<0) process.exit(2); process.stdout.write(crypto.createHash('sha256').update(h.slice(a+o.length,b)).digest('hex'));
+          NODE
+          )
+          test "$V2_QB" = "$V3_QB"
+          grep -q 'mikami-answer-gpt-handoff-opener-v3' /tmp/problem-v3.html
+          grep -q "link.rel = 'noopener'" /tmp/problem-v3.html
+          grep -q 'openMyGptNoOpener(url);' /tmp/problem-v3.html
+          ! grep -q "window.open(url, '_blank', 'noopener')" /tmp/problem-v3.html
+          ! grep -q 'if (!opened)' /tmp/problem-v3.html
+          grep -q 'id="openAnswerGptBtn" class="primary"' /tmp/problem-v3.html
+          grep -q 'id="legacyPhotoAnalysisFallback"' /tmp/problem-v3.html
+          grep -q "\['chatgpt.com', 'chat.openai.com'\].includes(url.hostname)" /tmp/problem-v3.html
+          grep -q '/\^\\/g\\/\[A-Za-z0-9_-\]+' /tmp/problem-v3.html
+          ! grep -q 'mikami_english_question_bank_knowledge.jsonl' /tmp/problem-v3.html
+          echo "v3_bytes=$V3_BYTES" >> "$GITHUB_OUTPUT"
+          echo "v3_sha=$V3_SHA" >> "$GITHUB_OUTPUT"
+          echo "qb_sha=$V3_QB" >> "$GITHUB_OUTPUT"
+          echo "root_sha=$ROOT_SHA" >> "$GITHUB_OUTPUT"
+          printf 'V2_BYTES=%s\nV2_SHA=%s\nV3_BYTES=%s\nV3_SHA=%s\nQB_BEFORE=%s\nQB_AFTER=%s\nROOT_SHA=%s\n' "$V2_BYTES" "$V2_SHA" "$V3_BYTES" "$V3_SHA" "$V2_QB" "$V3_QB" "$ROOT_SHA"
+      - name: Record durable diagnostic PASS
+        shell: bash
+        env:
+          V3_BYTES: ${{ steps.derive.outputs.v3_bytes }}
+          V3_SHA: ${{ steps.derive.outputs.v3_sha }}
+          QB_SHA: ${{ steps.derive.outputs.qb_sha }}
+          ROOT_SHA: ${{ steps.derive.outputs.root_sha }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/problem_app_v3_opener_fix.status.txt <<EOF
+          STATUS=PASS_DIAGNOSTIC_NOT_PUBLISHED
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_BRANCH_HEAD=${GITHUB_SHA}
+          SOURCE_MAIN_PROBLEM_APP_BYTES=3812209
+          SOURCE_MAIN_PROBLEM_APP_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          V3_BYTES=${V3_BYTES}
+          V3_SHA256=${V3_SHA}
+          QB_DATA_SHA256_BEFORE=${QB_SHA}
+          QB_DATA_SHA256_AFTER=${QB_SHA}
+          QB_DATA_UNCHANGED=true
+          NOOPENER_RETURN_NULL_FALSE_FAILURE_FIXED=true
+          ANCHOR_TARGET_BLANK=true
+          ANCHOR_REL_NOOPENER=true
+          OLD_WINDOW_OPEN_NOOPENER_PATTERN_PRESENT=false
+          OLD_IF_NOT_OPENED_BRANCH_PRESENT=false
+          MY_GPT_PRIMARY_PRESERVED=true
+          LEGACY_FALLBACK_PRESERVED=true
+          CHATGPT_HOST_GATE_PRESERVED=true
+          CUSTOM_GPT_G_PATH_GATE_PRESERVED=true
+          PRIVATE_KNOWLEDGE_EMBEDDED=false
+          ROOT_INDEX_SHA256=${ROOT_SHA}
+          MAIN_ROOT_TOUCHED=false
+          MAIN_PROBLEM_APP_PUBLISHED=false
+          EOF
+            git add release/generated/problem_app_v3_opener_fix.status.txt
+            if git diff --cached --quiet; then break; fi
+            git commit -m "record problem app v3 opener diagnostic PASS (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            sleep $((attempt*2))
+          done
