@@ -1,0 +1,55 @@
+name: Diagnose Mikami Answer GPT Handoff V2
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/diagnose-mikami-answer-gpt-handoff-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Execute self-test without hiding failure
+        shell: bash
+        run: |
+          set +e
+          node tools/patch_mikami_answer_gpt_handoff_v2.mjs --self-test > /tmp/handoff-v2.out 2>&1
+          echo $? > /tmp/handoff-v2.code
+          cat /tmp/handoff-v2.out
+          exit 0
+      - name: Always write diagnostic status
+        shell: bash
+        run: |
+          set -euo pipefail
+          CODE=$(cat /tmp/handoff-v2.code)
+          OUT=$(tr '\n' ' ' < /tmp/handoff-v2.out | sed 's/[^[:print:]]/?/g' | cut -c1-800)
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            {
+              echo "STATUS=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
+              echo "UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              echo "CI_RUN_ID=${GITHUB_RUN_ID}"
+              echo "TESTED_HEAD_SHA=${GITHUB_SHA}"
+              echo "EXIT_CODE=${CODE}"
+              echo "OUTPUT=${OUT}"
+            } > release/generated/answer_gpt_handoff_v2_diagnostic.status.txt
+            git add release/generated/answer_gpt_handoff_v2_diagnostic.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record handoff v2 diagnostic status (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
