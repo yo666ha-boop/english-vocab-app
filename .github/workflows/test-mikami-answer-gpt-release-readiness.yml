@@ -7,9 +7,14 @@ on:
     paths:
       - 'tools/validate_mikami_answer_gpt_release_readiness.mjs'
       - 'release/generated/answer_gpt_handoff_patch.status.txt'
+      - 'release/generated/answer_gpt_handoff_v2.status.txt'
       - 'release/generated/answer_gpt_unified_runner.status.txt'
       - 'release/generated/answer_gpt_real_private_build.status.txt'
       - 'release/generated/answer_gpt_true_runtime_gate.status.txt'
+      - 'release/generated/answer_gpt_evidence_chain.status.txt'
+      - 'release/generated/answer_gpt_registration_asset_identity.status.txt'
+      - 'release/generated/problem_app_handoff_v2_build_diagnostic.status.txt'
+      - 'release/generated/problem_app_handoff_v2_publication.status.txt'
       - 'release/generated/answer_gpt_public_index_probe.status.txt'
       - '.github/workflows/test-mikami-answer-gpt-release-readiness.yml'
   workflow_dispatch:
