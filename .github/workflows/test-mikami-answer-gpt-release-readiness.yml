@@ -16,6 +16,7 @@ on:
       - 'release/generated/answer_gpt_runtime_evidence_finalizer.status.txt'
       - 'release/generated/problem_app_handoff_v2_build_diagnostic.status.txt'
       - 'release/generated/problem_app_handoff_v2_publication.status.txt'
+      - 'release/generated/problem_app_v3_opener_publication.status.txt'
       - 'release/generated/problem_app_ui_contract.status.txt'
       - 'release/generated/answer_gpt_public_index_probe.status.txt'
       - '.github/workflows/test-mikami-answer-gpt-release-readiness.yml'
@@ -35,13 +36,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Cross-check answer GPT release state, finalizer prep and actual main UI contract
+      - name: Cross-check historical proof, current v3 publication, UI contract and runtime finalizer prep
         id: validate
         shell: bash
         run: |
           set +e
           node tools/validate_mikami_answer_gpt_release_readiness.mjs > /tmp/release-readiness.out 2>&1
           CODE=$?
+
           F='release/generated/answer_gpt_runtime_evidence_finalizer.status.txt'
           if test "$CODE" = 0; then
             grep -qx 'STATUS=PASS' "$F" || CODE=21
@@ -56,25 +58,64 @@ jobs:
             grep -qx 'SYNTHETIC_SELF_TEST_ONLY=true' "$F" || CODE=30
             grep -qx 'REAL_RUNTIME_EXECUTED=false' "$F" || CODE=31
           fi
+
+          P='release/generated/problem_app_v3_opener_publication.status.txt'
+          if test "$CODE" = 0; then
+            grep -qx 'STATUS=PASS_EXACT_V3' "$P" || CODE=32
+            grep -qx 'SOURCE_V2_BYTES=3812209' "$P" || CODE=33
+            grep -qx 'SOURCE_V2_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0' "$P" || CODE=34
+            grep -qx 'V3_BYTES=3812347' "$P" || CODE=35
+            grep -qx 'V3_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0' "$P" || CODE=36
+            grep -qx 'QB_DATA_SHA256=c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee' "$P" || CODE=37
+            grep -qx 'QB_DATA_UNCHANGED=true' "$P" || CODE=38
+            grep -qx 'ROOT_INDEX_UNCHANGED=true' "$P" || CODE=39
+            grep -qx 'NOOPENER_RETURN_NULL_FALSE_FAILURE_FIXED=true' "$P" || CODE=40
+            grep -qx 'ANCHOR_TARGET_BLANK=true' "$P" || CODE=41
+            grep -qx 'ANCHOR_REL_NOOPENER=true' "$P" || CODE=42
+            grep -qx 'MY_GPT_PRIMARY_PRESERVED=true' "$P" || CODE=43
+            grep -qx 'LEGACY_FALLBACK_PRESERVED=true' "$P" || CODE=44
+            grep -qx 'CHATGPT_HOST_GATE_PRESERVED=true' "$P" || CODE=45
+            grep -qx 'CUSTOM_GPT_G_PATH_GATE_PRESERVED=true' "$P" || CODE=46
+            grep -qx 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$P" || CODE=47
+            grep -qx 'PAGES_PASS=true' "$P" || CODE=48
+            grep -qx 'PAGES_HTTP=200' "$P" || CODE=49
+            grep -qx 'PAGES_BYTES=3812347' "$P" || CODE=50
+            grep -qx 'PAGES_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0' "$P" || CODE=51
+            grep -qx 'MAIN_ROOT_TOUCHED=false' "$P" || CODE=52
+          fi
+
           U='release/generated/problem_app_ui_contract.status.txt'
           if test "$CODE" = 0; then
-            grep -qx 'STATUS=PASS' "$U" || CODE=32
-            grep -qx 'MY_GPT_PRIMARY_REQUIRED=true' "$U" || CODE=33
-            grep -qx 'LEGACY_FALLBACK_COLLAPSED_REQUIRED=true' "$U" || CODE=34
-            grep -qx 'LEGACY_PHOTO_CONTROLS_INSIDE_FALLBACK_REQUIRED=true' "$U" || CODE=35
-            grep -qx 'DIRECT_PHOTO_TO_MY_GPT_REQUIRED=true' "$U" || CODE=36
-            grep -qx 'PASTE_BACK_NOT_REQUIRED=true' "$U" || CODE=37
-            grep -qx 'OPTIONAL_HANDOFF_COPY_REQUIRED=true' "$U" || CODE=38
-            grep -qx 'CHATGPT_HOST_GATE_REQUIRED=true' "$U" || CODE=39
-            grep -qx 'CUSTOM_GPT_G_PATH_GATE_REQUIRED=true' "$U" || CODE=40
-            grep -qx 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$U" || CODE=41
-            grep -qx 'MAIN_ROOT_TOUCHED=false' "$U" || CODE=42
+            grep -qx 'STATUS=PASS' "$U" || CODE=53
+            grep -qx 'ARTIFACT_VERSION=v3-opener-fix' "$U" || CODE=54
+            grep -qx 'EXPECTED_PROBLEM_APP_BYTES=3812347' "$U" || CODE=55
+            grep -qx 'EXPECTED_PROBLEM_APP_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0' "$U" || CODE=56
+            grep -qx 'ACTUAL_PROBLEM_APP_BYTES=3812347' "$U" || CODE=57
+            grep -qx 'ACTUAL_PROBLEM_APP_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0' "$U" || CODE=58
+            grep -qx 'EXPECTED_QB_DATA_SHA256=c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee' "$U" || CODE=59
+            grep -qx 'MY_GPT_PRIMARY_REQUIRED=true' "$U" || CODE=60
+            grep -qx 'LEGACY_FALLBACK_COLLAPSED_REQUIRED=true' "$U" || CODE=61
+            grep -qx 'LEGACY_PHOTO_CONTROLS_INSIDE_FALLBACK_REQUIRED=true' "$U" || CODE=62
+            grep -qx 'DIRECT_PHOTO_TO_MY_GPT_REQUIRED=true' "$U" || CODE=63
+            grep -qx 'PASTE_BACK_NOT_REQUIRED=true' "$U" || CODE=64
+            grep -qx 'OPTIONAL_HANDOFF_COPY_REQUIRED=true' "$U" || CODE=65
+            grep -qx 'CHATGPT_HOST_GATE_REQUIRED=true' "$U" || CODE=66
+            grep -qx 'CUSTOM_GPT_G_PATH_GATE_REQUIRED=true' "$U" || CODE=67
+            grep -qx 'NOOPENER_FALSE_FAILURE_FIXED_REQUIRED=true' "$U" || CODE=68
+            grep -qx 'SAFE_ANCHOR_NOOPENER_OPENER_REQUIRED=true' "$U" || CODE=69
+            grep -qx 'OLD_WINDOW_OPEN_NOOPENER_PATTERN_ALLOWED=false' "$U" || CODE=70
+            grep -qx 'OLD_IF_NOT_OPENED_BRANCH_ALLOWED=false' "$U" || CODE=71
+            grep -qx 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$U" || CODE=72
+            grep -qx 'MAIN_ROOT_TOUCHED=false' "$U" || CODE=73
           fi
+
           cat /tmp/release-readiness.out
-          echo "RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
+          echo "CURRENT_PROBLEM_APP_V3=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
           echo "PROBLEM_APP_UI_CONTRACT=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
+          echo "RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
           echo "code=$CODE" >> "$GITHUB_OUTPUT"
           exit 0
+
       - name: Record durable readiness status
         shell: bash
         env:
@@ -98,7 +139,9 @@ jobs:
           VALIDATOR_EXIT_CODE=${VALIDATE_CODE}
           PRIVATE_CANONICAL_V4_PROOF_REQUIRED=true
           HANDOFF_V2_COMPOSED_PROOF_REQUIRED=true
-          GITHUB_PAGES_EXACT_V2_REQUIRED=true
+          HISTORICAL_GITHUB_PAGES_EXACT_V2_PROOF_REQUIRED=true
+          CURRENT_PROBLEM_APP_V3_REQUIRED=true
+          CURRENT_PROBLEM_APP_V3=$([ "${VALIDATE_CODE}" = 0 ] && echo PASS || echo FAIL)
           PROBLEM_APP_UI_CONTRACT_REQUIRED=true
           PROBLEM_APP_UI_CONTRACT=$([ "${VALIDATE_CODE}" = 0 ] && echo PASS || echo FAIL)
           REGISTRATION_ASSET_IDENTITY_REQUIRED=true
@@ -106,13 +149,14 @@ jobs:
           RUNTIME_EVIDENCE_FINALIZER_PREP_REQUIRED=true
           RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "${VALIDATE_CODE}" = 0 ] && echo PASS || echo FAIL)
           TRUE_RUNTIME_STILL_REQUIRED=true
-          EXPECTED_PAGES_BYTES=3812209
-          EXPECTED_PAGES_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          CURRENT_PAGES_BYTES=3812347
+          CURRENT_PAGES_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0
+          CURRENT_NOOPENER_FALSE_FAILURE_FIXED=true
           OUTPUT=${OUTPUT}
           EOF
             git add release/generated/answer_gpt_release_readiness.status.txt
             if git diff --cached --quiet; then break; fi
-            git commit -m "record answer GPT release readiness ${STATUS} (attempt ${attempt})"
+            git commit -m "record answer GPT v3 release readiness ${STATUS} (attempt ${attempt})"
             if git push origin HEAD:mikami-canonical-repair; then break; fi
             sleep $((attempt*2))
           done
