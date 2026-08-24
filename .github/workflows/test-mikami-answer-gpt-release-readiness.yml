@@ -16,6 +16,7 @@ on:
       - 'release/generated/answer_gpt_runtime_evidence_finalizer.status.txt'
       - 'release/generated/problem_app_handoff_v2_build_diagnostic.status.txt'
       - 'release/generated/problem_app_handoff_v2_publication.status.txt'
+      - 'release/generated/problem_app_ui_contract.status.txt'
       - 'release/generated/answer_gpt_public_index_probe.status.txt'
       - '.github/workflows/test-mikami-answer-gpt-release-readiness.yml'
   workflow_dispatch:
@@ -34,7 +35,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Cross-check answer GPT release state and runtime finalizer prep
+      - name: Cross-check answer GPT release state, finalizer prep and actual main UI contract
         id: validate
         shell: bash
         run: |
@@ -55,8 +56,23 @@ jobs:
             grep -qx 'SYNTHETIC_SELF_TEST_ONLY=true' "$F" || CODE=30
             grep -qx 'REAL_RUNTIME_EXECUTED=false' "$F" || CODE=31
           fi
+          U='release/generated/problem_app_ui_contract.status.txt'
+          if test "$CODE" = 0; then
+            grep -qx 'STATUS=PASS' "$U" || CODE=32
+            grep -qx 'MY_GPT_PRIMARY_REQUIRED=true' "$U" || CODE=33
+            grep -qx 'LEGACY_FALLBACK_COLLAPSED_REQUIRED=true' "$U" || CODE=34
+            grep -qx 'LEGACY_PHOTO_CONTROLS_INSIDE_FALLBACK_REQUIRED=true' "$U" || CODE=35
+            grep -qx 'DIRECT_PHOTO_TO_MY_GPT_REQUIRED=true' "$U" || CODE=36
+            grep -qx 'PASTE_BACK_NOT_REQUIRED=true' "$U" || CODE=37
+            grep -qx 'OPTIONAL_HANDOFF_COPY_REQUIRED=true' "$U" || CODE=38
+            grep -qx 'CHATGPT_HOST_GATE_REQUIRED=true' "$U" || CODE=39
+            grep -qx 'CUSTOM_GPT_G_PATH_GATE_REQUIRED=true' "$U" || CODE=40
+            grep -qx 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$U" || CODE=41
+            grep -qx 'MAIN_ROOT_TOUCHED=false' "$U" || CODE=42
+          fi
           cat /tmp/release-readiness.out
           echo "RUNTIME_EVIDENCE_FINALIZER_PREP=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
+          echo "PROBLEM_APP_UI_CONTRACT=$([ "$CODE" = 0 ] && echo PASS || echo FAIL)"
           echo "code=$CODE" >> "$GITHUB_OUTPUT"
           exit 0
       - name: Record durable readiness status
@@ -83,6 +99,8 @@ jobs:
           PRIVATE_CANONICAL_V4_PROOF_REQUIRED=true
           HANDOFF_V2_COMPOSED_PROOF_REQUIRED=true
           GITHUB_PAGES_EXACT_V2_REQUIRED=true
+          PROBLEM_APP_UI_CONTRACT_REQUIRED=true
+          PROBLEM_APP_UI_CONTRACT=$([ "${VALIDATE_CODE}" = 0 ] && echo PASS || echo FAIL)
           REGISTRATION_ASSET_IDENTITY_REQUIRED=true
           EVIDENCE_CHAIN_V2_REQUIRED=true
           RUNTIME_EVIDENCE_FINALIZER_PREP_REQUIRED=true
