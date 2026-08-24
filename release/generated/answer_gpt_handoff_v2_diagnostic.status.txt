@@ -1,0 +1,6 @@
+STATUS=FAIL
+UPDATED_AT_UTC=2026-08-24T10:55:19Z
+CI_RUN_ID=32719185587
+TESTED_HEAD_SHA=cec8f10aac6793cc282150fa931c082d3899d187
+EXIT_CODE=1
+OUTPUT=file:///home/runner/work/english-vocab-app/english-vocab-app/tools/patch_mikami_answer_gpt_handoff.mjs:58     throw new Error('legacy photo-analysis block not found; refusing to patch an unknown HTML');           ^  Error: legacy photo-analysis block not found; refusing to patch an unknown HTML     at patchHtml (file:///home/runner/work/english-vocab-app/english-vocab-app/tools/patch_mikami_answer_gpt_handoff.mjs:58:11)     at patchHtml (file:///home/runner/work/english-vocab-app/english-vocab-app/tools/patch_mikami_answer_gpt_handoff_v2.mjs:11:13)     at selfTest (file:///home/runner/work/english-vocab-app/english-vocab-app/tools/patch_mikami_answer_gpt_handoff_v2.mjs:22:14)     at runCli (file:///home/runner/work/english-vocab-app/english-vocab-app/tools/patch_mikami_answer_gpt_handoff_v
