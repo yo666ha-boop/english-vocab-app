@@ -1,8 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v33",
-  "updated_at_jst": "2026-08-24T23:11:14+09:00",
+  "checkpoint_schema": "mikami-repair-work-v34",
+  "updated_at_jst": "2026-08-24T23:25:00+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_branch_head_before_checkpoint": "8a599c02a9eeab0573c8c3fc1c3f408bd26d91a9",
+  "observed_branch_head_before_checkpoint": "aab420aa1c20db0c87f36ac69b64dc3f990a2b8c",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -48,12 +48,11 @@
       "pages_bytes": 3812347,
       "pages_sha256": "2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0",
       "pages_exact_v3_proof": "PASS",
-      "pages_probe_this_run": "DIRECT_CONTAINER_DNS_UNAVAILABLE; latest exact workflow proof remains PASS and main HEAD equals v3 publish commit",
+      "pages_probe_this_run": "WEB_FETCH_COULD_NOT_REVALIDATE_PAGES; retained latest exact workflow proof",
       "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_vocabulary_app_unchanged": true,
-      "private_knowledge_embedded": false,
-      "noopener_false_failure_fixed": true
+      "private_knowledge_embedded": false
     },
     "release_readiness": {
       "status": "PASS_TRUE_RUNTIME_PENDING",
@@ -107,9 +106,17 @@
       "chromium_available": true,
       "saved_browser_auth_state_found": false,
       "playwright_editor_probe_result": "ERR_BLOCKED_BY_ADMINISTRATOR",
-      "public_editor_url_reachable_via_web_fetch": true,
+      "web_editor_probe_this_run": "PUBLIC_FETCH_REACHABLE_BUT_NO_AUTHENTICATED_WRITE_UI",
       "public_editor_url": "https://chatgpt.com/gpts/editor",
       "registration_claimed": false
+    },
+    "public_index_probe": {
+      "latest_status_commit": "aab420aa1c20db0c87f36ac69b64dc3f990a2b8c",
+      "run_id": 32737271862,
+      "status": "HASH_MISMATCH",
+      "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
+      "actual_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
+      "action": "NO_ROOT_WRITE; protected root vocabulary app remains untouched; this probe does not invalidate problem-app v3 publication proof"
     },
     "true_runtime": {
       "status": "PENDING_EXTERNAL_ACTUAL_RUNTIME",
@@ -121,16 +128,13 @@
       "legacy_finalization": "PENDING_TRUE_RUNTIME"
     },
     "completed_this_run": [
-      "read actual branch HEAD and checkpoint first; found checkpoint v32 and branch HEAD 8a599c02a9eeab0573c8c3fc1c3f408bd26d91a9, superseding prompt v27",
-      "discovered and accepted newer actual v3 publication proof from branch HEAD: run 32729121659, main publish commit 442c45536e83a87ee0f785a57b2abf1586f0a820, 3812347 bytes, sha256 2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0, Pages exact PASS",
-      "confirmed current main HEAD is exact v3 publish commit and root vocabulary index remained unchanged",
-      "confirmed current release-readiness run 32729748741 PASS with true-runtime still pending",
-      "searched plugin catalog for Custom GPT editor capability; none found",
-      "found Playwright and Chromium executables as a newly exposed browser route and attempted direct editor navigation; blocked by administrator before authenticated UI access",
-      "searched Drive for an actual Custom GPT /g/<id>; none found",
-      "rechecked correct_original private evidence folder; no real answer photo present",
-      "attempted direct Pages HTTP from container; external DNS remained unavailable, so did not override latest exact workflow Pages proof",
-      "did not change root vocabulary app or Vercel vocabulary project"
+      "read actual branch HEAD aab420aa1c20db0c87f36ac69b64dc3f990a2b8c and checkpoint v33 first, superseding prompt v27",
+      "re-probed connected plugin catalog for Custom GPT editor capability; none found",
+      "re-probed ChatGPT GPT editor through public web fetch; endpoint is reachable but no authenticated editor write UI/session is exposed",
+      "searched connected Drive for みかみ塾 答案分析GPT; registration kit and private evidence folders exist but no actual /g/<id> was found",
+      "rechecked correct_original private evidence folder directly; it remains empty",
+      "inspected newest branch commit and recorded public index probe run 32737271862 HASH_MISMATCH without touching protected root vocabulary app",
+      "did not change main/root vocabulary app or Vercel vocabulary project"
     ],
     "remaining_work": [
       "obtain authenticated actual Custom GPT editor/runtime access",
@@ -146,9 +150,9 @@
     "stopped_at": {
       "stage": "external actual runtime access/materials",
       "status": "BLOCKED_ONLY_BY_REAL_CUSTOM_GPT_EDITOR_AND_REAL_ANSWER_PHOTOS",
-      "detail": "A newly exposed Playwright/Chromium route was tested but ChatGPT editor navigation is blocked by administrator. No Custom GPT write connector/plugin or saved browser auth state is available, no actual /g/<id> was found in Drive, and the checked real-photo evidence folder is empty."
+      "detail": "No authenticated Custom GPT editor write surface is exposed in this run; plugin search returned none, public web fetch is non-authenticated, prior Playwright/Chromium route remains administrator-blocked, no actual /g/<id> is found, and correct_original evidence folder is empty."
     },
-    "next_start": "read latest HEAD/checkpoint first; do not redo PASS gates. Immediately re-probe authenticated Custom GPT editor/runtime access, including Playwright/Chromium if policy exposure changes, then recheck real four-photo evidence. If access appears, register exact assets and continue through four real cases, A4 actual render/print, and one-shot hardened finalizer.",
+    "next_start": "read latest HEAD/checkpoint first; do not redo PASS gates. Immediately re-probe authenticated Custom GPT editor/runtime access and real four-photo evidence. If access appears, register exact assets and continue through four real cases, A4 actual render/print, and one-shot hardened finalizer.",
     "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> hardened finalizer PASS -> legacy decision -> overall completion"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
@@ -157,5 +161,5 @@
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
   "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V3_RELEASE_READINESS_PASS_FINALIZER_PREP_PASS_PRIVATE_EVIDENCE_STORAGE_READY_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "All repository/publication/pre-runtime gates are PASS at current v3. Remaining blockers are genuine actual Custom GPT access and real runtime evidence only."
+  "completion_note": "All repository/problem-app publication/pre-runtime gates remain PASS at v3. Actual Custom GPT registration and real runtime evidence are still unavailable."
 }
