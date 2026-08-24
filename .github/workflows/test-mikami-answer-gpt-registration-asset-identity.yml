@@ -1,0 +1,64 @@
+name: Test Mikami Answer GPT Registration Asset Identity
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/validate_mikami_answer_gpt_registration_asset_identity.mjs'
+      - 'gpt/tests/mikami_answer_gpt_true_runtime_results.template.json'
+      - '.github/workflows/test-mikami-answer-gpt-registration-asset-identity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  registration-asset-identity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run identity self-test
+        run: node tools/validate_mikami_answer_gpt_registration_asset_identity.mjs --self-test
+      - name: Write status race-safely
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          write_status(){
+            mkdir -p release/generated
+            cat > release/generated/answer_gpt_registration_asset_identity.status.txt <<EOF
+          STATUS=PASS
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          REGISTRATION_KIT_DRIVE_FOLDER_ID=1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj
+          KNOWLEDGE_FILE_ID=1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk
+          KNOWLEDGE_RECORDS=10511
+          KNOWLEDGE_SHA256=be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213
+          INSTRUCTIONS_FILE_ID=1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik
+          INSTRUCTIONS_SHA256=084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be
+          OUTPUT_SCHEMA_FILE_ID=1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE
+          OUTPUT_SCHEMA_SHA256=8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b
+          EXACT_ASSET_IDENTITY_REQUIRED=true
+          REAL_RUNTIME_EXECUTED=false
+          MAIN_TOUCHED=false
+          EOF
+          }
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            write_status
+            git add release/generated/answer_gpt_registration_asset_identity.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record answer GPT registration asset identity CI status (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
