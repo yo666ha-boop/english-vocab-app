@@ -1,0 +1,52 @@
+name: Test Mikami Answer GPT Handoff V2
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/patch_mikami_answer_gpt_handoff_v2.mjs'
+      - '.github/workflows/test-mikami-answer-gpt-handoff-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node tools/patch_mikami_answer_gpt_handoff_v2.mjs --self-test
+      - name: Record status
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/answer_gpt_handoff_v2.status.txt <<EOF
+          STATUS=PASS
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          PATCH=tools/patch_mikami_answer_gpt_handoff_v2.mjs
+          CUSTOM_GPT_URL_HOST_GATE=chatgpt.com,chat.openai.com
+          CUSTOM_GPT_URL_PATH_GATE=/g/<id>
+          ARBITRARY_HTTPS_URL_REJECTED=true
+          PRIVATE_KNOWLEDGE_EMBEDDED=false
+          PUBLIC_ARTIFACT_REBUILD_REQUIRED=true
+          MAIN_ROOT_TOUCHED=false
+          EOF
+            git add release/generated/answer_gpt_handoff_v2.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record answer GPT handoff v2 CI status (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
