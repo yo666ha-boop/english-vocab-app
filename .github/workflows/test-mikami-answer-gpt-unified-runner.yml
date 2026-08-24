@@ -7,6 +7,7 @@ on:
     paths:
       - 'tools/run_mikami_pipeline_v4_answer_gpt.mjs'
       - 'tools/patch_mikami_answer_gpt_handoff.mjs'
+      - 'tools/patch_mikami_answer_gpt_handoff_v2.mjs'
       - 'tools/test_mikami_answer_gpt_photo_routing_contract.mjs'
       - '.github/workflows/finalize-mikami-canonical-drive.yml'
       - '.github/workflows/test-mikami-answer-gpt-unified-runner.yml'
@@ -29,11 +30,12 @@ jobs:
       - name: Syntax checks
         run: |
           node --check tools/patch_mikami_answer_gpt_handoff.mjs
+          node --check tools/patch_mikami_answer_gpt_handoff_v2.mjs
           node --check tools/run_mikami_pipeline_v4_answer_gpt.mjs
           node --check tools/test_mikami_answer_gpt_photo_routing_contract.mjs
 
-      - name: Handoff patch regression
-        run: node tools/patch_mikami_answer_gpt_handoff.mjs --self-test
+      - name: Handoff v2 patch regression
+        run: node tools/patch_mikami_answer_gpt_handoff_v2.mjs --self-test
 
       - name: My GPT-only photo routing regression
         run: node tools/test_mikami_answer_gpt_photo_routing_contract.mjs
@@ -53,8 +55,11 @@ jobs:
           grep -q 'qb_data_unchanged_after_handoff_patch' "$F"
           grep -q 'PRIVATE_KNOWLEDGE_EMBEDDED=false' "$F"
           grep -q 'QUESTION_BANK_CHANGED=false' "$F"
+          grep -q 'patch_mikami_answer_gpt_handoff_v2.mjs' "$R"
           grep -q 'JSON.stringify(beforeQb) === JSON.stringify(afterQb)' "$R"
           grep -q 'audit_final_canonical.mjs' "$R"
+          grep -q 'handoff_patch_version: 2' "$R"
+          grep -q 'arbitrary_https_url_rejected: true' "$R"
           grep -q 'question_id_order_preserved: true' "$R"
           grep -q 'private_knowledge_embedded: false' "$R"
           grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$R"
@@ -65,7 +70,7 @@ jobs:
           grep -q "photo_attachment_location: 'MY_GPT_ONLY'" "$T"
           grep -q 'app_photo_analysis_primary: false' "$T"
           ! grep -q '1t51uacLDfzhv8gBsyi9H_czRnbGsuCaC' "$F"
-          echo PASS_UNIFIED_ANSWER_GPT_WIRING
+          echo PASS_UNIFIED_ANSWER_GPT_WIRING_V2
           echo PASS_PHOTO_ATTACHMENT_LOCATION_MY_GPT_ONLY
 
       - name: Record durable PASS
@@ -77,7 +82,11 @@ jobs:
             echo 'STATUS=PASS'
             echo "SOURCE_SHA=$GITHUB_SHA"
             echo 'V4_REGRESSION=PASS'
+            echo 'HANDOFF_PATCH_VERSION=2'
             echo 'HANDOFF_PATCH_SELF_TEST=PASS'
+            echo 'CUSTOM_GPT_URL_HOST_GATE=PASS'
+            echo 'CUSTOM_GPT_URL_G_PATH_GATE=PASS'
+            echo 'ARBITRARY_HTTPS_URL_REJECTED=true'
             echo 'PHOTO_ROUTING_CONTRACT=PASS'
             echo 'UNIFIED_RUNNER_SYNTAX=PASS'
             echo 'FINALIZE_WIRING=PASS'
@@ -88,13 +97,11 @@ jobs:
             echo 'APP_PHOTO_INPUT_SCOPE=legacy_fallback_only'
             echo 'MY_GPT_DIRECT_PHOTO_ATTACHMENT=true'
             echo 'PRIVATE_KNOWLEDGE_EMBEDDED=false'
-            echo 'KNOWN_REAL_CANONICAL_UNIFIED_HTML_SHA256=c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f'
-            echo 'KNOWN_REAL_CANONICAL_UNIFIED_ZIP_SHA256=79d7707b606d1f32e235f10997f62146178638cb0738dd8c41e6a085011747b6'
-            echo 'REAL_CANONICAL_UNIFIED_RUN=PASS_PREVIOUSLY_VERIFIED_NOT_REBUILT_BY_THIS_REGRESSION'
+            echo 'REAL_CANONICAL_UNIFIED_RUN=PASS_PREVIOUSLY_VERIFIED_V1_ARTIFACT;V2_PUBLICATION_SEPARATE'
           } > release/generated/answer_gpt_unified_runner.status.txt
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- release/generated/answer_gpt_unified_runner.status.txt
-          git commit -m 'record unified V4 + My GPT runner PASS' || exit 0
+          git commit -m 'record unified V4 + My GPT v2 runner PASS' || exit 0
           git pull --rebase origin mikami-canonical-repair
           git push origin HEAD:mikami-canonical-repair
