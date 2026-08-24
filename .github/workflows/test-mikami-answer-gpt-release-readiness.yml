@@ -20,15 +20,64 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate-release-readiness:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Cross-check answer GPT release state
-        run: node tools/validate_mikami_answer_gpt_release_readiness.mjs
+        id: validate
+        shell: bash
+        run: |
+          set +e
+          node tools/validate_mikami_answer_gpt_release_readiness.mjs > /tmp/release-readiness.out 2>&1
+          CODE=$?
+          cat /tmp/release-readiness.out
+          echo "code=$CODE" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Record durable readiness status
+        shell: bash
+        env:
+          VALIDATE_CODE: ${{ steps.validate.outputs.code }}
+        run: |
+          set -euo pipefail
+          OUTPUT=$(tr '\n' ';' < /tmp/release-readiness.out | cut -c1-3000)
+          STATUS=FAIL
+          if test "${VALIDATE_CODE}" = 0; then STATUS=PASS; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/answer_gpt_release_readiness.status.txt <<EOF
+          STATUS=${STATUS}
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          VALIDATOR_EXIT_CODE=${VALIDATE_CODE}
+          PRIVATE_CANONICAL_V4_PROOF_REQUIRED=true
+          HANDOFF_V2_COMPOSED_PROOF_REQUIRED=true
+          GITHUB_PAGES_EXACT_V2_REQUIRED=true
+          REGISTRATION_ASSET_IDENTITY_REQUIRED=true
+          EVIDENCE_CHAIN_V2_REQUIRED=true
+          TRUE_RUNTIME_STILL_REQUIRED=true
+          EXPECTED_PAGES_BYTES=3812209
+          EXPECTED_PAGES_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          OUTPUT=${OUTPUT}
+          EOF
+            git add release/generated/answer_gpt_release_readiness.status.txt
+            if git diff --cached --quiet; then break; fi
+            git commit -m "record answer GPT release readiness ${STATUS} (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            sleep $((attempt*2))
+          done
+          test "${STATUS}" = PASS
