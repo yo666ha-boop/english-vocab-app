@@ -1,8 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v34",
-  "updated_at_jst": "2026-08-24T23:25:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v35",
+  "updated_at_jst": "2026-08-25T00:22:12+09:00",
   "branch": "mikami-canonical-repair",
-  "observed_branch_head_before_checkpoint": "aab420aa1c20db0c87f36ac69b64dc3f990a2b8c",
+  "observed_branch_head_before_checkpoint": "c837ebba3ebcd4bd49bff687d3cd3d73c9b5f3f8",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -48,7 +48,9 @@
       "pages_bytes": 3812347,
       "pages_sha256": "2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0",
       "pages_exact_v3_proof": "PASS",
-      "pages_probe_this_run": "WEB_FETCH_COULD_NOT_REVALIDATE_PAGES; retained latest exact workflow proof",
+      "pages_probe_this_run": "CONTAINER_DNS_COULD_NOT_RESOLVE_GITHUB_IO; GitHub main source revalidated at 3812347 bytes; retained latest exact workflow proof",
+      "main_head_this_run": "442c45536e83a87ee0f785a57b2abf1586f0a820",
+      "problem_app_blob_this_run": "1a58abba1744f09b3612c9f84d6ce9d96e1f6a4f",
       "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_vocabulary_app_unchanged": true,
@@ -103,16 +105,17 @@
       "plugin_catalog_custom_gpt_editor_found": false,
       "agent_browser_cli_available": false,
       "playwright_available": true,
-      "chromium_available": true,
+      "system_chromium_available": true,
       "saved_browser_auth_state_found": false,
-      "playwright_editor_probe_result": "ERR_BLOCKED_BY_ADMINISTRATOR",
+      "playwright_default_browser_bundle_available": false,
+      "playwright_system_chromium_probe_result": "ERR_BLOCKED_BY_ADMINISTRATOR",
       "web_editor_probe_this_run": "PUBLIC_FETCH_REACHABLE_BUT_NO_AUTHENTICATED_WRITE_UI",
       "public_editor_url": "https://chatgpt.com/gpts/editor",
       "registration_claimed": false
     },
     "public_index_probe": {
-      "latest_status_commit": "aab420aa1c20db0c87f36ac69b64dc3f990a2b8c",
-      "run_id": 32737271862,
+      "latest_status_commit": "c837ebba3ebcd4bd49bff687d3cd3d73c9b5f3f8",
+      "run_id": 32738057936,
       "status": "HASH_MISMATCH",
       "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
       "actual_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
@@ -128,13 +131,16 @@
       "legacy_finalization": "PENDING_TRUE_RUNTIME"
     },
     "completed_this_run": [
-      "read actual branch HEAD aab420aa1c20db0c87f36ac69b64dc3f990a2b8c and checkpoint v33 first, superseding prompt v27",
-      "re-probed connected plugin catalog for Custom GPT editor capability; none found",
-      "re-probed ChatGPT GPT editor through public web fetch; endpoint is reachable but no authenticated editor write UI/session is exposed",
-      "searched connected Drive for みかみ塾 答案分析GPT; registration kit and private evidence folders exist but no actual /g/<id> was found",
-      "rechecked correct_original private evidence folder directly; it remains empty",
-      "inspected newest branch commit and recorded public index probe run 32737271862 HASH_MISMATCH without touching protected root vocabulary app",
-      "did not change main/root vocabulary app or Vercel vocabulary project"
+      "read actual branch HEAD c837ebba3ebcd4bd49bff687d3cd3d73c9b5f3f8 and checkpoint v34 first, superseding prompt v27",
+      "inspected c837ebba actual diff: only release/generated/answer_gpt_public_index_probe.status.txt changed; latest probe run 32738057936 remains HASH_MISMATCH and root vocabulary app was not modified",
+      "searched plugin catalog again for Custom GPT/ChatGPT editor/GPT builder write capability; none found",
+      "verified Playwright CLI/Python are installed; default bundled browser is absent, but system /usr/bin/chromium exists",
+      "launched system Chromium through Playwright and attempted https://chatgpt.com/gpts/editor; navigation failed with ERR_BLOCKED_BY_ADMINISTRATOR before authenticated editor UI",
+      "searched connected Drive for みかみ塾 答案分析GPT and chatgpt.com/g/; registration assets/private evidence folders exist but no actual /g/<id> was found",
+      "rechecked correct_original private folder by parent ID; it remains empty",
+      "revalidated main HEAD 442c45536e83a87ee0f785a57b2abf1586f0a820 and main problem-app/index.html blob 1a58abba1744f09b3612c9f84d6ce9d96e1f6a4f at 3812347 bytes",
+      "attempted direct GitHub Pages probe; current container cannot resolve yo666ha-boop.github.io, so latest exact v3 workflow proof remains authoritative",
+      "did not modify main/root vocabulary app or Vercel vocabulary project"
     ],
     "remaining_work": [
       "obtain authenticated actual Custom GPT editor/runtime access",
@@ -150,7 +156,7 @@
     "stopped_at": {
       "stage": "external actual runtime access/materials",
       "status": "BLOCKED_ONLY_BY_REAL_CUSTOM_GPT_EDITOR_AND_REAL_ANSWER_PHOTOS",
-      "detail": "No authenticated Custom GPT editor write surface is exposed in this run; plugin search returned none, public web fetch is non-authenticated, prior Playwright/Chromium route remains administrator-blocked, no actual /g/<id> is found, and correct_original evidence folder is empty."
+      "detail": "No authenticated Custom GPT editor write surface is exposed in this run. Plugin search returned none; no saved auth state was found; system Chromium can launch but chatgpt.com/gpts/editor is blocked by administrator policy; Drive contains no actual /g/<id>; correct_original evidence folder is empty."
     },
     "next_start": "read latest HEAD/checkpoint first; do not redo PASS gates. Immediately re-probe authenticated Custom GPT editor/runtime access and real four-photo evidence. If access appears, register exact assets and continue through four real cases, A4 actual render/print, and one-shot hardened finalizer.",
     "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> hardened finalizer PASS -> legacy decision -> overall completion"
