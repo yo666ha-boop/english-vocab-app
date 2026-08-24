@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v27",
-  "updated_at_jst": "2026-08-21T01:27:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v28",
+  "updated_at_jst": "2026-08-24T19:56:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
@@ -11,122 +11,119 @@
     "repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
     "question_count": 10513,
     "english_question_count": 10511,
-    "final_quality_errors": 0
+    "final_quality_errors": 0,
+    "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "MY_GPT_ONLY_ROUTING_LOCKED_GITHUB_PAGES_EXACT_PASS_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+    "status": "PRIVATE_REGISTRATION_ASSET_IDENTITY_PASS_EVIDENCE_CHAIN_PASS_HANDOFF_URL_HARDENING_V2_CI_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
     "knowledge": {
       "status": "PASS",
       "records": 10511,
       "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "public_exposure": false
     },
-    "my_gpt_routing_contract": {
-      "status": "PASS_LOCKED_IN_CODE_AND_CI",
-      "photo_attachment_location": "MY_GPT_ONLY",
-      "app_photo_analysis_primary": false,
-      "app_photo_input_scope": "legacy_fallback_only",
-      "my_gpt_direct_photo_attachment": true,
-      "primary_handoff_fields": ["source_mode", "target", "question_ids", "question_count"]
-    },
-    "current_routing_materialization": {
-      "status": "PASS_EXACT_REVERIFIED_THIS_RUN",
-      "drive_storage_id": "19g4v7RH1h6EvYi71e09yNOeFJ3pWyFO0",
-      "current_html_bytes": 3812063,
-      "current_html_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "private_knowledge_embedded": false,
-      "legacy_copy_paste": "fallback_only"
-    },
-    "github_xz_chunk_bridge": {
-      "status": "COMPLETE_22_OF_22_PUBLISHED_GITHUB_PAGES_EXACT_PASS",
-      "workflow": ".github/workflows/publish-mikami-routing-from-xz-chunks.yml",
-      "transfer_dir": "release/transfer/mikami-routing-xz",
-      "manifest": "release/transfer/mikami-routing-xz/MANIFEST.sha256",
-      "progress_status_file": "release/generated/problem_app_xz_chunk_bridge_progress.status.txt",
-      "publication_status_file": "release/generated/problem_app_xz_chunk_publication.status.txt",
-      "xz_bytes": 130020,
-      "base64_chars": 173360,
-      "base64_sha256": "83e27afb5288315eb1785f40c8f658e599646e4402b84564a2326af0f713665f",
-      "chunk_size_chars": 8000,
-      "total_chunks": 22,
-      "uploaded_chunks": 22,
-      "contiguous_verified_range": "0000-0021",
-      "next_chunk": null,
-      "last_chunk_chars": 5360,
-      "ready_created": true,
-      "ready_commit": "4112758ff89d43db623d30421ae655931fb09df4",
-      "final_batch_commit": "8ae0fb63791956ac2d9689409e0d41095b4ff7ba",
-      "final_batch_range": "0019-0021",
-      "final_batch_byte_exact": true,
-      "final_blob_sha1": {
-        "0019": "8bb90c1aa3ba5b6932173f703156c3588d280c37",
-        "0020": "565ee01dd2277602ca83b34ad08d5b430b5cf28d",
-        "0021": "b2280ac7557eb1947807f98aa369eaad94029d1b"
-      }
-    },
-    "publication": {
-      "status": "PASS_EXACT",
+    "publication_v1": {
+      "status": "PASS_EXACT_BUT_HANDOFF_URL_VALIDATION_HARDENING_NOW_REQUIRED",
       "workflow_run_id": 32391487839,
-      "trigger_sha": "4112758ff89d43db623d30421ae655931fb09df4",
-      "main_publish_commit": "2eee7a26f73e26b37801d861a9576767e84b7259",
-      "target_main_path": "problem-app/index.html",
-      "main_problem_app_git_blob_sha1": "adebc0ae502759f1d68418deb8cc7bf00296f5d3",
-      "main_problem_app_bytes": 3812063,
-      "main_problem_app_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "target_pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
-      "pages_http": 200,
-      "pages_bytes": 3812063,
-      "pages_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "pages_pass": true,
-      "root_index_sha256_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
-      "root_index_sha256_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
-      "root_index_git_blob_sha_before": "e3d838ce1745e632d8506c47d39b4e0eed840c5f",
-      "root_index_git_blob_sha_after": "e3d838ce1745e632d8506c47d39b4e0eed840c5f",
+      "pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+      "html_bytes": 3812063,
+      "html_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
       "root_vocabulary_app_unchanged": true,
       "private_knowledge_embedded": false,
-      "vocabulary_app_project_id_protected": "prj_k85GEgd76tQvHoL8YC9IDjnq553e"
+      "photo_attachment_location": "MY_GPT_ONLY",
+      "app_photo_analysis_primary": false,
+      "app_photo_input_scope": "legacy_fallback_only"
     },
-    "true_runtime_gate": {
-      "status": "HARDENED_EVIDENCE_BACKED_V3_VALIDATOR_CI_PASS_RUNTIME_PENDING",
-      "validator_ci_run_id": 32335459190,
-      "required_photo_cases": 4,
-      "a4_orientation": "portrait",
-      "a4_page_range": "1-2"
+    "evidence_chain": {
+      "status": "PASS_SELF_TEST_RUNTIME_PENDING",
+      "gate_version": "evidence-chain-v2",
+      "ci_run_id": 32718712535,
+      "tested_head_sha": "c0a2be517f35d5ee4791f98962790be434f2d319",
+      "race_safe_writeback": true,
+      "negative_cases_rejected": 8,
+      "real_runtime_executed": false
     },
-    "completed_this_run": [
-      "re-read latest HEAD, checkpoint, progress status and MANIFEST",
-      "streamed exact Drive routing artifact locally and reverified 3812063-byte SHA256 identity",
-      "regenerated xz -9e/base64/chunks and matched MANIFEST including final chunk SHAs",
-      "created exact Git blobs for chunks 0019-0021 and verified blob SHA1 against local git hash-object",
-      "committed final chunks 0019-0021 as one tree commit 8ae0fb63791956ac2d9689409e0d41095b4ff7ba",
-      "created READY only after 22/22 exact verification",
-      "publication workflow run 32391487839 reconstructed exact HTML and published only main/problem-app/index.html",
-      "verified main problem-app Git blob SHA1 equals the local exact artifact Git blob SHA1",
-      "verified vocabulary root index Git blob SHA unchanged across publication",
-      "GitHub Pages returned HTTP 200 with exact 3812063 bytes and exact SHA256",
-      "kept private Knowledge unexposed and My GPT-only photo routing fixed"
+    "private_registration_kit_audit": {
+      "status": "PASS",
+      "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
+      "file_count": 4,
+      "visibility": "not_shared",
+      "knowledge_file_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
+      "knowledge_bytes": 3028093,
+      "knowledge_records": 10511,
+      "knowledge_unique_ids": 10511,
+      "knowledge_first_id": "E1-BQ-001",
+      "knowledge_last_id": "M3N-02400",
+      "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
+      "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
+      "instructions_bytes": 7246,
+      "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
+      "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
+      "schema_bytes": 4703,
+      "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b",
+      "registration_guide_id": "1h7-RO6PsCWwUSMaRVFWGVC4DP817NSpWtlYzZgmORnw",
+      "actual_custom_gpt_url_found_in_drive": false
+    },
+    "registration_asset_identity_gate": {
+      "status": "PASS_RUNTIME_PENDING",
+      "ci_run_id": 32718769797,
+      "tested_head_sha": "6e5754855e8805b1c2174ee04b2208c0b85cc3bb",
+      "runtime_template_identity": "PASS",
+      "evidence_template_identity": "PASS",
+      "exact_knowledge_instructions_schema_ids_and_sha_required": true,
+      "real_runtime_executed": false
+    },
+    "handoff_url_hardening": {
+      "issue_found": "published v1 normalizeGptUrl accepted any HTTPS URL, while final runtime gate requires an actual ChatGPT Custom GPT /g/ URL",
+      "published_v1_contains_chatgpt_host_gate": false,
+      "published_v1_contains_custom_gpt_path_gate": false,
+      "source_fix": "tools/patch_mikami_answer_gpt_handoff_v2.mjs",
+      "source_fix_commit": "1b99d744b346ed05d10280021eb3cccdfc03310d",
+      "required_hosts": ["chatgpt.com", "chat.openai.com"],
+      "required_path": "/g/<id>",
+      "ci_workflow": ".github/workflows/test-mikami-answer-gpt-handoff-v2.yml",
+      "ci_workflow_commit": "2929344f3c728bebf034e0d9d3d856cf451dbba9",
+      "ci_status": "PENDING_STATUS_WRITEBACK",
+      "published_artifact_rebuild_required_after_ci_pass": true
+    },
+    "completed_this_manual_run": [
+      "re-read latest branch HEAD and v27 checkpoint without changing the scheduled task",
+      "hardened evidence-chain CI status writeback with fetch/reset/retry and recovered PASS run 32718432045 then template-triggered PASS run 32718712535",
+      "fetched the private registration-kit folder and confirmed exactly four required files, all not_shared",
+      "re-downloaded private Knowledge, Instructions and schema and independently recalculated sizes/SHA256",
+      "revalidated Knowledge as 10511 JSONL records / 10511 unique IDs / first E1-BQ-001 / last M3N-02400",
+      "validated Instructions required behavior markers and parsed output schema required fields",
+      "bound runtime-results and evidence templates to exact Knowledge/Instructions/schema Drive IDs and SHA256 values",
+      "added registration asset identity validator and race-safe CI; run 32718769797 PASS",
+      "searched Drive for an existing chatgpt.com/g/ URL and found none",
+      "inspected the exact published HTML and found normalizeGptUrl accepted arbitrary HTTPS URLs",
+      "added handoff v2 source patch requiring ChatGPT host plus /g/<id> path and added CI workflow"
     ],
     "remaining_work": [
-      "register private Knowledge, formal Instructions and output schema in the actual Custom GPT",
-      "run four real answer-photo cases in the actual Custom GPT and capture evidence",
-      "render/print actual A4 portrait 1-2 page report and capture evidence",
-      "fill actual runtime-results JSON and run hardened true-runtime/evidence validators to PASS",
-      "after true runtime PASS finalize legacy copy/paste as remove_legacy or permanent_fallback"
+      "collect answer_gpt_handoff_v2 CI result; if failed inspect exact failure and fix until PASS",
+      "after handoff v2 CI PASS switch the unified answer-GPT build runner from v1 patch to v2",
+      "run the already-approved exact private canonical through the app-shell-only v2 handoff build without reworking qb-data",
+      "prove qb-data unchanged, ID order preserved, quality errors 0 and private Knowledge still unembedded",
+      "republish only main/problem-app/index.html with new exact v2 artifact while proving vocabulary root index unchanged",
+      "verify GitHub Pages HTTP/body SHA and actual Custom GPT URL input rejects arbitrary HTTPS URLs",
+      "register the exact private Knowledge/Instructions/schema assets in the actual Custom GPT when authenticated editor access is available",
+      "run four real answer-photo cases, actual A4 portrait 1-2 page render/print, then hardened true-runtime + evidence-chain + registration-asset-identity validators",
+      "after all true runtime gates PASS finalize legacy copy/paste as remove_legacy or permanent_fallback"
     ],
-    "current_stage": "actual Custom GPT registration and true-runtime verification",
+    "current_stage": "handoff URL hardening before actual Custom GPT registration",
     "stopped_at": {
-      "stage": "actual Custom GPT authenticated editor access",
-      "status": "BLOCKED_BY_UNAVAILABLE_AUTHENTICATED_EDITOR_SURFACE",
-      "detail": "Repository/publication work is complete and exact. The available tool surface in this run does not expose an authenticated Custom GPT editor/runtime capable of registering Knowledge/Instructions/schema or executing the required real-photo tests. Browser automation CLI is not installed in the runtime."
+      "stage": "handoff v2 CI status writeback",
+      "status": "PENDING",
+      "detail": "Source fix and CI workflow are committed. No PASS status file was visible yet at this manual-run checkpoint. Do not claim the v2 public artifact is complete until CI passes and the exact artifact is rebuilt/republished. Authenticated Custom GPT editor access remains unavailable, but repository/publication work can still continue first."
     },
-    "next_start": "first re-check for authenticated Custom GPT editor/runtime access; if available, register assets immediately and execute the four real photo cases plus A4 evidence flow",
-    "next_stage": "actual Custom GPT registration -> four real photo cases -> A4 actual render/print -> hardened true-runtime/evidence PASS -> legacy fallback finalization"
+    "next_start": "read latest HEAD and release/generated/answer_gpt_handoff_v2.status.txt first; if absent or FAIL, inspect/fix v2 CI; if PASS, immediately switch unified runner to v2 and rebuild/republish the exact problem-app shell",
+    "next_stage": "handoff v2 CI PASS -> exact v2 unified build -> problem-app republish exact PASS -> actual Custom GPT registration -> four real photos -> A4 -> strict runtime/evidence PASS -> fallback finalization"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
   "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_MY_GPT_ONLY_ROUTING_LOCKED_GITHUB_PAGES_EXACT_PASS_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_PRIVATE_REGISTRATION_IDENTITY_PASS_EVIDENCE_CHAIN_PASS_HANDOFF_V2_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "The xz chunk bridge and public problem-app publication are now fully complete and exact. GitHub Pages is live with exact body SHA while the vocabulary root remains unchanged. The only remaining completion blocker is authenticated actual Custom GPT registration plus four real-photo and A4 runtime evidence tests."
+  "completion_note": "Manual continuation on 2026-08-24 advanced the repository beyond v27 without changing the existing schedule. Evidence-chain writeback is now PASS and race-safe; the private registration kit was independently re-audited and exact Knowledge/Instructions/schema identities are CI-bound. A real mismatch was then found in the currently published handoff: arbitrary HTTPS URLs were accepted. Handoff v2 now requires an actual ChatGPT Custom GPT host and /g/ path. Next run starts by collecting/fixing that CI, then rebuilds and republishes only problem-app before actual Custom GPT runtime tests. Vocabulary root/main app remains protected and private Knowledge remains private."
 }
