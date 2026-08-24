@@ -36,9 +36,10 @@ try {
 
   // 2) Change only the answer-analysis handoff UI. The primary route must NOT
   // upload/analyze photos inside the problem app. The answer photo is attached
-  // directly in the dedicated My GPT. V2 additionally rejects arbitrary HTTPS
-  // URLs and only accepts a real ChatGPT Custom GPT /g/<id> URL.
-  run('tools/patch_mikami_answer_gpt_handoff_v2.mjs', [repaired, outputPath]);
+  // directly in the dedicated My GPT. V2 restricts URLs to a real ChatGPT
+  // Custom GPT /g/<id>. V3 additionally avoids treating the intentional
+  // noopener return value as a popup failure.
+  run('tools/patch_mikami_answer_gpt_handoff_v3.mjs', [repaired, outputPath]);
 
   // 3) Prove that the problem bank itself is byte-for-byte equivalent after
   // JSON parsing and that all IDs/order remain unchanged.
@@ -60,12 +61,19 @@ try {
     'id="legacyPhotoAnalysisFallback"',
     '旧方式（予備）',
     'mikami-answer-gpt-handoff-v1',
+    'mikami-answer-gpt-handoff-opener-v3',
     'question_ids: ids',
     '答案写真はMy GPTへ直接添付',
     "['chatgpt.com', 'chat.openai.com'].includes(url.hostname)",
-    '/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)'
+    '/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)',
+    'function openMyGptNoOpener(url){',
+    "link.target = '_blank';",
+    "link.rel = 'noopener';",
+    'openMyGptNoOpener(url);'
   ];
   for (const marker of requiredMarkers) assert(html.includes(marker), `missing My GPT marker: ${marker}`);
+  assert(!html.includes("window.open(url, '_blank', 'noopener')"), 'old noopener return-value pattern remains');
+  assert(!html.includes('if (!opened)'), 'old false popup-failure branch remains');
 
   // Permanent routing contract:
   // - primary app route only opens My GPT / copies minimal IDs
@@ -73,10 +81,15 @@ try {
   // - any legacy <input type=file> must stay inside the collapsed fallback only
   const openGptAt = html.indexOf('id="openAnswerGptBtn"');
   const fallbackAt = html.indexOf('id="legacyPhotoAnalysisFallback"');
+  const fallbackOpenAt = html.lastIndexOf('<details', fallbackAt);
+  const fallbackOpenEnd = html.indexOf('>', fallbackOpenAt);
   const fallbackCloseAt = html.indexOf('</details>', fallbackAt);
   const photoInputAt = html.indexOf('id="photoInput"');
   assert(openGptAt >= 0 && fallbackAt >= 0 && openGptAt < fallbackAt,
     'My GPT open button must be the primary route before legacy fallback');
+  assert(fallbackOpenAt >= 0 && fallbackOpenEnd > fallbackOpenAt, 'legacy fallback opening tag not found');
+  assert(!/\sopen(?:\s|>)/i.test(html.slice(fallbackOpenAt, fallbackOpenEnd + 1)),
+    'legacy fallback must remain collapsed by default');
   assert(fallbackCloseAt > fallbackAt, 'legacy fallback closing tag not found');
   assert(photoInputAt > fallbackAt && photoInputAt < fallbackCloseAt,
     'app-side photo input escaped legacy fallback; primary route must be My GPT only');
@@ -116,7 +129,7 @@ try {
   const report = {
     status: 'PASS',
     runner: 'run_mikami_pipeline_v4_answer_gpt.mjs',
-    handoff_patch_version: 2,
+    handoff_patch_version: 3,
     canonical_source_sha256: sha256(inputPath),
     repaired_v4_sha256: sha256(repaired),
     unified_output_sha256: sha256(outputPath),
@@ -131,6 +144,10 @@ try {
     custom_gpt_url_host_gate: ['chatgpt.com','chat.openai.com'],
     custom_gpt_url_path_gate: '/g/<id>',
     arbitrary_https_url_rejected: true,
+    noopener_false_failure_fixed: true,
+    safe_anchor_noopener_opener: true,
+    old_window_open_noopener_pattern_present: false,
+    old_if_not_opened_branch_present: false,
     photo_attachment_location: 'MY_GPT_ONLY',
     app_photo_analysis_primary: false,
     app_photo_input_scope: 'legacy_fallback_only',
