@@ -1,11 +1,17 @@
 {
   "registration": {
     "actual_custom_gpt": false,
+    "registration_kit_drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
     "knowledge_registered": false,
+    "knowledge_file_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
     "knowledge_records": 10511,
     "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
     "instructions_applied": false,
+    "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
+    "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
     "output_schema_applied": false,
+    "output_schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
+    "output_schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b",
     "gpt_url": "",
     "verified_at": "",
     "registration_evidence_sha256": ""
