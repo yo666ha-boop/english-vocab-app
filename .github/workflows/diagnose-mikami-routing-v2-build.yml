@@ -1,0 +1,102 @@
+name: Diagnose deterministic Mikami problem-app v2 rebuild
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/diagnose-mikami-routing-v2-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - name: Rebuild v1 chunks and apply exact v2 patch
+        id: diag
+        shell: bash
+        run: |
+          set +e
+          mkdir -p /tmp/mikami-v2diag
+          DIR='release/transfer/mikami-routing-xz'
+          find "$DIR" -maxdepth 1 -type f -name 'chunk-*.b64' -print0 | sort -z | xargs -0 cat | tr -d '\r\n ' > /tmp/mikami-v2diag/payload.b64
+          base64 -d /tmp/mikami-v2diag/payload.b64 > /tmp/mikami-v2diag/payload.xz
+          xz -dc /tmp/mikami-v2diag/payload.xz > /tmp/mikami-v2diag/v1.html
+          V1_BYTES=$(wc -c < /tmp/mikami-v2diag/v1.html | tr -d ' ')
+          V1_SHA=$(sha256sum /tmp/mikami-v2diag/v1.html | awk '{print $1}')
+          python - <<'PY' > /tmp/mikami-v2diag/python.out 2>&1
+          from pathlib import Path
+          import re, hashlib, sys
+          p=Path('/tmp/mikami-v2diag/v1.html')
+          s=p.read_text(encoding='utf-8')
+          old="""      if (url.protocol !== 'https:') return '';\n      return url.href;"""
+          new="""      if (url.protocol !== 'https:') return '';\n      if (!['chatgpt.com', 'chat.openai.com'].includes(url.hostname)) return '';\n      if (!/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)) return '';\n      return url.href;"""
+          print('OLD_COUNT='+str(s.count(old)))
+          if s.count(old)!=1: sys.exit(11)
+          m=re.search(r'<script\s+id=["\']qb-data["\']\s+type=["\']application/json["\']>([\s\S]*?)</script>',s,re.I)
+          if not m: sys.exit(12)
+          qb=hashlib.sha256(m.group(1).encode()).hexdigest()
+          t=s.replace(old,new,1)
+          m2=re.search(r'<script\s+id=["\']qb-data["\']\s+type=["\']application/json["\']>([\s\S]*?)</script>',t,re.I)
+          print('QB_BEFORE='+qb)
+          print('QB_AFTER='+(hashlib.sha256(m2.group(1).encode()).hexdigest() if m2 else 'MISSING'))
+          if not m2 or hashlib.sha256(m2.group(1).encode()).hexdigest()!=qb: sys.exit(13)
+          if "['chatgpt.com', 'chat.openai.com'].includes(url.hostname)" not in t: sys.exit(14)
+          if "/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)" not in t: sys.exit(15)
+          if 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' in t: sys.exit(16)
+          Path('/tmp/mikami-v2diag/v2.html').write_text(t,encoding='utf-8')
+          PY
+          PY_CODE=$?
+          V2_BYTES=0; V2_SHA=''
+          if test -s /tmp/mikami-v2diag/v2.html; then
+            V2_BYTES=$(wc -c < /tmp/mikami-v2diag/v2.html | tr -d ' ')
+            V2_SHA=$(sha256sum /tmp/mikami-v2diag/v2.html | awk '{print $1}')
+          fi
+          {
+            echo "V1_BYTES=$V1_BYTES"
+            echo "V1_SHA=$V1_SHA"
+            echo "PY_CODE=$PY_CODE"
+            echo "V2_BYTES=$V2_BYTES"
+            echo "V2_SHA=$V2_SHA"
+          } > /tmp/mikami-v2diag/result.env
+          cat /tmp/mikami-v2diag/python.out
+          cat /tmp/mikami-v2diag/result.env
+          exit 0
+      - name: Always record diagnostic status
+        shell: bash
+        run: |
+          set -euo pipefail
+          . /tmp/mikami-v2diag/result.env
+          PYOUT=$(tr '\n' ';' < /tmp/mikami-v2diag/python.out | cut -c1-1000)
+          PASS=false
+          if test "$V1_BYTES" = 3812063 && test "$V1_SHA" = 6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81 && test "$PY_CODE" = 0 && test "$V2_BYTES" = 3812209 && test "$V2_SHA" = 83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0; then PASS=true; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/problem_app_handoff_v2_build_diagnostic.status.txt <<EOF
+          STATUS=$([ "$PASS" = true ] && echo PASS || echo FAIL)
+          RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          V1_BYTES=${V1_BYTES}
+          V1_SHA256=${V1_SHA}
+          PYTHON_EXIT_CODE=${PY_CODE}
+          V2_BYTES=${V2_BYTES}
+          V2_SHA256=${V2_SHA}
+          EXPECTED_V2_BYTES=3812209
+          EXPECTED_V2_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          DETAILS=${PYOUT}
+          MAIN_TOUCHED=false
+          EOF
+            git add release/generated/problem_app_handoff_v2_build_diagnostic.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record deterministic v2 build diagnostic (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
