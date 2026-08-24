@@ -999,21 +999,29 @@ updateBuilderStatus(baseFiltered());
       : 'コピーできませんでした。ブラウザのクリップボード権限を確認してください。', ok);
   });
 
+  function openMyGptNoOpener(url){
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
   byId('openAnswerGptBtn')?.addEventListener('click', async () => {
     let url = normalizeGptUrl(localStorage.getItem(GPT_URL_KEY));
     if (!url) url = configureUrl();
     if (!url) return;
-    const opened = window.open(url, '_blank', 'noopener');
+    openMyGptNoOpener(url);
     const payload = JSON.stringify(buildHandoff(), null, 2);
     const copied = await copyTextSafe(payload);
-    if (!opened) {
-      status('My GPTを開けませんでした。ポップアップを許可してください。');
-      return;
-    }
     status(copied
       ? 'My GPTを開きました。問題セット情報もコピー済みです。答案写真をMy GPTへ直接送ってください。'
       : 'My GPTを開きました。答案写真をMy GPTへ直接送ってください。', true);
   });
+  // mikami-answer-gpt-handoff-opener-v3
 })();
 <\/script>
 </body>
