@@ -106,3 +106,5 @@ jobs:
             sleep $((attempt*2))
           done
           exit 1
+
+# manual retrigger 2026-08-24T20:10+09:00
