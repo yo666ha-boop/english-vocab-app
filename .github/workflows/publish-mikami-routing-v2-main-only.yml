@@ -1,0 +1,108 @@
+name: Publish exact Mikami problem-app v2 to main only
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/publish-mikami-routing-v2-main-only.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - name: Build exact v2 from verified v1 chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR='release/transfer/mikami-routing-xz'
+          mkdir -p /tmp/mikami-main-v2build
+          find "$DIR" -maxdepth 1 -type f -name 'chunk-*.b64' -print0 | sort -z | xargs -0 cat | tr -d '\r\n ' > /tmp/mikami-main-v2build/payload.b64
+          base64 -d /tmp/mikami-main-v2build/payload.b64 > /tmp/mikami-main-v2build/payload.xz
+          xz -dc /tmp/mikami-main-v2build/payload.xz > /tmp/mikami-main-v2build/v1.html
+          test "$(wc -c < /tmp/mikami-main-v2build/v1.html | tr -d ' ')" = 3812063
+          test "$(sha256sum /tmp/mikami-main-v2build/v1.html | awk '{print $1}')" = 6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81
+          python - <<'PY'
+          from pathlib import Path
+          import re,hashlib
+          s=Path('/tmp/mikami-main-v2build/v1.html').read_text(encoding='utf-8')
+          old="""      if (url.protocol !== 'https:') return '';\n      return url.href;"""
+          new="""      if (url.protocol !== 'https:') return '';\n      if (!['chatgpt.com', 'chat.openai.com'].includes(url.hostname)) return '';\n      if (!/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)) return '';\n      return url.href;"""
+          assert s.count(old)==1
+          q=re.search(r'<script\s+id=["\']qb-data["\']\s+type=["\']application/json["\']>([\s\S]*?)</script>',s,re.I)
+          assert q
+          qsha=hashlib.sha256(q.group(1).encode()).hexdigest()
+          t=s.replace(old,new,1)
+          q2=re.search(r'<script\s+id=["\']qb-data["\']\s+type=["\']application/json["\']>([\s\S]*?)</script>',t,re.I)
+          assert q2 and hashlib.sha256(q2.group(1).encode()).hexdigest()==qsha
+          assert "['chatgpt.com', 'chat.openai.com'].includes(url.hostname)" in t
+          assert "/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)" in t
+          assert 'be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213' not in t
+          Path('/tmp/mikami-main-v2build/v2.html').write_text(t,encoding='utf-8')
+          print('QB_DATA_SHA256='+qsha)
+          PY
+          test "$(wc -c < /tmp/mikami-main-v2build/v2.html | tr -d ' ')" = 3812209
+          test "$(sha256sum /tmp/mikami-main-v2build/v2.html | awk '{print $1}')" = 83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+      - name: Update only main/problem-app/index.html
+        id: pub
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          ROOT_BEFORE=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          rm -rf /tmp/mikami-main-v2-worktree
+          git worktree add /tmp/mikami-main-v2-worktree origin/main
+          cd /tmp/mikami-main-v2-worktree
+          git switch -c mikami-problem-v2-main-only origin/main
+          mkdir -p problem-app
+          cp /tmp/mikami-main-v2build/v2.html problem-app/index.html
+          ROOT_AFTER=$(sha256sum index.html | awk '{print $1}')
+          test "$ROOT_BEFORE" = "$ROOT_AFTER"
+          test "$(wc -c < problem-app/index.html | tr -d ' ')" = 3812209
+          test "$(sha256sum problem-app/index.html | awk '{print $1}')" = 83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- problem-app/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'publish: exact hardened MyGPT problem app v2'
+            git push origin HEAD:main
+          fi
+          echo "root_before=$ROOT_BEFORE" >> "$GITHUB_OUTPUT"
+          echo "root_after=$ROOT_AFTER" >> "$GITHUB_OUTPUT"
+      - name: Record main-only publication status
+        shell: bash
+        env:
+          ROOT_BEFORE: ${{ steps.pub.outputs.root_before }}
+          ROOT_AFTER: ${{ steps.pub.outputs.root_after }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/problem_app_handoff_v2_main_publication.status.txt <<EOF
+          STATUS=PASS
+          RUN_ID=$GITHUB_RUN_ID
+          TESTED_HEAD_SHA=$GITHUB_SHA
+          V2_BYTES=3812209
+          V2_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          ROOT_INDEX_SHA_BEFORE=${ROOT_BEFORE}
+          ROOT_INDEX_SHA_AFTER=${ROOT_AFTER}
+          ROOT_INDEX_UNCHANGED=true
+          TARGET=main:problem-app/index.html
+          PRIVATE_KNOWLEDGE_EMBEDDED=false
+          PHOTO_ATTACHMENT_LOCATION=MY_GPT_ONLY
+          EOF
+            git add release/generated/problem_app_handoff_v2_main_publication.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record v2 main-only publication status (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
