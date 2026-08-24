@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 
 const ROOT=process.cwd();
 const CONTRACT_PATH=path.join(ROOT,'gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json');
@@ -85,7 +86,6 @@ export function validateInput(inputPath,{allowSelfTest=false}={}){
 }
 
 function selfTest(){
-  const os=await import('node:os');
   const d=fs.mkdtempSync(path.join(os.tmpdir(),'mikami-runtime-input-'));
   try{
     const put=(p,s)=>{const full=path.join(d,p);fs.mkdirSync(path.dirname(full),{recursive:true});fs.writeFileSync(full,s);return p};
@@ -102,6 +102,6 @@ function selfTest(){
 
 const args=process.argv.slice(2);
 try{
-  if(args.includes('--self-test')) await selfTest();
+  if(args.includes('--self-test')) selfTest();
   else {assert(args[0],'Usage: node tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs <runtime-evidence-input.json>');console.log(JSON.stringify(validateInput(args[0]),null,2))}
 }catch(e){console.error('FAIL_RUNTIME_EVIDENCE_INPUT');console.error(e?.message||String(e));process.exit(1)}
