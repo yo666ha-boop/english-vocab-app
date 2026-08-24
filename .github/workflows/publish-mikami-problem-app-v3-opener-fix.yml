@@ -209,3 +209,5 @@ jobs:
             sleep $((attempt*2))
           done
           test "$STATUS" = PASS_EXACT_V3
+
+# manual retrigger 2026-08-24T21:52:00+09:00 after workflow registration
