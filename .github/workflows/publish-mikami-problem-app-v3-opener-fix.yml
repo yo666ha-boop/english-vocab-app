@@ -1,0 +1,211 @@
+name: Publish Mikami problem-app v3 opener fix to main only
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - '.github/workflows/publish-mikami-problem-app-v3-opener-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-v3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Derive exact v3 from exact current main v2
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          mkdir -p /tmp/mikami-v3-publish
+          git show origin/main:problem-app/index.html > /tmp/mikami-v3-publish/source.html
+          git show origin/main:index.html > /tmp/mikami-v3-publish/root.html
+          SOURCE_BYTES=$(wc -c < /tmp/mikami-v3-publish/source.html | tr -d ' ')
+          SOURCE_SHA=$(sha256sum /tmp/mikami-v3-publish/source.html | awk '{print $1}')
+          ROOT_SHA=$(sha256sum /tmp/mikami-v3-publish/root.html | awk '{print $1}')
+          test "$SOURCE_BYTES" = '3812209'
+          test "$SOURCE_SHA" = '83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0'
+          test "$ROOT_SHA" = '4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6'
+          node tools/patch_mikami_answer_gpt_handoff_v3.mjs /tmp/mikami-v3-publish/source.html /tmp/mikami-v3-publish/target.html
+          TARGET_BYTES=$(wc -c < /tmp/mikami-v3-publish/target.html | tr -d ' ')
+          TARGET_SHA=$(sha256sum /tmp/mikami-v3-publish/target.html | awk '{print $1}')
+          test "$TARGET_BYTES" = '3812347'
+          test "$TARGET_SHA" = '2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0'
+          node - /tmp/mikami-v3-publish/source.html /tmp/mikami-v3-publish/target.html <<'NODE'
+          const fs=require('fs'),crypto=require('crypto');
+          function qb(p){
+            const h=fs.readFileSync(p,'utf8');
+            const o='<script id="qb-data" type="application/json">';
+            const a=h.indexOf(o), b=h.indexOf('</script>',a+o.length);
+            if(a<0||b<0) throw new Error('qb-data missing');
+            return crypto.createHash('sha256').update(h.slice(a+o.length,b)).digest('hex');
+          }
+          const before=qb(process.argv[2]), after=qb(process.argv[3]);
+          if(before!==after) throw new Error(`qb-data changed ${before} -> ${after}`);
+          if(before!=='c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee') throw new Error('qb-data identity mismatch');
+          console.log(`QB_DATA_SHA256=${before}`);
+          NODE
+          grep -q 'mikami-answer-gpt-handoff-opener-v3' /tmp/mikami-v3-publish/target.html
+          grep -q "link.rel = 'noopener'" /tmp/mikami-v3-publish/target.html
+          grep -q 'openMyGptNoOpener(url);' /tmp/mikami-v3-publish/target.html
+          ! grep -q "window.open(url, '_blank', 'noopener')" /tmp/mikami-v3-publish/target.html
+          ! grep -q 'if (!opened)' /tmp/mikami-v3-publish/target.html
+          grep -q 'id="openAnswerGptBtn" class="primary"' /tmp/mikami-v3-publish/target.html
+          grep -q 'id="legacyPhotoAnalysisFallback"' /tmp/mikami-v3-publish/target.html
+          grep -q "\['chatgpt.com', 'chat.openai.com'\].includes(url.hostname)" /tmp/mikami-v3-publish/target.html
+          ! grep -q 'mikami_english_question_bank_knowledge.jsonl' /tmp/mikami-v3-publish/target.html
+          echo "source_bytes=$SOURCE_BYTES" >> "$GITHUB_OUTPUT"
+          echo "source_sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
+          echo "target_bytes=$TARGET_BYTES" >> "$GITHUB_OUTPUT"
+          echo "target_sha=$TARGET_SHA" >> "$GITHUB_OUTPUT"
+          echo "root_sha=$ROOT_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Commit only main/problem-app/index.html
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          CURRENT_SOURCE_BYTES=$(git show origin/main:problem-app/index.html | wc -c | tr -d ' ')
+          CURRENT_SOURCE_SHA=$(git show origin/main:problem-app/index.html | sha256sum | awk '{print $1}')
+          test "$CURRENT_SOURCE_BYTES" = '3812209'
+          test "$CURRENT_SOURCE_SHA" = '83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0'
+          ROOT_BEFORE=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          test "$ROOT_BEFORE" = '4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6'
+          rm -rf /tmp/mikami-v3-worktree
+          git worktree add /tmp/mikami-v3-worktree origin/main
+          cd /tmp/mikami-v3-worktree
+          git switch -c mikami-problem-v3-opener-main-only origin/main
+          cp /tmp/mikami-v3-publish/target.html problem-app/index.html
+          test "$(wc -c < problem-app/index.html | tr -d ' ')" = '3812347'
+          test "$(sha256sum problem-app/index.html | awk '{print $1}')" = '2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0'
+          test "$(sha256sum index.html | awk '{print $1}')" = "$ROOT_BEFORE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- problem-app/index.html
+          CHANGED=$(git diff --cached --name-only)
+          test "$CHANGED" = 'problem-app/index.html'
+          git commit -m 'publish: fix MyGPT noopener opener status in problem app v3'
+          PUBLISH_COMMIT=$(git rev-parse HEAD)
+          git push origin HEAD:main
+          echo "publish_commit=$PUBLISH_COMMIT" >> "$GITHUB_OUTPUT"
+          echo "root_before=$ROOT_BEFORE" >> "$GITHUB_OUTPUT"
+
+      - name: Verify exact main after push
+        id: mainverify
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          MAIN_BYTES=$(git show origin/main:problem-app/index.html | wc -c | tr -d ' ')
+          MAIN_SHA=$(git show origin/main:problem-app/index.html | sha256sum | awk '{print $1}')
+          ROOT_AFTER=$(git show origin/main:index.html | sha256sum | awk '{print $1}')
+          test "$MAIN_BYTES" = '3812347'
+          test "$MAIN_SHA" = '2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0'
+          test "$ROOT_AFTER" = '4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6'
+          echo "main_bytes=$MAIN_BYTES" >> "$GITHUB_OUTPUT"
+          echo "main_sha=$MAIN_SHA" >> "$GITHUB_OUTPUT"
+          echo "root_after=$ROOT_AFTER" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for exact GitHub Pages v3
+        id: pages
+        shell: bash
+        run: |
+          set +e
+          URL='https://yo666ha-boop.github.io/english-vocab-app/problem-app/'
+          PASS=false
+          HTTP=''
+          BYTES=''
+          SHA=''
+          for attempt in $(seq 1 24); do
+            curl -L --fail --silent --show-error --connect-timeout 15 --max-time 45 -o /tmp/pages-v3.html -w '%{http_code}' "$URL?mikami_v3_probe=${GITHUB_RUN_ID}_${attempt}" > /tmp/http.txt
+            CURL_CODE=$?
+            HTTP=$(cat /tmp/http.txt 2>/dev/null || true)
+            if test "$CURL_CODE" = 0 && test -f /tmp/pages-v3.html; then
+              BYTES=$(wc -c < /tmp/pages-v3.html | tr -d ' ')
+              SHA=$(sha256sum /tmp/pages-v3.html | awk '{print $1}')
+              if test "$HTTP" = '200' && test "$BYTES" = '3812347' && test "$SHA" = '2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0'; then
+                PASS=true
+                break
+              fi
+            fi
+            sleep 10
+          done
+          echo "pass=$PASS" >> "$GITHUB_OUTPUT"
+          echo "http=$HTTP" >> "$GITHUB_OUTPUT"
+          echo "bytes=$BYTES" >> "$GITHUB_OUTPUT"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Record durable v3 publication status
+        id: status
+        shell: bash
+        env:
+          PUBLISH_COMMIT: ${{ steps.publish.outputs.publish_commit }}
+          ROOT_BEFORE: ${{ steps.publish.outputs.root_before }}
+          MAIN_BYTES: ${{ steps.mainverify.outputs.main_bytes }}
+          MAIN_SHA: ${{ steps.mainverify.outputs.main_sha }}
+          ROOT_AFTER: ${{ steps.mainverify.outputs.root_after }}
+          PAGES_PASS: ${{ steps.pages.outputs.pass }}
+          PAGES_HTTP: ${{ steps.pages.outputs.http }}
+          PAGES_BYTES: ${{ steps.pages.outputs.bytes }}
+          PAGES_SHA: ${{ steps.pages.outputs.sha }}
+        run: |
+          set -euo pipefail
+          STATUS=MAIN_EXACT_V3_PAGES_PENDING
+          if test "$PAGES_PASS" = true; then STATUS=PASS_EXACT_V3; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/problem_app_v3_opener_publication.status.txt <<EOF
+          STATUS=${STATUS}
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TRIGGER_BRANCH_HEAD=${GITHUB_SHA}
+          SOURCE_V2_BYTES=3812209
+          SOURCE_V2_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          V3_BYTES=3812347
+          V3_SHA256=2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0
+          QB_DATA_SHA256=c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee
+          QB_DATA_UNCHANGED=true
+          PUBLISH_COMMIT=${PUBLISH_COMMIT}
+          MAIN_PROBLEM_APP_BYTES=${MAIN_BYTES}
+          MAIN_PROBLEM_APP_SHA256=${MAIN_SHA}
+          ROOT_INDEX_SHA_BEFORE=${ROOT_BEFORE}
+          ROOT_INDEX_SHA_AFTER=${ROOT_AFTER}
+          ROOT_INDEX_UNCHANGED=true
+          NOOPENER_RETURN_NULL_FALSE_FAILURE_FIXED=true
+          ANCHOR_TARGET_BLANK=true
+          ANCHOR_REL_NOOPENER=true
+          MY_GPT_PRIMARY_PRESERVED=true
+          LEGACY_FALLBACK_PRESERVED=true
+          CHATGPT_HOST_GATE_PRESERVED=true
+          CUSTOM_GPT_G_PATH_GATE_PRESERVED=true
+          PRIVATE_KNOWLEDGE_EMBEDDED=false
+          PAGES_PASS=${PAGES_PASS}
+          PAGES_HTTP=${PAGES_HTTP}
+          PAGES_BYTES=${PAGES_BYTES}
+          PAGES_SHA256=${PAGES_SHA}
+          MAIN_ROOT_TOUCHED=false
+          EOF
+            git add release/generated/problem_app_v3_opener_publication.status.txt
+            if git diff --cached --quiet; then break; fi
+            git commit -m "record problem app v3 opener publication ${STATUS} (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            sleep $((attempt*2))
+          done
+          test "$STATUS" = PASS_EXACT_V3
