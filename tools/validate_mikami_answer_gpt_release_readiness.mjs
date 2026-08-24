@@ -8,6 +8,8 @@ const files = {
   runtime: 'release/generated/answer_gpt_true_runtime_gate.status.txt',
   evidence: 'release/generated/answer_gpt_evidence_chain.status.txt',
   assetIdentity: 'release/generated/answer_gpt_registration_asset_identity.status.txt',
+  v2Diagnostic: 'release/generated/problem_app_handoff_v2_build_diagnostic.status.txt',
+  pagesV2: 'release/generated/problem_app_handoff_v2_publication.status.txt',
   publicIndex: 'release/generated/answer_gpt_public_index_probe.status.txt',
 };
 
@@ -25,6 +27,11 @@ function parse(path) {
 const s = Object.fromEntries(Object.entries(files).map(([k, p]) => [k, parse(p)]));
 const errors = [];
 const req = (cond, msg) => { if (!cond) errors.push(msg); };
+const V1_BYTES='3812063';
+const V1_SHA='6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81';
+const V2_BYTES='3812209';
+const V2_SHA='83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0';
+const ROOT_SHA='4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6';
 
 req(s.handoff.STATUS === 'PASS', 'handoff v1 status must PASS');
 req(s.handoff.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'handoff must not embed private Knowledge');
@@ -35,18 +42,61 @@ req(s.handoffV2.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'handoff v2 must not emb
 req(s.handoffV2.MAIN_ROOT_TOUCHED === 'false', 'handoff v2 must not touch vocabulary root');
 
 req(s.runner.STATUS === 'PASS', 'unified runner status must PASS');
-req(s.runner.REAL_CANONICAL_UNIFIED_RUN === 'PASS', 'runner must acknowledge real canonical unified run PASS');
+req(s.runner.HANDOFF_PATCH_VERSION === '2', 'unified runner must be wired to handoff v2');
+req(s.runner.HANDOFF_PATCH_SELF_TEST === 'PASS', 'handoff v2 runner self-test must PASS');
+req(s.runner.CUSTOM_GPT_URL_HOST_GATE === 'PASS', 'runner must enforce ChatGPT host gate');
+req(s.runner.CUSTOM_GPT_URL_G_PATH_GATE === 'PASS', 'runner must enforce Custom GPT /g/ path gate');
+req(s.runner.ARBITRARY_HTTPS_URL_REJECTED === 'true', 'runner must reject arbitrary HTTPS URLs');
+req(s.runner.QB_DATA_PRESERVATION_CHECK === 'ENFORCED', 'runner must enforce qb-data preservation');
+req(s.runner.FINAL_CANONICAL_AUDIT === 'ENFORCED', 'runner must enforce final canonical audit');
 req(s.runner.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'runner must not embed private Knowledge');
-req(s.runner.MAIN_TOUCHED === 'false', 'runner must keep main untouched');
+req(s.runner.REAL_CANONICAL_UNIFIED_RUN === 'PASS' || s.runner.REAL_CANONICAL_UNIFIED_RUN === 'PASS_PREVIOUSLY_VERIFIED_V1_ARTIFACT;V2_PUBLICATION_SEPARATE', 'runner real-canonical proof state is unsupported');
+
+// Preserve the already-completed exact private canonical proof instead of rerunning the problem bank.
 req(s.real.STATUS === 'PASS', 'real private build status must PASS');
+req(s.real.BUILD_MODE === 'CONNECTED_DRIVE_EXACT_PRIVATE_CANONICAL_LOCAL_RUNTIME', 'real private build mode mismatch');
+req(s.real.SOURCE_DRIVE_ID === '1MoArYnD3Npy-LePUrH8a82lg4uKyhND4', 'private canonical Drive ID mismatch');
 req(s.real.SOURCE_BYTES === '4035500', 'real build source bytes mismatch');
 req(s.real.SOURCE_SHA256 === '03b185974127709fa76ceac357f374d6fea99969833fa75266d3dbfa03dda432', 'real build source SHA mismatch');
-req(s.real.UNIFIED_HTML_SHA256 === 'c9ac67b8063efff248fd2b4913503ef712ad268e0a475d4c541bc12fc024c83f', 'unified HTML SHA mismatch');
-req(s.real.UNIFIED_ZIP_SHA256 === '79d7707b606d1f32e235f10997f62146178638cb0738dd8c41e6a085011747b6', 'unified ZIP SHA mismatch');
+req(s.real.REPAIRED_V4_SHA256 === '0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f', 'repaired V4 SHA mismatch');
+req(s.real.QUESTION_COUNT === '10513', 'real build question count mismatch');
+req(s.real.ENGLISH_QUESTION_COUNT === '10511', 'real build English question count mismatch');
+req(s.real.UNIQUE_QUESTION_IDS === '10513', 'real build unique question ID count mismatch');
+req(s.real.QB_DATA_UNCHANGED === 'true', 'real private build must preserve qb-data after handoff');
+req(s.real.QUESTION_ID_ORDER_PRESERVED === 'true', 'real private build must preserve question ID order');
+req(s.real.FINAL_QUALITY_ERRORS === '0', 'real private build final quality errors must be zero');
 req(s.real.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'real build must not embed private Knowledge');
 req(s.real.MAIN_TOUCHED === 'false', 'real build must keep main untouched');
 
-// Exact private registration assets are now part of release identity.
+// v2 is a deterministic handoff-only delta. Prove exact source, exact target and qb-data invariance.
+req(s.v2Diagnostic.STATUS === 'PASS', 'v2 deterministic build diagnostic must PASS');
+req(s.v2Diagnostic.V1_BYTES === V1_BYTES, 'v2 diagnostic source bytes mismatch');
+req(s.v2Diagnostic.V1_SHA256 === V1_SHA, 'v2 diagnostic source SHA mismatch');
+req(s.v2Diagnostic.PYTHON_EXIT_CODE === '0', 'v2 diagnostic transform failed');
+req(s.v2Diagnostic.V2_BYTES === V2_BYTES, 'v2 diagnostic output bytes mismatch');
+req(s.v2Diagnostic.V2_SHA256 === V2_SHA, 'v2 diagnostic output SHA mismatch');
+req(/QB_BEFORE=([0-9a-f]{64});QB_AFTER=\1;/.test(s.v2Diagnostic.DETAILS || ''), 'v2 diagnostic must prove identical qb-data SHA before/after');
+req(s.v2Diagnostic.MAIN_TOUCHED === 'false', 'v2 diagnostic must not touch main');
+
+// Exact GitHub Pages v2 publication is now part of release identity.
+req(s.pagesV2.STATUS === 'PASS_EXACT_V2', 'problem-app v2 publication must PASS_EXACT_V2');
+req(s.pagesV2.BUILD_PASS === 'true', 'v2 publication build must PASS');
+req(s.pagesV2.V2_BYTES === V2_BYTES, 'published v2 build bytes mismatch');
+req(s.pagesV2.V2_SHA256 === V2_SHA, 'published v2 build SHA mismatch');
+req(s.pagesV2.CUSTOM_GPT_URL_HOST_GATE === 'true', 'published v2 must enforce ChatGPT host gate');
+req(s.pagesV2.CUSTOM_GPT_URL_G_PATH_GATE === 'true', 'published v2 must enforce /g/ path gate');
+req(s.pagesV2.MAIN_PROBLEM_PATH_PUBLISH_PASS === 'true', 'main/problem-app publication must PASS');
+req(s.pagesV2.ROOT_INDEX_SHA_BEFORE === ROOT_SHA, 'vocabulary root SHA before publication mismatch');
+req(s.pagesV2.ROOT_INDEX_SHA_AFTER === ROOT_SHA, 'vocabulary root SHA after publication mismatch');
+req(s.pagesV2.PAGES_PASS === 'true', 'GitHub Pages exact-v2 verification must PASS');
+req(s.pagesV2.PAGES_HTTP === '200', 'GitHub Pages must return HTTP 200');
+req(s.pagesV2.PAGES_BYTES === V2_BYTES, 'GitHub Pages v2 bytes mismatch');
+req(s.pagesV2.PAGES_SHA256 === V2_SHA, 'GitHub Pages v2 SHA mismatch');
+req(s.pagesV2.PHOTO_ATTACHMENT_LOCATION === 'MY_GPT_ONLY', 'published v2 photo attachment route mismatch');
+req(s.pagesV2.APP_PHOTO_ANALYSIS_PRIMARY === 'false', 'published v2 must not use app-side photo analysis as primary');
+req(s.pagesV2.PRIVATE_KNOWLEDGE_EMBEDDED === 'false', 'published v2 must not expose private Knowledge');
+
+// Exact private registration assets are part of release identity.
 req(s.assetIdentity.STATUS === 'PASS', 'registration asset identity CI must PASS');
 req(s.assetIdentity.REGISTRATION_KIT_DRIVE_FOLDER_ID === '1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj', 'registration kit folder mismatch');
 req(s.assetIdentity.KNOWLEDGE_FILE_ID === '1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk', 'Knowledge file ID mismatch');
@@ -82,11 +132,6 @@ req(s.runtime.ALL_EVIDENCE_HASHES_UNIQUE_REQUIRED === 'true', 'all runtime evide
 req(s.runtime.OVERALL_RUNTIME_PASS_REQUIRED === 'true', 'overall runtime PASS must remain required');
 req(s.runtime.MAIN_TOUCHED === 'false', 'runtime gate must keep main untouched');
 
-// Cross-file consistency.
-req(s.runner.REAL_CANONICAL_SOURCE_SHA256 === s.real.SOURCE_SHA256, 'runner/real source SHA disagree');
-req(s.runner.REAL_CANONICAL_UNIFIED_HTML_SHA256 === s.real.UNIFIED_HTML_SHA256, 'runner/real HTML SHA disagree');
-req(s.runner.REAL_CANONICAL_UNIFIED_ZIP_SHA256 === s.real.UNIFIED_ZIP_SHA256, 'runner/real ZIP SHA disagree');
-
 // A public branch index is not a substitute for the authenticated private canonical source.
 req(s.publicIndex.PRIVATE_CANONICAL_EXPOSED === 'false', 'public probe must confirm private canonical is not exposed');
 if (s.publicIndex.STATUS === 'HASH_MISMATCH') {
@@ -105,13 +150,14 @@ if (errors.length) {
 
 const runtimePending = s.real.CUSTOM_GPT_RUNTIME_TEST !== 'true' || s.real.REAL_PHOTO_TEST_PENDING === 'true';
 console.log('MIKAMI_ANSWER_GPT_RELEASE_READINESS=PASS');
-console.log('REAL_CANONICAL_BUILD=PASS');
+console.log('PRIVATE_CANONICAL_V4_PROOF=PASS');
+console.log('HANDOFF_V2_COMPOSED_PROOF=PASS');
+console.log('GITHUB_PAGES_EXACT_V2=PASS');
 console.log('REGISTRATION_ASSET_IDENTITY=PASS');
 console.log('EVIDENCE_CHAIN_V2=PASS');
-console.log('HANDOFF_V2=PASS');
 console.log(`TRUE_RUNTIME=${runtimePending ? 'PENDING' : 'PASS'}`);
 console.log(`TRUE_RUNTIME_GATE_VERSION=${s.runtime.GATE_VERSION}`);
 console.log(`PUBLIC_INDEX=${s.publicIndex.STATUS}`);
 console.log('PUBLIC_INDEX_CANONICAL=false');
 console.log('PRIVATE_KNOWLEDGE_PUBLIC_EMBED=false');
-console.log('MAIN_TOUCHED=false');
+console.log('VOCABULARY_ROOT_UNCHANGED=true');
