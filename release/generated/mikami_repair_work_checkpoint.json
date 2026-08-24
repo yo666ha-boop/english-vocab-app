@@ -1,7 +1,8 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v31",
-  "updated_at_jst": "2026-08-24T21:11:40+09:00",
+  "checkpoint_schema": "mikami-repair-work-v32",
+  "updated_at_jst": "2026-08-24T21:25:00+09:00",
   "branch": "mikami-canonical-repair",
+  "observed_branch_head_before_checkpoint": "eed05671236299ae567a0cb1261364839900863f",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
     "status": "PASS_COMPLETE",
@@ -50,6 +51,8 @@
       "pages_http": 200,
       "pages_bytes": 3812209,
       "pages_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
+      "pages_last_exact_probe_jst": "2026-08-24T21:11:40+09:00",
+      "pages_probe_this_run": "CONTAINER_DNS_UNAVAILABLE; main HEAD unchanged at exact publish commit",
       "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
       "root_vocabulary_app_unchanged": true,
@@ -123,6 +126,11 @@
       "authenticated_editor_session_available": false,
       "custom_gpt_editor_write_connector_available": false,
       "browser_automation_plugin_available": false,
+      "agent_browser_cli_available": false,
+      "saved_browser_auth_state_found": false,
+      "public_editor_url_reachable_via_web_fetch": true,
+      "public_editor_url": "https://chatgpt.com/gpts/editor",
+      "plugin_catalog_custom_gpt_editor_found": false,
       "registration_claimed": false
     },
     "local_execution_layer": {
@@ -145,20 +153,13 @@
       "legacy_finalization": "PENDING_TRUE_RUNTIME"
     },
     "completed_this_run": [
-      "confirmed exact GitHub Pages v2 publication PASS with HTTP 200, exact 3812209 bytes and expected SHA256",
-      "confirmed vocabulary root SHA unchanged and private Knowledge not embedded",
-      "hardened and durably PASSed release readiness with exact Pages v2 and composed private-canonical proof",
-      "re-fetched the exact 4035500-byte private canonical locally without rerunning completed problem-bank repairs",
-      "rechecked connector/plugin surface and found no authenticated Custom GPT editor write path",
-      "searched Drive and prior project interactions for real runtime photos and actual Custom GPT URL; none valid found",
-      "rejected the only school-test search candidate because it is a range sheet/test schedule rather than a student answer sheet",
-      "added strict runtime evidence input validator and explicit false-default runtime input template",
-      "added cryptographic runtime evidence assembler and one-shot finalizer chaining asset identity, true-runtime and evidence-chain validators",
-      "diagnostic CI exposed one assembler CLI syntax error; fixed it and then obtained finalizer CI PASS run 32725279639",
-      "obtained release readiness PASS run 32725361262 with runtime evidence finalizer prep included",
-      "added exact true-runtime runbook",
-      "created a dedicated private Drive runtime-evidence folder tree and verified parent shared=false",
-      "recorded real-material inventory and private evidence storage layout as durable GitHub statuses"
+      "read GitHub actual checkpoint v31 and actual branch HEAD before doing any work; did not redo completed problem-bank/publication gates",
+      "confirmed main HEAD remains exact problem-app publish commit 831dc3e592a1f2b45fb586c9d9e5632f696882f0",
+      "checked the currently exposed connected/plugin surface for a Custom GPT editor path; no Custom GPT editor plugin/connector exists",
+      "checked the installed browser-automation route; agent-browser skill documentation exists but no executable agent-browser CLI or saved browser auth state is exposed in this runtime",
+      "confirmed the public ChatGPT GPT editor URL itself is web-reachable, but no authenticated editor session/write surface is exposed, so registration was not falsely claimed",
+      "attempted a direct Pages HTTP probe from the execution container; external DNS is unavailable in this runtime, so the prior exact Pages PASS remains the latest actual content probe and main HEAD was used as a non-destructive continuity check",
+      "preserved root vocabulary app and Vercel vocabulary project untouched"
     ],
     "remaining_work": [
       "obtain authenticated actual Custom GPT editor/runtime access",
@@ -175,9 +176,9 @@
       "stage": "external actual runtime access/materials",
       "status": "BLOCKED_ONLY_BY_REAL_CUSTOM_GPT_EDITOR_AND_REAL_ANSWER_PHOTOS",
       "last_normal_completion": "all pre-runtime repository/publication/evidence-tooling gates PASS and private evidence storage ready",
-      "detail": "No remaining repository or publication blocker is known. Actual Custom GPT registration requires an authenticated editor write surface not exposed here, and the required four real answer photos are not currently available. Synthetic/generated evidence is explicitly rejected."
+      "detail": "This run rechecked both connector/plugin and browser-automation surfaces. The public editor URL can be fetched, but there is still no authenticated Custom GPT editor write session, no Custom GPT write connector/plugin, no executable agent-browser route with saved authentication, and no four-real-photo set. Synthetic/generated evidence remains forbidden."
     },
-    "next_start": "read latest HEAD/checkpoint and durable status files. Do not redo problem-bank repair, v2 publication, release readiness, finalizer self-tests or private evidence folder setup while their statuses remain PASS. First check for authenticated Custom GPT editor/runtime access and newly available real answer photos. If available, register exact assets immediately, save registration proof and /g/<id>, execute the four actual cases, render/print A4, populate private runtime-evidence input and run the one-shot finalizer.",
+    "next_start": "read latest HEAD/checkpoint first. Do not redo completed problem-bank repair, v2 publication, release readiness, finalizer self-tests or private evidence folder setup while PASS. Immediately re-probe authenticated Custom GPT editor/runtime access and any newly exposed browser automation/auth state, then real four-photo availability. If access appears, register exact assets immediately, save registration proof and /g/<id>, execute four actual cases, render/print A4, populate private runtime-evidence input and run one-shot finalizer.",
     "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> one-shot actual evidence finalizer PASS -> legacy decision -> overall completion"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
@@ -186,5 +187,5 @@
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
   "current_state": "QUESTION_BANK_COMPLETE_PAGES_EXACT_V2_RELEASE_READINESS_PASS_FINALIZER_PREP_PASS_PRIVATE_EVIDENCE_STORAGE_READY_ACTUAL_CUSTOM_GPT_AND_REAL_PHOTO_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "All non-actual-runtime work is now PASS: repaired question bank, private Knowledge identity, hardened v2 routing, exact GitHub Pages publication, release readiness, runtime evidence finalizer tooling/CI and private evidence storage. Remaining completion work is genuinely external actual-runtime evidence: authenticated Custom GPT registration, four real answer photos, actual A4 render/print and final strict validators."
+  "completion_note": "All non-actual-runtime work remains PASS. Current blocking items are genuine external runtime evidence only: authenticated Custom GPT registration, four real answer photos, actual A4 render/print and final strict validators."
 }
