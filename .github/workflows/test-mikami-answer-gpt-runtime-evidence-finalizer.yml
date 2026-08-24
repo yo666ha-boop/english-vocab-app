@@ -1,0 +1,90 @@
+name: Test Mikami Answer GPT Runtime Evidence Finalizer
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs'
+      - 'tools/assemble_mikami_answer_gpt_runtime_evidence.mjs'
+      - 'tools/finalize_mikami_answer_gpt_runtime_evidence.mjs'
+      - 'gpt/tests/mikami_answer_gpt_runtime_evidence_input.template.json'
+      - 'gpt/tests/mikami_answer_gpt_photo_acceptance_cases.json'
+      - '.github/workflows/test-mikami-answer-gpt-runtime-evidence-finalizer.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  runtime-evidence-finalizer-self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs
+          node --check tools/assemble_mikami_answer_gpt_runtime_evidence.mjs
+          node --check tools/finalize_mikami_answer_gpt_runtime_evidence.mjs
+      - name: Strict input negative-case self-test
+        run: node tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs --self-test
+      - name: Cryptographic assembler self-test
+        run: node tools/assemble_mikami_answer_gpt_runtime_evidence.mjs --self-test
+      - name: One-shot finalizer self-test
+        run: node tools/finalize_mikami_answer_gpt_runtime_evidence.mjs --self-test
+      - name: Verify real template stays incomplete by default
+        shell: bash
+        run: |
+          set -euo pipefail
+          F='gpt/tests/mikami_answer_gpt_runtime_evidence_input.template.json'
+          grep -q '"actual_custom_gpt": false' "$F"
+          grep -q '"knowledge_registered": false' "$F"
+          grep -q '"instructions_applied": false' "$F"
+          grep -q '"output_schema_applied": false' "$F"
+          test "$(grep -c '"executed_in_actual_custom_gpt": false' "$F")" = 4
+          test "$(grep -c '"photo_attached": false' "$F")" = 4
+          grep -q '"actual_render_or_print_test": false' "$F"
+          grep -q '"overall_runtime_pass": false' "$F"
+      - name: Record durable PASS race-safely
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/answer_gpt_runtime_evidence_finalizer.status.txt <<EOF
+          STATUS=PASS
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_HEAD_SHA=${GITHUB_SHA}
+          INPUT_VALIDATOR_SELF_TEST=PASS
+          INPUT_NEGATIVE_CASES_REJECTED=6
+          ASSEMBLER_SELF_TEST=PASS
+          FINALIZER_SELF_TEST=PASS
+          ACTUAL_REGISTRATION_CONFIRMATION_REQUIRED=true
+          EXACT_REGISTRATION_ASSET_IDENTITY_REQUIRED=true
+          EXACT_FOUR_CASE_BEHAVIORS_REQUIRED=true
+          ACTUAL_PHOTO_ATTACHMENT_CONFIRMATION_REQUIRED=true
+          A4_ACTUAL_RENDER_PRINT_CONFIRMATION_REQUIRED=true
+          NON_CIRCULAR_EVIDENCE_BINDING_ASSEMBLED=true
+          TRUE_RUNTIME_VALIDATOR_IN_FINALIZER=true
+          EVIDENCE_CHAIN_VALIDATOR_IN_FINALIZER=true
+          SYNTHETIC_SELF_TEST_ONLY=true
+          REAL_RUNTIME_EXECUTED=false
+          MAIN_TOUCHED=false
+          EOF
+            git add release/generated/answer_gpt_runtime_evidence_finalizer.status.txt
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "record answer GPT runtime evidence finalizer PASS (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
