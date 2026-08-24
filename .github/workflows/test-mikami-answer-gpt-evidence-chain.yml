@@ -17,15 +17,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Run evidence chain self-test
         run: node tools/validate_mikami_answer_gpt_evidence_chain.mjs --self-test
-      - name: Record status
+      - name: Record status with race-safe retry
+        shell: bash
         run: |
-          mkdir -p release/generated
-          cat > release/generated/answer_gpt_evidence_chain.status.txt <<EOF
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          write_status() {
+            mkdir -p release/generated
+            cat > release/generated/answer_gpt_evidence_chain.status.txt <<EOF
           STATUS=PASS
           UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           GATE_VERSION=evidence-chain-v2
@@ -60,13 +69,25 @@ jobs:
           REAL_RUNTIME_EXECUTED=false
           MAIN_TOUCHED=false
           EOF
-      - name: Commit status if changed
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release/generated/answer_gpt_evidence_chain.status.txt
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'record answer GPT evidence chain v2 CI status'
-          git push
+          }
 
-# retrigger 2026-08-20T20:53:20+09:00 after pending writeback recovery
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            write_status
+            git add release/generated/answer_gpt_evidence_chain.status.txt
+            if git diff --cached --quiet; then
+              echo 'Status already current.'
+              exit 0
+            fi
+            git commit -m "record answer GPT evidence chain v2 CI status (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then
+              exit 0
+            fi
+            echo "Push race on attempt ${attempt}; retrying..." >&2
+            sleep $((attempt * 2))
+          done
+          echo 'Failed to write evidence-chain status after 5 race-safe attempts.' >&2
+          exit 1
+
+# retrigger 2026-08-24T19:45+09:00 manual continuation
