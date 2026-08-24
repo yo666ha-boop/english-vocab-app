@@ -13,8 +13,7 @@ const E = {
 };
 const SHA=/^[0-9a-f]{64}$/;
 function assert(c,m){ if(!c) throw new Error(m); }
-function validate(x,{allowSynthetic=false}={}){
-  const r=x?.registration||{};
+function validateRegistration(r,{allowSynthetic=false}={}){
   assert(r.registration_kit_drive_folder_id===E.folder,'registration kit folder mismatch');
   assert(r.knowledge_file_id===E.knowledge_id,'Knowledge file ID mismatch');
   assert(r.knowledge_records===E.knowledge_records,'Knowledge record count mismatch');
@@ -32,7 +31,25 @@ function validate(x,{allowSynthetic=false}={}){
     assert(typeof r.gpt_url==='string'&&/^https:\/\/(chatgpt\.com|chat\.openai\.com)\/g\//.test(r.gpt_url),'actual Custom GPT URL required');
     assert(!/SELF_TEST|PLACEHOLDER|PENDING/i.test(r.gpt_url),'placeholder GPT URL rejected');
   }
-  return {status:'PASS',registration_asset_identity:true,knowledge_records:E.knowledge_records};
+}
+function validateRuntime(x,opt={}){ validateRegistration(x?.registration||{},opt); return {status:'PASS',registration_asset_identity:true,knowledge_records:E.knowledge_records}; }
+function validateTemplates(){
+  const rt=JSON.parse(fs.readFileSync('gpt/tests/mikami_answer_gpt_true_runtime_results.template.json','utf8')).registration||{};
+  assert(rt.registration_kit_drive_folder_id===E.folder,'runtime template folder mismatch');
+  assert(rt.knowledge_file_id===E.knowledge_id,'runtime template Knowledge ID mismatch');
+  assert(rt.knowledge_sha256===E.knowledge_sha256,'runtime template Knowledge SHA mismatch');
+  assert(rt.instructions_file_id===E.instructions_id,'runtime template Instructions ID mismatch');
+  assert(rt.instructions_sha256===E.instructions_sha256,'runtime template Instructions SHA mismatch');
+  assert(rt.output_schema_file_id===E.schema_id,'runtime template schema ID mismatch');
+  assert(rt.output_schema_sha256===E.schema_sha256,'runtime template schema SHA mismatch');
+  const ev=JSON.parse(fs.readFileSync('gpt/tests/mikami_answer_gpt_evidence_manifest.template.json','utf8')).registration_kit||{};
+  assert(ev.drive_folder_id===E.folder,'evidence template folder mismatch');
+  assert(ev.knowledge_file_id===E.knowledge_id,'evidence template Knowledge ID mismatch');
+  assert(ev.knowledge_sha256===E.knowledge_sha256,'evidence template Knowledge SHA mismatch');
+  assert(ev.instructions_file_id===E.instructions_id,'evidence template Instructions ID mismatch');
+  assert(ev.instructions_sha256===E.instructions_sha256,'evidence template Instructions SHA mismatch');
+  assert(ev.schema_file_id===E.schema_id,'evidence template schema ID mismatch');
+  assert(ev.schema_sha256===E.schema_sha256,'evidence template schema SHA mismatch');
 }
 function good(){return {registration:{
   actual_custom_gpt:true, registration_kit_drive_folder_id:E.folder,
@@ -43,19 +60,24 @@ function good(){return {registration:{
 }}}
 try{
   if(process.argv.includes('--self-test')){
-    const g=good(); validate(g,{allowSynthetic:true});
+    validateTemplates();
+    const g=good(); validateRuntime(g,{allowSynthetic:true});
     const muts=[
       x=>x.registration.knowledge_sha256='2'.repeat(64),
       x=>x.registration.instructions_sha256='3'.repeat(64),
       x=>x.registration.output_schema_sha256='4'.repeat(64),
       x=>x.registration.instructions_file_id='wrong',
-      x=>x.registration.output_schema_file_id='wrong'
+      x=>x.registration.output_schema_file_id='wrong',
+      x=>x.registration.registration_kit_drive_folder_id='wrong'
     ];
-    for(const f of muts){const b=structuredClone(g);f(b);let rejected=false;try{validate(b,{allowSynthetic:true})}catch{rejected=true}assert(rejected,'negative case accepted')}
+    for(const f of muts){const b=structuredClone(g);f(b);let rejected=false;try{validateRuntime(b,{allowSynthetic:true})}catch{rejected=true}assert(rejected,'negative case accepted')}
     console.log('PASS_REGISTRATION_ASSET_IDENTITY_SELF_TEST');
+    console.log('RUNTIME_TEMPLATE_IDENTITY=PASS');
+    console.log('EVIDENCE_TEMPLATE_IDENTITY=PASS');
     console.log(`NEGATIVE_CASES_REJECTED=${muts.length}`);
   } else {
     const p=process.argv[2]; assert(p,'Usage: node tools/validate_mikami_answer_gpt_registration_asset_identity.mjs <runtime-results.json>');
-    console.log(JSON.stringify(validate(JSON.parse(fs.readFileSync(p,'utf8'))),null,2));
+    validateTemplates();
+    console.log(JSON.stringify(validateRuntime(JSON.parse(fs.readFileSync(p,'utf8'))),null,2));
   }
 }catch(e){console.error('FAIL_REGISTRATION_ASSET_IDENTITY');console.error(e?.message||String(e));process.exit(1)}
