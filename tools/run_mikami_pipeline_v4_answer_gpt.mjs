@@ -36,9 +36,9 @@ try {
 
   // 2) Change only the answer-analysis handoff UI. The primary route must NOT
   // upload/analyze photos inside the problem app. The answer photo is attached
-  // directly in the dedicated My GPT. The old app-side photo/copy-paste flow
-  // remains only inside a collapsed fallback until true Custom GPT runtime PASS.
-  run('tools/patch_mikami_answer_gpt_handoff.mjs', [repaired, outputPath]);
+  // directly in the dedicated My GPT. V2 additionally rejects arbitrary HTTPS
+  // URLs and only accepts a real ChatGPT Custom GPT /g/<id> URL.
+  run('tools/patch_mikami_answer_gpt_handoff_v2.mjs', [repaired, outputPath]);
 
   // 3) Prove that the problem bank itself is byte-for-byte equivalent after
   // JSON parsing and that all IDs/order remain unchanged.
@@ -61,7 +61,9 @@ try {
     '旧方式（予備）',
     'mikami-answer-gpt-handoff-v1',
     'question_ids: ids',
-    '答案写真はMy GPTへ直接添付'
+    '答案写真はMy GPTへ直接添付',
+    "['chatgpt.com', 'chat.openai.com'].includes(url.hostname)",
+    '/^\\/g\\/[A-Za-z0-9_-]+/.test(url.pathname)'
   ];
   for (const marker of requiredMarkers) assert(html.includes(marker), `missing My GPT marker: ${marker}`);
 
@@ -114,6 +116,7 @@ try {
   const report = {
     status: 'PASS',
     runner: 'run_mikami_pipeline_v4_answer_gpt.mjs',
+    handoff_patch_version: 2,
     canonical_source_sha256: sha256(inputPath),
     repaired_v4_sha256: sha256(repaired),
     unified_output_sha256: sha256(outputPath),
@@ -125,6 +128,9 @@ try {
     final_quality_errors: 0,
     my_gpt_primary_ui: true,
     handoff_fields: ['source_mode','target','question_ids','question_count'],
+    custom_gpt_url_host_gate: ['chatgpt.com','chat.openai.com'],
+    custom_gpt_url_path_gate: '/g/<id>',
+    arbitrary_https_url_rejected: true,
     photo_attachment_location: 'MY_GPT_ONLY',
     app_photo_analysis_primary: false,
     app_photo_input_scope: 'legacy_fallback_only',
