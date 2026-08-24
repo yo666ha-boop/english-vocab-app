@@ -1,0 +1,106 @@
+name: Test Mikami Problem App UI Contract
+
+on:
+  push:
+    branches: [mikami-canonical-repair]
+    paths:
+      - 'tools/validate_mikami_problem_app_ui_contract.mjs'
+      - '.github/workflows/test-mikami-problem-app-ui-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-main-problem-app-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mikami-canonical-repair
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source and negative cases
+        run: |
+          set -euo pipefail
+          node --check tools/validate_mikami_problem_app_ui_contract.mjs
+          node tools/validate_mikami_problem_app_ui_contract.mjs --self-test
+      - name: Fetch actual main artifacts and validate UI contract
+        id: validate
+        shell: bash
+        run: |
+          set +e
+          git fetch origin main
+          git show origin/main:problem-app/index.html > /tmp/mikami-problem-app.html
+          C_FETCH_APP=$?
+          git show origin/main:index.html > /tmp/mikami-root-index.html
+          C_FETCH_ROOT=$?
+          ROOT_SHA=''
+          if test "$C_FETCH_ROOT" = 0; then ROOT_SHA=$(sha256sum /tmp/mikami-root-index.html | awk '{print $1}'); fi
+          node tools/validate_mikami_problem_app_ui_contract.mjs /tmp/mikami-problem-app.html > /tmp/ui-contract.log 2>&1
+          C_VALIDATE=$?
+          cat /tmp/ui-contract.log
+          C_ROOT=0
+          test "$ROOT_SHA" = '4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6' || C_ROOT=1
+          STATUS=PASS
+          if test "$C_FETCH_APP" != 0 || test "$C_FETCH_ROOT" != 0 || test "$C_VALIDATE" != 0 || test "$C_ROOT" != 0; then STATUS=FAIL; fi
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "fetch_app=$C_FETCH_APP" >> "$GITHUB_OUTPUT"
+          echo "fetch_root=$C_FETCH_ROOT" >> "$GITHUB_OUTPUT"
+          echo "validate=$C_VALIDATE" >> "$GITHUB_OUTPUT"
+          echo "root_check=$C_ROOT" >> "$GITHUB_OUTPUT"
+          echo "root_sha=$ROOT_SHA" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Record durable UI-contract status
+        shell: bash
+        env:
+          STATUS: ${{ steps.validate.outputs.status }}
+          FETCH_APP: ${{ steps.validate.outputs.fetch_app }}
+          FETCH_ROOT: ${{ steps.validate.outputs.fetch_root }}
+          VALIDATE_CODE: ${{ steps.validate.outputs.validate }}
+          ROOT_CHECK: ${{ steps.validate.outputs.root_check }}
+          ROOT_SHA: ${{ steps.validate.outputs.root_sha }}
+        run: |
+          set -euo pipefail
+          LOG=$(tr '\n' ';' < /tmp/ui-contract.log | cut -c1-2500)
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin mikami-canonical-repair
+            git reset --hard origin/mikami-canonical-repair
+            mkdir -p release/generated
+            cat > release/generated/problem_app_ui_contract.status.txt <<EOF
+          STATUS=${STATUS}
+          UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CI_RUN_ID=${GITHUB_RUN_ID}
+          TESTED_BRANCH_HEAD=${GITHUB_SHA}
+          TESTED_MAIN_REF=origin/main
+          FETCH_PROBLEM_APP_EXIT=${FETCH_APP}
+          FETCH_ROOT_INDEX_EXIT=${FETCH_ROOT}
+          UI_VALIDATOR_EXIT=${VALIDATE_CODE}
+          ROOT_SHA_CHECK_EXIT=${ROOT_CHECK}
+          EXPECTED_PROBLEM_APP_BYTES=3812209
+          EXPECTED_PROBLEM_APP_SHA256=83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0
+          EXPECTED_ROOT_INDEX_SHA256=4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6
+          ACTUAL_ROOT_INDEX_SHA256=${ROOT_SHA}
+          MY_GPT_PRIMARY_REQUIRED=true
+          LEGACY_FALLBACK_COLLAPSED_REQUIRED=true
+          LEGACY_PHOTO_CONTROLS_INSIDE_FALLBACK_REQUIRED=true
+          DIRECT_PHOTO_TO_MY_GPT_REQUIRED=true
+          PASTE_BACK_NOT_REQUIRED=true
+          OPTIONAL_HANDOFF_COPY_REQUIRED=true
+          CHATGPT_HOST_GATE_REQUIRED=true
+          CUSTOM_GPT_G_PATH_GATE_REQUIRED=true
+          PRIVATE_KNOWLEDGE_EMBEDDED=false
+          MAIN_ROOT_TOUCHED=false
+          VALIDATOR_OUTPUT=${LOG}
+          EOF
+            git add release/generated/problem_app_ui_contract.status.txt
+            if git diff --cached --quiet; then break; fi
+            git commit -m "record problem app UI contract ${STATUS} (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
+            sleep $((attempt*2))
+          done
+          test "$STATUS" = PASS
