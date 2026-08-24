@@ -27,8 +27,19 @@ function assert(c,m){if(!c)throw new Error(m)}
 function sha256(data){return crypto.createHash('sha256').update(data).digest('hex')}
 function fileSha(p){assert(fs.existsSync(p),`evidence file missing: ${p}`);return sha256(fs.readFileSync(p))}
 function isIso(v){return typeof v==='string'&&v&&!Number.isNaN(Date.parse(v))}
-function stable(v){if(Array.isArray(v))return v.map(stable);if(v&&typeof v==='object')return Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])]));return v}
-function bindingDigest(m){const c=structuredClone(m);c.binding.binding_digest_sha256='';c.runtime_results.results_json_sha256='';return sha256(Buffer.from(JSON.stringify(stable(c)),'utf8'))}
+function stable(value){
+  if(Array.isArray(value)) return value.map(stable);
+  if(value&&typeof value==='object') return Object.fromEntries(Object.keys(value).sort().map(k=>[k,stable(value[k])]));
+  return value;
+}
+function bindingDigest(manifest){
+  const copy=structuredClone(manifest);
+  copy.binding ||= {};
+  copy.binding.binding_digest_sha256='';
+  copy.runtime_results ||= {};
+  copy.runtime_results.results_json_sha256='';
+  return sha256(Buffer.from(JSON.stringify(stable(copy)),'utf8'));
+}
 function actualGptUrl(v,{allowSelfTest=false}={}){
   if(allowSelfTest&&v==='SELF_TEST_ONLY')return true;
   try{const u=new URL(v);return u.protocol==='https:'&&['chatgpt.com','chat.openai.com'].includes(u.hostname)&&/^\/g\/[A-Za-z0-9_-]+/.test(u.pathname)}catch{return false}
@@ -148,7 +159,7 @@ try{
   const args=process.argv.slice(2);
   if(args.includes('--self-test')) selfTest();
   else {
-    const [inputPath,outDir='release/private-runtime-evidence'];
+    const [inputPath,outDir='release/private-runtime-evidence']=args;
     assert(inputPath,'Usage: node tools/assemble_mikami_answer_gpt_runtime_evidence.mjs <runtime-evidence-input.json> [out-dir] | --self-test');
     console.log(JSON.stringify(assemble(inputPath,outDir),null,2));
   }
