@@ -12,10 +12,25 @@
   - SHA256 `084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be`
 - Output schema: `1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE`
   - SHA256 `8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b`
-- 公開問題アプリ v2: GitHub Pages `problem-app/`
-  - 3,812,209 bytes
-  - SHA256 `83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0`
+- 公開問題アプリ **v3 opener fix**: GitHub Pages `problem-app/`
+  - 3,812,347 bytes
+  - SHA256 `2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0`
+  - qb-data SHA256 `c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee`
   - My GPT URLは `chatgpt.com` / `chat.openai.com` の `/g/<id>` のみ許可
+  - `noopener`を維持しつつ、`window.open(..., 'noopener')`の戻り値をpopup失敗判定に使わないv3方式
+- 単語アプリ root `index.html` SHA256: `4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6`
+
+### private実機証拠保存先
+
+親フォルダ: `16Kdshw0reVkmqeNaYvI_y5PsXKsQJdhh`（shared=false確認済み）
+
+- 登録証拠: `1Co8ESJex7DQieSqy-Zu8v_V07J-uL1Gh`
+- correct_original: `14fh-cpdbSGB0lMYFdhLphG_dYrt7vrIt`
+- multi_category_errors: `1vQf0Wzuo6w4wtbJGSXtYhUHH7sT9ANlT`
+- unreadable_answer: `18z2LLcnsI7YPUMm9128mntrrZKp7Jt5M`
+- school_test: `1IGGKQsHh65jBR3hWAnND32vw0gGkJ9k4`
+- A4 report: `1cv2CXh99k6kqv2SlpDqRj4dKRGQP_8no`
+- finalized hashes/audit: `13vQfNrj8uUUb00G4nMoc7T11yPIW9kOm`
 
 ## 1. 実Custom GPT登録
 
@@ -24,8 +39,9 @@
 3. Instructionsへ正式指示書を適用する。
 4. output schemaを参照資産として登録する。
 5. 実際の共有URL `https://chatgpt.com/g/...` または `https://chat.openai.com/g/...` を取得する。
-6. 登録画面または登録状態の証拠画像を保存する。
-7. 公開問題アプリへ実URLを設定し、正しい `/g/` URLが受理され、任意のHTTPS URLが拒否されることを確認する。
+6. 登録画面または登録状態の証拠画像をprivate登録証拠フォルダへ保存する。
+7. 公開問題アプリv3へ実URLを設定し、正しい `/g/` URLが受理され、任意のHTTPS URLが拒否されることを確認する。
+8. 「答案分析My GPTを開く」でMy GPTが開き、旧v2の誤った「開けませんでした」表示が出ないことを実確認する。
 
 ## 2. 実答案写真4ケース
 
@@ -72,7 +88,7 @@
 - 一般英文法で判断した場合は明示
 - 読解は語彙/構造/指示語/時系列/内容一致/根拠探索を分ける
 
-各ケースで、元写真とGPT返答全文を別ファイルで保存する。実行日時も記録する。
+各ケースで、元写真とGPT返答全文を対応するprivateフォルダへ別ファイルで保存する。実行日時も記録する。
 
 ## 3. A4実テスト
 
@@ -94,7 +110,7 @@
 - held / 判定保留を隠さない
 - 短い見出しと段落を使う
 
-PDFと確認証拠をprivate領域へ保存する。
+PDFと確認証拠をprivate A4フォルダへ保存する。
 
 ## 4. runtime evidence inputを埋める
 
@@ -128,7 +144,7 @@ node tools/finalize_mikami_answer_gpt_runtime_evidence.mjs \
 6. hardened true-runtime validator
 7. evidence-chain validator
 
-すべてPASSした場合だけ `mikami_answer_gpt_runtime_finalization.audit.json` をPASSで出す。
+すべてPASSした場合だけ `mikami_answer_gpt_runtime_finalization.audit.json` をPASSで出す。最終成果物はprivate finalized hashes/auditフォルダへ保存する。
 
 ## 6. 完成後
 
