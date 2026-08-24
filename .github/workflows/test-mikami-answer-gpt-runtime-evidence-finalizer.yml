@@ -26,34 +26,44 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Syntax checks
-        run: |
-          node --check tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs
-          node --check tools/assemble_mikami_answer_gpt_runtime_evidence.mjs
-          node --check tools/finalize_mikami_answer_gpt_runtime_evidence.mjs
-      - name: Strict input negative-case self-test
-        run: node tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs --self-test
-      - name: Cryptographic assembler self-test
-        run: node tools/assemble_mikami_answer_gpt_runtime_evidence.mjs --self-test
-      - name: One-shot finalizer self-test
-        run: node tools/finalize_mikami_answer_gpt_runtime_evidence.mjs --self-test
-      - name: Verify real template stays incomplete by default
+      - name: Run all diagnostics without hiding failures
+        id: diag
         shell: bash
         run: |
-          set -euo pipefail
+          set +e
+          mkdir -p /tmp/mikami-runtime-finalizer-ci
+          node --check tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs > /tmp/mikami-runtime-finalizer-ci/syntax-input.log 2>&1; C1=$?
+          node --check tools/assemble_mikami_answer_gpt_runtime_evidence.mjs > /tmp/mikami-runtime-finalizer-ci/syntax-assembler.log 2>&1; C2=$?
+          node --check tools/finalize_mikami_answer_gpt_runtime_evidence.mjs > /tmp/mikami-runtime-finalizer-ci/syntax-finalizer.log 2>&1; C3=$?
+          node tools/validate_mikami_answer_gpt_runtime_evidence_input.mjs --self-test > /tmp/mikami-runtime-finalizer-ci/input.log 2>&1; C4=$?
+          node tools/assemble_mikami_answer_gpt_runtime_evidence.mjs --self-test > /tmp/mikami-runtime-finalizer-ci/assembler.log 2>&1; C5=$?
+          node tools/finalize_mikami_answer_gpt_runtime_evidence.mjs --self-test > /tmp/mikami-runtime-finalizer-ci/finalizer.log 2>&1; C6=$?
           F='gpt/tests/mikami_answer_gpt_runtime_evidence_input.template.json'
-          grep -q '"actual_custom_gpt": false' "$F"
-          grep -q '"knowledge_registered": false' "$F"
-          grep -q '"instructions_applied": false' "$F"
-          grep -q '"output_schema_applied": false' "$F"
-          test "$(grep -c '"executed_in_actual_custom_gpt": false' "$F")" = 4
-          test "$(grep -c '"photo_attached": false' "$F")" = 4
-          grep -q '"actual_render_or_print_test": false' "$F"
-          grep -q '"overall_runtime_pass": false' "$F"
-      - name: Record durable PASS race-safely
+          C7=0
+          grep -q '"actual_custom_gpt": false' "$F" || C7=1
+          grep -q '"knowledge_registered": false' "$F" || C7=1
+          grep -q '"instructions_applied": false' "$F" || C7=1
+          grep -q '"output_schema_applied": false' "$F" || C7=1
+          test "$(grep -c '"executed_in_actual_custom_gpt": false' "$F")" = 4 || C7=1
+          test "$(grep -c '"photo_attached": false' "$F")" = 4 || C7=1
+          grep -q '"actual_render_or_print_test": false' "$F" || C7=1
+          grep -q '"overall_runtime_pass": false' "$F" || C7=1
+          printf 'SYNTAX_INPUT=%s\nSYNTAX_ASSEMBLER=%s\nSYNTAX_FINALIZER=%s\nINPUT_SELF_TEST=%s\nASSEMBLER_SELF_TEST=%s\nFINALIZER_SELF_TEST=%s\nTEMPLATE_INCOMPLETE=%s\n' "$C1" "$C2" "$C3" "$C4" "$C5" "$C6" "$C7" > /tmp/mikami-runtime-finalizer-ci/result.env
+          cat /tmp/mikami-runtime-finalizer-ci/*.log || true
+          cat /tmp/mikami-runtime-finalizer-ci/result.env
+          exit 0
+      - name: Always record diagnostic status race-safely
         shell: bash
         run: |
           set -euo pipefail
+          . /tmp/mikami-runtime-finalizer-ci/result.env
+          STATUS=PASS
+          for v in "$SYNTAX_INPUT" "$SYNTAX_ASSEMBLER" "$SYNTAX_FINALIZER" "$INPUT_SELF_TEST" "$ASSEMBLER_SELF_TEST" "$FINALIZER_SELF_TEST" "$TEMPLATE_INCOMPLETE"; do
+            if test "$v" != 0; then STATUS=FAIL; fi
+          done
+          INPUT_LOG=$(tr '\n' ';' < /tmp/mikami-runtime-finalizer-ci/input.log | cut -c1-1000)
+          ASSEMBLER_LOG=$(tr '\n' ';' < /tmp/mikami-runtime-finalizer-ci/assembler.log | cut -c1-1000)
+          FINALIZER_LOG=$(tr '\n' ';' < /tmp/mikami-runtime-finalizer-ci/finalizer.log | cut -c1-1000)
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           for attempt in 1 2 3 4 5; do
@@ -61,14 +71,17 @@ jobs:
             git reset --hard origin/mikami-canonical-repair
             mkdir -p release/generated
             cat > release/generated/answer_gpt_runtime_evidence_finalizer.status.txt <<EOF
-          STATUS=PASS
+          STATUS=${STATUS}
           UPDATED_AT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
           CI_RUN_ID=${GITHUB_RUN_ID}
           TESTED_HEAD_SHA=${GITHUB_SHA}
-          INPUT_VALIDATOR_SELF_TEST=PASS
-          INPUT_NEGATIVE_CASES_REJECTED=6
-          ASSEMBLER_SELF_TEST=PASS
-          FINALIZER_SELF_TEST=PASS
+          SYNTAX_INPUT_EXIT=${SYNTAX_INPUT}
+          SYNTAX_ASSEMBLER_EXIT=${SYNTAX_ASSEMBLER}
+          SYNTAX_FINALIZER_EXIT=${SYNTAX_FINALIZER}
+          INPUT_VALIDATOR_SELF_TEST_EXIT=${INPUT_SELF_TEST}
+          ASSEMBLER_SELF_TEST_EXIT=${ASSEMBLER_SELF_TEST}
+          FINALIZER_SELF_TEST_EXIT=${FINALIZER_SELF_TEST}
+          TEMPLATE_INCOMPLETE_DEFAULT_EXIT=${TEMPLATE_INCOMPLETE}
           ACTUAL_REGISTRATION_CONFIRMATION_REQUIRED=true
           EXACT_REGISTRATION_ASSET_IDENTITY_REQUIRED=true
           EXACT_FOUR_CASE_BEHAVIORS_REQUIRED=true
@@ -79,14 +92,15 @@ jobs:
           EVIDENCE_CHAIN_VALIDATOR_IN_FINALIZER=true
           SYNTHETIC_SELF_TEST_ONLY=true
           REAL_RUNTIME_EXECUTED=false
+          INPUT_LOG=${INPUT_LOG}
+          ASSEMBLER_LOG=${ASSEMBLER_LOG}
+          FINALIZER_LOG=${FINALIZER_LOG}
           MAIN_TOUCHED=false
           EOF
             git add release/generated/answer_gpt_runtime_evidence_finalizer.status.txt
-            if git diff --cached --quiet; then exit 0; fi
-            git commit -m "record answer GPT runtime evidence finalizer PASS (attempt ${attempt})"
-            if git push origin HEAD:mikami-canonical-repair; then exit 0; fi
+            if git diff --cached --quiet; then break; fi
+            git commit -m "record answer GPT runtime evidence finalizer ${STATUS} (attempt ${attempt})"
+            if git push origin HEAD:mikami-canonical-repair; then break; fi
             sleep $((attempt*2))
           done
-          exit 1
-
-# retrigger 2026-08-24T20:58:00+09:00 after workflow registration
+          test "$STATUS" = PASS
