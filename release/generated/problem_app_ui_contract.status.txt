@@ -1,7 +1,7 @@
 STATUS=PASS
-UPDATED_AT_UTC=2026-08-24T12:41:29Z
-CI_RUN_ID=32728410996
-TESTED_BRANCH_HEAD=19bdb2f5287b2e4f090add671b7f98f69d19e442
+UPDATED_AT_UTC=2026-08-24T12:51:06Z
+CI_RUN_ID=32729301209
+TESTED_BRANCH_HEAD=89f0ea42d41425f514b15bd37a99a04d45a6959f
 TESTED_MAIN_REF=origin/main
 FETCH_PROBLEM_APP_EXIT=0
 FETCH_ROOT_INDEX_EXIT=0
@@ -21,4 +21,4 @@ CHATGPT_HOST_GATE_REQUIRED=true
 CUSTOM_GPT_G_PATH_GATE_REQUIRED=true
 PRIVATE_KNOWLEDGE_EMBEDDED=false
 MAIN_ROOT_TOUCHED=false
-VALIDATOR_OUTPUT={;  "status": "PASS",;  "exact_artifact": true,;  "bytes": 3812209,;  "sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",;  "my_gpt_primary": true,;  "legacy_fallback_collapsed": true,;  "legacy_controls_inside_fallback": true,;  "direct_photo_to_my_gpt": true,;  "paste_back_not_required": true,;  "optional_handoff_copy": true,;  "chatgpt_host_gate": true,;  "custom_gpt_g_path_gate": true,;  "private_knowledge_embedded": false,;  "vocabulary_root_touched": false;};
+VALIDATOR_OUTPUT={;  "status": "PASS",;  "artifact_version": "v3-opener-fix",;  "exact_artifact": true,;  "bytes": 3812347,;  "sha256": "2ed299a025d416d8bcd4abd7b36bdbb2a2c6c247740645a7d3ba5fb8a1c9c1c0",;  "qb_data_sha256": "c00d3e798bcc64acec67f1d8d295c6bd136fb44712248e4872a3c576f15459ee",;  "my_gpt_primary": true,;  "legacy_fallback_collapsed": true,;  "legacy_controls_inside_fallback": true,;  "direct_photo_to_my_gpt": true,;  "paste_back_not_required": true,;  "optional_handoff_copy": true,;  "chatgpt_host_gate": true,;  "custom_gpt_g_path_gate": true,;  "noopener_false_failure_fixed": true,;  "safe_anchor_noopener_opener": true,;  "private_knowledge_embedded": false,;  "vocabulary_root_touched": false;};
