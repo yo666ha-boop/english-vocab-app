@@ -1,6 +1,6 @@
 {
-  "checkpoint_schema": "mikami-repair-work-v28",
-  "updated_at_jst": "2026-08-24T19:56:00+09:00",
+  "checkpoint_schema": "mikami-repair-work-v29",
+  "updated_at_jst": "2026-08-24T20:22:00+09:00",
   "branch": "mikami-canonical-repair",
   "main_branch_policy": "DO_NOT_OVERWRITE_VOCAB_ROOT",
   "question_bank_completion": {
@@ -15,115 +15,123 @@
     "rework_required": false
   },
   "answer_analysis_gpt_phase": {
-    "status": "PRIVATE_REGISTRATION_ASSET_IDENTITY_PASS_EVIDENCE_CHAIN_PASS_HANDOFF_URL_HARDENING_V2_CI_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+    "status": "HANDOFF_V2_MAIN_PUBLISHED_PAGES_PROPAGATION_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
     "knowledge": {
-      "status": "PASS",
+      "status": "PASS_PRIVATE",
       "records": 10511,
       "sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "public_exposure": false
     },
-    "publication_v1": {
-      "status": "PASS_EXACT_BUT_HANDOFF_URL_VALIDATION_HARDENING_NOW_REQUIRED",
-      "workflow_run_id": 32391487839,
-      "pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
-      "html_bytes": 3812063,
-      "html_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
-      "root_vocabulary_app_unchanged": true,
-      "private_knowledge_embedded": false,
+    "routing_contract": {
+      "status": "PASS_LOCKED_IN_CODE_AND_CI",
       "photo_attachment_location": "MY_GPT_ONLY",
       "app_photo_analysis_primary": false,
-      "app_photo_input_scope": "legacy_fallback_only"
+      "app_photo_input_scope": "legacy_fallback_only",
+      "my_gpt_direct_photo_attachment": true,
+      "handoff_fields": ["source_mode", "target", "question_ids", "question_count"]
     },
-    "evidence_chain": {
-      "status": "PASS_SELF_TEST_RUNTIME_PENDING",
-      "gate_version": "evidence-chain-v2",
-      "ci_run_id": 32718712535,
-      "tested_head_sha": "c0a2be517f35d5ee4791f98962790be434f2d319",
-      "race_safe_writeback": true,
-      "negative_cases_rejected": 8,
-      "real_runtime_executed": false
-    },
-    "private_registration_kit_audit": {
-      "status": "PASS",
+    "private_registration_kit": {
+      "status": "PASS_IDENTITY_LOCKED_RUNTIME_PENDING",
       "drive_folder_id": "1J82Ur6Q-_OFRmkNq0swc6oP8bR0Z6FYj",
       "file_count": 4,
       "visibility": "not_shared",
       "knowledge_file_id": "1_F6scCbMtPK0jw0Hi9eExqstDz2vWahk",
-      "knowledge_bytes": 3028093,
-      "knowledge_records": 10511,
-      "knowledge_unique_ids": 10511,
-      "knowledge_first_id": "E1-BQ-001",
-      "knowledge_last_id": "M3N-02400",
       "knowledge_sha256": "be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213",
       "instructions_file_id": "1z_xPUgAkwcigqRzWjUB3JQy_6ATnPAik",
-      "instructions_bytes": 7246,
       "instructions_sha256": "084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be",
       "schema_file_id": "1ceQyoCVmgHiRHS_jVppEbDBYUYpf0fvE",
-      "schema_bytes": 4703,
       "schema_sha256": "8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b",
-      "registration_guide_id": "1h7-RO6PsCWwUSMaRVFWGVC4DP817NSpWtlYzZgmORnw",
-      "actual_custom_gpt_url_found_in_drive": false
+      "actual_custom_gpt_url_found": false
     },
-    "registration_asset_identity_gate": {
-      "status": "PASS_RUNTIME_PENDING",
-      "ci_run_id": 32718769797,
-      "tested_head_sha": "6e5754855e8805b1c2174ee04b2208c0b85cc3bb",
-      "runtime_template_identity": "PASS",
-      "evidence_template_identity": "PASS",
-      "exact_knowledge_instructions_schema_ids_and_sha_required": true,
-      "real_runtime_executed": false
+    "handoff_v2": {
+      "ci_status": "PASS",
+      "ci_run_id": 32719249295,
+      "tested_head_sha": "5b0e461ffb6fa02746291915b708f364ce545f15",
+      "custom_gpt_url_hosts": ["chatgpt.com", "chat.openai.com"],
+      "custom_gpt_url_path": "/g/<id>",
+      "arbitrary_https_url_rejected": true,
+      "private_knowledge_embedded": false,
+      "unified_runner_switched_to_v2_commit": "940823802b365dbe33e4ded2e513015d994399e2",
+      "unified_runner_test_workflow_v2_commit": "949f2e231410ca5ab406ef095946aee77667d10b"
     },
-    "handoff_url_hardening": {
-      "issue_found": "published v1 normalizeGptUrl accepted any HTTPS URL, while final runtime gate requires an actual ChatGPT Custom GPT /g/ URL",
-      "published_v1_contains_chatgpt_host_gate": false,
-      "published_v1_contains_custom_gpt_path_gate": false,
-      "source_fix": "tools/patch_mikami_answer_gpt_handoff_v2.mjs",
-      "source_fix_commit": "1b99d744b346ed05d10280021eb3cccdfc03310d",
-      "required_hosts": ["chatgpt.com", "chat.openai.com"],
-      "required_path": "/g/<id>",
-      "ci_workflow": ".github/workflows/test-mikami-answer-gpt-handoff-v2.yml",
-      "ci_workflow_commit": "2929344f3c728bebf034e0d9d3d856cf451dbba9",
-      "ci_status": "PENDING_STATUS_WRITEBACK",
-      "published_artifact_rebuild_required_after_ci_pass": true
+    "publication_v2": {
+      "status": "MAIN_PUBLISHED_EXACT_PAGES_CACHE_NOT_YET_VERIFIED",
+      "main_publish_commit": "831dc3e592a1f2b45fb586c9d9e5632f696882f0",
+      "main_publish_parent": "2eee7a26f73e26b37801d861a9576767e84b7259",
+      "main_commit_message": "publish: harden isolated MyGPT problem app URL gate",
+      "problem_app_path": "main/problem-app/index.html",
+      "expected_bytes": 3812209,
+      "expected_sha256": "83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0",
+      "main_problem_blob_sha": "0234848086fd6212181ca51a1123acdef7be98a4",
+      "root_index_sha_before": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
+      "root_index_sha_after": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
+      "root_index_unchanged": true,
+      "pages_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+      "last_publication_run_id": 32719398320,
+      "last_publication_status": "FAIL_ONLY_BECAUSE_PAGES_STILL_SERVED_V1_DURING_VERIFY_WINDOW",
+      "last_pages_http": 200,
+      "last_pages_bytes": 3812063,
+      "last_pages_sha256": "6c3c5c6e42939ee701667cc18cf07d10403afa063ece557ed3052c44c95e0c81",
+      "retrigger_commit": "6ba01cf36fe4d83bd030140755aa127c5feca287",
+      "repair_required": false,
+      "next_action": "recheck Pages until exact v2 bytes/SHA appear; do not republish main unless main/problem-app itself regresses"
     },
-    "completed_this_manual_run": [
-      "re-read latest branch HEAD and v27 checkpoint without changing the scheduled task",
-      "hardened evidence-chain CI status writeback with fetch/reset/retry and recovered PASS run 32718432045 then template-triggered PASS run 32718712535",
-      "fetched the private registration-kit folder and confirmed exactly four required files, all not_shared",
-      "re-downloaded private Knowledge, Instructions and schema and independently recalculated sizes/SHA256",
-      "revalidated Knowledge as 10511 JSONL records / 10511 unique IDs / first E1-BQ-001 / last M3N-02400",
-      "validated Instructions required behavior markers and parsed output schema required fields",
-      "bound runtime-results and evidence templates to exact Knowledge/Instructions/schema Drive IDs and SHA256 values",
-      "added registration asset identity validator and race-safe CI; run 32718769797 PASS",
-      "searched Drive for an existing chatgpt.com/g/ URL and found none",
-      "inspected the exact published HTML and found normalizeGptUrl accepted arbitrary HTTPS URLs",
-      "added handoff v2 source patch requiring ChatGPT host plus /g/<id> path and added CI workflow"
+    "authenticated_custom_gpt_access": {
+      "status": "UNAVAILABLE_IN_CURRENT_AUTOMATION_RUNTIME",
+      "editor_url_reachable": true,
+      "authenticated_editor_session_available": false,
+      "custom_gpt_editor_connector_available": false,
+      "browser_automation_skill_discovered": true,
+      "browser_automation_executable_action_exposed": false,
+      "registration_attempted": false,
+      "registration_claimed": false,
+      "detail": "The ChatGPT GPT editor URL is reachable, but this automation runtime exposes no authenticated ChatGPT browser session and no Custom GPT editor write connector. Do not treat assets as registered until a real authenticated editor/runtime becomes available."
+    },
+    "true_runtime": {
+      "status": "PENDING",
+      "real_runtime_executed": false,
+      "four_real_answer_photo_cases_pass": false,
+      "actual_a4_portrait_render_print_pass": false,
+      "hardened_true_runtime_validator_pass": false,
+      "evidence_chain_validator_pass": false,
+      "registration_asset_identity_validator_pass": true,
+      "legacy_finalization": "PENDING_TRUE_RUNTIME"
+    },
+    "completed_this_run": [
+      "read actual latest branch checkpoint and branch HEAD instead of trusting stale prompt progress",
+      "confirmed handoff v2 CI PASS run 32719249295",
+      "switched tools/run_mikami_pipeline_v4_answer_gpt.mjs from v1 handoff patch to v2 and added hard URL-gate assertions/audit fields",
+      "updated unified runner CI workflow to syntax/self-test v2 and assert v2 runner wiring",
+      "retriggered exact v2 publication from the preserved 22/22 xz chunk bridge",
+      "confirmed main advanced from publish commit 2eee7a26... to exact v2 publish commit 831dc3e592...",
+      "confirmed publication workflow preserved root vocabulary index SHA exactly",
+      "confirmed previous publication status FAIL was only Pages propagation lag: build PASS, main publish PASS, HTTP 200 still serving v1 bytes/SHA during verify window",
+      "checked currently exposed browser/connector routes for authenticated Custom GPT editing; no authenticated editor write path is exposed, so no synthetic registration claim was made"
     ],
     "remaining_work": [
-      "collect answer_gpt_handoff_v2 CI result; if failed inspect exact failure and fix until PASS",
-      "after handoff v2 CI PASS switch the unified answer-GPT build runner from v1 patch to v2",
-      "run the already-approved exact private canonical through the app-shell-only v2 handoff build without reworking qb-data",
-      "prove qb-data unchanged, ID order preserved, quality errors 0 and private Knowledge still unembedded",
-      "republish only main/problem-app/index.html with new exact v2 artifact while proving vocabulary root index unchanged",
-      "verify GitHub Pages HTTP/body SHA and actual Custom GPT URL input rejects arbitrary HTTPS URLs",
-      "register the exact private Knowledge/Instructions/schema assets in the actual Custom GPT when authenticated editor access is available",
-      "run four real answer-photo cases, actual A4 portrait 1-2 page render/print, then hardened true-runtime + evidence-chain + registration-asset-identity validators",
-      "after all true runtime gates PASS finalize legacy copy/paste as remove_legacy or permanent_fallback"
+      "recheck GitHub Pages actual until it serves 3812209 bytes with SHA256 83921d1bb9b0ed3028d1151c138326e7698278906e6d01180bc1fb1f6b2044a0 and verify the ChatGPT host+/g/ URL gate in the served body",
+      "collect current v2 unified-runner CI writeback and fix only if it fails",
+      "when authenticated Custom GPT editor access becomes available, register exact private Knowledge, formal Instructions and output schema as みかみ塾 答案分析GPT",
+      "save the actual Custom GPT /g/<id> URL and prove problem-app accepts it while arbitrary HTTPS URLs remain rejected",
+      "run four real answer-photo cases covering exact question-ID lookup, prerequisite-grammar return point, hold/pending handling and school-test separation",
+      "perform actual A4 portrait 1-2 page render/print and save evidence",
+      "fill actual runtime-results JSON and run hardened true-runtime/evidence validators to PASS",
+      "only after all true-runtime gates PASS finalize legacy copy/paste as remove_legacy or permanent_fallback"
     ],
-    "current_stage": "handoff URL hardening before actual Custom GPT registration",
+    "current_stage": "Pages v2 propagation verification then actual Custom GPT registration/runtime",
     "stopped_at": {
-      "stage": "handoff v2 CI status writeback",
-      "status": "PENDING",
-      "detail": "Source fix and CI workflow are committed. No PASS status file was visible yet at this manual-run checkpoint. Do not claim the v2 public artifact is complete until CI passes and the exact artifact is rebuilt/republished. Authenticated Custom GPT editor access remains unavailable, but repository/publication work can still continue first."
+      "stage": "GitHub Pages v2 propagation + unavailable authenticated Custom GPT editor",
+      "status": "PARTIAL_PROGRESS_NOT_COMPLETE",
+      "detail": "Exact v2 is already committed to main/problem-app and root vocabulary index is unchanged. The last Pages verifier saw cached v1 despite HTTP 200. Custom GPT editor URL is reachable but no authenticated editor/runtime write path is exposed in this automation environment."
     },
-    "next_start": "read latest HEAD and release/generated/answer_gpt_handoff_v2.status.txt first; if absent or FAIL, inspect/fix v2 CI; if PASS, immediately switch unified runner to v2 and rebuild/republish the exact problem-app shell",
-    "next_stage": "handoff v2 CI PASS -> exact v2 unified build -> problem-app republish exact PASS -> actual Custom GPT registration -> four real photos -> A4 -> strict runtime/evidence PASS -> fallback finalization"
+    "next_start": "first read latest branch HEAD, problem_app_handoff_v2_publication.status.txt and answer_gpt_unified_runner.status.txt; verify Pages actual v2 bytes/SHA; then retry discovery of authenticated Custom GPT editor/runtime access before doing any synthetic work",
+    "next_stage": "Pages exact v2 PASS -> actual Custom GPT registration -> four real photos -> actual A4 -> hardened validators PASS -> legacy finalization"
   },
   "PHOTO_ATTACHMENT_LOCATION": "MY_GPT_ONLY",
   "APP_PHOTO_ANALYSIS_PRIMARY": false,
   "APP_PHOTO_INPUT_SCOPE": "legacy_fallback_only",
   "MY_GPT_DIRECT_PHOTO_ATTACHMENT": true,
-  "current_state": "QUESTION_BANK_COMPLETE_KNOWLEDGE_PASS_PRIVATE_REGISTRATION_IDENTITY_PASS_EVIDENCE_CHAIN_PASS_HANDOFF_V2_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
+  "current_state": "QUESTION_BANK_COMPLETE_HANDOFF_V2_MAIN_PUBLISHED_PAGES_PROPAGATION_PENDING_ACTUAL_CUSTOM_GPT_RUNTIME_PENDING",
   "overall_completion": false,
-  "completion_note": "Manual continuation on 2026-08-24 advanced the repository beyond v27 without changing the existing schedule. Evidence-chain writeback is now PASS and race-safe; the private registration kit was independently re-audited and exact Knowledge/Instructions/schema identities are CI-bound. A real mismatch was then found in the currently published handoff: arbitrary HTTPS URLs were accepted. Handoff v2 now requires an actual ChatGPT Custom GPT host and /g/ path. Next run starts by collecting/fixing that CI, then rebuilds and republishes only problem-app before actual Custom GPT runtime tests. Vocabulary root/main app remains protected and private Knowledge remains private."
+  "completion_note": "This run advanced real repository/publication work beyond v28. Handoff v2 CI is PASS; the unified runner now uses v2; exact v2 is published to main/problem-app at commit 831dc3e592a1f2b45fb586c9d9e5632f696882f0 while root vocabulary index remains unchanged. GitHub Pages verification still saw the previous v1 artifact during the workflow window, so Pages exact-v2 remains pending rather than being guessed PASS. Actual Custom GPT registration/runtime remains blocked because no authenticated Custom GPT editor session or write connector is exposed in this automation runtime."
 }
