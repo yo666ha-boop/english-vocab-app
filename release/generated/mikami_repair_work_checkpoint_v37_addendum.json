@@ -1,0 +1,35 @@
+{
+  "checkpoint_schema": "mikami-repair-work-v37-addendum",
+  "updated_at_jst": "2026-08-25T01:36+09:00",
+  "base_checkpoint": "release/generated/mikami_repair_work_checkpoint.json v36",
+  "branch": "mikami-canonical-repair",
+  "observed_branch_head": "ed13fc368141300855933013abad961f84608bb9",
+  "latest_public_index_probe": {
+    "run_id": 32750400538,
+    "status": "HASH_MISMATCH",
+    "expected_repaired_sha256": "0f0c76c2c41500194374e43280be5d25198114a4034b1dc97a66fdad7742e66f",
+    "actual_index_sha256": "bb8b64526cf1435e5f705116163c7ab5a5df9286786fde47e60d68381cfbe6ad",
+    "action": "NO_ROOT_WRITE"
+  },
+  "actual_custom_gpt_url_found": false,
+  "custom_gpt_editor_plugin_found": false,
+  "real_photo_folder_counts": {
+    "correct_original": 0,
+    "multi_category_errors": 0,
+    "unreadable_answer": 0,
+    "school_test": 0
+  },
+  "completed_this_run": [
+    "read actual branch HEAD and v36 checkpoint before work",
+    "detected newer public-index status commit ed13fc368141300855933013abad961f84608bb9 and run 32750400538",
+    "rechecked all four private real-photo folders; all remain empty",
+    "searched connected Drive for actual chatgpt.com/g/ URL; none found",
+    "searched available plugin catalog for Custom GPT editor/GPT builder capability; none found",
+    "kept root vocabulary app and main untouched"
+  ],
+  "current_stage": "actual Custom GPT registration and real four-photo runtime evidence",
+  "stopped_at": "authenticated Custom GPT editor write surface and four required real answer photos remain unavailable",
+  "next_start": "read v36 plus this v37 addendum and latest branch HEAD; immediately re-probe authenticated Custom GPT editor/runtime and all four real-photo folders; if available continue directly without redoing passed gates",
+  "next_stage": "actual Custom GPT registration -> four real answer photos -> A4 actual render/print -> hardened finalizer PASS -> legacy decision -> overall completion",
+  "overall_completion": false
+}
