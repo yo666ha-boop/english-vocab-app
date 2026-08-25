@@ -1,0 +1,35 @@
+{
+  "checkpoint_schema":"mikami-repair-work-v44-addendum",
+  "updated_at_jst":"2026-08-25T03:30+09:00",
+  "base_checkpoint":"v43",
+  "branch":"mikami-canonical-repair",
+  "observed_branch_head":"16c51efc1d0c8d898f32498abf533aadd4044e77",
+  "protected_scope":{"main_root_vocab_modified":false,"vercel_vocab_project_modified":false,"problem_app_v3":"PASS_RETAINED"},
+  "actual_custom_gpt":{
+    "registered":true,
+    "visibility":"SELF_ONLY",
+    "display_name":"みかみ塾 答案分析GPT",
+    "route_id":"g-6a8d026915148191b33b8555d6c8f77c",
+    "url":"https://chatgpt.com/g/g-6a8d026915148191b33b8555d6c8f77c-mikamishu-da-an-fen-xi-gpt",
+    "runtime_route_opened":true,
+    "runtime_title":"ChatGPT - みかみ塾 答案分析GPT",
+    "registration_evidence":"editor save confirmation plus runtime route title"
+  },
+  "registered_assets":{
+    "instructions":"02_mikami_answer_analysis_gpt_instructions.md (exact text entered)",
+    "knowledge":"01_mikami_english_question_bank_knowledge.jsonl (visible in editor)",
+    "schema":"03_mikami_answer_analysis_output_schema.json (visible in editor)",
+    "knowledge_sha256":"be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213"
+  },
+  "true_runtime":{
+    "registration_gate":"PASS",
+    "four_real_answer_photo_cases_pass":false,
+    "actual_a4_portrait_render_print_pass":false,
+    "hardened_true_runtime_validator_pass":false,
+    "reason":"all four required real-photo folders remain empty; synthetic substitution not used"
+  },
+  "real_photo_folder_counts":{"correct_original":0,"multi_category_errors":0,"unreadable_answer":0,"school_test":0},
+  "current_stage":"actual four-photo GPT runtime -> A4 portrait render/print -> hardened validators",
+  "next_start":"read latest HEAD and v44; use the registered self-only GPT URL, then process each real photo as it arrives without recreating or re-registering the GPT",
+  "overall_completion":false
+}
