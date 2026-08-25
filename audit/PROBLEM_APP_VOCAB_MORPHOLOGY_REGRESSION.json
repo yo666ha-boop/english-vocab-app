@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-08-25T23:19:33.464Z",
+  "source": "data/v7_master.csv",
+  "result": "PASS",
+  "variant_tokens": 18,
+  "morphology_matches_to_same_row_base": 2,
+  "class_counts": {
+    "plural_or_third_person": 2
+  },
+  "class_examples": {
+    "plural_or_third_person": [
+      {
+        "form": "years",
+        "base": "year"
+      },
+      {
+        "form": "years",
+        "base": "year"
+      }
+    ]
+  },
+  "representative_checks": {
+    "plays": {
+      "expected": "play",
+      "candidates": [
+        "plays",
+        "play"
+      ],
+      "pass": true
+    },
+    "studies": {
+      "expected": "study",
+      "candidates": [
+        "studies",
+        "study",
+        "studi",
+        "studie"
+      ],
+      "pass": true
+    },
+    "played": {
+      "expected": "play",
+      "candidates": [
+        "played",
+        "play",
+        "playe"
+      ],
+      "pass": true
+    },
+    "studied": {
+      "expected": "study",
+      "candidates": [
+        "studied",
+        "study",
+        "studi",
+        "studie"
+      ],
+      "pass": true
+    },
+    "playing": {
+      "expected": "play",
+      "candidates": [
+        "playing",
+        "plaie",
+        "play",
+        "playe"
+      ],
+      "pass": true
+    },
+    "making": {
+      "expected": "make",
+      "candidates": [
+        "making",
+        "mak",
+        "make"
+      ],
+      "pass": true
+    },
+    "bigger": {
+      "expected": "big",
+      "candidates": [
+        "bigger",
+        "bigg",
+        "big"
+      ],
+      "pass": true
+    },
+    "biggest": {
+      "expected": "big",
+      "candidates": [
+        "biggest",
+        "bigg",
+        "big"
+      ],
+      "pass": true
+    },
+    "better": {
+      "expected": "good",
+      "candidates": [
+        "better",
+        "good",
+        "bett",
+        "bet"
+      ],
+      "pass": true
+    },
+    "best": {
+      "expected": "good",
+      "candidates": [
+        "best",
+        "good"
+      ],
+      "pass": true
+    },
+    "went": {
+      "expected": "go",
+      "candidates": [
+        "went",
+        "go"
+      ],
+      "pass": true
+    },
+    "written": {
+      "expected": "write",
+      "candidates": [
+        "written",
+        "write"
+      ],
+      "pass": true
+    },
+    "doesn't": {
+      "expected": "do",
+      "candidates": [
+        "doesn't",
+        "does",
+        "doesn",
+        "do",
+        "doe"
+      ],
+      "pass": true
+    },
+    "children": {
+      "expected": "child",
+      "candidates": [
+        "children"
+      ],
+      "pass": false
+    }
+  },
+  "required_failures": [],
+  "alias_or_nonmorph_sample": [],
+  "note": "Checks generic lemma/form normalization used by vocab gating. Non-morph lexical aliases are reported but are not failures."
+}
