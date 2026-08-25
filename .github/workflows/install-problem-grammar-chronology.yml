@@ -44,6 +44,8 @@ jobs:
           git add tools/install_problem_grammar_chronology.mjs problem-app/index.html audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_APPLY.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'feat: apply source-backed learned grammar chronology [skip ci]'
+          git restore --worktree .
+          git clean -fd
           branch="${GITHUB_REF_NAME}"
           for attempt in 1 2 3 4; do
             git fetch origin "${branch}"
