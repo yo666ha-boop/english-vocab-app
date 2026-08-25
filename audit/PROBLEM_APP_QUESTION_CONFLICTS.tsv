@@ -1,0 +1,51 @@
+conflict_groups	50
+1	16	中2/未来表現/空所補充	Q=He is going to (      ) next Sunday.	A=Visit my grandmother || Play soccer || Study science || Watch a movie || Clean my room || Practice tennis || Go shopping || Help my father
+2	16	中2/未来表現/空所補充	Q=She is going to (      ) next Sunday.	A=Visit my grandmother || Play soccer || Study science || Watch a movie || Clean my room || Practice tennis || Go shopping || Help my father
+3	10	中2/一般動詞/空所補充	Q=I (      ) every day.	A=Practice basketball || Watch a movie || Study math || Use the internet || Play the guitar || Read English books || Play tennis || Help at home || Cook curry || Join the tennis club
+4	10	中2/一般動詞/空所補充	Q=They (      ) every day.	A=Practice basketball || Watch a movie || Study math || Use the internet || Play the guitar || Read English books || Play tennis || Help at home || Cook curry || Join the tennis club
+5	10	中2/一般動詞/空所補充	Q=We (      ) every day.	A=Practice basketball || Watch a movie || Study math || Use the internet || Play the guitar || Read English books || Play tennis || Help at home || Cook curry || Join the tennis club
+6	10	中2/一般動詞/空所補充	Q=You (      ) every day.	A=Practice basketball || Watch a movie || Study math || Use the internet || Play the guitar || Read English books || Play tennis || Help at home || Cook curry || Join the tennis club
+7	8	中1/be動詞/変形 | 中2/be動詞/変形 | 中3/be動詞と一般動詞（現在形）/変形	Q=I am busy. を疑問文にしなさい。	A=Am I busy? || Are you busy?
+8	8	中2/未来表現/空所補充	Q=I am going to (      ) next Sunday.	A=Visit my grandmother || Play soccer || Study science || Watch a movie || Clean my room || Practice tennis || Go shopping || Help my father
+9	8	中2/未来表現/空所補充	Q=My friend is going to (      ) next Sunday.	A=Visit my grandmother || Play soccer || Study science || Watch a movie || Clean my room || Practice tennis || Go shopping || Help my father
+10	8	中2/未来表現/空所補充	Q=They are going to (      ) next Sunday.	A=Visit their grandmother || Play soccer || Study science || Watch a movie || Clean their room || Practice tennis || Go shopping || Help my father
+11	8	中2/未来表現/空所補充	Q=We are going to (      ) next Sunday.	A=Visit our grandmother || Play soccer || Study science || Watch a movie || Clean our room || Practice tennis || Go shopping || Help my father
+12	8	中2/未来表現/空所補充	Q=You are going to (      ) next Sunday.	A=Visit your grandmother || Play soccer || Study science || Watch a movie || Clean your room || Practice tennis || Go shopping || Help my father
+13	7	中1/be動詞/変形 | 中2/be動詞/変形	Q=We are busy. を疑問文にしなさい。	A=Are we busy? || Are you busy?
+14	6	中2/未来表現/変形	Q=I を主語にして、be going to を使った正しい英文を書きなさい。	A=I am going to visit my grandmother. || I am going to play soccer. || I am going to study science. || I am going to watch a movie. || I am going to clean my room. || I am going to practice tennis.
+15	6	中2/未来表現/変形	Q=They を主語にして、be going to を使った正しい英文を書きなさい。	A=They are going to visit their grandmother. || They are going to play soccer. || They are going to study science. || They are going to watch a movie. || They are going to clean their room. || They are going to practice tennis.
+16	6	中2/未来表現/変形	Q=We を主語にして、be going to を使った正しい英文を書きなさい。	A=We are going to visit our grandmother. || We are going to play soccer. || We are going to study science. || We are going to watch a movie. || We are going to clean our room. || We are going to practice tennis.
+17	6	中2/未来表現/変形	Q=You を主語にして、be going to を使った正しい英文を書きなさい。	A=You are going to visit your grandmother. || You are going to play soccer. || You are going to study science. || You are going to watch a movie. || You are going to clean your room. || You are going to practice tennis.
+18	5	中1/三単現/間違い直し | 中2/三単現/間違い直し	Q=He play tennis every day. の誤りを直しなさい。	A=He plays tennis every day. || He visits Kyoto every day.
+19	5	中1/be動詞/変形 | 中2/be動詞/変形	Q=I am happy. を疑問文にしなさい。	A=Am I happy? || Are you happy?
+20	5	中1/三単現/間違い直し | 中2/三単現/間違い直し	Q=She play tennis every day. の誤りを直しなさい。	A=She plays tennis every day. || She visits Kyoto every day.
+21	5	中1/be動詞/変形 | 中2/be動詞/変形	Q=We are happy. を疑問文にしなさい。	A=Are we happy? || Are you happy?
+22	4	中1/一般動詞/変形 | 中2/一般動詞/変形 | 中3/be動詞と一般動詞（現在形）/変形	Q=I play tennis. を疑問文にしなさい。	A=Do I play tennis? || Do you play tennis?
+23	3	中1/一般動詞/変形 | 中2/一般動詞/変形 | 中3/be動詞と一般動詞（現在形）/変形	Q=We play tennis. を疑問文にしなさい。	A=Do we play tennis? || Do you play tennis?
+24	2	中1/there is ～・look ～ の文/英作文 | 中2/文型①（look ～，give A B）/英作文	Q=『その花は美しく見えます。』を英語で書きなさい。	A=The flower looks beautiful. || The flowers look beautiful.
+25	2	中1/接続詞/英作文	Q=『雨だったので、彼女は家にいました。』を英語で書きなさい。	A=She stayed home because it was rainy. || Because it was rainy, she stayed home.
+26	2	中1/be動詞/変形 | 中2/be動詞/変形	Q=I am kind. を疑問文にしなさい。	A=Am I kind? || Are you kind?
+27	2	中1/現在進行形/変形 | 中3/進行形/変形	Q=I am studying English now. を疑問文にしなさい。	A=Are you studying English now? || Am I studying English now?
+28	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I ate breakfast yesterday. を疑問文にしなさい。	A=Did I eat breakfast yesterday? || Did you eat breakfast yesterday?
+29	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I came to my house yesterday. を疑問文にしなさい。	A=Did I come to my house yesterday? || Did you come to your house yesterday?
+30	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I did my homework yesterday. を疑問文にしなさい。	A=Did I do my homework yesterday? || Did you do your homework yesterday?
+31	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I got up at six yesterday. を疑問文にしなさい。	A=Did I get up at six yesterday? || Do you got up at six yesterday?
+32	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I had a test yesterday. を疑問文にしなさい。	A=Did I have a test yesterday? || Did you have a test yesterday?
+33	2	中1/一般動詞/変形 | 中2/一般動詞/変形	Q=I help at home. を疑問文にしなさい。	A=Do I help at home? || Do you help at home?
+34	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I made a cake yesterday. を疑問文にしなさい。	A=Did I make a cake yesterday? || Did you make a cake yesterday?
+35	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I saw a movie yesterday. を疑問文にしなさい。	A=Did I see a movie yesterday? || Did you see a movie yesterday?
+36	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=I went to the park yesterday. を疑問文にしなさい。	A=Did I go to the park yesterday? || Did you go to the park yesterday?
+37	2	中1/be動詞/変形 | 中2/be動詞/変形	Q=We are kind. を疑問文にしなさい。	A=Are we kind? || Are you kind?
+38	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We ate breakfast yesterday. を疑問文にしなさい。	A=Did we eat breakfast yesterday? || Did you eat breakfast yesterday?
+39	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We came to my house yesterday. を疑問文にしなさい。	A=Did we come to my house yesterday? || Did you come to your house yesterday?
+40	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We did our homework yesterday. を疑問文にしなさい。	A=Did we do our homework yesterday? || Did you do your homework yesterday?
+41	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We got up at six yesterday. を疑問文にしなさい。	A=Did we get up at six yesterday? || Do you got up at six yesterday?
+42	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We had a test yesterday. を疑問文にしなさい。	A=Did we have a test yesterday? || Did you have a test yesterday?
+43	2	中1/一般動詞/変形 | 中2/一般動詞/変形	Q=We help at home. を疑問文にしなさい。	A=Do we help at home? || Do you help at home?
+44	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We made a cake yesterday. を疑問文にしなさい。	A=Did we make a cake yesterday? || Did you make a cake yesterday?
+45	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We saw a movie yesterday. を疑問文にしなさい。	A=Did we see a movie yesterday? || Did you see a movie yesterday?
+46	2	中1/過去の疑問文・否定文/変形 | 中1/不規則動詞/変形	Q=We went to the park yesterday. を疑問文にしなさい。	A=Did we go to the park yesterday? || Did you go to the park yesterday?
+47	2	中1/不規則動詞/英作文 | 中2/一般動詞の過去形/英作文	Q=次の日本語に合う英文を書きなさい。『あなたは 昨日 映画を見ました。』	A=You saw a movie yesterday. || You watched a movie yesterday.
+48	2	中1/不規則動詞/英作文 | 中2/一般動詞の過去形/英作文	Q=次の日本語に合う英文を書きなさい。『彼らは 昨日 映画を見ました。』	A=They saw a movie yesterday. || They watched a movie yesterday.
+49	2	中1/不規則動詞/英作文 | 中2/一般動詞の過去形/英作文	Q=次の日本語に合う英文を書きなさい。『私たちは 昨日 映画を見ました。』	A=We saw a movie yesterday. || We watched a movie yesterday.
+50	2	中1/不規則動詞/英作文 | 中2/一般動詞の過去形/英作文	Q=次の日本語に合う英文を書きなさい。『私は 昨日 映画を見ました。』	A=I saw a movie yesterday. || I watched a movie yesterday.
