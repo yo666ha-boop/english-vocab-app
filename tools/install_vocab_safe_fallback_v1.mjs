@@ -296,9 +296,9 @@ function buildPastVerbFallbacks() {
   for(const [s,base,past,jp] of rows){
     const stem=String(n++).padStart(3,'0');
     const full=s+' '+past+'.';
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','一般動詞の過去形','空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
+    out.push(vocabFallbackItem('中1','一般動詞の過去形','変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
+    out.push(vocabFallbackItem('中1','一般動詞の過去形','英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
   }
   return out;
 }
