@@ -1,0 +1,1925 @@
+{
+  "english_items": 10511,
+  "textbooks": [
+    "サンシャイン",
+    "ニューホライズン"
+  ],
+  "grades": [
+    "中1",
+    "中2",
+    "中3"
+  ],
+  "coordinate_version": "v7-2026-08-18-1based",
+  "coordinate_semantics": {
+    "priorGrade": -2,
+    "unknown": [
+      0,
+      -1
+    ],
+    "currentGradeFirstSection": 1
+  },
+  "migration_audit": {
+    "translated": 5345,
+    "legacyUnknown": 11860,
+    "blockedObsolete": 3817,
+    "outOfRange": 0,
+    "priorGrade": 0,
+    "totalValues": 21022,
+    "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated."
+  },
+  "sections_shape": {
+    "ニューホライズン": {
+      "1": 46,
+      "2": 35,
+      "3": 30
+    },
+    "サンシャイン": {
+      "1": 39,
+      "2": 33,
+      "3": 27
+    }
+  },
+  "by_textbook_grade": {
+    "サンシャイン": {
+      "中1": {
+        "total": 2884,
+        "positive": 2047,
+        "unknown_0": 15,
+        "unknown_-1": 822,
+        "max_possible_pass": 2047,
+        "max_possible_pass_pct": 70.98,
+        "max_positive_ordinal": 37,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 3,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 4,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 5,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 6,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 7,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 8,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 9,
+            "pass": 17,
+            "pass_pct": 0.59
+          },
+          {
+            "ordinal": 10,
+            "pass": 91,
+            "pass_pct": 3.16
+          },
+          {
+            "ordinal": 11,
+            "pass": 91,
+            "pass_pct": 3.16
+          },
+          {
+            "ordinal": 12,
+            "pass": 258,
+            "pass_pct": 8.95
+          },
+          {
+            "ordinal": 13,
+            "pass": 314,
+            "pass_pct": 10.89
+          },
+          {
+            "ordinal": 14,
+            "pass": 491,
+            "pass_pct": 17.02
+          },
+          {
+            "ordinal": 15,
+            "pass": 511,
+            "pass_pct": 17.72
+          },
+          {
+            "ordinal": 16,
+            "pass": 514,
+            "pass_pct": 17.82
+          },
+          {
+            "ordinal": 17,
+            "pass": 525,
+            "pass_pct": 18.2
+          },
+          {
+            "ordinal": 18,
+            "pass": 525,
+            "pass_pct": 18.2
+          },
+          {
+            "ordinal": 19,
+            "pass": 525,
+            "pass_pct": 18.2
+          },
+          {
+            "ordinal": 20,
+            "pass": 526,
+            "pass_pct": 18.24
+          },
+          {
+            "ordinal": 21,
+            "pass": 528,
+            "pass_pct": 18.31
+          },
+          {
+            "ordinal": 22,
+            "pass": 529,
+            "pass_pct": 18.34
+          },
+          {
+            "ordinal": 23,
+            "pass": 536,
+            "pass_pct": 18.59
+          },
+          {
+            "ordinal": 24,
+            "pass": 536,
+            "pass_pct": 18.59
+          },
+          {
+            "ordinal": 25,
+            "pass": 552,
+            "pass_pct": 19.14
+          },
+          {
+            "ordinal": 26,
+            "pass": 573,
+            "pass_pct": 19.87
+          },
+          {
+            "ordinal": 27,
+            "pass": 576,
+            "pass_pct": 19.97
+          },
+          {
+            "ordinal": 28,
+            "pass": 576,
+            "pass_pct": 19.97
+          },
+          {
+            "ordinal": 29,
+            "pass": 594,
+            "pass_pct": 20.6
+          },
+          {
+            "ordinal": 30,
+            "pass": 594,
+            "pass_pct": 20.6
+          },
+          {
+            "ordinal": 31,
+            "pass": 1026,
+            "pass_pct": 35.58
+          },
+          {
+            "ordinal": 32,
+            "pass": 1089,
+            "pass_pct": 37.76
+          },
+          {
+            "ordinal": 33,
+            "pass": 1089,
+            "pass_pct": 37.76
+          },
+          {
+            "ordinal": 34,
+            "pass": 1155,
+            "pass_pct": 40.05
+          },
+          {
+            "ordinal": 35,
+            "pass": 1936,
+            "pass_pct": 67.13
+          },
+          {
+            "ordinal": 36,
+            "pass": 2043,
+            "pass_pct": 70.84
+          },
+          {
+            "ordinal": 37,
+            "pass": 2047,
+            "pass_pct": 70.98
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "三単現",
+            199
+          ],
+          [
+            "一般動詞",
+            137
+          ],
+          [
+            "不規則動詞",
+            74
+          ],
+          [
+            "過去を表す語",
+            60
+          ],
+          [
+            "一般動詞の過去形",
+            50
+          ],
+          [
+            "be動詞",
+            44
+          ],
+          [
+            "英作文",
+            40
+          ],
+          [
+            "前置詞",
+            33
+          ],
+          [
+            "頻度副詞",
+            29
+          ],
+          [
+            "過去の疑問文・否定文",
+            24
+          ],
+          [
+            "並びかえ",
+            23
+          ],
+          [
+            "疑問詞",
+            18
+          ],
+          [
+            "区別",
+            17
+          ],
+          [
+            "未来の文",
+            17
+          ],
+          [
+            "読解・会話完成",
+            15
+          ],
+          [
+            "人称代名詞",
+            15
+          ],
+          [
+            "命令文",
+            14
+          ],
+          [
+            "there is ～・look ～ の文",
+            11
+          ],
+          [
+            "接続詞",
+            10
+          ],
+          [
+            "can",
+            6
+          ],
+          [
+            "現在進行形",
+            1
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "be動詞",
+            519
+          ],
+          [
+            "過去のbe動詞",
+            366
+          ],
+          [
+            "過去を表す語",
+            203
+          ],
+          [
+            "三単現",
+            198
+          ],
+          [
+            "一般動詞の過去形",
+            148
+          ],
+          [
+            "一般動詞",
+            131
+          ],
+          [
+            "過去の疑問文・否定文",
+            110
+          ],
+          [
+            "不規則動詞",
+            77
+          ],
+          [
+            "英作文",
+            61
+          ],
+          [
+            "頻度副詞",
+            55
+          ],
+          [
+            "並びかえ",
+            48
+          ],
+          [
+            "区別",
+            22
+          ],
+          [
+            "疑問詞",
+            18
+          ],
+          [
+            "現在進行形",
+            16
+          ],
+          [
+            "人称代名詞",
+            15
+          ],
+          [
+            "can",
+            13
+          ],
+          [
+            "過去進行形",
+            11
+          ],
+          [
+            "命令文",
+            10
+          ],
+          [
+            "前置詞",
+            9
+          ],
+          [
+            "読解・会話完成",
+            9
+          ],
+          [
+            "there is ～・look ～ の文",
+            3
+          ],
+          [
+            "接続詞",
+            3
+          ],
+          [
+            "未来の文",
+            2
+          ]
+        ]
+      },
+      "中2": {
+        "total": 3707,
+        "unknown_0": 2642,
+        "unknown_-1": 834,
+        "positive": 231,
+        "max_possible_pass": 231,
+        "max_possible_pass_pct": 6.23,
+        "max_positive_ordinal": 33,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 13,
+            "pass_pct": 0.35
+          },
+          {
+            "ordinal": 3,
+            "pass": 13,
+            "pass_pct": 0.35
+          },
+          {
+            "ordinal": 4,
+            "pass": 48,
+            "pass_pct": 1.29
+          },
+          {
+            "ordinal": 5,
+            "pass": 48,
+            "pass_pct": 1.29
+          },
+          {
+            "ordinal": 6,
+            "pass": 51,
+            "pass_pct": 1.38
+          },
+          {
+            "ordinal": 7,
+            "pass": 51,
+            "pass_pct": 1.38
+          },
+          {
+            "ordinal": 8,
+            "pass": 59,
+            "pass_pct": 1.59
+          },
+          {
+            "ordinal": 9,
+            "pass": 59,
+            "pass_pct": 1.59
+          },
+          {
+            "ordinal": 10,
+            "pass": 59,
+            "pass_pct": 1.59
+          },
+          {
+            "ordinal": 11,
+            "pass": 59,
+            "pass_pct": 1.59
+          },
+          {
+            "ordinal": 12,
+            "pass": 59,
+            "pass_pct": 1.59
+          },
+          {
+            "ordinal": 13,
+            "pass": 62,
+            "pass_pct": 1.67
+          },
+          {
+            "ordinal": 14,
+            "pass": 62,
+            "pass_pct": 1.67
+          },
+          {
+            "ordinal": 15,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 16,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 17,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 18,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 19,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 20,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 21,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 22,
+            "pass": 63,
+            "pass_pct": 1.7
+          },
+          {
+            "ordinal": 23,
+            "pass": 88,
+            "pass_pct": 2.37
+          },
+          {
+            "ordinal": 24,
+            "pass": 88,
+            "pass_pct": 2.37
+          },
+          {
+            "ordinal": 25,
+            "pass": 142,
+            "pass_pct": 3.83
+          },
+          {
+            "ordinal": 26,
+            "pass": 143,
+            "pass_pct": 3.86
+          },
+          {
+            "ordinal": 27,
+            "pass": 143,
+            "pass_pct": 3.86
+          },
+          {
+            "ordinal": 28,
+            "pass": 143,
+            "pass_pct": 3.86
+          },
+          {
+            "ordinal": 29,
+            "pass": 145,
+            "pass_pct": 3.91
+          },
+          {
+            "ordinal": 30,
+            "pass": 149,
+            "pass_pct": 4.02
+          },
+          {
+            "ordinal": 31,
+            "pass": 149,
+            "pass_pct": 4.02
+          },
+          {
+            "ordinal": 32,
+            "pass": 150,
+            "pass_pct": 4.05
+          },
+          {
+            "ordinal": 33,
+            "pass": 231,
+            "pass_pct": 6.23
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "未来表現",
+            706
+          ],
+          [
+            "不定詞",
+            444
+          ],
+          [
+            "動名詞",
+            397
+          ],
+          [
+            "一般動詞",
+            344
+          ],
+          [
+            "助動詞",
+            304
+          ],
+          [
+            "三単現",
+            220
+          ],
+          [
+            "一般動詞の過去形",
+            196
+          ],
+          [
+            "比較",
+            189
+          ],
+          [
+            "過去の疑問文・否定文",
+            122
+          ],
+          [
+            "be動詞",
+            108
+          ],
+          [
+            "不規則動詞",
+            56
+          ],
+          [
+            "接続詞",
+            41
+          ],
+          [
+            "現在完了形（完了・経験）",
+            36
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            35
+          ],
+          [
+            "文型①（look ～，give A B）",
+            29
+          ],
+          [
+            "人称代名詞",
+            27
+          ],
+          [
+            "be動詞と一般動詞（現在形）",
+            26
+          ],
+          [
+            "進行形",
+            26
+          ],
+          [
+            "疑問詞",
+            25
+          ],
+          [
+            "受動態",
+            24
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            24
+          ],
+          [
+            "there is ～ の文",
+            23
+          ],
+          [
+            "命令文",
+            21
+          ],
+          [
+            "不定詞②",
+            19
+          ],
+          [
+            "読解・会話完成",
+            17
+          ],
+          [
+            "文型②（call A B，make A B）",
+            17
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "比較",
+            79
+          ],
+          [
+            "助動詞",
+            36
+          ],
+          [
+            "文型②（call A B，make A B）",
+            30
+          ],
+          [
+            "受動態",
+            14
+          ],
+          [
+            "動名詞",
+            9
+          ],
+          [
+            "不定詞②",
+            9
+          ],
+          [
+            "不規則動詞",
+            8
+          ],
+          [
+            "接続詞",
+            7
+          ],
+          [
+            "命令文",
+            7
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            6
+          ],
+          [
+            "there is ～ の文",
+            5
+          ],
+          [
+            "不定詞",
+            4
+          ],
+          [
+            "進行形",
+            4
+          ],
+          [
+            "読解・会話完成",
+            3
+          ],
+          [
+            "人称代名詞",
+            3
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            3
+          ],
+          [
+            "過去の疑問文・否定文",
+            2
+          ],
+          [
+            "疑問詞",
+            1
+          ],
+          [
+            "文型①（look ～，give A B）",
+            1
+          ]
+        ]
+      },
+      "中3": {
+        "total": 3920,
+        "unknown_0": 2366,
+        "unknown_-1": 1346,
+        "positive": 208,
+        "max_possible_pass": 208,
+        "max_possible_pass_pct": 5.31,
+        "max_positive_ordinal": 5,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 3,
+            "pass": 34,
+            "pass_pct": 0.87
+          },
+          {
+            "ordinal": 4,
+            "pass": 34,
+            "pass_pct": 0.87
+          },
+          {
+            "ordinal": 5,
+            "pass": 208,
+            "pass_pct": 5.31
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "助動詞",
+            360
+          ],
+          [
+            "現在完了形（完了・経験）",
+            326
+          ],
+          [
+            "be動詞と一般動詞（現在形）",
+            240
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            240
+          ],
+          [
+            "進行形",
+            240
+          ],
+          [
+            "未来の文",
+            240
+          ],
+          [
+            "比較",
+            240
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            186
+          ],
+          [
+            "関係代名詞",
+            185
+          ],
+          [
+            "分詞と間接疑問文",
+            158
+          ],
+          [
+            "文型",
+            155
+          ],
+          [
+            "仮定法",
+            136
+          ],
+          [
+            "命令文，there is ～ の文",
+            136
+          ],
+          [
+            "不定詞②",
+            132
+          ],
+          [
+            "人称代名詞",
+            132
+          ],
+          [
+            "疑問詞",
+            126
+          ],
+          [
+            "英語の語順",
+            120
+          ],
+          [
+            "接続詞",
+            120
+          ],
+          [
+            "不定詞①，動名詞",
+            120
+          ],
+          [
+            "受動態",
+            120
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "現在完了形（継続），現在完了進行形",
+            174
+          ],
+          [
+            "現在完了形（完了・経験）",
+            34
+          ]
+        ]
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "total": 2884,
+        "positive": 1988,
+        "unknown_0": 25,
+        "unknown_-1": 871,
+        "max_possible_pass": 1988,
+        "max_possible_pass_pct": 68.93,
+        "max_positive_ordinal": 46,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 3,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 4,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 5,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 6,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 7,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 8,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 9,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 10,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 11,
+            "pass": 40,
+            "pass_pct": 1.39
+          },
+          {
+            "ordinal": 12,
+            "pass": 55,
+            "pass_pct": 1.91
+          },
+          {
+            "ordinal": 13,
+            "pass": 74,
+            "pass_pct": 2.57
+          },
+          {
+            "ordinal": 14,
+            "pass": 74,
+            "pass_pct": 2.57
+          },
+          {
+            "ordinal": 15,
+            "pass": 74,
+            "pass_pct": 2.57
+          },
+          {
+            "ordinal": 16,
+            "pass": 119,
+            "pass_pct": 4.13
+          },
+          {
+            "ordinal": 17,
+            "pass": 190,
+            "pass_pct": 6.59
+          },
+          {
+            "ordinal": 18,
+            "pass": 225,
+            "pass_pct": 7.8
+          },
+          {
+            "ordinal": 19,
+            "pass": 227,
+            "pass_pct": 7.87
+          },
+          {
+            "ordinal": 20,
+            "pass": 228,
+            "pass_pct": 7.91
+          },
+          {
+            "ordinal": 21,
+            "pass": 232,
+            "pass_pct": 8.04
+          },
+          {
+            "ordinal": 22,
+            "pass": 406,
+            "pass_pct": 14.08
+          },
+          {
+            "ordinal": 23,
+            "pass": 416,
+            "pass_pct": 14.42
+          },
+          {
+            "ordinal": 24,
+            "pass": 427,
+            "pass_pct": 14.81
+          },
+          {
+            "ordinal": 25,
+            "pass": 430,
+            "pass_pct": 14.91
+          },
+          {
+            "ordinal": 26,
+            "pass": 430,
+            "pass_pct": 14.91
+          },
+          {
+            "ordinal": 27,
+            "pass": 432,
+            "pass_pct": 14.98
+          },
+          {
+            "ordinal": 28,
+            "pass": 432,
+            "pass_pct": 14.98
+          },
+          {
+            "ordinal": 29,
+            "pass": 549,
+            "pass_pct": 19.04
+          },
+          {
+            "ordinal": 30,
+            "pass": 831,
+            "pass_pct": 28.81
+          },
+          {
+            "ordinal": 31,
+            "pass": 831,
+            "pass_pct": 28.81
+          },
+          {
+            "ordinal": 32,
+            "pass": 831,
+            "pass_pct": 28.81
+          },
+          {
+            "ordinal": 33,
+            "pass": 893,
+            "pass_pct": 30.96
+          },
+          {
+            "ordinal": 34,
+            "pass": 912,
+            "pass_pct": 31.62
+          },
+          {
+            "ordinal": 35,
+            "pass": 1135,
+            "pass_pct": 39.36
+          },
+          {
+            "ordinal": 36,
+            "pass": 1135,
+            "pass_pct": 39.36
+          },
+          {
+            "ordinal": 37,
+            "pass": 1142,
+            "pass_pct": 39.6
+          },
+          {
+            "ordinal": 38,
+            "pass": 1147,
+            "pass_pct": 39.77
+          },
+          {
+            "ordinal": 39,
+            "pass": 1149,
+            "pass_pct": 39.84
+          },
+          {
+            "ordinal": 40,
+            "pass": 1151,
+            "pass_pct": 39.91
+          },
+          {
+            "ordinal": 41,
+            "pass": 1151,
+            "pass_pct": 39.91
+          },
+          {
+            "ordinal": 42,
+            "pass": 1803,
+            "pass_pct": 62.52
+          },
+          {
+            "ordinal": 43,
+            "pass": 1825,
+            "pass_pct": 63.28
+          },
+          {
+            "ordinal": 44,
+            "pass": 1825,
+            "pass_pct": 63.28
+          },
+          {
+            "ordinal": 45,
+            "pass": 1825,
+            "pass_pct": 63.28
+          },
+          {
+            "ordinal": 46,
+            "pass": 1988,
+            "pass_pct": 68.93
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "過去を表す語",
+            167
+          ],
+          [
+            "三単現",
+            152
+          ],
+          [
+            "一般動詞",
+            96
+          ],
+          [
+            "一般動詞の過去形",
+            63
+          ],
+          [
+            "不規則動詞",
+            62
+          ],
+          [
+            "be動詞",
+            53
+          ],
+          [
+            "過去の疑問文・否定文",
+            49
+          ],
+          [
+            "英作文",
+            47
+          ],
+          [
+            "前置詞",
+            36
+          ],
+          [
+            "頻度副詞",
+            29
+          ],
+          [
+            "並びかえ",
+            25
+          ],
+          [
+            "疑問詞",
+            23
+          ],
+          [
+            "読解・会話完成",
+            17
+          ],
+          [
+            "区別",
+            14
+          ],
+          [
+            "未来の文",
+            14
+          ],
+          [
+            "can",
+            13
+          ],
+          [
+            "人称代名詞",
+            9
+          ],
+          [
+            "there is ～・look ～ の文",
+            7
+          ],
+          [
+            "命令文",
+            6
+          ],
+          [
+            "接続詞",
+            6
+          ],
+          [
+            "現在進行形",
+            6
+          ],
+          [
+            "過去進行形",
+            2
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "be動詞",
+            510
+          ],
+          [
+            "過去のbe動詞",
+            366
+          ],
+          [
+            "三単現",
+            245
+          ],
+          [
+            "一般動詞",
+            172
+          ],
+          [
+            "一般動詞の過去形",
+            135
+          ],
+          [
+            "過去を表す語",
+            96
+          ],
+          [
+            "不規則動詞",
+            89
+          ],
+          [
+            "過去の疑問文・否定文",
+            85
+          ],
+          [
+            "頻度副詞",
+            55
+          ],
+          [
+            "英作文",
+            54
+          ],
+          [
+            "並びかえ",
+            46
+          ],
+          [
+            "区別",
+            25
+          ],
+          [
+            "人称代名詞",
+            21
+          ],
+          [
+            "命令文",
+            18
+          ],
+          [
+            "疑問詞",
+            13
+          ],
+          [
+            "現在進行形",
+            11
+          ],
+          [
+            "過去進行形",
+            9
+          ],
+          [
+            "読解・会話完成",
+            7
+          ],
+          [
+            "接続詞",
+            7
+          ],
+          [
+            "there is ～・look ～ の文",
+            7
+          ],
+          [
+            "前置詞",
+            6
+          ],
+          [
+            "can",
+            6
+          ],
+          [
+            "未来の文",
+            5
+          ]
+        ]
+      },
+      "中2": {
+        "total": 3707,
+        "unknown_0": 1786,
+        "unknown_-1": 1204,
+        "positive": 717,
+        "max_possible_pass": 717,
+        "max_possible_pass_pct": 19.34,
+        "max_positive_ordinal": 35,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 3,
+            "pass": 6,
+            "pass_pct": 0.16
+          },
+          {
+            "ordinal": 4,
+            "pass": 31,
+            "pass_pct": 0.84
+          },
+          {
+            "ordinal": 5,
+            "pass": 32,
+            "pass_pct": 0.86
+          },
+          {
+            "ordinal": 6,
+            "pass": 32,
+            "pass_pct": 0.86
+          },
+          {
+            "ordinal": 7,
+            "pass": 32,
+            "pass_pct": 0.86
+          },
+          {
+            "ordinal": 8,
+            "pass": 106,
+            "pass_pct": 2.86
+          },
+          {
+            "ordinal": 9,
+            "pass": 106,
+            "pass_pct": 2.86
+          },
+          {
+            "ordinal": 10,
+            "pass": 106,
+            "pass_pct": 2.86
+          },
+          {
+            "ordinal": 11,
+            "pass": 106,
+            "pass_pct": 2.86
+          },
+          {
+            "ordinal": 12,
+            "pass": 112,
+            "pass_pct": 3.02
+          },
+          {
+            "ordinal": 13,
+            "pass": 116,
+            "pass_pct": 3.13
+          },
+          {
+            "ordinal": 14,
+            "pass": 116,
+            "pass_pct": 3.13
+          },
+          {
+            "ordinal": 15,
+            "pass": 177,
+            "pass_pct": 4.77
+          },
+          {
+            "ordinal": 16,
+            "pass": 178,
+            "pass_pct": 4.8
+          },
+          {
+            "ordinal": 17,
+            "pass": 178,
+            "pass_pct": 4.8
+          },
+          {
+            "ordinal": 18,
+            "pass": 246,
+            "pass_pct": 6.64
+          },
+          {
+            "ordinal": 19,
+            "pass": 246,
+            "pass_pct": 6.64
+          },
+          {
+            "ordinal": 20,
+            "pass": 249,
+            "pass_pct": 6.72
+          },
+          {
+            "ordinal": 21,
+            "pass": 249,
+            "pass_pct": 6.72
+          },
+          {
+            "ordinal": 22,
+            "pass": 251,
+            "pass_pct": 6.77
+          },
+          {
+            "ordinal": 23,
+            "pass": 251,
+            "pass_pct": 6.77
+          },
+          {
+            "ordinal": 24,
+            "pass": 251,
+            "pass_pct": 6.77
+          },
+          {
+            "ordinal": 25,
+            "pass": 263,
+            "pass_pct": 7.09
+          },
+          {
+            "ordinal": 26,
+            "pass": 300,
+            "pass_pct": 8.09
+          },
+          {
+            "ordinal": 27,
+            "pass": 300,
+            "pass_pct": 8.09
+          },
+          {
+            "ordinal": 28,
+            "pass": 302,
+            "pass_pct": 8.15
+          },
+          {
+            "ordinal": 29,
+            "pass": 327,
+            "pass_pct": 8.82
+          },
+          {
+            "ordinal": 30,
+            "pass": 328,
+            "pass_pct": 8.85
+          },
+          {
+            "ordinal": 31,
+            "pass": 328,
+            "pass_pct": 8.85
+          },
+          {
+            "ordinal": 32,
+            "pass": 328,
+            "pass_pct": 8.85
+          },
+          {
+            "ordinal": 33,
+            "pass": 328,
+            "pass_pct": 8.85
+          },
+          {
+            "ordinal": 34,
+            "pass": 328,
+            "pass_pct": 8.85
+          },
+          {
+            "ordinal": 35,
+            "pass": 717,
+            "pass_pct": 19.34
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "未来表現",
+            570
+          ],
+          [
+            "一般動詞",
+            326
+          ],
+          [
+            "不定詞",
+            320
+          ],
+          [
+            "動名詞",
+            294
+          ],
+          [
+            "助動詞",
+            234
+          ],
+          [
+            "三単現",
+            214
+          ],
+          [
+            "一般動詞の過去形",
+            185
+          ],
+          [
+            "比較",
+            159
+          ],
+          [
+            "過去の疑問文・否定文",
+            115
+          ],
+          [
+            "be動詞",
+            108
+          ],
+          [
+            "不規則動詞",
+            64
+          ],
+          [
+            "文型②（call A B，make A B）",
+            41
+          ],
+          [
+            "接続詞",
+            40
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            36
+          ],
+          [
+            "受動態",
+            35
+          ],
+          [
+            "人称代名詞",
+            30
+          ],
+          [
+            "現在完了形（完了・経験）",
+            30
+          ],
+          [
+            "進行形",
+            28
+          ],
+          [
+            "there is ～ の文",
+            25
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            24
+          ],
+          [
+            "命令文",
+            22
+          ],
+          [
+            "疑問詞",
+            21
+          ],
+          [
+            "be動詞と一般動詞（現在形）",
+            20
+          ],
+          [
+            "読解・会話完成",
+            17
+          ],
+          [
+            "文型①（look ～，give A B）",
+            17
+          ],
+          [
+            "不定詞②",
+            15
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "未来表現",
+            136
+          ],
+          [
+            "不定詞",
+            128
+          ],
+          [
+            "動名詞",
+            112
+          ],
+          [
+            "比較",
+            109
+          ],
+          [
+            "助動詞",
+            106
+          ],
+          [
+            "一般動詞",
+            18
+          ],
+          [
+            "文型①（look ～，give A B）",
+            13
+          ],
+          [
+            "不定詞②",
+            13
+          ],
+          [
+            "一般動詞の過去形",
+            11
+          ],
+          [
+            "過去の疑問文・否定文",
+            9
+          ],
+          [
+            "接続詞",
+            8
+          ],
+          [
+            "三単現",
+            6
+          ],
+          [
+            "be動詞と一般動詞（現在形）",
+            6
+          ],
+          [
+            "現在完了形（完了・経験）",
+            6
+          ],
+          [
+            "命令文",
+            6
+          ],
+          [
+            "文型②（call A B，make A B）",
+            6
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            5
+          ],
+          [
+            "疑問詞",
+            5
+          ],
+          [
+            "読解・会話完成",
+            3
+          ],
+          [
+            "there is ～ の文",
+            3
+          ],
+          [
+            "受動態",
+            3
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            3
+          ],
+          [
+            "進行形",
+            2
+          ]
+        ]
+      },
+      "中3": {
+        "total": 3920,
+        "unknown_-1": 1881,
+        "unknown_0": 1885,
+        "positive": 154,
+        "max_possible_pass": 154,
+        "max_possible_pass_pct": 3.93,
+        "max_positive_ordinal": 15,
+        "survival_by_ordinal": [
+          {
+            "ordinal": 1,
+            "pass": 0,
+            "pass_pct": 0.0
+          },
+          {
+            "ordinal": 2,
+            "pass": 38,
+            "pass_pct": 0.97
+          },
+          {
+            "ordinal": 3,
+            "pass": 38,
+            "pass_pct": 0.97
+          },
+          {
+            "ordinal": 4,
+            "pass": 38,
+            "pass_pct": 0.97
+          },
+          {
+            "ordinal": 5,
+            "pass": 38,
+            "pass_pct": 0.97
+          },
+          {
+            "ordinal": 6,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 7,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 8,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 9,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 10,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 11,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 12,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 13,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 14,
+            "pass": 143,
+            "pass_pct": 3.65
+          },
+          {
+            "ordinal": 15,
+            "pass": 154,
+            "pass_pct": 3.93
+          }
+        ],
+        "top_unknown_categories": [
+          [
+            "助動詞",
+            359
+          ],
+          [
+            "現在完了形（完了・経験）",
+            319
+          ],
+          [
+            "現在完了形（継続），現在完了進行形",
+            255
+          ],
+          [
+            "be動詞と一般動詞（現在形）",
+            240
+          ],
+          [
+            "be動詞と一般動詞（過去形）",
+            240
+          ],
+          [
+            "進行形",
+            240
+          ],
+          [
+            "比較",
+            240
+          ],
+          [
+            "未来の文",
+            239
+          ],
+          [
+            "関係代名詞",
+            185
+          ],
+          [
+            "分詞と間接疑問文",
+            158
+          ],
+          [
+            "文型",
+            155
+          ],
+          [
+            "仮定法",
+            136
+          ],
+          [
+            "命令文，there is ～ の文",
+            135
+          ],
+          [
+            "不定詞②",
+            132
+          ],
+          [
+            "人称代名詞",
+            132
+          ],
+          [
+            "疑問詞",
+            123
+          ],
+          [
+            "不定詞①，動名詞",
+            120
+          ],
+          [
+            "受動態",
+            120
+          ],
+          [
+            "英語の語順",
+            119
+          ],
+          [
+            "接続詞",
+            119
+          ]
+        ],
+        "top_positive_categories": [
+          [
+            "現在完了形（継続），現在完了進行形",
+            105
+          ],
+          [
+            "現在完了形（完了・経験）",
+            41
+          ],
+          [
+            "疑問詞",
+            3
+          ],
+          [
+            "英語の語順",
+            1
+          ],
+          [
+            "命令文，there is ～ の文",
+            1
+          ],
+          [
+            "未来の文",
+            1
+          ],
+          [
+            "助動詞",
+            1
+          ],
+          [
+            "接続詞",
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

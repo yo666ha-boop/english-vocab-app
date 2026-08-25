@@ -21,6 +21,34 @@
     "filter": 14,
     "candidate": 8
   },
+  "english_items": 10511,
+  "meta_keys": [
+    "counts",
+    "passMeta",
+    "sections",
+    "textbooks",
+    "vocabCoordinateSemantics",
+    "vocabCoordinateVersion",
+    "vocabMigrationAudit"
+  ],
+  "vocabCoordinateVersion": "v7-2026-08-18-1based",
+  "vocabCoordinateSemantics": {
+    "priorGrade": -2,
+    "unknown": [
+      0,
+      -1
+    ],
+    "currentGradeFirstSection": 1
+  },
+  "vocabMigrationAudit": {
+    "translated": 5345,
+    "legacyUnknown": 11860,
+    "blockedObsolete": 3817,
+    "outOfRange": 0,
+    "priorGrade": 0,
+    "totalValues": 21022,
+    "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated."
+  },
   "likely_identifiers": [
     "Unit",
     "baseFiltered",
