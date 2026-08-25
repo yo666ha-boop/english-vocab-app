@@ -4,6 +4,7 @@ NOT FOUND
 ===== passesVocab =====
 function passesVocab(item, overrideMode) {
   if (item.subject !== '英語') return true;
+  if (item._vocabFallback === true) return true;
   const mode = overrideMode || (useVocabGate() ? 'on' : 'off');
   if (mode === 'off') return true;
   if (item.grade !== currentGrade()) return true;
@@ -26,166 +27,7 @@ function passesPrereqGrammar(item) {
 }
 
 ===== requiredGrammarStageIndex =====
-function requiredGrammarStageIndex(item) {
-  if (item.subject !== '英語') return -1;
-  const text = String(item.q || '') + ' ' + String(item.a || '');
-  let req = Math.max(0, targetStageIndex(item));
-  const bump = i => { if (i >= 0) req = Math.max(req, i); };
-
-  // Detect only structures that can make an otherwise earlier problem depend on a later grammar unit.
-  if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
-  if (/\b(was|were)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('過去進行'));
-  if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
-  if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndexByNameContains('助動詞','can'));
-  if (/\bto\s+(?:be|have|do|play|study|read|write|watch|visit|see|eat|drink|go|come|make|use|help|learn|practice|speak|listen|buy|call|join|take|work|live|want|need|try|start|finish)\b/i.test(text)) bump(stageIndexByNameContains('不定詞①','不定詞②','不定詞'));
-  if (/\b(?:enjoy|enjoys|enjoyed|finish|finishes|finished|stop|stops|stopped)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('動名詞','不定詞①，動名詞'));
-  if (/\b(?:than|as\s+\w+\s+as|more\s+\w+\s+than|most\s+\w+)\b/i.test(text)) bump(stageIndexByNameContains('比較'));
-  if (/\b(am|is|are|was|were)\s+(?:made|used|written|spoken|known|called|played|studied|visited|built|seen|loved)\b/i.test(text)) bump(stageIndexByNameContains('受動態'));
-  if (/\b(?:have|has)\s+(?:ever\s+|never\s+|already\s+|just\s+)?(?:been|visited|finished|lost|lived|studied|seen|done|written|read|known|used|played|gone|made|eaten|had)\b/i.test(text)) bump(stageIndexByNameContains('現在完了形'));
-  if (/\b(?:have|has) been [A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('現在完了形（継続）'));
-  if (/\b(?:who|which|that)\s+(?:is|are|was|were|has|have|can|will|[A-Za-z]+s?)(?:\s|\?)/i.test(text) && /\b(?:boy|girl|man|woman|teacher|student|person|book|bag|picture|pen|flower|thing)\b/i.test(text)) bump(stageIndexByNameContains('関係代名詞'));
-  if (/\bif\b[\s\S]*\bwould\b|\bI wish\b/i.test(text)) bump(stageIndexByNameContains('仮定法'));
-  return req;
-}
-
-function passesPrereqGrammar(item) {
-  if (item.subject !== '英語') return true;
-  const ceiling = selectedStageCeiling();
-  if (ceiling < 0) return false;
-  const required = requiredGrammarStageIndex(item);
-  return required < 0 || required <= ceiling;
-}
-
-function passesQualityGate(item) {
-  if (!item || !String(item.q || '').trim() || !String(item.a || '').trim()) return false;
-  if (item.subject !== '英語') return true;
-  const q = String(item.q || '');
-  const a = String(item.a || '');
-  const both = q + ' ' + a;
-
-  // Known invalid / non-unique generation families.
-  if (/This is (?:he|she|we)\b/i.test(both)) return false;
-  if (/\bthan He\b/.test(both)) return false;
-  if (/\b(?:Mika|She) (?:love|begin|stop)\b/.test(both)) return false;
-  if (/Do you have (?:visited|been|finished|lost|lived|studied|seen|done)/i.test(both)) return false;
-  if (/Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/.test(both)) return false;
-  if (/否定文または疑問文/.test(q)) return false;
-  if (/日本語で説明しなさい/.test(q) && /^[A-Za-z]/.test(a)) return false;
-  if (/\(\s*she\s*\/\s*her\s*\/\s*her\s*\)/i.test(q)) return false;
-  if (/\(\s*he\s*\/\s*him\s*\/\s*him\s*\)/i.test(q)) return false;
-  if (String(item.id || '').startsWith('M2-INF2-')) {
-    if (item.type === '空所補充' && /^to$/i.test(a) && /\bto\s*\(\s*\)\s*(?=[A-Za-z])/i.test(q)) return false;
-    if (/^(?:He|She|Yuki|Mika|Takumi|Ken|Emi|Tom|The student|The teacher|This boy|This girl|My mother|My father|My brother|My sister|My friend) (?:want|need|like) to\b/i.test(a)) return false;
-  }
-
-  // Target-grammar evidence: do not let a mislabeled vocabulary-only item through.
-  if (item.category === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
-  if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
-  const infinitiveBlank = item.type === '空所補充' && /^to$/i.test(a) && /\(\s*\)\s*[A-Za-z]+\b/.test(q);
-  if ((item.category === '不定詞' || item.category === '不定詞①' || item.category === '不定詞②') && !/\bto\s+[A-Za-z]+\b/i.test(both) && !infinitiveBlank) return false;
-  if (String(item.category).startsWith('現在完了形') && !/\b(?:have|has)\b/i.test(both)) return false;
-  if (item.category === '関係代名詞') {
-    if (!/\b(?:who|which|that)\b/i.test(both)) return false;
-    if (item.type === '空所補充' && /\(\s*\)/.test(q)) {
-      if (!/who\s*\/\s*which/i.test(q)) return false;
-      if (!/^(?:who|which)$/i.test(a)) return false;
-    }
-  }
-  return true;
-}
-
-function baseFiltered(overrideMode) {
-  const subj = currentSubject();
-  const grade = currentGrade();
-  const categories = selectedCategories();
-  const types = selectedValues('input[data-type]');
-  return qb.filter(item => {
-    if (item.subject !== subj) return false;
-    if (item.grade !== grade) return false;
-    if (categories.length && !categories.includes(item.category)) return false;
-    if (types.length && !types.includes(item.type)) return false;
-    if (!passesVocab(item, overrideMode)) return false;
-    if (!passesPrereqGrammar(item)) return false;
-    if (!passesQualityGate(item)) return false;
-    return true;
-  });
-}
-
-function shuffle(arr) {
-  const a = arr.slice();
-  for (let i=a.length-1;i>0;i--) {
-    const j = Math.floor(Math.random() * (i+1));
-    const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
-  }
-  return a;
-}
-
-function updateBuilderStatus(candidates) {
-  const subj = currentSubject();
-  const grade = currentGrade();
-  const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
-  let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
-  if (subj === '英語') {
-    msg += ' / 教科書: ' + currentTextbook() + ' / 単語はここまで: ' + (el('sectionSelect').value || '未選択');
-  }
-  el('builderStatus').textContent = msg;
-  el('builderStatus').classList.toggle('good', candidates.length > 0);
-}
-
-function renderQuestions() {
-  const count = parseInt(el('questionCount').value, 10);
-  const pickMode = el('pickMode').value;
-  const candidates = baseFiltered();
-  updateBuilderStatus(candidates);
-  if (!candidates.length) {
-    currentQuestions = [];
-    el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。単語制限を外すか、範囲や問題タイプを広げてください。';
-    return;
-  }
-  const picked = (pickMode === 'random' ? shuffle(candidates) : candidates).slice(0, count);
-  currentQuestions = picked;
-  el('questionPreview').classList.toggle('showAnswers', showAnswers);
-  el('questionPreview').innerHTML = picked.map((q, i) => `
-    <div class="q">
-      <div class="qnum">Q${String(i+1).padStart(2,'0')}　${q.id}　/　${q.category}　/　${q.type}</div>
-      <div>${q.q}</div>
-      <div class="ans">答え: ${q.a}</div>
-    </div>
-  `).join('');
-}
-
-function printQuestions() {
-  if (!currentQuestions.length) return;
-  const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const renderQuestion = (q, index) => `<div class="q"><div class="n">Q${index + 1}　${escapeHtml(q.id)}</div><div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div class="answer-space" aria-label="解答欄"></div>'}</div>`;
-  const pages = [];
-  for (let startIndex = 0; startIndex < currentQuestions.length; startIndex += 10) {
-    const pageQuestions = currentQuestions.slice(startIndex, startIndex + 10);
-    pages.push({
-      html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
-      rows: Math.ceil(pageQuestions.length / 2)
-    });
-  }
-  const printHtml = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>問題プリント</title><style>
-  @page{size:A4 portrait;margin:8mm}
-  *{box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
-  .page{height:281mm;display:flex;flex-direction:column;overflow:hidden;page-break-after:always;break-after:page}
-  .page:last-child{page-break-after:auto;break-after:auto}
-  h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
-  .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
-  .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
-  .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
-  .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
-  </style></head><body>
-  ${pages.map((page, pageIndex) => `<section class="page"><h2>${currentGrade()} ${currentSubject()} 問題プリント</h2><div class="meta">教科書: ${currentSubject()==='英語' ? escapeHtml(currentTextbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div><div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div></section>`).join('')}
-  <script>window.onload=()=>window.print()<\/script></body></html>`;
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.open();
-  w.document.write(printHtml);
-  w.document.close();
-}
+NOT FOUND
 
 ===== baseFiltered =====
 function baseFiltered(overrideMode) {
@@ -193,7 +35,7 @@ function baseFiltered(overrideMode) {
   const grade = currentGrade();
   const categories = selectedCategories();
   const types = selectedValues('input[data-type]');
-  return qb.filter(item => {
+  const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
     if (item.grade !== grade) return false;
     if (categories.length && !categories.includes(item.category)) return false;
@@ -203,6 +45,7 @@ function baseFiltered(overrideMode) {
     if (!passesQualityGate(item)) return false;
     return true;
   });
+  return appendVocabFallbacks(originals, categories, types, overrideMode);
 }
 
 ===== currentSectionIndex =====
