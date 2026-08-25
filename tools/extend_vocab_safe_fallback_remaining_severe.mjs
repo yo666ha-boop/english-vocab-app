@@ -28,7 +28,6 @@ function buildGrade1ConjunctionFallbacks() {
 }
 
 function buildPastVerbFallbacks() {
-  // This must use the actual problem-bank category resolved by stageMap, not the display-stage label.
   const cat='一般動詞の過去形';
   const rows=[
     ['I','play','played','私は遊びました。'],['I','study','studied','私は勉強しました。'],['I','cook','cooked','私は料理しました。'],
@@ -43,6 +42,41 @@ function buildPastVerbFallbacks() {
     out.push(vocabFallbackItem('中1',cat,'空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
     out.push(vocabFallbackItem('中1',cat,'変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
     out.push(vocabFallbackItem('中1',cat,'英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+  }
+  return out;
+}
+
+function buildIrregularPastFallbacks() {
+  const rows=[
+    ['I','go','went'],['You','come','came'],['We','make','made'],['They','take','took'],
+    ['I','write','wrote'],['You','do','did'],['We','have','had'],['He','go','went'],
+    ['She','come','came'],['He','make','made'],['She','write','wrote'],['They','have','had']
+  ];
+  const out=[]; let n=1;
+  for(const [s,base,past] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=s+' '+past+'.';
+    out.push(vocabFallbackItem('中1','不規則動詞','空所補充','IRR-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
+    out.push(vocabFallbackItem('中1','不規則動詞','変形','IRR-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
+    out.push(vocabFallbackItem('中1','不規則動詞','選択','IRR-CHOICE-'+stem,s+' ( '+base+' / '+past+' ) yesterday. 正しいものを選びなさい。',past));
+  }
+  return out;
+}
+
+function buildPastTimeFallbacks() {
+  const rows=[
+    ['I played','私は昨日遊びました。'],['You studied English','あなたは昨日英語を勉強しました。'],
+    ['We cooked','私たちは昨日料理しました。'],['They walked','彼らは昨日歩きました。'],
+    ['He played','彼は昨日遊びました。'],['She studied English','彼女は昨日英語を勉強しました。'],
+    ['I wrote','私は昨日書きました。'],['You came','あなたは昨日来ました。'],
+    ['We went home','私たちは昨日家へ行きました。'],['They made a book','彼らは昨日本を作りました。']
+  ];
+  const out=[]; let n=1;
+  for(const [stemText,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=stemText+' yesterday.';
+    out.push(vocabFallbackItem('中1','過去を表す語','空所補充','PTIME-FILL-'+stem,stemText+' (      ). 「昨日」の意味になる語を書きなさい。','yesterday'));
+    out.push(vocabFallbackItem('中1','過去を表す語','英作文','PTIME-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
   }
   return out;
 }
@@ -78,23 +112,28 @@ function patch(path){
     const i=src.indexOf(anchor);
     if(i<0) throw new Error(`${path}: conjunction anchor missing`);
     src=src.slice(0,i)+builders+'\n'+src.slice(i);
+  } else if(!src.includes('function buildIrregularPastFallbacks()')) {
+    const anchor='function buildPresentPerfectContinuousFallbacks() {';
+    const i=src.indexOf(anchor);
+    if(i<0) throw new Error(`${path}: present-perfect-continuous anchor missing`);
+    const a=builders.indexOf('function buildIrregularPastFallbacks()');
+    const b=builders.indexOf('function buildPresentPerfectContinuousFallbacks()');
+    src=src.slice(0,i)+builders.slice(a,b)+src.slice(i);
   }
-  // Repair an already-installed older builder that used the display-stage label instead of the runtime category.
   src=src.replaceAll("vocabFallbackItem('中1','一般動詞（過去形）',","vocabFallbackItem('中1','一般動詞の過去形',");
-  if(!src.includes('buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()')){
+  if(src.includes('buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks()')) src=src.replace('buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks()','buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks()');
+  if(!src.includes('buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()')){
     const old='buildPatternOneFallbacks(),buildGerundFallbacks()';
-    const neu='buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()';
-    if(!src.includes(old)) throw new Error(`${path}: fallback concat anchor missing`);
-    src=src.replace(old,neu);
+    const neu='buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()';
+    if(src.includes(old)) src=src.replace(old,neu);
   }
-  // These tokens are only for the generic elementary-safe fallback bank; runtime grammar chronology still controls availability.
   for(const pair of [
     [' get give use eat',' get give walk use eat'],
     [' play sing swim run cook',' play sing swim run cook played studied cooked walked used liked'],
     [' write read listen',' write read listen studying reading playing been'],
     [' and but because',' and but because yesterday']
   ]) if(src.includes(pair[0]) && !src.includes(pair[1])) src=src.replace(pair[0],pair[1]);
-  for(const required of ['function buildGrade1ConjunctionFallbacks()','function buildPastVerbFallbacks()','function buildPresentPerfectContinuousFallbacks()','buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks()']){
+  for(const required of ['function buildGrade1ConjunctionFallbacks()','function buildPastVerbFallbacks()','function buildIrregularPastFallbacks()','function buildPastTimeFallbacks()','function buildPresentPerfectContinuousFallbacks()','buildIrregularPastFallbacks(),buildPastTimeFallbacks()']){
     if(!src.includes(required)) throw new Error(`${path}: missing ${required}`);
   }
   if(src.includes("vocabFallbackItem('中1','一般動詞（過去形）',")) throw new Error(`${path}: stale past-tense display category remains`);
@@ -104,10 +143,5 @@ function patch(path){
 patch(APP);
 patch(INSTALLER);
 fs.mkdirSync('audit',{recursive:true});
-fs.writeFileSync(OUT,JSON.stringify({
-  result:'PASS',
-  files:[APP,INSTALLER],
-  added_runtime_categories:['中1 接続詞','中1 一般動詞の過去形','中3 現在完了形（継続），現在完了進行形'],
-  design:'generic category-level safe fallback only; grammar chronology and lexical gate remain authoritative; past-tense fallback uses actual stageMap problem category; no problem-ID, textbook, section, or measured-count exception'
-},null,2)+'\n');
-console.log('PASS: remaining severe generic vocab-safe fallbacks installed');
+fs.writeFileSync(OUT,JSON.stringify({result:'PASS',files:[APP,INSTALLER],added_runtime_categories:['中1 接続詞','中1 一般動詞の過去形','中1 不規則動詞','中1 過去を表す語','中3 現在完了形（継続），現在完了進行形'],design:'generic category-level safe fallback only; grammar chronology and lexical gate remain authoritative; all past-tense stageMap problem categories receive generic safe supply; no problem-ID, textbook, section, or measured-count exception'},null,2)+'\n');
+console.log('PASS: remaining severe/low-band generic vocab-safe fallbacks installed');
