@@ -12,3 +12,4 @@ Post-imperative-present-verb-fallback full browser matrix rerun requested on 202
 Post-be-present-pattern-one-fallback-expansion full browser matrix rerun requested on 2026-08-26 JST.
 Post-pattern-one-runtime-category-map-fix full browser matrix rerun requested on 2026-08-26 06:29 JST.
 Post-remaining-severe-generic-fallback full browser matrix rerun requested on 2026-08-26 07:25 JST.
+Post-past-tense-runtime-category-fix full browser matrix rerun requested on 2026-08-26 07:49 JST.
