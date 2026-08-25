@@ -1,0 +1,78 @@
+{
+  "checkpoint_version": "v45",
+  "recorded_at": "2026-08-25T03:00:00Z",
+  "repository": "yo666ha-boop/english-vocab-app",
+  "branch": "mikami-canonical-repair",
+  "actual_head_before_checkpoint": "6a29faa020258bbea237cd3f6de871f37241de8e",
+  "actual_head_reconciliation": {
+    "status": "PASS",
+    "note": "Latest branch movement after v44 was GitHub Actions public-index probe only (commit 6a29faa); no application or checkpoint rollback detected."
+  },
+  "preservation": {
+    "main_index_html": "UNCHANGED",
+    "protected_vercel_vocab_project": "UNCHANGED (prj_k85GEgd76tQvHoL8YC9IDjnq553e)",
+    "problem_app_v3_main": {
+      "status": "PASS",
+      "main_commit": "442c45536e83a87ee0f785a57b2abf1586f0a820",
+      "note": "Verified read-only; not edited."
+    }
+  },
+  "custom_gpt": {
+    "status": "PASS",
+    "name": "みかみ塾 答案分析GPT",
+    "visibility": "self_only",
+    "runtime_url": "https://chatgpt.com/g/g-6a8d026915148191b33b8555d6c8f77c-mikamishu-da-an-fen-xi-gpt",
+    "editor_id": "g-6a8d026915148191b33b8555d6c8f77c",
+    "existing_assets_retained": [
+      "01_mikami_english_question_bank_knowledge.jsonl (10,511 English items)",
+      "03_mikami_answer_analysis_output_schema.json"
+    ],
+    "extension_saved": {
+      "knowledge_file": "mikami_distribution_interview_os_addendum.md",
+      "instructions": "Original answer-analysis instructions retained; distribution/interview/continuation and A4 printing extension appended.",
+      "conversation_starters": [
+        "答案写真から生徒用の次の一歩シートを作る",
+        "答案写真から塾生保護者用の学習状況シートを作る",
+        "面談用の学習方針・説明シートを作る",
+        "対応説明から継続案内までの配布シートを作る"
+      ],
+      "data_analysis": "enabled for requested printable-file generation",
+      "outcome": "PASS"
+    }
+  },
+  "real_answer_photo_cases": {
+    "correct_original": {
+      "folder_id": "14fh-cpdbSGB0lMYFdhLphG_dYrt7vrIt",
+      "count": 0
+    },
+    "multi_category_errors": {
+      "folder_id": "1vQf0Wzuo6w4wtbJGSXtYhUHH7sT9ANlT",
+      "count": 0
+    },
+    "unreadable_answer": {
+      "folder_id": "18z2LLcnsI7YPUMm9128mntrrZKp7Jt5M",
+      "count": 0
+    },
+    "school_test": {
+      "folder_id": "1IGGKQsHh65jBR3hWAnND32vw0gGkJ9k4",
+      "count": 0
+    },
+    "synthetic_substitution": "FORBIDDEN",
+    "status": "PENDING (0/4)"
+  },
+  "validators": {
+    "pre_runtime_configuration": "PASS",
+    "actual_runtime_4_cases": "PENDING",
+    "actual_a4_render_print": "PENDING",
+    "hardened_finalizer": "PENDING"
+  },
+  "precise_stop_point": "Custom GPT configuration and private save complete. Blocked only on arrival of authentic answer photos in all four Drive folders.",
+  "next_start": "When any real photo arrives, run the matching actual GPT analysis, produce A4 portrait 1-2 page output/print evidence, then run tools/finalize_mikami_answer_gpt_runtime_evidence.mjs; complete all four without synthetic substitution.",
+  "automation_schedule": "NOT_MODIFIED",
+  "public_index_probe": {
+    "latest_run_id": "32803559148",
+    "status": "HASH_MISMATCH",
+    "scope": "Root-side public-index probe only; no protected app write."
+  },
+  "overall_completion": false
+}
