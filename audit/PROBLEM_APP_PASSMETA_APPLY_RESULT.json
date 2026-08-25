@@ -1,0 +1,15 @@
+{
+  "applied_at_utc": "2026-08-25T11:42:14.294Z",
+  "candidate_version": "v8-canonical-safe-20260825-1based",
+  "coordinate_version_preserved": "v7-2026-08-18-1based",
+  "ids": 10511,
+  "values": 21022,
+  "changed_values": 12778,
+  "unchanged_values": 8244,
+  "old_resolved": 5345,
+  "new_resolved": 15878,
+  "unknown_values": 5144,
+  "html_bytes_before": 3792058,
+  "html_bytes_after": 3794529,
+  "qb_data_unchanged": true
+}
