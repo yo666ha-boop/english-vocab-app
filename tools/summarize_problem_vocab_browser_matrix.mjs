@@ -34,6 +34,8 @@ for(const [grade,books] of Object.entries(data.grammar_attrition||{})){
 }
 rows.sort((a,b)=>a.retention_pct-b.retention_pct || b.off-a.off || a.grade.localeCompare(b.grade,'ja') || a.category.localeCompare(b.category,'ja'));
 const categories=[...byCategory.values()].sort((a,b)=>a.min_retention_pct-b.min_retention_pct || b.severe_rows-a.severe_rows || a.grade.localeCompare(b.grade,'ja'));
+const finalRows=rows.filter(x=>x.position===x.section_count).sort((a,b)=>a.retention_pct-b.retention_pct || b.off-a.off);
+const lateRows=rows.filter(x=>x.position>=Math.max(1,Math.ceil(x.section_count*0.75))).sort((a,b)=>a.retention_pct-b.retention_pct || b.off-a.off);
 const out={
   generated_at:new Date().toISOString(),
   source_sha256:null,
@@ -44,15 +46,35 @@ const out={
     zeroed_rows:rows.filter(x=>x.zeroed).length,
     severe_under_25pct_rows:rows.filter(x=>x.severe_under_25pct).length,
     under_50pct_rows:rows.filter(x=>x.under_50pct).length,
-    minimum_retention_pct:rows.length?rows[0].retention_pct:null
+    minimum_retention_pct:rows.length?rows[0].retention_pct:null,
+    final_section_category_rows:finalRows.length,
+    final_section_zeroed_rows:finalRows.filter(x=>x.zeroed).length,
+    final_section_severe_under_25pct_rows:finalRows.filter(x=>x.severe_under_25pct).length,
+    final_section_under_50pct_rows:finalRows.filter(x=>x.under_50pct).length,
+    late_quarter_category_rows:lateRows.length,
+    late_quarter_zeroed_rows:lateRows.filter(x=>x.zeroed).length,
+    late_quarter_severe_under_25pct_rows:lateRows.filter(x=>x.severe_under_25pct).length,
+    late_quarter_under_50pct_rows:lateRows.filter(x=>x.under_50pct).length
   },
   by_scope:byScope,
   categories,
+  final_section:{
+    rows:finalRows,
+    zeroed:finalRows.filter(x=>x.zeroed),
+    severe_under_25pct:finalRows.filter(x=>x.severe_under_25pct),
+    under_50pct:finalRows.filter(x=>x.under_50pct)
+  },
+  late_quarter:{
+    severe_under_25pct:lateRows.filter(x=>x.severe_under_25pct),
+    under_50pct:lateRows.filter(x=>x.under_50pct)
+  },
   worst_100:rows.slice(0,100),
   zeroed:rows.filter(x=>x.zeroed),
   severe_under_25pct:rows.filter(x=>x.severe_under_25pct),
 };
 fs.writeFileSync(output,JSON.stringify(out,null,2)+'\n');
 console.log(JSON.stringify(out.totals,null,2));
-console.log('Worst 20');
-console.log(JSON.stringify(out.worst_100.slice(0,20),null,2));
+console.log('Final-section severe');
+console.log(JSON.stringify(out.final_section.severe_under_25pct,null,2));
+console.log('Final-section under 50');
+console.log(JSON.stringify(out.final_section.under_50pct,null,2));
