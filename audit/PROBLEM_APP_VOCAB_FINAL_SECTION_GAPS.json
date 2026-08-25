@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T17:24:27.934Z",
+  "generated_at": "2026-08-25T18:25:52.039Z",
   "scope": "all_textbooks_all_grades_all_sections_all_grammar_categories",
   "final_section_totals": {
     "category_rows": 106,
@@ -122,20 +122,6 @@
     }
   ],
   "late_quarter_severe_under_25pct": [
-    {
-      "grade": "中1",
-      "textbook": "ニューホライズン",
-      "section": "Unit 10-1",
-      "position": 41,
-      "section_count": 46,
-      "category": "過去進行形",
-      "off": 11,
-      "on": 0,
-      "retention_pct": 0,
-      "zeroed": true,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
     {
       "grade": "中1",
       "textbook": "ニューホライズン",

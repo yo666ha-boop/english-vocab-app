@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-08-25T17:24:27.934Z",
+  "generated_at": "2026-08-25T18:25:52.039Z",
   "source_sha256": null,
   "scope": "all_textbooks_all_grades_all_sections_all_grammar_categories",
   "totals": {
     "sections_measured": 210,
     "category_rows": 2682,
-    "zeroed_rows": 3,
-    "severe_under_25pct_rows": 92,
-    "under_50pct_rows": 507,
+    "zeroed_rows": 2,
+    "severe_under_25pct_rows": 91,
+    "under_50pct_rows": 506,
     "minimum_retention_pct": 0,
     "final_section_category_rows": 106,
     "final_section_zeroed_rows": 0,
     "final_section_severe_under_25pct_rows": 0,
     "final_section_under_50pct_rows": 8,
     "late_quarter_category_rows": 901,
-    "late_quarter_zeroed_rows": 1,
-    "late_quarter_severe_under_25pct_rows": 4,
-    "late_quarter_under_50pct_rows": 99
+    "late_quarter_zeroed_rows": 0,
+    "late_quarter_severe_under_25pct_rows": 3,
+    "late_quarter_under_50pct_rows": 98
   },
   "by_scope": {
     "中1/サンシャイン": {
@@ -30,9 +30,9 @@
     "中1/ニューホライズン": {
       "sections": 46,
       "category_rows": 339,
-      "zeroed_rows": 3,
-      "severe_under_25pct_rows": 44,
-      "under_50pct_rows": 97,
+      "zeroed_rows": 2,
+      "severe_under_25pct_rows": 43,
+      "under_50pct_rows": 96,
       "min_retention_pct": 0
     },
     "中2/サンシャイン": {
@@ -81,22 +81,6 @@
         "textbook": "ニューホライズン",
         "section": "Unit 1-1",
         "off": 563,
-        "on": 0,
-        "retention_pct": 0
-      }
-    },
-    {
-      "grade": "中1",
-      "category": "過去進行形",
-      "rows": 10,
-      "zeroed_rows": 1,
-      "severe_rows": 1,
-      "under_50_rows": 1,
-      "min_retention_pct": 0,
-      "worst": {
-        "textbook": "ニューホライズン",
-        "section": "Unit 10-1",
-        "off": 11,
         "on": 0,
         "retention_pct": 0
       }
@@ -916,6 +900,16 @@
         "on": 108,
         "retention_pct": 100
       }
+    },
+    {
+      "grade": "中1",
+      "category": "過去進行形",
+      "rows": 10,
+      "zeroed_rows": 0,
+      "severe_rows": 0,
+      "under_50_rows": 0,
+      "min_retention_pct": 101,
+      "worst": null
     },
     {
       "grade": "中3",
@@ -2359,34 +2353,6 @@
         "under_50pct": false
       },
       {
-        "grade": "中1",
-        "textbook": "サンシャイン",
-        "section": "Power-Up 6",
-        "position": 39,
-        "section_count": 39,
-        "category": "過去進行形",
-        "off": 11,
-        "on": 11,
-        "retention_pct": 100,
-        "zeroed": false,
-        "severe_under_25pct": false,
-        "under_50pct": false
-      },
-      {
-        "grade": "中1",
-        "textbook": "ニューホライズン",
-        "section": "Let's Read",
-        "position": 46,
-        "section_count": 46,
-        "category": "過去進行形",
-        "off": 11,
-        "on": 11,
-        "retention_pct": 100,
-        "zeroed": false,
-        "severe_under_25pct": false,
-        "under_50pct": false
-      },
-      {
         "grade": "中3",
         "textbook": "サンシャイン",
         "section": "Special Project",
@@ -2410,6 +2376,34 @@
         "off": 117,
         "on": 180,
         "retention_pct": 153.85,
+        "zeroed": false,
+        "severe_under_25pct": false,
+        "under_50pct": false
+      },
+      {
+        "grade": "中1",
+        "textbook": "サンシャイン",
+        "section": "Power-Up 6",
+        "position": 39,
+        "section_count": 39,
+        "category": "過去進行形",
+        "off": 11,
+        "on": 75,
+        "retention_pct": 681.82,
+        "zeroed": false,
+        "severe_under_25pct": false,
+        "under_50pct": false
+      },
+      {
+        "grade": "中1",
+        "textbook": "ニューホライズン",
+        "section": "Let's Read",
+        "position": 46,
+        "section_count": 46,
+        "category": "過去進行形",
+        "off": 11,
+        "on": 75,
+        "retention_pct": 681.82,
         "zeroed": false,
         "severe_under_25pct": false,
         "under_50pct": false
@@ -2540,20 +2534,6 @@
         "section": "Unit 10-1",
         "position": 41,
         "section_count": 46,
-        "category": "過去進行形",
-        "off": 11,
-        "on": 0,
-        "retention_pct": 0,
-        "zeroed": true,
-        "severe_under_25pct": true,
-        "under_50pct": true
-      },
-      {
-        "grade": "中1",
-        "textbook": "ニューホライズン",
-        "section": "Unit 10-1",
-        "position": 41,
-        "section_count": 46,
         "category": "be動詞（過去形）",
         "off": 365,
         "on": 1,
@@ -2592,20 +2572,6 @@
       }
     ],
     "under_50pct": [
-      {
-        "grade": "中1",
-        "textbook": "ニューホライズン",
-        "section": "Unit 10-1",
-        "position": 41,
-        "section_count": 46,
-        "category": "過去進行形",
-        "off": 11,
-        "on": 0,
-        "retention_pct": 0,
-        "zeroed": true,
-        "severe_under_25pct": true,
-        "under_50pct": true
-      },
       {
         "grade": "中1",
         "textbook": "ニューホライズン",
@@ -4015,20 +3981,6 @@
       "section": "Unit 10-1",
       "position": 41,
       "section_count": 46,
-      "category": "過去進行形",
-      "off": 11,
-      "on": 0,
-      "retention_pct": 0,
-      "zeroed": true,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "ニューホライズン",
-      "section": "Unit 10-1",
-      "position": 41,
-      "section_count": 46,
       "category": "be動詞（過去形）",
       "off": 365,
       "on": 1,
@@ -5380,6 +5332,20 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Stage Activity 1",
+      "position": 22,
+      "section_count": 46,
+      "category": "命令文",
+      "off": 24,
+      "on": 6,
+      "retention_pct": 25,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
     }
   ],
   "zeroed": [
@@ -5410,20 +5376,6 @@
       "zeroed": true,
       "severe_under_25pct": true,
       "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "ニューホライズン",
-      "section": "Unit 10-1",
-      "position": 41,
-      "section_count": 46,
-      "category": "過去進行形",
-      "off": 11,
-      "on": 0,
-      "retention_pct": 0,
-      "zeroed": true,
-      "severe_under_25pct": true,
-      "under_50pct": true
     }
   ],
   "severe_under_25pct": [
@@ -5449,20 +5401,6 @@
       "section_count": 46,
       "category": "be動詞（現在形）",
       "off": 563,
-      "on": 0,
-      "retention_pct": 0,
-      "zeroed": true,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "ニューホライズン",
-      "section": "Unit 10-1",
-      "position": 41,
-      "section_count": 46,
-      "category": "過去進行形",
-      "off": 11,
       "on": 0,
       "retention_pct": 0,
       "zeroed": true,
