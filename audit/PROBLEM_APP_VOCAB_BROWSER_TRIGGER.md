@@ -9,3 +9,4 @@ Post-core-learned-grammar-fallback full browser matrix rerun requested on 2026-0
 Post-be-present-runtime-category-repair full browser matrix rerun requested on 2026-08-26 JST.
 Post-early-learned-low-retention-fallback full browser matrix rerun requested on 2026-08-26 JST.
 Post-imperative-present-verb-fallback full browser matrix rerun requested on 2026-08-26 JST.
+Post-be-present-pattern-one-fallback-expansion full browser matrix rerun requested on 2026-08-26 JST.
