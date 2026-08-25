@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "builder": "tools/build_safe_problem_passmeta.mjs",
+  "uses_columns": [
+    "英語",
+    "検索用基本形",
+    "変化形・別表記"
+  ],
+  "rule": "Build lexical stage index from the authoritative v7 surface form, search lemma, and inflected/alternate-form columns; no problem ID, unit, or count hard-code."
+}

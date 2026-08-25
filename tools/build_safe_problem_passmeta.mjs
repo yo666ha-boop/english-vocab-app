@@ -108,7 +108,7 @@ if(english.length!==10511) throw new Error(`unexpected English count ${english.l
 if(new Set(english.map(x=>x.id)).size!==english.length) throw new Error('duplicate English IDs');
 const table=parseCsv(fs.readFileSync(CSV_PATH,'utf8').replace(/^\uFEFF/,''));
 const headers=table[0], idx=Object.fromEntries(headers.map((h,i)=>[h,i]));
-for(const h of ['教科書','学年','大単元','単元名','英語']) if(!(h in idx)) throw new Error(`missing ${h}`);
+for(const h of ['教科書','学年','大単元','単元名','英語','検索用基本形','変化形・別表記']) if(!(h in idx)) throw new Error(`missing ${h}`);
 const rows=table.slice(1).filter(r=>r.some(v=>String(v).trim()));
 const elementary=new Set();
 for(const r of vocabData(fs.readFileSync(VOCAB_HTML,'utf8')).filter(x=>x&&x.dataset==='elementary')) for(const t of tokensOf(r.english)) elementary.add(t);
@@ -173,7 +173,10 @@ for(const tb of books){
       let ord=prior?0:(tb==='サンシャイン'?mapSunshine(sec,tb,g):mapNh(sec,tb,g,maxPart));
       const pair=`${major} ⟶ ${sec}`;
       if(prior||ord>0)mapped.set(pair,{ord,prior});else unmapped.set(pair,(unmapped.get(pair)||0)+1);
-      if(prior||ord>0) for(const t of tokensOf(r[idx['英語']])) {const old=l.get(t);if(old===undefined||ord<old)l.set(t,ord);}
+      if(prior||ord>0) {
+        const lexicalForms=[r[idx['英語']],r[idx['検索用基本形']],r[idx['変化形・別表記']]].filter(Boolean).join(' ');
+        for(const t of tokensOf(lexicalForms)) {const old=l.get(t);if(old===undefined||ord<old)l.set(t,ord);}
+      }
     }
     lex[tb][g]=l;
     mapping[tb][`中${g}`]={csv_rows:selected.length,ui_sections:sections(tb,g).length,max_current_number:maxCurrent,mapped_unique_pairs:mapped.size,unmapped_unique_pairs:unmapped.size,unmapped_pairs:[...unmapped.keys()],explicit_prior_rows:explicitPrior,implicit_prior_rows:implicitPrior};
