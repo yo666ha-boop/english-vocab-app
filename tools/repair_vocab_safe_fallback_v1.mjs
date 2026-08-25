@@ -9,13 +9,13 @@ if(start<0||endStart<0) throw new Error('fallback segment not found');
 const end=endStart+endMarker.length;
 const before=html.slice(start,end);
 const badCount=(before.match(/\\`/g)||[]).length;
-const after=before.replace(/\\`/g,'`');
-if(!badCount) {
-  console.log('no escaped backticks to repair');
-} else {
-  html=html.slice(0,start)+after+html.slice(end);
-  fs.writeFileSync(path,html);
-}
+let after=before.replace(/\\`/g,'`');
+const semanticNeedle="{base:'write my name',ger:'writing my name',jp:'自分の名前を書くこと'}";
+const semanticReplacement="{base:'write',ger:'writing',jp:'書くこと'}";
+const semanticCount=after.includes(semanticNeedle)?1:0;
+after=after.replace(semanticNeedle,semanticReplacement);
+if(after!==before) html=html.slice(0,start)+after+html.slice(end);
+fs.writeFileSync(path,html);
 fs.mkdirSync('audit',{recursive:true});
-fs.writeFileSync('audit/VOCAB_SAFE_FALLBACK_SYNTAX_REPAIR.json',JSON.stringify({repairedAt:new Date().toISOString(),escapedBackticksRemoved:badCount,htmlBytes:Buffer.byteLength(html)},null,2)+'\n');
-console.log(JSON.stringify({escapedBackticksRemoved:badCount,htmlBytes:Buffer.byteLength(html)},null,2));
+fs.writeFileSync('audit/VOCAB_SAFE_FALLBACK_SYNTAX_REPAIR.json',JSON.stringify({repairedAt:new Date().toISOString(),escapedBackticksRemoved:badCount,semanticPossessiveRepair:semanticCount,htmlBytes:Buffer.byteLength(html)},null,2)+'\n');
+console.log(JSON.stringify({escapedBackticksRemoved:badCount,semanticPossessiveRepair:semanticCount,htmlBytes:Buffer.byteLength(html)},null,2));
