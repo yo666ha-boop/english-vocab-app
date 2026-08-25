@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 
+// 2026-08-26: rerun after generic question/answer conflict repair.
 const HTML='problem-app/index.html';
 const OUT='audit/PROBLEM_APP_BANK_INTEGRITY.json';
 const html=fs.readFileSync(HTML,'utf8');
