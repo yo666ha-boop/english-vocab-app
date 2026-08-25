@@ -1,0 +1,26 @@
+{
+  "checkpoint_schema":"mikami-repair-work-v41-addendum",
+  "updated_at_jst":"2026-08-25T02:45+09:00",
+  "base_checkpoint":"v40",
+  "branch":"mikami-canonical-repair",
+  "observed_branch_head":"f15449e7fc57a492cd923b5e04db5db5cd0381b6",
+  "latest_probe":{"run_id":32802608269,"status":"HASH_MISMATCH","scope":"ROOT_INDEX_ONLY","functional_change":false},
+  "problem_app_v3":{"status":"PASS_V3_RETAINED","main_commit":"442c45536e83a87ee0f785a57b2abf1586f0a820","main_and_vercel_untouched":true},
+  "editor_probe":{
+    "authenticated_editor_ui_reached":true,
+    "configuration_panel_reached":true,
+    "draft_name_entered":"みかみ塾 答案分析GPT",
+    "draft_description_entered":true,
+    "knowledge_upload_attempted":true,
+    "editor_draft_or_route_id_observed":"g-6a8d026915148191b33b8555d6c8f77c",
+    "actual_saved_custom_gpt_url":false,
+    "creation_save_completed":false,
+    "failure":"in-app browser page crashed after knowledge upload; direct draft route showed no usable DOM"
+  },
+  "registration_assets":{"knowledge_sha256":"be820c3e4d5c26773d642f1c055fea33f2796d71b6fca16f4e1edf5efc6f9213","instructions_sha256":"084ff607a70e679e32bc100c4081aaed7f22ebf5058d469ba20a079bd192b0be","schema_sha256":"8f33784b205cafe663e0c797b806e5b37036b3b06aec987eb45a7008ff37567b"},
+  "real_photo_folder_counts":{"correct_original":0,"multi_category_errors":0,"unreadable_answer":0,"school_test":0},
+  "current_stage":"resume GPT editor draft and complete exact registration",
+  "stopped_at":"editor crashed before instructions/schema completion and save; no actual /g/<id> claimed",
+  "next_start":"reopen draft g-6a8d026915148191b33b8555d6c8f77c or GPT editor, verify whether knowledge persisted, fill exact instructions, configure schema if supported, save, then capture actual /g/<id>",
+  "overall_completion":false
+}
