@@ -1,13 +1,13 @@
 {
-  "bytes": 3815552,
-  "chars": 2615892,
-  "newlines": 1013,
+  "bytes": 3820279,
+  "chars": 2619429,
+  "newlines": 1074,
   "occurrences": {
     "単語制限": 4,
     "単語": 56,
     "語彙": 265,
     "文法": 1521,
-    "vocab": 77,
+    "vocab": 84,
     "vocabulary": 2,
     "grammar": 42,
     "wordLimit": 0,
@@ -219,6 +219,7 @@
     "VOCAB_FALLBACK_SAFE_BASE",
     "VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE",
     "VOCAB_SAFE_FALLBACK_V1",
+    "WORD",
     "__mikamiGrammarChronology",
     "__mikamiGrammarChronologySources",
     "__mikamiGrammarChronologyVersion",
@@ -228,6 +229,7 @@
     "allGrammarCount",
     "appendVocabFallbacks",
     "baseFiltered",
+    "buildWordOrderFallbacks",
     "byGrade",
     "candidates",
     "currentGrade",
@@ -279,6 +281,7 @@
     "vocabFallbackTokenBases",
     "vocabMigrationAudit",
     "vocabMode",
-    "vocabulary"
+    "vocabulary",
+    "words"
   ]
 }
