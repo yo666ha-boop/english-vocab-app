@@ -745,7 +745,7 @@ function vocabFallbackBank() {
     const k=item.id+'\\n'+item.q+'\\n'+item.a;
     if(seen.has(k)) return false;
     seen.add(k);
-    return vocabFallbackLexicallySafe(item) && passesPrereqGrammar(item) && passesQualityGate(item);
+    return vocabFallbackLexicallySafe(item) && passesQualityGate(item);
   });
   return _vocabFallbackBankCache;
 }

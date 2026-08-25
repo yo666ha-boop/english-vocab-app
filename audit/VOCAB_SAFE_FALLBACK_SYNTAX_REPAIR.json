@@ -1,6 +1,7 @@
 {
-  "repairedAt": "2026-08-25T12:44:27.382Z",
+  "repairedAt": "2026-08-25T17:17:47.240Z",
   "escapedBackticksRemoved": 0,
-  "semanticPossessiveRepair": 1,
-  "htmlBytes": 3804201
+  "semanticPossessiveRepair": 0,
+  "contextDependentPrereqCacheRepair": 1,
+  "htmlBytes": 3812383
 }
