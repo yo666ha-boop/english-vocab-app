@@ -1,0 +1,151 @@
+name: Problem app release browser gates
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - .github/workflows/problem-app-release-browser-gates.yml
+      - audit/PROBLEM_APP_RELEASE_BROWSER_TRIGGER.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: problem-app-release-browser-gates-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright browsers
+        run: |
+          pip install playwright pypdf
+          playwright install --with-deps chromium firefox webkit
+      - name: Run desktop mobile save print and A4 gates
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          from pypdf import PdfReader
+          import io, json, re
+
+          url=Path('problem-app/index.html').resolve().as_uri()
+          out={'url':url,'desktop':[],'mobile':None,'a4':None}
+
+          def select_only(page, selector, value):
+              page.evaluate("""({selector,value})=>Array.from(document.querySelectorAll(selector)).forEach(x=>{x.checked=x.value===value;x.dispatchEvent(new Event('change',{bubbles:true}))})""",{'selector':selector,'value':value})
+
+          def select_option(page, selector, wanted):
+              opts=page.locator(selector+' option').evaluate_all("els=>els.map(x=>({v:x.value,t:(x.textContent||'').trim()}))")
+              for w in wanted:
+                  for o in opts:
+                      if o['v']==w or o['t']==w:
+                          page.select_option(selector,o['v']); return o['v']
+              raise AssertionError(f'option not found {selector}: {wanted}; actual={opts}')
+
+          def configure(page):
+              page.select_option('#subjectSelect','英語')
+              page.select_option('#gradeSelect','中2'); page.wait_for_timeout(60)
+              page.select_option('#textbookSelect','サンシャイン'); page.wait_for_timeout(60)
+              sections=page.locator('#sectionSelect option').evaluate_all("els=>els.map(x=>x.value).filter(Boolean)")
+              assert sections
+              page.select_option('#sectionSelect',sections[-1])
+              page.select_option('#vocabMode','on')
+              select_only(page,'input[data-stage]','動名詞')
+              select_only(page,'input[data-type]','間違い直し')
+              select_option(page,'#questionCount',['20','20問'])
+              select_option(page,'#pickMode',['上から順','ordered','順番','先頭から'])
+              page.wait_for_timeout(150)
+              status=page.locator('#builderStatus').inner_text()
+              mm=re.search(r'この条件で使える候補\s*(\d+)件',status)
+              assert mm and int(mm.group(1))>=20, status
+              return sections[-1],int(mm.group(1))
+
+          def generated_ids(page):
+              vals=page.locator('#questionPreview .qnum').all_inner_texts()
+              ids=[]
+              for x in vals:
+                  mm=re.search(r'Q\d+\s+([^\s　/]+)',x)
+                  if mm:ids.append(mm.group(1))
+              return ids
+
+          def install_print_hook(page):
+              page.evaluate("""()=>{window.__printHtml='';window.__printCalled=false;window.__printWin=null;window.open=()=>{const w={document:{open:()=>{},write:s=>{window.__printHtml=String(s)},close:()=>{}},focus:()=>{},print:()=>{window.__printCalled=true},onload:null};window.__printWin=w;return w}}""")
+
+          def capture_print(page):
+              install_print_hook(page)
+              page.get_by_role('button',name='印刷').click();page.wait_for_timeout(80)
+              page.evaluate("()=>{if(window.__printWin&&typeof window.__printWin.onload==='function')window.__printWin.onload()}")
+              page.wait_for_timeout(100)
+              html=page.evaluate('window.__printHtml')
+              assert len(html)>1000,'print html too short'
+              assert '解答' in html,'answer section missing from print html'
+              return html
+
+          with sync_playwright() as p:
+              for name,launcher in [('chromium',p.chromium),('firefox',p.firefox),('webkit',p.webkit)]:
+                  browser=launcher.launch()
+                  page=browser.new_page(viewport={'width':1280,'height':900})
+                  errors=[];page.on('pageerror',lambda exc,e=errors:e.append('page:'+str(exc)));page.on('console',lambda msg,e=errors:e.append('console:'+msg.text) if msg.type=='error' else None)
+                  page.goto(url,wait_until='load')
+                  section,candidates=configure(page)
+                  page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(100)
+                  ids=generated_ids(page);assert len(ids)==20,(name,ids)
+                  vf=sum(1 for x in ids if x.startswith('VF-'));assert vf>0,(name,ids)
+                  page.reload(wait_until='load');page.wait_for_timeout(120)
+                  restored=generated_ids(page);assert restored==ids,(name,'save/restore mismatch',ids,restored)
+                  print_html=capture_print(page)
+                  metrics=page.evaluate("()=>({w:innerWidth,sw:document.documentElement.scrollWidth,h:innerHeight,sh:document.documentElement.scrollHeight})")
+                  assert not errors,(name,errors)
+                  out['desktop'].append({'browser':name,'section':section,'candidates':candidates,'generated':len(ids),'fallback_generated':vf,'save_restore_exact':True,'print_html_chars':len(print_html),'layout':metrics})
+                  if name=='chromium':
+                      pp=browser.new_page(viewport={'width':1280,'height':900})
+                      pp.set_content(print_html,wait_until='load');pp.emulate_media(media='print')
+                      pdf=pp.pdf(format='A4',print_background=True,prefer_css_page_size=False)
+                      reader=PdfReader(io.BytesIO(pdf));assert len(reader.pages)>=1
+                      box=reader.pages[0].mediabox;width=float(box.width);height=float(box.height)
+                      assert 590<=width<=600 and 838<=height<=846,(width,height)
+                      out['a4']={'pages':len(reader.pages),'first_page_points':[round(width,2),round(height,2)],'pdf_bytes':len(pdf),'answer_marker_in_print_html':True}
+                      pp.close()
+                  browser.close()
+
+              browser=p.webkit.launch()
+              page=browser.new_page(viewport={'width':390,'height':844},device_scale_factor=3,is_mobile=True,has_touch=True)
+              errors=[];page.on('pageerror',lambda exc:errors.append('page:'+str(exc)));page.on('console',lambda msg:errors.append('console:'+msg.text) if msg.type=='error' else None)
+              page.goto(url,wait_until='load');section,candidates=configure(page)
+              create=page.get_by_role('button',name='問題を作成');create.scroll_into_view_if_needed();assert create.is_visible();create.click();page.wait_for_timeout(120)
+              ids=generated_ids(page);assert len(ids)==20
+              layout=page.evaluate("()=>({w:innerWidth,sw:document.documentElement.scrollWidth,h:innerHeight,preview:document.querySelector('#questionPreview')?.getBoundingClientRect().toJSON()})")
+              assert layout['sw']<=layout['w']*1.30,layout
+              assert layout['preview'] and layout['preview']['width']>0,layout
+              assert not errors,errors
+              out['mobile']={'browser':'webkit','profile':'iPhone-equivalent 390x844 touch','section':section,'candidates':candidates,'generated':len(ids),'fallback_generated':sum(1 for x in ids if x.startswith('VF-')),'layout':layout}
+              browser.close()
+
+          out['result']='PASS'
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/PROBLEM_APP_RELEASE_BROWSER_GATES.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit gate result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_RELEASE_BROWSER_GATES.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record three-browser mobile A4 release gates [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
