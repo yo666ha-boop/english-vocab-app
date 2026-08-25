@@ -1,0 +1,66 @@
+{
+  "checkpoint_schema": "mikami-repair-work-v40-addendum",
+  "updated_at_jst": "2026-08-25T02:25+09:00",
+  "base_checkpoints": ["v36", "v37", "v38", "v39"],
+  "branch": "mikami-canonical-repair",
+  "observed_branch_head": "690b133e899ba68befb2e6a4333b320a699ff074",
+  "head_actual_change": "github-actions public-index probe status only; no functional project change",
+  "latest_public_index_probe": {
+    "run_id": 32755238301,
+    "status": "HASH_MISMATCH",
+    "scope": "ROOT_INDEX_ONLY",
+    "action": "NO_ROOT_WRITE"
+  },
+  "problem_app_v3": {
+    "main_publish_commit": "442c45536e83a87ee0f785a57b2abf1586f0a820",
+    "bytes": 3812347,
+    "blob_sha": "1a58abba1744f09b3612c9f84d6ce9d96e1f6a4f",
+    "status": "PASS_V3_RETAINED",
+    "main_and_vercel_vocab_project_modified": false
+  },
+  "cross_chat_reconciliation": {
+    "related_threads_checked": true,
+    "latest_source_thread": "6a8c28ee-2e2c-83e9-9383-18dcf5065b92",
+    "actual_preferred_over_prompt": true,
+    "duplicate_or_rollback_detected": false
+  },
+  "custom_gpt": {
+    "actual_gpt_url_found": false,
+    "eligible_existing_gpt_found": false,
+    "creation_capable_workspace_or_permission_found": false,
+    "authenticated_editor_runtime_found": false,
+    "registration_performed": false,
+    "stop_reason": "personal Plus context lacks new-GPT creation; editor access is administrator-blocked; no eligible existing GPT or write connector"
+  },
+  "real_photo_folders": {
+    "correct_original": 0,
+    "multi_category_errors": 0,
+    "unreadable_answer": 0,
+    "school_test": 0,
+    "synthetic_substitution": false
+  },
+  "automation": {
+    "schedule_changed": false,
+    "local_automation_definition_present": false,
+    "related_thread_record": "stopped/disabled after v39 because external blockers unchanged",
+    "schedule_or_next_run_verifiable_here": false
+  },
+  "current_stage": "external platform entitlement + actual Custom GPT registration + four-photo runtime evidence",
+  "completed_this_run": [
+    "read latest branch HEAD and v36-v39 checkpoints",
+    "verified latest HEAD is probe-status-only",
+    "rechecked problem-app v3 and protected main/Vercel scope",
+    "reconciled related chat progress without rollback",
+    "rechecked all four Drive evidence folders; all empty",
+    "reconfirmed no actual /g/<id> and no authenticated editor write surface"
+  ],
+  "remaining_work": [
+    "obtain eligible GPT creation/edit permission or an editable existing GPT",
+    "register verified Knowledge/Instructions/schema and capture actual /g/<id>",
+    "obtain and run four real answer photos",
+    "produce actual A4 portrait render/print evidence",
+    "run hardened validators and set overall_completion true only on actual PASS"
+  ],
+  "next_start": "read latest HEAD and v36-v40; re-probe entitlement/editor and four real-photo folders; if available continue immediately without redoing PASS gates",
+  "overall_completion": false
+}
