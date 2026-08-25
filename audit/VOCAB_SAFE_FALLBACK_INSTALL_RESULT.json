@@ -1,0 +1,12 @@
+{
+  "installedAt": "2026-08-25T12:38:22.655Z",
+  "marker": "VOCAB_SAFE_FALLBACK_V1",
+  "targetPerCategoryType": 30,
+  "htmlBytes": 3804237,
+  "fallbackDesign": {
+    "gerundGrade": "中2",
+    "conjunctionGrade": "中3",
+    "idHardcode": false,
+    "elementarySourceWords": 104
+  }
+}
