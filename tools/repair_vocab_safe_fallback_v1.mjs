@@ -14,8 +14,30 @@ const semanticNeedle="{base:'write my name',ger:'writing my name',jp:'自分の�
 const semanticReplacement="{base:'write',ger:'writing',jp:'書くこと'}";
 const semanticCount=after.includes(semanticNeedle)?1:0;
 after=after.replace(semanticNeedle,semanticReplacement);
+
+// Context-dependent prerequisite filtering must never be cached globally.
+// The matrix visits early sections first; caching passesPrereqGrammar() there
+// permanently removed later-learned gerund/conjunction fallbacks from the bank.
+// Keep only context-free lexical/quality filtering in the cache and re-check
+// passesPrereqGrammar() inside appendVocabFallbacks() for the current section.
+const cacheNeedle="return vocabFallbackLexicallySafe(item) && passesPrereqGrammar(item) && passesQualityGate(item);";
+const cacheReplacement="return vocabFallbackLexicallySafe(item) && passesQualityGate(item);";
+const contextCacheCount=after.includes(cacheNeedle)?1:0;
+after=after.replace(cacheNeedle,cacheReplacement);
+
 if(after!==before) html=html.slice(0,start)+after+html.slice(end);
 fs.writeFileSync(path,html);
 fs.mkdirSync('audit',{recursive:true});
-fs.writeFileSync('audit/VOCAB_SAFE_FALLBACK_SYNTAX_REPAIR.json',JSON.stringify({repairedAt:new Date().toISOString(),escapedBackticksRemoved:badCount,semanticPossessiveRepair:semanticCount,htmlBytes:Buffer.byteLength(html)},null,2)+'\n');
-console.log(JSON.stringify({escapedBackticksRemoved:badCount,semanticPossessiveRepair:semanticCount,htmlBytes:Buffer.byteLength(html)},null,2));
+fs.writeFileSync('audit/VOCAB_SAFE_FALLBACK_SYNTAX_REPAIR.json',JSON.stringify({
+  repairedAt:new Date().toISOString(),
+  escapedBackticksRemoved:badCount,
+  semanticPossessiveRepair:semanticCount,
+  contextDependentPrereqCacheRepair:contextCacheCount,
+  htmlBytes:Buffer.byteLength(html)
+},null,2)+'\n');
+console.log(JSON.stringify({
+  escapedBackticksRemoved:badCount,
+  semanticPossessiveRepair:semanticCount,
+  contextDependentPrereqCacheRepair:contextCacheCount,
+  htmlBytes:Buffer.byteLength(html)
+},null,2));
