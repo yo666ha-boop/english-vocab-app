@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T23:37:04.604Z",
+  "generated_at": "2026-08-25T23:38:26.053Z",
   "source_gap_file": "audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json",
-  "design": "Token-level classifier for final under50 passMeta=-1 items. Diagnostic only; no whitelist and no passMeta mutation.",
+  "design": "Token-level classifier for final under50 passMeta=-1 items using elementary plus cumulative textbook vocabulary through the selected grade. Diagnostic only; no whitelist and no passMeta mutation.",
   "records": [
     {
       "grade": "中2",
@@ -12,62 +12,10 @@
         "動名詞"
       ],
       "unresolved_items": 304,
-      "unresolved_items_with_any_nonlocal_token": 304,
-      "top_nonlocal_tokens": [
-        {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0593",
-            "M2-GER-0594",
-            "M2-GER-0601",
-            "M2-GER-0602",
-            "M2-GER-0609"
-          ],
-          "sample_texts": [
-            "I practice (      ). || Speaking English",
-            "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』 || I practice speaking English.",
-            "You practice (      ). || Speaking English"
-          ]
-        },
-        {
-          "token": "reading",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0589",
-            "M2-GER-0590",
-            "M2-GER-0597",
-            "M2-GER-0598",
-            "M2-GER-0605"
-          ],
-          "sample_texts": [
-            "I enjoy (      ). || Reading books",
-            "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』 || I enjoy reading books.",
-            "You enjoy (      ). || Reading books"
-          ]
-        },
-        {
-          "token": "speaking",
-          "kind": "other_scope_lexicon",
-          "lemma": "speak",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0593",
-            "M2-GER-0594",
-            "M2-GER-0601",
-            "M2-GER-0602",
-            "M2-GER-0609"
-          ],
-          "sample_texts": [
-            "I practice (      ). || Speaking English",
-            "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』 || I practice speaking English.",
-            "You practice (      ). || Speaking English"
-          ]
-        },
+      "unresolved_items_with_any_unknown_token": 304,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "science",
           "kind": "globally_absent",
@@ -87,44 +35,8 @@
           ]
         },
         {
-          "token": "studying",
-          "kind": "other_scope_lexicon",
-          "lemma": "studie",
-          "item_count": 45,
-          "sample_ids": [
-            "M2Y-GER-0257",
-            "M2Y-GER-0258",
-            "M2Y-GER-0259",
-            "M2Y-GER-0272",
-            "M2Y-GER-0273"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』 || I start studying science.",
-            "I start to study. の誤りを直しなさい。 || I start studying science.",
-            "『私は 理科を勉強し始める。』に合う文を書きなさい。 || I start studying science."
-          ]
-        },
-        {
-          "token": "using",
-          "kind": "other_scope_lexicon",
-          "lemma": "us",
-          "item_count": 45,
-          "sample_ids": [
-            "M2Y-GER-0254",
-            "M2Y-GER-0255",
-            "M2Y-GER-0256",
-            "M2Y-GER-0269",
-            "M2Y-GER-0270"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』 || I stop using the internet.",
-            "I stop to us. の誤りを直しなさい。 || I stop using the internet.",
-            "『私は インターネットを使うのをやめる。』に合う文を書きなさい。 || I stop using the internet."
-          ]
-        },
-        {
           "token": "enjoy",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "enjoy",
           "item_count": 44,
           "sample_ids": [
@@ -141,26 +53,8 @@
           ]
         },
         {
-          "token": "listening",
-          "kind": "other_scope_lexicon",
-          "lemma": "listen",
-          "item_count": 43,
-          "sample_ids": [
-            "M2-GER-0591",
-            "M2-GER-0592",
-            "M2-GER-0599",
-            "M2-GER-0600",
-            "M2-GER-0607"
-          ],
-          "sample_texts": [
-            "I love (      ). || Listening to music",
-            "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』 || I love listening to music.",
-            "You love (      ). || Listening to music"
-          ]
-        },
-        {
           "token": "music",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "music",
           "item_count": 43,
           "sample_ids": [
@@ -177,26 +71,8 @@
           ]
         },
         {
-          "token": "making",
-          "kind": "other_scope_lexicon",
-          "lemma": "make",
-          "item_count": 39,
-          "sample_ids": [
-            "M2X-GER-0491",
-            "M2X-GER-0492",
-            "M2X-GER-0515",
-            "M2X-GER-0516",
-            "M2X-GER-0539"
-          ],
-          "sample_texts": [
-            "I start making dinner. を否定文にしなさい。 || I do not start making dinner.",
-            "『私は 夕食を作り始める。』に合う文を書きなさい。 || I start making dinner.",
-            "You start making dinner. を否定文にしなさい。 || You do not start making dinner."
-          ]
-        },
-        {
           "token": "start",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 36,
           "sample_ids": [
@@ -213,26 +89,8 @@
           ]
         },
         {
-          "token": "dinner",
-          "kind": "other_scope_lexicon",
-          "lemma": "dinner",
-          "item_count": 30,
-          "sample_ids": [
-            "M2X-GER-0491",
-            "M2X-GER-0492",
-            "M2X-GER-0515",
-            "M2X-GER-0516",
-            "M2X-GER-0539"
-          ],
-          "sample_texts": [
-            "I start making dinner. を否定文にしなさい。 || I do not start making dinner.",
-            "『私は 夕食を作り始める。』に合う文を書きなさい。 || I start making dinner.",
-            "You start making dinner. を否定文にしなさい。 || You do not start making dinner."
-          ]
-        },
-        {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 30,
           "sample_ids": [
@@ -250,7 +108,7 @@
         },
         {
           "token": "comics",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "comic",
           "item_count": 27,
           "sample_ids": [
@@ -267,26 +125,8 @@
           ]
         },
         {
-          "token": "lunch",
-          "kind": "other_scope_lexicon",
-          "lemma": "lunch",
-          "item_count": 27,
-          "sample_ids": [
-            "M2-GER2-0809",
-            "M2-GER2-0810",
-            "M2-GER2-0811",
-            "M2-GER2-0863",
-            "M2-GER2-0864"
-          ],
-          "sample_texts": [
-            "I start (      ). 「昼食を作り始める」 || making lunch",
-            "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 昼食を作り始める。』 || I start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I start (make) lunch. || I start making lunch."
-          ]
-        },
-        {
           "token": "phone",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "phone",
           "item_count": 27,
           "sample_ids": [
@@ -304,7 +144,7 @@
         },
         {
           "token": "stop",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "stop",
           "item_count": 27,
           "sample_ids": [
@@ -322,7 +162,7 @@
         },
         {
           "token": "love",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "love",
           "item_count": 26,
           "sample_ids": [
@@ -340,7 +180,7 @@
         },
         {
           "token": "enjoys",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "enjoy",
           "item_count": 25,
           "sample_ids": [
@@ -358,7 +198,7 @@
         },
         {
           "token": "starts",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 25,
           "sample_ids": [
@@ -376,7 +216,7 @@
         },
         {
           "token": "basketball",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "basketball",
           "item_count": 20,
           "sample_ids": [
@@ -393,44 +233,8 @@
           ]
         },
         {
-          "token": "books",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 20,
-          "sample_ids": [
-            "M2-GER-0589",
-            "M2-GER-0590",
-            "M2-GER-0597",
-            "M2-GER-0598",
-            "M2-GER-0605"
-          ],
-          "sample_texts": [
-            "I enjoy (      ). || Reading books",
-            "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』 || I enjoy reading books.",
-            "You enjoy (      ). || Reading books"
-          ]
-        },
-        {
-          "token": "playing",
-          "kind": "other_scope_lexicon",
-          "lemma": "play",
-          "item_count": 20,
-          "sample_ids": [
-            "M2-GER-0587",
-            "M2-GER-0588",
-            "M2-GER-0595",
-            "M2-GER-0596",
-            "M2-GER-0603"
-          ],
-          "sample_texts": [
-            "I like (      ). || Playing basketball",
-            "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』 || I like playing basketball.",
-            "You like (      ). || Playing basketball"
-          ]
-        },
-        {
           "token": "practices",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 19,
           "sample_ids": [
@@ -447,80 +251,8 @@
           ]
         },
         {
-          "token": "cooking",
-          "kind": "other_scope_lexicon",
-          "lemma": "cooking",
-          "item_count": 18,
-          "sample_ids": [
-            "M2Y-GER-0248",
-            "M2Y-GER-0249",
-            "M2Y-GER-0250",
-            "M2Y-GER-0263",
-            "M2Y-GER-0264"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は 夕食を作ることを楽しむ。』 || I enjoy cooking dinner.",
-            "I enjoy to cook. の誤りを直しなさい。 || I enjoy cooking dinner.",
-            "『私は 夕食を作ることを楽しむ。』に合う文を書きなさい。 || I enjoy cooking dinner."
-          ]
-        },
-        {
-          "token": "friend",
-          "kind": "other_scope_lexicon",
-          "lemma": "friend",
-          "item_count": 18,
-          "sample_ids": [
-            "M2-GER2-1232",
-            "M2-GER2-1233",
-            "M2-GER2-1234",
-            "M2-GER2-1238",
-            "M2-GER2-1239"
-          ],
-          "sample_texts": [
-            "My friend enjoys (      ). 「まんがを読むことを楽しむ」 || reading comics",
-            "動名詞を使って、次の日本語に合う英文を書きなさい。『私の友だちは まんがを読むことを楽しむ。』 || My friend enjoys reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 My friend enjoys (read) comics. || My friend enjoys reading comics."
-          ]
-        },
-        {
-          "token": "internet",
-          "kind": "other_scope_lexicon",
-          "lemma": "internet",
-          "item_count": 18,
-          "sample_ids": [
-            "M2Y-GER-0254",
-            "M2Y-GER-0255",
-            "M2Y-GER-0256",
-            "M2Y-GER-0269",
-            "M2Y-GER-0270"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』 || I stop using the internet.",
-            "I stop to us. の誤りを直しなさい。 || I stop using the internet.",
-            "『私は インターネットを使うのをやめる。』に合う文を書きなさい。 || I stop using the internet."
-          ]
-        },
-        {
-          "token": "like",
-          "kind": "other_scope_lexicon",
-          "lemma": "like",
-          "item_count": 18,
-          "sample_ids": [
-            "M2-GER-0587",
-            "M2-GER-0588",
-            "M2-GER-0595",
-            "M2-GER-0596",
-            "M2-GER-0603"
-          ],
-          "sample_texts": [
-            "I like (      ). || Playing basketball",
-            "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』 || I like playing basketball.",
-            "You like (      ). || Playing basketball"
-          ]
-        },
-        {
           "token": "loves",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "love",
           "item_count": 18,
           "sample_ids": [
@@ -538,7 +270,7 @@
         },
         {
           "token": "stops",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "stop",
           "item_count": 18,
           "sample_ids": [
@@ -556,7 +288,7 @@
         },
         {
           "token": "begins",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "begin",
           "item_count": 15,
           "sample_ids": [
@@ -573,26 +305,8 @@
           ]
         },
         {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 15,
-          "sample_ids": [
-            "M2Y-GER-0258",
-            "M2Y-GER-0273",
-            "M2Y-GER-0288",
-            "M2Y-GER-0303",
-            "M2Y-GER-0318"
-          ],
-          "sample_texts": [
-            "I start to study. の誤りを直しなさい。 || I start studying science.",
-            "You start to study. の誤りを直しなさい。 || You start studying science.",
-            "We start to study. の誤りを直しなさい。 || We start studying science."
-          ]
-        },
-        {
           "token": "begin",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "begin",
           "item_count": 12,
           "sample_ids": [
@@ -606,131 +320,6 @@
             "I begin (      ). 「理科を勉強し始める」 || studying science",
             "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』 || I begin studying science.",
             "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I begin (study) science. || I begin studying science."
-          ]
-        },
-        {
-          "token": "listen",
-          "kind": "other_scope_lexicon",
-          "lemma": "listen",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0817",
-            "M2-GER2-0871",
-            "M2-GER2-0925",
-            "M2-GER2-0979",
-            "M2-GER2-1033"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I love (listen) to music. || I love listening to music.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You love (listen) to music. || You love listening to music.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We love (listen) to music. || We love listening to music."
-          ]
-        },
-        {
-          "token": "make",
-          "kind": "other_scope_lexicon",
-          "lemma": "make",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0811",
-            "M2-GER2-0865",
-            "M2-GER2-0919",
-            "M2-GER2-0973",
-            "M2-GER2-1027"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I start (make) lunch. || I start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You start (make) lunch. || You start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We start (make) lunch. || We start making lunch."
-          ]
-        },
-        {
-          "token": "read",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0802",
-            "M2-GER2-0856",
-            "M2-GER2-0910",
-            "M2-GER2-0964",
-            "M2-GER2-1018"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I enjoy (read) comics. || I enjoy reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You enjoy (read) comics. || You enjoy reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We enjoy (read) comics. || We enjoy reading comics."
-          ]
-        },
-        {
-          "token": "speak",
-          "kind": "other_scope_lexicon",
-          "lemma": "speak",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0808",
-            "M2-GER2-0862",
-            "M2-GER2-0916",
-            "M2-GER2-0970",
-            "M2-GER2-1024"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I practice (speak) English. || I practice speaking English.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You practice (speak) English. || You practice speaking English.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We practice (speak) English. || We practice speaking English."
-          ]
-        },
-        {
-          "token": "use",
-          "kind": "other_scope_lexicon",
-          "lemma": "use",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0814",
-            "M2-GER2-0868",
-            "M2-GER2-0922",
-            "M2-GER2-0976",
-            "M2-GER2-1030"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I stop (use) the phone. || I stop using the phone.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You stop (use) the phone. || You stop using the phone.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We stop (use) the phone. || We stop using the phone."
-          ]
-        },
-        {
-          "token": "cook",
-          "kind": "other_scope_lexicon",
-          "lemma": "cook",
-          "item_count": 6,
-          "sample_ids": [
-            "M2Y-GER-0249",
-            "M2Y-GER-0264",
-            "M2Y-GER-0279",
-            "M2Y-GER-0294",
-            "M2Y-GER-0309"
-          ],
-          "sample_texts": [
-            "I enjoy to cook. の誤りを直しなさい。 || I enjoy cooking dinner.",
-            "You enjoy to cook. の誤りを直しなさい。 || You enjoy cooking dinner.",
-            "We enjoy to cook. の誤りを直しなさい。 || We enjoy cooking dinner."
-          ]
-        },
-        {
-          "token": "likes",
-          "kind": "other_scope_lexicon",
-          "lemma": "like",
-          "item_count": 4,
-          "sample_ids": [
-            "M2X-GER-0577",
-            "M2X-GER-0578",
-            "M2X-GER-0601",
-            "M2X-GER-0602"
-          ],
-          "sample_texts": [
-            "He likes playing basketball. を否定文にしなさい。 || He does not like playing basketball.",
-            "『彼は バスケットボールをすることが好きだ。』に合う文を書きなさい。 || He likes playing basketball.",
-            "She likes playing basketball. を否定文にしなさい。 || She does not like playing basketball."
           ]
         }
       ],
@@ -754,100 +343,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0593",
-            "M2-GER-0594",
-            "M2-GER-0601",
-            "M2-GER-0602",
-            "M2-GER-0609"
-          ],
-          "sample_texts": [
-            "I practice (      ). || Speaking English",
-            "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』 || I practice speaking English.",
-            "You practice (      ). || Speaking English"
-          ]
-        },
-        {
-          "token": "reading",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0589",
-            "M2-GER-0590",
-            "M2-GER-0597",
-            "M2-GER-0598",
-            "M2-GER-0605"
-          ],
-          "sample_texts": [
-            "I enjoy (      ). || Reading books",
-            "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』 || I enjoy reading books.",
-            "You enjoy (      ). || Reading books"
-          ]
-        },
-        {
-          "token": "speaking",
-          "kind": "other_scope_lexicon",
-          "lemma": "speak",
-          "item_count": 47,
-          "sample_ids": [
-            "M2-GER-0593",
-            "M2-GER-0594",
-            "M2-GER-0601",
-            "M2-GER-0602",
-            "M2-GER-0609"
-          ],
-          "sample_texts": [
-            "I practice (      ). || Speaking English",
-            "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』 || I practice speaking English.",
-            "You practice (      ). || Speaking English"
-          ]
-        },
-        {
-          "token": "studying",
-          "kind": "other_scope_lexicon",
-          "lemma": "studie",
-          "item_count": 45,
-          "sample_ids": [
-            "M2Y-GER-0257",
-            "M2Y-GER-0258",
-            "M2Y-GER-0259",
-            "M2Y-GER-0272",
-            "M2Y-GER-0273"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』 || I start studying science.",
-            "I start to study. の誤りを直しなさい。 || I start studying science.",
-            "『私は 理科を勉強し始める。』に合う文を書きなさい。 || I start studying science."
-          ]
-        },
-        {
-          "token": "using",
-          "kind": "other_scope_lexicon",
-          "lemma": "us",
-          "item_count": 45,
-          "sample_ids": [
-            "M2Y-GER-0254",
-            "M2Y-GER-0255",
-            "M2Y-GER-0256",
-            "M2Y-GER-0269",
-            "M2Y-GER-0270"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』 || I stop using the internet.",
-            "I stop to us. の誤りを直しなさい。 || I stop using the internet.",
-            "『私は インターネットを使うのをやめる。』に合う文を書きなさい。 || I stop using the internet."
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "enjoy",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "enjoy",
           "item_count": 44,
           "sample_ids": [
@@ -864,26 +363,8 @@
           ]
         },
         {
-          "token": "listening",
-          "kind": "other_scope_lexicon",
-          "lemma": "listen",
-          "item_count": 43,
-          "sample_ids": [
-            "M2-GER-0591",
-            "M2-GER-0592",
-            "M2-GER-0599",
-            "M2-GER-0600",
-            "M2-GER-0607"
-          ],
-          "sample_texts": [
-            "I love (      ). || Listening to music",
-            "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』 || I love listening to music.",
-            "You love (      ). || Listening to music"
-          ]
-        },
-        {
           "token": "music",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "music",
           "item_count": 43,
           "sample_ids": [
@@ -900,26 +381,8 @@
           ]
         },
         {
-          "token": "making",
-          "kind": "other_scope_lexicon",
-          "lemma": "make",
-          "item_count": 39,
-          "sample_ids": [
-            "M2X-GER-0491",
-            "M2X-GER-0492",
-            "M2X-GER-0515",
-            "M2X-GER-0516",
-            "M2X-GER-0539"
-          ],
-          "sample_texts": [
-            "I start making dinner. を否定文にしなさい。 || I do not start making dinner.",
-            "『私は 夕食を作り始める。』に合う文を書きなさい。 || I start making dinner.",
-            "You start making dinner. を否定文にしなさい。 || You do not start making dinner."
-          ]
-        },
-        {
           "token": "start",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 36,
           "sample_ids": [
@@ -936,26 +399,8 @@
           ]
         },
         {
-          "token": "dinner",
-          "kind": "other_scope_lexicon",
-          "lemma": "dinner",
-          "item_count": 30,
-          "sample_ids": [
-            "M2X-GER-0491",
-            "M2X-GER-0492",
-            "M2X-GER-0515",
-            "M2X-GER-0516",
-            "M2X-GER-0539"
-          ],
-          "sample_texts": [
-            "I start making dinner. を否定文にしなさい。 || I do not start making dinner.",
-            "『私は 夕食を作り始める。』に合う文を書きなさい。 || I start making dinner.",
-            "You start making dinner. を否定文にしなさい。 || You do not start making dinner."
-          ]
-        },
-        {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 30,
           "sample_ids": [
@@ -973,7 +418,7 @@
         },
         {
           "token": "comics",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "comic",
           "item_count": 27,
           "sample_ids": [
@@ -990,26 +435,8 @@
           ]
         },
         {
-          "token": "lunch",
-          "kind": "other_scope_lexicon",
-          "lemma": "lunch",
-          "item_count": 27,
-          "sample_ids": [
-            "M2-GER2-0809",
-            "M2-GER2-0810",
-            "M2-GER2-0811",
-            "M2-GER2-0863",
-            "M2-GER2-0864"
-          ],
-          "sample_texts": [
-            "I start (      ). 「昼食を作り始める」 || making lunch",
-            "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 昼食を作り始める。』 || I start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I start (make) lunch. || I start making lunch."
-          ]
-        },
-        {
           "token": "phone",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "phone",
           "item_count": 27,
           "sample_ids": [
@@ -1027,7 +454,7 @@
         },
         {
           "token": "stop",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "stop",
           "item_count": 27,
           "sample_ids": [
@@ -1045,7 +472,7 @@
         },
         {
           "token": "love",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "love",
           "item_count": 26,
           "sample_ids": [
@@ -1063,7 +490,7 @@
         },
         {
           "token": "enjoys",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "enjoy",
           "item_count": 25,
           "sample_ids": [
@@ -1081,7 +508,7 @@
         },
         {
           "token": "starts",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 25,
           "sample_ids": [
@@ -1099,7 +526,7 @@
         },
         {
           "token": "basketball",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "basketball",
           "item_count": 20,
           "sample_ids": [
@@ -1116,44 +543,8 @@
           ]
         },
         {
-          "token": "books",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 20,
-          "sample_ids": [
-            "M2-GER-0589",
-            "M2-GER-0590",
-            "M2-GER-0597",
-            "M2-GER-0598",
-            "M2-GER-0605"
-          ],
-          "sample_texts": [
-            "I enjoy (      ). || Reading books",
-            "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』 || I enjoy reading books.",
-            "You enjoy (      ). || Reading books"
-          ]
-        },
-        {
-          "token": "playing",
-          "kind": "other_scope_lexicon",
-          "lemma": "play",
-          "item_count": 20,
-          "sample_ids": [
-            "M2-GER-0587",
-            "M2-GER-0588",
-            "M2-GER-0595",
-            "M2-GER-0596",
-            "M2-GER-0603"
-          ],
-          "sample_texts": [
-            "I like (      ). || Playing basketball",
-            "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』 || I like playing basketball.",
-            "You like (      ). || Playing basketball"
-          ]
-        },
-        {
           "token": "practices",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 19,
           "sample_ids": [
@@ -1170,80 +561,8 @@
           ]
         },
         {
-          "token": "cooking",
-          "kind": "other_scope_lexicon",
-          "lemma": "cooking",
-          "item_count": 18,
-          "sample_ids": [
-            "M2Y-GER-0248",
-            "M2Y-GER-0249",
-            "M2Y-GER-0250",
-            "M2Y-GER-0263",
-            "M2Y-GER-0264"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は 夕食を作ることを楽しむ。』 || I enjoy cooking dinner.",
-            "I enjoy to cook. の誤りを直しなさい。 || I enjoy cooking dinner.",
-            "『私は 夕食を作ることを楽しむ。』に合う文を書きなさい。 || I enjoy cooking dinner."
-          ]
-        },
-        {
-          "token": "friend",
-          "kind": "other_scope_lexicon",
-          "lemma": "friend",
-          "item_count": 18,
-          "sample_ids": [
-            "M2-GER2-1232",
-            "M2-GER2-1233",
-            "M2-GER2-1234",
-            "M2-GER2-1238",
-            "M2-GER2-1239"
-          ],
-          "sample_texts": [
-            "My friend enjoys (      ). 「まんがを読むことを楽しむ」 || reading comics",
-            "動名詞を使って、次の日本語に合う英文を書きなさい。『私の友だちは まんがを読むことを楽しむ。』 || My friend enjoys reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 My friend enjoys (read) comics. || My friend enjoys reading comics."
-          ]
-        },
-        {
-          "token": "internet",
-          "kind": "other_scope_lexicon",
-          "lemma": "internet",
-          "item_count": 18,
-          "sample_ids": [
-            "M2Y-GER-0254",
-            "M2Y-GER-0255",
-            "M2Y-GER-0256",
-            "M2Y-GER-0269",
-            "M2Y-GER-0270"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』 || I stop using the internet.",
-            "I stop to us. の誤りを直しなさい。 || I stop using the internet.",
-            "『私は インターネットを使うのをやめる。』に合う文を書きなさい。 || I stop using the internet."
-          ]
-        },
-        {
-          "token": "like",
-          "kind": "other_scope_lexicon",
-          "lemma": "like",
-          "item_count": 18,
-          "sample_ids": [
-            "M2-GER-0587",
-            "M2-GER-0588",
-            "M2-GER-0595",
-            "M2-GER-0596",
-            "M2-GER-0603"
-          ],
-          "sample_texts": [
-            "I like (      ). || Playing basketball",
-            "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』 || I like playing basketball.",
-            "You like (      ). || Playing basketball"
-          ]
-        },
-        {
           "token": "loves",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "love",
           "item_count": 18,
           "sample_ids": [
@@ -1261,7 +580,7 @@
         },
         {
           "token": "stops",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "stop",
           "item_count": 18,
           "sample_ids": [
@@ -1279,7 +598,7 @@
         },
         {
           "token": "begins",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "begin",
           "item_count": 15,
           "sample_ids": [
@@ -1296,26 +615,8 @@
           ]
         },
         {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 15,
-          "sample_ids": [
-            "M2Y-GER-0258",
-            "M2Y-GER-0273",
-            "M2Y-GER-0288",
-            "M2Y-GER-0303",
-            "M2Y-GER-0318"
-          ],
-          "sample_texts": [
-            "I start to study. の誤りを直しなさい。 || I start studying science.",
-            "You start to study. の誤りを直しなさい。 || You start studying science.",
-            "We start to study. の誤りを直しなさい。 || We start studying science."
-          ]
-        },
-        {
           "token": "begin",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "begin",
           "item_count": 12,
           "sample_ids": [
@@ -1329,131 +630,6 @@
             "I begin (      ). 「理科を勉強し始める」 || studying science",
             "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』 || I begin studying science.",
             "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I begin (study) science. || I begin studying science."
-          ]
-        },
-        {
-          "token": "listen",
-          "kind": "other_scope_lexicon",
-          "lemma": "listen",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0817",
-            "M2-GER2-0871",
-            "M2-GER2-0925",
-            "M2-GER2-0979",
-            "M2-GER2-1033"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I love (listen) to music. || I love listening to music.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You love (listen) to music. || You love listening to music.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We love (listen) to music. || We love listening to music."
-          ]
-        },
-        {
-          "token": "make",
-          "kind": "other_scope_lexicon",
-          "lemma": "make",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0811",
-            "M2-GER2-0865",
-            "M2-GER2-0919",
-            "M2-GER2-0973",
-            "M2-GER2-1027"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I start (make) lunch. || I start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You start (make) lunch. || You start making lunch.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We start (make) lunch. || We start making lunch."
-          ]
-        },
-        {
-          "token": "read",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0802",
-            "M2-GER2-0856",
-            "M2-GER2-0910",
-            "M2-GER2-0964",
-            "M2-GER2-1018"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I enjoy (read) comics. || I enjoy reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You enjoy (read) comics. || You enjoy reading comics.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We enjoy (read) comics. || We enjoy reading comics."
-          ]
-        },
-        {
-          "token": "speak",
-          "kind": "other_scope_lexicon",
-          "lemma": "speak",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0808",
-            "M2-GER2-0862",
-            "M2-GER2-0916",
-            "M2-GER2-0970",
-            "M2-GER2-1024"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I practice (speak) English. || I practice speaking English.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You practice (speak) English. || You practice speaking English.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We practice (speak) English. || We practice speaking English."
-          ]
-        },
-        {
-          "token": "use",
-          "kind": "other_scope_lexicon",
-          "lemma": "use",
-          "item_count": 9,
-          "sample_ids": [
-            "M2-GER2-0814",
-            "M2-GER2-0868",
-            "M2-GER2-0922",
-            "M2-GER2-0976",
-            "M2-GER2-1030"
-          ],
-          "sample_texts": [
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I stop (use) the phone. || I stop using the phone.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You stop (use) the phone. || You stop using the phone.",
-            "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We stop (use) the phone. || We stop using the phone."
-          ]
-        },
-        {
-          "token": "cook",
-          "kind": "other_scope_lexicon",
-          "lemma": "cook",
-          "item_count": 6,
-          "sample_ids": [
-            "M2Y-GER-0249",
-            "M2Y-GER-0264",
-            "M2Y-GER-0279",
-            "M2Y-GER-0294",
-            "M2Y-GER-0309"
-          ],
-          "sample_texts": [
-            "I enjoy to cook. の誤りを直しなさい。 || I enjoy cooking dinner.",
-            "You enjoy to cook. の誤りを直しなさい。 || You enjoy cooking dinner.",
-            "We enjoy to cook. の誤りを直しなさい。 || We enjoy cooking dinner."
-          ]
-        },
-        {
-          "token": "likes",
-          "kind": "other_scope_lexicon",
-          "lemma": "like",
-          "item_count": 4,
-          "sample_ids": [
-            "M2X-GER-0577",
-            "M2X-GER-0578",
-            "M2X-GER-0601",
-            "M2X-GER-0602"
-          ],
-          "sample_texts": [
-            "He likes playing basketball. を否定文にしなさい。 || He does not like playing basketball.",
-            "『彼は バスケットボールをすることが好きだ。』に合う文を書きなさい。 || He likes playing basketball.",
-            "She likes playing basketball. を否定文にしなさい。 || She does not like playing basketball."
           ]
         }
       ]
@@ -1467,28 +643,13 @@
         "疑問詞"
       ],
       "unresolved_items": 18,
-      "unresolved_items_with_any_nonlocal_token": 18,
-      "top_nonlocal_tokens": [
-        {
-          "token": "going",
-          "kind": "other_scope_lexicon",
-          "lemma": "going",
-          "item_count": 4,
-          "sample_ids": [
-            "R2-WH-0060",
-            "F2-WH-0086",
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to study math. に合う質問文を書きなさい。 || What are you going to do?",
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?",
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?"
-          ]
-        },
+      "unresolved_items_with_any_unknown_token": 18,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "belong",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "belong",
           "item_count": 2,
           "sample_ids": [
@@ -1498,20 +659,6 @@
           "sample_texts": [
             "I belong to the tennis club. に合う質問文を書きなさい。 || Which club do you belong to?",
             "次の英文を日本語にしなさい。 Which club do you belong to? || あなたはどのクラブに所属していますか。"
-          ]
-        },
-        {
-          "token": "brother",
-          "kind": "other_scope_lexicon",
-          "lemma": "brother",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
           ]
         },
         {
@@ -1529,22 +676,8 @@
           ]
         },
         {
-          "token": "club",
-          "kind": "other_scope_lexicon",
-          "lemma": "club",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0024",
-            "EX2-WH-0025"
-          ],
-          "sample_texts": [
-            "I belong to the tennis club. に合う質問文を書きなさい。 || Which club do you belong to?",
-            "次の英文を日本語にしなさい。 Which club do you belong to? || あなたはどのクラブに所属していますか。"
-          ]
-        },
-        {
           "token": "desk",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "desk",
           "item_count": 2,
           "sample_ids": [
@@ -1554,34 +687,6 @@
           "sample_texts": [
             "I put it on your desk. に合う質問文を書きなさい。 || Where have you put my notebook?",
             "I put it on your desk. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || Where"
-          ]
-        },
-        {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
-          "token": "go",
-          "kind": "other_scope_lexicon",
-          "lemma": "go",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0079",
-            "TH2-WH-0080"
-          ],
-          "sample_texts": [
-            "I can go there by bus. に合う質問文を書きなさい。 || How can you go to the museum?",
-            "I can go there by bus. に合う疑問詞を ( What / Why / How / Where ) から選びなさい。 || How"
           ]
         },
         {
@@ -1599,50 +704,8 @@
           ]
         },
         {
-          "token": "guitar",
-          "kind": "other_scope_lexicon",
-          "lemma": "guitar",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
-          ]
-        },
-        {
-          "token": "often",
-          "kind": "other_scope_lexicon",
-          "lemma": "often",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
-          ]
-        },
-        {
-          "token": "passed",
-          "kind": "other_scope_lexicon",
-          "lemma": "pass",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0077",
-            "TH2-WH-0078"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?",
-            "Because she passed the test. に合う疑問詞を ( What / Why / When / Where ) から選びなさい。 || Why"
-          ]
-        },
-        {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 2,
           "sample_ids": [
@@ -1655,36 +718,8 @@
           ]
         },
         {
-          "token": "put",
-          "kind": "other_scope_lexicon",
-          "lemma": "put",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0081",
-            "TH2-WH-0082"
-          ],
-          "sample_texts": [
-            "I put it on your desk. に合う質問文を書きなさい。 || Where have you put my notebook?",
-            "I put it on your desk. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || Where"
-          ]
-        },
-        {
-          "token": "seven",
-          "kind": "other_scope_lexicon",
-          "lemma": "seven",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
           "token": "started",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 2,
           "sample_ids": [
@@ -1694,48 +729,6 @@
           "sample_texts": [
             "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
             "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 2,
-          "sample_ids": [
-            "R2-WH-0060",
-            "F2-WH-0086"
-          ],
-          "sample_texts": [
-            "I am going to study math. に合う質問文を書きなさい。 || What are you going to do?",
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?"
-          ]
-        },
-        {
-          "token": "studying",
-          "kind": "other_scope_lexicon",
-          "lemma": "studie",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
-          "token": "tennis",
-          "kind": "other_scope_lexicon",
-          "lemma": "tennis",
-          "item_count": 2,
-          "sample_ids": [
-            "F2-WH-0088",
-            "EX2-WH-0024"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?",
-            "I belong to the tennis club. に合う質問文を書きなさい。 || Which club do you belong to?"
           ]
         },
         {
@@ -1753,34 +746,6 @@
           ]
         },
         {
-          "token": "visit",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?",
-            "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || What"
-          ]
-        },
-        {
-          "token": "weekend",
-          "kind": "other_scope_lexicon",
-          "lemma": "weekend",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?",
-            "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || What"
-          ]
-        },
-        {
           "token": "absent",
           "kind": "globally_absent",
           "lemma": null,
@@ -1790,42 +755,6 @@
           ],
           "sample_texts": [
             "Because I was sick. に合う質問文を書きなさい。 || Why were you absent yesterday?"
-          ]
-        },
-        {
-          "token": "day",
-          "kind": "other_scope_lexicon",
-          "lemma": "day",
-          "item_count": 1,
-          "sample_ids": [
-            "EX2-WH-0030"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?"
-          ]
-        },
-        {
-          "token": "every",
-          "kind": "other_scope_lexicon",
-          "lemma": "every",
-          "item_count": 1,
-          "sample_ids": [
-            "EX2-WH-0030"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?"
-          ]
-        },
-        {
-          "token": "happy",
-          "kind": "other_scope_lexicon",
-          "lemma": "happy",
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0077"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?"
           ]
         },
         {
@@ -1842,7 +771,7 @@
         },
         {
           "token": "month",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "month",
           "item_count": 1,
           "sample_ids": [
@@ -1854,7 +783,7 @@
         },
         {
           "token": "museum",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "museum",
           "item_count": 1,
           "sample_ids": [
@@ -1865,44 +794,8 @@
           ]
         },
         {
-          "token": "next",
-          "kind": "other_scope_lexicon",
-          "lemma": "next",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0088"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?"
-          ]
-        },
-        {
-          "token": "notebook",
-          "kind": "globally_absent",
-          "lemma": null,
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0081"
-          ],
-          "sample_texts": [
-            "I put it on your desk. に合う質問文を書きなさい。 || Where have you put my notebook?"
-          ]
-        },
-        {
-          "token": "play",
-          "kind": "other_scope_lexicon",
-          "lemma": "play",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0088"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?"
-          ]
-        },
-        {
           "token": "practices",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 1,
           "sample_ids": [
@@ -1938,7 +831,7 @@
         },
         {
           "token": "start",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 1,
           "sample_ids": [
@@ -1946,42 +839,6 @@
           ],
           "sample_texts": [
             "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?"
-          ]
-        },
-        {
-          "token": "today",
-          "kind": "other_scope_lexicon",
-          "lemma": "today",
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0077"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?"
-          ]
-        },
-        {
-          "token": "tomorrow",
-          "kind": "other_scope_lexicon",
-          "lemma": "tomorrow",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0086"
-          ],
-          "sample_texts": [
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?"
-          ]
-        },
-        {
-          "token": "yesterday",
-          "kind": "other_scope_lexicon",
-          "lemma": "yesterday",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0087"
-          ],
-          "sample_texts": [
-            "Because I was sick. に合う質問文を書きなさい。 || Why were you absent yesterday?"
           ]
         }
       ],
@@ -2053,18 +910,6 @@
           ]
         },
         {
-          "token": "notebook",
-          "kind": "globally_absent",
-          "lemma": null,
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0081"
-          ],
-          "sample_texts": [
-            "I put it on your desk. に合う質問文を書きなさい。 || Where have you put my notebook?"
-          ]
-        },
-        {
           "token": "science",
           "kind": "globally_absent",
           "lemma": null,
@@ -2089,27 +934,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "going",
-          "kind": "other_scope_lexicon",
-          "lemma": "going",
-          "item_count": 4,
-          "sample_ids": [
-            "R2-WH-0060",
-            "F2-WH-0086",
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to study math. に合う質問文を書きなさい。 || What are you going to do?",
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?",
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?"
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "belong",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "belong",
           "item_count": 2,
           "sample_ids": [
@@ -2122,36 +950,8 @@
           ]
         },
         {
-          "token": "brother",
-          "kind": "other_scope_lexicon",
-          "lemma": "brother",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
-          ]
-        },
-        {
-          "token": "club",
-          "kind": "other_scope_lexicon",
-          "lemma": "club",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0024",
-            "EX2-WH-0025"
-          ],
-          "sample_texts": [
-            "I belong to the tennis club. に合う質問文を書きなさい。 || Which club do you belong to?",
-            "次の英文を日本語にしなさい。 Which club do you belong to? || あなたはどのクラブに所属していますか。"
-          ]
-        },
-        {
           "token": "desk",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "desk",
           "item_count": 2,
           "sample_ids": [
@@ -2164,78 +964,8 @@
           ]
         },
         {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
-          "token": "go",
-          "kind": "other_scope_lexicon",
-          "lemma": "go",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0079",
-            "TH2-WH-0080"
-          ],
-          "sample_texts": [
-            "I can go there by bus. に合う質問文を書きなさい。 || How can you go to the museum?",
-            "I can go there by bus. に合う疑問詞を ( What / Why / How / Where ) から選びなさい。 || How"
-          ]
-        },
-        {
-          "token": "guitar",
-          "kind": "other_scope_lexicon",
-          "lemma": "guitar",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
-          ]
-        },
-        {
-          "token": "often",
-          "kind": "other_scope_lexicon",
-          "lemma": "often",
-          "item_count": 2,
-          "sample_ids": [
-            "EX2-WH-0030",
-            "EX2-WH-0031"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?",
-            "『How often does your brother practice the guitar?』を日本語にしなさい。 || あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。"
-          ]
-        },
-        {
-          "token": "passed",
-          "kind": "other_scope_lexicon",
-          "lemma": "pass",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0077",
-            "TH2-WH-0078"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?",
-            "Because she passed the test. に合う疑問詞を ( What / Why / When / Where ) から選びなさい。 || Why"
-          ]
-        },
-        {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 2,
           "sample_ids": [
@@ -2248,36 +978,8 @@
           ]
         },
         {
-          "token": "put",
-          "kind": "other_scope_lexicon",
-          "lemma": "put",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0081",
-            "TH2-WH-0082"
-          ],
-          "sample_texts": [
-            "I put it on your desk. に合う質問文を書きなさい。 || Where have you put my notebook?",
-            "I put it on your desk. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || Where"
-          ]
-        },
-        {
-          "token": "seven",
-          "kind": "other_scope_lexicon",
-          "lemma": "seven",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
           "token": "started",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 2,
           "sample_ids": [
@@ -2290,114 +992,8 @@
           ]
         },
         {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 2,
-          "sample_ids": [
-            "R2-WH-0060",
-            "F2-WH-0086"
-          ],
-          "sample_texts": [
-            "I am going to study math. に合う質問文を書きなさい。 || What are you going to do?",
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?"
-          ]
-        },
-        {
-          "token": "studying",
-          "kind": "other_scope_lexicon",
-          "lemma": "studie",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0075",
-            "TH2-WH-0076"
-          ],
-          "sample_texts": [
-            "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?",
-            "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。 || When"
-          ]
-        },
-        {
-          "token": "tennis",
-          "kind": "other_scope_lexicon",
-          "lemma": "tennis",
-          "item_count": 2,
-          "sample_ids": [
-            "F2-WH-0088",
-            "EX2-WH-0024"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?",
-            "I belong to the tennis club. に合う質問文を書きなさい。 || Which club do you belong to?"
-          ]
-        },
-        {
-          "token": "visit",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?",
-            "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || What"
-          ]
-        },
-        {
-          "token": "weekend",
-          "kind": "other_scope_lexicon",
-          "lemma": "weekend",
-          "item_count": 2,
-          "sample_ids": [
-            "TH2-WH-0071",
-            "TH2-WH-0072"
-          ],
-          "sample_texts": [
-            "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。 || What are you going to do this weekend?",
-            "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。 || What"
-          ]
-        },
-        {
-          "token": "day",
-          "kind": "other_scope_lexicon",
-          "lemma": "day",
-          "item_count": 1,
-          "sample_ids": [
-            "EX2-WH-0030"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?"
-          ]
-        },
-        {
-          "token": "every",
-          "kind": "other_scope_lexicon",
-          "lemma": "every",
-          "item_count": 1,
-          "sample_ids": [
-            "EX2-WH-0030"
-          ],
-          "sample_texts": [
-            "He practices it every day. に合う質問文を書きなさい。 || How often does your brother practice the guitar?"
-          ]
-        },
-        {
-          "token": "happy",
-          "kind": "other_scope_lexicon",
-          "lemma": "happy",
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0077"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?"
-          ]
-        },
-        {
           "token": "month",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "month",
           "item_count": 1,
           "sample_ids": [
@@ -2409,7 +1005,7 @@
         },
         {
           "token": "museum",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "museum",
           "item_count": 1,
           "sample_ids": [
@@ -2420,32 +1016,8 @@
           ]
         },
         {
-          "token": "next",
-          "kind": "other_scope_lexicon",
-          "lemma": "next",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0088"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?"
-          ]
-        },
-        {
-          "token": "play",
-          "kind": "other_scope_lexicon",
-          "lemma": "play",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0088"
-          ],
-          "sample_texts": [
-            "I will play tennis next month. に合う質問文を書きなさい。 || When will you play tennis?"
-          ]
-        },
-        {
           "token": "practices",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 1,
           "sample_ids": [
@@ -2457,7 +1029,7 @@
         },
         {
           "token": "start",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "start",
           "item_count": 1,
           "sample_ids": [
@@ -2465,42 +1037,6 @@
           ],
           "sample_texts": [
             "He started studying English at seven. に合う質問文を書きなさい。 || When did He start studying English?"
-          ]
-        },
-        {
-          "token": "today",
-          "kind": "other_scope_lexicon",
-          "lemma": "today",
-          "item_count": 1,
-          "sample_ids": [
-            "TH2-WH-0077"
-          ],
-          "sample_texts": [
-            "Because she passed the test. に合う質問文を書きなさい。 || Why is She happy today?"
-          ]
-        },
-        {
-          "token": "tomorrow",
-          "kind": "other_scope_lexicon",
-          "lemma": "tomorrow",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0086"
-          ],
-          "sample_texts": [
-            "She is going to study science tomorrow. に合う質問文を書きなさい。 || What is She going to do tomorrow?"
-          ]
-        },
-        {
-          "token": "yesterday",
-          "kind": "other_scope_lexicon",
-          "lemma": "yesterday",
-          "item_count": 1,
-          "sample_ids": [
-            "F2-WH-0087"
-          ],
-          "sample_texts": [
-            "Because I was sick. に合う質問文を書きなさい。 || Why were you absent yesterday?"
           ]
         }
       ]
@@ -2514,53 +1050,13 @@
         "there is ～・look ～ の文"
       ],
       "unresolved_items": 8,
-      "unresolved_items_with_any_nonlocal_token": 8,
-      "top_nonlocal_tokens": [
-        {
-          "token": "looks",
-          "kind": "other_scope_lexicon",
-          "lemma": "look",
-          "item_count": 3,
-          "sample_ids": [
-            "F1-THLOOK-0063",
-            "EX1-TH-0003",
-            "EX1-TH-0004"
-          ],
-          "sample_texts": [
-            "『その花は美しく見えます。』を英語で書きなさい。 || The flower looks beautiful.",
-            "『今日は空が青く見えます。』を英語で書きなさい。 || The sky looks blue today.",
-            "『その犬は疲れているように見えます。』を英語で書きなさい。 || The dog looks tired."
-          ]
-        },
-        {
-          "token": "near",
-          "kind": "other_scope_lexicon",
-          "lemma": "near",
-          "item_count": 2,
-          "sample_ids": [
-            "EX1-TH-0001",
-            "QA1-TH-0004"
-          ],
-          "sample_texts": [
-            "『私の家の近くに郵便局があります。』を英語で書きなさい。 || There is a post office near my house.",
-            "『駅の近くに病院があります。』を英語で書きなさい。 || There is a hospital near the station."
-          ]
-        },
-        {
-          "token": "beautiful",
-          "kind": "other_scope_lexicon",
-          "lemma": "beautiful",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0063"
-          ],
-          "sample_texts": [
-            "『その花は美しく見えます。』を英語で書きなさい。 || The flower looks beautiful."
-          ]
-        },
+      "unresolved_items_with_any_unknown_token": 8,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "birds",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "bird",
           "item_count": 1,
           "sample_ids": [
@@ -2583,32 +1079,8 @@
           ]
         },
         {
-          "token": "book",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 1,
-          "sample_ids": [
-            "R1-THL-0037"
-          ],
-          "sample_texts": [
-            "『机の上に本が1冊あります。』を英語で書きなさい。 || There is a book on the desk."
-          ]
-        },
-        {
-          "token": "books",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0062"
-          ],
-          "sample_texts": [
-            "『テーブルの上に本が2冊あります。』を英語で書きなさい。 || There are two books on the table."
-          ]
-        },
-        {
           "token": "desk",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "desk",
           "item_count": 1,
           "sample_ids": [
@@ -2619,20 +1091,8 @@
           ]
         },
         {
-          "token": "dog",
-          "kind": "other_scope_lexicon",
-          "lemma": "dog",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0004"
-          ],
-          "sample_texts": [
-            "『その犬は疲れているように見えます。』を英語で書きなさい。 || The dog looks tired."
-          ]
-        },
-        {
           "token": "flower",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "flower",
           "item_count": 1,
           "sample_ids": [
@@ -2644,7 +1104,7 @@
         },
         {
           "token": "hospital",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "hospital",
           "item_count": 1,
           "sample_ids": [
@@ -2655,32 +1115,8 @@
           ]
         },
         {
-          "token": "house",
-          "kind": "other_scope_lexicon",
-          "lemma": "house",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0001"
-          ],
-          "sample_texts": [
-            "『私の家の近くに郵便局があります。』を英語で書きなさい。 || There is a post office near my house."
-          ]
-        },
-        {
-          "token": "many",
-          "kind": "other_scope_lexicon",
-          "lemma": "many",
-          "item_count": 1,
-          "sample_ids": [
-            "QA1-TH-0005"
-          ],
-          "sample_texts": [
-            "『木の中にたくさんの鳥がいます。』を英語で書きなさい。 || There are many birds in the tree."
-          ]
-        },
-        {
           "token": "office",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "office",
           "item_count": 1,
           "sample_ids": [
@@ -2692,7 +1128,7 @@
         },
         {
           "token": "post",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "post",
           "item_count": 1,
           "sample_ids": [
@@ -2704,7 +1140,7 @@
         },
         {
           "token": "sky",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "sky",
           "item_count": 1,
           "sample_ids": [
@@ -2716,7 +1152,7 @@
         },
         {
           "token": "station",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "station",
           "item_count": 1,
           "sample_ids": [
@@ -2728,7 +1164,7 @@
         },
         {
           "token": "table",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "table",
           "item_count": 1,
           "sample_ids": [
@@ -2751,20 +1187,8 @@
           ]
         },
         {
-          "token": "today",
-          "kind": "other_scope_lexicon",
-          "lemma": "today",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0003"
-          ],
-          "sample_texts": [
-            "『今日は空が青く見えます。』を英語で書きなさい。 || The sky looks blue today."
-          ]
-        },
-        {
           "token": "tree",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "tree",
           "item_count": 1,
           "sample_ids": [
@@ -2772,18 +1196,6 @@
           ],
           "sample_texts": [
             "『木の中にたくさんの鳥がいます。』を英語で書きなさい。 || There are many birds in the tree."
-          ]
-        },
-        {
-          "token": "two",
-          "kind": "other_scope_lexicon",
-          "lemma": "two",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0062"
-          ],
-          "sample_texts": [
-            "『テーブルの上に本が2冊あります。』を英語で書きなさい。 || There are two books on the table."
           ]
         }
       ],
@@ -2813,52 +1225,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "looks",
-          "kind": "other_scope_lexicon",
-          "lemma": "look",
-          "item_count": 3,
-          "sample_ids": [
-            "F1-THLOOK-0063",
-            "EX1-TH-0003",
-            "EX1-TH-0004"
-          ],
-          "sample_texts": [
-            "『その花は美しく見えます。』を英語で書きなさい。 || The flower looks beautiful.",
-            "『今日は空が青く見えます。』を英語で書きなさい。 || The sky looks blue today.",
-            "『その犬は疲れているように見えます。』を英語で書きなさい。 || The dog looks tired."
-          ]
-        },
-        {
-          "token": "near",
-          "kind": "other_scope_lexicon",
-          "lemma": "near",
-          "item_count": 2,
-          "sample_ids": [
-            "EX1-TH-0001",
-            "QA1-TH-0004"
-          ],
-          "sample_texts": [
-            "『私の家の近くに郵便局があります。』を英語で書きなさい。 || There is a post office near my house.",
-            "『駅の近くに病院があります。』を英語で書きなさい。 || There is a hospital near the station."
-          ]
-        },
-        {
-          "token": "beautiful",
-          "kind": "other_scope_lexicon",
-          "lemma": "beautiful",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0063"
-          ],
-          "sample_texts": [
-            "『その花は美しく見えます。』を英語で書きなさい。 || The flower looks beautiful."
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "birds",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "bird",
           "item_count": 1,
           "sample_ids": [
@@ -2869,32 +1239,8 @@
           ]
         },
         {
-          "token": "book",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 1,
-          "sample_ids": [
-            "R1-THL-0037"
-          ],
-          "sample_texts": [
-            "『机の上に本が1冊あります。』を英語で書きなさい。 || There is a book on the desk."
-          ]
-        },
-        {
-          "token": "books",
-          "kind": "other_scope_lexicon",
-          "lemma": "book",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0062"
-          ],
-          "sample_texts": [
-            "『テーブルの上に本が2冊あります。』を英語で書きなさい。 || There are two books on the table."
-          ]
-        },
-        {
           "token": "desk",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "desk",
           "item_count": 1,
           "sample_ids": [
@@ -2905,20 +1251,8 @@
           ]
         },
         {
-          "token": "dog",
-          "kind": "other_scope_lexicon",
-          "lemma": "dog",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0004"
-          ],
-          "sample_texts": [
-            "『その犬は疲れているように見えます。』を英語で書きなさい。 || The dog looks tired."
-          ]
-        },
-        {
           "token": "flower",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "flower",
           "item_count": 1,
           "sample_ids": [
@@ -2930,7 +1264,7 @@
         },
         {
           "token": "hospital",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "hospital",
           "item_count": 1,
           "sample_ids": [
@@ -2941,32 +1275,8 @@
           ]
         },
         {
-          "token": "house",
-          "kind": "other_scope_lexicon",
-          "lemma": "house",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0001"
-          ],
-          "sample_texts": [
-            "『私の家の近くに郵便局があります。』を英語で書きなさい。 || There is a post office near my house."
-          ]
-        },
-        {
-          "token": "many",
-          "kind": "other_scope_lexicon",
-          "lemma": "many",
-          "item_count": 1,
-          "sample_ids": [
-            "QA1-TH-0005"
-          ],
-          "sample_texts": [
-            "『木の中にたくさんの鳥がいます。』を英語で書きなさい。 || There are many birds in the tree."
-          ]
-        },
-        {
           "token": "office",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "office",
           "item_count": 1,
           "sample_ids": [
@@ -2978,7 +1288,7 @@
         },
         {
           "token": "post",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "post",
           "item_count": 1,
           "sample_ids": [
@@ -2990,7 +1300,7 @@
         },
         {
           "token": "sky",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "sky",
           "item_count": 1,
           "sample_ids": [
@@ -3002,7 +1312,7 @@
         },
         {
           "token": "station",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "station",
           "item_count": 1,
           "sample_ids": [
@@ -3014,7 +1324,7 @@
         },
         {
           "token": "table",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "table",
           "item_count": 1,
           "sample_ids": [
@@ -3025,20 +1335,8 @@
           ]
         },
         {
-          "token": "today",
-          "kind": "other_scope_lexicon",
-          "lemma": "today",
-          "item_count": 1,
-          "sample_ids": [
-            "EX1-TH-0003"
-          ],
-          "sample_texts": [
-            "『今日は空が青く見えます。』を英語で書きなさい。 || The sky looks blue today."
-          ]
-        },
-        {
           "token": "tree",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "tree",
           "item_count": 1,
           "sample_ids": [
@@ -3046,18 +1344,6 @@
           ],
           "sample_texts": [
             "『木の中にたくさんの鳥がいます。』を英語で書きなさい。 || There are many birds in the tree."
-          ]
-        },
-        {
-          "token": "two",
-          "kind": "other_scope_lexicon",
-          "lemma": "two",
-          "item_count": 1,
-          "sample_ids": [
-            "F1-THLOOK-0062"
-          ],
-          "sample_texts": [
-            "『テーブルの上に本が2冊あります。』を英語で書きなさい。 || There are two books on the table."
           ]
         }
       ]
@@ -3071,8 +1357,10 @@
         "現在完了形（完了・経験）"
       ],
       "unresolved_items": 204,
-      "unresolved_items_with_any_nonlocal_token": 204,
-      "top_nonlocal_tokens": [
+      "unresolved_items_with_any_unknown_token": 204,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "key",
           "kind": "globally_absent",
@@ -3089,42 +1377,6 @@
             "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
             "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
             "I have lost my key. を疑問文にしなさい。 || Have I lost my key?"
-          ]
-        },
-        {
-          "token": "lost",
-          "kind": "other_scope_lexicon",
-          "lemma": "lost",
-          "item_count": 80,
-          "sample_ids": [
-            "M3C-00016",
-            "M3C-00036",
-            "M3C-00056",
-            "M3C-00076",
-            "M3C-00096"
-          ],
-          "sample_texts": [
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?"
-          ]
-        },
-        {
-          "token": "visited",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 64,
-          "sample_ids": [
-            "M3C-00014",
-            "M3C-00034",
-            "M3C-00054",
-            "M3C-00074",
-            "M3C-00094"
-          ],
-          "sample_texts": [
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?"
           ]
         },
         {
@@ -3146,26 +1398,8 @@
           ]
         },
         {
-          "token": "once",
-          "kind": "other_scope_lexicon",
-          "lemma": "once",
-          "item_count": 60,
-          "sample_ids": [
-            "M3C-00015",
-            "M3C-00035",
-            "M3C-00055",
-            "M3C-00075",
-            "M3C-00095"
-          ],
-          "sample_texts": [
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?",
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?",
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?"
-          ]
-        },
-        {
           "token": "tokyo",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "tokyo",
           "item_count": 60,
           "sample_ids": [
@@ -3179,154 +1413,6 @@
             "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
             "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
             "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?"
-          ]
-        },
-        {
-          "token": "can't",
-          "kind": "other_scope_lexicon",
-          "lemma": "can't",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "door",
-          "kind": "other_scope_lexicon",
-          "lemma": "door",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "losing",
-          "kind": "other_scope_lexicon",
-          "lemma": "lose",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "now",
-          "kind": "other_scope_lexicon",
-          "lemma": "now",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "open",
-          "kind": "other_scope_lexicon",
-          "lemma": "open",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "three",
-          "kind": "other_scope_lexicon",
-          "lemma": "three",
-          "item_count": 4,
-          "sample_ids": [
-            "M3N-01731",
-            "M3N-01749",
-            "M3N-01761",
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?",
-            "Yuki has visited the pool three times. を疑問文にしなさい。 || Has Yuki visited the pool three times?",
-            "Emi has visited the zoo three times. を疑問文にしなさい。 || Has Emi visited the zoo three times?"
-          ]
-        },
-        {
-          "token": "times",
-          "kind": "other_scope_lexicon",
-          "lemma": "times",
-          "item_count": 4,
-          "sample_ids": [
-            "M3N-01731",
-            "M3N-01749",
-            "M3N-01761",
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?",
-            "Yuki has visited the pool three times. を疑問文にしなさい。 || Has Yuki visited the pool three times?",
-            "Emi has visited the zoo three times. を疑問文にしなさい。 || Has Emi visited the zoo three times?"
-          ]
-        },
-        {
-          "token": "boy",
-          "kind": "other_scope_lexicon",
-          "lemma": "boy",
-          "item_count": 1,
-          "sample_ids": [
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "The boy has visited the town three times. を疑問文にしなさい。 || Has the boy visited the town three times?"
-          ]
-        },
-        {
-          "token": "brother",
-          "kind": "other_scope_lexicon",
-          "lemma": "brother",
-          "item_count": 1,
-          "sample_ids": [
-            "M3N-01731"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?"
           ]
         },
         {
@@ -3464,64 +1550,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "lost",
-          "kind": "other_scope_lexicon",
-          "lemma": "lost",
-          "item_count": 80,
-          "sample_ids": [
-            "M3C-00016",
-            "M3C-00036",
-            "M3C-00056",
-            "M3C-00076",
-            "M3C-00096"
-          ],
-          "sample_texts": [
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?",
-            "I have lost my key. を疑問文にしなさい。 || Have I lost my key?"
-          ]
-        },
-        {
-          "token": "visited",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 64,
-          "sample_ids": [
-            "M3C-00014",
-            "M3C-00034",
-            "M3C-00054",
-            "M3C-00074",
-            "M3C-00094"
-          ],
-          "sample_texts": [
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
-            "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?"
-          ]
-        },
-        {
-          "token": "once",
-          "kind": "other_scope_lexicon",
-          "lemma": "once",
-          "item_count": 60,
-          "sample_ids": [
-            "M3C-00015",
-            "M3C-00035",
-            "M3C-00055",
-            "M3C-00075",
-            "M3C-00095"
-          ],
-          "sample_texts": [
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?",
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?",
-            "I have been to Kyoto once. を疑問文にしなさい。 || Have I been to Kyoto once?"
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "tokyo",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "tokyo",
           "item_count": 60,
           "sample_ids": [
@@ -3536,154 +1568,6 @@
             "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?",
             "I have visited Tokyo before. を疑問文にしなさい。 || Have I visited Tokyo before?"
           ]
-        },
-        {
-          "token": "can't",
-          "kind": "other_scope_lexicon",
-          "lemma": "can't",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "door",
-          "kind": "other_scope_lexicon",
-          "lemma": "door",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "losing",
-          "kind": "other_scope_lexicon",
-          "lemma": "lose",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "now",
-          "kind": "other_scope_lexicon",
-          "lemma": "now",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "open",
-          "kind": "other_scope_lexicon",
-          "lemma": "open",
-          "item_count": 20,
-          "sample_ids": [
-            "M3N-01686",
-            "M3N-01692",
-            "M3N-01698",
-            "M3N-01704",
-            "M3N-01710"
-          ],
-          "sample_texts": [
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost",
-            "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。 || Have lost"
-          ]
-        },
-        {
-          "token": "three",
-          "kind": "other_scope_lexicon",
-          "lemma": "three",
-          "item_count": 4,
-          "sample_ids": [
-            "M3N-01731",
-            "M3N-01749",
-            "M3N-01761",
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?",
-            "Yuki has visited the pool three times. を疑問文にしなさい。 || Has Yuki visited the pool three times?",
-            "Emi has visited the zoo three times. を疑問文にしなさい。 || Has Emi visited the zoo three times?"
-          ]
-        },
-        {
-          "token": "times",
-          "kind": "other_scope_lexicon",
-          "lemma": "times",
-          "item_count": 4,
-          "sample_ids": [
-            "M3N-01731",
-            "M3N-01749",
-            "M3N-01761",
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?",
-            "Yuki has visited the pool three times. を疑問文にしなさい。 || Has Yuki visited the pool three times?",
-            "Emi has visited the zoo three times. を疑問文にしなさい。 || Has Emi visited the zoo three times?"
-          ]
-        },
-        {
-          "token": "boy",
-          "kind": "other_scope_lexicon",
-          "lemma": "boy",
-          "item_count": 1,
-          "sample_ids": [
-            "M3N-01767"
-          ],
-          "sample_texts": [
-            "The boy has visited the town three times. を疑問文にしなさい。 || Has the boy visited the town three times?"
-          ]
-        },
-        {
-          "token": "brother",
-          "kind": "other_scope_lexicon",
-          "lemma": "brother",
-          "item_count": 1,
-          "sample_ids": [
-            "M3N-01731"
-          ],
-          "sample_texts": [
-            "My brother has visited the classroom three times. を疑問文にしなさい。 || Has my brother visited the classroom three times?"
-          ]
         }
       ]
     },
@@ -3696,29 +1580,13 @@
         "進行形"
       ],
       "unresolved_items": 16,
-      "unresolved_items_with_any_nonlocal_token": 16,
-      "top_nonlocal_tokens": [
-        {
-          "token": "now",
-          "kind": "other_scope_lexicon",
-          "lemma": "now",
-          "item_count": 16,
-          "sample_ids": [
-            "R2-PROG-0079",
-            "R2-PROG-0080",
-            "TH2-PROG-0017",
-            "TH2-PROG-0018",
-            "TH2-PROG-0019"
-          ],
-          "sample_texts": [
-            "『彼らは今バスケットボールを練習しています。』を英語で書きなさい。 || They are practicing basketball now.",
-            "They are practicing basketball now. を否定文にしなさい。 || They are not practicing basketball now.",
-            "『私は今新聞を読んでいます。』を英語で書きなさい。 || I am reading a newspaper now."
-          ]
-        },
+      "unresolved_items_with_any_unknown_token": 16,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "practicing",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 5,
           "sample_ids": [
@@ -3736,7 +1604,7 @@
         },
         {
           "token": "talking",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "talk",
           "item_count": 5,
           "sample_ids": [
@@ -3769,38 +1637,6 @@
           ]
         },
         {
-          "token": "cleaning",
-          "kind": "other_scope_lexicon",
-          "lemma": "clean",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0026",
-            "TH2-PROG-0027",
-            "TH2-PROG-0028"
-          ],
-          "sample_texts": [
-            "『私たちは今教室をそうじしています。』を英語で書きなさい。 || We are cleaning the classroom now.",
-            "We are cleaning the classroom now. を疑問文にしなさい。 || Are you cleaning the classroom now?",
-            "We are cleaning the classroom now. を否定文にしなさい。 || We are not cleaning the classroom now."
-          ]
-        },
-        {
-          "token": "guitar",
-          "kind": "other_scope_lexicon",
-          "lemma": "guitar",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0023",
-            "TH2-PROG-0024",
-            "TH2-PROG-0025"
-          ],
-          "sample_texts": [
-            "『彼らは今ギターを練習しています。』を英語で書きなさい。 || They are practicing the guitar now.",
-            "They are practicing the guitar now. を疑問文にしなさい。 || Are they practicing the guitar now?",
-            "They are practicing the guitar now. を否定文にしなさい。 || They are not practicing the guitar now."
-          ]
-        },
-        {
           "token": "newspaper",
           "kind": "globally_absent",
           "lemma": null,
@@ -3817,40 +1653,8 @@
           ]
         },
         {
-          "token": "reading",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0017",
-            "TH2-PROG-0018",
-            "TH2-PROG-0019"
-          ],
-          "sample_texts": [
-            "『私は今新聞を読んでいます。』を英語で書きなさい。 || I am reading a newspaper now.",
-            "I am reading a newspaper now. を疑問文にしなさい。 || Are you reading a newspaper now?",
-            "I am reading a newspaper now. を否定文にしなさい。 || I am not reading a newspaper now."
-          ]
-        },
-        {
-          "token": "teacher",
-          "kind": "other_scope_lexicon",
-          "lemma": "teacher",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0020",
-            "TH2-PROG-0021",
-            "TH2-PROG-0022"
-          ],
-          "sample_texts": [
-            "『彼女は今先生と話しています。』を英語で書きなさい。 || She is talking with her teacher now.",
-            "She is talking with her teacher now. を疑問文にしなさい。 || Is she talking with her teacher now?",
-            "She is talking with her teacher now. を否定文にしなさい。 || She is not talking with her teacher now."
-          ]
-        },
-        {
           "token": "basketball",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "basketball",
           "item_count": 2,
           "sample_ids": [
@@ -3925,28 +1729,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "now",
-          "kind": "other_scope_lexicon",
-          "lemma": "now",
-          "item_count": 16,
-          "sample_ids": [
-            "R2-PROG-0079",
-            "R2-PROG-0080",
-            "TH2-PROG-0017",
-            "TH2-PROG-0018",
-            "TH2-PROG-0019"
-          ],
-          "sample_texts": [
-            "『彼らは今バスケットボールを練習しています。』を英語で書きなさい。 || They are practicing basketball now.",
-            "They are practicing basketball now. を否定文にしなさい。 || They are not practicing basketball now.",
-            "『私は今新聞を読んでいます。』を英語で書きなさい。 || I am reading a newspaper now."
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "practicing",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 5,
           "sample_ids": [
@@ -3964,7 +1750,7 @@
         },
         {
           "token": "talking",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "talk",
           "item_count": 5,
           "sample_ids": [
@@ -3981,72 +1767,8 @@
           ]
         },
         {
-          "token": "cleaning",
-          "kind": "other_scope_lexicon",
-          "lemma": "clean",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0026",
-            "TH2-PROG-0027",
-            "TH2-PROG-0028"
-          ],
-          "sample_texts": [
-            "『私たちは今教室をそうじしています。』を英語で書きなさい。 || We are cleaning the classroom now.",
-            "We are cleaning the classroom now. を疑問文にしなさい。 || Are you cleaning the classroom now?",
-            "We are cleaning the classroom now. を否定文にしなさい。 || We are not cleaning the classroom now."
-          ]
-        },
-        {
-          "token": "guitar",
-          "kind": "other_scope_lexicon",
-          "lemma": "guitar",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0023",
-            "TH2-PROG-0024",
-            "TH2-PROG-0025"
-          ],
-          "sample_texts": [
-            "『彼らは今ギターを練習しています。』を英語で書きなさい。 || They are practicing the guitar now.",
-            "They are practicing the guitar now. を疑問文にしなさい。 || Are they practicing the guitar now?",
-            "They are practicing the guitar now. を否定文にしなさい。 || They are not practicing the guitar now."
-          ]
-        },
-        {
-          "token": "reading",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0017",
-            "TH2-PROG-0018",
-            "TH2-PROG-0019"
-          ],
-          "sample_texts": [
-            "『私は今新聞を読んでいます。』を英語で書きなさい。 || I am reading a newspaper now.",
-            "I am reading a newspaper now. を疑問文にしなさい。 || Are you reading a newspaper now?",
-            "I am reading a newspaper now. を否定文にしなさい。 || I am not reading a newspaper now."
-          ]
-        },
-        {
-          "token": "teacher",
-          "kind": "other_scope_lexicon",
-          "lemma": "teacher",
-          "item_count": 3,
-          "sample_ids": [
-            "TH2-PROG-0020",
-            "TH2-PROG-0021",
-            "TH2-PROG-0022"
-          ],
-          "sample_texts": [
-            "『彼女は今先生と話しています。』を英語で書きなさい。 || She is talking with her teacher now.",
-            "She is talking with her teacher now. を疑問文にしなさい。 || Is she talking with her teacher now?",
-            "She is talking with her teacher now. を否定文にしなさい。 || She is not talking with her teacher now."
-          ]
-        },
-        {
           "token": "basketball",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "basketball",
           "item_count": 2,
           "sample_ids": [
@@ -4070,44 +1792,10 @@
         "未来の文"
       ],
       "unresolved_items": 402,
-      "unresolved_items_with_any_nonlocal_token": 402,
-      "top_nonlocal_tokens": [
-        {
-          "token": "going",
-          "kind": "other_scope_lexicon",
-          "lemma": "going",
-          "item_count": 236,
-          "sample_ids": [
-            "M2-FUT-0469",
-            "M2-FUT-0470",
-            "M2-FUT-0473",
-            "M2-FUT-0474",
-            "M2-FUT-0475"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to visit my grandmother.",
-            "次の日本語に合う英文を書きなさい。『私は 祖母をたずねる予定です。』 || I am going to visit my grandmother.",
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to study science."
-          ]
-        },
-        {
-          "token": "tomorrow",
-          "kind": "other_scope_lexicon",
-          "lemma": "tomorrow",
-          "item_count": 204,
-          "sample_ids": [
-            "M2-FUT2-0409",
-            "M2-FUT2-0410",
-            "M2-FUT2-0411",
-            "M2-FUT2-0412",
-            "M2-FUT2-0417"
-          ],
-          "sample_texts": [
-            "『私は 明日 祖母をたずねる予定です。』に近い英文を、will を使って書きなさい。 || I will visit my grandmother tomorrow.",
-            "『私は 明日 祖母をたずねる予定です。』に近い英文を、be going to を使って書きなさい。 || I am going to visit my grandmother tomorrow.",
-            "Will I visit my grandmother tomorrow? に Yes で答えなさい。 || Yes, I will."
-          ]
-        },
+      "unresolved_items_with_any_unknown_token": 402,
+      "unresolved_items_with_all_tokens_resolvable_by_current_classifier": 0,
+      "all_tokens_resolvable_sample_ids": [],
+      "top_unknown_tokens": [
         {
           "token": "science",
           "kind": "globally_absent",
@@ -4124,42 +1812,6 @@
             "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to study science.",
             "次の日本語に合う英文を書きなさい。『私は 理科を勉強する予定です。』 || I am going to study science.",
             "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to study science."
-          ]
-        },
-        {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 89,
-          "sample_ids": [
-            "M2-FUT-0473",
-            "M2-FUT-0474",
-            "M2-FUT-0485",
-            "M2-FUT-0486",
-            "M2-FUT-0497"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to study science.",
-            "次の日本語に合う英文を書きなさい。『私は 理科を勉強する予定です。』 || I am going to study science.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to study science."
-          ]
-        },
-        {
-          "token": "visit",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 89,
-          "sample_ids": [
-            "M2-FUT-0469",
-            "M2-FUT-0470",
-            "M2-FUT-0481",
-            "M2-FUT-0482",
-            "M2-FUT-0493"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to visit my grandmother.",
-            "次の日本語に合う英文を書きなさい。『私は 祖母をたずねる予定です。』 || I am going to visit my grandmother.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to visit your grandmother."
           ]
         },
         {
@@ -4182,7 +1834,7 @@
         },
         {
           "token": "movie",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "movie",
           "item_count": 65,
           "sample_ids": [
@@ -4200,7 +1852,7 @@
         },
         {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 65,
           "sample_ids": [
@@ -4217,26 +1869,8 @@
           ]
         },
         {
-          "token": "watch",
-          "kind": "other_scope_lexicon",
-          "lemma": "watch",
-          "item_count": 65,
-          "sample_ids": [
-            "M2-FUT-0475",
-            "M2-FUT-0476",
-            "M2-FUT-0487",
-            "M2-FUT-0488",
-            "M2-FUT-0499"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to watch a movie.",
-            "次の日本語に合う英文を書きなさい。『私は 映画を見る予定です。』 || I am going to watch a movie.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to watch a movie."
-          ]
-        },
-        {
           "token": "shopping",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "shop",
           "item_count": 52,
           "sample_ids": [
@@ -4250,96 +1884,6 @@
             "( I / am / going / to / do / some / shopping ) || I am going to do some shopping.",
             "I am going to (      ) next Sunday. || Go shopping",
             "( You / are / going / to / do / some / shopping ) || You are going to do some shopping."
-          ]
-        },
-        {
-          "token": "next",
-          "kind": "other_scope_lexicon",
-          "lemma": "next",
-          "item_count": 45,
-          "sample_ids": [
-            "M2X-FU-0314",
-            "M2X-FU-0318",
-            "M2X-FU-0320",
-            "M2X-FU-0324",
-            "M2X-FU-0326"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Visit my grandmother",
-            "I am going to (      ) next Sunday. || Study science",
-            "I am going to (      ) next Sunday. || Watch a movie"
-          ]
-        },
-        {
-          "token": "sunday",
-          "kind": "other_scope_lexicon",
-          "lemma": "sunday",
-          "item_count": 45,
-          "sample_ids": [
-            "M2X-FU-0314",
-            "M2X-FU-0318",
-            "M2X-FU-0320",
-            "M2X-FU-0324",
-            "M2X-FU-0326"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Visit my grandmother",
-            "I am going to (      ) next Sunday. || Study science",
-            "I am going to (      ) next Sunday. || Watch a movie"
-          ]
-        },
-        {
-          "token": "tennis",
-          "kind": "other_scope_lexicon",
-          "lemma": "tennis",
-          "item_count": 43,
-          "sample_ids": [
-            "M2-FUT-0479",
-            "M2-FUT-0491",
-            "M2-FUT-0503",
-            "M2-FUT-0515",
-            "M2-FUT-0522"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to practice tennis.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to practice tennis.",
-            "We を主語にして、be going to を使った正しい英文を書きなさい。 || We are going to practice tennis."
-          ]
-        },
-        {
-          "token": "go",
-          "kind": "other_scope_lexicon",
-          "lemma": "go",
-          "item_count": 42,
-          "sample_ids": [
-            "M2X-FU-0326",
-            "M2X-FU-0342",
-            "M2X-FU-0358",
-            "M2X-FU-0374",
-            "M2X-FU-0390"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Go shopping",
-            "You are going to (      ) next Sunday. || Go shopping",
-            "We are going to (      ) next Sunday. || Go shopping"
-          ]
-        },
-        {
-          "token": "friend",
-          "kind": "other_scope_lexicon",
-          "lemma": "friend",
-          "item_count": 38,
-          "sample_ids": [
-            "M2-FUT-0541",
-            "M2-FUT-0543",
-            "M2-FUT-0544",
-            "M2-FUT-0546",
-            "M2X-FU-0441"
-          ],
-          "sample_texts": [
-            "My friend (      ) going to visit my grandmother. || is",
-            "My friend (      ) going to study science. || is",
-            "My friend (      ) going to watch a movie. || is"
           ]
         },
         {
@@ -4361,44 +1905,8 @@
           ]
         },
         {
-          "token": "read",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 34,
-          "sample_ids": [
-            "M2-FUT2-0445",
-            "M2-FUT2-0446",
-            "M2-FUT2-0447",
-            "M2-FUT2-0448",
-            "M2-FUT2-0485"
-          ],
-          "sample_texts": [
-            "『私は 明日 小説を読む予定です。』に近い英文を、will を使って書きなさい。 || I will read a novel tomorrow.",
-            "『私は 明日 小説を読む予定です。』に近い英文を、be going to を使って書きなさい。 || I am going to read a novel tomorrow.",
-            "Will I read a novel tomorrow? に Yes で答えなさい。 || Yes, I will."
-          ]
-        },
-        {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 24,
-          "sample_ids": [
-            "M2Y-FUT-0013",
-            "M2Y-FUT-0014",
-            "M2Y-FUT-0015",
-            "M2Y-FUT-0031",
-            "M2Y-FUT-0032"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は もっと英語を勉強する予定です。』 || I am going to study English harder.",
-            "I will study English harder. を疑問文にしなさい。 || Will you study English harder?",
-            "I going to study English harder. の誤りを直しなさい。 || I am going to study English harder."
-          ]
-        },
-        {
           "token": "harder",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "hard",
           "item_count": 24,
           "sample_ids": [
@@ -4416,7 +1924,7 @@
         },
         {
           "token": "museum",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "museum",
           "item_count": 24,
           "sample_ids": [
@@ -4430,42 +1938,6 @@
             "次の日本語に合う英文を書きなさい。『私は 科学館を訪れる予定です。』 || I am going to visit the science museum.",
             "I will visit the science museum. を疑問文にしなさい。 || Will you visit the science museum?",
             "I going to visit the science museum. の誤りを直しなさい。 || I am going to visit the science museum."
-          ]
-        },
-        {
-          "token": "piano",
-          "kind": "other_scope_lexicon",
-          "lemma": "piano",
-          "item_count": 22,
-          "sample_ids": [
-            "M2-FUT-0480",
-            "M2-FUT-0492",
-            "M2-FUT-0504",
-            "M2-FUT-0516",
-            "M2-FUT2-0429"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は ピアノを練習する予定です。』 || I am going to practice the piano.",
-            "次の日本語に合う英文を書きなさい。『あなたは ピアノを練習する予定です。』 || You are going to practice the piano.",
-            "次の日本語に合う英文を書きなさい。『私たちは ピアノを練習する予定です。』 || We are going to practice the piano."
-          ]
-        },
-        {
-          "token": "some",
-          "kind": "other_scope_lexicon",
-          "lemma": "some",
-          "item_count": 18,
-          "sample_ids": [
-            "M2X-FU-0325",
-            "M2X-FU-0341",
-            "M2X-FU-0357",
-            "M2X-FU-0373",
-            "M2X-FU-0389"
-          ],
-          "sample_texts": [
-            "( I / am / going / to / do / some / shopping ) || I am going to do some shopping.",
-            "( You / are / going / to / do / some / shopping ) || You are going to do some shopping.",
-            "( We / are / going / to / do / some / shopping ) || We are going to do some shopping."
           ]
         },
         {
@@ -4561,82 +2033,10 @@
           ]
         }
       ],
-      "other_scope_top": [
-        {
-          "token": "going",
-          "kind": "other_scope_lexicon",
-          "lemma": "going",
-          "item_count": 236,
-          "sample_ids": [
-            "M2-FUT-0469",
-            "M2-FUT-0470",
-            "M2-FUT-0473",
-            "M2-FUT-0474",
-            "M2-FUT-0475"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to visit my grandmother.",
-            "次の日本語に合う英文を書きなさい。『私は 祖母をたずねる予定です。』 || I am going to visit my grandmother.",
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to study science."
-          ]
-        },
-        {
-          "token": "tomorrow",
-          "kind": "other_scope_lexicon",
-          "lemma": "tomorrow",
-          "item_count": 204,
-          "sample_ids": [
-            "M2-FUT2-0409",
-            "M2-FUT2-0410",
-            "M2-FUT2-0411",
-            "M2-FUT2-0412",
-            "M2-FUT2-0417"
-          ],
-          "sample_texts": [
-            "『私は 明日 祖母をたずねる予定です。』に近い英文を、will を使って書きなさい。 || I will visit my grandmother tomorrow.",
-            "『私は 明日 祖母をたずねる予定です。』に近い英文を、be going to を使って書きなさい。 || I am going to visit my grandmother tomorrow.",
-            "Will I visit my grandmother tomorrow? に Yes で答えなさい。 || Yes, I will."
-          ]
-        },
-        {
-          "token": "study",
-          "kind": "other_scope_lexicon",
-          "lemma": "study",
-          "item_count": 89,
-          "sample_ids": [
-            "M2-FUT-0473",
-            "M2-FUT-0474",
-            "M2-FUT-0485",
-            "M2-FUT-0486",
-            "M2-FUT-0497"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to study science.",
-            "次の日本語に合う英文を書きなさい。『私は 理科を勉強する予定です。』 || I am going to study science.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to study science."
-          ]
-        },
-        {
-          "token": "visit",
-          "kind": "other_scope_lexicon",
-          "lemma": "visit",
-          "item_count": 89,
-          "sample_ids": [
-            "M2-FUT-0469",
-            "M2-FUT-0470",
-            "M2-FUT-0481",
-            "M2-FUT-0482",
-            "M2-FUT-0493"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to visit my grandmother.",
-            "次の日本語に合う英文を書きなさい。『私は 祖母をたずねる予定です。』 || I am going to visit my grandmother.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to visit your grandmother."
-          ]
-        },
+      "other_textbook_or_later_top": [
         {
           "token": "movie",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "movie",
           "item_count": 65,
           "sample_ids": [
@@ -4654,7 +2054,7 @@
         },
         {
           "token": "practice",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "practice",
           "item_count": 65,
           "sample_ids": [
@@ -4671,26 +2071,8 @@
           ]
         },
         {
-          "token": "watch",
-          "kind": "other_scope_lexicon",
-          "lemma": "watch",
-          "item_count": 65,
-          "sample_ids": [
-            "M2-FUT-0475",
-            "M2-FUT-0476",
-            "M2-FUT-0487",
-            "M2-FUT-0488",
-            "M2-FUT-0499"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to watch a movie.",
-            "次の日本語に合う英文を書きなさい。『私は 映画を見る予定です。』 || I am going to watch a movie.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to watch a movie."
-          ]
-        },
-        {
           "token": "shopping",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "shop",
           "item_count": 52,
           "sample_ids": [
@@ -4707,134 +2089,8 @@
           ]
         },
         {
-          "token": "next",
-          "kind": "other_scope_lexicon",
-          "lemma": "next",
-          "item_count": 45,
-          "sample_ids": [
-            "M2X-FU-0314",
-            "M2X-FU-0318",
-            "M2X-FU-0320",
-            "M2X-FU-0324",
-            "M2X-FU-0326"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Visit my grandmother",
-            "I am going to (      ) next Sunday. || Study science",
-            "I am going to (      ) next Sunday. || Watch a movie"
-          ]
-        },
-        {
-          "token": "sunday",
-          "kind": "other_scope_lexicon",
-          "lemma": "sunday",
-          "item_count": 45,
-          "sample_ids": [
-            "M2X-FU-0314",
-            "M2X-FU-0318",
-            "M2X-FU-0320",
-            "M2X-FU-0324",
-            "M2X-FU-0326"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Visit my grandmother",
-            "I am going to (      ) next Sunday. || Study science",
-            "I am going to (      ) next Sunday. || Watch a movie"
-          ]
-        },
-        {
-          "token": "tennis",
-          "kind": "other_scope_lexicon",
-          "lemma": "tennis",
-          "item_count": 43,
-          "sample_ids": [
-            "M2-FUT-0479",
-            "M2-FUT-0491",
-            "M2-FUT-0503",
-            "M2-FUT-0515",
-            "M2-FUT-0522"
-          ],
-          "sample_texts": [
-            "I を主語にして、be going to を使った正しい英文を書きなさい。 || I am going to practice tennis.",
-            "You を主語にして、be going to を使った正しい英文を書きなさい。 || You are going to practice tennis.",
-            "We を主語にして、be going to を使った正しい英文を書きなさい。 || We are going to practice tennis."
-          ]
-        },
-        {
-          "token": "go",
-          "kind": "other_scope_lexicon",
-          "lemma": "go",
-          "item_count": 42,
-          "sample_ids": [
-            "M2X-FU-0326",
-            "M2X-FU-0342",
-            "M2X-FU-0358",
-            "M2X-FU-0374",
-            "M2X-FU-0390"
-          ],
-          "sample_texts": [
-            "I am going to (      ) next Sunday. || Go shopping",
-            "You are going to (      ) next Sunday. || Go shopping",
-            "We are going to (      ) next Sunday. || Go shopping"
-          ]
-        },
-        {
-          "token": "friend",
-          "kind": "other_scope_lexicon",
-          "lemma": "friend",
-          "item_count": 38,
-          "sample_ids": [
-            "M2-FUT-0541",
-            "M2-FUT-0543",
-            "M2-FUT-0544",
-            "M2-FUT-0546",
-            "M2X-FU-0441"
-          ],
-          "sample_texts": [
-            "My friend (      ) going to visit my grandmother. || is",
-            "My friend (      ) going to study science. || is",
-            "My friend (      ) going to watch a movie. || is"
-          ]
-        },
-        {
-          "token": "read",
-          "kind": "other_scope_lexicon",
-          "lemma": "read",
-          "item_count": 34,
-          "sample_ids": [
-            "M2-FUT2-0445",
-            "M2-FUT2-0446",
-            "M2-FUT2-0447",
-            "M2-FUT2-0448",
-            "M2-FUT2-0485"
-          ],
-          "sample_texts": [
-            "『私は 明日 小説を読む予定です。』に近い英文を、will を使って書きなさい。 || I will read a novel tomorrow.",
-            "『私は 明日 小説を読む予定です。』に近い英文を、be going to を使って書きなさい。 || I am going to read a novel tomorrow.",
-            "Will I read a novel tomorrow? に Yes で答えなさい。 || Yes, I will."
-          ]
-        },
-        {
-          "token": "english",
-          "kind": "other_scope_lexicon",
-          "lemma": "english",
-          "item_count": 24,
-          "sample_ids": [
-            "M2Y-FUT-0013",
-            "M2Y-FUT-0014",
-            "M2Y-FUT-0015",
-            "M2Y-FUT-0031",
-            "M2Y-FUT-0032"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は もっと英語を勉強する予定です。』 || I am going to study English harder.",
-            "I will study English harder. を疑問文にしなさい。 || Will you study English harder?",
-            "I going to study English harder. の誤りを直しなさい。 || I am going to study English harder."
-          ]
-        },
-        {
           "token": "harder",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "hard",
           "item_count": 24,
           "sample_ids": [
@@ -4852,7 +2108,7 @@
         },
         {
           "token": "museum",
-          "kind": "other_scope_lexicon",
+          "kind": "other_textbook_or_later_grade",
           "lemma": "museum",
           "item_count": 24,
           "sample_ids": [
@@ -4867,67 +2123,11 @@
             "I will visit the science museum. を疑問文にしなさい。 || Will you visit the science museum?",
             "I going to visit the science museum. の誤りを直しなさい。 || I am going to visit the science museum."
           ]
-        },
-        {
-          "token": "piano",
-          "kind": "other_scope_lexicon",
-          "lemma": "piano",
-          "item_count": 22,
-          "sample_ids": [
-            "M2-FUT-0480",
-            "M2-FUT-0492",
-            "M2-FUT-0504",
-            "M2-FUT-0516",
-            "M2-FUT2-0429"
-          ],
-          "sample_texts": [
-            "次の日本語に合う英文を書きなさい。『私は ピアノを練習する予定です。』 || I am going to practice the piano.",
-            "次の日本語に合う英文を書きなさい。『あなたは ピアノを練習する予定です。』 || You are going to practice the piano.",
-            "次の日本語に合う英文を書きなさい。『私たちは ピアノを練習する予定です。』 || We are going to practice the piano."
-          ]
-        },
-        {
-          "token": "some",
-          "kind": "other_scope_lexicon",
-          "lemma": "some",
-          "item_count": 18,
-          "sample_ids": [
-            "M2X-FU-0325",
-            "M2X-FU-0341",
-            "M2X-FU-0357",
-            "M2X-FU-0373",
-            "M2X-FU-0389"
-          ],
-          "sample_texts": [
-            "( I / am / going / to / do / some / shopping ) || I am going to do some shopping.",
-            "( You / are / going / to / do / some / shopping ) || You are going to do some shopping.",
-            "( We / are / going / to / do / some / shopping ) || We are going to do some shopping."
-          ]
         }
       ]
     }
   ],
   "aggregate_top": [
-    {
-      "token": "going",
-      "kind": "other_scope_lexicon",
-      "lemma": "going",
-      "item_count_sum": 240,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "tomorrow",
-      "kind": "other_scope_lexicon",
-      "lemma": "tomorrow",
-      "item_count_sum": 205,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
     {
       "token": "science",
       "kind": "globally_absent",
@@ -4940,33 +2140,12 @@
       ]
     },
     {
-      "token": "study",
-      "kind": "other_scope_lexicon",
-      "lemma": "study",
-      "item_count_sum": 106,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
       "token": "practice",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "practice",
       "item_count_sum": 97,
       "scopes": [
         "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "visit",
-      "kind": "other_scope_lexicon",
-      "lemma": "visit",
-      "item_count_sum": 91,
-      "scopes": [
         "中2/サンシャイン/疑問詞",
         "中2/サンシャイン/未来の文"
       ]
@@ -4981,26 +2160,6 @@
       ]
     },
     {
-      "token": "lost",
-      "kind": "other_scope_lexicon",
-      "lemma": "lost",
-      "item_count_sum": 80,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "english",
-      "kind": "other_scope_lexicon",
-      "lemma": "english",
-      "item_count_sum": 73,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
       "token": "grandmother",
       "kind": "globally_absent",
       "lemma": null,
@@ -5012,29 +2171,11 @@
     },
     {
       "token": "movie",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "movie",
       "item_count_sum": 65,
       "scopes": [
         "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "watch",
-      "kind": "other_scope_lexicon",
-      "lemma": "watch",
-      "item_count_sum": 65,
-      "scopes": [
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "visited",
-      "kind": "other_scope_lexicon",
-      "lemma": "visit",
-      "item_count_sum": 64,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
       ]
     },
     {
@@ -5047,17 +2188,8 @@
       ]
     },
     {
-      "token": "once",
-      "kind": "other_scope_lexicon",
-      "lemma": "once",
-      "item_count_sum": 60,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
       "token": "tokyo",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "tokyo",
       "item_count_sum": 60,
       "scopes": [
@@ -5065,18 +2197,8 @@
       ]
     },
     {
-      "token": "friend",
-      "kind": "other_scope_lexicon",
-      "lemma": "friend",
-      "item_count_sum": 56,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
       "token": "shopping",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "shop",
       "item_count_sum": 52,
       "scopes": [
@@ -5084,75 +2206,8 @@
       ]
     },
     {
-      "token": "reading",
-      "kind": "other_scope_lexicon",
-      "lemma": "read",
-      "item_count_sum": 50,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/進行形"
-      ]
-    },
-    {
-      "token": "speaking",
-      "kind": "other_scope_lexicon",
-      "lemma": "speak",
-      "item_count_sum": 47,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "studying",
-      "kind": "other_scope_lexicon",
-      "lemma": "studie",
-      "item_count_sum": 47,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "next",
-      "kind": "other_scope_lexicon",
-      "lemma": "next",
-      "item_count_sum": 46,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "sunday",
-      "kind": "other_scope_lexicon",
-      "lemma": "sunday",
-      "item_count_sum": 45,
-      "scopes": [
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "tennis",
-      "kind": "other_scope_lexicon",
-      "lemma": "tennis",
-      "item_count_sum": 45,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "using",
-      "kind": "other_scope_lexicon",
-      "lemma": "us",
-      "item_count_sum": 45,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "enjoy",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "enjoy",
       "item_count_sum": 44,
       "scopes": [
@@ -5160,27 +2215,8 @@
       ]
     },
     {
-      "token": "go",
-      "kind": "other_scope_lexicon",
-      "lemma": "go",
-      "item_count_sum": 44,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "listening",
-      "kind": "other_scope_lexicon",
-      "lemma": "listen",
-      "item_count_sum": 43,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "music",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "music",
       "item_count_sum": 43,
       "scopes": [
@@ -5188,42 +2224,13 @@
       ]
     },
     {
-      "token": "read",
-      "kind": "other_scope_lexicon",
-      "lemma": "read",
-      "item_count_sum": 43,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "making",
-      "kind": "other_scope_lexicon",
-      "lemma": "make",
-      "item_count_sum": 39,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "start",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "start",
       "item_count_sum": 37,
       "scopes": [
         "中2/サンシャイン/動名詞",
         "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "now",
-      "kind": "other_scope_lexicon",
-      "lemma": "now",
-      "item_count_sum": 36,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）",
-        "中2/サンシャイン/進行形"
       ]
     },
     {
@@ -5236,17 +2243,8 @@
       ]
     },
     {
-      "token": "dinner",
-      "kind": "other_scope_lexicon",
-      "lemma": "dinner",
-      "item_count_sum": 30,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "comics",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "comic",
       "item_count_sum": 27,
       "scopes": [
@@ -5254,17 +2252,8 @@
       ]
     },
     {
-      "token": "lunch",
-      "kind": "other_scope_lexicon",
-      "lemma": "lunch",
-      "item_count_sum": 27,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "phone",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "phone",
       "item_count_sum": 27,
       "scopes": [
@@ -5273,7 +2262,7 @@
     },
     {
       "token": "stop",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "stop",
       "item_count_sum": 27,
       "scopes": [
@@ -5282,7 +2271,7 @@
     },
     {
       "token": "love",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "love",
       "item_count_sum": 26,
       "scopes": [
@@ -5291,7 +2280,7 @@
     },
     {
       "token": "enjoys",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "enjoy",
       "item_count_sum": 25,
       "scopes": [
@@ -5300,7 +2289,7 @@
     },
     {
       "token": "museum",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "museum",
       "item_count_sum": 25,
       "scopes": [
@@ -5310,7 +2299,7 @@
     },
     {
       "token": "starts",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "start",
       "item_count_sum": 25,
       "scopes": [
@@ -5319,7 +2308,7 @@
     },
     {
       "token": "harder",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "hard",
       "item_count_sum": 24,
       "scopes": [
@@ -5328,7 +2317,7 @@
     },
     {
       "token": "basketball",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "basketball",
       "item_count_sum": 22,
       "scopes": [
@@ -5337,72 +2326,8 @@
       ]
     },
     {
-      "token": "piano",
-      "kind": "other_scope_lexicon",
-      "lemma": "piano",
-      "item_count_sum": 22,
-      "scopes": [
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
-      "token": "books",
-      "kind": "other_scope_lexicon",
-      "lemma": "book",
-      "item_count_sum": 21,
-      "scopes": [
-        "中2/サンシャイン/動名詞",
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "can't",
-      "kind": "other_scope_lexicon",
-      "lemma": "can't",
-      "item_count_sum": 20,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "door",
-      "kind": "other_scope_lexicon",
-      "lemma": "door",
-      "item_count_sum": 20,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "losing",
-      "kind": "other_scope_lexicon",
-      "lemma": "lose",
-      "item_count_sum": 20,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "open",
-      "kind": "other_scope_lexicon",
-      "lemma": "open",
-      "item_count_sum": 20,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "playing",
-      "kind": "other_scope_lexicon",
-      "lemma": "play",
-      "item_count_sum": 20,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "practices",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "practice",
       "item_count_sum": 20,
       "scopes": [
@@ -5411,35 +2336,8 @@
       ]
     },
     {
-      "token": "cooking",
-      "kind": "other_scope_lexicon",
-      "lemma": "cooking",
-      "item_count_sum": 18,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "internet",
-      "kind": "other_scope_lexicon",
-      "lemma": "internet",
-      "item_count_sum": 18,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "like",
-      "kind": "other_scope_lexicon",
-      "lemma": "like",
-      "item_count_sum": 18,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "loves",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "love",
       "item_count_sum": 18,
       "scopes": [
@@ -5447,17 +2345,8 @@
       ]
     },
     {
-      "token": "some",
-      "kind": "other_scope_lexicon",
-      "lemma": "some",
-      "item_count_sum": 18,
-      "scopes": [
-        "中2/サンシャイン/未来の文"
-      ]
-    },
-    {
       "token": "stops",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "stop",
       "item_count_sum": 18,
       "scopes": [
@@ -5466,7 +2355,7 @@
     },
     {
       "token": "begins",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "begin",
       "item_count_sum": 15,
       "scopes": [
@@ -5475,45 +2364,9 @@
     },
     {
       "token": "begin",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "begin",
       "item_count_sum": 12,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "listen",
-      "kind": "other_scope_lexicon",
-      "lemma": "listen",
-      "item_count_sum": 9,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "make",
-      "kind": "other_scope_lexicon",
-      "lemma": "make",
-      "item_count_sum": 9,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "speak",
-      "kind": "other_scope_lexicon",
-      "lemma": "speak",
-      "item_count_sum": 9,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "use",
-      "kind": "other_scope_lexicon",
-      "lemma": "use",
-      "item_count_sum": 9,
       "scopes": [
         "中2/サンシャイン/動名詞"
       ]
@@ -5528,27 +2381,8 @@
       ]
     },
     {
-      "token": "cook",
-      "kind": "other_scope_lexicon",
-      "lemma": "cook",
-      "item_count_sum": 6,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
-      "token": "guitar",
-      "kind": "other_scope_lexicon",
-      "lemma": "guitar",
-      "item_count_sum": 5,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中2/サンシャイン/進行形"
-      ]
-    },
-    {
       "token": "practicing",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "practice",
       "item_count_sum": 5,
       "scopes": [
@@ -5557,7 +2391,7 @@
     },
     {
       "token": "talking",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "talk",
       "item_count_sum": 5,
       "scopes": [
@@ -5575,15 +2409,6 @@
       ]
     },
     {
-      "token": "likes",
-      "kind": "other_scope_lexicon",
-      "lemma": "like",
-      "item_count_sum": 4,
-      "scopes": [
-        "中2/サンシャイン/動名詞"
-      ]
-    },
-    {
       "token": "test",
       "kind": "globally_absent",
       "lemma": null,
@@ -5594,58 +2419,12 @@
       ]
     },
     {
-      "token": "three",
-      "kind": "other_scope_lexicon",
-      "lemma": "three",
-      "item_count_sum": 4,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "times",
-      "kind": "other_scope_lexicon",
-      "lemma": "times",
-      "item_count_sum": 4,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "brother",
-      "kind": "other_scope_lexicon",
-      "lemma": "brother",
-      "item_count_sum": 3,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "cleaning",
-      "kind": "other_scope_lexicon",
-      "lemma": "clean",
-      "item_count_sum": 3,
-      "scopes": [
-        "中2/サンシャイン/進行形"
-      ]
-    },
-    {
       "token": "desk",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "desk",
       "item_count_sum": 3,
       "scopes": [
         "中2/サンシャイン/疑問詞",
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "looks",
-      "kind": "other_scope_lexicon",
-      "lemma": "look",
-      "item_count_sum": 3,
-      "scopes": [
         "中1/サンシャイン/there is ～，look ～ の文"
       ]
     },
@@ -5659,17 +2438,8 @@
       ]
     },
     {
-      "token": "teacher",
-      "kind": "other_scope_lexicon",
-      "lemma": "teacher",
-      "item_count_sum": 3,
-      "scopes": [
-        "中2/サンシャイン/進行形"
-      ]
-    },
-    {
       "token": "belong",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "belong",
       "item_count_sum": 2,
       "scopes": [
@@ -5686,82 +2456,9 @@
       ]
     },
     {
-      "token": "club",
-      "kind": "other_scope_lexicon",
-      "lemma": "club",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "near",
-      "kind": "other_scope_lexicon",
-      "lemma": "near",
-      "item_count_sum": 2,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "often",
-      "kind": "other_scope_lexicon",
-      "lemma": "often",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "passed",
-      "kind": "other_scope_lexicon",
-      "lemma": "pass",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "put",
-      "kind": "other_scope_lexicon",
-      "lemma": "put",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "seven",
-      "kind": "other_scope_lexicon",
-      "lemma": "seven",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
       "token": "started",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "start",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "today",
-      "kind": "other_scope_lexicon",
-      "lemma": "today",
-      "item_count_sum": 2,
-      "scopes": [
-        "中2/サンシャイン/疑問詞",
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "weekend",
-      "kind": "other_scope_lexicon",
-      "lemma": "weekend",
       "item_count_sum": 2,
       "scopes": [
         "中2/サンシャイン/疑問詞"
@@ -5777,17 +2474,8 @@
       ]
     },
     {
-      "token": "beautiful",
-      "kind": "other_scope_lexicon",
-      "lemma": "beautiful",
-      "item_count_sum": 1,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
       "token": "birds",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "bird",
       "item_count_sum": 1,
       "scopes": [
@@ -5804,53 +2492,8 @@
       ]
     },
     {
-      "token": "book",
-      "kind": "other_scope_lexicon",
-      "lemma": "book",
-      "item_count_sum": 1,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "boy",
-      "kind": "other_scope_lexicon",
-      "lemma": "boy",
-      "item_count_sum": 1,
-      "scopes": [
-        "中3/ニューホライズン/現在完了形（完了・経験）"
-      ]
-    },
-    {
-      "token": "day",
-      "kind": "other_scope_lexicon",
-      "lemma": "day",
-      "item_count_sum": 1,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
-      "token": "dog",
-      "kind": "other_scope_lexicon",
-      "lemma": "dog",
-      "item_count_sum": 1,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "every",
-      "kind": "other_scope_lexicon",
-      "lemma": "every",
-      "item_count_sum": 1,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
       "token": "flower",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "flower",
       "item_count_sum": 1,
       "scopes": [
@@ -5858,36 +2501,9 @@
       ]
     },
     {
-      "token": "happy",
-      "kind": "other_scope_lexicon",
-      "lemma": "happy",
-      "item_count_sum": 1,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
       "token": "hospital",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "hospital",
-      "item_count_sum": 1,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "house",
-      "kind": "other_scope_lexicon",
-      "lemma": "house",
-      "item_count_sum": 1,
-      "scopes": [
-        "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "many",
-      "kind": "other_scope_lexicon",
-      "lemma": "many",
       "item_count_sum": 1,
       "scopes": [
         "中1/サンシャイン/there is ～，look ～ の文"
@@ -5904,7 +2520,7 @@
     },
     {
       "token": "month",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "month",
       "item_count_sum": 1,
       "scopes": [
@@ -5912,30 +2528,12 @@
       ]
     },
     {
-      "token": "notebook",
-      "kind": "globally_absent",
-      "lemma": null,
-      "item_count_sum": 1,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
-      ]
-    },
-    {
       "token": "office",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "office",
       "item_count_sum": 1,
       "scopes": [
         "中1/サンシャイン/there is ～，look ～ の文"
-      ]
-    },
-    {
-      "token": "play",
-      "kind": "other_scope_lexicon",
-      "lemma": "play",
-      "item_count_sum": 1,
-      "scopes": [
-        "中2/サンシャイン/疑問詞"
       ]
     },
     {
@@ -5949,7 +2547,7 @@
     },
     {
       "token": "post",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "post",
       "item_count_sum": 1,
       "scopes": [
@@ -5967,7 +2565,7 @@
     },
     {
       "token": "sky",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "sky",
       "item_count_sum": 1,
       "scopes": [
@@ -5976,7 +2574,7 @@
     },
     {
       "token": "station",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "station",
       "item_count_sum": 1,
       "scopes": [
@@ -5985,7 +2583,7 @@
     },
     {
       "token": "table",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "table",
       "item_count_sum": 1,
       "scopes": [
@@ -6012,11 +2610,20 @@
     },
     {
       "token": "tree",
-      "kind": "other_scope_lexicon",
+      "kind": "other_textbook_or_later_grade",
       "lemma": "tree",
       "item_count_sum": 1,
       "scopes": [
         "中1/サンシャイン/there is ～，look ～ の文"
+      ]
+    },
+    {
+      "token": "zoo",
+      "kind": "globally_absent",
+      "lemma": null,
+      "item_count_sum": 1,
+      "scopes": [
+        "中3/ニューホライズン/現在完了形（完了・経験）"
       ]
     }
   ]
