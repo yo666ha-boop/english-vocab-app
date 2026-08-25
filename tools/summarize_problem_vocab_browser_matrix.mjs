@@ -12,6 +12,7 @@ import fs from 'node:fs';
 // 2026-08-26: rerun after there-is next-band fallback.
 // 2026-08-26: rerun after be-vs-verb distinction fallback.
 // 2026-08-26: rerun summary after all past-stage category fallbacks matrix.
+// 2026-08-26: rerun summary after final common grammar fallbacks matrix.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
 const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
