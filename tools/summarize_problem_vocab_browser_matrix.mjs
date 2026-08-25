@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 // 2026-08-26: rerun after dynamic learned-grammar matrix landed.
 // 2026-08-26: rerun after context-dependent fallback cache fix.
+// 2026-08-26: rerun after core learned-grammar vocab-safe fallback.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
 const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
