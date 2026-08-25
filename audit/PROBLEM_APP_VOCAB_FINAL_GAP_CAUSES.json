@@ -1,7 +1,8 @@
 {
-  "generated_at": "2026-08-25T14:32:02.262Z",
+  "generated_at": "2026-08-25T14:33:44.363Z",
   "source_gap_file": "audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json",
-  "explanation": "This audit classifies mature final-section under-50% categories by passMeta rejection coordinate, problem type, surface tokens, and morphology-normalized lemma candidates. It does not itself whitelist words or hard-code problem IDs.",
+  "stage_map_source": "actual problem-app runtime subjectConfig[英語].stageMap",
+  "explanation": "This audit classifies mature final-section under-50% grammar-stage gaps using the runtime stage-to-category mapping, passMeta rejection coordinate, problem type, surface tokens, and morphology-normalized lemma candidates. It does not whitelist words or hard-code problem IDs.",
   "records": [
     {
       "grade": "中2",
@@ -16,11 +17,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "現在完了形（完了・経験）"
+      ],
       "original_pool": 36,
       "accepted_by_final_passmeta": 11,
       "rejected_by_final_passmeta": 25,
       "rejection_coordinate_values": {
         "-1": 25
+      },
+      "rejected_category_counts": {
+        "現在完了形（完了・経験）": 25
       },
       "rejected_type_counts": {
         "英作文": 10,
@@ -355,6 +362,7 @@
       "rejected_samples": [
         {
           "id": "R2-PERF-0092",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『彼女は京都へ2回行ったことがあります。』を英語で書きなさい。",
           "a": "She has been to Kyoto twice.",
@@ -362,6 +370,7 @@
         },
         {
           "id": "F2-PERF1-0103",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『彼女は京都を2回訪れたことがあります。』を英語で書きなさい。",
           "a": "She has visited Kyoto twice.",
@@ -369,6 +378,7 @@
         },
         {
           "id": "F2-PERF1-0104",
+          "category": "現在完了形（完了・経験）",
           "type": "空所補充",
           "q": "She (      ) visited Kyoto twice.",
           "a": "has",
@@ -376,6 +386,7 @@
         },
         {
           "id": "F2-PERF1-0105",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私たちはすでにこの本を読みました。』を英語で書きなさい。",
           "a": "We have already read this book.",
@@ -383,6 +394,7 @@
         },
         {
           "id": "F2-PERF1-0106",
+          "category": "現在完了形（完了・経験）",
           "type": "空所補充",
           "q": "We (      ) already read this book.",
           "a": "have",
@@ -390,6 +402,7 @@
         },
         {
           "id": "FF2-PERF-0067",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私はもう夕食を食べ終えました。』を英語で書きなさい。",
           "a": "I have already finished my dinner.",
@@ -397,6 +410,7 @@
         },
         {
           "id": "FF2-PERF-0068",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "I have already finished my dinner. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Already",
@@ -404,6 +418,7 @@
         },
         {
           "id": "FF2-PERF-0069",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "I have already finish my dinner. の誤りを直しなさい。",
           "a": "I have already finished my dinner.",
@@ -411,6 +426,7 @@
         },
         {
           "id": "FF2-PERF-0073",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私たちは京都を3回訪れたことがあります。』を英語で書きなさい。",
           "a": "We have visited Kyoto three times.",
@@ -418,6 +434,7 @@
         },
         {
           "id": "FF2-PERF-0074",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "We have visited Kyoto three times. に含まれる現在完了のキーワードを答えなさい。",
           "a": "経験・完了",
@@ -425,6 +442,7 @@
         },
         {
           "id": "FF2-PERF-0075",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "We have play tennis three times. の誤りを直しなさい。",
           "a": "We have visited Kyoto three times.",
@@ -432,6 +450,7 @@
         },
         {
           "id": "FF2-PERF-0079",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『母は一度も北海道へ行ったことがありません。』を英語で書きなさい。",
           "a": "My mother has never been to Hokkaido.",
@@ -439,6 +458,7 @@
         },
         {
           "id": "FF2-PERF-0080",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "My mother has never been to Hokkaido. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Never",
@@ -446,6 +466,7 @@
         },
         {
           "id": "FF2-PERF-0081",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "My mother has never be to Hokkaido. の誤りを直しなさい。",
           "a": "My mother has never been to Hokkaido.",
@@ -453,6 +474,7 @@
         },
         {
           "id": "FF2-PERF-0082",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『彼らはすでに宿題をしました。』を英語で書きなさい。",
           "a": "They have already done their homework.",
@@ -460,6 +482,7 @@
         },
         {
           "id": "FF2-PERF-0083",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "They have already done their homework. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Already",
@@ -467,6 +490,7 @@
         },
         {
           "id": "FF2-PERF-0084",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "They have already do their homework. の誤りを直しなさい。",
           "a": "They have already done their homework.",
@@ -474,6 +498,7 @@
         },
         {
           "id": "FF2-PERF-0085",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
           "a": "I have lost my key.",
@@ -481,6 +506,7 @@
         },
         {
           "id": "FF2-PERF-0086",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "I have lost my key. に含まれる現在完了のキーワードを答えなさい。",
           "a": "経験・完了",
@@ -488,6 +514,7 @@
         },
         {
           "id": "FF2-PERF-0087",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "I have lose my key. の誤りを直しなさい。",
           "a": "I have lost my key.",
@@ -508,11 +535,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "動名詞"
+      ],
       "original_pool": 406,
       "accepted_by_final_passmeta": 102,
       "rejected_by_final_passmeta": 304,
       "rejection_coordinate_values": {
         "-1": 304
+      },
+      "rejected_category_counts": {
+        "動名詞": 304
       },
       "rejected_type_counts": {
         "空所補充": 70,
@@ -847,6 +880,7 @@
       "rejected_samples": [
         {
           "id": "M2-GER-0587",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "I like (      ).",
           "a": "Playing basketball",
@@ -854,6 +888,7 @@
         },
         {
           "id": "M2-GER-0588",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』",
           "a": "I like playing basketball.",
@@ -861,6 +896,7 @@
         },
         {
           "id": "M2-GER-0589",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "I enjoy (      ).",
           "a": "Reading books",
@@ -868,6 +904,7 @@
         },
         {
           "id": "M2-GER-0590",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』",
           "a": "I enjoy reading books.",
@@ -875,6 +912,7 @@
         },
         {
           "id": "M2-GER-0591",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "I love (      ).",
           "a": "Listening to music",
@@ -882,6 +920,7 @@
         },
         {
           "id": "M2-GER-0592",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』",
           "a": "I love listening to music.",
@@ -889,6 +928,7 @@
         },
         {
           "id": "M2-GER-0593",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "I practice (      ).",
           "a": "Speaking English",
@@ -896,6 +936,7 @@
         },
         {
           "id": "M2-GER-0594",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』",
           "a": "I practice speaking English.",
@@ -903,6 +944,7 @@
         },
         {
           "id": "M2-GER-0595",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "You like (      ).",
           "a": "Playing basketball",
@@ -910,6 +952,7 @@
         },
         {
           "id": "M2-GER-0596",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『あなたは バスケットボールをすることが好きだ。』",
           "a": "You like playing basketball.",
@@ -917,6 +960,7 @@
         },
         {
           "id": "M2-GER-0597",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "You enjoy (      ).",
           "a": "Reading books",
@@ -924,6 +968,7 @@
         },
         {
           "id": "M2-GER-0598",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『あなたは 本を読むことを楽しむ。』",
           "a": "You enjoy reading books.",
@@ -931,6 +976,7 @@
         },
         {
           "id": "M2-GER-0599",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "You love (      ).",
           "a": "Listening to music",
@@ -938,6 +984,7 @@
         },
         {
           "id": "M2-GER-0600",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『あなたは 音楽を聞くことが大好きだ。』",
           "a": "You love listening to music.",
@@ -945,6 +992,7 @@
         },
         {
           "id": "M2-GER-0601",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "You practice (      ).",
           "a": "Speaking English",
@@ -952,6 +1000,7 @@
         },
         {
           "id": "M2-GER-0602",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『あなたは 英語を話すことを練習する。』",
           "a": "You practice speaking English.",
@@ -959,6 +1008,7 @@
         },
         {
           "id": "M2-GER-0603",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "We like (      ).",
           "a": "Playing basketball",
@@ -966,6 +1016,7 @@
         },
         {
           "id": "M2-GER-0604",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私たちは バスケットボールをすることが好きだ。』",
           "a": "We like playing basketball.",
@@ -973,6 +1024,7 @@
         },
         {
           "id": "M2-GER-0605",
+          "category": "動名詞",
           "type": "空所補充",
           "q": "We enjoy (      ).",
           "a": "Reading books",
@@ -980,6 +1032,7 @@
         },
         {
           "id": "M2-GER-0606",
+          "category": "動名詞",
           "type": "英作文",
           "q": "次の日本語に合う英文を書きなさい。『私たちは 本を読むことを楽しむ。』",
           "a": "We enjoy reading books.",
@@ -1000,11 +1053,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "文型①（look ～，give A B）"
+      ],
       "original_pool": 30,
       "accepted_by_final_passmeta": 11,
       "rejected_by_final_passmeta": 19,
       "rejection_coordinate_values": {
         "-1": 19
+      },
+      "rejected_category_counts": {
+        "文型①（look ～，give A B）": 19
       },
       "rejected_type_counts": {
         "英作文": 8,
@@ -1314,6 +1373,7 @@
       "rejected_samples": [
         {
           "id": "R2-V1-0083",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『この花は美しく見えます。』を英語で書きなさい。",
           "a": "This flower looks beautiful.",
@@ -1321,6 +1381,7 @@
         },
         {
           "id": "F2-VFORM-0093",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『その花は美しく見えます。』を英語で書きなさい。",
           "a": "The flowers look beautiful.",
@@ -1328,6 +1389,7 @@
         },
         {
           "id": "FF2-FORM1-0025",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『先生は私たちに地図を見せました。』を英語で書きなさい。",
           "a": "The teacher showed us a map.",
@@ -1335,6 +1397,7 @@
         },
         {
           "id": "FF2-FORM1-0026",
+          "category": "文型①（look ～，give A B）",
           "type": "間違い直し",
           "q": "The teacher showed a map us. の誤りを直しなさい。",
           "a": "The teacher showed us a map.",
@@ -1342,6 +1405,7 @@
         },
         {
           "id": "FF2-FORM1-0027",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 The teacher showed us a map.",
           "a": "先生は私たちに地図を見せました。",
@@ -1349,6 +1413,7 @@
         },
         {
           "id": "FF2-FORM1-0028",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『このスープはおいしそうに見えます。』を英語で書きなさい。",
           "a": "This soup looks delicious.",
@@ -1356,6 +1421,7 @@
         },
         {
           "id": "FF2-FORM1-0029",
+          "category": "文型①（look ～，give A B）",
           "type": "間違い直し",
           "q": "This soup is delicious. の誤りを直しなさい。",
           "a": "This soup looks delicious.",
@@ -1363,6 +1429,7 @@
         },
         {
           "id": "FF2-FORM1-0030",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 This soup looks delicious.",
           "a": "このスープはおいしそうに見えます。",
@@ -1370,6 +1437,7 @@
         },
         {
           "id": "FF2-FORM1-0031",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『今朝、空は美しく見えました。』を英語で書きなさい。",
           "a": "The sky looked beautiful this morning.",
@@ -1377,6 +1445,7 @@
         },
         {
           "id": "FF2-FORM1-0032",
+          "category": "文型①（look ～，give A B）",
           "type": "間違い直し",
           "q": "The sky was beautiful this morning. の誤りを直しなさい。",
           "a": "The sky looked beautiful this morning.",
@@ -1384,6 +1453,7 @@
         },
         {
           "id": "FF2-FORM1-0033",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 The sky looked beautiful this morning.",
           "a": "今朝、空は美しく見えました。",
@@ -1391,6 +1461,7 @@
         },
         {
           "id": "FF2-FORM1-0034",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『母は姉（妹）にプレゼントをあげました。』を英語で書きなさい。",
           "a": "My mother gave my sister a present.",
@@ -1398,6 +1469,7 @@
         },
         {
           "id": "FF2-FORM1-0035",
+          "category": "文型①（look ～，give A B）",
           "type": "間違い直し",
           "q": "My mother gave to my sister a present. の誤りを直しなさい。",
           "a": "My mother gave my sister a present.",
@@ -1405,6 +1477,7 @@
         },
         {
           "id": "FF2-FORM1-0036",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 My mother gave my sister a present.",
           "a": "母は姉（妹）にプレゼントをあげました。",
@@ -1412,6 +1485,7 @@
         },
         {
           "id": "FF2-FORM1-0037",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『その考えはおもしろそうに聞こえます。』を英語で書きなさい。",
           "a": "The idea sounds interesting.",
@@ -1419,6 +1493,7 @@
         },
         {
           "id": "FF2-FORM1-0039",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 The idea sounds interesting.",
           "a": "その考えはおもしろそうに聞こえます。",
@@ -1426,6 +1501,7 @@
         },
         {
           "id": "FF2-FORM1-0040",
+          "category": "文型①（look ～，give A B）",
           "type": "英作文",
           "q": "『タクミにいくつか助言をしてください。』を英語で書きなさい。",
           "a": "Please give Takumi some advice.",
@@ -1433,6 +1509,7 @@
         },
         {
           "id": "FF2-FORM1-0041",
+          "category": "文型①（look ～，give A B）",
           "type": "間違い直し",
           "q": "Please give some advice He. の誤りを直しなさい。",
           "a": "Please give He some advice.",
@@ -1440,6 +1517,7 @@
         },
         {
           "id": "FF2-FORM1-0042",
+          "category": "文型①（look ～，give A B）",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 Please give Takumi some advice.",
           "a": "タクミにいくつか助言をしてください。",
@@ -1460,11 +1538,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "疑問詞"
+      ],
       "original_pool": 26,
       "accepted_by_final_passmeta": 8,
       "rejected_by_final_passmeta": 18,
       "rejection_coordinate_values": {
         "-1": 18
+      },
+      "rejected_category_counts": {
+        "疑問詞": 18
       },
       "rejected_type_counts": {
         "答えから質問文": 11,
@@ -1798,6 +1882,7 @@
       "rejected_samples": [
         {
           "id": "R2-WH-0060",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I am going to study math. に合う質問文を書きなさい。",
           "a": "What are you going to do?",
@@ -1805,6 +1890,7 @@
         },
         {
           "id": "F2-WH-0086",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "She is going to study science tomorrow. に合う質問文を書きなさい。",
           "a": "What is She going to do tomorrow?",
@@ -1812,6 +1898,7 @@
         },
         {
           "id": "F2-WH-0087",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "Because I was sick. に合う質問文を書きなさい。",
           "a": "Why were you absent yesterday?",
@@ -1819,6 +1906,7 @@
         },
         {
           "id": "F2-WH-0088",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I will play tennis next month. に合う質問文を書きなさい。",
           "a": "When will you play tennis?",
@@ -1826,6 +1914,7 @@
         },
         {
           "id": "TH2-WH-0071",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。",
           "a": "What are you going to do this weekend?",
@@ -1833,6 +1922,7 @@
         },
         {
           "id": "TH2-WH-0072",
+          "category": "疑問詞",
           "type": "選択",
           "q": "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。",
           "a": "What",
@@ -1840,6 +1930,7 @@
         },
         {
           "id": "TH2-WH-0075",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "He started studying English at seven. に合う質問文を書きなさい。",
           "a": "When did He start studying English?",
@@ -1847,6 +1938,7 @@
         },
         {
           "id": "TH2-WH-0076",
+          "category": "疑問詞",
           "type": "選択",
           "q": "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。",
           "a": "When",
@@ -1854,6 +1946,7 @@
         },
         {
           "id": "TH2-WH-0077",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "Because she passed the test. に合う質問文を書きなさい。",
           "a": "Why is She happy today?",
@@ -1861,6 +1954,7 @@
         },
         {
           "id": "TH2-WH-0078",
+          "category": "疑問詞",
           "type": "選択",
           "q": "Because she passed the test. に合う疑問詞を ( What / Why / When / Where ) から選びなさい。",
           "a": "Why",
@@ -1868,6 +1962,7 @@
         },
         {
           "id": "TH2-WH-0079",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I can go there by bus. に合う質問文を書きなさい。",
           "a": "How can you go to the museum?",
@@ -1875,6 +1970,7 @@
         },
         {
           "id": "TH2-WH-0080",
+          "category": "疑問詞",
           "type": "選択",
           "q": "I can go there by bus. に合う疑問詞を ( What / Why / How / Where ) から選びなさい。",
           "a": "How",
@@ -1882,6 +1978,7 @@
         },
         {
           "id": "TH2-WH-0081",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I put it on your desk. に合う質問文を書きなさい。",
           "a": "Where have you put my notebook?",
@@ -1889,6 +1986,7 @@
         },
         {
           "id": "TH2-WH-0082",
+          "category": "疑問詞",
           "type": "選択",
           "q": "I put it on your desk. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。",
           "a": "Where",
@@ -1896,6 +1994,7 @@
         },
         {
           "id": "EX2-WH-0024",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "I belong to the tennis club. に合う質問文を書きなさい。",
           "a": "Which club do you belong to?",
@@ -1903,6 +2002,7 @@
         },
         {
           "id": "EX2-WH-0025",
+          "category": "疑問詞",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 Which club do you belong to?",
           "a": "あなたはどのクラブに所属していますか。",
@@ -1910,6 +2010,7 @@
         },
         {
           "id": "EX2-WH-0030",
+          "category": "疑問詞",
           "type": "答えから質問文",
           "q": "He practices it every day. に合う質問文を書きなさい。",
           "a": "How often does your brother practice the guitar?",
@@ -1917,6 +2018,7 @@
         },
         {
           "id": "EX2-WH-0031",
+          "category": "疑問詞",
           "type": "読解",
           "q": "『How often does your brother practice the guitar?』を日本語にしなさい。",
           "a": "あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。",
@@ -1937,11 +2039,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "現在完了形（継続），現在完了進行形"
+      ],
       "original_pool": 27,
       "accepted_by_final_passmeta": 11,
       "rejected_by_final_passmeta": 16,
       "rejection_coordinate_values": {
         "-1": 16
+      },
+      "rejected_category_counts": {
+        "現在完了形（継続），現在完了進行形": 16
       },
       "rejected_type_counts": {
         "英作文": 12,
@@ -2274,6 +2382,7 @@
       "rejected_samples": [
         {
           "id": "R2-PERF2-0094",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
           "a": "He has been studying English since six.",
@@ -2281,6 +2390,7 @@
         },
         {
           "id": "F2-PERF2-0108",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼女は6時からずっと英語を勉強しています。』を英語で書きなさい。",
           "a": "She has been studying English since six.",
@@ -2288,6 +2398,7 @@
         },
         {
           "id": "TH2-PC-0095",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
           "a": "I have lived in Yamaguchi for five years.",
@@ -2295,6 +2406,7 @@
         },
         {
           "id": "TH2-PC-0096",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "I have lived in Yamaguchi for five years. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "For",
@@ -2302,6 +2414,7 @@
         },
         {
           "id": "TH2-PC-0097",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼女は6時からずっとピアノを練習しています。』を英語で書きなさい。",
           "a": "She has been practicing the piano since six.",
@@ -2309,6 +2422,7 @@
         },
         {
           "id": "TH2-PC-0098",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "She has been practicing tennis since six. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -2316,6 +2430,7 @@
         },
         {
           "id": "TH2-PC-0101",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私たちは去年から知り合いです。』を英語で書きなさい。",
           "a": "We have known each other since last year.",
@@ -2323,6 +2438,7 @@
         },
         {
           "id": "TH2-PC-0102",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "We have known each other since last year. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -2330,6 +2446,7 @@
         },
         {
           "id": "TH2-PC-0105",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『父は2010年からここで働いています。』を英語で書きなさい。",
           "a": "My father has worked here since 2010.",
@@ -2337,6 +2454,7 @@
         },
         {
           "id": "TH2-PC-0106",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "My father has worked here since 2010. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -2344,6 +2462,7 @@
         },
         {
           "id": "FF2-PC-0091",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は2020年からここに住んでいます。』を英語で書きなさい。",
           "a": "I have lived here since 2020.",
@@ -2351,6 +2470,7 @@
         },
         {
           "id": "FF2-PC-0094",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『父は4月からこの病院で働いています。』を英語で書きなさい。",
           "a": "My father has worked at this hospital since April.",
@@ -2358,6 +2478,7 @@
         },
         {
           "id": "EX2-PC-0056",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は9時からずっとあなたを待っています。』を英語で書きなさい。",
           "a": "I have been waiting for you since nine.",
@@ -2365,6 +2486,7 @@
         },
         {
           "id": "EX2-PC-0057",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼女は10年間英語を教えています。』を英語で書きなさい。",
           "a": "She has been teaching English for ten years.",
@@ -2372,6 +2494,7 @@
         },
         {
           "id": "EX2-PC-0058",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼らは月曜日から東京に滞在しています。』を英語で書きなさい。",
           "a": "They have stayed in Tokyo since Monday.",
@@ -2379,6 +2502,7 @@
         },
         {
           "id": "EX2-PC-0059",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私たちは2か月間この部屋を使っています。』を英語で書きなさい。",
           "a": "We have been using this room for two months.",
@@ -2399,14 +2523,359 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
-      "original_pool": 0,
-      "accepted_by_final_passmeta": 0,
-      "rejected_by_final_passmeta": 0,
-      "rejection_coordinate_values": {},
-      "rejected_type_counts": {},
-      "top_rejected_surface_tokens": [],
-      "top_rejected_lemma_candidates": [],
-      "rejected_samples": []
+      "runtime_mapped_categories": [
+        "there is ～・look ～ の文"
+      ],
+      "original_pool": 14,
+      "accepted_by_final_passmeta": 6,
+      "rejected_by_final_passmeta": 8,
+      "rejection_coordinate_values": {
+        "-1": 8
+      },
+      "rejected_category_counts": {
+        "there is ～・look ～ の文": 8
+      },
+      "rejected_type_counts": {
+        "英作文": 8
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "the",
+          "count": 7
+        },
+        {
+          "value": "there",
+          "count": 5
+        },
+        {
+          "value": "a",
+          "count": 3
+        },
+        {
+          "value": "is",
+          "count": 3
+        },
+        {
+          "value": "looks",
+          "count": 3
+        },
+        {
+          "value": "are",
+          "count": 2
+        },
+        {
+          "value": "near",
+          "count": 2
+        },
+        {
+          "value": "on",
+          "count": 2
+        },
+        {
+          "value": "beautiful",
+          "count": 1
+        },
+        {
+          "value": "birds",
+          "count": 1
+        },
+        {
+          "value": "blue",
+          "count": 1
+        },
+        {
+          "value": "book",
+          "count": 1
+        },
+        {
+          "value": "books",
+          "count": 1
+        },
+        {
+          "value": "desk",
+          "count": 1
+        },
+        {
+          "value": "dog",
+          "count": 1
+        },
+        {
+          "value": "flower",
+          "count": 1
+        },
+        {
+          "value": "hospital",
+          "count": 1
+        },
+        {
+          "value": "house",
+          "count": 1
+        },
+        {
+          "value": "in",
+          "count": 1
+        },
+        {
+          "value": "many",
+          "count": 1
+        },
+        {
+          "value": "my",
+          "count": 1
+        },
+        {
+          "value": "office",
+          "count": 1
+        },
+        {
+          "value": "post",
+          "count": 1
+        },
+        {
+          "value": "sky",
+          "count": 1
+        },
+        {
+          "value": "station",
+          "count": 1
+        },
+        {
+          "value": "table",
+          "count": 1
+        },
+        {
+          "value": "tired",
+          "count": 1
+        },
+        {
+          "value": "today",
+          "count": 1
+        },
+        {
+          "value": "tree",
+          "count": 1
+        },
+        {
+          "value": "two",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "the",
+          "count": 7
+        },
+        {
+          "value": "be",
+          "count": 5
+        },
+        {
+          "value": "there",
+          "count": 5
+        },
+        {
+          "value": "a",
+          "count": 3
+        },
+        {
+          "value": "is",
+          "count": 3
+        },
+        {
+          "value": "look",
+          "count": 3
+        },
+        {
+          "value": "looks",
+          "count": 3
+        },
+        {
+          "value": "are",
+          "count": 2
+        },
+        {
+          "value": "book",
+          "count": 2
+        },
+        {
+          "value": "near",
+          "count": 2
+        },
+        {
+          "value": "on",
+          "count": 2
+        },
+        {
+          "value": "beautiful",
+          "count": 1
+        },
+        {
+          "value": "bird",
+          "count": 1
+        },
+        {
+          "value": "birds",
+          "count": 1
+        },
+        {
+          "value": "blue",
+          "count": 1
+        },
+        {
+          "value": "books",
+          "count": 1
+        },
+        {
+          "value": "desk",
+          "count": 1
+        },
+        {
+          "value": "dog",
+          "count": 1
+        },
+        {
+          "value": "flow",
+          "count": 1
+        },
+        {
+          "value": "flower",
+          "count": 1
+        },
+        {
+          "value": "hospital",
+          "count": 1
+        },
+        {
+          "value": "house",
+          "count": 1
+        },
+        {
+          "value": "in",
+          "count": 1
+        },
+        {
+          "value": "many",
+          "count": 1
+        },
+        {
+          "value": "my",
+          "count": 1
+        },
+        {
+          "value": "office",
+          "count": 1
+        },
+        {
+          "value": "post",
+          "count": 1
+        },
+        {
+          "value": "sky",
+          "count": 1
+        },
+        {
+          "value": "station",
+          "count": 1
+        },
+        {
+          "value": "table",
+          "count": 1
+        },
+        {
+          "value": "tir",
+          "count": 1
+        },
+        {
+          "value": "tire",
+          "count": 1
+        },
+        {
+          "value": "tired",
+          "count": 1
+        },
+        {
+          "value": "today",
+          "count": 1
+        },
+        {
+          "value": "tre",
+          "count": 1
+        },
+        {
+          "value": "tree",
+          "count": 1
+        },
+        {
+          "value": "two",
+          "count": 1
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R1-THL-0037",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『机の上に本が1冊あります。』を英語で書きなさい。",
+          "a": "There is a book on the desk.",
+          "passMeta": -1
+        },
+        {
+          "id": "F1-THLOOK-0062",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『テーブルの上に本が2冊あります。』を英語で書きなさい。",
+          "a": "There are two books on the table.",
+          "passMeta": -1
+        },
+        {
+          "id": "F1-THLOOK-0063",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『その花は美しく見えます。』を英語で書きなさい。",
+          "a": "The flower looks beautiful.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX1-TH-0001",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『私の家の近くに郵便局があります。』を英語で書きなさい。",
+          "a": "There is a post office near my house.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX1-TH-0003",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『今日は空が青く見えます。』を英語で書きなさい。",
+          "a": "The sky looks blue today.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX1-TH-0004",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『その犬は疲れているように見えます。』を英語で書きなさい。",
+          "a": "The dog looks tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "QA1-TH-0004",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『駅の近くに病院があります。』を英語で書きなさい。",
+          "a": "There is a hospital near the station.",
+          "passMeta": -1
+        },
+        {
+          "id": "QA1-TH-0005",
+          "category": "there is ～・look ～ の文",
+          "type": "英作文",
+          "q": "『木の中にたくさんの鳥がいます。』を英語で書きなさい。",
+          "a": "There are many birds in the tree.",
+          "passMeta": -1
+        }
+      ]
     },
     {
       "grade": "中3",
@@ -2421,11 +2890,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "現在完了形（完了・経験）"
+      ],
       "original_pool": 360,
       "accepted_by_final_passmeta": 156,
       "rejected_by_final_passmeta": 204,
       "rejection_coordinate_values": {
         "-1": 204
+      },
+      "rejected_category_counts": {
+        "現在完了形（完了・経験）": 204
       },
       "rejected_type_counts": {
         "変形": 184,
@@ -2758,6 +3233,7 @@
       "rejected_samples": [
         {
           "id": "M3C-00014",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2765,6 +3241,7 @@
         },
         {
           "id": "M3C-00015",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2772,6 +3249,7 @@
         },
         {
           "id": "M3C-00016",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2779,6 +3257,7 @@
         },
         {
           "id": "M3C-00034",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2786,6 +3265,7 @@
         },
         {
           "id": "M3C-00035",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2793,6 +3273,7 @@
         },
         {
           "id": "M3C-00036",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2800,6 +3281,7 @@
         },
         {
           "id": "M3C-00054",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2807,6 +3289,7 @@
         },
         {
           "id": "M3C-00055",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2814,6 +3297,7 @@
         },
         {
           "id": "M3C-00056",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2821,6 +3305,7 @@
         },
         {
           "id": "M3C-00074",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2828,6 +3313,7 @@
         },
         {
           "id": "M3C-00075",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2835,6 +3321,7 @@
         },
         {
           "id": "M3C-00076",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2842,6 +3329,7 @@
         },
         {
           "id": "M3C-00094",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2849,6 +3337,7 @@
         },
         {
           "id": "M3C-00095",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2856,6 +3345,7 @@
         },
         {
           "id": "M3C-00096",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2863,6 +3353,7 @@
         },
         {
           "id": "M3C-00114",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2870,6 +3361,7 @@
         },
         {
           "id": "M3C-00115",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2877,6 +3369,7 @@
         },
         {
           "id": "M3C-00116",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have lost my key. を疑問文にしなさい。",
           "a": "Have I lost my key?",
@@ -2884,6 +3377,7 @@
         },
         {
           "id": "M3C-00134",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have visited Tokyo before. を疑問文にしなさい。",
           "a": "Have I visited Tokyo before?",
@@ -2891,6 +3385,7 @@
         },
         {
           "id": "M3C-00135",
+          "category": "現在完了形（完了・経験）",
           "type": "変形",
           "q": "I have been to Kyoto once. を疑問文にしなさい。",
           "a": "Have I been to Kyoto once?",
@@ -2911,11 +3406,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "現在完了形（継続），現在完了進行形"
+      ],
       "original_pool": 27,
       "accepted_by_final_passmeta": 12,
       "rejected_by_final_passmeta": 15,
       "rejection_coordinate_values": {
         "-1": 15
+      },
+      "rejected_category_counts": {
+        "現在完了形（継続），現在完了進行形": 15
       },
       "rejected_type_counts": {
         "英作文": 11,
@@ -3248,6 +3749,7 @@
       "rejected_samples": [
         {
           "id": "R2-PERF2-0094",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
           "a": "He has been studying English since six.",
@@ -3255,6 +3757,7 @@
         },
         {
           "id": "F2-PERF2-0107",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は5年間ここに住んでいます。』を英語で書きなさい。",
           "a": "I have lived here for five years.",
@@ -3262,6 +3765,7 @@
         },
         {
           "id": "F2-PERF2-0108",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼女は6時からずっと英語を勉強しています。』を英語で書きなさい。",
           "a": "She has been studying English since six.",
@@ -3269,6 +3773,7 @@
         },
         {
           "id": "TH2-PC-0095",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
           "a": "I have lived in Yamaguchi for five years.",
@@ -3276,6 +3781,7 @@
         },
         {
           "id": "TH2-PC-0096",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "I have lived in Yamaguchi for five years. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "For",
@@ -3283,6 +3789,7 @@
         },
         {
           "id": "TH2-PC-0097",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼女は6時からずっとピアノを練習しています。』を英語で書きなさい。",
           "a": "She has been practicing the piano since six.",
@@ -3290,6 +3797,7 @@
         },
         {
           "id": "TH2-PC-0098",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "She has been practicing tennis since six. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -3297,6 +3805,7 @@
         },
         {
           "id": "TH2-PC-0101",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私たちは去年から知り合いです。』を英語で書きなさい。",
           "a": "We have known each other since last year.",
@@ -3304,6 +3813,7 @@
         },
         {
           "id": "TH2-PC-0102",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "We have known each other since last year. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -3311,6 +3821,7 @@
         },
         {
           "id": "TH2-PC-0105",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『父は2010年からここで働いています。』を英語で書きなさい。",
           "a": "My father has worked here since 2010.",
@@ -3318,6 +3829,7 @@
         },
         {
           "id": "TH2-PC-0106",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "見分け",
           "q": "My father has worked here since 2010. に合う時間表現の考え方として近いものを選びなさい。",
           "a": "Since",
@@ -3325,6 +3837,7 @@
         },
         {
           "id": "FF2-PC-0091",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は2020年からここに住んでいます。』を英語で書きなさい。",
           "a": "I have lived here since 2020.",
@@ -3332,6 +3845,7 @@
         },
         {
           "id": "FF2-PC-0094",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『父は4月からこの病院で働いています。』を英語で書きなさい。",
           "a": "My father has worked at this hospital since April.",
@@ -3339,6 +3853,7 @@
         },
         {
           "id": "EX2-PC-0056",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『私は9時からずっとあなたを待っています。』を英語で書きなさい。",
           "a": "I have been waiting for you since nine.",
@@ -3346,6 +3861,7 @@
         },
         {
           "id": "EX2-PC-0058",
+          "category": "現在完了形（継続），現在完了進行形",
           "type": "英作文",
           "q": "『彼らは月曜日から東京に滞在しています。』を英語で書きなさい。",
           "a": "They have stayed in Tokyo since Monday.",
@@ -3366,11 +3882,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
       "original_pool": 28,
       "accepted_by_final_passmeta": 13,
       "rejected_by_final_passmeta": 15,
       "rejection_coordinate_values": {
         "-1": 15
+      },
+      "rejected_category_counts": {
+        "there is ～ の文": 15
       },
       "rejected_type_counts": {
         "英作文": 6,
@@ -3609,6 +4131,7 @@
       "rejected_samples": [
         {
           "id": "R2-TH-0081",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
           "a": "There is a convenience store near the station.",
@@ -3616,6 +4139,7 @@
         },
         {
           "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
           "a": "There is a bookstore near the station.",
@@ -3623,6 +4147,7 @@
         },
         {
           "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
           "type": "空所補充",
           "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
           "a": "Is",
@@ -3630,6 +4155,7 @@
         },
         {
           "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
           "type": "変形",
           "q": "There is a bookstore near the station. を疑問文にしなさい。",
           "a": "Is there a bookstore near the station?",
@@ -3637,6 +4163,7 @@
         },
         {
           "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
           "a": "There are many trees in the park.",
@@ -3644,6 +4171,7 @@
         },
         {
           "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
           "type": "空所補充",
           "q": "(      ) many trees in the park. に入る語を書きなさい。",
           "a": "Are",
@@ -3651,6 +4179,7 @@
         },
         {
           "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
           "type": "変形",
           "q": "There are many trees in the park. を疑問文にしなさい。",
           "a": "Are there many trees in the park?",
@@ -3658,6 +4187,7 @@
         },
         {
           "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
           "a": "There is a cat under the bench.",
@@ -3665,6 +4195,7 @@
         },
         {
           "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
           "type": "空所補充",
           "q": "(      ) a cat under the bench. に入る語を書きなさい。",
           "a": "Is",
@@ -3672,6 +4203,7 @@
         },
         {
           "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
           "type": "変形",
           "q": "There is a cat under the bench. を疑問文にしなさい。",
           "a": "Is there a cat under the bench?",
@@ -3679,6 +4211,7 @@
         },
         {
           "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
           "a": "There are two pictures on the wall.",
@@ -3686,6 +4219,7 @@
         },
         {
           "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
           "type": "空所補充",
           "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
           "a": "Are",
@@ -3693,6 +4227,7 @@
         },
         {
           "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
           "type": "変形",
           "q": "There are two pictures on the wall. を疑問文にしなさい。",
           "a": "Are there two pictures on the wall?",
@@ -3700,6 +4235,7 @@
         },
         {
           "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
           "type": "英作文",
           "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
           "a": "There is a bank across from the station.",
@@ -3707,6 +4243,7 @@
         },
         {
           "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
           "a": "駅の向かいに銀行があります。",
@@ -3727,11 +4264,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "進行形"
+      ],
       "original_pool": 30,
       "accepted_by_final_passmeta": 14,
       "rejected_by_final_passmeta": 16,
       "rejection_coordinate_values": {
         "-1": 16
+      },
+      "rejected_category_counts": {
+        "進行形": 16
       },
       "rejected_type_counts": {
         "英作文": 6,
@@ -3993,6 +4536,7 @@
       "rejected_samples": [
         {
           "id": "R2-PROG-0079",
+          "category": "進行形",
           "type": "英作文",
           "q": "『彼らは今バスケットボールを練習しています。』を英語で書きなさい。",
           "a": "They are practicing basketball now.",
@@ -4000,6 +4544,7 @@
         },
         {
           "id": "R2-PROG-0080",
+          "category": "進行形",
           "type": "変形",
           "q": "They are practicing basketball now. を否定文にしなさい。",
           "a": "They are not practicing basketball now.",
@@ -4007,6 +4552,7 @@
         },
         {
           "id": "TH2-PROG-0017",
+          "category": "進行形",
           "type": "英作文",
           "q": "『私は今新聞を読んでいます。』を英語で書きなさい。",
           "a": "I am reading a newspaper now.",
@@ -4014,6 +4560,7 @@
         },
         {
           "id": "TH2-PROG-0018",
+          "category": "進行形",
           "type": "変形",
           "q": "I am reading a newspaper now. を疑問文にしなさい。",
           "a": "Are you reading a newspaper now?",
@@ -4021,6 +4568,7 @@
         },
         {
           "id": "TH2-PROG-0019",
+          "category": "進行形",
           "type": "変形",
           "q": "I am reading a newspaper now. を否定文にしなさい。",
           "a": "I am not reading a newspaper now.",
@@ -4028,6 +4576,7 @@
         },
         {
           "id": "TH2-PROG-0020",
+          "category": "進行形",
           "type": "英作文",
           "q": "『彼女は今先生と話しています。』を英語で書きなさい。",
           "a": "She is talking with her teacher now.",
@@ -4035,6 +4584,7 @@
         },
         {
           "id": "TH2-PROG-0021",
+          "category": "進行形",
           "type": "変形",
           "q": "She is talking with her teacher now. を疑問文にしなさい。",
           "a": "Is she talking with her teacher now?",
@@ -4042,6 +4592,7 @@
         },
         {
           "id": "TH2-PROG-0022",
+          "category": "進行形",
           "type": "変形",
           "q": "She is talking with her teacher now. を否定文にしなさい。",
           "a": "She is not talking with her teacher now.",
@@ -4049,6 +4600,7 @@
         },
         {
           "id": "TH2-PROG-0023",
+          "category": "進行形",
           "type": "英作文",
           "q": "『彼らは今ギターを練習しています。』を英語で書きなさい。",
           "a": "They are practicing the guitar now.",
@@ -4056,6 +4608,7 @@
         },
         {
           "id": "TH2-PROG-0024",
+          "category": "進行形",
           "type": "変形",
           "q": "They are practicing the guitar now. を疑問文にしなさい。",
           "a": "Are they practicing the guitar now?",
@@ -4063,6 +4616,7 @@
         },
         {
           "id": "TH2-PROG-0025",
+          "category": "進行形",
           "type": "変形",
           "q": "They are practicing the guitar now. を否定文にしなさい。",
           "a": "They are not practicing the guitar now.",
@@ -4070,6 +4624,7 @@
         },
         {
           "id": "TH2-PROG-0026",
+          "category": "進行形",
           "type": "英作文",
           "q": "『私たちは今教室をそうじしています。』を英語で書きなさい。",
           "a": "We are cleaning the classroom now.",
@@ -4077,6 +4632,7 @@
         },
         {
           "id": "TH2-PROG-0027",
+          "category": "進行形",
           "type": "変形",
           "q": "We are cleaning the classroom now. を疑問文にしなさい。",
           "a": "Are you cleaning the classroom now?",
@@ -4084,6 +4640,7 @@
         },
         {
           "id": "TH2-PROG-0028",
+          "category": "進行形",
           "type": "変形",
           "q": "We are cleaning the classroom now. を否定文にしなさい。",
           "a": "We are not cleaning the classroom now.",
@@ -4091,6 +4648,7 @@
         },
         {
           "id": "EX2-PROG-0046",
+          "category": "進行形",
           "type": "英作文",
           "q": "『私たちは今そのテストについて話しています。』を英語で書きなさい。",
           "a": "We are talking about the test now.",
@@ -4098,6 +4656,7 @@
         },
         {
           "id": "EX2-PROG-0047",
+          "category": "進行形",
           "type": "読解",
           "q": "次の英文を日本語にしなさい。 We are talking about the test now.",
           "a": "私たちは今そのテストについて話しています。",
@@ -4118,11 +4677,17 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
+      "runtime_mapped_categories": [
+        "現在完了形（完了・経験）"
+      ],
       "original_pool": 36,
       "accepted_by_final_passmeta": 17,
       "rejected_by_final_passmeta": 19,
       "rejection_coordinate_values": {
         "-1": 19
+      },
+      "rejected_category_counts": {
+        "現在完了形（完了・経験）": 19
       },
       "rejected_type_counts": {
         "英作文": 7,
@@ -4437,6 +5002,7 @@
       "rejected_samples": [
         {
           "id": "F2-PERF1-0105",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私たちはすでにこの本を読みました。』を英語で書きなさい。",
           "a": "We have already read this book.",
@@ -4444,6 +5010,7 @@
         },
         {
           "id": "F2-PERF1-0106",
+          "category": "現在完了形（完了・経験）",
           "type": "空所補充",
           "q": "We (      ) already read this book.",
           "a": "have",
@@ -4451,6 +5018,7 @@
         },
         {
           "id": "FF2-PERF-0067",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私はもう夕食を食べ終えました。』を英語で書きなさい。",
           "a": "I have already finished my dinner.",
@@ -4458,6 +5026,7 @@
         },
         {
           "id": "FF2-PERF-0068",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "I have already finished my dinner. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Already",
@@ -4465,6 +5034,7 @@
         },
         {
           "id": "FF2-PERF-0069",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "I have already finish my dinner. の誤りを直しなさい。",
           "a": "I have already finished my dinner.",
@@ -4472,6 +5042,7 @@
         },
         {
           "id": "FF2-PERF-0073",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私たちは京都を3回訪れたことがあります。』を英語で書きなさい。",
           "a": "We have visited Kyoto three times.",
@@ -4479,6 +5050,7 @@
         },
         {
           "id": "FF2-PERF-0074",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "We have visited Kyoto three times. に含まれる現在完了のキーワードを答えなさい。",
           "a": "経験・完了",
@@ -4486,6 +5058,7 @@
         },
         {
           "id": "FF2-PERF-0075",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "We have play tennis three times. の誤りを直しなさい。",
           "a": "We have visited Kyoto three times.",
@@ -4493,6 +5066,7 @@
         },
         {
           "id": "FF2-PERF-0079",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『母は一度も北海道へ行ったことがありません。』を英語で書きなさい。",
           "a": "My mother has never been to Hokkaido.",
@@ -4500,6 +5074,7 @@
         },
         {
           "id": "FF2-PERF-0080",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "My mother has never been to Hokkaido. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Never",
@@ -4507,6 +5082,7 @@
         },
         {
           "id": "FF2-PERF-0081",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "My mother has never be to Hokkaido. の誤りを直しなさい。",
           "a": "My mother has never been to Hokkaido.",
@@ -4514,6 +5090,7 @@
         },
         {
           "id": "FF2-PERF-0082",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『彼らはすでに宿題をしました。』を英語で書きなさい。",
           "a": "They have already done their homework.",
@@ -4521,6 +5098,7 @@
         },
         {
           "id": "FF2-PERF-0083",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "They have already done their homework. に含まれる現在完了のキーワードを答えなさい。",
           "a": "Already",
@@ -4528,6 +5106,7 @@
         },
         {
           "id": "FF2-PERF-0084",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "They have already do their homework. の誤りを直しなさい。",
           "a": "They have already done their homework.",
@@ -4535,6 +5114,7 @@
         },
         {
           "id": "FF2-PERF-0085",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
           "a": "I have lost my key.",
@@ -4542,6 +5122,7 @@
         },
         {
           "id": "FF2-PERF-0086",
+          "category": "現在完了形（完了・経験）",
           "type": "見分け",
           "q": "I have lost my key. に含まれる現在完了のキーワードを答えなさい。",
           "a": "経験・完了",
@@ -4549,6 +5130,7 @@
         },
         {
           "id": "FF2-PERF-0087",
+          "category": "現在完了形（完了・経験）",
           "type": "間違い直し",
           "q": "I have lose my key. の誤りを直しなさい。",
           "a": "I have lost my key.",
@@ -4556,6 +5138,7 @@
         },
         {
           "id": "NX2-BAL-0063",
+          "category": "現在完了形（完了・経験）",
           "type": "英作文",
           "q": "『彼女はすでにその本を読み終えました。』に合う英文を書きなさい。",
           "a": "She has already finished reading the book.",
@@ -4563,6 +5146,7 @@
         },
         {
           "id": "NX2-BAL-0064",
+          "category": "現在完了形（完了・経験）",
           "type": "空所補充",
           "q": "She (      ) already finished reading the book. に入る語を書きなさい。",
           "a": "has",
@@ -4583,14 +5167,513 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true,
-      "original_pool": 0,
-      "accepted_by_final_passmeta": 0,
-      "rejected_by_final_passmeta": 0,
-      "rejection_coordinate_values": {},
-      "rejected_type_counts": {},
-      "top_rejected_surface_tokens": [],
-      "top_rejected_lemma_candidates": [],
-      "rejected_samples": []
+      "runtime_mapped_categories": [
+        "未来表現",
+        "未来の文"
+      ],
+      "original_pool": 706,
+      "accepted_by_final_passmeta": 304,
+      "rejected_by_final_passmeta": 402,
+      "rejection_coordinate_values": {
+        "-1": 402
+      },
+      "rejected_category_counts": {
+        "未来表現": 402
+      },
+      "rejected_type_counts": {
+        "変形": 32,
+        "英作文": 148,
+        "空所補充": 65,
+        "並びかえ": 99,
+        "間違い直し": 16,
+        "答え方": 42
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "to",
+          "count": 375
+        },
+        {
+          "value": "going",
+          "count": 367
+        },
+        {
+          "value": "will",
+          "count": 332
+        },
+        {
+          "value": "tomorrow",
+          "count": 258
+        },
+        {
+          "value": "is",
+          "count": 145
+        },
+        {
+          "value": "a",
+          "count": 126
+        },
+        {
+          "value": "science",
+          "count": 123
+        },
+        {
+          "value": "study",
+          "count": 123
+        },
+        {
+          "value": "visit",
+          "count": 123
+        },
+        {
+          "value": "my",
+          "count": 117
+        },
+        {
+          "value": "he",
+          "count": 105
+        },
+        {
+          "value": "she",
+          "count": 105
+        },
+        {
+          "value": "are",
+          "count": 102
+        },
+        {
+          "value": "yes",
+          "count": 84
+        },
+        {
+          "value": "grandmother",
+          "count": 83
+        },
+        {
+          "value": "movie",
+          "count": 83
+        },
+        {
+          "value": "practice",
+          "count": 83
+        },
+        {
+          "value": "watch",
+          "count": 83
+        },
+        {
+          "value": "you",
+          "count": 78
+        },
+        {
+          "value": "they",
+          "count": 74
+        },
+        {
+          "value": "i",
+          "count": 72
+        },
+        {
+          "value": "we",
+          "count": 72
+        },
+        {
+          "value": "be",
+          "count": 70
+        },
+        {
+          "value": "shopping",
+          "count": 70
+        },
+        {
+          "value": "the",
+          "count": 62
+        },
+        {
+          "value": "tennis",
+          "count": 61
+        },
+        {
+          "value": "friend",
+          "count": 55
+        },
+        {
+          "value": "go",
+          "count": 51
+        },
+        {
+          "value": "next",
+          "count": 45
+        },
+        {
+          "value": "sunday",
+          "count": 45
+        },
+        {
+          "value": "novel",
+          "count": 43
+        },
+        {
+          "value": "read",
+          "count": 43
+        },
+        {
+          "value": "english",
+          "count": 40
+        },
+        {
+          "value": "harder",
+          "count": 40
+        },
+        {
+          "value": "museum",
+          "count": 40
+        },
+        {
+          "value": "am",
+          "count": 34
+        },
+        {
+          "value": "do",
+          "count": 27
+        },
+        {
+          "value": "some",
+          "count": 27
+        },
+        {
+          "value": "piano",
+          "count": 22
+        },
+        {
+          "value": "mika",
+          "count": 15
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "go",
+          "count": 418
+        },
+        {
+          "value": "to",
+          "count": 375
+        },
+        {
+          "value": "goe",
+          "count": 367
+        },
+        {
+          "value": "going",
+          "count": 367
+        },
+        {
+          "value": "be",
+          "count": 351
+        },
+        {
+          "value": "wil",
+          "count": 332
+        },
+        {
+          "value": "will",
+          "count": 332
+        },
+        {
+          "value": "tomorrow",
+          "count": 258
+        },
+        {
+          "value": "is",
+          "count": 145
+        },
+        {
+          "value": "a",
+          "count": 126
+        },
+        {
+          "value": "science",
+          "count": 123
+        },
+        {
+          "value": "study",
+          "count": 123
+        },
+        {
+          "value": "visit",
+          "count": 123
+        },
+        {
+          "value": "my",
+          "count": 117
+        },
+        {
+          "value": "he",
+          "count": 105
+        },
+        {
+          "value": "she",
+          "count": 105
+        },
+        {
+          "value": "are",
+          "count": 102
+        },
+        {
+          "value": "yes",
+          "count": 84
+        },
+        {
+          "value": "grandmoth",
+          "count": 83
+        },
+        {
+          "value": "grandmother",
+          "count": 83
+        },
+        {
+          "value": "movie",
+          "count": 83
+        },
+        {
+          "value": "practice",
+          "count": 83
+        },
+        {
+          "value": "watch",
+          "count": 83
+        },
+        {
+          "value": "you",
+          "count": 78
+        },
+        {
+          "value": "they",
+          "count": 74
+        },
+        {
+          "value": "i",
+          "count": 72
+        },
+        {
+          "value": "we",
+          "count": 72
+        },
+        {
+          "value": "shop",
+          "count": 70
+        },
+        {
+          "value": "shopp",
+          "count": 70
+        },
+        {
+          "value": "shoppe",
+          "count": 70
+        },
+        {
+          "value": "shopping",
+          "count": 70
+        },
+        {
+          "value": "the",
+          "count": 62
+        },
+        {
+          "value": "tenni",
+          "count": 61
+        },
+        {
+          "value": "tennis",
+          "count": 61
+        },
+        {
+          "value": "friend",
+          "count": 55
+        },
+        {
+          "value": "next",
+          "count": 45
+        },
+        {
+          "value": "sunday",
+          "count": 45
+        },
+        {
+          "value": "novel",
+          "count": 43
+        },
+        {
+          "value": "read",
+          "count": 43
+        },
+        {
+          "value": "english",
+          "count": 40
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "M2-FUT-0469",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "I am going to visit my grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0470",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 祖母をたずねる予定です。』",
+          "a": "I am going to visit my grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0473",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "I am going to study science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0474",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 理科を勉強する予定です。』",
+          "a": "I am going to study science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0475",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "I am going to watch a movie.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0476",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 映画を見る予定です。』",
+          "a": "I am going to watch a movie.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0479",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "I am going to practice tennis.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0480",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は ピアノを練習する予定です。』",
+          "a": "I am going to practice the piano.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0481",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "You を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "You are going to visit your grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0482",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 祖母をたずねる予定です。』",
+          "a": "You are going to visit your grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0485",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "You を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "You are going to study science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0486",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 理科を勉強する予定です。』",
+          "a": "You are going to study science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0487",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "You を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "You are going to watch a movie.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0488",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 映画を見る予定です。』",
+          "a": "You are going to watch a movie.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0491",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "You を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "You are going to practice tennis.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0492",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは ピアノを練習する予定です。』",
+          "a": "You are going to practice the piano.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0493",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "We を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "We are going to visit our grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0494",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 祖母をたずねる予定です。』",
+          "a": "We are going to visit our grandmother.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0497",
+          "category": "未来表現",
+          "type": "変形",
+          "q": "We を主語にして、be going to を使った正しい英文を書きなさい。",
+          "a": "We are going to study science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-FUT-0498",
+          "category": "未来表現",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 理科を勉強する予定です。』",
+          "a": "We are going to study science.",
+          "passMeta": -1
+        }
+      ]
     }
   ]
 }
