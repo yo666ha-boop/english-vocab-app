@@ -1,0 +1,45 @@
+name: Repair passMeta builder variant columns
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/repair_passmeta_builder_variant_columns.mjs
+      - .github/workflows/repair-passmeta-builder-variant-columns.yml
+      - audit/PROBLEM_APP_PASSMETA_VARIANT_COLUMN_TRIGGER.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-passmeta-builder-variant-columns-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-vocab-grammar-range-20260825
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync branch before repair
+        run: |
+          git fetch origin fix-vocab-grammar-range-20260825
+          git reset --hard origin/fix-vocab-grammar-range-20260825
+      - name: Repair builder to use v7 basic and variant columns
+        run: node tools/repair_passmeta_builder_variant_columns.mjs
+      - name: Rebuild safe passMeta candidate and audit
+        run: node tools/build_safe_problem_passmeta.mjs
+      - name: Commit repair and rebuilt audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/build_safe_problem_passmeta.mjs audit/PROBLEM_APP_PASSMETA_VARIANT_COLUMN_REPAIR.json audit/PROBLEM_APP_PASSMETA_SAFE_CANDIDATE.json audit/PROBLEM_APP_PASSMETA_SAFE_AUDIT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: use v7 morphology columns in passMeta rebuild [skip ci]'
+          git pull --rebase origin fix-vocab-grammar-range-20260825
+          git push
