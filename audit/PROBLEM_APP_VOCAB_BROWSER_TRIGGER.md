@@ -5,3 +5,4 @@ Post-smoke-pass full browser matrix rerun requested on 2026-08-25 23:19 JST.
 Post-source-backed-grammar-chronology full browser matrix rerun requested on 2026-08-26 00:16 JST.
 Post-grammar-chronology-grade-key-fix full browser matrix rerun requested on 2026-08-26 JST.
 Post-context-dependent-fallback-cache-fix full browser matrix rerun requested on 2026-08-26 JST.
+Post-core-learned-grammar-fallback full browser matrix rerun requested on 2026-08-26 JST.
