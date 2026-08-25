@@ -927,6 +927,41 @@ function buildPastVerbFallbacks() {
   return out;
 }
 
+function buildIrregularPastFallbacks() {
+  const rows=[
+    ['I','go','went'],['You','come','came'],['We','make','made'],['They','take','took'],
+    ['I','write','wrote'],['You','do','did'],['We','have','had'],['He','go','went'],
+    ['She','come','came'],['He','make','made'],['She','write','wrote'],['They','have','had']
+  ];
+  const out=[]; let n=1;
+  for(const [s,base,past] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=s+' '+past+'.';
+    out.push(vocabFallbackItem('中1','不規則動詞','空所補充','IRR-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
+    out.push(vocabFallbackItem('中1','不規則動詞','変形','IRR-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
+    out.push(vocabFallbackItem('中1','不規則動詞','選択','IRR-CHOICE-'+stem,s+' ( '+base+' / '+past+' ) yesterday. 正しいものを選びなさい。',past));
+  }
+  return out;
+}
+
+function buildPastTimeFallbacks() {
+  const rows=[
+    ['I played','私は昨日遊びました。'],['You studied English','あなたは昨日英語を勉強しました。'],
+    ['We cooked','私たちは昨日料理しました。'],['They walked','彼らは昨日歩きました。'],
+    ['He played','彼は昨日遊びました。'],['She studied English','彼女は昨日英語を勉強しました。'],
+    ['I wrote','私は昨日書きました。'],['You came','あなたは昨日来ました。'],
+    ['We went home','私たちは昨日家へ行きました。'],['They made a book','彼らは昨日本を作りました。']
+  ];
+  const out=[]; let n=1;
+  for(const [stemText,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=stemText+' yesterday.';
+    out.push(vocabFallbackItem('中1','過去を表す語','空所補充','PTIME-FILL-'+stem,stemText+' (      ). 「昨日」の意味になる語を書きなさい。','yesterday'));
+    out.push(vocabFallbackItem('中1','過去を表す語','英作文','PTIME-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+  }
+  return out;
+}
+
 function buildPresentPerfectContinuousFallbacks() {
   const rows=[
     ['I','have','study English','studying English','私はずっと英語を勉強しています。'],
@@ -1049,7 +1084,7 @@ function buildConjunctionFallbacks() {
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildBeVsVerbFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildBeVsVerbFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;
