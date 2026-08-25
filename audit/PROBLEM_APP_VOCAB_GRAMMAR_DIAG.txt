@@ -270,7 +270,7 @@ div>
   
   <script id="qb-data" type="application/json">[{"id":"E1-BQ-001","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"not の位置ミス","cause":"変形ルール未定着","q":"He is busy. を否定文にしなさい。","a":"He is not busy."},{"id":"E1-BQ-002","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"be動詞を前に出せない","cause":"疑問文の型不足","q":"You are happy. を疑問文にしなさい。","a":"Are you happy?"},{"id":"E1-BQ-003","subject":"英語","grade":"中1","category":"be動詞","type":"答え方","mistake":"Yes/No 応答ミス","cause":"答え方の型不足","q":"Are you a student? に Yes で答えなさい。","a":"Yes, I am."},{"id":"E1-BQ-004","subject":"英語","grade":"中1","category":"be動詞","type":"並びかえ","mistake":"not の位置ミス","cause":"語順不安定","q":"次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )","a":"She is not kind."},{"id":"E1-BQ-005","subject":"英語","grade":"中1","category":"be動詞","type":"間違い直し","mistake":"主語に合う be 動詞ミス","cause":"主語と動詞の対応不足","q":"Are he busy? の誤りを直しなさい。","a":"Is he busy?"},{"id":"E1-BQ-006","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"am not の位置ミス","cause":"否定文の型不足","q":"I am busy. を否定文にしなさい。","a":"I am not busy."},{"id":"E1-BQ-007","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"疑問文の語順ミス","cause":"be動詞を前に出せない","q":"She is a teacher. を疑問文にしなさい。","a":"Is she a teacher?"},{"id":"E1-B
 
---- 単語制限 #4 @ 2616356 ---
+--- 単語制限 #4 @ 2616367 ---
 n a;
 }
 
@@ -2858,7 +2858,7 @@ n|done)/i.test(both)) return false;
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before b
 
 --- vocab #23 @ 2596038 ---
 vidence: do not let a mislabeled vocabulary-only item through.
@@ -2882,7 +2882,7 @@ vidence: do not let a mislabeled vocabulary-only item through.
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -2894,7 +2894,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('s') && !t.endsWith('ss')) out.add(t.slice(0,-1));
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
-  if(t.length>4 && 
+  if(t.l
 
 --- vocab #24 @ 2596120 ---
  === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
@@ -2917,7 +2917,7 @@ function vocabFallbackTokenBases(token) {
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -2929,8 +2929,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('s') && !t.endsWith('ss')) out.add(t.slice(0,-1));
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
-  if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e'); }
-  for(c
+  if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e')
 
 --- vocab #25 @ 2596171 ---
 false;
@@ -2953,7 +2952,7 @@ false;
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -2966,7 +2965,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e'); }
-  for(const x of [...out]) if(x.length>3 && x.at(-1)===x.a
+  for(const x of [...out]) if(x.length>3 && x.a
 
 --- vocab #26 @ 2596209 ---
  !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
@@ -2988,7 +2987,7 @@ function vocabFallbackTokenBases(token) {
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3001,14 +3000,13 @@ function vocabFallbackTokenBases(token) {
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e'); }
-  for(const x of [...out]) if(x.length>3 && x.at(-1)===x.at(-2)) out.add(x.slice(0,-1));
-  retur
+  for(const x of [...out]) if(x.length>3 && x.at(-1)===x.at(-2)) out.add(x.slice(0,-1
 
---- vocab #27 @ 2597027 ---
-ALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
+--- vocab #27 @ 2597038 ---
+GET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3043,8 +3041,8 @@ function buildGerundFallbacks() {
     {base:'read a book',ger:'reading a book',jp:'本を読むこと'},
     {base:'write',ger:'w
 
---- vocab #28 @ 2597251 ---
-d but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+--- vocab #28 @ 2597262 ---
+who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3083,8 +3081,8 @@ function buildGerundFallbacks() {
     {base:'run in the park',ger:'running in the park',jp:'公園で走ること'},
     {base:'cook at home',ger:'cooking at home',j
 
---- vocab #29 @ 2597358 ---
-y read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+--- vocab #29 @ 2597369 ---
+ write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3125,8 +3123,8 @@ function buildGerundFallbacks() {
     {base:'study English',ger:'studying English',jp:'英語を勉強すること'},
     {base:'speak English',
 
---- vocab #30 @ 2597399 ---
- cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+--- vocab #30 @ 2597410 ---
+sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3168,7 +3166,7 @@ function buildGerundFallbacks() {
     {base:'speak English',ger:'speaking English',jp:'英語を話すこと'},
    
 
---- vocab #31 @ 2598038 ---
+--- vocab #31 @ 2598049 ---
 n:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3220,7 +3218,7 @@ function buildGerundFallbacks() {
     out.push(vocabFallbackItem('中2','動名詞','変形','GER-CHANGE-'+stem,full+' を否定文にしなさい。',s.en+' do not like '+act.ger+'.'));
     out.push(vocabFallbackItem('中2','動名詞','間違い直し','GER-FIX-'+s
 
---- vocab #32 @ 2598222 ---
+--- vocab #32 @ 2598233 ---
 e();
   const out=new Set([t]);
   if(VOCAB_FALLBACK_IRREGULAR.has(t)) out.add(VOCAB_FALLBACK_IRREGULAR.get(t));
@@ -3278,7 +3276,7 @@ function buildBePresentFallbacks() {
     {en:'I',be:'am',wrong:'are',jp:'私は'},
     {en:'You',
 
---- vocab #33 @ 2598262 ---
+--- vocab #33 @ 2598273 ---
 B_FALLBACK_IRREGULAR.has(t)) out.add(VOCAB_FALLBACK_IRREGULAR.get(t));
   if(t.length>4 && t.endsWith('ies')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('es')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3335,7 +3333,7 @@ function buildBePresentFallbacks() {
     {en:'You',be:'are',wrong:'am',jp:'あなたは'},
     {en:
 
---- vocab #34 @ 2598312 ---
+--- vocab #34 @ 2598323 ---
 K_IRREGULAR.get(t));
   if(t.length>4 && t.endsWith('ies')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('es')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3393,7 +3391,7 @@ function buildBePresentFallbacks() {
     {en:'He',be:'is',wrong:'are',jp:'彼は'},
     {en:'She',b
 
---- vocab #35 @ 2598498 ---
+--- vocab #35 @ 2598509 ---
 gth>3 && t.endsWith('s') && !t.endsWith('ss')) out.add(t.slice(0,-1));
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3453,7 +3451,7 @@ function buildBePresentFallbacks() {
   ];
   const complemen
 
---- vocab #36 @ 2599471 ---
+--- vocab #36 @ 2599482 ---
 ts=[
     {en:'I',jp:'私は'}, {en:'You',jp:'あなたは'}, {en:'We',jp:'私たちは'}, {en:'They',jp:'彼らは'}
   ];
@@ -3510,7 +3508,7 @@ function buildBePresentFallbacks() {
     out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
     out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい
 
---- vocab #37 @ 2599571 ---
+--- vocab #37 @ 2599582 ---
 nst acts=[
     {base:'play with a dog',ger:'playing with a dog',jp:'犬と遊ぶこと'},
     {base:'read a book',ger:'reading a book',jp:'本を読むこと'},
@@ -3565,7 +3563,7 @@ function buildBePresentFallbacks() {
     out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
     out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+
 
---- vocab #38 @ 2599673 ---
+--- vocab #38 @ 2599684 ---
 ger:'reading a book',jp:'本を読むこと'},
     {base:'write',ger:'writing',jp:'書くこと'},
     {base:'sing',ger:'singing',jp:'歌うこと'},
@@ -3619,7 +3617,7 @@ function buildBePresentFallbacks() {
     out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
     out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.e
 
---- vocab #39 @ 2599794 ---
+--- vocab #39 @ 2599805 ---
 
     {base:'swim',ger:'swimming',jp:'泳ぐこと'},
     {base:'run in the park',ger:'running in the park',jp:'公園で走ること'},
@@ -3672,7 +3670,7 @@ function buildBePresentFallbacks() {
     out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
     out.push(vocabFallbackItem('中1','be動詞','答え方','BE-ANSWER-'+stem,question+' に Yes で答えなさい。',yes
 
---- vocab #40 @ 2600957 ---
+--- vocab #40 @ 2600968 ---
 ,
     {en:'He',be:'is',wrong:'are',jp:'彼は'},
     {en:'She',be:'is',wrong:'are',jp:'彼女は'},
@@ -3727,7 +3725,7 @@ function buildPastProgressiveFallbacks() {
     out.push(vocabFallbackItem('中1','過去進行形','変形','PPR-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
     out.push(vocabFallbackItem('中1','過去進行形','英作文','PPR-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',f
 
---- vocab #41 @ 2601085 ---
+--- vocab #41 @ 2601096 ---
 たちは'},
     {en:'They',be:'are',wrong:'is',jp:'彼らは'},
     {en:'It',be:'is',wrong:'are',jp:'それは'}
@@ -3781,7 +3779,7 @@ function buildPastProgressiveFallbacks() {
     out.push(vocabFallbackItem('中1','過去進行形','間違い直し','PPR-FIX-'+stem,s.en+' '+s.wrong+' '+a.ger+'. の誤りを直しなさい。',full));
   }
 
---- vocab #42 @ 2601207 ---
+--- vocab #42 @ 2601218 ---
 
     {en:'a student',jp:'生徒です'},{en:'a friend',jp:'友達です'},{en:'a teacher',jp:'先生です'},
     {en:'at home',jp:'家にいます'},{en:'at school',jp:'学校にいます'},{en:'in the park',jp:'公園にいます'},
@@ -3839,7 +3837,7 @@ function buildBePastFallbacks() {
     {en:'I',be:'was',wrong:'were',jp:'私は'},
     {e
 
---- vocab #43 @ 2601299 ---
+--- vocab #43 @ 2601310 ---
 n:'at home',jp:'家にいます'},{en:'at school',jp:'学校にいます'},{en:'in the park',jp:'公園にいます'},
     {en:'in the room',jp:'部屋にいます'},{en:'in the city',jp:'町にいます'}
   ];
@@ -3897,7 +3895,7 @@ function buildBePastFallbacks() {
     {en:'He',be:'was',wrong:'were',jp:'彼は'},
     {
 
---- vocab #44 @ 2601401 ---
+--- vocab #44 @ 2601412 ---
 oom',jp:'部屋にいます'},{en:'in the city',jp:'町にいます'}
   ];
   const out=[]; let n=1;
@@ -3956,7 +3954,7 @@ function buildBePastFallbacks() {
     {en:'We',be:'were',wrong:'was',jp:'私たちは'},
     {en:'They
 
---- vocab #45 @ 2601516 ---
+--- vocab #45 @ 2601527 ---
 c of complements) {
     const stem=String(n++).padStart(3,'0');
     const full=s.en+' '+s.be+' '+c.en+'.';
@@ -4016,7 +4014,7 @@ function buildBePastFallbacks() {
     {en:'at home',jp:'家にいました'},
     {en:'at school',jp
 
---- vocab #46 @ 2602331 ---
+--- vocab #46 @ 2602342 ---
 '間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
     out.push(vocabFallbackItem('中1','be動詞','答え方','BE-ANSWER-'+stem,question+' に Yes で答えなさい。',yes));
   }
@@ -4082,7 +4080,7 @@ function buildBePastFallbacks() {
     out.push(vocabFallbackItem('中1','過去のbe動詞','空所補充','PBE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
     out.push(vocabFallbackItem('中1','過去のbe動詞','選択','PBE-CHOICE-'+ste
 
---- vocab #47 @ 2602462 ---
+--- vocab #47 @ 2602473 ---
 -'+stem,question+' に Yes で答えなさい。',yes));
   }
   return out;
@@ -4148,7 +4146,7 @@ function buildBePastFallbacks() {
     out.push(vocabFallbackItem('中1','過去のbe動詞','選択','PBE-CHOICE-'+stem,s.en+' ( was / were ) '+c.en+'. 正しい語を選びなさい。',s.be));
     out.push(vocabFallbackItem('中1','過去のbe動詞','変形','PBE-CHANGE-'+stem,full+'
 
---- vocab #48 @ 2602584 ---
+--- vocab #48 @ 2602595 ---
 [
     {en:'I',be:'was',wrong:'were',jp:'私は'},
     {en:'You',be:'were',wrong:'was',jp:'あなたは'},
@@ -4209,7 +4207,7 @@ function buildBePastFallbacks() {
     out.push(vocabFallbackItem('中1','過去のbe動詞','変形','PBE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
     out.push(vocabFallbackItem('中1','過去のbe動詞','答え方','PBE-ANSWER-'+stem,question+' に Yes で答えなさい。',yes))
 
---- vocab #49 @ 2602678 ---
+--- vocab #49 @ 2602689 ---
     {en:'We',be:'were',wrong:'was',jp:'私たちは'},
     {en:'They',be:'were',wrong:'was',jp:'彼らは'}
   ];
@@ -4268,7 +4266,7 @@ function buildBePastFallbacks() {
     out.push(vocabFallbackItem('中1','過去のbe動詞','答え方','PBE-ANSWER-'+stem,question+' に Yes で答えなさい。',yes));
     out.push(vocabFallbackItem('中1','過去のbe動詞','間違い直し','PBE-FIX-'+stem,s.en+' '+s.wrong+' '+c
 
---- vocab #50 @ 2602782 ---
+--- vocab #50 @ 2602793 ---
 st acts=[
     {ger:'reading a book',jp:'本を読んでいました'},
     {ger:'playing in the park',jp:'公園で遊んでいました'},
@@ -4455,7 +4453,7 @@ n|done)/i.test(both)) return false;
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here plea
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before betwee
 
 ===== grammar : 42 hits =====
 --- grammar #1 @ 2582023 ---
@@ -6880,7 +6878,7 @@ sited|been|finished|lost|lived|studied|seen|done)/i.test(both)) return false;
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about i
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose 
 
 --- grammar #40 @ 2596092 ---
 through.
@@ -6904,7 +6902,7 @@ through.
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -6916,9 +6914,9 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('s') && !t.endsWith('ss')) out.add(t.slice(0,-1));
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
-  if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.s
+  if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); 
 
---- grammar #41 @ 2614035 ---
+--- grammar #41 @ 2614046 ---
 });
   return _vocabFallbackBankCache;
 }
@@ -6989,7 +6987,7 @@ function updateBuilderStatus(candidates) {
   if (subj === '英語') {
     msg += ' / 教科
 
---- grammar #42 @ 2615087 ---
+--- grammar #42 @ 2615098 ---
 s.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
@@ -9211,7 +9209,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za
 
---- textbook #35 @ 2615856 ---
+--- textbook #35 @ 2615867 ---
 s.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -9278,7 +9276,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: 
 
---- textbook #36 @ 2619119 ---
+--- textbook #36 @ 2619130 ---
 size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -9338,7 +9336,7 @@ function refreshList() {
 function syncListSelectors() {
   el('listSubject').value = currentSubjec
 
---- textbook #37 @ 2621403 ---
+--- textbook #37 @ 2621414 ---
 nt = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -9394,7 +9392,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]
 
---- textbook #38 @ 2623224 ---
+--- textbook #38 @ 2623235 ---
 dEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
   document.addEventListener('change', evt => {
@@ -12437,7 +12435,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndex
 
---- section #46 @ 2615891 ---
+--- section #46 @ 2615902 ---
 pe)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -12504,7 +12502,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: Math.ceil(pageQuestions.length / 2
 
---- section #47 @ 2618976 ---
+--- section #47 @ 2618987 ---
 n;overflow:hidden;page-break-after:always;break-after:page}
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
@@ -12558,7 +12556,7 @@ function refreshList() {
 <td>${item.category}</td>
 <td>${ite
 
---- section #48 @ 2619192 ---
+--- section #48 @ 2619203 ---
 ;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -12622,7 +12620,7 @@ function syncListSelectors() {
 
 function wireEvents() 
 
---- section #49 @ 2619361 ---
+--- section #49 @ 2619372 ---
 splay:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
   .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
   .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
@@ -12686,7 +12684,7 @@ function wireEvents() {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); u
 
---- section #50 @ 2621080 ---
+--- section #50 @ 2621091 ---
 bject === '英語' && item.grade === currentGrade() && !passesVocab(item, vocabMode)) return false;
     if (kw) {
       const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
@@ -13426,7 +13424,7 @@ function selectedCategories() {
   if (!stages.length) return [];
   c
 
---- filter #4 @ 2612948 ---
+--- filter #4 @ 2612959 ---
 選びなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
     out.push(vocabFallbackItem('中3','接続詞','間違い直し','CONJ-FIX-'+stem,wrongSentence+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
@@ -13487,7 +13485,7 @@ function baseFiltered(overrideMode) {
   const types = selectedValues('input[data-type]');
   const originals =
 
---- filter #5 @ 2614550 ---
+--- filter #5 @ 2614561 ---
 s.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
@@ -13557,7 +13555,7 @@ function renderQuestions() {
     currentQuestions = [];
     el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。
 
---- filter #6 @ 2614758 ---
+--- filter #6 @ 2614769 ---
  if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
@@ -13626,7 +13624,7 @@ function renderQuestions() {
   currentQuestions = picked;
   el('questionPreview').classList.toggle(
 
---- filter #7 @ 2615600 ---
+--- filter #7 @ 2615611 ---
 electedValues('input[data-type]');
   const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
@@ -13694,7 +13692,7 @@ function printQuestions() {
   const pages = [];
   for (let startIndex = 0; sta
 
---- filter #8 @ 2616195 ---
+--- filter #8 @ 2616206 ---
 t a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
@@ -13762,7 +13760,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:
 
---- filter #9 @ 2620022 ---
+--- filter #9 @ 2620033 ---
 tbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div>
 <div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div>
 </section>`).join('')}
@@ -13824,7 +13822,7 @@ function wireEvents() {
   document.addEventListener('change', evt => {
     if (evt.target.ma
 
---- filter #10 @ 2621191 ---
+--- filter #10 @ 2621202 ---
      const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
       if (!hay.includes(kw)) return false;
     }
@@ -13878,7 +13876,7 @@ function wireEvents() {
   if (el('importJsonInput')) el('importJsonInput').addEventListener('change', evt => {
     const file = evt.target.files 
 
---- filter #11 @ 2621380 ---
+--- filter #11 @ 2621391 ---
 'listStatus').textContent = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -13934,7 +13932,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>
 
---- filter #12 @ 2621530 ---
+--- filter #12 @ 2621541 ---
 el('listBody').innerHTML = rows.map(item => `
     <tr>
 <td>${item.id}</td>
@@ -13994,7 +13992,7 @@ renderTypeOptions();
 syncListSelectors();
 wireE
 
---- filter #13 @ 2621654 ---
+--- filter #13 @ 2621665 ---
 {item.category}</td>
 <td>${item.type}</td>
 <td>${item.q}</td>
@@ -14053,7 +14051,7 @@ try {
   if (saved) applyState(JSON.parse(saved));
 } catch (e) {}
 
---- filter #14 @ 2621746 ---
+--- filter #14 @ 2621757 ---
 ('');
 }
 
@@ -14113,7 +14111,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #15 @ 2621898 ---
+--- filter #15 @ 2621909 ---
  {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); updateBuilderStatus(baseFiltered()); });
@@ -14165,7 +14163,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #16 @ 2623485 ---
+--- filter #16 @ 2623496 ---
 t', evt => {
     if (evt.target.closest('input[type=text], textarea')) autoSave();
   });
@@ -14199,7 +14197,7 @@ updateBuilderStatus(baseFiltered());
 </html>
 
 ===== candidate : 8 hits =====
---- candidate #1 @ 2615493 ---
+--- candidate #1 @ 2615504 ---
 rentSubject();
   const grade = currentGrade();
   const categories = selectedCategories();
@@ -14267,7 +14265,7 @@ function printQuestions() {
 <div class="n">Q${index + 1}　${escapeHtml(q.id)}</div>
 <div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div c
 
---- candidate #2 @ 2615777 ---
+--- candidate #2 @ 2615788 ---
 ories.length && !categories.includes(item.category)) return false;
     if (types.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
@@ -14334,7 +14332,7 @@ function printQuestions() {
     pages.push({
       html: pageQuestions.map
 
---- candidate #3 @ 2616016 ---
+--- candidate #3 @ 2616027 ---
     if (!passesQualityGate(item)) return false;
     return true;
   });
@@ -14407,7 +14405,7 @@ function printQuestions() {
 <style>
   @p
 
---- candidate #4 @ 2616178 ---
+--- candidate #4 @ 2616189 ---
 fle(arr) {
   const a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
@@ -14476,7 +14474,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#
 
---- candidate #5 @ 2616229 ---
+--- candidate #5 @ 2616240 ---
 length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
@@ -14544,7 +14542,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:2
 
---- candidate #6 @ 2616249 ---
+--- candidate #6 @ 2616260 ---
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
@@ -14611,7 +14609,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:281mm;display:flex;fl
 
---- candidate #7 @ 2616451 ---
+--- candidate #7 @ 2616462 ---
 de = currentGrade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14672,7 +14670,7 @@ function printQuestions() {
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 a
 
---- candidate #8 @ 2616465 ---
+--- candidate #8 @ 2616476 ---
 ade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
