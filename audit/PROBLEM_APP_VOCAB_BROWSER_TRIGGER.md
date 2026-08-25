@@ -7,3 +7,4 @@ Post-grammar-chronology-grade-key-fix full browser matrix rerun requested on 202
 Post-context-dependent-fallback-cache-fix full browser matrix rerun requested on 2026-08-26 JST.
 Post-core-learned-grammar-fallback full browser matrix rerun requested on 2026-08-26 JST.
 Post-be-present-runtime-category-repair full browser matrix rerun requested on 2026-08-26 JST.
+Post-early-learned-low-retention-fallback full browser matrix rerun requested on 2026-08-26 JST.
