@@ -1,0 +1,75 @@
+{
+  "checkpoint_version": "v46",
+  "recorded_at": "2026-08-25T10:52:00Z",
+  "repository": "yo666ha-boop/english-vocab-app",
+  "branch": "mikami-canonical-repair",
+  "actual_branch_head_before_checkpoint": "cc80a90fb314ba6546edcdc61e6aaa187fdf80c5",
+  "scope_change": {
+    "requested_by_user": "Move all photo analysis, report, printing-for-analysis, and My GPT handoff UI out of problem-app and into My GPT.",
+    "public_problem_app_main_commit": "8cc895e48e01330621ef88d573c2a91b537b1909",
+    "github_pages_run_id": "32839098667",
+    "github_pages_conclusion": "success"
+  },
+  "problem_app": {
+    "public_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+    "responsibility": "Question creation, question list, and question-printer only.",
+    "removed": [
+      "photo analysis tab",
+      "analysis report tab",
+      "legacy image upload and prompt pasteback",
+      "closing report UI",
+      "My GPT URL/handoff controls"
+    ],
+    "retained": [
+      "question bank (10513 total)",
+      "English question creation",
+      "question list",
+      "question printing"
+    ],
+    "verification": {
+      "source_question_bank_items": 10513,
+      "browser_tabs": [
+        "問題作成",
+        "問題一覧"
+      ],
+      "removed_ui_absent": true,
+      "runtime_errors": 0
+    },
+    "printing": {
+      "rule": "A4 portrait; split every 10 questions into a two-column print page.",
+      "twenty_questions_expected_pages": 2,
+      "browser_generated_questions": 20,
+      "status": "PASS"
+    }
+  },
+  "my_gpt": {
+    "runtime_url": "https://chatgpt.com/g/g-6a8d026915148191b33b8555d6c8f77c-mikamishu-da-an-fen-xi-gpt",
+    "responsibility": "Answer-photo analysis, A4 distribution material, interview/support/continuation materials, printable report files.",
+    "status": "PASS (configuration retained)"
+  },
+  "preservation": {
+    "root_main_index_html": "UNCHANGED",
+    "protected_vercel_vocab_project": "UNCHANGED (prj_k85GEgd76tQvHoL8YC9IDjnq553e)",
+    "automation_schedule": "NOT_MODIFIED"
+  },
+  "incident_and_recovery": {
+    "intermediate_commit": "f5cad2402eaf6e12f408f095c84508349e8db158",
+    "issue": "An overly broad initial markup boundary temporarily omitted embedded question-bank scripts.",
+    "recovery": "Immediately replaced by commit 8cc895e, restoring both qb-data and meta-data. Final source validation confirmed 10,513 items and runtime error count 0.",
+    "final_state": "PASS"
+  },
+  "real_answer_photo_cases": {
+    "correct_original": 0,
+    "multi_category_errors": 0,
+    "unreadable_answer": 0,
+    "school_test": 0,
+    "synthetic_substitution": "FORBIDDEN"
+  },
+  "validators": {
+    "actual_runtime_4_cases": "PENDING",
+    "actual_a4_render_print": "PENDING",
+    "hardened_finalizer": "PENDING"
+  },
+  "next_start": "On arrival of authentic answer photos, use My GPT directly for the corresponding four-case analysis and A4 distribution/print evidence; do not return photo-analysis features to problem-app.",
+  "overall_completion": false
+}
