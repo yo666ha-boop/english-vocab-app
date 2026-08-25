@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-08-25T21:16:21.713Z",
+  "generated_at": "2026-08-25T22:13:26.296Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
-  "rule": "last section of each grade/textbook scope; learned categories only because matrix is chronology-aware",
-  "rows": 106,
-  "under_50pct_count": 8,
+  "scope": "final section of each grade/textbook; learned grammar only because matrix stages are dynamically read from actual UI",
+  "summary": {
+    "rows": 106,
+    "zeroed": 0,
+    "severe_under_25pct": 0,
+    "under_50pct": 7,
+    "min_retention_pct": 33.84
+  },
   "gaps": [
     {
       "grade": "中2",
@@ -15,20 +20,6 @@
       "off": 396,
       "on": 134,
       "retention_pct": 33.84,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中2",
-      "textbook": "サンシャイン",
-      "section": "Reading 3",
-      "position": 33,
-      "section_count": 33,
-      "category": "文型①（look ～，give A B）",
-      "off": 30,
-      "on": 11,
-      "retention_pct": 36.67,
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
