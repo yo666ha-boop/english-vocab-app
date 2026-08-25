@@ -7,6 +7,8 @@ on:
     paths-ignore:
       - audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.txt
       - audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.json
+      - audit/PROBLEM_APP_VOCAB_GATE_METRICS.json
+      - audit/PROBLEM_APP_FILTER_FUNCTIONS.txt
 
 permissions:
   contents: write
@@ -16,21 +18,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Extract vocabulary and grammar filter contexts
+      - name: Extract and quantify vocabulary/grammar gates
         shell: python
         run: |
           from pathlib import Path
+          from collections import Counter, defaultdict
           import json, re
 
           p = Path('problem-app/index.html')
           text = p.read_text(encoding='utf-8')
+
+          def script_json(script_id):
+              m = re.search(r'<script\s+id=["\']' + re.escape(script_id) + r'["\'][^>]*>(.*?)</script>', text, re.S | re.I)
+              if not m:
+                  raise RuntimeError(f'{script_id} not found')
+              return json.loads(m.group(1))
+
+          qb = script_json('qb-data')
+          meta = script_json('meta-data')
+          english = [x for x in qb if x.get('subject') == '英語']
+          pass_meta = meta.get('passMeta') or {}
+
           needles = [
               '単語制限','単語','語彙','文法','vocab','vocabulary','grammar',
               'wordLimit','word_limit','allowedWords','allowedVocabulary',
               'textbook','unit','section','grade','filter','candidate'
           ]
           out = []
-          summary = {'bytes': len(text.encode('utf-8')), 'chars': len(text), 'newlines': text.count('\n'), 'occurrences': {}}
+          summary = {
+              'bytes': len(text.encode('utf-8')),
+              'chars': len(text),
+              'newlines': text.count('\n'),
+              'occurrences': {},
+              'english_items': len(english),
+              'meta_keys': sorted(meta.keys()),
+              'vocabCoordinateVersion': meta.get('vocabCoordinateVersion'),
+              'vocabCoordinateSemantics': meta.get('vocabCoordinateSemantics'),
+              'vocabMigrationAudit': meta.get('vocabMigrationAudit'),
+          }
           for needle in needles:
               hits = [m.start() for m in re.finditer(re.escape(needle), text, flags=re.I)]
               summary['occurrences'][needle] = len(hits)
@@ -38,24 +63,144 @@ jobs:
               for n, idx in enumerate(hits[:50], 1):
                   a = max(0, idx - 900)
                   b = min(len(text), idx + len(needle) + 1800)
-                  frag = text[a:b]
-                  frag = frag.replace('><', '>\n<')
+                  frag = text[a:b].replace('><', '>\n<')
                   out.append(f'--- {needle} #{n} @ {idx} ---\n{frag}\n')
-          # Collect likely JS identifiers/functions containing target terms.
+
           ids = sorted(set(re.findall(r'\b[A-Za-z_$][A-Za-z0-9_$]{2,}\b', text)))
           likely = [x for x in ids if re.search(r'(vocab|word|grammar|unit|section|textbook|grade|filter|candidate|range|allow)', x, re.I)]
           summary['likely_identifiers'] = likely[:1000]
           out.append('===== LIKELY IDENTIFIERS =====')
           out.extend(likely[:1000])
 
+          # Extract exact source for important functions from actual HTML.
+          def extract_function(name):
+              m = re.search(r'function\s+' + re.escape(name) + r'\s*\([^)]*\)\s*\{', text)
+              if not m:
+                  return None
+              start = m.start()
+              brace = text.find('{', m.start())
+              depth = 0
+              quote = None
+              esc = False
+              line_comment = False
+              block_comment = False
+              i = brace
+              while i < len(text):
+                  c = text[i]
+                  n = text[i+1] if i+1 < len(text) else ''
+                  if line_comment:
+                      if c == '\n': line_comment = False
+                      i += 1; continue
+                  if block_comment:
+                      if c == '*' and n == '/': block_comment = False; i += 2; continue
+                      i += 1; continue
+                  if quote:
+                      if esc: esc = False
+                      elif c == '\\': esc = True
+                      elif c == quote: quote = None
+                      i += 1; continue
+                  if c == '/' and n == '/': line_comment = True; i += 2; continue
+                  if c == '/' and n == '*': block_comment = True; i += 2; continue
+                  if c in ('\"', "'", '`'): quote = c; i += 1; continue
+                  if c == '{': depth += 1
+                  elif c == '}':
+                      depth -= 1
+                      if depth == 0:
+                          return text[start:i+1]
+                  i += 1
+              return None
+
+          fn_names = ['useVocabGate','passesVocab','passesPrereqGrammar','requiredGrammarStageIndex','baseFiltered','currentSectionIndex','currentGrammarStageIndex','currentTextbook']
+          fn_text = []
+          for name in fn_names:
+              src = extract_function(name)
+              fn_text.append(f'===== {name} =====\n{src or "NOT FOUND"}\n')
+
+          # Exact passMeta attrition audit. This follows passesVocab's metadata semantics,
+          # independent of UI state, so it measures the maximum possible survival at each ordinal.
+          textbooks = sorted({k for v in pass_meta.values() if isinstance(v, dict) for k in v.keys()})
+          grades = sorted({str(x.get('grade')) for x in english})
+          metrics = {
+              'english_items': len(english),
+              'textbooks': textbooks,
+              'grades': grades,
+              'coordinate_version': meta.get('vocabCoordinateVersion'),
+              'coordinate_semantics': meta.get('vocabCoordinateSemantics'),
+              'migration_audit': meta.get('vocabMigrationAudit'),
+              'sections_shape': {},
+              'by_textbook_grade': {},
+          }
+
+          sections = meta.get('sections')
+          if isinstance(sections, dict):
+              for tb, value in sections.items():
+                  if isinstance(value, dict):
+                      metrics['sections_shape'][tb] = {str(g): (len(v) if isinstance(v, list) else type(v).__name__) for g, v in value.items()}
+                  elif isinstance(value, list):
+                      metrics['sections_shape'][tb] = len(value)
+                  else:
+                      metrics['sections_shape'][tb] = type(value).__name__
+          else:
+              metrics['sections_shape'] = {'type': type(sections).__name__}
+
+          for tb in textbooks:
+              metrics['by_textbook_grade'][tb] = {}
+              for grade in grades:
+                  items = [x for x in english if str(x.get('grade')) == grade]
+                  bucket = Counter()
+                  positive = []
+                  unknown_by_category = Counter()
+                  positive_by_category = Counter()
+                  for item in items:
+                      raw = (pass_meta.get(item.get('id')) or {}).get(tb)
+                      try:
+                          val = int(raw)
+                      except Exception:
+                          val = None
+                      if val == -2:
+                          bucket['prior_grade'] += 1
+                      elif val is not None and val > 0:
+                          bucket['positive'] += 1
+                          positive.append(val)
+                          positive_by_category[str(item.get('category',''))] += 1
+                      elif val == -1:
+                          bucket['unknown_-1'] += 1
+                          unknown_by_category[str(item.get('category',''))] += 1
+                      elif val == 0:
+                          bucket['unknown_0'] += 1
+                          unknown_by_category[str(item.get('category',''))] += 1
+                      else:
+                          bucket['missing_or_invalid'] += 1
+                          unknown_by_category[str(item.get('category',''))] += 1
+                  total = len(items)
+                  max_pass = bucket['positive'] + bucket['prior_grade']
+                  max_pct = round(max_pass * 100 / total, 2) if total else 0
+                  max_ordinal = max(positive, default=0)
+                  survival = []
+                  for ordinal in range(1, max_ordinal + 1):
+                      cnt = bucket['prior_grade'] + sum(1 for v in positive if v <= ordinal)
+                      survival.append({'ordinal': ordinal, 'pass': cnt, 'pass_pct': round(cnt*100/total,2) if total else 0})
+                  metrics['by_textbook_grade'][tb][grade] = {
+                      'total': total,
+                      **dict(bucket),
+                      'max_possible_pass': max_pass,
+                      'max_possible_pass_pct': max_pct,
+                      'max_positive_ordinal': max_ordinal,
+                      'survival_by_ordinal': survival,
+                      'top_unknown_categories': unknown_by_category.most_common(30),
+                      'top_positive_categories': positive_by_category.most_common(30),
+                  }
+
           Path('audit').mkdir(exist_ok=True)
           Path('audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.txt').write_text('\n'.join(out), encoding='utf-8')
           Path('audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          Path('audit/PROBLEM_APP_VOCAB_GATE_METRICS.json').write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          Path('audit/PROBLEM_APP_FILTER_FUNCTIONS.txt').write_text('\n'.join(fn_text), encoding='utf-8')
       - name: Commit diagnostics
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.txt audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.json
+          git add audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.txt audit/PROBLEM_APP_VOCAB_GRAMMAR_DIAG.json audit/PROBLEM_APP_VOCAB_GATE_METRICS.json audit/PROBLEM_APP_FILTER_FUNCTIONS.txt
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'diag: capture problem-app vocab grammar filter contexts [skip ci]'
+          git commit -m 'diag: quantify problem-app vocab gate attrition [skip ci]'
           git push
