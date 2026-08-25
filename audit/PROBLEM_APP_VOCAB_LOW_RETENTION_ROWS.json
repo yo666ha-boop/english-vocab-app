@@ -1,8 +1,1658 @@
 {
-  "generated_at": "2026-08-25T22:47:28.054Z",
+  "generated_at": "2026-08-25T22:54:06.842Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
-  "severe_count": 1,
+  "audit_threshold_pct": 33,
+  "low_count": 32,
+  "severe_count": 0,
   "records": [
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 1-1",
+      "position": 1,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 1-2",
+      "position": 2,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 1-3",
+      "position": 3,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-1",
+      "position": 4,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-2",
+      "position": 5,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-3",
+      "position": 6,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Power-Up 1 / Step 2",
+      "position": 7,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 7,
+      "retention_pct": 25,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 7,
+      "blocked_unresolved": 15,
+      "blocked_future": 6,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        },
+        {
+          "id": "EX2-TH-0054",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 8,
+          "reason": "future_vocab_coordinate",
+          "q": "『その祭りにはたくさんの人がいました。』を英語で書きなさい。",
+          "a": "There were many people at the festival."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-1",
+      "position": 10,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 10,
+      "retention_pct": 25.64,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 10,
+      "blocked_unresolved": 1,
+      "blocked_future": 28,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0819",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 11,
+          "reason": "future_vocab_coordinate",
+          "q": "You watch TV. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
     {
       "grade": "中1",
       "textbook": "サンシャイン",
@@ -10,8 +1660,8 @@
       "position": 34,
       "category": "一般動詞（過去形）",
       "off": 612,
-      "on": 142,
-      "retention_pct": 23.2,
+      "on": 166,
+      "retention_pct": 27.12,
       "runtime_mapped_categories": [
         "一般動詞の過去形",
         "不規則動詞",
@@ -212,16 +1862,4773 @@
           "a": "I played soccer yesterday."
         }
       ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-2",
+      "position": 11,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 12,
+      "retention_pct": 30.77,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 26,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0821",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "We study English. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-3",
+      "position": 12,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 12,
+      "retention_pct": 30.77,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 26,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0821",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "We study English. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-1",
+      "position": 13,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 12,
+      "retention_pct": 30.77,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 26,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0821",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "We study English. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-2",
+      "position": 14,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 12,
+      "retention_pct": 30.77,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 26,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0821",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "We study English. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-3",
+      "position": 15,
+      "category": "be動詞と一般動詞",
+      "off": 39,
+      "on": 12,
+      "retention_pct": 30.77,
+      "runtime_mapped_categories": [
+        "区別"
+      ],
+      "original_pool": 39,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 26,
+      "blocked_other": 0,
+      "original_types": {
+        "見分け": 22,
+        "英作文": 11,
+        "間違い直し": 4,
+        "並びかえ": 2
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BD-001",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-004",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "He is play tennis. の誤りを直しなさい。",
+          "a": "He plays tennis."
+        },
+        {
+          "id": "E1-BD-005",
+          "category": "区別",
+          "type": "並びかえ",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( am / I / from / Japan )",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "E1-BD-007",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-008",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "They play baseball. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "E1-BD-009",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『彼は忙しいです。』",
+          "a": "He is busy."
+        },
+        {
+          "id": "E1-BD-011",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 37,
+          "reason": "future_vocab_coordinate",
+          "q": "We are like music. の誤りを直しなさい。",
+          "a": "We like music."
+        },
+        {
+          "id": "E1-BD-012",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "E1-BD-014",
+          "category": "区別",
+          "type": "間違い直し",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Do you a student? の誤りを直しなさい。",
+          "a": "Are you a student?"
+        },
+        {
+          "id": "GEN-DIST-0809",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0810",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "You are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0811",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "We are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0812",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0813",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "He is kind. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0814",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "She is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0815",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "He is happy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0816",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "She is busy. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "Be動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0817",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "I play tennis. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        },
+        {
+          "id": "GEN-DIST-0818",
+          "category": "区別",
+          "type": "英作文",
+          "passMeta": 46,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は テニスをします』",
+          "a": "I play tennis."
+        },
+        {
+          "id": "GEN-DIST-0821",
+          "category": "区別",
+          "type": "見分け",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "We study English. は be動詞の文・一般動詞の文のどちらですか。",
+          "a": "一般動詞の文"
+        }
+      ]
+    },
+    {
+      "grade": "中3",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-1",
+      "position": 5,
+      "category": "現在完了形（継続），現在完了進行形",
+      "off": 360,
+      "on": 112,
+      "retention_pct": 31.11,
+      "runtime_mapped_categories": [
+        "現在完了形（継続），現在完了進行形"
+      ],
+      "original_pool": 360,
+      "allowed_by_coordinate": 88,
+      "blocked_unresolved": 84,
+      "blocked_future": 188,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 260,
+        "空所補充": 40,
+        "英作文": 20,
+        "間違い直し": 20,
+        "選択": 20
+      },
+      "blocked_samples": [
+        {
+          "id": "M3C-00017",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00018",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00020",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00037",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00038",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00040",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00057",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00058",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00060",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00077",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00078",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00080",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00097",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00098",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00100",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00117",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00118",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        },
+        {
+          "id": "M3C-00120",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+          "a": "Have I been using this computer since this morning?"
+        },
+        {
+          "id": "M3C-00137",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "I have lived here for five years. を疑問文にしなさい。",
+          "a": "Have I lived here for five years?"
+        },
+        {
+          "id": "M3C-00138",
+          "category": "現在完了形（継続），現在完了進行形",
+          "type": "変形",
+          "passMeta": 6,
+          "reason": "future_vocab_coordinate",
+          "q": "I have studied English since 2020. を疑問文にしなさい。",
+          "a": "Have I studied English since 2020?"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-1",
+      "position": 10,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 0,
+      "blocked_unresolved": 1,
+      "blocked_future": 562,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-007",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "She is a teacher. を疑問文にしなさい。",
+          "a": "Is she a teacher?"
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-011",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) she from Canada? 「カナダ出身ですか」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-2",
+      "position": 11,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 0,
+      "blocked_unresolved": 1,
+      "blocked_future": 562,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-007",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "She is a teacher. を疑問文にしなさい。",
+          "a": "Is she a teacher?"
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-011",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) she from Canada? 「カナダ出身ですか」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-3",
+      "position": 12,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 12,
+      "blocked_unresolved": 1,
+      "blocked_future": 550,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-007",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "She is a teacher. を疑問文にしなさい。",
+          "a": "Is she a teacher?"
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-011",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) she from Canada? 「カナダ出身ですか」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-1",
+      "position": 13,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 26,
+      "blocked_unresolved": 1,
+      "blocked_future": 536,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-2",
+      "position": 14,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 26,
+      "blocked_unresolved": 1,
+      "blocked_future": 536,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-3",
+      "position": 15,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 180,
+      "retention_pct": 31.97,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 26,
+      "blocked_unresolved": 1,
+      "blocked_future": 536,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-004",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 16,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )",
+          "a": "She is not kind."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 3-1",
+      "position": 8,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 9,
+      "retention_pct": 32.14,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 9,
+      "blocked_unresolved": 15,
+      "blocked_future": 4,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 3-2",
+      "position": 9,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 9,
+      "retention_pct": 32.14,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 9,
+      "blocked_unresolved": 15,
+      "blocked_future": 4,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 3-3",
+      "position": 10,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 9,
+      "retention_pct": 32.14,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 9,
+      "blocked_unresolved": 15,
+      "blocked_future": 4,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Our Project 4",
+      "position": 11,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 9,
+      "retention_pct": 32.14,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 9,
+      "blocked_unresolved": 15,
+      "blocked_future": 4,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 1",
+      "position": 12,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 9,
+      "retention_pct": 32.14,
+      "runtime_mapped_categories": [
+        "there is ～ の文"
+      ],
+      "original_pool": 28,
+      "allowed_by_coordinate": 9,
+      "blocked_unresolved": 15,
+      "blocked_future": 4,
+      "blocked_other": 0,
+      "original_types": {
+        "英作文": 12,
+        "空所補充": 6,
+        "変形": 6,
+        "読解": 4
+      },
+      "blocked_samples": [
+        {
+          "id": "R2-TH-0081",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station."
+        },
+        {
+          "id": "R2-TH-0082",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 17,
+          "reason": "future_vocab_coordinate",
+          "q": "『テーブルの上にたくさんの本があります。』を英語で書きなさい。",
+          "a": "There are many books on the table."
+        },
+        {
+          "id": "TH2-TH-0035",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station."
+        },
+        {
+          "id": "TH2-TH-0036",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0037",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?"
+        },
+        {
+          "id": "TH2-TH-0038",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park."
+        },
+        {
+          "id": "TH2-TH-0039",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0040",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?"
+        },
+        {
+          "id": "TH2-TH-0041",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench."
+        },
+        {
+          "id": "TH2-TH-0042",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0043",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?"
+        },
+        {
+          "id": "TH2-TH-0047",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "『そのびんには少し水があります。』を英語で書きなさい。",
+          "a": "There is some water in the bottle."
+        },
+        {
+          "id": "TH2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "(      ) some water in the bottle. に入る語を書きなさい。",
+          "a": "Is"
+        },
+        {
+          "id": "TH2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": 13,
+          "reason": "future_vocab_coordinate",
+          "q": "There is some water in the bottle. を疑問文にしなさい。",
+          "a": "Is there some water in the bottle?"
+        },
+        {
+          "id": "TH2-TH-0050",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall."
+        },
+        {
+          "id": "TH2-TH-0051",
+          "category": "there is ～ の文",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are"
+        },
+        {
+          "id": "TH2-TH-0052",
+          "category": "there is ～ の文",
+          "type": "変形",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?"
+        },
+        {
+          "id": "EX2-TH-0048",
+          "category": "there is ～ の文",
+          "type": "英作文",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station."
+        },
+        {
+          "id": "EX2-TH-0049",
+          "category": "there is ～ の文",
+          "type": "読解",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 3-1",
+      "position": 16,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 181,
+      "retention_pct": 32.15,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 71,
+      "blocked_unresolved": 1,
+      "blocked_future": 491,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0008",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 3-2",
+      "position": 17,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 181,
+      "retention_pct": 32.15,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 71,
+      "blocked_unresolved": 1,
+      "blocked_future": 491,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0008",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 3-3",
+      "position": 18,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 181,
+      "retention_pct": 32.15,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 71,
+      "blocked_unresolved": 1,
+      "blocked_future": 491,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-008",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "Is he from Japan? に No で答えなさい。",
+          "a": "No, he is not."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "E1-BQ-015",
+          "category": "be動詞",
+          "type": "英作文",
+          "passMeta": 19,
+          "reason": "future_vocab_coordinate",
+          "q": "次の日本語に合う英文を書きなさい。『私は日本出身です。』",
+          "a": "I am from Japan."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0008",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 4-1",
+      "position": 19,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 181,
+      "retention_pct": 32.15,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 73,
+      "blocked_unresolved": 1,
+      "blocked_future": 489,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0008",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0010",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0011",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 4-2",
+      "position": 20,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 181,
+      "retention_pct": 32.15,
+      "runtime_mapped_categories": [
+        "be動詞"
+      ],
+      "original_pool": 563,
+      "allowed_by_coordinate": 73,
+      "blocked_unresolved": 1,
+      "blocked_future": 489,
+      "blocked_other": 0,
+      "original_types": {
+        "変形": 241,
+        "答え方": 123,
+        "並びかえ": 2,
+        "間違い直し": 38,
+        "空所補充": 158,
+        "英作文": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-BQ-001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "He is busy. を否定文にしなさい。",
+          "a": "He is not busy."
+        },
+        {
+          "id": "E1-BQ-002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "You are happy. を疑問文にしなさい。",
+          "a": "Are you happy?"
+        },
+        {
+          "id": "E1-BQ-003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you a student? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "E1-BQ-005",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are he busy? の誤りを直しなさい。",
+          "a": "Is he busy?"
+        },
+        {
+          "id": "E1-BQ-006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "E1-BQ-009",
+          "category": "be動詞",
+          "type": "並びかえ",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( are / not / they / students )",
+          "a": "They are not students."
+        },
+        {
+          "id": "E1-BQ-010",
+          "category": "be動詞",
+          "type": "間違い直し",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Am you busy? の誤りを直しなさい。",
+          "a": "Are you busy?"
+        },
+        {
+          "id": "E1-BQ-012",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": -1,
+          "reason": "unresolved",
+          "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "are"
+        },
+        {
+          "id": "E1-BQ-013",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "They are busy. を否定文にしなさい。",
+          "a": "They are not busy."
+        },
+        {
+          "id": "E1-BQ-014",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 22,
+          "reason": "future_vocab_coordinate",
+          "q": "Are they soccer players? に Yes で答えなさい。",
+          "a": "Yes, they are."
+        },
+        {
+          "id": "GEN-BE-0001",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を否定文にしなさい。",
+          "a": "I am not happy."
+        },
+        {
+          "id": "GEN-BE-0002",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I am happy. を疑問文にしなさい。",
+          "a": "Am I happy?"
+        },
+        {
+          "id": "GEN-BE-0003",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you happy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0004",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 35,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0005",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を否定文にしなさい。",
+          "a": "I am not busy."
+        },
+        {
+          "id": "GEN-BE-0006",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0007",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        },
+        {
+          "id": "GEN-BE-0008",
+          "category": "be動詞",
+          "type": "空所補充",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "am"
+        },
+        {
+          "id": "GEN-BE-0010",
+          "category": "be動詞",
+          "type": "変形",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "I am busy. を疑問文にしなさい。",
+          "a": "Am I busy?"
+        },
+        {
+          "id": "GEN-BE-0011",
+          "category": "be動詞",
+          "type": "答え方",
+          "passMeta": 30,
+          "reason": "future_vocab_coordinate",
+          "q": "Are you busy? に Yes で答えなさい。",
+          "a": "Yes, I am."
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 10-1",
+      "position": 41,
+      "category": "be動詞（過去形）",
+      "off": 365,
+      "on": 120,
+      "retention_pct": 32.88,
+      "runtime_mapped_categories": [
+        "過去のbe動詞"
+      ],
+      "original_pool": 366,
+      "allowed_by_coordinate": 1,
+      "blocked_unresolved": 0,
+      "blocked_future": 365,
+      "blocked_other": 0,
+      "original_types": {
+        "空所補充": 2,
+        "変形": 241,
+        "答え方": 121,
+        "間違い直し": 1,
+        "選択": 1
+      },
+      "blocked_samples": [
+        {
+          "id": "E1-PASTBE-001",
+          "category": "過去のbe動詞",
+          "type": "空所補充",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I (      ) busy yesterday. 「でした」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "was"
+        },
+        {
+          "id": "E1-PASTBE-003",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you busy yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        },
+        {
+          "id": "E1-PASTBE-004",
+          "category": "過去のbe動詞",
+          "type": "空所補充",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "They (      ) in the gym yesterday. 「でした」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+          "a": "were"
+        },
+        {
+          "id": "E1-PASTBE-005",
+          "category": "過去のbe動詞",
+          "type": "間違い直し",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "We was busy yesterday. の誤りを直しなさい。",
+          "a": "We were busy yesterday."
+        },
+        {
+          "id": "E1-PASTBE-006",
+          "category": "過去のbe動詞",
+          "type": "選択",
+          "passMeta": 43,
+          "reason": "future_vocab_coordinate",
+          "q": "He ( is / was / were ) at home last night. 正しいものを選びなさい。",
+          "a": "Was"
+        },
+        {
+          "id": "GEN-PBE-1503",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was happy yesterday. を否定文にしなさい。",
+          "a": "I was not happy yesterday."
+        },
+        {
+          "id": "GEN-PBE-1504",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was happy yesterday. を疑問文にしなさい。",
+          "a": "Was I happy yesterday?"
+        },
+        {
+          "id": "GEN-PBE-1505",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you happy yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        },
+        {
+          "id": "GEN-PBE-1506",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を否定文にしなさい。",
+          "a": "I was not busy yesterday."
+        },
+        {
+          "id": "GEN-PBE-1507",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を疑問文にしなさい。",
+          "a": "Was I busy yesterday?"
+        },
+        {
+          "id": "GEN-PBE-1508",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you busy yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        },
+        {
+          "id": "GEN-PBE-1509",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を否定文にしなさい。",
+          "a": "I was not busy yesterday."
+        },
+        {
+          "id": "GEN-PBE-1510",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を疑問文にしなさい。",
+          "a": "Was I busy yesterday?"
+        },
+        {
+          "id": "GEN-PBE-1511",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you busy yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        },
+        {
+          "id": "GEN-PBE-1512",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を否定文にしなさい。",
+          "a": "I was not busy yesterday."
+        },
+        {
+          "id": "GEN-PBE-1513",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was busy yesterday. を疑問文にしなさい。",
+          "a": "Was I busy yesterday?"
+        },
+        {
+          "id": "GEN-PBE-1514",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you busy yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        },
+        {
+          "id": "GEN-PBE-1515",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was kind yesterday. を否定文にしなさい。",
+          "a": "I was not kind yesterday."
+        },
+        {
+          "id": "GEN-PBE-1516",
+          "category": "過去のbe動詞",
+          "type": "変形",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "I was kind yesterday. を疑問文にしなさい。",
+          "a": "Was I kind yesterday?"
+        },
+        {
+          "id": "GEN-PBE-1517",
+          "category": "過去のbe動詞",
+          "type": "答え方",
+          "passMeta": 42,
+          "reason": "future_vocab_coordinate",
+          "q": "Were you kind yesterday? に Yes で答えなさい。",
+          "a": "Yes, I was."
+        }
+      ]
     }
   ],
   "by_category": {
+    "中2/there is ～ の文": {
+      "rows": 12,
+      "min_retention_pct": 25,
+      "total_off": 336,
+      "total_on": 94,
+      "total_unresolved": 180,
+      "total_future": 62
+    },
+    "中1/be動詞と一般動詞": {
+      "rows": 6,
+      "min_retention_pct": 25.64,
+      "total_off": 234,
+      "total_on": 70,
+      "total_unresolved": 6,
+      "total_future": 158
+    },
     "中1/一般動詞（過去形）": {
       "rows": 1,
-      "min_retention_pct": 23.2,
+      "min_retention_pct": 27.12,
       "total_off": 612,
-      "total_on": 142,
+      "total_on": 166,
       "total_unresolved": 111,
       "total_future": 359
+    },
+    "中3/現在完了形（継続），現在完了進行形": {
+      "rows": 1,
+      "min_retention_pct": 31.11,
+      "total_off": 360,
+      "total_on": 112,
+      "total_unresolved": 84,
+      "total_future": 188
+    },
+    "中1/be動詞（現在形）": {
+      "rows": 11,
+      "min_retention_pct": 31.97,
+      "total_off": 6193,
+      "total_on": 1985,
+      "total_unresolved": 11,
+      "total_future": 5733
+    },
+    "中1/be動詞（過去形）": {
+      "rows": 1,
+      "min_retention_pct": 32.88,
+      "total_off": 365,
+      "total_on": 120,
+      "total_unresolved": 0,
+      "total_future": 365
     }
   }
 }
