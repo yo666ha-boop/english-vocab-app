@@ -1,13 +1,10 @@
 {
-  "generated_at": "2026-08-25T18:33:01.876Z",
-  "scope": "all_textbooks_all_grades_all_sections_all_grammar_categories",
-  "final_section_totals": {
-    "category_rows": 106,
-    "zeroed": 0,
-    "severe_under_25pct": 0,
-    "under_50pct": 8
-  },
-  "final_under_50pct": [
+  "generated_at": "2026-08-25T18:49:30.513Z",
+  "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
+  "rule": "last section of each grade/textbook scope; learned categories only because matrix is chronology-aware",
+  "rows": 106,
+  "under_50pct_count": 8,
+  "gaps": [
     {
       "grade": "中2",
       "textbook": "サンシャイン",
@@ -120,36 +117,5 @@
       "severe_under_25pct": false,
       "under_50pct": true
     }
-  ],
-  "late_quarter_severe_under_25pct": [
-    {
-      "grade": "中1",
-      "textbook": "ニューホライズン",
-      "section": "Unit 10-1",
-      "position": 41,
-      "section_count": 46,
-      "category": "be動詞（過去形）",
-      "off": 365,
-      "on": 1,
-      "retention_pct": 0.27,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 9-1",
-      "position": 34,
-      "section_count": 39,
-      "category": "一般動詞（過去形）",
-      "off": 612,
-      "on": 142,
-      "retention_pct": 23.2,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    }
-  ],
-  "note": "Rows are chronology-aware when the source matrix exposes only currently learned stages. Final-section rows remain mature-grade diagnostics."
+  ]
 }
