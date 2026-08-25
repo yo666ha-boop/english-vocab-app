@@ -270,7 +270,7 @@ div>
   
   <script id="qb-data" type="application/json">[{"id":"E1-BQ-001","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"not の位置ミス","cause":"変形ルール未定着","q":"He is busy. を否定文にしなさい。","a":"He is not busy."},{"id":"E1-BQ-002","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"be動詞を前に出せない","cause":"疑問文の型不足","q":"You are happy. を疑問文にしなさい。","a":"Are you happy?"},{"id":"E1-BQ-003","subject":"英語","grade":"中1","category":"be動詞","type":"答え方","mistake":"Yes/No 応答ミス","cause":"答え方の型不足","q":"Are you a student? に Yes で答えなさい。","a":"Yes, I am."},{"id":"E1-BQ-004","subject":"英語","grade":"中1","category":"be動詞","type":"並びかえ","mistake":"not の位置ミス","cause":"語順不安定","q":"次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )","a":"She is not kind."},{"id":"E1-BQ-005","subject":"英語","grade":"中1","category":"be動詞","type":"間違い直し","mistake":"主語に合う be 動詞ミス","cause":"主語と動詞の対応不足","q":"Are he busy? の誤りを直しなさい。","a":"Is he busy?"},{"id":"E1-BQ-006","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"am not の位置ミス","cause":"否定文の型不足","q":"I am busy. を否定文にしなさい。","a":"I am not busy."},{"id":"E1-BQ-007","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"疑問文の語順ミス","cause":"be動詞を前に出せない","q":"She is a teacher. を疑問文にしなさい。","a":"Is she a teacher?"},{"id":"E1-B
 
---- 単語制限 #4 @ 2624242 ---
+--- 単語制限 #4 @ 2631236 ---
 n a;
 }
 
@@ -1379,7 +1379,7 @@ ect":"英語","grade":"中3","category":"英語の語順","type":"間違い直�
 --- 文法 #50 @ 1659396 ---
 ,"grade":"中3","category":"英語の語順","type":"選択","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"次のうち正しい英文を選びなさい。 (A) Yuki tennis play. (B) Yuki plays tennis (C) Play Yuki tennis.","a":"B"},{"id":"M3N-00071","subject":"英語","grade":"中3","category":"英語の語順","type":"空所補充","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Yuki (      ) to the pool every evening. 「行きます」の意味になるように、空所に入る最も適切な語を書きなさい。","a":"goes"},{"id":"M3N-00072","subject":"英語","grade":"中3","category":"英語の語順","type":"読解","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Yuki plays tennis every evening. 問い：この英文の意味を書きなさい。","a":"ユキは毎晩テニスをします。"},{"id":"M3N-00073","subject":"英語","grade":"中3","category":"英語の語順","type":"並びかえ","mistake":"語順ミス","cause":"学校範囲での定着不足","q":"次の語(句)を正しい順に並べかえなさい。 ( Tom / baseball / plays / after class )","a":"Tom plays baseball after class."},{"id":"M3N-00074","subject":"英語","grade":"中3","category":"英語の語順","type":"間違い直し","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Tom the office go after class. の誤りを直しなさい。","a":"Tom goes to the office after class."},{"id":"M3N-00075","subject":"英語","grade":"中3","category":"英語の語順","type":"英作文","mistake":"語順ミス","cause":"学校範囲での定着不足","q":"次の日本語に合う英文を書きなさい。『トムは授業の後に事務所へ行きます。』","a":"Tom goes to the office after class."},{"id":"M3N-00076","subject":"英語","grade":"中3","category":"英語の語順","type":"選択","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"次のうち正しい英文を選びなさい。 (A) Tom baseball play. (B) Tom plays baseball (C) Play Tom baseball.","a":"B"},{"id":"M3N-00077","subject":"英語","grade":"中3","category":"英語の語順","type":"空所補充","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Tom (      ) to the office after class. 「行きます」の意味になるように、空所に入る最も適切な語を書きなさい。","a":"goes"},{"id":"M3N-00078","subject":"英語","grade":"中3","category":"英語の語順","type":"読解","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Tom plays baseball after class. 問い：この英文の意味を書きなさい。","a":"トムは授業の後に野球をします。"},{"id":"M3N-00079","subject":"英語","grade":"中3","category":"英語の語順","type":"並びかえ","mistake":"語順ミス","cause":"学校範囲での定着不足","q":"次の語(句)を正しい順に並べかえなさい。 ( Emi / basketball / plays / before breakfast )","a":"Emi plays basketball before breakfast."},{"id":"M3N-00080","subject":"英語","grade":"中3","category":"英語の語順","type":"間違い直し","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"Emi the zoo go before breakfast. の誤りを直しなさい。","a":"Emi goes to the zoo before breakfast."},{"id":"M3N-00081","subject":"英語","grade":"中3","category":"英語の語順","type":"英作文","mistake":"語順ミス","cause":"学校範囲での定着不足","q":"次の日本語に合う英文を書きなさい。『エミは朝食前に動物園へ行きます。』","a":"Emi goes to the zoo before breakfast."},{"id":"M3N-00082","subject":"英語","grade":"中3","category":"英語の語順","type":"選択","mistake":"文法ミス","cause":"学校範囲での定着不足","q":"次のうち正しい英文を選びなさい。 (A) Emi basketball play. (B) Emi plays basketball (C) Play Emi basketba
 
-===== vocab : 119 hits =====
+===== vocab : 144 hits =====
 --- vocab #1 @ 5175 ---
   <div id="screen-builder" class="screen active">
     <div class="layout">
@@ -6916,7 +6916,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-
 
---- grammar #41 @ 2621921 ---
+--- grammar #41 @ 2628915 ---
 });
   return _vocabFallbackBankCache;
 }
@@ -6987,7 +6987,7 @@ function updateBuilderStatus(candidates) {
   if (subj === '英語') {
     msg += ' / 教科
 
---- grammar #42 @ 2622973 ---
+--- grammar #42 @ 2629967 ---
 s.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
@@ -9209,7 +9209,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za
 
---- textbook #35 @ 2623742 ---
+--- textbook #35 @ 2630736 ---
 s.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -9276,7 +9276,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: 
 
---- textbook #36 @ 2627005 ---
+--- textbook #36 @ 2633999 ---
 size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -9336,7 +9336,7 @@ function refreshList() {
 function syncListSelectors() {
   el('listSubject').value = currentSubjec
 
---- textbook #37 @ 2629289 ---
+--- textbook #37 @ 2636283 ---
 nt = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -9392,7 +9392,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]
 
---- textbook #38 @ 2631110 ---
+--- textbook #38 @ 2638104 ---
 dEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
   document.addEventListener('change', evt => {
@@ -12435,7 +12435,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndex
 
---- section #46 @ 2623777 ---
+--- section #46 @ 2630771 ---
 pe)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -12502,7 +12502,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: Math.ceil(pageQuestions.length / 2
 
---- section #47 @ 2626862 ---
+--- section #47 @ 2633856 ---
 n;overflow:hidden;page-break-after:always;break-after:page}
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
@@ -12556,7 +12556,7 @@ function refreshList() {
 <td>${item.category}</td>
 <td>${ite
 
---- section #48 @ 2627078 ---
+--- section #48 @ 2634072 ---
 ;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -12620,7 +12620,7 @@ function syncListSelectors() {
 
 function wireEvents() 
 
---- section #49 @ 2627247 ---
+--- section #49 @ 2634241 ---
 splay:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
   .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
   .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
@@ -12684,7 +12684,7 @@ function wireEvents() {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); u
 
---- section #50 @ 2628966 ---
+--- section #50 @ 2635960 ---
 bject === '英語' && item.grade === currentGrade() && !passesVocab(item, vocabMode)) return false;
     if (kw) {
       const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
@@ -13424,17 +13424,15 @@ function selectedCategories() {
   if (!stages.length) return [];
   c
 
---- filter #4 @ 2620834 ---
-ce+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
-    out.push(vocabFallbackItem('中3','接続詞','読解','CONJ-READ-'+stem,sc.en+' 問い：この文の内容を日本語で書きなさい。',sc.jp));
-    out.push(vocabFallbackItem('中3','接続詞','並びかえ','CONJ-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+scrambled+' )',sc.en));
-  });
+--- filter #4 @ 2627828 ---
+中3',cat,'並びかえ','PPE-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+part+' / '+aux+' / '+s+' )',full));
+  }
   return out;
 }
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildBeVsVerbFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildIrregularPastFallbacks(),buildPastTimeFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildBeVsVerbFallbacks(),buildCombinedThereLookFallbacks(),buildQuestionWordFallbacks(),buildPresentProgressiveFallbacks(),buildFutureFallbacks(),buildPresentPerfectCompletionExperienceFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;
@@ -13483,7 +13481,7 @@ function baseFiltered(overrideMode) {
   const types = selectedValues('input[data-type]');
   const originals =
 
---- filter #5 @ 2622436 ---
+--- filter #5 @ 2629430 ---
 s.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
@@ -13553,7 +13551,7 @@ function renderQuestions() {
     currentQuestions = [];
     el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。
 
---- filter #6 @ 2622644 ---
+--- filter #6 @ 2629638 ---
  if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
@@ -13622,7 +13620,7 @@ function renderQuestions() {
   currentQuestions = picked;
   el('questionPreview').classList.toggle(
 
---- filter #7 @ 2623486 ---
+--- filter #7 @ 2630480 ---
 electedValues('input[data-type]');
   const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
@@ -13690,7 +13688,7 @@ function printQuestions() {
   const pages = [];
   for (let startIndex = 0; sta
 
---- filter #8 @ 2624081 ---
+--- filter #8 @ 2631075 ---
 t a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
@@ -13758,7 +13756,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:
 
---- filter #9 @ 2627908 ---
+--- filter #9 @ 2634902 ---
 tbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div>
 <div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div>
 </section>`).join('')}
@@ -13820,7 +13818,7 @@ function wireEvents() {
   document.addEventListener('change', evt => {
     if (evt.target.ma
 
---- filter #10 @ 2629077 ---
+--- filter #10 @ 2636071 ---
      const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
       if (!hay.includes(kw)) return false;
     }
@@ -13874,7 +13872,7 @@ function wireEvents() {
   if (el('importJsonInput')) el('importJsonInput').addEventListener('change', evt => {
     const file = evt.target.files 
 
---- filter #11 @ 2629266 ---
+--- filter #11 @ 2636260 ---
 'listStatus').textContent = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -13930,7 +13928,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>
 
---- filter #12 @ 2629416 ---
+--- filter #12 @ 2636410 ---
 el('listBody').innerHTML = rows.map(item => `
     <tr>
 <td>${item.id}</td>
@@ -13990,7 +13988,7 @@ renderTypeOptions();
 syncListSelectors();
 wireE
 
---- filter #13 @ 2629540 ---
+--- filter #13 @ 2636534 ---
 {item.category}</td>
 <td>${item.type}</td>
 <td>${item.q}</td>
@@ -14049,7 +14047,7 @@ try {
   if (saved) applyState(JSON.parse(saved));
 } catch (e) {}
 
---- filter #14 @ 2629632 ---
+--- filter #14 @ 2636626 ---
 ('');
 }
 
@@ -14109,7 +14107,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #15 @ 2629784 ---
+--- filter #15 @ 2636778 ---
  {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); updateBuilderStatus(baseFiltered()); });
@@ -14161,7 +14159,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #16 @ 2631371 ---
+--- filter #16 @ 2638365 ---
 t', evt => {
     if (evt.target.closest('input[type=text], textarea')) autoSave();
   });
@@ -14195,7 +14193,7 @@ updateBuilderStatus(baseFiltered());
 </html>
 
 ===== candidate : 8 hits =====
---- candidate #1 @ 2623379 ---
+--- candidate #1 @ 2630373 ---
 rentSubject();
   const grade = currentGrade();
   const categories = selectedCategories();
@@ -14263,7 +14261,7 @@ function printQuestions() {
 <div class="n">Q${index + 1}　${escapeHtml(q.id)}</div>
 <div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div c
 
---- candidate #2 @ 2623663 ---
+--- candidate #2 @ 2630657 ---
 ories.length && !categories.includes(item.category)) return false;
     if (types.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
@@ -14330,7 +14328,7 @@ function printQuestions() {
     pages.push({
       html: pageQuestions.map
 
---- candidate #3 @ 2623902 ---
+--- candidate #3 @ 2630896 ---
     if (!passesQualityGate(item)) return false;
     return true;
   });
@@ -14403,7 +14401,7 @@ function printQuestions() {
 <style>
   @p
 
---- candidate #4 @ 2624064 ---
+--- candidate #4 @ 2631058 ---
 fle(arr) {
   const a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
@@ -14472,7 +14470,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#
 
---- candidate #5 @ 2624115 ---
+--- candidate #5 @ 2631109 ---
 length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
@@ -14540,7 +14538,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:2
 
---- candidate #6 @ 2624135 ---
+--- candidate #6 @ 2631129 ---
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
@@ -14607,7 +14605,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:281mm;display:flex;fl
 
---- candidate #7 @ 2624337 ---
+--- candidate #7 @ 2631331 ---
 de = currentGrade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14668,7 +14666,7 @@ function printQuestions() {
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 a
 
---- candidate #8 @ 2624351 ---
+--- candidate #8 @ 2631345 ---
 ade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14749,6 +14747,7 @@ allGrammarCount
 appendVocabFallbacks
 baseFiltered
 buildGrade1ConjunctionFallbacks
+buildQuestionWordFallbacks
 buildWordOrderFallbacks
 byGrade
 candidates
