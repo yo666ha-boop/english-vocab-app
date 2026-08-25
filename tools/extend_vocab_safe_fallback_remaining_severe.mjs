@@ -28,6 +28,8 @@ function buildGrade1ConjunctionFallbacks() {
 }
 
 function buildPastVerbFallbacks() {
+  // This must use the actual problem-bank category resolved by stageMap, not the display-stage label.
+  const cat='一般動詞の過去形';
   const rows=[
     ['I','play','played','私は遊びました。'],['I','study','studied','私は勉強しました。'],['I','cook','cooked','私は料理しました。'],
     ['I','walk','walked','私は歩きました。'],['I','use','used','私は使いました。'],['I','like','liked','私は好きでした。'],
@@ -38,9 +40,9 @@ function buildPastVerbFallbacks() {
   for(const [s,base,past,jp] of rows){
     const stem=String(n++).padStart(3,'0');
     const full=s+' '+past+'.';
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
-    out.push(vocabFallbackItem('中1','一般動詞（過去形）','英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1',cat,'空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
+    out.push(vocabFallbackItem('中1',cat,'変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
+    out.push(vocabFallbackItem('中1',cat,'英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
   }
   return out;
 }
@@ -77,6 +79,8 @@ function patch(path){
     if(i<0) throw new Error(`${path}: conjunction anchor missing`);
     src=src.slice(0,i)+builders+'\n'+src.slice(i);
   }
+  // Repair an already-installed older builder that used the display-stage label instead of the runtime category.
+  src=src.replaceAll("vocabFallbackItem('中1','一般動詞（過去形）',","vocabFallbackItem('中1','一般動詞の過去形',");
   if(!src.includes('buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()')){
     const old='buildPatternOneFallbacks(),buildGerundFallbacks()';
     const neu='buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks()';
@@ -93,6 +97,7 @@ function patch(path){
   for(const required of ['function buildGrade1ConjunctionFallbacks()','function buildPastVerbFallbacks()','function buildPresentPerfectContinuousFallbacks()','buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks()']){
     if(!src.includes(required)) throw new Error(`${path}: missing ${required}`);
   }
+  if(src.includes("vocabFallbackItem('中1','一般動詞（過去形）',")) throw new Error(`${path}: stale past-tense display category remains`);
   fs.writeFileSync(path,src);
 }
 
@@ -102,7 +107,7 @@ fs.mkdirSync('audit',{recursive:true});
 fs.writeFileSync(OUT,JSON.stringify({
   result:'PASS',
   files:[APP,INSTALLER],
-  added_runtime_categories:['中1 接続詞','中1 一般動詞（過去形）','中3 現在完了形（継続），現在完了進行形'],
-  design:'generic category-level safe fallback only; grammar chronology and lexical gate remain authoritative; no problem-ID, textbook, section, or measured-count exception'
+  added_runtime_categories:['中1 接続詞','中1 一般動詞の過去形','中3 現在完了形（継続），現在完了進行形'],
+  design:'generic category-level safe fallback only; grammar chronology and lexical gate remain authoritative; past-tense fallback uses actual stageMap problem category; no problem-ID, textbook, section, or measured-count exception'
 },null,2)+'\n');
 console.log('PASS: remaining severe generic vocab-safe fallbacks installed');
