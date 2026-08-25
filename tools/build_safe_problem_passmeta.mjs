@@ -69,7 +69,7 @@ const irregular=new Map(Object.entries({
   wears:'wear',wore:'wear',worn:'wear',breaks:'break',broke:'break',broken:'break',chooses:'choose',chose:'choose',chosen:'choose',
   flies:'fly',flew:'fly',flown:'fly',forgets:'forget',forgot:'forget',forgotten:'forget',hears:'hear',heard:'hear',holds:'hold',held:'hold',
   rides:'ride',rode:'ride',ridden:'ride',sells:'sell',sold:'sell',sleeps:'sleep',slept:'sleep',spends:'spend',spent:'spend',wins:'win',won:'win',
-  better:'good',best:'good',worse:'bad',worst:'bad',farther:'far',farthest:'far',further:'far',furthest:'far'
+  children:'child',men:'man',women:'woman',people:'person',mice:'mouse',feet:'foot',teeth:'tooth',better:'good',best:'good',worse:'bad',worst:'bad',farther:'far',farthest:'far',further:'far',furthest:'far'
 }));
 function lemmas(t) {
   const out=new Set([t]); if(irregular.has(t)) out.add(irregular.get(t));

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "files": [
+    "tools/build_safe_problem_passmeta.mjs",
+    "tools/audit_vocab_morphology_regression.mjs"
+  ],
+  "added": {
+    "children": "child",
+    "men": "man",
+    "women": "woman",
+    "people": "person",
+    "mice": "mouse",
+    "feet": "foot",
+    "teeth": "tooth"
+  },
+  "design": "generic irregular-plural lemma normalization; no textbook, section, problem-ID, or measured-count exception"
+}

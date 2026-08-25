@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T23:19:33.464Z",
+  "generated_at": "2026-08-25T23:20:44.701Z",
   "source": "data/v7_master.csv",
   "result": "PASS",
   "variant_tokens": 18,
@@ -142,9 +142,58 @@
     "children": {
       "expected": "child",
       "candidates": [
-        "children"
+        "children",
+        "child"
       ],
-      "pass": false
+      "pass": true
+    },
+    "men": {
+      "expected": "man",
+      "candidates": [
+        "men",
+        "man"
+      ],
+      "pass": true
+    },
+    "women": {
+      "expected": "woman",
+      "candidates": [
+        "women",
+        "woman"
+      ],
+      "pass": true
+    },
+    "people": {
+      "expected": "person",
+      "candidates": [
+        "people",
+        "person"
+      ],
+      "pass": true
+    },
+    "mice": {
+      "expected": "mouse",
+      "candidates": [
+        "mice",
+        "mouse"
+      ],
+      "pass": true
+    },
+    "feet": {
+      "expected": "foot",
+      "candidates": [
+        "feet",
+        "foot"
+      ],
+      "pass": true
+    },
+    "teeth": {
+      "expected": "tooth",
+      "candidates": [
+        "teeth",
+        "tooth"
+      ],
+      "pass": true
     }
   },
   "required_failures": [],
