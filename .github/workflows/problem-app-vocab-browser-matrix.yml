@@ -24,7 +24,7 @@ jobs:
         run: |
           pip install playwright
           playwright install --with-deps chromium
-      - name: Measure actual UI candidate counts
+      - name: Measure exhaustive actual UI candidate counts
         shell: python
         run: |
           from pathlib import Path
@@ -32,7 +32,13 @@ jobs:
           import json, re
 
           url = Path('problem-app/index.html').resolve().as_uri()
-          result = {'url': url, 'matrix': {}, 'grammar_attrition': {}}
+          result = {
+              'url': url,
+              'scope': 'all_textbooks_all_grades_all_sections_all_grammar_categories',
+              'matrix': {},
+              'grammar_attrition': {},
+              'summary': {'sections_measured':0,'category_rows':0,'zeroed_rows':0,'severe_under_25pct_rows':0,'under_50pct_rows':0}
+          }
 
           def candidate_count(text):
               m = re.search(r'この条件で使える候補\s*(\d+)件', text or '')
@@ -83,13 +89,15 @@ jobs:
               browser = p.chromium.launch()
               page = browser.new_page()
               console_errors = []
+              page_errors = []
               page.on('console', lambda msg: console_errors.append(msg.text) if msg.type == 'error' else None)
+              page.on('pageerror', lambda exc: page_errors.append(str(exc)))
               page.goto(url, wait_until='load')
               page.select_option('#subjectSelect', '英語')
 
               for grade in ['中1','中2','中3']:
                   page.select_option('#gradeSelect', grade)
-                  page.wait_for_timeout(50)
+                  page.wait_for_timeout(20)
                   set_all_stages(page, True)
                   set_all_types(page, True)
                   stages = stage_defs(page)
@@ -99,7 +107,7 @@ jobs:
 
                   for tb in textbooks:
                       page.select_option('#textbookSelect', tb)
-                      page.wait_for_timeout(30)
+                      page.wait_for_timeout(20)
                       sections = page.locator('#sectionSelect option').evaluate_all("els => els.map(x => ({value:x.value,text:(x.textContent || '').trim()}))")
                       valid = [x for x in sections if x['value']]
                       if not valid:
@@ -107,10 +115,10 @@ jobs:
                           result['grammar_attrition'][grade][tb] = {'error':'no sections'}
                           continue
 
-                      positions = sorted(set([0, len(valid)//2, len(valid)-1]))
+                      positions = list(range(len(valid)))
                       set_all_stages(page, True)
                       page.select_option('#vocabMode', 'off')
-                      page.wait_for_timeout(20)
+                      page.wait_for_timeout(10)
                       off_text = page.locator('#builderStatus').inner_text()
                       rec = {
                           'vocab_off_all_grammar': {'candidates':candidate_count(off_text),'status':off_text},
@@ -120,7 +128,7 @@ jobs:
                       for pos in positions:
                           sec = valid[pos]
                           page.select_option('#sectionSelect', sec['value'])
-                          page.wait_for_timeout(20)
+                          page.wait_for_timeout(5)
                           text = page.locator('#builderStatus').inner_text()
                           rec['vocab_on_sections'].append({
                               'position':pos+1,
@@ -131,25 +139,23 @@ jobs:
                           })
                       result['matrix'][grade][tb] = rec
 
-                      # Measure each grammar checkbox independently. This catches learned grammar
-                      # categories that disappear only because the vocabulary gate rejects their items.
                       attr_sections = []
                       for pos in positions:
                           sec = valid[pos]
                           page.select_option('#sectionSelect', sec['value'])
-                          page.wait_for_timeout(10)
+                          page.wait_for_timeout(3)
                           rows = []
                           for st in stages:
                               select_only_stage(page, st['index'])
                               page.select_option('#vocabMode', 'off')
-                              page.wait_for_timeout(5)
+                              page.wait_for_timeout(2)
                               off = candidate_count(page.locator('#builderStatus').inner_text())
                               page.select_option('#vocabMode', 'on')
-                              page.wait_for_timeout(5)
+                              page.wait_for_timeout(2)
                               on = candidate_count(page.locator('#builderStatus').inner_text())
                               if off and off > 0:
                                   retention = round((on or 0) * 100.0 / off, 2)
-                                  rows.append({
+                                  row = {
                                       'stage_index': st['index'],
                                       'data_stage': st['stage'],
                                       'value': st['value'],
@@ -158,16 +164,24 @@ jobs:
                                       'on': on or 0,
                                       'retention_pct': retention,
                                       'zeroed': (on or 0) == 0,
-                                      'severe_under_25pct': retention < 25.0
-                                  })
+                                      'severe_under_25pct': retention < 25.0,
+                                      'under_50pct': retention < 50.0
+                                  }
+                                  rows.append(row)
+                                  result['summary']['category_rows'] += 1
+                                  if row['zeroed']: result['summary']['zeroed_rows'] += 1
+                                  if row['severe_under_25pct']: result['summary']['severe_under_25pct_rows'] += 1
+                                  if row['under_50pct']: result['summary']['under_50pct_rows'] += 1
                           attr_sections.append({
                               'position': pos+1,
                               'section_count': len(valid),
                               'section': sec['text'],
                               'categories': rows,
                               'zeroed_categories': [r['value'] for r in rows if r['zeroed']],
-                              'severe_categories': [r['value'] for r in rows if r['severe_under_25pct']]
+                              'severe_categories': [r['value'] for r in rows if r['severe_under_25pct']],
+                              'under_50pct_categories': [r['value'] for r in rows if r['under_50pct']]
                           })
+                          result['summary']['sections_measured'] += 1
                       result['grammar_attrition'][grade][tb] = {
                           'stage_count': len(stages),
                           'stages': stages,
@@ -177,11 +191,16 @@ jobs:
                   set_all_stages(page, True)
 
               result['console_errors'] = console_errors
+              result['page_errors'] = page_errors
               browser.close()
+
+          if result['console_errors'] or result['page_errors']:
+              raise AssertionError({'console_errors':result['console_errors'],'page_errors':result['page_errors']})
 
           Path('audit').mkdir(exist_ok=True)
           Path('audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json').write_text(
               json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(result['summary'], ensure_ascii=False, indent=2))
       - name: Commit matrix
         shell: bash
         run: |
@@ -193,10 +212,10 @@ jobs:
             echo 'Matrix unchanged; nothing to commit.'
             exit 0
           fi
-          git commit -m 'test: record actual vocab gate browser matrix [skip ci]'
+          git commit -m 'test: record exhaustive vocab gate browser matrix [skip ci]'
 
           branch="${GITHUB_REF_NAME}"
-          for attempt in 1 2 3; do
+          for attempt in 1 2 3 4; do
             echo "Push attempt ${attempt} for ${branch}"
             git fetch origin "${branch}"
             if ! git rebase "origin/${branch}"; then
