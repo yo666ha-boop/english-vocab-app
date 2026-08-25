@@ -1,0 +1,22 @@
+{
+  "checkpoint_schema":"mikami-repair-work-v42-addendum",
+  "updated_at_jst":"2026-08-25T03:00+09:00",
+  "base_checkpoint":"v41",
+  "branch":"mikami-canonical-repair",
+  "observed_branch_head":"ffb4a4d5e1c1e3857757acccd1a5427308215641",
+  "protected_scope":{"main_root_vocab_modified":false,"vercel_vocab_project_modified":false,"problem_app_v3":"PASS_RETAINED"},
+  "editor_draft":{
+    "route_id":"g-6a8d026915148191b33b8555d6c8f77c",
+    "title":"みかみ塾 答案分析GPT",
+    "description_saved_in_draft":true,
+    "formal_instructions_exactly_entered":true,
+    "create_button_enabled_after_instruction_save":true,
+    "knowledge_and_schema_attachment_confirmed":false,
+    "actual_public_or_private_gpt_url":false,
+    "creation_completed":false
+  },
+  "stop_reason":"The authenticated in-app editor restores the draft, but file-uploading Knowledge/schema crashes the editor page before attachment state can be verified. Do not create a GPT while the required private Knowledge attachment is unverified.",
+  "real_photo_folder_counts":{"correct_original":0,"multi_category_errors":0,"unreadable_answer":0,"school_test":0},
+  "next_start":"reopen the same draft route; verify any persisted Knowledge attachment. If absent, use a stable authenticated editor surface to attach the exact Knowledge JSONL and schema, verify attachment names, then click Create and capture /g/<id>.",
+  "overall_completion":false
+}
