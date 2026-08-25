@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T22:13:26.295Z",
+  "generated_at": "2026-08-25T22:46:56.121Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "totals": {
     "rows": 2682,
     "zeroed": 0,
-    "severe_under_25pct": 3,
-    "under_50pct": 439,
-    "min_retention_pct": 23.08
+    "severe_under_25pct": 1,
+    "under_50pct": 428,
+    "min_retention_pct": 23.2
   },
   "final_section": {
     "rows": 106,
@@ -19,7 +19,7 @@
     "rows": 901,
     "zeroed": 0,
     "severe_under_25pct": 1,
-    "under_50pct": 89,
+    "under_50pct": 85,
     "min_retention_pct": 23.2
   },
   "by_scope": {
@@ -27,9 +27,9 @@
       "sections": 39,
       "category_rows": 294,
       "zeroed_rows": 0,
-      "severe_under_25pct_rows": 2,
-      "under_50pct_rows": 57,
-      "min_retention_pct": 23.08
+      "severe_under_25pct_rows": 1,
+      "under_50pct_rows": 47,
+      "min_retention_pct": 23.2
     },
     "中1/ニューホライズン": {
       "sections": 46,
@@ -60,33 +60,19 @@
       "category_rows": 484,
       "zeroed_rows": 0,
       "severe_under_25pct_rows": 0,
-      "under_50pct_rows": 50,
-      "min_retention_pct": 44.44
+      "under_50pct_rows": 49,
+      "min_retention_pct": 46.67
     },
     "中3/ニューホライズン": {
       "sections": 30,
       "category_rows": 529,
       "zeroed_rows": 0,
-      "severe_under_25pct_rows": 1,
+      "severe_under_25pct_rows": 0,
       "under_50pct_rows": 30,
-      "min_retention_pct": 24.44
+      "min_retention_pct": 31.11
     }
   },
   "worst_rows": [
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 6-1",
-      "position": 24,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 3,
-      "retention_pct": 23.08,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
     {
       "grade": "中1",
       "textbook": "サンシャイン",
@@ -97,20 +83,6 @@
       "off": 612,
       "on": 142,
       "retention_pct": 23.2,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
-    {
-      "grade": "中3",
-      "textbook": "ニューホライズン",
-      "section": "Unit 2-1",
-      "position": 5,
-      "section_count": 30,
-      "category": "現在完了形（継続），現在完了進行形",
-      "off": 360,
-      "on": 88,
-      "retention_pct": 24.44,
       "zeroed": false,
       "severe_under_25pct": true,
       "under_50pct": true
@@ -229,90 +201,6 @@
     },
     {
       "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 6-2",
-      "position": 25,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 7-1",
-      "position": 26,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 7-2",
-      "position": 27,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "疑問詞のまとめ",
-      "position": 28,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "Power-Up 3",
-      "position": 29,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "Our Project 2",
-      "position": 30,
-      "section_count": 39,
-      "category": "接続詞",
-      "off": 13,
-      "on": 4,
-      "retention_pct": 30.77,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
       "textbook": "ニューホライズン",
       "section": "Unit 1-2",
       "position": 11,
@@ -377,6 +265,20 @@
       "off": 39,
       "on": 12,
       "retention_pct": 30.77,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中3",
+      "textbook": "ニューホライズン",
+      "section": "Unit 2-1",
+      "position": 5,
+      "section_count": 30,
+      "category": "現在完了形（継続），現在完了進行形",
+      "off": 360,
+      "on": 112,
+      "retention_pct": 31.11,
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
@@ -772,32 +674,107 @@
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-1",
+      "position": 4,
+      "section_count": 33,
+      "category": "動名詞",
+      "off": 396,
+      "on": 132,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-2",
+      "position": 5,
+      "section_count": 33,
+      "category": "疑問詞",
+      "off": 18,
+      "on": 6,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-2",
+      "position": 5,
+      "section_count": 33,
+      "category": "進行形",
+      "off": 30,
+      "on": 10,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-2",
+      "position": 5,
+      "section_count": 33,
+      "category": "動名詞",
+      "off": 396,
+      "on": 132,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-3",
+      "position": 6,
+      "section_count": 33,
+      "category": "疑問詞",
+      "off": 18,
+      "on": 6,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-3",
+      "position": 6,
+      "section_count": 33,
+      "category": "進行形",
+      "off": 30,
+      "on": 10,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-3",
+      "position": 6,
+      "section_count": 33,
+      "category": "動名詞",
+      "off": 396,
+      "on": 132,
+      "retention_pct": 33.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
     }
   ],
   "by_category": [
-    {
-      "grade": "中1",
-      "category": "接続詞",
-      "rows": 16,
-      "zeroed_rows": 0,
-      "severe_rows": 1,
-      "under_50_rows": 10,
-      "min_retention_pct": 23.08,
-      "worst": {
-        "grade": "中1",
-        "textbook": "サンシャイン",
-        "section": "PROGRAM 6-1",
-        "position": 24,
-        "section_count": 39,
-        "category": "接続詞",
-        "off": 13,
-        "on": 3,
-        "retention_pct": 23.08,
-        "zeroed": false,
-        "severe_under_25pct": true,
-        "under_50pct": true
-      }
-    },
     {
       "grade": "中1",
       "category": "一般動詞（過去形）",
@@ -816,29 +793,6 @@
         "off": 612,
         "on": 142,
         "retention_pct": 23.2,
-        "zeroed": false,
-        "severe_under_25pct": true,
-        "under_50pct": true
-      }
-    },
-    {
-      "grade": "中3",
-      "category": "現在完了形（継続），現在完了進行形",
-      "rows": 50,
-      "zeroed_rows": 0,
-      "severe_rows": 1,
-      "under_50_rows": 2,
-      "min_retention_pct": 24.44,
-      "worst": {
-        "grade": "中3",
-        "textbook": "ニューホライズン",
-        "section": "Unit 2-1",
-        "position": 5,
-        "section_count": 30,
-        "category": "現在完了形（継続），現在完了進行形",
-        "off": 360,
-        "on": 88,
-        "retention_pct": 24.44,
         "zeroed": false,
         "severe_under_25pct": true,
         "under_50pct": true
@@ -885,6 +839,29 @@
         "off": 39,
         "on": 10,
         "retention_pct": 25.64,
+        "zeroed": false,
+        "severe_under_25pct": false,
+        "under_50pct": true
+      }
+    },
+    {
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "rows": 50,
+      "zeroed_rows": 0,
+      "severe_rows": 0,
+      "under_50_rows": 1,
+      "min_retention_pct": 31.11,
+      "worst": {
+        "grade": "中3",
+        "textbook": "ニューホライズン",
+        "section": "Unit 2-1",
+        "position": 5,
+        "section_count": 30,
+        "category": "現在完了形（継続），現在完了進行形",
+        "off": 360,
+        "on": 112,
+        "retention_pct": 31.11,
         "zeroed": false,
         "severe_under_25pct": false,
         "under_50pct": true
@@ -1929,6 +1906,16 @@
       "grade": "中1",
       "category": "命令文",
       "rows": 54,
+      "zeroed_rows": 0,
+      "severe_rows": 0,
+      "under_50_rows": 0,
+      "min_retention_pct": 101,
+      "worst": null
+    },
+    {
+      "grade": "中1",
+      "category": "接続詞",
+      "rows": 16,
       "zeroed_rows": 0,
       "severe_rows": 0,
       "under_50_rows": 0,
