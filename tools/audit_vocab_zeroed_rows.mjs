@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import vm from 'node:vm';
 
 const MATRIX='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const HTML='problem-app/index.html';
@@ -16,14 +15,21 @@ const matrix=JSON.parse(fs.readFileSync(MATRIX,'utf8'));
 const html=fs.readFileSync(HTML,'utf8');
 const qb=scriptJson(html,'qb-data').filter(x=>x.subject==='英語');
 const meta=scriptJson(html,'meta-data');
-
-const rows = matrix.rows || matrix.records || matrix.categories || matrix.results || [];
-if(!Array.isArray(rows) || !rows.length) throw new Error('matrix row array not found');
+const rows=[];
+for(const [grade,books] of Object.entries(matrix.grammar_attrition||{})){
+  for(const [textbook,rec] of Object.entries(books||{})){
+    for(const sec of rec?.sections||[]){
+      for(const cat of sec.categories||[]){
+        rows.push({...cat,grade,textbook,section:sec.section,position:sec.position,section_count:sec.section_count,category:cat.value});
+      }
+    }
+  }
+}
+if(!rows.length) throw new Error('nested grammar_attrition rows not found');
 const zeroed=rows.filter(r=>r.zeroed===true || (Number(r.off)>0 && Number(r.on)===0));
 const out=[];
 for(const z of zeroed){
-  const mapped = z.runtime_mapped_categories || z.mapped_categories || [z.category].filter(Boolean);
-  const pool=qb.filter(x=>gradeNum(x.grade)===gradeNum(z.grade) && mapped.includes(x.category));
+  const pool=qb.filter(x=>gradeNum(x.grade)===gradeNum(z.grade) && x.category===z.category);
   const rejected=[];
   const coordCounts=new Map();
   for(const item of pool){
@@ -34,10 +40,9 @@ for(const z of zeroed){
     }
   }
   out.push({
-    grade:z.grade,textbook:z.textbook,section:z.section,position:z.position,category:z.category,
-    off:z.off,on:z.on,retention_pct:z.retention_pct,
-    mapped_categories:mapped,original_pool:pool.length,
-    unresolved_count:rejected.length,
+    grade:z.grade,textbook:z.textbook,section:z.section,position:z.position,section_count:z.section_count,category:z.category,
+    off:z.off,on:z.on,retention_pct:z.retention_pct,data_stage:z.data_stage,label:z.label,
+    original_pool:pool.length,unresolved_count:rejected.length,
     unresolved_coordinate_values:Object.fromEntries(coordCounts),
     unresolved_samples:rejected.slice(0,40)
   });
