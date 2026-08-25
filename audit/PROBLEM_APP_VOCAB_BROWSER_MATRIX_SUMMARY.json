@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T22:46:56.121Z",
+  "generated_at": "2026-08-25T22:53:09.085Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "totals": {
     "rows": 2682,
     "zeroed": 0,
-    "severe_under_25pct": 1,
+    "severe_under_25pct": 0,
     "under_50pct": 428,
-    "min_retention_pct": 23.2
+    "min_retention_pct": 25
   },
   "final_section": {
     "rows": 106,
@@ -18,18 +18,18 @@
   "late_quarter": {
     "rows": 901,
     "zeroed": 0,
-    "severe_under_25pct": 1,
+    "severe_under_25pct": 0,
     "under_50pct": 85,
-    "min_retention_pct": 23.2
+    "min_retention_pct": 27.12
   },
   "by_scope": {
     "中1/サンシャイン": {
       "sections": 39,
       "category_rows": 294,
       "zeroed_rows": 0,
-      "severe_under_25pct_rows": 1,
+      "severe_under_25pct_rows": 0,
       "under_50pct_rows": 47,
-      "min_retention_pct": 23.2
+      "min_retention_pct": 27.12
     },
     "中1/ニューホライズン": {
       "sections": 46,
@@ -73,20 +73,6 @@
     }
   },
   "worst_rows": [
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "PROGRAM 9-1",
-      "position": 34,
-      "section_count": 39,
-      "category": "一般動詞（過去形）",
-      "off": 612,
-      "on": 142,
-      "retention_pct": 23.2,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
     {
       "grade": "中2",
       "textbook": "サンシャイン",
@@ -195,6 +181,20 @@
       "off": 39,
       "on": 10,
       "retention_pct": 25.64,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 9-1",
+      "position": 34,
+      "section_count": 39,
+      "category": "一般動詞（過去形）",
+      "off": 612,
+      "on": 166,
+      "retention_pct": 27.12,
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
@@ -776,29 +776,6 @@
   ],
   "by_category": [
     {
-      "grade": "中1",
-      "category": "一般動詞（過去形）",
-      "rows": 15,
-      "zeroed_rows": 0,
-      "severe_rows": 1,
-      "under_50_rows": 5,
-      "min_retention_pct": 23.2,
-      "worst": {
-        "grade": "中1",
-        "textbook": "サンシャイン",
-        "section": "PROGRAM 9-1",
-        "position": 34,
-        "section_count": 39,
-        "category": "一般動詞（過去形）",
-        "off": 612,
-        "on": 142,
-        "retention_pct": 23.2,
-        "zeroed": false,
-        "severe_under_25pct": true,
-        "under_50pct": true
-      }
-    },
-    {
       "grade": "中2",
       "category": "there is ～ の文",
       "rows": 68,
@@ -839,6 +816,29 @@
         "off": 39,
         "on": 10,
         "retention_pct": 25.64,
+        "zeroed": false,
+        "severe_under_25pct": false,
+        "under_50pct": true
+      }
+    },
+    {
+      "grade": "中1",
+      "category": "一般動詞（過去形）",
+      "rows": 15,
+      "zeroed_rows": 0,
+      "severe_rows": 0,
+      "under_50_rows": 5,
+      "min_retention_pct": 27.12,
+      "worst": {
+        "grade": "中1",
+        "textbook": "サンシャイン",
+        "section": "PROGRAM 9-1",
+        "position": 34,
+        "section_count": 39,
+        "category": "一般動詞（過去形）",
+        "off": 612,
+        "on": 166,
+        "retention_pct": 27.12,
         "zeroed": false,
         "severe_under_25pct": false,
         "under_50pct": true
