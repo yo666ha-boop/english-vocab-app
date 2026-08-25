@@ -6,6 +6,7 @@ on:
       - fix-vocab-grammar-range-20260825
     paths:
       - tools/install_problem_grammar_chronology.mjs
+      - tools/repair_problem_grammar_chronology_installer_anchor.mjs
       - .github/workflows/install-problem-grammar-chronology.yml
 
 permissions:
@@ -23,6 +24,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Repair installer anchor if needed
+        run: node tools/repair_problem_grammar_chronology_installer_anchor.mjs
       - name: Install chronology in problem app only
         run: node tools/install_problem_grammar_chronology.mjs
       - name: Parse runtime JavaScript
@@ -38,7 +41,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add problem-app/index.html audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_APPLY.json
+          git add tools/install_problem_grammar_chronology.mjs problem-app/index.html audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_APPLY.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'feat: apply source-backed learned grammar chronology [skip ci]'
           branch="${GITHUB_REF_NAME}"
