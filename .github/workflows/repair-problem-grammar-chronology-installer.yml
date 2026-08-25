@@ -16,23 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Repair brittle renderStageOptions anchor
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
           p=Path('tools/install_problem_grammar_chronology.mjs')
           s=p.read_text()
           start=s.index('const renderRe = ')
           end_marker="html = html.replace(renderRe, block);"
           end=s.index(end_marker,start)+len(end_marker)
-          replacement=r'''const renderStart = html.indexOf('function renderStageOptions');
+          replacement="""const renderStart = html.indexOf('function renderStageOptions');
 if (renderStart < 0) throw new Error('renderStageOptions function not found');
-let renderEnd = html.indexOf('\n}\n\nfunction renderTypeOptions', renderStart);
-if (renderEnd < 0) renderEnd = html.indexOf('\r\n}\r\n\r\nfunction renderTypeOptions', renderStart);
+let renderEnd = html.indexOf('\\n}\\n\\nfunction renderTypeOptions', renderStart);
+if (renderEnd < 0) renderEnd = html.indexOf('\\r\\n}\\r\\n\\r\\nfunction renderTypeOptions', renderStart);
 if (renderEnd < 0) throw new Error('renderStageOptions end anchor not found');
-renderEnd += html[renderEnd] === '\r' ? 3 : 2;
-html = html.slice(0, renderStart) + block + html.slice(renderEnd);'''
+renderEnd += html[renderEnd] === '\\r' ? 3 : 2;
+html = html.slice(0, renderStart) + block + html.slice(renderEnd);"""
           s=s[:start]+replacement+s[end:]
           p.write_text(s)
+          PY
       - name: Verify installer source parses
         run: node --check tools/install_problem_grammar_chronology.mjs
       - name: Commit repair
