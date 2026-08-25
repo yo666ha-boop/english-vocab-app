@@ -20,7 +20,7 @@ const fallbackCode=String.raw`
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw\`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV\`.toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set("I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV".toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -53,7 +53,7 @@ function buildGerundFallbacks() {
   const acts=[
     {base:'play with a dog',ger:'playing with a dog',jp:'犬と遊ぶこと'},
     {base:'read a book',ger:'reading a book',jp:'本を読むこと'},
-    {base:'write my name',ger:'writing my name',jp:'自分の名前を書くこと'},
+    {base:'write',ger:'writing',jp:'書くこと'},
     {base:'sing',ger:'singing',jp:'歌うこと'},
     {base:'swim',ger:'swimming',jp:'泳ぐこと'},
     {base:'run in the park',ger:'running in the park',jp:'公園で走ること'},
