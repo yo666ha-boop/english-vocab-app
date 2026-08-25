@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 
+// 2026-08-26: rerun after all past-stage category fallbacks matrix.
 const MATRIX='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const HTML='problem-app/index.html';
 const OUT='audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json';
