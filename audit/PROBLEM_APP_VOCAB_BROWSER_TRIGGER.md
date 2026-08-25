@@ -15,3 +15,4 @@ Post-remaining-severe-generic-fallback full browser matrix rerun requested on 20
 Post-past-tense-runtime-category-fix full browser matrix rerun requested on 2026-08-26 07:49 JST.
 Post-there-is-next-band-fallback full browser matrix rerun requested on 2026-08-26 07:56 JST.
 Post-be-vs-verb-distinction-fallback full browser matrix rerun requested on 2026-08-26 08:04 JST.
+Post-all-past-stage-categories-fallback full browser matrix rerun requested on 2026-08-26 08:10 JST.
