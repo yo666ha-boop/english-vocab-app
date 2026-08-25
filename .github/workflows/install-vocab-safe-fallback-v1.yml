@@ -1,0 +1,47 @@
+name: Install vocab-safe fallback v1
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/install_vocab_safe_fallback_v1.mjs
+      - .github/workflows/install-vocab-safe-fallback-v1.yml
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install fallback engine
+        run: node tools/install_vocab_safe_fallback_v1.mjs
+      - name: Sanity markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'VOCAB_SAFE_FALLBACK_V1' problem-app/index.html
+          grep -q 'appendVocabFallbacks' problem-app/index.html
+          grep -q 'VOCAB_SAFE_FALLBACK_INSTALL_RESULT' /dev/null 2>/dev/null || test -f audit/VOCAB_SAFE_FALLBACK_INSTALL_RESULT.json
+      - name: Commit candidate app
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html audit/VOCAB_SAFE_FALLBACK_INSTALL_RESULT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: install vocab-safe grammar fallback candidate [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
