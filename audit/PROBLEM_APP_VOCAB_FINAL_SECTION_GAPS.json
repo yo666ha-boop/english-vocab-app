@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T18:25:52.039Z",
+  "generated_at": "2026-08-25T18:33:01.876Z",
   "scope": "all_textbooks_all_grades_all_sections_all_grammar_categories",
   "final_section_totals": {
     "category_rows": 106,
@@ -132,20 +132,6 @@
       "off": 365,
       "on": 1,
       "retention_pct": 0.27,
-      "zeroed": false,
-      "severe_under_25pct": true,
-      "under_50pct": true
-    },
-    {
-      "grade": "中1",
-      "textbook": "サンシャイン",
-      "section": "Our Project 2",
-      "position": 30,
-      "section_count": 39,
-      "category": "be動詞（現在形）",
-      "off": 563,
-      "on": 128,
-      "retention_pct": 22.74,
       "zeroed": false,
       "severe_under_25pct": true,
       "under_50pct": true
