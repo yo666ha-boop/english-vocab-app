@@ -193,6 +193,41 @@ function buildWordOrderFallbacks() {
   return out;
 }
 
+
+function buildImperativeFallbacks() {
+  const rows=[
+    ['read a book','本を読みなさい。'],['write your name','名前を書きなさい。'],['study English','英語を勉強しなさい。'],['listen','聞きなさい。'],['look here','ここを見なさい。'],['come here','ここへ来なさい。'],['go home','家へ行きなさい。'],['play','遊びなさい。'],['sing','歌いなさい。'],['swim','泳ぎなさい。'],['run','走りなさい。'],['cook','料理しなさい。']
+  ];
+  const out=[];
+  rows.forEach((r,i)=>{
+    const stem=String(i+1).padStart(3,'0');
+    const cmd=r[0][0].toUpperCase()+r[0].slice(1)+'.';
+    out.push(vocabFallbackItem('中1','命令文','英作文','IMP-WRITE-'+stem,'『'+r[1]+'』を英語で書きなさい。',cmd));
+    out.push(vocabFallbackItem('中1','命令文','選択','IMP-CHOICE-'+stem,'命令文として正しいものを ( '+cmd+' / You '+cmd+' ) から選びなさい。',cmd));
+    out.push(vocabFallbackItem('中1','命令文','間違い直し','IMP-FIX-'+stem,'You '+cmd+' の誤りを直しなさい。',cmd));
+  });
+  return out;
+}
+
+function buildPresentVerbFallbacks() {
+  const subjects=[{en:'I',jp:'私は'},{en:'You',jp:'あなたは'},{en:'We',jp:'私たちは'},{en:'They',jp:'彼らは'}];
+  const verbs=[
+    {en:'study English',jp:'英語を勉強します'},{en:'read a book',jp:'本を読みます'},{en:'write',jp:'書きます'},{en:'sing',jp:'歌います'},
+    {en:'swim',jp:'泳ぎます'},{en:'run',jp:'走ります'},{en:'cook',jp:'料理します'},{en:'play',jp:'遊びます'},{en:'like English',jp:'英語が好きです'},
+    {en:'have a book',jp:'本を持っています'},{en:'go home',jp:'家へ行きます'},{en:'come here',jp:'ここへ来ます'}
+  ];
+  const out=[]; let n=1;
+  for(const s of subjects) for(const v of verbs){
+    const stem=String(n++).padStart(3,'0');
+    const full=s.en+' '+v.en+'.';
+    const neg=s.en+' do not '+v.en+'.';
+    out.push(vocabFallbackItem('中1','一般動詞','英作文','PRS-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+s.jp+v.jp+'。』',full));
+    out.push(vocabFallbackItem('中1','一般動詞','変形','PRS-NEG-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','一般動詞','空所補充','PRS-FILL-'+stem,s.en+' (      ) '+v.en.split(' ').slice(1).join(' ')+'. 文が自然になるように動詞を書きなさい。',v.en.split(' ')[0]));
+  }
+  return out;
+}
+
 function buildConjunctionFallbacks() {
   const subjects=[
     {en:'I',low:'I',jp:'私は',be:'am'},
@@ -233,7 +268,7 @@ function buildConjunctionFallbacks() {
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;
