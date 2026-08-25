@@ -1,0 +1,25 @@
+{
+  "checkpoint_version": "v47",
+  "recorded_at": "2026-08-25T11:04:00Z",
+  "repository": "yo666ha-boop/english-vocab-app",
+  "branch": "mikami-canonical-repair",
+  "actual_head_before_checkpoint": "22d918b72b0af1166bacdb267b0ae1ef2c55077d",
+  "problem_app_print_fix": {
+    "main_commit": "6e96db211f302152042749dc8a7379740736ea8c",
+    "public_url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/",
+    "rule": "A4 portrait; at most 10 questions per page, two columns and a page-filling answer-space cell for every question.",
+    "twenty_questions": "2 pages, 10 questions per page, five rows by two columns.",
+    "source_validation": "PASS",
+    "github_pages_run": {
+      "id": 32840316860,
+      "status": "queued"
+    }
+  },
+  "my_gpt_scope": "Answer photos, analysis, distribution/interview/continuation reports, and generated practice sets remain My GPT responsibilities.",
+  "protected": {
+    "root_main_index_html": "UNCHANGED",
+    "vercel_project": "UNCHANGED (prj_k85GEgd76tQvHoL8YC9IDjnq553e)",
+    "automation_schedule": "NOT_MODIFIED"
+  },
+  "overall_completion": false
+}
