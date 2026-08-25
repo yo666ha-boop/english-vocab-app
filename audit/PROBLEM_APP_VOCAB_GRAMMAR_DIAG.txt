@@ -270,7 +270,7 @@ div>
   
   <script id="qb-data" type="application/json">[{"id":"E1-BQ-001","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"not の位置ミス","cause":"変形ルール未定着","q":"He is busy. を否定文にしなさい。","a":"He is not busy."},{"id":"E1-BQ-002","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"be動詞を前に出せない","cause":"疑問文の型不足","q":"You are happy. を疑問文にしなさい。","a":"Are you happy?"},{"id":"E1-BQ-003","subject":"英語","grade":"中1","category":"be動詞","type":"答え方","mistake":"Yes/No 応答ミス","cause":"答え方の型不足","q":"Are you a student? に Yes で答えなさい。","a":"Yes, I am."},{"id":"E1-BQ-004","subject":"英語","grade":"中1","category":"be動詞","type":"並びかえ","mistake":"not の位置ミス","cause":"語順不安定","q":"次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )","a":"She is not kind."},{"id":"E1-BQ-005","subject":"英語","grade":"中1","category":"be動詞","type":"間違い直し","mistake":"主語に合う be 動詞ミス","cause":"主語と動詞の対応不足","q":"Are he busy? の誤りを直しなさい。","a":"Is he busy?"},{"id":"E1-BQ-006","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"am not の位置ミス","cause":"否定文の型不足","q":"I am busy. を否定文にしなさい。","a":"I am not busy."},{"id":"E1-BQ-007","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"疑問文の語順ミス","cause":"be動詞を前に出せない","q":"She is a teacher. を疑問文にしなさい。","a":"Is she a teacher?"},{"id":"E1-B
 
---- 単語制限 #4 @ 2608743 ---
+--- 単語制限 #4 @ 2608718 ---
 n a;
 }
 
@@ -3503,11 +3503,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3515,7 +3515,7 @@ function buildBePresentFallbacks() {
 function buildPastProgressiveFallbacks() {
   const subjects=[
     {en:'I',be:'was',wrong:'were',jp:'私は'},
-    {en:'You
+    {en:'You',be:'were',wrong:'was',j
 
 --- vocab #37 @ 2599571 ---
 nst acts=[
@@ -3563,11 +3563,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3577,7 +3577,7 @@ function buildPastProgressiveFallbacks() {
     {en:'I',be:'was',wrong:'were',jp:'私は'},
     {en:'You',be:'were',wrong:'was',jp:'あなたは'},
     {en:'We',be:'were',wrong:'was',jp:'私たちは'},
-    {en:'They',be
+    {en:'They',be:'were',wrong:'was',jp:'彼
 
 --- vocab #38 @ 2599673 ---
 ger:'reading a book',jp:'本を読むこと'},
@@ -3623,11 +3623,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3641,7 +3641,7 @@ function buildPastProgressiveFallbacks() {
   ];
   const acts=[
     {ger:'reading a book',jp:'本を読んでいました'},
-    {ger:
+    {ger:'playing in the park',jp:
 
 --- vocab #39 @ 2599794 ---
 
@@ -3685,11 +3685,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3705,7 +3705,9 @@ function buildPastProgressiveFallbacks() {
     {ger:'reading a book',jp:'本を読んでいました'},
     {ger:'playing in the park',jp:'公園で遊んでいました'},
     {ger:'studying English',jp:'英語を勉強していました'},
-    {ger:'cooking at home',jp:'家で料
+    {ger:'cooking at home',jp:'家で料理していました'}
+  ];
+  const ou
 
 --- vocab #40 @ 2600566 ---
 t.push(vocabFallbackItem('中2','動名詞','変形','GER-CHANGE-'+stem,full+' を否定文にしなさい。',s.en+' do not like '+act.ger+'.'));
@@ -3734,11 +3736,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3766,10 +3768,10 @@ function buildPastProgressiveFallbacks() {
     out.push(vocabFallbackItem('中1','過去進行形','選択','PPR-CHOICE-'+stem,s.en+' ( was / were ) '+a.ger+'. 正しい語を選びなさい。',s.be));
     out.push(vocabFallbackItem('中1','過去進行形','変形','PPR-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
     out.push(vocabFallbackItem('中1','過去進行形','英作文','PPR-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','過去進行形','間違い直し','PPR-FIX-'+stem,
+    out.push(vocabFallbackItem('中1','過去進行形','間違い直し','PPR-FIX-'+stem,s.en+' '+s.wrong+' '+a.ge
 
---- vocab #41 @ 2600699 ---
-FallbackItem('中2','動名詞','間違い直し','GER-FIX-'+stem,s.en+' like '+act.base+'. の誤りを直しなさい。',full));
+--- vocab #41 @ 2600694 ---
+vocabFallbackItem('中2','動名詞','間違い直し','GER-FIX-'+stem,s.en+' like '+act.base+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3794,11 +3796,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3833,10 +3835,10 @@ function buildPastProgressiveFallbacks() {
 
 function buildConjunctionFallbacks() {
   const subjects=[
-    
+    {en:'I',low:'I',jp:'
 
---- vocab #42 @ 2600826 ---
-ildBePresentFallbacks() {
+--- vocab #42 @ 2600816 ---
+unction buildBePresentFallbacks() {
   const subjects=[
     {en:'I',be:'am',wrong:'are',jp:'私は'},
     {en:'You',be:'are',wrong:'am',jp:'あなたは'},
@@ -3855,11 +3857,11 @@ ildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3897,10 +3899,11 @@ function buildConjunctionFallbacks() {
     {en:'I',low:'I',jp:'私は',be:'am'},
     {en:'You',low:'you',jp:'あなたは',be:'are'},
     {en:'We',low:'we',jp:'私たちは',be:'are'},
-    {
+    {en:'They',low:'
 
---- vocab #43 @ 2600923 ---
-ou',be:'are',wrong:'am',jp:'あなたは'},
+--- vocab #43 @ 2600908 ---
+は'},
+    {en:'You',be:'are',wrong:'am',jp:'あなたは'},
     {en:'We',be:'are',wrong:'am',jp:'私たちは'},
     {en:'They',be:'are',wrong:'is',jp:'彼らは'}
   ];
@@ -3916,11 +3919,11 @@ ou',be:'are',wrong:'am',jp:'あなたは'},
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -3962,10 +3965,10 @@ function buildConjunctionFallbacks() {
   ];
   const scenarios=[];
   for(const s of subjects) {
- 
+    scenari
 
---- vocab #44 @ 2601030 ---
-ong:'is',jp:'彼らは'}
+--- vocab #44 @ 2601010 ---
+n:'They',be:'are',wrong:'is',jp:'彼らは'}
   ];
   const complements=[
     {en:'a student',jp:'生徒です'},
@@ -3979,11 +3982,11 @@ ong:'is',jp:'彼らは'}
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -4025,11 +4028,12 @@ function buildConjunctionFallbacks() {
   ];
   const scenarios=[];
   for(const s of subjects) {
-    scenarios.push({conj:'because',hint:'〜なので',en:s.en+' go home because it is cold.',jp:s.jp+'寒いので家に帰ります。'}
+    scenarios.push({conj:'because',hint:'〜なので',en:s.en+' go home because it is cold.',jp:s.jp+'寒いので家に帰ります。'});
+  
 
---- vocab #45 @ 2601865 ---
-BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+--- vocab #45 @ 2601840 ---
+作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }
@@ -4080,7 +4084,7 @@ function buildConjunctionFallbacks() {
     scenarios.push({conj:'when',hint:'〜するとき',en:s.en+' cook when '+s.low+' '+s.be+' at home.',jp:s.jp+'家にいるとき、料理します。'});
     scenarios.push({conj:'if',hint:'もし〜なら',en:'If '+s.low+' '+s.be+' at home, '+s.low+' read a book.',jp:'もし家にいるなら
 
---- vocab #46 @ 2601996 ---
+--- vocab #46 @ 2601971 ---
 +s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
@@ -4137,7 +4141,7 @@ function buildConjunctionFallbacks() {
     const stem=String(i+1).padStart(3,'0');
     const blank=
 
---- vocab #47 @ 2602118 ---
+--- vocab #47 @ 2602093 ---
 [
     {en:'I',be:'was',wrong:'were',jp:'私は'},
     {en:'You',be:'were',wrong:'was',jp:'あなたは'},
@@ -4189,7 +4193,7 @@ function buildConjunctionFallbacks() {
     const blank=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'(      )');
     const select=sc.en.replace(new RegExp('\\b'+sc.conj+'\\
 
---- vocab #48 @ 2602212 ---
+--- vocab #48 @ 2602187 ---
     {en:'We',be:'were',wrong:'was',jp:'私たちは'},
     {en:'They',be:'were',wrong:'was',jp:'彼らは'}
   ];
@@ -4239,7 +4243,7 @@ function buildConjunctionFallbacks() {
     const select=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'( because / if / when )');
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'
 
---- vocab #49 @ 2602316 ---
+--- vocab #49 @ 2602291 ---
 st acts=[
     {ger:'reading a book',jp:'本を読んでいました'},
     {ger:'playing in the park',jp:'公園で遊んでいました'},
@@ -4287,7 +4291,7 @@ function buildConjunctionFallbacks() {
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'because':'if');
     const wrongSentence=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),m=>m[0]===m[0]
 
---- vocab #50 @ 2604382 ---
+--- vocab #50 @ 2604357 ---
 :s.en+' cook when '+s.low+' '+s.be+' at home.',jp:s.jp+'家にいるとき、料理します。'});
     scenarios.push({conj:'if',hint:'もし〜なら',en:'If '+s.low+' '+s.be+' at home, '+s.low+' read a book.',jp:'もし家にいるなら、'+s.jp+'本を読みます。'});
   }
@@ -6927,7 +6931,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.s
 
---- grammar #41 @ 2606422 ---
+--- grammar #41 @ 2606397 ---
 });
   return _vocabFallbackBankCache;
 }
@@ -6998,7 +7002,7 @@ function updateBuilderStatus(candidates) {
   if (subj === '英語') {
     msg += ' / 教科
 
---- grammar #42 @ 2607474 ---
+--- grammar #42 @ 2607449 ---
 s.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
@@ -9220,7 +9224,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za
 
---- textbook #35 @ 2608243 ---
+--- textbook #35 @ 2608218 ---
 s.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -9287,7 +9291,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: 
 
---- textbook #36 @ 2611506 ---
+--- textbook #36 @ 2611481 ---
 size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -9347,7 +9351,7 @@ function refreshList() {
 function syncListSelectors() {
   el('listSubject').value = currentSubjec
 
---- textbook #37 @ 2613790 ---
+--- textbook #37 @ 2613765 ---
 nt = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -9403,7 +9407,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]
 
---- textbook #38 @ 2615611 ---
+--- textbook #38 @ 2615586 ---
 dEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
   document.addEventListener('change', evt => {
@@ -12446,7 +12450,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndex
 
---- section #46 @ 2608278 ---
+--- section #46 @ 2608253 ---
 pe)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -12513,7 +12517,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: Math.ceil(pageQuestions.length / 2
 
---- section #47 @ 2611363 ---
+--- section #47 @ 2611338 ---
 n;overflow:hidden;page-break-after:always;break-after:page}
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
@@ -12567,7 +12571,7 @@ function refreshList() {
 <td>${item.category}</td>
 <td>${ite
 
---- section #48 @ 2611579 ---
+--- section #48 @ 2611554 ---
 ;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -12631,7 +12635,7 @@ function syncListSelectors() {
 
 function wireEvents() 
 
---- section #49 @ 2611748 ---
+--- section #49 @ 2611723 ---
 splay:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
   .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
   .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
@@ -12695,7 +12699,7 @@ function wireEvents() {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); u
 
---- section #50 @ 2613467 ---
+--- section #50 @ 2613442 ---
 bject === '英語' && item.grade === currentGrade() && !passesVocab(item, vocabMode)) return false;
     if (kw) {
       const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
@@ -13435,7 +13439,7 @@ function selectedCategories() {
   if (!stages.length) return [];
   c
 
---- filter #4 @ 2605335 ---
+--- filter #4 @ 2605310 ---
 ,blank+' 「'+sc.hint+'」に合う接続詞を書きなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','選択','CONJ-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
@@ -13497,7 +13501,7 @@ function baseFiltered(overrideMode) {
   const types = selectedValues('input[data-type]');
   const originals =
 
---- filter #5 @ 2606937 ---
+--- filter #5 @ 2606912 ---
 s.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
@@ -13567,7 +13571,7 @@ function renderQuestions() {
     currentQuestions = [];
     el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。
 
---- filter #6 @ 2607145 ---
+--- filter #6 @ 2607120 ---
  if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
@@ -13636,7 +13640,7 @@ function renderQuestions() {
   currentQuestions = picked;
   el('questionPreview').classList.toggle(
 
---- filter #7 @ 2607987 ---
+--- filter #7 @ 2607962 ---
 electedValues('input[data-type]');
   const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
@@ -13704,7 +13708,7 @@ function printQuestions() {
   const pages = [];
   for (let startIndex = 0; sta
 
---- filter #8 @ 2608582 ---
+--- filter #8 @ 2608557 ---
 t a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
@@ -13772,7 +13776,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:
 
---- filter #9 @ 2612409 ---
+--- filter #9 @ 2612384 ---
 tbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div>
 <div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div>
 </section>`).join('')}
@@ -13834,7 +13838,7 @@ function wireEvents() {
   document.addEventListener('change', evt => {
     if (evt.target.ma
 
---- filter #10 @ 2613578 ---
+--- filter #10 @ 2613553 ---
      const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
       if (!hay.includes(kw)) return false;
     }
@@ -13888,7 +13892,7 @@ function wireEvents() {
   if (el('importJsonInput')) el('importJsonInput').addEventListener('change', evt => {
     const file = evt.target.files 
 
---- filter #11 @ 2613767 ---
+--- filter #11 @ 2613742 ---
 'listStatus').textContent = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -13944,7 +13948,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>
 
---- filter #12 @ 2613917 ---
+--- filter #12 @ 2613892 ---
 el('listBody').innerHTML = rows.map(item => `
     <tr>
 <td>${item.id}</td>
@@ -14004,7 +14008,7 @@ renderTypeOptions();
 syncListSelectors();
 wireE
 
---- filter #13 @ 2614041 ---
+--- filter #13 @ 2614016 ---
 {item.category}</td>
 <td>${item.type}</td>
 <td>${item.q}</td>
@@ -14063,7 +14067,7 @@ try {
   if (saved) applyState(JSON.parse(saved));
 } catch (e) {}
 
---- filter #14 @ 2614133 ---
+--- filter #14 @ 2614108 ---
 ('');
 }
 
@@ -14123,7 +14127,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #15 @ 2614285 ---
+--- filter #15 @ 2614260 ---
  {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); updateBuilderStatus(baseFiltered()); });
@@ -14175,7 +14179,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #16 @ 2615872 ---
+--- filter #16 @ 2615847 ---
 t', evt => {
     if (evt.target.closest('input[type=text], textarea')) autoSave();
   });
@@ -14209,7 +14213,7 @@ updateBuilderStatus(baseFiltered());
 </html>
 
 ===== candidate : 8 hits =====
---- candidate #1 @ 2607880 ---
+--- candidate #1 @ 2607855 ---
 rentSubject();
   const grade = currentGrade();
   const categories = selectedCategories();
@@ -14277,7 +14281,7 @@ function printQuestions() {
 <div class="n">Q${index + 1}　${escapeHtml(q.id)}</div>
 <div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div c
 
---- candidate #2 @ 2608164 ---
+--- candidate #2 @ 2608139 ---
 ories.length && !categories.includes(item.category)) return false;
     if (types.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
@@ -14344,7 +14348,7 @@ function printQuestions() {
     pages.push({
       html: pageQuestions.map
 
---- candidate #3 @ 2608403 ---
+--- candidate #3 @ 2608378 ---
     if (!passesQualityGate(item)) return false;
     return true;
   });
@@ -14417,7 +14421,7 @@ function printQuestions() {
 <style>
   @p
 
---- candidate #4 @ 2608565 ---
+--- candidate #4 @ 2608540 ---
 fle(arr) {
   const a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
@@ -14486,7 +14490,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#
 
---- candidate #5 @ 2608616 ---
+--- candidate #5 @ 2608591 ---
 length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
@@ -14554,7 +14558,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:2
 
---- candidate #6 @ 2608636 ---
+--- candidate #6 @ 2608611 ---
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
@@ -14621,7 +14625,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:281mm;display:flex;fl
 
---- candidate #7 @ 2608838 ---
+--- candidate #7 @ 2608813 ---
 de = currentGrade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14682,7 +14686,7 @@ function printQuestions() {
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 a
 
---- candidate #8 @ 2608852 ---
+--- candidate #8 @ 2608827 ---
 ade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
