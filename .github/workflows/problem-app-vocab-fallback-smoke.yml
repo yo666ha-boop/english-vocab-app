@@ -116,7 +116,7 @@ jobs:
                 () => {
                   window.__printHtml=''; window.__printCalled=false; window.__printWin=null;
                   window.open=()=>{
-                    const w={document:{write:s=>{window.__printHtml=String(s)},close:()=>{}},focus:()=>{},print:()=>{window.__printCalled=true},onload:null};
+                    const w={document:{open:()=>{},write:s=>{window.__printHtml=String(s)},close:()=>{}},focus:()=>{},print:()=>{window.__printCalled=true},onload:null};
                     window.__printWin=w; return w;
                   };
                 }
