@@ -32,58 +32,156 @@ jobs:
           import json, re
 
           url = Path('problem-app/index.html').resolve().as_uri()
-          result = {'url': url, 'matrix': {}}
+          result = {'url': url, 'matrix': {}, 'grammar_attrition': {}}
 
           def candidate_count(text):
               m = re.search(r'この条件で使える候補\s*(\d+)件', text or '')
               return int(m.group(1)) if m else None
 
+          def set_all_stages(page, checked):
+              page.evaluate("""
+                checked => {
+                  document.querySelectorAll('input[data-stage]').forEach(x => {
+                    x.checked = checked;
+                    x.dispatchEvent(new Event('change', {bubbles:true}));
+                  });
+                }
+              """, checked)
+
+          def set_all_types(page, checked=True):
+              page.evaluate("""
+                checked => {
+                  document.querySelectorAll('input[data-type]').forEach(x => {
+                    x.checked = checked;
+                    x.dispatchEvent(new Event('change', {bubbles:true}));
+                  });
+                }
+              """, checked)
+
+          def stage_defs(page):
+              return page.locator('input[data-stage]').evaluate_all("""
+                els => els.map((x, i) => ({
+                  index: i,
+                  value: x.value,
+                  stage: x.dataset.stage,
+                  label: (x.closest('label')?.innerText || x.parentElement?.innerText || x.value || '').trim()
+                }))
+              """)
+
+          def select_only_stage(page, index):
+              page.evaluate("""
+                index => {
+                  const els = Array.from(document.querySelectorAll('input[data-stage]'));
+                  els.forEach((x, i) => {
+                    x.checked = i === index;
+                    x.dispatchEvent(new Event('change', {bubbles:true}));
+                  });
+                }
+              """, index)
+
           with sync_playwright() as p:
               browser = p.chromium.launch()
               page = browser.new_page()
+              console_errors = []
+              page.on('console', lambda msg: console_errors.append(msg.text) if msg.type == 'error' else None)
               page.goto(url, wait_until='load')
               page.select_option('#subjectSelect', '英語')
 
               for grade in ['中1','中2','中3']:
                   page.select_option('#gradeSelect', grade)
                   page.wait_for_timeout(50)
-                  page.evaluate("""
-                    () => {
-                      document.querySelectorAll('input[data-stage], input[data-type]').forEach(x => {
-                        x.checked = true;
-                        x.dispatchEvent(new Event('change', {bubbles:true}));
-                      });
-                    }
-                  """)
+                  set_all_stages(page, True)
+                  set_all_types(page, True)
+                  stages = stage_defs(page)
                   result['matrix'][grade] = {}
+                  result['grammar_attrition'][grade] = {}
                   textbooks = page.locator('#textbookSelect option').evaluate_all("els => els.map(x => x.value).filter(Boolean)")
+
                   for tb in textbooks:
                       page.select_option('#textbookSelect', tb)
                       page.wait_for_timeout(30)
-                      sections = page.locator('#sectionSelect option').evaluate_all("els => els.map(x => ({value:x.value,text:x.textContent}))")
+                      sections = page.locator('#sectionSelect option').evaluate_all("els => els.map(x => ({value:x.value,text:(x.textContent || '').trim()}))")
                       valid = [x for x in sections if x['value']]
                       if not valid:
                           result['matrix'][grade][tb] = {'error':'no sections'}
+                          result['grammar_attrition'][grade][tb] = {'error':'no sections'}
                           continue
+
                       positions = sorted(set([0, len(valid)//2, len(valid)-1]))
-                      # Vocab OFF baseline after all grammar stages and all problem types are checked.
+                      set_all_stages(page, True)
                       page.select_option('#vocabMode', 'off')
                       page.wait_for_timeout(20)
                       off_text = page.locator('#builderStatus').inner_text()
-                      rec = {'vocab_off_all_grammar': {'candidates':candidate_count(off_text),'status':off_text}, 'vocab_on_sections':[]}
+                      rec = {
+                          'vocab_off_all_grammar': {'candidates':candidate_count(off_text),'status':off_text},
+                          'vocab_on_sections':[]
+                      }
                       page.select_option('#vocabMode', 'on')
                       for pos in positions:
                           sec = valid[pos]
                           page.select_option('#sectionSelect', sec['value'])
                           page.wait_for_timeout(20)
                           text = page.locator('#builderStatus').inner_text()
-                          rec['vocab_on_sections'].append({'position':pos+1,'section_count':len(valid),'section':sec['text'],'candidates':candidate_count(text),'status':text})
+                          rec['vocab_on_sections'].append({
+                              'position':pos+1,
+                              'section_count':len(valid),
+                              'section':sec['text'],
+                              'candidates':candidate_count(text),
+                              'status':text
+                          })
                       result['matrix'][grade][tb] = rec
-              result['console_errors'] = []
+
+                      # Measure each grammar checkbox independently. This catches learned grammar
+                      # categories that disappear only because the vocabulary gate rejects their items.
+                      attr_sections = []
+                      for pos in positions:
+                          sec = valid[pos]
+                          page.select_option('#sectionSelect', sec['value'])
+                          page.wait_for_timeout(10)
+                          rows = []
+                          for st in stages:
+                              select_only_stage(page, st['index'])
+                              page.select_option('#vocabMode', 'off')
+                              page.wait_for_timeout(5)
+                              off = candidate_count(page.locator('#builderStatus').inner_text())
+                              page.select_option('#vocabMode', 'on')
+                              page.wait_for_timeout(5)
+                              on = candidate_count(page.locator('#builderStatus').inner_text())
+                              if off and off > 0:
+                                  retention = round((on or 0) * 100.0 / off, 2)
+                                  rows.append({
+                                      'stage_index': st['index'],
+                                      'data_stage': st['stage'],
+                                      'value': st['value'],
+                                      'label': st['label'],
+                                      'off': off,
+                                      'on': on or 0,
+                                      'retention_pct': retention,
+                                      'zeroed': (on or 0) == 0,
+                                      'severe_under_25pct': retention < 25.0
+                                  })
+                          attr_sections.append({
+                              'position': pos+1,
+                              'section_count': len(valid),
+                              'section': sec['text'],
+                              'categories': rows,
+                              'zeroed_categories': [r['value'] for r in rows if r['zeroed']],
+                              'severe_categories': [r['value'] for r in rows if r['severe_under_25pct']]
+                          })
+                      result['grammar_attrition'][grade][tb] = {
+                          'stage_count': len(stages),
+                          'stages': stages,
+                          'sections': attr_sections
+                      }
+
+                  set_all_stages(page, True)
+
+              result['console_errors'] = console_errors
               browser.close()
 
           Path('audit').mkdir(exist_ok=True)
-          Path('audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          Path('audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json').write_text(
+              json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
       - name: Commit matrix
         shell: bash
         run: |
