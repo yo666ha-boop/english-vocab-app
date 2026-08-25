@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/problem-app-vocab-fallback-smoke.yml
       - audit/PROBLEM_APP_VOCAB_FALLBACK_SMOKE_TRIGGER.md
+      - problem-app/index.html
 
 permissions:
   contents: write
@@ -48,6 +49,15 @@ jobs:
                 }
               """, {'selector': selector, 'value': value})
 
+          def select_option_by_text_or_value(page, selector, wanted_texts):
+              opts=page.locator(selector+' option').evaluate_all("els=>els.map(x=>({value:x.value,text:(x.textContent||'').trim()}))")
+              for wanted in wanted_texts:
+                  for opt in opts:
+                      if opt['value']==wanted or opt['text']==wanted:
+                          page.select_option(selector,opt['value'])
+                          return opt['value']
+              raise AssertionError(f'option not found {selector}: wanted={wanted_texts} actual={opts}')
+
           def set_case(page, grade, textbook, stage, qtype):
               page.select_option('#subjectSelect','英語')
               page.select_option('#gradeSelect',grade)
@@ -60,8 +70,8 @@ jobs:
               page.select_option('#vocabMode','on')
               select_only(page,'input[data-stage]',stage)
               select_only(page,'input[data-type]',qtype)
-              page.select_option('#questionCount','20')
-              page.select_option('#pickMode','ordered')
+              select_option_by_text_or_value(page,'#questionCount',['20','20問'])
+              select_option_by_text_or_value(page,'#pickMode',['上から順','ordered','順番','先頭から'])
               page.wait_for_timeout(100)
               return sections[-1]
 
@@ -82,8 +92,6 @@ jobs:
               books=page.locator('#textbookSelect option').evaluate_all("els=>els.map(x=>x.value).filter(Boolean)")
               assert books, 'textbook options empty after load'
 
-              # Case 1: gerund / correction. The original bank has only 18 quality-eligible items of this type,
-              # so a 20-question ordered set must include deterministic fallback items.
               sec=set_case(page,'中2','サンシャイン','動名詞','間違い直し')
               status=page.locator('#builderStatus').inner_text()
               cand=candidate_count(status)
@@ -95,8 +103,7 @@ jobs:
               assert len(ids)==20, f'gerund generated {len(ids)}'
               assert vf, f'gerund fallback not used: {ids}'
 
-              # Persist currentQuestionIds through the normal change autosave path and prove synthetic IDs restore.
-              page.select_option('#pickMode','random')
+              select_option_by_text_or_value(page,'#pickMode',['ランダム','random','無作為'])
               page.wait_for_timeout(100)
               page.reload(wait_until='load')
               page.wait_for_timeout(100)
@@ -105,15 +112,11 @@ jobs:
               assert len(restored)==20, f'gerund restored {len(restored)}'
               assert restored_vf, f'fallback IDs not restored: {restored}'
 
-              # Print path: stub a child window and verify current questions are rendered into print HTML.
               page.evaluate("""
                 () => {
                   window.__printHtml=''; window.__printCalled=false; window.__printWin=null;
                   window.open=()=>{
-                    const w={
-                      document:{write:s=>{window.__printHtml=String(s)},close:()=>{}},
-                      focus:()=>{}, print:()=>{window.__printCalled=true}, onload:null
-                    };
+                    const w={document:{write:s=>{window.__printHtml=String(s)},close:()=>{}},focus:()=>{},print:()=>{window.__printCalled=true},onload:null};
                     window.__printWin=w; return w;
                   };
                 }
@@ -126,7 +129,6 @@ jobs:
               assert 'VF-' in print_html, 'fallback problem missing from print HTML'
               out['cases'].append({'name':'sunshine_g2_gerund_correction','section':sec,'candidates':cand,'generated':len(ids),'fallback_generated':len(vf),'restored':len(restored),'fallback_restored':len(restored_vf),'print_contains_fallback':True})
 
-              # Case 2: conjunction / reading. Ensure a formerly sparse grammar/type can still generate 20.
               sec=set_case(page,'中3','サンシャイン','接続詞','読解')
               status=page.locator('#builderStatus').inner_text()
               cand=candidate_count(status)
