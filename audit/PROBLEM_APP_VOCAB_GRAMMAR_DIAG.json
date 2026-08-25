@@ -1,6 +1,6 @@
 {
-  "bytes": 3792058,
-  "chars": 2595608,
+  "bytes": 3794529,
+  "chars": 2597867,
   "newlines": 615,
   "occurrences": {
     "単語制限": 4,
@@ -15,8 +15,8 @@
     "allowedWords": 0,
     "allowedVocabulary": 0,
     "textbook": 25,
-    "unit": 77,
-    "section": 29,
+    "unit": 78,
+    "section": 35,
     "grade": 10569,
     "filter": 14,
     "candidate": 8
@@ -47,10 +47,172 @@
     "outOfRange": 0,
     "priorGrade": 0,
     "totalValues": 21022,
-    "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated."
+    "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated.",
+    "safeRebuildVersion": "v8-canonical-safe-20260825-1based",
+    "safeRebuildPolicy": "reconstructed and trusted old positive are combined conservatively using later stage; unresolved stays -1",
+    "safeRebuildGeneratedAt": "2026-08-25T11:40:20.114Z",
+    "safeRebuildAppliedAt": "2026-08-25T11:42:14.077Z",
+    "safeRebuildChangedValues": 12778,
+    "safeRebuildUnchangedValues": 8244,
+    "safeRebuildOldResolved": 5345,
+    "safeRebuildNewResolved": 15878,
+    "safeRebuildUnknown": 5144,
+    "safeRebuildMapping": {
+      "サンシャイン": {
+        "中1": {
+          "csv_rows": 662,
+          "ui_sections": 39,
+          "max_current_number": 10,
+          "mapped_unique_pairs": 53,
+          "unmapped_unique_pairs": 0,
+          "unmapped_pairs": [],
+          "explicit_prior_rows": 0,
+          "implicit_prior_rows": 0
+        },
+        "中2": {
+          "csv_rows": 673,
+          "ui_sections": 33,
+          "max_current_number": 8,
+          "mapped_unique_pairs": 53,
+          "unmapped_unique_pairs": 2,
+          "unmapped_pairs": [
+            "PROGRAM10 Grandma ⟶ Our Project3 私が選んだ1枚",
+            "PROGRAM10 Grandma ⟶ Power-Up6 絵はがきを書こう"
+          ],
+          "explicit_prior_rows": 48,
+          "implicit_prior_rows": 0
+        },
+        "中3": {
+          "csv_rows": 527,
+          "ui_sections": 27,
+          "max_current_number": 7,
+          "mapped_unique_pairs": 46,
+          "unmapped_unique_pairs": 2,
+          "unmapped_pairs": [
+            "PROGRAM8 A ⟶ Power-Up5 飛行機のアナウンスを聞こう / Step5 説得力のある説明をしよう",
+            "PROGRAM8 A ⟶ Our Project6 My Heroの魅力を伝えよう"
+          ],
+          "explicit_prior_rows": 82,
+          "implicit_prior_rows": 3
+        }
+      },
+      "ニューホライズン": {
+        "中1": {
+          "csv_rows": 832,
+          "ui_sections": 46,
+          "max_current_number": 10,
+          "mapped_unique_pairs": 60,
+          "unmapped_unique_pairs": 0,
+          "unmapped_pairs": [],
+          "explicit_prior_rows": 0,
+          "implicit_prior_rows": 0
+        },
+        "中2": {
+          "csv_rows": 673,
+          "ui_sections": 35,
+          "max_current_number": 7,
+          "mapped_unique_pairs": 57,
+          "unmapped_unique_pairs": 0,
+          "unmapped_pairs": [],
+          "explicit_prior_rows": 85,
+          "implicit_prior_rows": 7
+        },
+        "中3": {
+          "csv_rows": 608,
+          "ui_sections": 30,
+          "max_current_number": 6,
+          "mapped_unique_pairs": 49,
+          "unmapped_unique_pairs": 1,
+          "unmapped_pairs": [
+            "Unit7 What ⟶ Real Life English 7 買い物 -申し出る・要望を伝える-"
+          ],
+          "explicit_prior_rows": 98,
+          "implicit_prior_rows": 13
+        }
+      }
+    },
+    "safeRebuildCoverage": {
+      "サンシャイン": {
+        "中1": {
+          "total": 2884,
+          "reconstructed": 2167,
+          "reconstructed_pct": 75.14,
+          "trusted_old": 2047,
+          "trusted_old_pct": 70.98,
+          "both": 1683,
+          "reconstructed_only": 484,
+          "old_only": 364,
+          "final_resolved": 2531,
+          "final_resolved_pct": 87.76
+        },
+        "中2": {
+          "total": 3707,
+          "reconstructed": 1992,
+          "reconstructed_pct": 53.74,
+          "trusted_old": 231,
+          "trusted_old_pct": 6.23,
+          "both": 130,
+          "reconstructed_only": 1862,
+          "old_only": 101,
+          "final_resolved": 2093,
+          "final_resolved_pct": 56.46
+        },
+        "中3": {
+          "total": 3920,
+          "reconstructed": 2704,
+          "reconstructed_pct": 68.98,
+          "trusted_old": 208,
+          "trusted_old_pct": 5.31,
+          "both": 94,
+          "reconstructed_only": 2610,
+          "old_only": 114,
+          "final_resolved": 2818,
+          "final_resolved_pct": 71.89
+        }
+      },
+      "ニューホライズン": {
+        "中1": {
+          "total": 2884,
+          "reconstructed": 2576,
+          "reconstructed_pct": 89.32,
+          "trusted_old": 1988,
+          "trusted_old_pct": 68.93,
+          "both": 1942,
+          "reconstructed_only": 634,
+          "old_only": 46,
+          "final_resolved": 2622,
+          "final_resolved_pct": 90.92
+        },
+        "中2": {
+          "total": 3707,
+          "reconstructed": 2837,
+          "reconstructed_pct": 76.53,
+          "trusted_old": 717,
+          "trusted_old_pct": 19.34,
+          "both": 619,
+          "reconstructed_only": 2218,
+          "old_only": 98,
+          "final_resolved": 2935,
+          "final_resolved_pct": 79.17
+        },
+        "中3": {
+          "total": 3920,
+          "reconstructed": 2851,
+          "reconstructed_pct": 72.73,
+          "trusted_old": 154,
+          "trusted_old_pct": 3.93,
+          "both": 126,
+          "reconstructed_only": 2725,
+          "old_only": 28,
+          "final_resolved": 2879,
+          "final_resolved_pct": 73.44
+        }
+      }
+    }
   },
   "likely_identifiers": [
     "Unit",
+    "Unit7",
     "baseFiltered",
     "byGrade",
     "candidates",
@@ -82,6 +244,7 @@
     "textbookSelect",
     "textbookWrap",
     "textbooks",
+    "ui_sections",
     "unit",
     "useVocabGate",
     "vocabCoordinateSemantics",
