@@ -1,0 +1,842 @@
+{
+  "generated_at_utc": "2026-08-25T15:26:42.645Z",
+  "books": {
+    "サンシャイン": {
+      "中1": {
+        "section_count": 39,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "プレステップ2",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（現在形）",
+            "anchor": "PROGRAM 1",
+            "index": 9,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（現在形）",
+            "anchor": "PROGRAM 2",
+            "index": 11,
+            "section": "PROGRAM 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞",
+            "anchor": "PROGRAM 2",
+            "index": 11,
+            "section": "PROGRAM 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "PROGRAM 3",
+            "index": 14,
+            "section": "PROGRAM 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "can",
+            "anchor": "PROGRAM 3",
+            "index": 14,
+            "section": "PROGRAM 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "PROGRAM 4",
+            "index": 18,
+            "section": "PROGRAM 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文",
+            "anchor": "アクションコーナー",
+            "index": 13,
+            "section": "アクションコーナー",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（３単現）",
+            "anchor": "PROGRAM 5",
+            "index": 20,
+            "section": "PROGRAM 5-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在進行形",
+            "anchor": "PROGRAM 8",
+            "index": 30,
+            "section": "PROGRAM 8-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（過去形）",
+            "anchor": "PROGRAM 10",
+            "index": 35,
+            "section": "PROGRAM 10-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（過去形）",
+            "anchor": "PROGRAM 9",
+            "index": 33,
+            "section": "PROGRAM 9-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "過去進行形",
+            "anchor": "PROGRAM 10",
+            "index": 35,
+            "section": "PROGRAM 10-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "there is ～，look ～ の文",
+            "anchor": "PROGRAM 7",
+            "index": 25,
+            "section": "PROGRAM 7-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": "PROGRAM 6",
+            "index": 23,
+            "section": "PROGRAM 6-1",
+            "status": "resolved"
+          }
+        ]
+      },
+      "中2": {
+        "section_count": 33,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（過去形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "進行形",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "there is ～ の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": "PROGRAM 1",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "助動詞",
+            "anchor": "PROGRAM 4",
+            "index": 13,
+            "section": "PROGRAM 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": "PROGRAM 2",
+            "index": 3,
+            "section": "PROGRAM 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞①",
+            "anchor": "PROGRAM 3",
+            "index": 7,
+            "section": "PROGRAM 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "動名詞",
+            "anchor": "PROGRAM 1",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型①（look ～，give A B）",
+            "anchor": "PROGRAM 5",
+            "index": 17,
+            "section": "PROGRAM 5-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "比較",
+            "anchor": "PROGRAM 6",
+            "index": 20,
+            "section": "PROGRAM 6-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型②（call A B，make A B）",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "受動態",
+            "anchor": "PROGRAM 8",
+            "index": 28,
+            "section": "PROGRAM 8-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（完了・経験）",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "現在完了形（継続），現在完了進行形",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "不定詞②",
+            "anchor": "PROGRAM 5",
+            "index": 17,
+            "section": "PROGRAM 5-1",
+            "status": "resolved"
+          }
+        ]
+      },
+      "中3": {
+        "section_count": 27,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（過去形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "進行形",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文，there is ～ の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "助動詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞①，動名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "比較",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型",
+            "anchor": "PROGRAM 3",
+            "index": 6,
+            "section": "PROGRAM 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "受動態",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（完了・経験）",
+            "anchor": "PROGRAM 1",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（継続），現在完了進行形",
+            "anchor": "PROGRAM 2",
+            "index": 3,
+            "section": "PROGRAM 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞②",
+            "anchor": "PROGRAM 1",
+            "index": 0,
+            "section": "PROGRAM 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "分詞と間接疑問文",
+            "anchor": "PROGRAM 4",
+            "index": 11,
+            "section": "PROGRAM 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "関係代名詞",
+            "anchor": "PROGRAM 5",
+            "index": 14,
+            "section": "PROGRAM 5-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "仮定法",
+            "anchor": "PROGRAM 7",
+            "index": 22,
+            "section": "PROGRAM 7-1・2",
+            "status": "resolved"
+          }
+        ]
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "section_count": 46,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "プレステップ2",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（現在形）",
+            "anchor": "Unit 1",
+            "index": 9,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（現在形）",
+            "anchor": "Unit 1",
+            "index": 9,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞",
+            "anchor": "Unit 1",
+            "index": 9,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "Unit 3",
+            "index": 15,
+            "section": "Unit 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "can",
+            "anchor": "Unit 2",
+            "index": 12,
+            "section": "Unit 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "Unit 6",
+            "index": 25,
+            "section": "Unit 6-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文",
+            "anchor": "Unit 4",
+            "index": 18,
+            "section": "Unit 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（３単現）",
+            "anchor": "Unit 5",
+            "index": 22,
+            "section": "Unit 5-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在進行形",
+            "anchor": "Unit 7",
+            "index": 29,
+            "section": "Unit 7-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（過去形）",
+            "anchor": "Unit 10",
+            "index": 40,
+            "section": "Unit 10-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（過去形）",
+            "anchor": "Unit 9",
+            "index": 37,
+            "section": "Unit 9-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "過去進行形",
+            "anchor": "Unit 10",
+            "index": 40,
+            "section": "Unit 10-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "there is ～，look ～ の文",
+            "anchor": "Unit 10",
+            "index": 40,
+            "section": "Unit 10-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": null,
+            "status": "not_in_grade"
+          }
+        ]
+      },
+      "中2": {
+        "section_count": 35,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（過去形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "進行形",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "there is ～ の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": "Unit 1",
+            "index": 1,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "助動詞",
+            "anchor": "Unit 4",
+            "index": 15,
+            "section": "Unit 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": "Unit 2",
+            "index": 5,
+            "section": "Unit 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞①",
+            "anchor": "Unit 3",
+            "index": 10,
+            "section": "Unit 3-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "動名詞",
+            "anchor": "Unit 4",
+            "index": 15,
+            "section": "Unit 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型①（look ～，give A B）",
+            "anchor": "Unit 1",
+            "index": 1,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "比較",
+            "anchor": "Unit 6",
+            "index": 22,
+            "section": "Unit 6-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型②（call A B，make A B）",
+            "anchor": "Unit 1",
+            "index": 1,
+            "section": "Unit 1-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "受動態",
+            "anchor": "Unit 7",
+            "index": 29,
+            "section": "Unit 7-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（完了・経験）",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "現在完了形（継続），現在完了進行形",
+            "anchor": null,
+            "status": "not_in_grade"
+          },
+          {
+            "stage": "不定詞②",
+            "anchor": "Unit 5",
+            "index": 19,
+            "section": "Unit 5-1",
+            "status": "resolved"
+          }
+        ]
+      },
+      "中3": {
+        "section_count": 30,
+        "rows": [
+          {
+            "stage": "英語の語順",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（現在形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "be動詞と一般動詞（過去形）",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "疑問詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "人称代名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "進行形",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "命令文，there is ～ の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "未来の文",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "助動詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "接続詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞①，動名詞",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "比較",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "文型",
+            "anchor": "Unit 1",
+            "index": 1,
+            "section": "Unit 1-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "受動態",
+            "anchor": "__start__",
+            "index": 0,
+            "section": "Unit 0",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（完了・経験）",
+            "anchor": "Unit 1",
+            "index": 1,
+            "section": "Unit 1-1・2",
+            "status": "resolved"
+          },
+          {
+            "stage": "現在完了形（継続），現在完了進行形",
+            "anchor": "Unit 2",
+            "index": 4,
+            "section": "Unit 2-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "不定詞②",
+            "anchor": "Unit 3",
+            "index": 7,
+            "section": "Unit 3-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "分詞と間接疑問文",
+            "anchor": "Unit 4",
+            "index": 14,
+            "section": "Unit 4-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "関係代名詞",
+            "anchor": "Unit 5",
+            "index": 19,
+            "section": "Unit 5-1",
+            "status": "resolved"
+          },
+          {
+            "stage": "仮定法",
+            "anchor": "Unit 6",
+            "index": 25,
+            "section": "Unit 6-1",
+            "status": "resolved"
+          }
+        ]
+      }
+    }
+  },
+  "totals": {
+    "anchors": 108,
+    "resolved": 108,
+    "hidden_null": 8,
+    "unresolved": 0
+  },
+  "unresolved": []
+}
