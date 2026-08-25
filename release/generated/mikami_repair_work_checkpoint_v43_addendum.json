@@ -1,0 +1,22 @@
+{
+  "checkpoint_schema":"mikami-repair-work-v43-addendum",
+  "updated_at_jst":"2026-08-25T03:12+09:00",
+  "base_checkpoint":"v42",
+  "branch":"mikami-canonical-repair",
+  "observed_branch_head":"91c186bf60406308d6e104ea36a6c3a881181d93",
+  "protected_scope":{"main_root_vocab_modified":false,"vercel_vocab_project_modified":false,"problem_app_v3":"PASS_RETAINED"},
+  "editor_draft":{
+    "route_id":"g-6a8d026915148191b33b8555d6c8f77c",
+    "title":"みかみ塾 答案分析GPT",
+    "formal_instructions_persisted":true,
+    "create_button_enabled":true,
+    "knowledge_jsonl_visible_or_verifiable":false,
+    "schema_json_visible_or_verifiable":false,
+    "creation_completed":false
+  },
+  "safety_decision":"Do not create an incomplete GPT while the required private Knowledge attachment cannot be verified; the prior upload action crashes the in-app editor.",
+  "current_stage":"recover a stable editor surface for required Knowledge/schema attachment, then create and capture actual /g/<id>",
+  "real_photo_folder_counts":{"correct_original":0,"multi_category_errors":0,"unreadable_answer":0,"school_test":0},
+  "next_start":"reopen this same draft and retry only a stable attachment path; verify exact filenames before clicking Create. Do not redo title, description, or formal instructions.",
+  "overall_completion":false
+}
