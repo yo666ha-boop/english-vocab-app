@@ -326,6 +326,30 @@ function buildPresentPerfectContinuousFallbacks() {
   return out;
 }
 
+
+function buildThereIsFallbacks() {
+  const rows=[
+    ['a book','in the room','本が部屋にあります'],
+    ['a pen','in the room','ペンが部屋にあります'],
+    ['a book','at school','本が学校にあります'],
+    ['a pen','at school','ペンが学校にあります'],
+    ['a dog','in the park','犬が公園にいます'],
+    ['a cat','in the park','ねこが公園にいます'],
+    ['a book','at home','本が家にあります'],
+    ['a pen','at home','ペンが家にあります']
+  ];
+  const out=[]; let n=1;
+  for(const [thing,place,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full='There is '+thing+' '+place+'.';
+    const question='Is there '+thing+' '+place+'?';
+    out.push(vocabFallbackItem('中2','there is ～ の文','空所補充','THERE-FILL-'+stem,'There (      ) '+thing+' '+place+'. 空所に入る語を書きなさい。','is'));
+    out.push(vocabFallbackItem('中2','there is ～ の文','英作文','THERE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'。』',full));
+    out.push(vocabFallbackItem('中2','there is ～ の文','変形','THERE-QUESTION-'+stem,full+' を疑問文にしなさい。',question));
+  }
+  return out;
+}
+
 function buildConjunctionFallbacks() {
   const subjects=[
     {en:'I',low:'I',jp:'私は',be:'am'},
@@ -366,7 +390,7 @@ function buildConjunctionFallbacks() {
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "added_runtime_categories": [
+    "中2 there is ～ の文"
+  ],
+  "design": "generic elementary-safe category fallback using exact stageMap runtime category; existing grammar chronology and lexical safety remain authoritative; no problem-ID, textbook, section, or measured-count exception"
+}
