@@ -1,0 +1,2043 @@
+{
+  "generated_at_utc": "2026-08-25T11:40:20.114Z",
+  "version": "v8-canonical-safe-20260825-1based",
+  "mapping": {
+    "サンシャイン": {
+      "中1": {
+        "csv_rows": 662,
+        "ui_sections": 39,
+        "max_current_number": 10,
+        "mapped_unique_pairs": 53,
+        "unmapped_unique_pairs": 0,
+        "unmapped_pairs": [],
+        "explicit_prior_rows": 0,
+        "implicit_prior_rows": 0
+      },
+      "中2": {
+        "csv_rows": 673,
+        "ui_sections": 33,
+        "max_current_number": 8,
+        "mapped_unique_pairs": 53,
+        "unmapped_unique_pairs": 2,
+        "unmapped_pairs": [
+          "PROGRAM10 Grandma ⟶ Our Project3 私が選んだ1枚",
+          "PROGRAM10 Grandma ⟶ Power-Up6 絵はがきを書こう"
+        ],
+        "explicit_prior_rows": 48,
+        "implicit_prior_rows": 0
+      },
+      "中3": {
+        "csv_rows": 527,
+        "ui_sections": 27,
+        "max_current_number": 7,
+        "mapped_unique_pairs": 46,
+        "unmapped_unique_pairs": 2,
+        "unmapped_pairs": [
+          "PROGRAM8 A ⟶ Power-Up5 飛行機のアナウンスを聞こう / Step5 説得力のある説明をしよう",
+          "PROGRAM8 A ⟶ Our Project6 My Heroの魅力を伝えよう"
+        ],
+        "explicit_prior_rows": 82,
+        "implicit_prior_rows": 3
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "csv_rows": 832,
+        "ui_sections": 46,
+        "max_current_number": 10,
+        "mapped_unique_pairs": 60,
+        "unmapped_unique_pairs": 0,
+        "unmapped_pairs": [],
+        "explicit_prior_rows": 0,
+        "implicit_prior_rows": 0
+      },
+      "中2": {
+        "csv_rows": 673,
+        "ui_sections": 35,
+        "max_current_number": 7,
+        "mapped_unique_pairs": 57,
+        "unmapped_unique_pairs": 0,
+        "unmapped_pairs": [],
+        "explicit_prior_rows": 85,
+        "implicit_prior_rows": 7
+      },
+      "中3": {
+        "csv_rows": 608,
+        "ui_sections": 30,
+        "max_current_number": 6,
+        "mapped_unique_pairs": 49,
+        "unmapped_unique_pairs": 1,
+        "unmapped_pairs": [
+          "Unit7 What ⟶ Real Life English 7 買い物 -申し出る・要望を伝える-"
+        ],
+        "explicit_prior_rows": 98,
+        "implicit_prior_rows": 13
+      }
+    }
+  },
+  "coverage": {
+    "サンシャイン": {
+      "中1": {
+        "total": 2884,
+        "reconstructed": 2167,
+        "reconstructed_pct": 75.14,
+        "trusted_old": 2047,
+        "trusted_old_pct": 70.98,
+        "both": 1683,
+        "reconstructed_only": 484,
+        "old_only": 364,
+        "final_resolved": 2531,
+        "final_resolved_pct": 87.76
+      },
+      "中2": {
+        "total": 3707,
+        "reconstructed": 1992,
+        "reconstructed_pct": 53.74,
+        "trusted_old": 231,
+        "trusted_old_pct": 6.23,
+        "both": 130,
+        "reconstructed_only": 1862,
+        "old_only": 101,
+        "final_resolved": 2093,
+        "final_resolved_pct": 56.46
+      },
+      "中3": {
+        "total": 3920,
+        "reconstructed": 2704,
+        "reconstructed_pct": 68.98,
+        "trusted_old": 208,
+        "trusted_old_pct": 5.31,
+        "both": 94,
+        "reconstructed_only": 2610,
+        "old_only": 114,
+        "final_resolved": 2818,
+        "final_resolved_pct": 71.89
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "total": 2884,
+        "reconstructed": 2576,
+        "reconstructed_pct": 89.32,
+        "trusted_old": 1988,
+        "trusted_old_pct": 68.93,
+        "both": 1942,
+        "reconstructed_only": 634,
+        "old_only": 46,
+        "final_resolved": 2622,
+        "final_resolved_pct": 90.92
+      },
+      "中2": {
+        "total": 3707,
+        "reconstructed": 2837,
+        "reconstructed_pct": 76.53,
+        "trusted_old": 717,
+        "trusted_old_pct": 19.34,
+        "both": 619,
+        "reconstructed_only": 2218,
+        "old_only": 98,
+        "final_resolved": 2935,
+        "final_resolved_pct": 79.17
+      },
+      "中3": {
+        "total": 3920,
+        "reconstructed": 2851,
+        "reconstructed_pct": 72.73,
+        "trusted_old": 154,
+        "trusted_old_pct": 3.93,
+        "both": 126,
+        "reconstructed_only": 2725,
+        "old_only": 28,
+        "final_resolved": 2879,
+        "final_resolved_pct": 73.44
+      }
+    }
+  },
+  "stage_distribution": {
+    "サンシャイン": {
+      "中1": {
+        "1": 148,
+        "4": 1,
+        "6": 2,
+        "7": 53,
+        "8": 2,
+        "9": 17,
+        "10": 82,
+        "11": 5,
+        "12": 278,
+        "13": 64,
+        "14": 177,
+        "15": 20,
+        "16": 12,
+        "17": 12,
+        "20": 1,
+        "21": 2,
+        "22": 2,
+        "23": 7,
+        "25": 16,
+        "26": 21,
+        "27": 4,
+        "29": 18,
+        "31": 434,
+        "32": 65,
+        "34": 196,
+        "35": 781,
+        "36": 107,
+        "37": 4
+      },
+      "中2": {
+        "1": 1706,
+        "2": 33,
+        "4": 39,
+        "6": 3,
+        "8": 8,
+        "13": 3,
+        "14": 3,
+        "15": 3,
+        "16": 27,
+        "17": 35,
+        "18": 36,
+        "23": 25,
+        "25": 54,
+        "26": 1,
+        "27": 12,
+        "28": 8,
+        "29": 2,
+        "30": 4,
+        "31": 9,
+        "32": 1,
+        "33": 81
+      },
+      "中3": {
+        "1": 2503,
+        "3": 34,
+        "4": 20,
+        "5": 200,
+        "24": 44,
+        "25": 17
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "1": 95,
+        "4": 1,
+        "7": 47,
+        "8": 39,
+        "9": 10,
+        "11": 45,
+        "12": 21,
+        "13": 21,
+        "14": 1,
+        "16": 49,
+        "17": 70,
+        "18": 36,
+        "19": 9,
+        "20": 1,
+        "21": 48,
+        "22": 326,
+        "23": 12,
+        "24": 12,
+        "25": 3,
+        "27": 2,
+        "29": 117,
+        "30": 289,
+        "33": 62,
+        "34": 22,
+        "35": 224,
+        "37": 81,
+        "38": 123,
+        "39": 2,
+        "40": 2,
+        "42": 654,
+        "43": 34,
+        "46": 164
+      },
+      "中2": {
+        "1": 2138,
+        "3": 6,
+        "4": 85,
+        "5": 4,
+        "8": 76,
+        "12": 6,
+        "13": 4,
+        "15": 65,
+        "16": 3,
+        "18": 72,
+        "20": 3,
+        "22": 2,
+        "25": 12,
+        "26": 42,
+        "28": 2,
+        "29": 25,
+        "30": 1,
+        "35": 389
+      },
+      "中3": {
+        "1": 2619,
+        "2": 38,
+        "6": 188,
+        "15": 14,
+        "18": 20
+      }
+    }
+  },
+  "unresolved_tokens": {
+    "サンシャイン": {
+      "中1": [
+        {
+          "token": "music",
+          "count": 117
+        },
+        {
+          "token": "fine",
+          "count": 85
+        },
+        {
+          "token": "door",
+          "count": 68
+        },
+        {
+          "token": "window",
+          "count": 56
+        },
+        {
+          "token": "dishes",
+          "count": 54
+        },
+        {
+          "token": "practice",
+          "count": 43
+        },
+        {
+          "token": "week",
+          "count": 34
+        },
+        {
+          "token": "morning",
+          "count": 33
+        },
+        {
+          "token": "month",
+          "count": 32
+        },
+        {
+          "token": "practices",
+          "count": 28
+        },
+        {
+          "token": "always",
+          "count": 25
+        },
+        {
+          "token": "desk",
+          "count": 21
+        },
+        {
+          "token": "cake",
+          "count": 21
+        },
+        {
+          "token": "movie",
+          "count": 20
+        },
+        {
+          "token": "test",
+          "count": 20
+        },
+        {
+          "token": "usually",
+          "count": 18
+        },
+        {
+          "token": "chair",
+          "count": 17
+        },
+        {
+          "token": "box",
+          "count": 15
+        },
+        {
+          "token": "wall",
+          "count": 13
+        },
+        {
+          "token": "practiced",
+          "count": 12
+        },
+        {
+          "token": "never",
+          "count": 11
+        },
+        {
+          "token": "ball",
+          "count": 6
+        },
+        {
+          "token": "grandmother",
+          "count": 4
+        },
+        {
+          "token": "behind",
+          "count": 4
+        },
+        {
+          "token": "tonight",
+          "count": 4
+        },
+        {
+          "token": "talk",
+          "count": 4
+        },
+        {
+          "token": "classroom",
+          "count": 3
+        },
+        {
+          "token": "absent",
+          "count": 3
+        },
+        {
+          "token": "shoes",
+          "count": 3
+        },
+        {
+          "token": "tree",
+          "count": 3
+        },
+        {
+          "token": "talks",
+          "count": 3
+        },
+        {
+          "token": "rainy",
+          "count": 3
+        },
+        {
+          "token": "blue",
+          "count": 2
+        },
+        {
+          "token": "pencil",
+          "count": 2
+        },
+        {
+          "token": "case",
+          "count": 2
+        },
+        {
+          "token": "down",
+          "count": 2
+        },
+        {
+          "token": "kyoto",
+          "count": 2
+        },
+        {
+          "token": "tired",
+          "count": 2
+        },
+        {
+          "token": "bed",
+          "count": 2
+        },
+        {
+          "token": "players",
+          "count": 1
+        },
+        {
+          "token": "math",
+          "count": 1
+        },
+        {
+          "token": "basketball",
+          "count": 1
+        },
+        {
+          "token": "yamaguchi",
+          "count": 1
+        },
+        {
+          "token": "clock",
+          "count": 1
+        },
+        {
+          "token": "tokyo",
+          "count": 1
+        },
+        {
+          "token": "late",
+          "count": 1
+        },
+        {
+          "token": "fukuoka",
+          "count": 1
+        },
+        {
+          "token": "gym",
+          "count": 1
+        },
+        {
+          "token": "zoo",
+          "count": 1
+        },
+        {
+          "token": "mr",
+          "count": 1
+        },
+        {
+          "token": "sato",
+          "count": 1
+        },
+        {
+          "token": "table",
+          "count": 1
+        },
+        {
+          "token": "flower",
+          "count": 1
+        },
+        {
+          "token": "soup",
+          "count": 1
+        },
+        {
+          "token": "post",
+          "count": 1
+        },
+        {
+          "token": "office",
+          "count": 1
+        },
+        {
+          "token": "sky",
+          "count": 1
+        },
+        {
+          "token": "osaka",
+          "count": 1
+        },
+        {
+          "token": "hungry",
+          "count": 1
+        },
+        {
+          "token": "hospital",
+          "count": 1
+        },
+        {
+          "token": "station",
+          "count": 1
+        },
+        {
+          "token": "birds",
+          "count": 1
+        },
+        {
+          "token": "afternoon",
+          "count": 1
+        }
+      ],
+      "中2": [
+        {
+          "token": "movie",
+          "count": 162
+        },
+        {
+          "token": "practice",
+          "count": 149
+        },
+        {
+          "token": "science",
+          "count": 136
+        },
+        {
+          "token": "basketball",
+          "count": 102
+        },
+        {
+          "token": "math",
+          "count": 79
+        },
+        {
+          "token": "kyoto",
+          "count": 77
+        },
+        {
+          "token": "join",
+          "count": 76
+        },
+        {
+          "token": "music",
+          "count": 70
+        },
+        {
+          "token": "grandmother",
+          "count": 67
+        },
+        {
+          "token": "harder",
+          "count": 67
+        },
+        {
+          "token": "practices",
+          "count": 55
+        },
+        {
+          "token": "shopping",
+          "count": 54
+        },
+        {
+          "token": "enjoy",
+          "count": 46
+        },
+        {
+          "token": "letters",
+          "count": 42
+        },
+        {
+          "token": "phone",
+          "count": 42
+        },
+        {
+          "token": "box",
+          "count": 40
+        },
+        {
+          "token": "start",
+          "count": 37
+        },
+        {
+          "token": "joins",
+          "count": 35
+        },
+        {
+          "token": "novel",
+          "count": 34
+        },
+        {
+          "token": "talk",
+          "count": 29
+        },
+        {
+          "token": "comics",
+          "count": 29
+        },
+        {
+          "token": "practiced",
+          "count": 28
+        },
+        {
+          "token": "love",
+          "count": 27
+        },
+        {
+          "token": "taller",
+          "count": 27
+        },
+        {
+          "token": "talks",
+          "count": 27
+        },
+        {
+          "token": "stop",
+          "count": 27
+        },
+        {
+          "token": "museum",
+          "count": 26
+        },
+        {
+          "token": "larger",
+          "count": 26
+        },
+        {
+          "token": "enjoys",
+          "count": 25
+        },
+        {
+          "token": "starts",
+          "count": 25
+        },
+        {
+          "token": "joined",
+          "count": 24
+        },
+        {
+          "token": "interesting",
+          "count": 24
+        },
+        {
+          "token": "station",
+          "count": 24
+        },
+        {
+          "token": "talked",
+          "count": 20
+        },
+        {
+          "token": "tall",
+          "count": 19
+        },
+        {
+          "token": "loves",
+          "count": 18
+        },
+        {
+          "token": "travel",
+          "count": 18
+        },
+        {
+          "token": "abroad",
+          "count": 18
+        },
+        {
+          "token": "doctor",
+          "count": 18
+        },
+        {
+          "token": "app",
+          "count": 18
+        },
+        {
+          "token": "stops",
+          "count": 18
+        },
+        {
+          "token": "exciting",
+          "count": 18
+        },
+        {
+          "token": "begins",
+          "count": 15
+        },
+        {
+          "token": "dishes",
+          "count": 13
+        },
+        {
+          "token": "cram",
+          "count": 13
+        },
+        {
+          "token": "uniform",
+          "count": 13
+        },
+        {
+          "token": "hokkaido",
+          "count": 12
+        },
+        {
+          "token": "begin",
+          "count": 12
+        },
+        {
+          "token": "since",
+          "count": 12
+        },
+        {
+          "token": "already",
+          "count": 10
+        },
+        {
+          "token": "sunny",
+          "count": 9
+        },
+        {
+          "token": "osaka",
+          "count": 8
+        },
+        {
+          "token": "sushi",
+          "count": 8
+        },
+        {
+          "token": "test",
+          "count": 7
+        },
+        {
+          "token": "talking",
+          "count": 7
+        },
+        {
+          "token": "practicing",
+          "count": 7
+        },
+        {
+          "token": "tired",
+          "count": 6
+        },
+        {
+          "token": "excitinger",
+          "count": 6
+        },
+        {
+          "token": "week",
+          "count": 6
+        },
+        {
+          "token": "tallest",
+          "count": 5
+        },
+        {
+          "token": "sick",
+          "count": 5
+        },
+        {
+          "token": "hard",
+          "count": 5
+        },
+        {
+          "token": "mr",
+          "count": 5
+        },
+        {
+          "token": "sato",
+          "count": 5
+        },
+        {
+          "token": "cake",
+          "count": 5
+        },
+        {
+          "token": "joinned",
+          "count": 4
+        },
+        {
+          "token": "started",
+          "count": 4
+        },
+        {
+          "token": "desk",
+          "count": 4
+        },
+        {
+          "token": "ok",
+          "count": 4
+        },
+        {
+          "token": "largest",
+          "count": 4
+        },
+        {
+          "token": "month",
+          "count": 4
+        },
+        {
+          "token": "bus",
+          "count": 4
+        },
+        {
+          "token": "teaches",
+          "count": 4
+        },
+        {
+          "token": "blue",
+          "count": 4
+        },
+        {
+          "token": "think",
+          "count": 3
+        },
+        {
+          "token": "absent",
+          "count": 3
+        },
+        {
+          "token": "twice",
+          "count": 3
+        },
+        {
+          "token": "sad",
+          "count": 3
+        },
+        {
+          "token": "newspaper",
+          "count": 3
+        },
+        {
+          "token": "classroom",
+          "count": 3
+        },
+        {
+          "token": "bookstore",
+          "count": 3
+        },
+        {
+          "token": "trees",
+          "count": 3
+        },
+        {
+          "token": "bench",
+          "count": 3
+        },
+        {
+          "token": "wall",
+          "count": 3
+        },
+        {
+          "token": "gym",
+          "count": 3
+        },
+        {
+          "token": "map",
+          "count": 3
+        },
+        {
+          "token": "soup",
+          "count": 3
+        },
+        {
+          "token": "sky",
+          "count": 3
+        },
+        {
+          "token": "morning",
+          "count": 3
+        },
+        {
+          "token": "present",
+          "count": 3
+        },
+        {
+          "token": "advice",
+          "count": 3
+        },
+        {
+          "token": "loved",
+          "count": 3
+        },
+        {
+          "token": "window",
+          "count": 3
+        },
+        {
+          "token": "ball",
+          "count": 3
+        },
+        {
+          "token": "never",
+          "count": 3
+        },
+        {
+          "token": "key",
+          "count": 3
+        },
+        {
+          "token": "grown",
+          "count": 2
+        },
+        {
+          "token": "textbook",
+          "count": 2
+        },
+        {
+          "token": "akio",
+          "count": 2
+        },
+        {
+          "token": "pochi",
+          "count": 2
+        },
+        {
+          "token": "yamaguchi",
+          "count": 2
+        },
+        {
+          "token": "teach",
+          "count": 2
+        },
+        {
+          "token": "eager",
+          "count": 2
+        },
+        {
+          "token": "belong",
+          "count": 2
+        },
+        {
+          "token": "loudly",
+          "count": 2
+        },
+        {
+          "token": "bank",
+          "count": 2
+        },
+        {
+          "token": "solve",
+          "count": 2
+        },
+        {
+          "token": "sport",
+          "count": 1
+        },
+        {
+          "token": "hungry",
+          "count": 1
+        },
+        {
+          "token": "sleepy",
+          "count": 1
+        },
+        {
+          "token": "convenience",
+          "count": 1
+        },
+        {
+          "token": "flower",
+          "count": 1
+        },
+        {
+          "token": "flowers",
+          "count": 1
+        },
+        {
+          "token": "interest",
+          "count": 1
+        },
+        {
+          "token": "hospital",
+          "count": 1
+        },
+        {
+          "token": "river",
+          "count": 1
+        },
+        {
+          "token": "teaching",
+          "count": 1
+        },
+        {
+          "token": "months",
+          "count": 1
+        },
+        {
+          "token": "chair",
+          "count": 1
+        },
+        {
+          "token": "result",
+          "count": 1
+        }
+      ],
+      "中3": [
+        {
+          "token": "morning",
+          "count": 90
+        },
+        {
+          "token": "key",
+          "count": 85
+        },
+        {
+          "token": "music",
+          "count": 79
+        },
+        {
+          "token": "desk",
+          "count": 68
+        },
+        {
+          "token": "kyoto",
+          "count": 61
+        },
+        {
+          "token": "basketball",
+          "count": 42
+        },
+        {
+          "token": "volleyball",
+          "count": 42
+        },
+        {
+          "token": "badminton",
+          "count": 42
+        },
+        {
+          "token": "tired",
+          "count": 36
+        },
+        {
+          "token": "tree",
+          "count": 36
+        },
+        {
+          "token": "town",
+          "count": 34
+        },
+        {
+          "token": "harder",
+          "count": 29
+        },
+        {
+          "token": "station",
+          "count": 28
+        },
+        {
+          "token": "window",
+          "count": 24
+        },
+        {
+          "token": "chair",
+          "count": 22
+        },
+        {
+          "token": "bird",
+          "count": 21
+        },
+        {
+          "token": "fly",
+          "count": 21
+        },
+        {
+          "token": "sky",
+          "count": 21
+        },
+        {
+          "token": "skating",
+          "count": 21
+        },
+        {
+          "token": "teaches",
+          "count": 20
+        },
+        {
+          "token": "clouds",
+          "count": 20
+        },
+        {
+          "token": "doctor",
+          "count": 20
+        },
+        {
+          "token": "rainy",
+          "count": 20
+        },
+        {
+          "token": "absent",
+          "count": 20
+        },
+        {
+          "token": "sick",
+          "count": 20
+        },
+        {
+          "token": "hard",
+          "count": 20
+        },
+        {
+          "token": "test",
+          "count": 20
+        },
+        {
+          "token": "enjoy",
+          "count": 20
+        },
+        {
+          "token": "sung",
+          "count": 20
+        },
+        {
+          "token": "letters",
+          "count": 20
+        },
+        {
+          "token": "talk",
+          "count": 20
+        },
+        {
+          "token": "train",
+          "count": 20
+        },
+        {
+          "token": "world",
+          "count": 20
+        },
+        {
+          "token": "flower",
+          "count": 16
+        },
+        {
+          "token": "box",
+          "count": 16
+        },
+        {
+          "token": "hospital",
+          "count": 14
+        },
+        {
+          "token": "museum",
+          "count": 14
+        },
+        {
+          "token": "classroom",
+          "count": 14
+        },
+        {
+          "token": "gym",
+          "count": 14
+        },
+        {
+          "token": "pool",
+          "count": 14
+        },
+        {
+          "token": "office",
+          "count": 14
+        },
+        {
+          "token": "zoo",
+          "count": 14
+        },
+        {
+          "token": "hungry",
+          "count": 14
+        },
+        {
+          "token": "sleepy",
+          "count": 14
+        },
+        {
+          "token": "sad",
+          "count": 14
+        },
+        {
+          "token": "slow",
+          "count": 14
+        },
+        {
+          "token": "larger",
+          "count": 10
+        },
+        {
+          "token": "largest",
+          "count": 10
+        },
+        {
+          "token": "week",
+          "count": 6
+        },
+        {
+          "token": "afternoon",
+          "count": 5
+        },
+        {
+          "token": "hungrier",
+          "count": 4
+        },
+        {
+          "token": "freer",
+          "count": 4
+        },
+        {
+          "token": "sleepier",
+          "count": 4
+        },
+        {
+          "token": "sadder",
+          "count": 4
+        },
+        {
+          "token": "nicer",
+          "count": 4
+        },
+        {
+          "token": "slower",
+          "count": 4
+        },
+        {
+          "token": "hungriest",
+          "count": 3
+        },
+        {
+          "token": "freest",
+          "count": 3
+        },
+        {
+          "token": "sleepiest",
+          "count": 3
+        },
+        {
+          "token": "saddest",
+          "count": 3
+        },
+        {
+          "token": "nicest",
+          "count": 3
+        },
+        {
+          "token": "slowest",
+          "count": 3
+        },
+        {
+          "token": "bus",
+          "count": 2
+        },
+        {
+          "token": "desks",
+          "count": 2
+        },
+        {
+          "token": "chairs",
+          "count": 2
+        },
+        {
+          "token": "windows",
+          "count": 2
+        },
+        {
+          "token": "flowers",
+          "count": 2
+        },
+        {
+          "token": "trees",
+          "count": 2
+        },
+        {
+          "token": "boxs",
+          "count": 2
+        },
+        {
+          "token": "sunny",
+          "count": 1
+        }
+      ]
+    },
+    "ニューホライズン": {
+      "中1": [
+        {
+          "token": "ago",
+          "count": 65
+        },
+        {
+          "token": "wash",
+          "count": 43
+        },
+        {
+          "token": "hour",
+          "count": 32
+        },
+        {
+          "token": "washes",
+          "count": 25
+        },
+        {
+          "token": "breakfast",
+          "count": 22
+        },
+        {
+          "token": "house",
+          "count": 22
+        },
+        {
+          "token": "six",
+          "count": 21
+        },
+        {
+          "token": "test",
+          "count": 20
+        },
+        {
+          "token": "usually",
+          "count": 18
+        },
+        {
+          "token": "chair",
+          "count": 17
+        },
+        {
+          "token": "wall",
+          "count": 13
+        },
+        {
+          "token": "washed",
+          "count": 12
+        },
+        {
+          "token": "never",
+          "count": 11
+        },
+        {
+          "token": "ball",
+          "count": 6
+        },
+        {
+          "token": "seven",
+          "count": 4
+        },
+        {
+          "token": "grandmother",
+          "count": 4
+        },
+        {
+          "token": "sit",
+          "count": 4
+        },
+        {
+          "token": "tonight",
+          "count": 4
+        },
+        {
+          "token": "classroom",
+          "count": 3
+        },
+        {
+          "token": "absent",
+          "count": 3
+        },
+        {
+          "token": "shoes",
+          "count": 3
+        },
+        {
+          "token": "early",
+          "count": 3
+        },
+        {
+          "token": "rainy",
+          "count": 3
+        },
+        {
+          "token": "blue",
+          "count": 2
+        },
+        {
+          "token": "uncle",
+          "count": 2
+        },
+        {
+          "token": "pencil",
+          "count": 2
+        },
+        {
+          "token": "case",
+          "count": 2
+        },
+        {
+          "token": "quiet",
+          "count": 2
+        },
+        {
+          "token": "stand",
+          "count": 2
+        },
+        {
+          "token": "kyoto",
+          "count": 2
+        },
+        {
+          "token": "tired",
+          "count": 2
+        },
+        {
+          "token": "classmates",
+          "count": 2
+        },
+        {
+          "token": "math",
+          "count": 1
+        },
+        {
+          "token": "yamaguchi",
+          "count": 1
+        },
+        {
+          "token": "clock",
+          "count": 1
+        },
+        {
+          "token": "tokyo",
+          "count": 1
+        },
+        {
+          "token": "fukuoka",
+          "count": 1
+        },
+        {
+          "token": "zoo",
+          "count": 1
+        },
+        {
+          "token": "sato",
+          "count": 1
+        },
+        {
+          "token": "four",
+          "count": 1
+        },
+        {
+          "token": "sky",
+          "count": 1
+        },
+        {
+          "token": "osaka",
+          "count": 1
+        },
+        {
+          "token": "hungry",
+          "count": 1
+        }
+      ],
+      "中2": [
+        {
+          "token": "science",
+          "count": 136
+        },
+        {
+          "token": "internet",
+          "count": 96
+        },
+        {
+          "token": "math",
+          "count": 79
+        },
+        {
+          "token": "kyoto",
+          "count": 77
+        },
+        {
+          "token": "grandmother",
+          "count": 67
+        },
+        {
+          "token": "hope",
+          "count": 45
+        },
+        {
+          "token": "phone",
+          "count": 42
+        },
+        {
+          "token": "novel",
+          "count": 34
+        },
+        {
+          "token": "larger",
+          "count": 26
+        },
+        {
+          "token": "easier",
+          "count": 26
+        },
+        {
+          "token": "abroad",
+          "count": 18
+        },
+        {
+          "token": "app",
+          "count": 18
+        },
+        {
+          "token": "easy",
+          "count": 18
+        },
+        {
+          "token": "cram",
+          "count": 13
+        },
+        {
+          "token": "hokkaido",
+          "count": 12
+        },
+        {
+          "token": "since",
+          "count": 12
+        },
+        {
+          "token": "tokyo",
+          "count": 10
+        },
+        {
+          "token": "already",
+          "count": 10
+        },
+        {
+          "token": "sunny",
+          "count": 9
+        },
+        {
+          "token": "osaka",
+          "count": 8
+        },
+        {
+          "token": "sea",
+          "count": 8
+        },
+        {
+          "token": "sushi",
+          "count": 8
+        },
+        {
+          "token": "party",
+          "count": 8
+        },
+        {
+          "token": "test",
+          "count": 7
+        },
+        {
+          "token": "tired",
+          "count": 6
+        },
+        {
+          "token": "sick",
+          "count": 5
+        },
+        {
+          "token": "sato",
+          "count": 5
+        },
+        {
+          "token": "water",
+          "count": 5
+        },
+        {
+          "token": "largest",
+          "count": 4
+        },
+        {
+          "token": "easiest",
+          "count": 4
+        },
+        {
+          "token": "six",
+          "count": 4
+        },
+        {
+          "token": "bus",
+          "count": 4
+        },
+        {
+          "token": "blue",
+          "count": 4
+        },
+        {
+          "token": "absent",
+          "count": 3
+        },
+        {
+          "token": "pass",
+          "count": 3
+        },
+        {
+          "token": "raining",
+          "count": 3
+        },
+        {
+          "token": "classmates",
+          "count": 3
+        },
+        {
+          "token": "twice",
+          "count": 3
+        },
+        {
+          "token": "five",
+          "count": 3
+        },
+        {
+          "token": "sit",
+          "count": 3
+        },
+        {
+          "token": "newspaper",
+          "count": 3
+        },
+        {
+          "token": "classroom",
+          "count": 3
+        },
+        {
+          "token": "bookstore",
+          "count": 3
+        },
+        {
+          "token": "delicious",
+          "count": 3
+        },
+        {
+          "token": "sky",
+          "count": 3
+        },
+        {
+          "token": "present",
+          "count": 3
+        },
+        {
+          "token": "ball",
+          "count": 3
+        },
+        {
+          "token": "never",
+          "count": 3
+        },
+        {
+          "token": "key",
+          "count": 3
+        },
+        {
+          "token": "grown",
+          "count": 2
+        },
+        {
+          "token": "textbook",
+          "count": 2
+        },
+        {
+          "token": "seven",
+          "count": 2
+        },
+        {
+          "token": "passed",
+          "count": 2
+        },
+        {
+          "token": "akio",
+          "count": 2
+        },
+        {
+          "token": "pochi",
+          "count": 2
+        },
+        {
+          "token": "yamaguchi",
+          "count": 2
+        },
+        {
+          "token": "ready",
+          "count": 2
+        },
+        {
+          "token": "eager",
+          "count": 2
+        },
+        {
+          "token": "loudly",
+          "count": 2
+        },
+        {
+          "token": "bank",
+          "count": 2
+        },
+        {
+          "token": "across",
+          "count": 2
+        },
+        {
+          "token": "festival",
+          "count": 2
+        },
+        {
+          "token": "australia",
+          "count": 2
+        },
+        {
+          "token": "painted",
+          "count": 2
+        },
+        {
+          "token": "uncle",
+          "count": 2
+        },
+        {
+          "token": "solve",
+          "count": 2
+        },
+        {
+          "token": "hungry",
+          "count": 1
+        },
+        {
+          "token": "sleepy",
+          "count": 1
+        },
+        {
+          "token": "store",
+          "count": 1
+        },
+        {
+          "token": "grow",
+          "count": 1
+        },
+        {
+          "token": "interest",
+          "count": 1
+        },
+        {
+          "token": "dangerous",
+          "count": 1
+        },
+        {
+          "token": "nine",
+          "count": 1
+        },
+        {
+          "token": "chair",
+          "count": 1
+        },
+        {
+          "token": "comfortable",
+          "count": 1
+        },
+        {
+          "token": "result",
+          "count": 1
+        }
+      ],
+      "中3": [
+        {
+          "token": "tokyo",
+          "count": 132
+        },
+        {
+          "token": "key",
+          "count": 85
+        },
+        {
+          "token": "five",
+          "count": 66
+        },
+        {
+          "token": "kyoto",
+          "count": 61
+        },
+        {
+          "token": "wash",
+          "count": 60
+        },
+        {
+          "token": "easy",
+          "count": 47
+        },
+        {
+          "token": "volleyball",
+          "count": 42
+        },
+        {
+          "token": "badminton",
+          "count": 42
+        },
+        {
+          "token": "tired",
+          "count": 36
+        },
+        {
+          "token": "camera",
+          "count": 36
+        },
+        {
+          "token": "town",
+          "count": 34
+        },
+        {
+          "token": "chair",
+          "count": 22
+        },
+        {
+          "token": "fly",
+          "count": 21
+        },
+        {
+          "token": "skating",
+          "count": 21
+        },
+        {
+          "token": "quiet",
+          "count": 20
+        },
+        {
+          "token": "rain",
+          "count": 20
+        },
+        {
+          "token": "tonight",
+          "count": 20
+        },
+        {
+          "token": "rainy",
+          "count": 20
+        },
+        {
+          "token": "absent",
+          "count": 20
+        },
+        {
+          "token": "sick",
+          "count": 20
+        },
+        {
+          "token": "pass",
+          "count": 20
+        },
+        {
+          "token": "test",
+          "count": 20
+        },
+        {
+          "token": "sung",
+          "count": 20
+        },
+        {
+          "token": "train",
+          "count": 20
+        },
+        {
+          "token": "ball",
+          "count": 16
+        },
+        {
+          "token": "classroom",
+          "count": 14
+        },
+        {
+          "token": "pool",
+          "count": 14
+        },
+        {
+          "token": "zoo",
+          "count": 14
+        },
+        {
+          "token": "hungry",
+          "count": 14
+        },
+        {
+          "token": "sleepy",
+          "count": 14
+        },
+        {
+          "token": "strong",
+          "count": 14
+        },
+        {
+          "token": "slow",
+          "count": 14
+        },
+        {
+          "token": "washed",
+          "count": 12
+        },
+        {
+          "token": "washing",
+          "count": 12
+        },
+        {
+          "token": "seven",
+          "count": 12
+        },
+        {
+          "token": "eight",
+          "count": 11
+        },
+        {
+          "token": "six",
+          "count": 11
+        },
+        {
+          "token": "easier",
+          "count": 10
+        },
+        {
+          "token": "easiest",
+          "count": 10
+        },
+        {
+          "token": "larger",
+          "count": 10
+        },
+        {
+          "token": "largest",
+          "count": 10
+        },
+        {
+          "token": "breakfast",
+          "count": 10
+        },
+        {
+          "token": "four",
+          "count": 6
+        },
+        {
+          "token": "nine",
+          "count": 6
+        },
+        {
+          "token": "washes",
+          "count": 4
+        },
+        {
+          "token": "hungrier",
+          "count": 4
+        },
+        {
+          "token": "freer",
+          "count": 4
+        },
+        {
+          "token": "sleepier",
+          "count": 4
+        },
+        {
+          "token": "nicer",
+          "count": 4
+        },
+        {
+          "token": "stronger",
+          "count": 4
+        },
+        {
+          "token": "slower",
+          "count": 4
+        },
+        {
+          "token": "hungriest",
+          "count": 3
+        },
+        {
+          "token": "freest",
+          "count": 3
+        },
+        {
+          "token": "sleepiest",
+          "count": 3
+        },
+        {
+          "token": "nicest",
+          "count": 3
+        },
+        {
+          "token": "strongest",
+          "count": 3
+        },
+        {
+          "token": "slowest",
+          "count": 3
+        },
+        {
+          "token": "bus",
+          "count": 2
+        },
+        {
+          "token": "chairs",
+          "count": 2
+        },
+        {
+          "token": "balls",
+          "count": 2
+        },
+        {
+          "token": "cameras",
+          "count": 2
+        },
+        {
+          "token": "sunny",
+          "count": 1
+        },
+        {
+          "token": "sit",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "merge_policy": "reconstructed and trusted old positive are combined conservatively using later stage; unresolved stays -1"
+}
