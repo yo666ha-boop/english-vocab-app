@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T23:08:49.753Z",
+  "generated_at": "2026-08-25T23:18:40.488Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "audit_threshold_pct": 33,
   "low_count": 14,
@@ -12,8 +12,8 @@
       "position": 34,
       "category": "一般動詞（過去形）",
       "off": 612,
-      "on": 166,
-      "retention_pct": 27.12,
+      "on": 178,
+      "retention_pct": 29.08,
       "runtime_mapped_categories": [
         "一般動詞の過去形",
         "不規則動詞",
@@ -2921,9 +2921,9 @@
   "by_category": {
     "中1/一般動詞（過去形）": {
       "rows": 1,
-      "min_retention_pct": 27.12,
+      "min_retention_pct": 29.08,
       "total_off": 612,
-      "total_on": 166,
+      "total_on": 178,
       "total_unresolved": 111,
       "total_future": 359
     },
