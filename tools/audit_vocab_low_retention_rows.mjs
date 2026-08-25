@@ -4,6 +4,7 @@ import vm from 'node:vm';
 const MATRIX='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const HTML='problem-app/index.html';
 const OUT='audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json';
+const AUDIT_THRESHOLD_PCT=33;
 
 function scriptJson(html,id){
   const m=new RegExp(`<script\\s+id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/script>`,'i').exec(html);
@@ -20,14 +21,13 @@ const meta=scriptJson(html,'meta-data');
 const stageMap=subjectConfigFromRuntime(html)?.['英語']?.stageMap||{};
 const rows=[];
 for(const [grade,books] of Object.entries(matrix.grammar_attrition||{})) for(const [textbook,rec] of Object.entries(books||{})) for(const sec of rec?.sections||[]) for(const cat of sec.categories||[]) rows.push({...cat,grade,textbook,section:sec.section,position:sec.position,section_count:sec.section_count,category:cat.value});
-const low=rows.filter(r=>Number(r.off)>0 && Number(r.retention_pct)<25).sort((a,b)=>Number(a.retention_pct)-Number(b.retention_pct)||Number(b.off)-Number(a.off));
+const low=rows.filter(r=>Number(r.off)>0 && Number(r.retention_pct)<AUDIT_THRESHOLD_PCT).sort((a,b)=>Number(a.retention_pct)-Number(b.retention_pct)||Number(b.off)-Number(a.off));
 const records=[];
 for(const z of low){
   const mapped=stageMap?.[z.grade]?.[z.category]||[z.category];
   const mappedSet=new Set(mapped);
   const pool=qb.filter(x=>x.grade===z.grade && mappedSet.has(x.category));
   let allowed=0, unresolved=0, future=0, other=0;
-  const unresolvedTokens=[];
   const byType={};
   const samples=[];
   for(const item of pool){
@@ -45,5 +45,6 @@ for(const z of low){
 }
 const byCategory={};
 for(const r of records){const k=`${r.grade}/${r.category}`;const x=byCategory[k]??={rows:0,min_retention_pct:100,total_off:0,total_on:0,total_unresolved:0,total_future:0};x.rows++;x.min_retention_pct=Math.min(x.min_retention_pct,Number(r.retention_pct));x.total_off+=Number(r.off);x.total_on+=Number(r.on);x.total_unresolved+=r.blocked_unresolved;x.total_future+=r.blocked_future;}
-fs.writeFileSync(OUT,JSON.stringify({generated_at:new Date().toISOString(),source:MATRIX,severe_count:records.length,records,by_category:byCategory},null,2)+'\n');
-console.log(JSON.stringify({severe_count:records.length,worst:records.slice(0,12).map(r=>({grade:r.grade,textbook:r.textbook,section:r.section,category:r.category,off:r.off,on:r.on,retention:r.retention_pct,pool:r.original_pool,allowed:r.allowed_by_coordinate,unresolved:r.blocked_unresolved,future:r.blocked_future,types:r.original_types}))},null,2));
+const severeCount=records.filter(r=>Number(r.retention_pct)<25).length;
+fs.writeFileSync(OUT,JSON.stringify({generated_at:new Date().toISOString(),source:MATRIX,audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,records,by_category:byCategory},null,2)+'\n');
+console.log(JSON.stringify({audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,worst:records.slice(0,20).map(r=>({grade:r.grade,textbook:r.textbook,section:r.section,category:r.category,off:r.off,on:r.on,retention:r.retention_pct,pool:r.original_pool,allowed:r.allowed_by_coordinate,unresolved:r.blocked_unresolved,future:r.blocked_future,types:r.original_types}))},null,2));
