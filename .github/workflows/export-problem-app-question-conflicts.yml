@@ -1,0 +1,51 @@
+name: Export problem app question conflicts
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/export_problem_app_question_conflicts.mjs
+      - .github/workflows/export-problem-app-question-conflicts.yml
+      - problem-app/index.html
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export-problem-app-question-conflicts-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+      - name: Export conflict summary
+        run: node tools/export_problem_app_question_conflicts.mjs
+      - name: Commit audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_QUESTION_CONFLICTS.tsv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'audit: record compact question conflicts [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            git fetch origin "${branch}"
+            git rebase "origin/${branch}"
+            sleep 2
+          done
+          exit 1
