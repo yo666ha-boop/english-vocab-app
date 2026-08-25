@@ -244,8 +244,8 @@
             "position": 34,
             "section_count": 39,
             "section": "PROGRAM 9-1",
-            "candidates": 1706,
-            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1706件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 9-1"
+            "candidates": 1718,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1718件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 9-1"
           },
           {
             "position": 35,
@@ -553,29 +553,29 @@
             "position": 38,
             "section_count": 46,
             "section": "Unit 9-1",
-            "candidates": 1791,
-            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1791件 / 教科書: ニューホライズン / 単語はここまで: Unit 9-1"
+            "candidates": 1803,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1803件 / 教科書: ニューホライズン / 単語はここまで: Unit 9-1"
           },
           {
             "position": 39,
             "section_count": 46,
             "section": "Unit 9-2",
-            "candidates": 1791,
-            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1791件 / 教科書: ニューホライズン / 単語はここまで: Unit 9-2"
+            "candidates": 1803,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1803件 / 教科書: ニューホライズン / 単語はここまで: Unit 9-2"
           },
           {
             "position": 40,
             "section_count": 46,
             "section": "Real Life English 5",
-            "candidates": 1793,
-            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1793件 / 教科書: ニューホライズン / 単語はここまで: Real Life English 5"
+            "candidates": 1805,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1805件 / 教科書: ニューホライズン / 単語はここまで: Real Life English 5"
           },
           {
             "position": 41,
             "section_count": 46,
             "section": "Unit 10-1",
-            "candidates": 1988,
-            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1988件 / 教科書: ニューホライズン / 単語はここまで: Unit 10-1"
+            "candidates": 2000,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 2000件 / 教科書: ニューホライズン / 単語はここまで: Unit 10-1"
           },
           {
             "position": 42,
@@ -4654,8 +4654,8 @@
                 "value": "一般動詞（過去形）",
                 "label": "一般動詞（過去形）",
                 "off": 612,
-                "on": 166,
-                "retention_pct": 27.12,
+                "on": 178,
+                "retention_pct": 29.08,
                 "zeroed": false,
                 "severe_under_25pct": false,
                 "under_50pct": true
@@ -8963,8 +8963,8 @@
                 "value": "一般動詞（過去形）",
                 "label": "一般動詞（過去形）",
                 "off": 612,
-                "on": 238,
-                "retention_pct": 38.89,
+                "on": 250,
+                "retention_pct": 40.85,
                 "zeroed": false,
                 "severe_under_25pct": false,
                 "under_50pct": true
@@ -9107,8 +9107,8 @@
                 "value": "一般動詞（過去形）",
                 "label": "一般動詞（過去形）",
                 "off": 612,
-                "on": 238,
-                "retention_pct": 38.89,
+                "on": 250,
+                "retention_pct": 40.85,
                 "zeroed": false,
                 "severe_under_25pct": false,
                 "under_50pct": true
@@ -9251,8 +9251,8 @@
                 "value": "一般動詞（過去形）",
                 "label": "一般動詞（過去形）",
                 "off": 612,
-                "on": 238,
-                "retention_pct": 38.89,
+                "on": 250,
+                "retention_pct": 40.85,
                 "zeroed": false,
                 "severe_under_25pct": false,
                 "under_50pct": true
@@ -9407,8 +9407,8 @@
                 "value": "一般動詞（過去形）",
                 "label": "一般動詞（過去形）",
                 "off": 612,
-                "on": 238,
-                "retention_pct": 38.89,
+                "on": 250,
+                "retention_pct": 40.85,
                 "zeroed": false,
                 "severe_under_25pct": false,
                 "under_50pct": true
