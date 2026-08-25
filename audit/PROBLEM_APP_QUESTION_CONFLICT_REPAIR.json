@@ -1,0 +1,723 @@
+{
+  "generated_at": "2026-08-25T23:56:11.010Z",
+  "result": "PASS",
+  "changed_fields": 204,
+  "changed_items": 204,
+  "changes_by_reason": {
+    "canonical_past_question_keep_subject_and_base_form": 16,
+    "disambiguate_movie_verb_by_grammar_target": 8,
+    "canonical_be_question_keep_subject": 17,
+    "canonical_present_question_keep_subject": 20,
+    "disambiguate_present_fill_by_meaning": 40,
+    "repair_third_person_answer_to_shown_sentence": 4,
+    "disambiguate_future_construction_by_meaning": 24,
+    "disambiguate_future_fill_by_meaning": 72,
+    "disambiguate_valid_conjunction_order": 2,
+    "repair_singular_flower_number_agreement": 1
+  },
+  "remaining_normalized_question_conflicts": 0,
+  "remaining_conflicts": [],
+  "sample_changes": [
+    {
+      "id": "GEN-IRR-2184",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you go to the park yesterday?",
+      "after": "Did I go to the park yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2187",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you see a movie yesterday?",
+      "after": "Did I see a movie yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2188",
+      "field": "q",
+      "reason": "disambiguate_movie_verb_by_grammar_target",
+      "before": "次の日本語に合う英文を書きなさい。『私は 昨日 映画を見ました。』",
+      "after": "次の日本語に合う英文を書きなさい。『私は 昨日 映画を見ました。』 see の過去形を使いなさい。"
+    },
+    {
+      "id": "GEN-IRR-2190",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you eat breakfast yesterday?",
+      "after": "Did I eat breakfast yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2193",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you come to your house yesterday?",
+      "after": "Did I come to my house yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2196",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you have a test yesterday?",
+      "after": "Did I have a test yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2199",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you do your homework yesterday?",
+      "after": "Did I do my homework yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2202",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Do you got up at six yesterday?",
+      "after": "Did I get up at six yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2205",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you make a cake yesterday?",
+      "after": "Did I make a cake yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2224",
+      "field": "q",
+      "reason": "disambiguate_movie_verb_by_grammar_target",
+      "before": "次の日本語に合う英文を書きなさい。『あなたは 昨日 映画を見ました。』",
+      "after": "次の日本語に合う英文を書きなさい。『あなたは 昨日 映画を見ました。』 see の過去形を使いなさい。"
+    },
+    {
+      "id": "GEN-IRR-2256",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you go to the park yesterday?",
+      "after": "Did we go to the park yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2259",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you see a movie yesterday?",
+      "after": "Did we see a movie yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2260",
+      "field": "q",
+      "reason": "disambiguate_movie_verb_by_grammar_target",
+      "before": "次の日本語に合う英文を書きなさい。『私たちは 昨日 映画を見ました。』",
+      "after": "次の日本語に合う英文を書きなさい。『私たちは 昨日 映画を見ました。』 see の過去形を使いなさい。"
+    },
+    {
+      "id": "GEN-IRR-2262",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you eat breakfast yesterday?",
+      "after": "Did we eat breakfast yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2265",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you come to your house yesterday?",
+      "after": "Did we come to my house yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2268",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you have a test yesterday?",
+      "after": "Did we have a test yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2271",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you do your homework yesterday?",
+      "after": "Did we do our homework yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2274",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Do you got up at six yesterday?",
+      "after": "Did we get up at six yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2277",
+      "field": "a",
+      "reason": "canonical_past_question_keep_subject_and_base_form",
+      "before": "Did you make a cake yesterday?",
+      "after": "Did we make a cake yesterday?"
+    },
+    {
+      "id": "GEN-IRR-2296",
+      "field": "q",
+      "reason": "disambiguate_movie_verb_by_grammar_target",
+      "before": "次の日本語に合う英文を書きなさい。『彼らは 昨日 映画を見ました。』",
+      "after": "次の日本語に合う英文を書きなさい。『彼らは 昨日 映画を見ました。』 see の過去形を使いなさい。"
+    },
+    {
+      "id": "M2-BE-0001",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you busy?",
+      "after": "Am I busy?"
+    },
+    {
+      "id": "M2-BE-0003",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you happy?",
+      "after": "Am I happy?"
+    },
+    {
+      "id": "M2-BE-0005",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you busy?",
+      "after": "Am I busy?"
+    },
+    {
+      "id": "M2-BE-0007",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you happy?",
+      "after": "Am I happy?"
+    },
+    {
+      "id": "M2-BE-0011",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you kind?",
+      "after": "Am I kind?"
+    },
+    {
+      "id": "M2-BE-0013",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you friendly?",
+      "after": "Am I friendly?"
+    },
+    {
+      "id": "M2-BE-0033",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you busy?",
+      "after": "Are we busy?"
+    },
+    {
+      "id": "M2-BE-0035",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you happy?",
+      "after": "Are we happy?"
+    },
+    {
+      "id": "M2-BE-0037",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you busy?",
+      "after": "Are we busy?"
+    },
+    {
+      "id": "M2-BE-0039",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you happy?",
+      "after": "Are we happy?"
+    },
+    {
+      "id": "M2-BE-0043",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you kind?",
+      "after": "Are we kind?"
+    },
+    {
+      "id": "M2-BE-0045",
+      "field": "a",
+      "reason": "canonical_be_question_keep_subject",
+      "before": "Are you friendly?",
+      "after": "Are we friendly?"
+    },
+    {
+      "id": "M2-PRS-0145",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you practice basketball?",
+      "after": "Do I practice basketball?"
+    },
+    {
+      "id": "M2-PRS-0146",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日バスケットボールを練習する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0147",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you watch a movie?",
+      "after": "Do I watch a movie?"
+    },
+    {
+      "id": "M2-PRS-0148",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日映画を見る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0149",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you study math?",
+      "after": "Do I study math?"
+    },
+    {
+      "id": "M2-PRS-0150",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日数学を勉強する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0151",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you use the internet?",
+      "after": "Do I use the internet?"
+    },
+    {
+      "id": "M2-PRS-0152",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日インターネットを使う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0153",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you play the guitar?",
+      "after": "Do I play the guitar?"
+    },
+    {
+      "id": "M2-PRS-0154",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日ギターを弾く」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0155",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Did you read English books?",
+      "after": "Do I read English books?"
+    },
+    {
+      "id": "M2-PRS-0156",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日英語の本を読む」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0157",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you play tennis?",
+      "after": "Do I play tennis?"
+    },
+    {
+      "id": "M2-PRS-0158",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日テニスをする」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0159",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you help at home?",
+      "after": "Do I help at home?"
+    },
+    {
+      "id": "M2-PRS-0160",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日家で手伝う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0161",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you cook curry?",
+      "after": "Do I cook curry?"
+    },
+    {
+      "id": "M2-PRS-0162",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日カレーを作る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0163",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you join the tennis club?",
+      "after": "Do I join the tennis club?"
+    },
+    {
+      "id": "M2-PRS-0164",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "I (      ) every day.",
+      "after": "I ( ) every day. 「毎日テニス部に入る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0166",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日バスケットボールを練習する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0168",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日映画を見る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0170",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日数学を勉強する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0172",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日インターネットを使う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0174",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日ギターを弾く」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0176",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日英語の本を読む」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0178",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日テニスをする」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0180",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日家で手伝う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0182",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日カレーを作る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0184",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "You (      ) every day.",
+      "after": "You ( ) every day. 「毎日テニス部に入る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0185",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you practice basketball?",
+      "after": "Do we practice basketball?"
+    },
+    {
+      "id": "M2-PRS-0186",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日バスケットボールを練習する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0187",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you watch a movie?",
+      "after": "Do we watch a movie?"
+    },
+    {
+      "id": "M2-PRS-0188",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日映画を見る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0189",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you study math?",
+      "after": "Do we study math?"
+    },
+    {
+      "id": "M2-PRS-0190",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日数学を勉強する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0191",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you use the internet?",
+      "after": "Do we use the internet?"
+    },
+    {
+      "id": "M2-PRS-0192",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日インターネットを使う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0193",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you play the guitar?",
+      "after": "Do we play the guitar?"
+    },
+    {
+      "id": "M2-PRS-0194",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日ギターを弾く」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0195",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Did you read English books?",
+      "after": "Do we read English books?"
+    },
+    {
+      "id": "M2-PRS-0196",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日英語の本を読む」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0197",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you play tennis?",
+      "after": "Do we play tennis?"
+    },
+    {
+      "id": "M2-PRS-0198",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日テニスをする」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0199",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you help at home?",
+      "after": "Do we help at home?"
+    },
+    {
+      "id": "M2-PRS-0200",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日家で手伝う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0201",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you cook curry?",
+      "after": "Do we cook curry?"
+    },
+    {
+      "id": "M2-PRS-0202",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日カレーを作る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0203",
+      "field": "a",
+      "reason": "canonical_present_question_keep_subject",
+      "before": "Do you join the tennis club?",
+      "after": "Do we join the tennis club?"
+    },
+    {
+      "id": "M2-PRS-0204",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "We (      ) every day.",
+      "after": "We ( ) every day. 「毎日テニス部に入る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0206",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日バスケットボールを練習する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0208",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日映画を見る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0210",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日数学を勉強する」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0212",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日インターネットを使う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0214",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日ギターを弾く」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0216",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日英語の本を読む」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0218",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日テニスをする」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0220",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日家で手伝う」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0222",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日カレーを作る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-PRS-0224",
+      "field": "q",
+      "reason": "disambiguate_present_fill_by_meaning",
+      "before": "They (      ) every day.",
+      "after": "They ( ) every day. 「毎日テニス部に入る」の意味になるように、空所に入る語句を書きなさい。"
+    },
+    {
+      "id": "M2-3RD-0238",
+      "field": "a",
+      "reason": "repair_third_person_answer_to_shown_sentence",
+      "before": "He visits Kyoto every day.",
+      "after": "He plays tennis every day."
+    },
+    {
+      "id": "M2-3RD-0258",
+      "field": "a",
+      "reason": "repair_third_person_answer_to_shown_sentence",
+      "before": "She visits Kyoto every day.",
+      "after": "She plays tennis every day."
+    },
+    {
+      "id": "M2-3RD-0278",
+      "field": "a",
+      "reason": "repair_third_person_answer_to_shown_sentence",
+      "before": "He visits Kyoto every day.",
+      "after": "He plays tennis every day."
+    },
+    {
+      "id": "M2-3RD-0298",
+      "field": "a",
+      "reason": "repair_third_person_answer_to_shown_sentence",
+      "before": "She visits Kyoto every day.",
+      "after": "She plays tennis every day."
+    },
+    {
+      "id": "M2-FUT-0469",
+      "field": "q",
+      "reason": "disambiguate_future_construction_by_meaning",
+      "before": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+      "after": "I を主語にして、be going to を使い、「祖母を訪ねるつもりです」の意味の英文を書きなさい。"
+    },
+    {
+      "id": "M2-FUT-0471",
+      "field": "q",
+      "reason": "disambiguate_future_construction_by_meaning",
+      "before": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+      "after": "I を主語にして、be going to を使い、「サッカーをするつもりです」の意味の英文を書きなさい。"
+    },
+    {
+      "id": "M2-FUT-0473",
+      "field": "q",
+      "reason": "disambiguate_future_construction_by_meaning",
+      "before": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+      "after": "I を主語にして、be going to を使い、「理科を勉強するつもりです」の意味の英文を書きなさい。"
+    },
+    {
+      "id": "M2-FUT-0475",
+      "field": "q",
+      "reason": "disambiguate_future_construction_by_meaning",
+      "before": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+      "after": "I を主語にして、be going to を使い、「映画を見るつもりです」の意味の英文を書きなさい。"
+    }
+  ],
+  "policy": "Generic question/answer-template repair by grammar form, displayed source sentence, answer meaning, and category. No problem-ID whitelist; valid alternate phrasings are disambiguated in the prompt rather than declared wrong."
+}
