@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-08-25T18:18:15.722Z",
+  "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
+  "zeroed_count": 3,
+  "records": [
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-1",
+      "position": 10,
+      "section_count": 46,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 0,
+      "retention_pct": 0,
+      "data_stage": "",
+      "label": "be動詞（現在形）",
+      "original_pool": 0,
+      "unresolved_count": 0,
+      "unresolved_coordinate_values": {},
+      "unresolved_samples": []
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 1-2",
+      "position": 11,
+      "section_count": 46,
+      "category": "be動詞（現在形）",
+      "off": 563,
+      "on": 0,
+      "retention_pct": 0,
+      "data_stage": "",
+      "label": "be動詞（現在形）",
+      "original_pool": 0,
+      "unresolved_count": 0,
+      "unresolved_coordinate_values": {},
+      "unresolved_samples": []
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 10-1",
+      "position": 41,
+      "section_count": 46,
+      "category": "過去進行形",
+      "off": 11,
+      "on": 0,
+      "retention_pct": 0,
+      "data_stage": "",
+      "label": "過去進行形",
+      "original_pool": 11,
+      "unresolved_count": 0,
+      "unresolved_coordinate_values": {},
+      "unresolved_samples": []
+    }
+  ]
+}
