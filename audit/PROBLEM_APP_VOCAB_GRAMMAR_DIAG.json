@@ -1,6 +1,6 @@
 {
-  "bytes": 3812412,
-  "chars": 2613360,
+  "bytes": 3812383,
+  "chars": 2613331,
   "newlines": 956,
   "occurrences": {
     "単語制限": 4,
@@ -9,7 +9,7 @@
     "文法": 1521,
     "vocab": 67,
     "vocabulary": 2,
-    "grammar": 43,
+    "grammar": 42,
     "wordLimit": 0,
     "word_limit": 0,
     "allowedWords": 0,
