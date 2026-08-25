@@ -1,0 +1,4564 @@
+{
+  "generated_at_utc": "2026-08-25T11:29:44.630Z",
+  "english_items": 10511,
+  "elementary_token_count": 104,
+  "meta_vocab_migration_audit": {
+    "translated": 5345,
+    "legacyUnknown": 11860,
+    "blockedObsolete": 3817,
+    "outOfRange": 0,
+    "priorGrade": 0,
+    "totalValues": 21022,
+    "policy": "Exact or explicitly combined mappings only. Unsupported/obsolete labels become unknown (-1). Old 0/-1 are never translated."
+  },
+  "meta_section_samples": {
+    "ニューホライズン": {
+      "1": [
+        "プレステップ2",
+        "プレステップ3",
+        "プレステップ4",
+        "プレステップ5",
+        "プレステップ6",
+        "プレステップ7",
+        "プレステップ8",
+        "プレステップ9",
+        "Unit 0",
+        "Unit 1-1",
+        "Unit 1-2",
+        "Unit 1-3"
+      ],
+      "2": [
+        "Unit 0",
+        "Unit 1-1",
+        "Unit 1-2",
+        "Unit 1-3",
+        "Unit 1-4",
+        "Unit 2-1",
+        "Unit 2-2",
+        "Unit 2-3",
+        "Unit 2-4",
+        "Real Life English 2",
+        "Unit 3-1・2",
+        "Unit 3-3"
+      ],
+      "3": [
+        "Unit 0",
+        "Unit 1-1・2",
+        "Unit 1-3",
+        "Unit 1-4",
+        "Unit 2-1",
+        "Unit 2-2",
+        "Unit 2-3・4",
+        "Unit 3-1",
+        "Unit 3-2",
+        "Unit 3-3・4",
+        "Real Life English 3",
+        "Stage Activity 1"
+      ]
+    },
+    "サンシャイン": {
+      "1": [
+        "プレステップ2",
+        "プレステップ3",
+        "プレステップ4",
+        "プレステップ5",
+        "プレステップ6",
+        "プレステップ7",
+        "プレステップ8",
+        "プレステップ9",
+        "Get Ready 3",
+        "PROGRAM 1-1",
+        "PROGRAM 1-2",
+        "PROGRAM 2-1"
+      ],
+      "2": [
+        "PROGRAM 1-1",
+        "PROGRAM 1-2",
+        "PROGRAM 1-3",
+        "PROGRAM 2-1",
+        "PROGRAM 2-2",
+        "PROGRAM 2-3",
+        "Power-Up 1 / Step 2",
+        "PROGRAM 3-1",
+        "PROGRAM 3-2",
+        "PROGRAM 3-3",
+        "Our Project 4",
+        "Reading 1"
+      ],
+      "3": [
+        "PROGRAM 1-1",
+        "PROGRAM 1-2",
+        "PROGRAM 1-3",
+        "PROGRAM 2-1",
+        "PROGRAM 2-2",
+        "PROGRAM 2-3",
+        "PROGRAM 3-1",
+        "PROGRAM 3-2",
+        "PROGRAM 3-3",
+        "Power-Up 1 / Our Project 7",
+        "Reading 1",
+        "PROGRAM 4-1"
+      ]
+    }
+  },
+  "csv_section_counts": {
+    "サンシャイン": {
+      "1": 105,
+      "2": 112,
+      "3": 98
+    },
+    "ニューホライズン": {
+      "1": 105,
+      "2": 112,
+      "3": 98
+    }
+  },
+  "csv_section_samples": {
+    "サンシャイン": {
+      "1": [
+        "プレステップ2 アルファベットと英語のきまり",
+        "プレステップ3 複数形とa, my, thisなど",
+        "プレステップ4 だれが何をどうする",
+        "プレステップ5 どこで(前置詞1)",
+        "プレステップ6 いつ(前置詞2)",
+        "プレステップ7 be動詞",
+        "プレステップ8 一般動詞",
+        "プレステップ9 can",
+        "Unit0 Nice To Meet You / 英語の音と文字",
+        "Unit1 Part1",
+        "Unit1 Part2",
+        "Unit1 Part3"
+      ],
+      "2": [
+        "Unit10 Part1",
+        "Unit10 Part2",
+        "Unit10 Read and Think",
+        "Unit10 教科書本文",
+        "Unit10 10-1～RT",
+        "Real Life English 6 病院にて-症状や出来事を伝える-",
+        "Stage Activity 3 My Favorite Event This Year",
+        "Let's Read 教科書本文",
+        "Unit0 教科書本文",
+        "Unit1 Part1",
+        "Unit1 Part2",
+        "Unit1 Read and Think1"
+      ],
+      "3": [
+        "Unit7 Part1, 2",
+        "Unit7 Read and Think1",
+        "Unit7 Read and Think2",
+        "Unit7 教科書本文",
+        "Unit7 1～RT2",
+        "Real Life English 7 買い物 -申し出る・要望を伝える-",
+        "Stage Activity 3 Let's Have a Discussion",
+        "Let's Read 3 教科書本文",
+        "Unit0 教科書本文",
+        "Unit1 Part1, 2",
+        "Unit1 Read and Think1",
+        "Unit1 Read and Think2"
+      ]
+    },
+    "ニューホライズン": {
+      "1": [
+        "プレステップ2 アルファベットと英語のきまり",
+        "プレステップ3 複数形とa, my, thisなど",
+        "プレステップ4 だれが何をどうする",
+        "プレステップ5 どこで(前置詞1)",
+        "プレステップ6 いつ(前置詞2)",
+        "プレステップ7 be動詞",
+        "プレステップ8 一般動詞",
+        "プレステップ9 can",
+        "Unit0 Nice To Meet You / 英語の音と文字",
+        "Unit1 Part1",
+        "Unit1 Part2",
+        "Unit1 Part3"
+      ],
+      "2": [
+        "Unit10 Part1",
+        "Unit10 Part2",
+        "Unit10 Read and Think",
+        "Unit10 教科書本文",
+        "Unit10 10-1～RT",
+        "Real Life English 6 病院にて-症状や出来事を伝える-",
+        "Stage Activity 3 My Favorite Event This Year",
+        "Let's Read 教科書本文",
+        "Unit0 教科書本文",
+        "Unit1 Part1",
+        "Unit1 Part2",
+        "Unit1 Read and Think1"
+      ],
+      "3": [
+        "Unit7 Part1, 2",
+        "Unit7 Read and Think1",
+        "Unit7 Read and Think2",
+        "Unit7 教科書本文",
+        "Unit7 1～RT2",
+        "Real Life English 7 買い物 -申し出る・要望を伝える-",
+        "Stage Activity 3 Let's Have a Discussion",
+        "Let's Read 3 教科書本文",
+        "Unit0 教科書本文",
+        "Unit1 Part1, 2",
+        "Unit1 Read and Think1",
+        "Unit1 Read and Think2"
+      ]
+    }
+  },
+  "by_textbook_grade": {
+    "サンシャイン": {
+      "中1": {
+        "total": 2884,
+        "old_positive": 2047,
+        "old_positive_pct": 70.98,
+        "reconstructed_exact_solvable": 2624,
+        "reconstructed_exact_solvable_pct": 90.98,
+        "reconstructed_solvable_ignoring_proper_names": 2677,
+        "reconstructed_solvable_ignoring_proper_names_pct": 92.82,
+        "reconstructed_required_stage_counts": {
+          "0": 401,
+          "1": 92,
+          "3": 91,
+          "4": 14,
+          "6": 442,
+          "7": 204,
+          "8": 129,
+          "9": 10,
+          "10": 6,
+          "11": 16,
+          "13": 2,
+          "15": 1,
+          "16": 89,
+          "17": 56,
+          "18": 53,
+          "19": 69,
+          "20": 101,
+          "21": 87,
+          "24": 21,
+          "25": 3,
+          "26": 8,
+          "31": 2,
+          "35": 58,
+          "36": 4,
+          "38": 1,
+          "41": 1,
+          "42": 25,
+          "43": 256,
+          "44": 1,
+          "47": 109,
+          "48": 1,
+          "50": 21,
+          "54": 2,
+          "60": 57,
+          "61": 25,
+          "63": 2,
+          "66": 76,
+          "67": 2,
+          "81": 1,
+          "86": 22,
+          "91": 4,
+          "93": 2,
+          "96": 57
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "tv",
+            "count": 126,
+            "example": {
+              "id": "E1-3S-012",
+              "category": "三単現",
+              "q": "He ( watch ) TV at night. の（ ）内を正しくしなさい。",
+              "a": "Watches"
+            }
+          },
+          {
+            "token": "test",
+            "count": 20,
+            "example": {
+              "id": "GEN-PDID-2079",
+              "category": "過去の疑問文・否定文",
+              "q": "I had a test yesterday. を疑問文にしなさい。",
+              "a": "Did I have a test yesterday?"
+            }
+          },
+          {
+            "token": "usually",
+            "count": 18,
+            "example": {
+              "id": "GEN-FREQ-1272",
+              "category": "頻度副詞",
+              "q": "I (      ) visit the library. 「たいてい」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "Usually"
+            }
+          },
+          {
+            "token": "chair",
+            "count": 17,
+            "example": {
+              "id": "E1-PR-005",
+              "category": "前置詞",
+              "q": "次の日本語に合う英文を書きなさい。『そのいすは机の下にあります。』",
+              "a": "The chair is under the desk."
+            }
+          },
+          {
+            "token": "ken",
+            "count": 17,
+            "example": {
+              "id": "E1-RD-001",
+              "category": "読解・会話完成",
+              "q": "I am Ken. I like soccer.  問い：Does Ken like soccer?",
+              "a": "Yes, he does."
+            }
+          },
+          {
+            "token": "tom",
+            "count": 15,
+            "example": {
+              "id": "E1-RD-006",
+              "category": "読解・会話完成",
+              "q": "This is Tom. He is my friend.  問い：Who is Tom?",
+              "a": "He is my friend."
+            }
+          },
+          {
+            "token": "wall",
+            "count": 13,
+            "example": {
+              "id": "E1-PR-007",
+              "category": "前置詞",
+              "q": "The clock is (      ) the wall. 「壁に」 空所に入る最も適切な語(句)を書きなさい。",
+              "a": "On"
+            }
+          },
+          {
+            "token": "emi",
+            "count": 11,
+            "example": {
+              "id": "E1-RD-002",
+              "category": "読解・会話完成",
+              "q": "She is Emi. She is in the library.  問い：Where is Emi?",
+              "a": "She is in the library."
+            }
+          },
+          {
+            "token": "ball",
+            "count": 6,
+            "example": {
+              "id": "E1-RD-009",
+              "category": "読解・会話完成",
+              "q": "The ball is under the desk.  問い：Where is the ball?",
+              "a": "It is under the desk."
+            }
+          },
+          {
+            "token": "grandmother",
+            "count": 4,
+            "example": {
+              "id": "E1-PAST-003",
+              "category": "一般動詞の過去形",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( visited / I / my / grandmother / yesterday )",
+              "a": "I visited my grandmother yesterday."
+            }
+          },
+          {
+            "token": "yuki",
+            "count": 4,
+            "example": {
+              "id": "GEN-WR-1485",
+              "category": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『ユキは 毎日 テニスをします。』",
+              "a": "Yuki plays tennis every day."
+            }
+          },
+          {
+            "token": "tonight",
+            "count": 4,
+            "example": {
+              "id": "R1-FUT-0044",
+              "category": "未来の文",
+              "q": "『私たちは今夜英語を勉強するでしょう。』を英語で書きなさい。",
+              "a": "We will study English tonight."
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 3,
+            "example": {
+              "id": "E1-BQ-012",
+              "category": "be動詞",
+              "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "are"
+            }
+          },
+          {
+            "token": "absent",
+            "count": 3,
+            "example": {
+              "id": "GEN-WH-0843",
+              "category": "疑問詞",
+              "q": "Why を使って、「なぜ欠席したのですか。」という意味の質問文を書きなさい。",
+              "a": "Why were you absent?"
+            }
+          },
+          {
+            "token": "shoes",
+            "count": 3,
+            "example": {
+              "id": "GEN-PREP-1262",
+              "category": "前置詞",
+              "q": "the shoes is (      ) the desk / chair / box / door / wall. 「机の下」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "Under"
+            }
+          },
+          {
+            "token": "rainy",
+            "count": 3,
+            "example": {
+              "id": "R1-CONJ-0047",
+              "category": "接続詞",
+              "q": "『雨だったので、彼女は家にいました。』を英語で書きなさい。",
+              "a": "She stayed home because it was rainy."
+            }
+          },
+          {
+            "token": "blue",
+            "count": 2,
+            "example": {
+              "id": "E1-BD-012",
+              "category": "区別",
+              "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "pencil",
+            "count": 2,
+            "example": {
+              "id": "GEN-PREP-1266",
+              "category": "前置詞",
+              "q": "次の文の空所に入る前置詞を書きなさい。 the pen is in the pencil case. (      )",
+              "a": "In"
+            }
+          },
+          {
+            "token": "case",
+            "count": 2,
+            "example": {
+              "id": "GEN-PREP-1266",
+              "category": "前置詞",
+              "q": "次の文の空所に入る前置詞を書きなさい。 the pen is in the pencil case. (      )",
+              "a": "In"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 2,
+            "example": {
+              "id": "R1-FUT-0040",
+              "category": "未来の文",
+              "q": "『私は明日京都を訪れるつもりです。』を英語で書きなさい。",
+              "a": "I will visit Kyoto tomorrow."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 2,
+            "example": {
+              "id": "R1-CONJ-0046",
+              "category": "接続詞",
+              "q": "『私は疲れていたので、早く寝ました。』を英語で書きなさい。",
+              "a": "I was tired, so I went to bed early."
+            }
+          },
+          {
+            "token": "math",
+            "count": 1,
+            "example": {
+              "id": "E1-DQ-006",
+              "category": "一般動詞",
+              "q": "I like math. を否定文にしなさい。",
+              "a": "I do not like math."
+            }
+          },
+          {
+            "token": "yamaguchi",
+            "count": 1,
+            "example": {
+              "id": "E1-WH-003",
+              "category": "疑問詞",
+              "q": "I am from Yamaguchi. になる質問文を書きなさい。",
+              "a": "Where are you from?"
+            }
+          },
+          {
+            "token": "clock",
+            "count": 1,
+            "example": {
+              "id": "E1-PR-007",
+              "category": "前置詞",
+              "q": "The clock is (      ) the wall. 「壁に」 空所に入る最も適切な語(句)を書きなさい。",
+              "a": "On"
+            }
+          },
+          {
+            "token": "tokyo",
+            "count": 1,
+            "example": {
+              "id": "E1-PR-008",
+              "category": "前置詞",
+              "q": "I live ( in / on / under ) Tokyo. 正しいものを選びなさい。",
+              "a": "In"
+            }
+          },
+          {
+            "token": "fukuoka",
+            "count": 1,
+            "example": {
+              "id": "E1-WR-001",
+              "category": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は福岡出身です。』",
+              "a": "I am from Fukuoka."
+            }
+          },
+          {
+            "token": "zoo",
+            "count": 1,
+            "example": {
+              "id": "E1-TIME-004",
+              "category": "過去を表す語",
+              "q": "We went to the zoo ( last Sunday / every Sunday ). 正しいものを選びなさい。",
+              "a": "Last Sunday"
+            }
+          },
+          {
+            "token": "mika",
+            "count": 1,
+            "example": {
+              "id": "R1-PRON-0006",
+              "category": "人称代名詞",
+              "q": "This is Mika. I study English with (      ). ( she / her / hers )",
+              "a": "her"
+            }
+          },
+          {
+            "token": "sato",
+            "count": 1,
+            "example": {
+              "id": "F1-PRON-0026",
+              "category": "人称代名詞",
+              "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+              "a": "us"
+            }
+          },
+          {
+            "token": "sky",
+            "count": 1,
+            "example": {
+              "id": "EX1-TH-0003",
+              "category": "there is ～・look ～ の文",
+              "q": "『今日は空が青く見えます。』を英語で書きなさい。",
+              "a": "The sky looks blue today."
+            }
+          },
+          {
+            "token": "osaka",
+            "count": 1,
+            "example": {
+              "id": "EX1-FUT-0006",
+              "category": "未来の文",
+              "q": "『彼らは来週大阪を訪れる予定です。』を英語で書きなさい。",
+              "a": "They are going to visit Osaka next week."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 1,
+            "example": {
+              "id": "EX1-CONJ-0009",
+              "category": "接続詞",
+              "q": "『私はおなかがすいていたので、早めに昼食を食べました。』を英語で書きなさい。",
+              "a": "I was hungry, so I ate lunch early."
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "be動詞",
+            "total": 563,
+            "exact_solvable": 562,
+            "solvable_ignoring_proper": 562,
+            "old_positive": 519,
+            "exact_pct": 99.82,
+            "ignore_proper_pct": 99.82
+          },
+          {
+            "category": "三単現",
+            "total": 397,
+            "exact_solvable": 372,
+            "solvable_ignoring_proper": 372,
+            "old_positive": 198,
+            "exact_pct": 93.7,
+            "ignore_proper_pct": 93.7
+          },
+          {
+            "category": "過去のbe動詞",
+            "total": 366,
+            "exact_solvable": 366,
+            "solvable_ignoring_proper": 366,
+            "old_positive": 366,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "一般動詞",
+            "total": 268,
+            "exact_solvable": 251,
+            "solvable_ignoring_proper": 251,
+            "old_positive": 131,
+            "exact_pct": 93.66,
+            "ignore_proper_pct": 93.66
+          },
+          {
+            "category": "過去を表す語",
+            "total": 263,
+            "exact_solvable": 228,
+            "solvable_ignoring_proper": 228,
+            "old_positive": 203,
+            "exact_pct": 86.69,
+            "ignore_proper_pct": 86.69
+          },
+          {
+            "category": "一般動詞の過去形",
+            "total": 198,
+            "exact_solvable": 184,
+            "solvable_ignoring_proper": 184,
+            "old_positive": 148,
+            "exact_pct": 92.93,
+            "ignore_proper_pct": 92.93
+          },
+          {
+            "category": "不規則動詞",
+            "total": 151,
+            "exact_solvable": 139,
+            "solvable_ignoring_proper": 139,
+            "old_positive": 77,
+            "exact_pct": 92.05,
+            "ignore_proper_pct": 92.05
+          },
+          {
+            "category": "過去の疑問文・否定文",
+            "total": 134,
+            "exact_solvable": 116,
+            "solvable_ignoring_proper": 116,
+            "old_positive": 110,
+            "exact_pct": 86.57,
+            "ignore_proper_pct": 86.57
+          },
+          {
+            "category": "英作文",
+            "total": 101,
+            "exact_solvable": 74,
+            "solvable_ignoring_proper": 87,
+            "old_positive": 61,
+            "exact_pct": 73.27,
+            "ignore_proper_pct": 86.14
+          },
+          {
+            "category": "頻度副詞",
+            "total": 84,
+            "exact_solvable": 66,
+            "solvable_ignoring_proper": 76,
+            "old_positive": 55,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 90.48
+          },
+          {
+            "category": "並びかえ",
+            "total": 71,
+            "exact_solvable": 63,
+            "solvable_ignoring_proper": 63,
+            "old_positive": 48,
+            "exact_pct": 88.73,
+            "ignore_proper_pct": 88.73
+          },
+          {
+            "category": "前置詞",
+            "total": 42,
+            "exact_solvable": 17,
+            "solvable_ignoring_proper": 18,
+            "old_positive": 9,
+            "exact_pct": 40.48,
+            "ignore_proper_pct": 42.86
+          },
+          {
+            "category": "区別",
+            "total": 39,
+            "exact_solvable": 34,
+            "solvable_ignoring_proper": 36,
+            "old_positive": 22,
+            "exact_pct": 87.18,
+            "ignore_proper_pct": 92.31
+          },
+          {
+            "category": "疑問詞",
+            "total": 36,
+            "exact_solvable": 30,
+            "solvable_ignoring_proper": 32,
+            "old_positive": 18,
+            "exact_pct": 83.33,
+            "ignore_proper_pct": 88.89
+          },
+          {
+            "category": "人称代名詞",
+            "total": 30,
+            "exact_solvable": 14,
+            "solvable_ignoring_proper": 28,
+            "old_positive": 15,
+            "exact_pct": 46.67,
+            "ignore_proper_pct": 93.33
+          },
+          {
+            "category": "読解・会話完成",
+            "total": 24,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 18,
+            "old_positive": 9,
+            "exact_pct": 45.83,
+            "ignore_proper_pct": 75
+          },
+          {
+            "category": "命令文",
+            "total": 24,
+            "exact_solvable": 24,
+            "solvable_ignoring_proper": 24,
+            "old_positive": 10,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "未来の文",
+            "total": 19,
+            "exact_solvable": 12,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 2,
+            "exact_pct": 63.16,
+            "ignore_proper_pct": 78.95
+          },
+          {
+            "category": "can",
+            "total": 19,
+            "exact_solvable": 19,
+            "solvable_ignoring_proper": 19,
+            "old_positive": 13,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "現在進行形",
+            "total": 17,
+            "exact_solvable": 13,
+            "solvable_ignoring_proper": 13,
+            "old_positive": 16,
+            "exact_pct": 76.47,
+            "ignore_proper_pct": 76.47
+          },
+          {
+            "category": "there is ～・look ～ の文",
+            "total": 14,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 11,
+            "old_positive": 3,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "接続詞",
+            "total": 13,
+            "exact_solvable": 7,
+            "solvable_ignoring_proper": 8,
+            "old_positive": 3,
+            "exact_pct": 53.85,
+            "ignore_proper_pct": 61.54
+          },
+          {
+            "category": "過去進行形",
+            "total": 11,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 11,
+            "old_positive": 11,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          }
+        ]
+      },
+      "中2": {
+        "total": 3707,
+        "old_positive": 231,
+        "old_positive_pct": 6.23,
+        "reconstructed_exact_solvable": 2759,
+        "reconstructed_exact_solvable_pct": 74.43,
+        "reconstructed_solvable_ignoring_proper_names": 3177,
+        "reconstructed_solvable_ignoring_proper_names_pct": 85.7,
+        "reconstructed_required_stage_counts": {
+          "0": 2525,
+          "12": 58,
+          "13": 3,
+          "18": 2,
+          "25": 4,
+          "29": 21,
+          "30": 1,
+          "38": 2,
+          "43": 6,
+          "44": 40,
+          "48": 2,
+          "64": 8,
+          "65": 36,
+          "69": 23,
+          "71": 3,
+          "75": 2,
+          "82": 5,
+          "104": 8,
+          "106": 3,
+          "110": 7
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "ken",
+            "count": 143,
+            "example": {
+              "id": "M2-COMP-0651",
+              "category": "比較",
+              "q": "Ken is (      ) than Tom. (tall)",
+              "a": "Taller"
+            }
+          },
+          {
+            "token": "science",
+            "count": 136,
+            "example": {
+              "id": "M2-FUT-0473",
+              "category": "未来表現",
+              "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+              "a": "I am going to study science."
+            }
+          },
+          {
+            "token": "takumi",
+            "count": 99,
+            "example": {
+              "id": "M2X-RV-0145",
+              "category": "三単現",
+              "q": "次の日本語に合う英文を書きなさい。『タクミは バスケットボールを練習します。』",
+              "a": "Takumi practices basketball."
+            }
+          },
+          {
+            "token": "mika",
+            "count": 96,
+            "example": {
+              "id": "M2-COMP-0664",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『Mika は Ken より 背が高い。』",
+              "a": "Mika is taller than Ken."
+            }
+          },
+          {
+            "token": "math",
+            "count": 79,
+            "example": {
+              "id": "M2-PRS-0149",
+              "category": "一般動詞",
+              "q": "I study math. を疑問文にしなさい。",
+              "a": "Do you study math?"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 77,
+            "example": {
+              "id": "M2-3RD-0237",
+              "category": "三単現",
+              "q": "He visits Kyoto. を否定文にしなさい。",
+              "a": "He does not play tennis."
+            }
+          },
+          {
+            "token": "grandmother",
+            "count": 67,
+            "example": {
+              "id": "M2-FUT-0469",
+              "category": "未来表現",
+              "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+              "a": "I am going to visit my grandmother."
+            }
+          },
+          {
+            "token": "phone",
+            "count": 42,
+            "example": {
+              "id": "M2Y-MOD-0341",
+              "category": "助動詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は ここでスマホを使ってはいけない。』",
+              "a": "I must not use your phone here."
+            }
+          },
+          {
+            "token": "tom",
+            "count": 34,
+            "example": {
+              "id": "M2-COMP-0651",
+              "category": "比較",
+              "q": "Ken is (      ) than Tom. (tall)",
+              "a": "Taller"
+            }
+          },
+          {
+            "token": "novel",
+            "count": 34,
+            "example": {
+              "id": "M2-FUT2-0445",
+              "category": "未来表現",
+              "q": "『私は 明日 小説を読む予定です。』に近い英文を、will を使って書きなさい。",
+              "a": "I will read a novel tomorrow."
+            }
+          },
+          {
+            "token": "larger",
+            "count": 26,
+            "example": {
+              "id": "M2Y-COMP-0395",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+              "a": "This bag is larger than that one."
+            }
+          },
+          {
+            "token": "abroad",
+            "count": 18,
+            "example": {
+              "id": "M2Y-INF-0155",
+              "category": "不定詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は 海外旅行をしたい。』",
+              "a": "I want to travel abroad."
+            }
+          },
+          {
+            "token": "app",
+            "count": 18,
+            "example": {
+              "id": "M2Y-INF-0167",
+              "category": "不定詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は このアプリを英語の勉強に使う。』",
+              "a": "I use this app to study English."
+            }
+          },
+          {
+            "token": "cram",
+            "count": 13,
+            "example": {
+              "id": "M2Y-MOD-0338",
+              "category": "助動詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は 塾へ行かなければならない。』",
+              "a": "I have to go to cram school."
+            }
+          },
+          {
+            "token": "hokkaido",
+            "count": 12,
+            "example": {
+              "id": "M2Y-FUT-0001",
+              "category": "未来表現",
+              "q": "次の日本語に合う英文を書きなさい。『私は 北海道へ行く予定です。』",
+              "a": "I am going to go to Hokkaido."
+            }
+          },
+          {
+            "token": "since",
+            "count": 12,
+            "example": {
+              "id": "R2-PERF2-0094",
+              "category": "現在完了形（継続），現在完了進行形",
+              "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+              "a": "He has been studying English since six."
+            }
+          },
+          {
+            "token": "sunny",
+            "count": 9,
+            "example": {
+              "id": "M2-CONJ-0549",
+              "category": "接続詞",
+              "q": "It was sunny, (      ) we played soccer.",
+              "a": "So"
+            }
+          },
+          {
+            "token": "osaka",
+            "count": 8,
+            "example": {
+              "id": "M2-IRR-0405",
+              "category": "不規則動詞",
+              "q": "I (      ) to Osaka yesterday. (go)",
+              "a": "Went"
+            }
+          },
+          {
+            "token": "sushi",
+            "count": 8,
+            "example": {
+              "id": "M2-IRR-0409",
+              "category": "不規則動詞",
+              "q": "I (      ) sushi yesterday. (eat)",
+              "a": "Ate"
+            }
+          },
+          {
+            "token": "test",
+            "count": 7,
+            "example": {
+              "id": "M2-CONJ2-0755",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『私はテストに受かりたかったので、一生けん命勉強しました。』",
+              "a": "I studied hard, because I wanted to pass the test."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 6,
+            "example": {
+              "id": "M2-CONJ-0548",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は疲れていたので、早く寝ました』",
+              "a": "I went to bed early because I was tired."
+            }
+          },
+          {
+            "token": "emi",
+            "count": 6,
+            "example": {
+              "id": "R2-PRON-0067",
+              "category": "人称代名詞",
+              "q": "This is Emi. ( she / her / hers ) is my friend.",
+              "a": "She"
+            }
+          },
+          {
+            "token": "sick",
+            "count": 5,
+            "example": {
+              "id": "M2Y-CONJ-0147",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『病気だったので欠席しました』",
+              "a": "I was absent because I was sick."
+            }
+          },
+          {
+            "token": "sato",
+            "count": 5,
+            "example": {
+              "id": "R2-PRON-0070",
+              "category": "人称代名詞",
+              "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+              "a": "us"
+            }
+          },
+          {
+            "token": "largest",
+            "count": 4,
+            "example": {
+              "id": "M2-COMP2-1464",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『Tom はこのクラスでいちばん 大きい。』",
+              "a": "Tom is the largest in this class."
+            }
+          },
+          {
+            "token": "bus",
+            "count": 4,
+            "example": {
+              "id": "TH2-WH-0079",
+              "category": "疑問詞",
+              "q": "I can go there by bus. に合う質問文を書きなさい。",
+              "a": "How can you go to the museum?"
+            }
+          },
+          {
+            "token": "aki",
+            "count": 4,
+            "example": {
+              "id": "NX2-F2-0037",
+              "category": "文型②（call A B，make A B）",
+              "q": "『友だちは私をアキと呼びます。』を英語で書きなさい。",
+              "a": "My friends call me Aki."
+            }
+          },
+          {
+            "token": "blue",
+            "count": 4,
+            "example": {
+              "id": "NX2-F2-0049",
+              "category": "文型②（call A B，make A B）",
+              "q": "『私たちはこの場所をブルーパークと呼びます。』を英語で書きなさい。",
+              "a": "We call this place Blue Park."
+            }
+          },
+          {
+            "token": "absent",
+            "count": 3,
+            "example": {
+              "id": "M2Y-CONJ-0147",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『病気だったので欠席しました』",
+              "a": "I was absent because I was sick."
+            }
+          },
+          {
+            "token": "twice",
+            "count": 3,
+            "example": {
+              "id": "R2-PERF-0092",
+              "category": "現在完了形（完了・経験）",
+              "q": "『彼女は京都へ2回行ったことがあります。』を英語で書きなさい。",
+              "a": "She has been to Kyoto twice."
+            }
+          },
+          {
+            "token": "newspaper",
+            "count": 3,
+            "example": {
+              "id": "TH2-PROG-0017",
+              "category": "進行形",
+              "q": "『私は今新聞を読んでいます。』を英語で書きなさい。",
+              "a": "I am reading a newspaper now."
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 3,
+            "example": {
+              "id": "TH2-PROG-0026",
+              "category": "進行形",
+              "q": "『私たちは今教室をそうじしています。』を英語で書きなさい。",
+              "a": "We are cleaning the classroom now."
+            }
+          },
+          {
+            "token": "bookstore",
+            "count": 3,
+            "example": {
+              "id": "TH2-TH-0035",
+              "category": "there is ～ の文",
+              "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+              "a": "There is a bookstore near the station."
+            }
+          },
+          {
+            "token": "sky",
+            "count": 3,
+            "example": {
+              "id": "FF2-FORM1-0031",
+              "category": "文型①（look ～，give A B）",
+              "q": "『今朝、空は美しく見えました。』を英語で書きなさい。",
+              "a": "The sky looked beautiful this morning."
+            }
+          },
+          {
+            "token": "present",
+            "count": 3,
+            "example": {
+              "id": "FF2-FORM1-0034",
+              "category": "文型①（look ～，give A B）",
+              "q": "『母は姉（妹）にプレゼントをあげました。』を英語で書きなさい。",
+              "a": "My mother gave my sister a present."
+            }
+          },
+          {
+            "token": "ball",
+            "count": 3,
+            "example": {
+              "id": "FF2-PASS-0058",
+              "category": "受動態",
+              "q": "『その窓はボールによって割られました。』を英語で書きなさい。",
+              "a": "The window was broken by the ball."
+            }
+          },
+          {
+            "token": "key",
+            "count": 3,
+            "example": {
+              "id": "FF2-PERF-0085",
+              "category": "現在完了形（完了・経験）",
+              "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
+              "a": "I have lost my key."
+            }
+          },
+          {
+            "token": "grown",
+            "count": 2,
+            "example": {
+              "id": "F2-PASS-0095",
+              "category": "受動態",
+              "q": "次の日本語に合う英文を書きなさい。『米は日本で育てられています。』",
+              "a": "Rice is grown in Japan."
+            }
+          },
+          {
+            "token": "textbook",
+            "count": 2,
+            "example": {
+              "id": "TH2-IMP-0001",
+              "category": "命令文",
+              "q": "『教科書を開きなさい。』を英語で書きなさい。",
+              "a": "Open your textbook."
+            }
+          },
+          {
+            "token": "akio",
+            "count": 2,
+            "example": {
+              "id": "TH2-V2-0083",
+              "category": "文型②（call A B，make A B）",
+              "q": "『先生は私をアキオと呼びました。』を英語で書きなさい。",
+              "a": "The teacher called me Akio."
+            }
+          },
+          {
+            "token": "pochi",
+            "count": 2,
+            "example": {
+              "id": "TH2-V2-0089",
+              "category": "文型②（call A B，make A B）",
+              "q": "『私たちはこの犬をポチと呼びます。』を英語で書きなさい。",
+              "a": "We call this dog Pochi."
+            }
+          },
+          {
+            "token": "yamaguchi",
+            "count": 2,
+            "example": {
+              "id": "TH2-PC-0095",
+              "category": "現在完了形（継続），現在完了進行形",
+              "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
+              "a": "I have lived in Yamaguchi for five years."
+            }
+          },
+          {
+            "token": "eager",
+            "count": 2,
+            "example": {
+              "id": "FF2-INF2-0098",
+              "category": "不定詞②",
+              "q": "『彼女は英語を学ぶことに熱心です。』を英語で書きなさい。",
+              "a": "She is eager to learn English."
+            }
+          },
+          {
+            "token": "loudly",
+            "count": 2,
+            "example": {
+              "id": "EX2-IMP-0032",
+              "category": "命令文",
+              "q": "『図書館で大きな声で話してはいけません。』を英語で書きなさい。",
+              "a": "Don’t talk loudly in the library."
+            }
+          },
+          {
+            "token": "bank",
+            "count": 2,
+            "example": {
+              "id": "EX2-TH-0048",
+              "category": "there is ～ の文",
+              "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+              "a": "There is a bank across from the station."
+            }
+          },
+          {
+            "token": "solve",
+            "count": 2,
+            "example": {
+              "id": "NX2-BAL-0065",
+              "category": "不定詞②",
+              "q": "『この問題は解きやすいです。』に合う英文を書きなさい。",
+              "a": "This problem is easy to solve."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 1,
+            "example": {
+              "id": "M2Y-CONJ-0145",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『おなかがすいていたので、昼食を作りました』",
+              "a": "I was hungry so I made lunch."
+            }
+          },
+          {
+            "token": "sleepy",
+            "count": 1,
+            "example": {
+              "id": "M2-CONJ2-0752",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『彼は眠かったですが、早く起きました。』",
+              "a": "He got up early, but he was sleepy."
+            }
+          },
+          {
+            "token": "tv",
+            "count": 1,
+            "example": {
+              "id": "F2-DP-0084",
+              "category": "be動詞と一般動詞（過去形）",
+              "q": "We did not watch TV last night. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "一般動詞の文"
+            }
+          },
+          {
+            "token": "interest",
+            "count": 1,
+            "example": {
+              "id": "FF2-FORM1-0038",
+              "category": "文型①（look ～，give A B）",
+              "q": "The idea sounds interest. の誤りを直しなさい。",
+              "a": "The idea sounds interesting."
+            }
+          },
+          {
+            "token": "chair",
+            "count": 1,
+            "example": {
+              "id": "EX2-INF2-0060",
+              "category": "不定詞②",
+              "q": "『このいすは座り心地がよいです。』を英語で書きなさい。",
+              "a": "This chair is comfortable to sit on."
+            }
+          },
+          {
+            "token": "result",
+            "count": 1,
+            "example": {
+              "id": "EX2-INF2-0061",
+              "category": "不定詞②",
+              "q": "『私はその結果を見て驚きました。』を英語で書きなさい。",
+              "a": "I was surprised to see the result."
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "未来表現",
+            "total": 706,
+            "exact_solvable": 474,
+            "solvable_ignoring_proper": 518,
+            "old_positive": 0,
+            "exact_pct": 67.14,
+            "ignore_proper_pct": 73.37
+          },
+          {
+            "category": "不定詞",
+            "total": 448,
+            "exact_solvable": 392,
+            "solvable_ignoring_proper": 412,
+            "old_positive": 4,
+            "exact_pct": 87.5,
+            "ignore_proper_pct": 91.96
+          },
+          {
+            "category": "動名詞",
+            "total": 406,
+            "exact_solvable": 322,
+            "solvable_ignoring_proper": 334,
+            "old_positive": 9,
+            "exact_pct": 79.31,
+            "ignore_proper_pct": 82.27
+          },
+          {
+            "category": "一般動詞",
+            "total": 344,
+            "exact_solvable": 252,
+            "solvable_ignoring_proper": 314,
+            "old_positive": 0,
+            "exact_pct": 73.26,
+            "ignore_proper_pct": 91.28
+          },
+          {
+            "category": "助動詞",
+            "total": 340,
+            "exact_solvable": 316,
+            "solvable_ignoring_proper": 316,
+            "old_positive": 36,
+            "exact_pct": 92.94,
+            "ignore_proper_pct": 92.94
+          },
+          {
+            "category": "比較",
+            "total": 268,
+            "exact_solvable": 87,
+            "solvable_ignoring_proper": 238,
+            "old_positive": 79,
+            "exact_pct": 32.46,
+            "ignore_proper_pct": 88.81
+          },
+          {
+            "category": "三単現",
+            "total": 220,
+            "exact_solvable": 160,
+            "solvable_ignoring_proper": 200,
+            "old_positive": 0,
+            "exact_pct": 72.73,
+            "ignore_proper_pct": 90.91
+          },
+          {
+            "category": "一般動詞の過去形",
+            "total": 196,
+            "exact_solvable": 166,
+            "solvable_ignoring_proper": 179,
+            "old_positive": 0,
+            "exact_pct": 84.69,
+            "ignore_proper_pct": 91.33
+          },
+          {
+            "category": "過去の疑問文・否定文",
+            "total": 124,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 113,
+            "old_positive": 2,
+            "exact_pct": 82.26,
+            "ignore_proper_pct": 91.13
+          },
+          {
+            "category": "be動詞",
+            "total": 108,
+            "exact_solvable": 108,
+            "solvable_ignoring_proper": 108,
+            "old_positive": 0,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "不規則動詞",
+            "total": 64,
+            "exact_solvable": 48,
+            "solvable_ignoring_proper": 56,
+            "old_positive": 8,
+            "exact_pct": 75,
+            "ignore_proper_pct": 87.5
+          },
+          {
+            "category": "接続詞",
+            "total": 48,
+            "exact_solvable": 30,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 7,
+            "exact_pct": 62.5,
+            "ignore_proper_pct": 62.5
+          },
+          {
+            "category": "文型②（call A B，make A B）",
+            "total": 47,
+            "exact_solvable": 26,
+            "solvable_ignoring_proper": 43,
+            "old_positive": 30,
+            "exact_pct": 55.32,
+            "ignore_proper_pct": 91.49
+          },
+          {
+            "category": "be動詞と一般動詞（過去形）",
+            "total": 41,
+            "exact_solvable": 37,
+            "solvable_ignoring_proper": 40,
+            "old_positive": 6,
+            "exact_pct": 90.24,
+            "ignore_proper_pct": 97.56
+          },
+          {
+            "category": "受動態",
+            "total": 38,
+            "exact_solvable": 31,
+            "solvable_ignoring_proper": 33,
+            "old_positive": 14,
+            "exact_pct": 81.58,
+            "ignore_proper_pct": 86.84
+          },
+          {
+            "category": "現在完了形（完了・経験）",
+            "total": 36,
+            "exact_solvable": 23,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 0,
+            "exact_pct": 63.89,
+            "ignore_proper_pct": 83.33
+          },
+          {
+            "category": "人称代名詞",
+            "total": 30,
+            "exact_solvable": 14,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 3,
+            "exact_pct": 46.67,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "進行形",
+            "total": 30,
+            "exact_solvable": 20,
+            "solvable_ignoring_proper": 20,
+            "old_positive": 4,
+            "exact_pct": 66.67,
+            "ignore_proper_pct": 66.67
+          },
+          {
+            "category": "文型①（look ～，give A B）",
+            "total": 30,
+            "exact_solvable": 21,
+            "solvable_ignoring_proper": 23,
+            "old_positive": 1,
+            "exact_pct": 70,
+            "ignore_proper_pct": 76.67
+          },
+          {
+            "category": "命令文",
+            "total": 28,
+            "exact_solvable": 22,
+            "solvable_ignoring_proper": 22,
+            "old_positive": 7,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "there is ～ の文",
+            "total": 28,
+            "exact_solvable": 23,
+            "solvable_ignoring_proper": 23,
+            "old_positive": 5,
+            "exact_pct": 82.14,
+            "ignore_proper_pct": 82.14
+          },
+          {
+            "category": "不定詞②",
+            "total": 28,
+            "exact_solvable": 22,
+            "solvable_ignoring_proper": 22,
+            "old_positive": 9,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "現在完了形（継続），現在完了進行形",
+            "total": 27,
+            "exact_solvable": 13,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 3,
+            "exact_pct": 48.15,
+            "ignore_proper_pct": 55.56
+          },
+          {
+            "category": "be動詞と一般動詞（現在形）",
+            "total": 26,
+            "exact_solvable": 25,
+            "solvable_ignoring_proper": 26,
+            "old_positive": 0,
+            "exact_pct": 96.15,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "疑問詞",
+            "total": 26,
+            "exact_solvable": 17,
+            "solvable_ignoring_proper": 17,
+            "old_positive": 1,
+            "exact_pct": 65.38,
+            "ignore_proper_pct": 65.38
+          },
+          {
+            "category": "読解・会話完成",
+            "total": 20,
+            "exact_solvable": 8,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 3,
+            "exact_pct": 40,
+            "ignore_proper_pct": 75
+          }
+        ]
+      },
+      "中3": {
+        "total": 3920,
+        "old_positive": 208,
+        "old_positive_pct": 5.31,
+        "reconstructed_exact_solvable": 2937,
+        "reconstructed_exact_solvable_pct": 74.92,
+        "reconstructed_solvable_ignoring_proper_names": 3223,
+        "reconstructed_solvable_ignoring_proper_names_pct": 82.22,
+        "reconstructed_required_stage_counts": {
+          "0": 2726,
+          "16": 180,
+          "63": 16,
+          "96": 15
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "ken",
+            "count": 104,
+            "example": {
+              "id": "M3N-00061",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Ken / soccer / plays / every morning )",
+              "a": "Ken plays soccer every morning."
+            }
+          },
+          {
+            "token": "c",
+            "count": 92,
+            "example": {
+              "id": "M3C-01403",
+              "category": "不定詞②",
+              "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+              "a": "B"
+            }
+          },
+          {
+            "token": "key",
+            "count": 85,
+            "example": {
+              "id": "M3C-00016",
+              "category": "現在完了形（完了・経験）",
+              "q": "I have lost my key. を疑問文にしなさい。",
+              "a": "Have I lost my key?"
+            }
+          },
+          {
+            "token": "tom",
+            "count": 84,
+            "example": {
+              "id": "M3N-00073",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Tom / baseball / plays / after class )",
+              "a": "Tom plays baseball after class."
+            }
+          },
+          {
+            "token": "tv",
+            "count": 72,
+            "example": {
+              "id": "M3C-00181",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "I watch TV. を疑問文にしなさい。",
+              "a": "Do I watch TV?"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 61,
+            "example": {
+              "id": "M3C-00015",
+              "category": "現在完了形（完了・経験）",
+              "q": "I have been to Kyoto once. を疑問文にしなさい。",
+              "a": "Have I been to Kyoto once?"
+            }
+          },
+          {
+            "token": "yuki",
+            "count": 44,
+            "example": {
+              "id": "M3N-00067",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Yuki / tennis / plays / every evening )",
+              "a": "Yuki plays tennis every evening."
+            }
+          },
+          {
+            "token": "emi",
+            "count": 44,
+            "example": {
+              "id": "M3N-00079",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Emi / basketball / plays / before breakfast )",
+              "a": "Emi plays basketball before breakfast."
+            }
+          },
+          {
+            "token": "volleyball",
+            "count": 42,
+            "example": {
+              "id": "M3N-00025",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( we / volleyball / play / on Sunday )",
+              "a": "We play volleyball on Sunday."
+            }
+          },
+          {
+            "token": "badminton",
+            "count": 42,
+            "example": {
+              "id": "M3N-00031",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( they / badminton / play / before dinner )",
+              "a": "They play badminton before dinner."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 36,
+            "example": {
+              "id": "M3C-01504",
+              "category": "疑問詞",
+              "q": "答えが “Because I am tired.” になる質問文を書きなさい。",
+              "a": "Why do you go to bed early?"
+            }
+          },
+          {
+            "token": "town",
+            "count": 34,
+            "example": {
+              "id": "M3N-00086",
+              "category": "英語の語順",
+              "q": "The boy the town go after breakfast. の誤りを直しなさい。",
+              "a": "The boy goes to the town after breakfast."
+            }
+          },
+          {
+            "token": "chair",
+            "count": 22,
+            "example": {
+              "id": "M3C-01361",
+              "category": "関係代名詞",
+              "q": "This is the chair ( who / which / where ) I bought yesterday.",
+              "a": "which"
+            }
+          },
+          {
+            "token": "fly",
+            "count": 21,
+            "example": {
+              "id": "M3C-01390",
+              "category": "仮定法",
+              "q": "If I were a bird, I could fly in the sky. 問い：文の意味を書きなさい。",
+              "a": "（仮定法の意味）"
+            }
+          },
+          {
+            "token": "skating",
+            "count": 21,
+            "example": {
+              "id": "M3N-00055",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( my sister / skating / plays / after lunch )",
+              "a": "my sister goes skating after lunch."
+            }
+          },
+          {
+            "token": "tom's",
+            "count": 20,
+            "example": {
+              "id": "M3N-00486",
+              "category": "人称代名詞",
+              "q": "This is Tom's book. を it を使って書きかえなさい。",
+              "a": "It is his book."
+            }
+          },
+          {
+            "token": "rainy",
+            "count": 20,
+            "example": {
+              "id": "M3N-01084",
+              "category": "接続詞",
+              "q": "If it was rainy, I stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+              "a": "Because it was rainy, I stayed home."
+            }
+          },
+          {
+            "token": "absent",
+            "count": 20,
+            "example": {
+              "id": "M3N-01085",
+              "category": "接続詞",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+              "a": "He was absent because he was sick."
+            }
+          },
+          {
+            "token": "sick",
+            "count": 20,
+            "example": {
+              "id": "M3N-01085",
+              "category": "接続詞",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+              "a": "He was absent because he was sick."
+            }
+          },
+          {
+            "token": "test",
+            "count": 20,
+            "example": {
+              "id": "M3N-01086",
+              "category": "接続詞",
+              "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+              "a": "一生懸命勉強すれば、そのテストに合格するでしょう。"
+            }
+          },
+          {
+            "token": "sung",
+            "count": 20,
+            "example": {
+              "id": "M3N-01564",
+              "category": "受動態",
+              "q": "This song is sing by many students. の誤りを直しなさい。",
+              "a": "This song is sung by many students."
+            }
+          },
+          {
+            "token": "train",
+            "count": 20,
+            "example": {
+              "id": "M3N-01926",
+              "category": "不定詞②",
+              "q": "He got up early to catch the first train. 問い：この文の意味として最も適切なものを書きなさい。",
+              "a": "彼は始発電車に乗るために早く起きました。"
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 14,
+            "example": {
+              "id": "M3N-00050",
+              "category": "英語の語順",
+              "q": "My brother the classroom go before school. の誤りを直しなさい。",
+              "a": "My brother goes to the classroom before school."
+            }
+          },
+          {
+            "token": "pool",
+            "count": 14,
+            "example": {
+              "id": "M3N-00068",
+              "category": "英語の語順",
+              "q": "Yuki the pool go every evening. の誤りを直しなさい。",
+              "a": "Yuki goes to the pool every evening."
+            }
+          },
+          {
+            "token": "zoo",
+            "count": 14,
+            "example": {
+              "id": "M3N-00080",
+              "category": "英語の語順",
+              "q": "Emi the zoo go before breakfast. の誤りを直しなさい。",
+              "a": "Emi goes to the zoo before breakfast."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 14,
+            "example": {
+              "id": "M3N-00145",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "We are hungry. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "sleepy",
+            "count": 14,
+            "example": {
+              "id": "M3N-00157",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "My father is sleepy. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "slow",
+            "count": 14,
+            "example": {
+              "id": "M3N-00223",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "The teachers is slow. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "larger",
+            "count": 10,
+            "example": {
+              "id": "M3C-01207",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりlargeです。』",
+              "a": "This bag is larger than that one."
+            }
+          },
+          {
+            "token": "largest",
+            "count": 10,
+            "example": {
+              "id": "M3C-01208",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんlargeです。』",
+              "a": "This bag is the largest of the three."
+            }
+          },
+          {
+            "token": "hungrier",
+            "count": 4,
+            "example": {
+              "id": "M3N-01345",
+              "category": "比較",
+              "q": "My desk is (      ) than yours. (hungry) の（ ）内を正しくしなさい。",
+              "a": "Hungrier"
+            }
+          },
+          {
+            "token": "freer",
+            "count": 4,
+            "example": {
+              "id": "M3N-01351",
+              "category": "比較",
+              "q": "My chair is (      ) than yours. (free) の（ ）内を正しくしなさい。",
+              "a": "Freer"
+            }
+          },
+          {
+            "token": "sleepier",
+            "count": 4,
+            "example": {
+              "id": "M3N-01357",
+              "category": "比較",
+              "q": "My table is (      ) than yours. (sleepy) の（ ）内を正しくしなさい。",
+              "a": "Sleepier"
+            }
+          },
+          {
+            "token": "nicer",
+            "count": 4,
+            "example": {
+              "id": "M3N-01381",
+              "category": "比較",
+              "q": "My window is (      ) than yours. (nice) の（ ）内を正しくしなさい。",
+              "a": "Nicer"
+            }
+          },
+          {
+            "token": "slower",
+            "count": 4,
+            "example": {
+              "id": "M3N-01423",
+              "category": "比較",
+              "q": "My camera is (      ) than yours. (slow) の（ ）内を正しくしなさい。",
+              "a": "Slower"
+            }
+          },
+          {
+            "token": "hungriest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01346",
+              "category": "比較",
+              "q": "This is the (      ) desk in the room. (hungry) の（ ）内を正しくしなさい。",
+              "a": "Hungriest"
+            }
+          },
+          {
+            "token": "freest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01352",
+              "category": "比較",
+              "q": "This is the (      ) chair in the room. (free) の（ ）内を正しくしなさい。",
+              "a": "Freest"
+            }
+          },
+          {
+            "token": "sleepiest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01358",
+              "category": "比較",
+              "q": "This is the (      ) table in the room. (sleepy) の（ ）内を正しくしなさい。",
+              "a": "Sleepiest"
+            }
+          },
+          {
+            "token": "nicest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01382",
+              "category": "比較",
+              "q": "This is the (      ) window in the room. (nice) の（ ）内を正しくしなさい。",
+              "a": "Nicest"
+            }
+          },
+          {
+            "token": "slowest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01424",
+              "category": "比較",
+              "q": "This is the (      ) camera in the room. (slow) の（ ）内を正しくしなさい。",
+              "a": "Slowest"
+            }
+          },
+          {
+            "token": "bus",
+            "count": 2,
+            "example": {
+              "id": "M3C-01408",
+              "category": "不定詞②",
+              "q": "He got up early to catch the bus. 問い：この文の意味を書きなさい。",
+              "a": "彼はバスに乗るために早く起きました。"
+            }
+          },
+          {
+            "token": "chairs",
+            "count": 2,
+            "example": {
+              "id": "M3N-00752",
+              "category": "命令文，there is ～ の文",
+              "q": "(      ) seven chairs in the room. 空所に入る最も適切な語を書きなさい。",
+              "a": "There are"
+            }
+          },
+          {
+            "token": "sunny",
+            "count": 1,
+            "example": {
+              "id": "M3C-01400",
+              "category": "仮定法",
+              "q": "If it were sunny, we could go to the park. 問い：文の意味を書きなさい。",
+              "a": "（仮定法の意味）"
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "助動詞",
+            "total": 360,
+            "exact_solvable": 310,
+            "solvable_ignoring_proper": 322,
+            "old_positive": 0,
+            "exact_pct": 86.11,
+            "ignore_proper_pct": 89.44
+          },
+          {
+            "category": "現在完了形（完了・経験）",
+            "total": 360,
+            "exact_solvable": 206,
+            "solvable_ignoring_proper": 268,
+            "old_positive": 34,
+            "exact_pct": 57.22,
+            "ignore_proper_pct": 74.44
+          },
+          {
+            "category": "現在完了形（継続），現在完了進行形",
+            "total": 360,
+            "exact_solvable": 340,
+            "solvable_ignoring_proper": 340,
+            "old_positive": 174,
+            "exact_pct": 94.44,
+            "ignore_proper_pct": 94.44
+          },
+          {
+            "category": "be動詞と一般動詞（現在形）",
+            "total": 240,
+            "exact_solvable": 177,
+            "solvable_ignoring_proper": 201,
+            "old_positive": 0,
+            "exact_pct": 73.75,
+            "ignore_proper_pct": 83.75
+          },
+          {
+            "category": "be動詞と一般動詞（過去形）",
+            "total": 240,
+            "exact_solvable": 177,
+            "solvable_ignoring_proper": 201,
+            "old_positive": 0,
+            "exact_pct": 73.75,
+            "ignore_proper_pct": 83.75
+          },
+          {
+            "category": "進行形",
+            "total": 240,
+            "exact_solvable": 183,
+            "solvable_ignoring_proper": 207,
+            "old_positive": 0,
+            "exact_pct": 76.25,
+            "ignore_proper_pct": 86.25
+          },
+          {
+            "category": "未来の文",
+            "total": 240,
+            "exact_solvable": 195,
+            "solvable_ignoring_proper": 211,
+            "old_positive": 0,
+            "exact_pct": 81.25,
+            "ignore_proper_pct": 87.92
+          },
+          {
+            "category": "比較",
+            "total": 240,
+            "exact_solvable": 171,
+            "solvable_ignoring_proper": 187,
+            "old_positive": 0,
+            "exact_pct": 71.25,
+            "ignore_proper_pct": 77.92
+          },
+          {
+            "category": "関係代名詞",
+            "total": 185,
+            "exact_solvable": 178,
+            "solvable_ignoring_proper": 178,
+            "old_positive": 0,
+            "exact_pct": 96.22,
+            "ignore_proper_pct": 96.22
+          },
+          {
+            "category": "分詞と間接疑問文",
+            "total": 158,
+            "exact_solvable": 132,
+            "solvable_ignoring_proper": 132,
+            "old_positive": 0,
+            "exact_pct": 83.54,
+            "ignore_proper_pct": 83.54
+          },
+          {
+            "category": "文型",
+            "total": 155,
+            "exact_solvable": 85,
+            "solvable_ignoring_proper": 125,
+            "old_positive": 0,
+            "exact_pct": 54.84,
+            "ignore_proper_pct": 80.65
+          },
+          {
+            "category": "仮定法",
+            "total": 136,
+            "exact_solvable": 113,
+            "solvable_ignoring_proper": 114,
+            "old_positive": 0,
+            "exact_pct": 83.09,
+            "ignore_proper_pct": 83.82
+          },
+          {
+            "category": "命令文，there is ～ の文",
+            "total": 136,
+            "exact_solvable": 128,
+            "solvable_ignoring_proper": 128,
+            "old_positive": 0,
+            "exact_pct": 94.12,
+            "ignore_proper_pct": 94.12
+          },
+          {
+            "category": "不定詞②",
+            "total": 132,
+            "exact_solvable": 75,
+            "solvable_ignoring_proper": 79,
+            "old_positive": 0,
+            "exact_pct": 56.82,
+            "ignore_proper_pct": 59.85
+          },
+          {
+            "category": "人称代名詞",
+            "total": 132,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 106,
+            "old_positive": 0,
+            "exact_pct": 77.27,
+            "ignore_proper_pct": 80.3
+          },
+          {
+            "category": "疑問詞",
+            "total": 126,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 112,
+            "old_positive": 0,
+            "exact_pct": 80.95,
+            "ignore_proper_pct": 88.89
+          },
+          {
+            "category": "英語の語順",
+            "total": 120,
+            "exact_solvable": 64,
+            "solvable_ignoring_proper": 78,
+            "old_positive": 0,
+            "exact_pct": 53.33,
+            "ignore_proper_pct": 65
+          },
+          {
+            "category": "接続詞",
+            "total": 120,
+            "exact_solvable": 32,
+            "solvable_ignoring_proper": 32,
+            "old_positive": 0,
+            "exact_pct": 26.67,
+            "ignore_proper_pct": 26.67
+          },
+          {
+            "category": "不定詞①，動名詞",
+            "total": 120,
+            "exact_solvable": 89,
+            "solvable_ignoring_proper": 105,
+            "old_positive": 0,
+            "exact_pct": 74.17,
+            "ignore_proper_pct": 87.5
+          },
+          {
+            "category": "受動態",
+            "total": 120,
+            "exact_solvable": 78,
+            "solvable_ignoring_proper": 97,
+            "old_positive": 0,
+            "exact_pct": 65,
+            "ignore_proper_pct": 80.83
+          }
+        ]
+      }
+    },
+    "ニューホライズン": {
+      "中1": {
+        "total": 2884,
+        "old_positive": 1988,
+        "old_positive_pct": 68.93,
+        "reconstructed_exact_solvable": 2624,
+        "reconstructed_exact_solvable_pct": 90.98,
+        "reconstructed_solvable_ignoring_proper_names": 2677,
+        "reconstructed_solvable_ignoring_proper_names_pct": 92.82,
+        "reconstructed_required_stage_counts": {
+          "0": 401,
+          "1": 92,
+          "3": 91,
+          "4": 14,
+          "6": 442,
+          "7": 204,
+          "8": 129,
+          "9": 10,
+          "10": 6,
+          "11": 16,
+          "13": 2,
+          "15": 1,
+          "16": 89,
+          "17": 56,
+          "18": 53,
+          "19": 69,
+          "20": 101,
+          "21": 87,
+          "24": 21,
+          "25": 3,
+          "26": 8,
+          "31": 2,
+          "35": 58,
+          "36": 4,
+          "38": 1,
+          "41": 1,
+          "42": 25,
+          "43": 256,
+          "44": 1,
+          "47": 109,
+          "48": 1,
+          "50": 21,
+          "54": 2,
+          "60": 57,
+          "61": 25,
+          "63": 2,
+          "66": 76,
+          "67": 2,
+          "81": 1,
+          "86": 22,
+          "91": 4,
+          "93": 2,
+          "96": 57
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "tv",
+            "count": 126,
+            "example": {
+              "id": "E1-3S-012",
+              "category": "三単現",
+              "q": "He ( watch ) TV at night. の（ ）内を正しくしなさい。",
+              "a": "Watches"
+            }
+          },
+          {
+            "token": "test",
+            "count": 20,
+            "example": {
+              "id": "GEN-PDID-2079",
+              "category": "過去の疑問文・否定文",
+              "q": "I had a test yesterday. を疑問文にしなさい。",
+              "a": "Did I have a test yesterday?"
+            }
+          },
+          {
+            "token": "usually",
+            "count": 18,
+            "example": {
+              "id": "GEN-FREQ-1272",
+              "category": "頻度副詞",
+              "q": "I (      ) visit the library. 「たいてい」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "Usually"
+            }
+          },
+          {
+            "token": "chair",
+            "count": 17,
+            "example": {
+              "id": "E1-PR-005",
+              "category": "前置詞",
+              "q": "次の日本語に合う英文を書きなさい。『そのいすは机の下にあります。』",
+              "a": "The chair is under the desk."
+            }
+          },
+          {
+            "token": "ken",
+            "count": 17,
+            "example": {
+              "id": "E1-RD-001",
+              "category": "読解・会話完成",
+              "q": "I am Ken. I like soccer.  問い：Does Ken like soccer?",
+              "a": "Yes, he does."
+            }
+          },
+          {
+            "token": "tom",
+            "count": 15,
+            "example": {
+              "id": "E1-RD-006",
+              "category": "読解・会話完成",
+              "q": "This is Tom. He is my friend.  問い：Who is Tom?",
+              "a": "He is my friend."
+            }
+          },
+          {
+            "token": "wall",
+            "count": 13,
+            "example": {
+              "id": "E1-PR-007",
+              "category": "前置詞",
+              "q": "The clock is (      ) the wall. 「壁に」 空所に入る最も適切な語(句)を書きなさい。",
+              "a": "On"
+            }
+          },
+          {
+            "token": "emi",
+            "count": 11,
+            "example": {
+              "id": "E1-RD-002",
+              "category": "読解・会話完成",
+              "q": "She is Emi. She is in the library.  問い：Where is Emi?",
+              "a": "She is in the library."
+            }
+          },
+          {
+            "token": "ball",
+            "count": 6,
+            "example": {
+              "id": "E1-RD-009",
+              "category": "読解・会話完成",
+              "q": "The ball is under the desk.  問い：Where is the ball?",
+              "a": "It is under the desk."
+            }
+          },
+          {
+            "token": "grandmother",
+            "count": 4,
+            "example": {
+              "id": "E1-PAST-003",
+              "category": "一般動詞の過去形",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( visited / I / my / grandmother / yesterday )",
+              "a": "I visited my grandmother yesterday."
+            }
+          },
+          {
+            "token": "yuki",
+            "count": 4,
+            "example": {
+              "id": "GEN-WR-1485",
+              "category": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『ユキは 毎日 テニスをします。』",
+              "a": "Yuki plays tennis every day."
+            }
+          },
+          {
+            "token": "tonight",
+            "count": 4,
+            "example": {
+              "id": "R1-FUT-0044",
+              "category": "未来の文",
+              "q": "『私たちは今夜英語を勉強するでしょう。』を英語で書きなさい。",
+              "a": "We will study English tonight."
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 3,
+            "example": {
+              "id": "E1-BQ-012",
+              "category": "be動詞",
+              "q": "We (      ) in the classroom. 「教室にいます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "are"
+            }
+          },
+          {
+            "token": "absent",
+            "count": 3,
+            "example": {
+              "id": "GEN-WH-0843",
+              "category": "疑問詞",
+              "q": "Why を使って、「なぜ欠席したのですか。」という意味の質問文を書きなさい。",
+              "a": "Why were you absent?"
+            }
+          },
+          {
+            "token": "shoes",
+            "count": 3,
+            "example": {
+              "id": "GEN-PREP-1262",
+              "category": "前置詞",
+              "q": "the shoes is (      ) the desk / chair / box / door / wall. 「机の下」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+              "a": "Under"
+            }
+          },
+          {
+            "token": "rainy",
+            "count": 3,
+            "example": {
+              "id": "R1-CONJ-0047",
+              "category": "接続詞",
+              "q": "『雨だったので、彼女は家にいました。』を英語で書きなさい。",
+              "a": "She stayed home because it was rainy."
+            }
+          },
+          {
+            "token": "blue",
+            "count": 2,
+            "example": {
+              "id": "E1-BD-012",
+              "category": "区別",
+              "q": "My bag is blue. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "pencil",
+            "count": 2,
+            "example": {
+              "id": "GEN-PREP-1266",
+              "category": "前置詞",
+              "q": "次の文の空所に入る前置詞を書きなさい。 the pen is in the pencil case. (      )",
+              "a": "In"
+            }
+          },
+          {
+            "token": "case",
+            "count": 2,
+            "example": {
+              "id": "GEN-PREP-1266",
+              "category": "前置詞",
+              "q": "次の文の空所に入る前置詞を書きなさい。 the pen is in the pencil case. (      )",
+              "a": "In"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 2,
+            "example": {
+              "id": "R1-FUT-0040",
+              "category": "未来の文",
+              "q": "『私は明日京都を訪れるつもりです。』を英語で書きなさい。",
+              "a": "I will visit Kyoto tomorrow."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 2,
+            "example": {
+              "id": "R1-CONJ-0046",
+              "category": "接続詞",
+              "q": "『私は疲れていたので、早く寝ました。』を英語で書きなさい。",
+              "a": "I was tired, so I went to bed early."
+            }
+          },
+          {
+            "token": "math",
+            "count": 1,
+            "example": {
+              "id": "E1-DQ-006",
+              "category": "一般動詞",
+              "q": "I like math. を否定文にしなさい。",
+              "a": "I do not like math."
+            }
+          },
+          {
+            "token": "yamaguchi",
+            "count": 1,
+            "example": {
+              "id": "E1-WH-003",
+              "category": "疑問詞",
+              "q": "I am from Yamaguchi. になる質問文を書きなさい。",
+              "a": "Where are you from?"
+            }
+          },
+          {
+            "token": "clock",
+            "count": 1,
+            "example": {
+              "id": "E1-PR-007",
+              "category": "前置詞",
+              "q": "The clock is (      ) the wall. 「壁に」 空所に入る最も適切な語(句)を書きなさい。",
+              "a": "On"
+            }
+          },
+          {
+            "token": "tokyo",
+            "count": 1,
+            "example": {
+              "id": "E1-PR-008",
+              "category": "前置詞",
+              "q": "I live ( in / on / under ) Tokyo. 正しいものを選びなさい。",
+              "a": "In"
+            }
+          },
+          {
+            "token": "fukuoka",
+            "count": 1,
+            "example": {
+              "id": "E1-WR-001",
+              "category": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は福岡出身です。』",
+              "a": "I am from Fukuoka."
+            }
+          },
+          {
+            "token": "zoo",
+            "count": 1,
+            "example": {
+              "id": "E1-TIME-004",
+              "category": "過去を表す語",
+              "q": "We went to the zoo ( last Sunday / every Sunday ). 正しいものを選びなさい。",
+              "a": "Last Sunday"
+            }
+          },
+          {
+            "token": "mika",
+            "count": 1,
+            "example": {
+              "id": "R1-PRON-0006",
+              "category": "人称代名詞",
+              "q": "This is Mika. I study English with (      ). ( she / her / hers )",
+              "a": "her"
+            }
+          },
+          {
+            "token": "sato",
+            "count": 1,
+            "example": {
+              "id": "F1-PRON-0026",
+              "category": "人称代名詞",
+              "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+              "a": "us"
+            }
+          },
+          {
+            "token": "sky",
+            "count": 1,
+            "example": {
+              "id": "EX1-TH-0003",
+              "category": "there is ～・look ～ の文",
+              "q": "『今日は空が青く見えます。』を英語で書きなさい。",
+              "a": "The sky looks blue today."
+            }
+          },
+          {
+            "token": "osaka",
+            "count": 1,
+            "example": {
+              "id": "EX1-FUT-0006",
+              "category": "未来の文",
+              "q": "『彼らは来週大阪を訪れる予定です。』を英語で書きなさい。",
+              "a": "They are going to visit Osaka next week."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 1,
+            "example": {
+              "id": "EX1-CONJ-0009",
+              "category": "接続詞",
+              "q": "『私はおなかがすいていたので、早めに昼食を食べました。』を英語で書きなさい。",
+              "a": "I was hungry, so I ate lunch early."
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "be動詞",
+            "total": 563,
+            "exact_solvable": 562,
+            "solvable_ignoring_proper": 562,
+            "old_positive": 510,
+            "exact_pct": 99.82,
+            "ignore_proper_pct": 99.82
+          },
+          {
+            "category": "三単現",
+            "total": 397,
+            "exact_solvable": 372,
+            "solvable_ignoring_proper": 372,
+            "old_positive": 245,
+            "exact_pct": 93.7,
+            "ignore_proper_pct": 93.7
+          },
+          {
+            "category": "過去のbe動詞",
+            "total": 366,
+            "exact_solvable": 366,
+            "solvable_ignoring_proper": 366,
+            "old_positive": 366,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "一般動詞",
+            "total": 268,
+            "exact_solvable": 251,
+            "solvable_ignoring_proper": 251,
+            "old_positive": 172,
+            "exact_pct": 93.66,
+            "ignore_proper_pct": 93.66
+          },
+          {
+            "category": "過去を表す語",
+            "total": 263,
+            "exact_solvable": 228,
+            "solvable_ignoring_proper": 228,
+            "old_positive": 96,
+            "exact_pct": 86.69,
+            "ignore_proper_pct": 86.69
+          },
+          {
+            "category": "一般動詞の過去形",
+            "total": 198,
+            "exact_solvable": 184,
+            "solvable_ignoring_proper": 184,
+            "old_positive": 135,
+            "exact_pct": 92.93,
+            "ignore_proper_pct": 92.93
+          },
+          {
+            "category": "不規則動詞",
+            "total": 151,
+            "exact_solvable": 139,
+            "solvable_ignoring_proper": 139,
+            "old_positive": 89,
+            "exact_pct": 92.05,
+            "ignore_proper_pct": 92.05
+          },
+          {
+            "category": "過去の疑問文・否定文",
+            "total": 134,
+            "exact_solvable": 116,
+            "solvable_ignoring_proper": 116,
+            "old_positive": 85,
+            "exact_pct": 86.57,
+            "ignore_proper_pct": 86.57
+          },
+          {
+            "category": "英作文",
+            "total": 101,
+            "exact_solvable": 74,
+            "solvable_ignoring_proper": 87,
+            "old_positive": 54,
+            "exact_pct": 73.27,
+            "ignore_proper_pct": 86.14
+          },
+          {
+            "category": "頻度副詞",
+            "total": 84,
+            "exact_solvable": 66,
+            "solvable_ignoring_proper": 76,
+            "old_positive": 55,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 90.48
+          },
+          {
+            "category": "並びかえ",
+            "total": 71,
+            "exact_solvable": 63,
+            "solvable_ignoring_proper": 63,
+            "old_positive": 46,
+            "exact_pct": 88.73,
+            "ignore_proper_pct": 88.73
+          },
+          {
+            "category": "前置詞",
+            "total": 42,
+            "exact_solvable": 17,
+            "solvable_ignoring_proper": 18,
+            "old_positive": 6,
+            "exact_pct": 40.48,
+            "ignore_proper_pct": 42.86
+          },
+          {
+            "category": "区別",
+            "total": 39,
+            "exact_solvable": 34,
+            "solvable_ignoring_proper": 36,
+            "old_positive": 25,
+            "exact_pct": 87.18,
+            "ignore_proper_pct": 92.31
+          },
+          {
+            "category": "疑問詞",
+            "total": 36,
+            "exact_solvable": 30,
+            "solvable_ignoring_proper": 32,
+            "old_positive": 13,
+            "exact_pct": 83.33,
+            "ignore_proper_pct": 88.89
+          },
+          {
+            "category": "人称代名詞",
+            "total": 30,
+            "exact_solvable": 14,
+            "solvable_ignoring_proper": 28,
+            "old_positive": 21,
+            "exact_pct": 46.67,
+            "ignore_proper_pct": 93.33
+          },
+          {
+            "category": "読解・会話完成",
+            "total": 24,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 18,
+            "old_positive": 7,
+            "exact_pct": 45.83,
+            "ignore_proper_pct": 75
+          },
+          {
+            "category": "命令文",
+            "total": 24,
+            "exact_solvable": 24,
+            "solvable_ignoring_proper": 24,
+            "old_positive": 18,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "未来の文",
+            "total": 19,
+            "exact_solvable": 12,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 5,
+            "exact_pct": 63.16,
+            "ignore_proper_pct": 78.95
+          },
+          {
+            "category": "can",
+            "total": 19,
+            "exact_solvable": 19,
+            "solvable_ignoring_proper": 19,
+            "old_positive": 6,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "現在進行形",
+            "total": 17,
+            "exact_solvable": 13,
+            "solvable_ignoring_proper": 13,
+            "old_positive": 11,
+            "exact_pct": 76.47,
+            "ignore_proper_pct": 76.47
+          },
+          {
+            "category": "there is ～・look ～ の文",
+            "total": 14,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 11,
+            "old_positive": 7,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "接続詞",
+            "total": 13,
+            "exact_solvable": 7,
+            "solvable_ignoring_proper": 8,
+            "old_positive": 7,
+            "exact_pct": 53.85,
+            "ignore_proper_pct": 61.54
+          },
+          {
+            "category": "過去進行形",
+            "total": 11,
+            "exact_solvable": 11,
+            "solvable_ignoring_proper": 11,
+            "old_positive": 9,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          }
+        ]
+      },
+      "中2": {
+        "total": 3707,
+        "old_positive": 717,
+        "old_positive_pct": 19.34,
+        "reconstructed_exact_solvable": 2759,
+        "reconstructed_exact_solvable_pct": 74.43,
+        "reconstructed_solvable_ignoring_proper_names": 3177,
+        "reconstructed_solvable_ignoring_proper_names_pct": 85.7,
+        "reconstructed_required_stage_counts": {
+          "0": 2525,
+          "12": 58,
+          "13": 3,
+          "18": 2,
+          "25": 4,
+          "29": 21,
+          "30": 1,
+          "38": 2,
+          "43": 6,
+          "44": 40,
+          "48": 2,
+          "64": 8,
+          "65": 36,
+          "69": 23,
+          "71": 3,
+          "75": 2,
+          "82": 5,
+          "104": 8,
+          "106": 3,
+          "110": 7
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "ken",
+            "count": 143,
+            "example": {
+              "id": "M2-COMP-0651",
+              "category": "比較",
+              "q": "Ken is (      ) than Tom. (tall)",
+              "a": "Taller"
+            }
+          },
+          {
+            "token": "science",
+            "count": 136,
+            "example": {
+              "id": "M2-FUT-0473",
+              "category": "未来表現",
+              "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+              "a": "I am going to study science."
+            }
+          },
+          {
+            "token": "takumi",
+            "count": 99,
+            "example": {
+              "id": "M2X-RV-0145",
+              "category": "三単現",
+              "q": "次の日本語に合う英文を書きなさい。『タクミは バスケットボールを練習します。』",
+              "a": "Takumi practices basketball."
+            }
+          },
+          {
+            "token": "mika",
+            "count": 96,
+            "example": {
+              "id": "M2-COMP-0664",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『Mika は Ken より 背が高い。』",
+              "a": "Mika is taller than Ken."
+            }
+          },
+          {
+            "token": "math",
+            "count": 79,
+            "example": {
+              "id": "M2-PRS-0149",
+              "category": "一般動詞",
+              "q": "I study math. を疑問文にしなさい。",
+              "a": "Do you study math?"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 77,
+            "example": {
+              "id": "M2-3RD-0237",
+              "category": "三単現",
+              "q": "He visits Kyoto. を否定文にしなさい。",
+              "a": "He does not play tennis."
+            }
+          },
+          {
+            "token": "grandmother",
+            "count": 67,
+            "example": {
+              "id": "M2-FUT-0469",
+              "category": "未来表現",
+              "q": "I を主語にして、be going to を使った正しい英文を書きなさい。",
+              "a": "I am going to visit my grandmother."
+            }
+          },
+          {
+            "token": "phone",
+            "count": 42,
+            "example": {
+              "id": "M2Y-MOD-0341",
+              "category": "助動詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は ここでスマホを使ってはいけない。』",
+              "a": "I must not use your phone here."
+            }
+          },
+          {
+            "token": "tom",
+            "count": 34,
+            "example": {
+              "id": "M2-COMP-0651",
+              "category": "比較",
+              "q": "Ken is (      ) than Tom. (tall)",
+              "a": "Taller"
+            }
+          },
+          {
+            "token": "novel",
+            "count": 34,
+            "example": {
+              "id": "M2-FUT2-0445",
+              "category": "未来表現",
+              "q": "『私は 明日 小説を読む予定です。』に近い英文を、will を使って書きなさい。",
+              "a": "I will read a novel tomorrow."
+            }
+          },
+          {
+            "token": "larger",
+            "count": 26,
+            "example": {
+              "id": "M2Y-COMP-0395",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+              "a": "This bag is larger than that one."
+            }
+          },
+          {
+            "token": "abroad",
+            "count": 18,
+            "example": {
+              "id": "M2Y-INF-0155",
+              "category": "不定詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は 海外旅行をしたい。』",
+              "a": "I want to travel abroad."
+            }
+          },
+          {
+            "token": "app",
+            "count": 18,
+            "example": {
+              "id": "M2Y-INF-0167",
+              "category": "不定詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は このアプリを英語の勉強に使う。』",
+              "a": "I use this app to study English."
+            }
+          },
+          {
+            "token": "cram",
+            "count": 13,
+            "example": {
+              "id": "M2Y-MOD-0338",
+              "category": "助動詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は 塾へ行かなければならない。』",
+              "a": "I have to go to cram school."
+            }
+          },
+          {
+            "token": "hokkaido",
+            "count": 12,
+            "example": {
+              "id": "M2Y-FUT-0001",
+              "category": "未来表現",
+              "q": "次の日本語に合う英文を書きなさい。『私は 北海道へ行く予定です。』",
+              "a": "I am going to go to Hokkaido."
+            }
+          },
+          {
+            "token": "since",
+            "count": 12,
+            "example": {
+              "id": "R2-PERF2-0094",
+              "category": "現在完了形（継続），現在完了進行形",
+              "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+              "a": "He has been studying English since six."
+            }
+          },
+          {
+            "token": "sunny",
+            "count": 9,
+            "example": {
+              "id": "M2-CONJ-0549",
+              "category": "接続詞",
+              "q": "It was sunny, (      ) we played soccer.",
+              "a": "So"
+            }
+          },
+          {
+            "token": "osaka",
+            "count": 8,
+            "example": {
+              "id": "M2-IRR-0405",
+              "category": "不規則動詞",
+              "q": "I (      ) to Osaka yesterday. (go)",
+              "a": "Went"
+            }
+          },
+          {
+            "token": "sushi",
+            "count": 8,
+            "example": {
+              "id": "M2-IRR-0409",
+              "category": "不規則動詞",
+              "q": "I (      ) sushi yesterday. (eat)",
+              "a": "Ate"
+            }
+          },
+          {
+            "token": "test",
+            "count": 7,
+            "example": {
+              "id": "M2-CONJ2-0755",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『私はテストに受かりたかったので、一生けん命勉強しました。』",
+              "a": "I studied hard, because I wanted to pass the test."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 6,
+            "example": {
+              "id": "M2-CONJ-0548",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『私は疲れていたので、早く寝ました』",
+              "a": "I went to bed early because I was tired."
+            }
+          },
+          {
+            "token": "emi",
+            "count": 6,
+            "example": {
+              "id": "R2-PRON-0067",
+              "category": "人称代名詞",
+              "q": "This is Emi. ( she / her / hers ) is my friend.",
+              "a": "She"
+            }
+          },
+          {
+            "token": "sick",
+            "count": 5,
+            "example": {
+              "id": "M2Y-CONJ-0147",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『病気だったので欠席しました』",
+              "a": "I was absent because I was sick."
+            }
+          },
+          {
+            "token": "sato",
+            "count": 5,
+            "example": {
+              "id": "R2-PRON-0070",
+              "category": "人称代名詞",
+              "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+              "a": "us"
+            }
+          },
+          {
+            "token": "largest",
+            "count": 4,
+            "example": {
+              "id": "M2-COMP2-1464",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『Tom はこのクラスでいちばん 大きい。』",
+              "a": "Tom is the largest in this class."
+            }
+          },
+          {
+            "token": "bus",
+            "count": 4,
+            "example": {
+              "id": "TH2-WH-0079",
+              "category": "疑問詞",
+              "q": "I can go there by bus. に合う質問文を書きなさい。",
+              "a": "How can you go to the museum?"
+            }
+          },
+          {
+            "token": "aki",
+            "count": 4,
+            "example": {
+              "id": "NX2-F2-0037",
+              "category": "文型②（call A B，make A B）",
+              "q": "『友だちは私をアキと呼びます。』を英語で書きなさい。",
+              "a": "My friends call me Aki."
+            }
+          },
+          {
+            "token": "blue",
+            "count": 4,
+            "example": {
+              "id": "NX2-F2-0049",
+              "category": "文型②（call A B，make A B）",
+              "q": "『私たちはこの場所をブルーパークと呼びます。』を英語で書きなさい。",
+              "a": "We call this place Blue Park."
+            }
+          },
+          {
+            "token": "absent",
+            "count": 3,
+            "example": {
+              "id": "M2Y-CONJ-0147",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『病気だったので欠席しました』",
+              "a": "I was absent because I was sick."
+            }
+          },
+          {
+            "token": "twice",
+            "count": 3,
+            "example": {
+              "id": "R2-PERF-0092",
+              "category": "現在完了形（完了・経験）",
+              "q": "『彼女は京都へ2回行ったことがあります。』を英語で書きなさい。",
+              "a": "She has been to Kyoto twice."
+            }
+          },
+          {
+            "token": "newspaper",
+            "count": 3,
+            "example": {
+              "id": "TH2-PROG-0017",
+              "category": "進行形",
+              "q": "『私は今新聞を読んでいます。』を英語で書きなさい。",
+              "a": "I am reading a newspaper now."
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 3,
+            "example": {
+              "id": "TH2-PROG-0026",
+              "category": "進行形",
+              "q": "『私たちは今教室をそうじしています。』を英語で書きなさい。",
+              "a": "We are cleaning the classroom now."
+            }
+          },
+          {
+            "token": "bookstore",
+            "count": 3,
+            "example": {
+              "id": "TH2-TH-0035",
+              "category": "there is ～ の文",
+              "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+              "a": "There is a bookstore near the station."
+            }
+          },
+          {
+            "token": "sky",
+            "count": 3,
+            "example": {
+              "id": "FF2-FORM1-0031",
+              "category": "文型①（look ～，give A B）",
+              "q": "『今朝、空は美しく見えました。』を英語で書きなさい。",
+              "a": "The sky looked beautiful this morning."
+            }
+          },
+          {
+            "token": "present",
+            "count": 3,
+            "example": {
+              "id": "FF2-FORM1-0034",
+              "category": "文型①（look ～，give A B）",
+              "q": "『母は姉（妹）にプレゼントをあげました。』を英語で書きなさい。",
+              "a": "My mother gave my sister a present."
+            }
+          },
+          {
+            "token": "ball",
+            "count": 3,
+            "example": {
+              "id": "FF2-PASS-0058",
+              "category": "受動態",
+              "q": "『その窓はボールによって割られました。』を英語で書きなさい。",
+              "a": "The window was broken by the ball."
+            }
+          },
+          {
+            "token": "key",
+            "count": 3,
+            "example": {
+              "id": "FF2-PERF-0085",
+              "category": "現在完了形（完了・経験）",
+              "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
+              "a": "I have lost my key."
+            }
+          },
+          {
+            "token": "grown",
+            "count": 2,
+            "example": {
+              "id": "F2-PASS-0095",
+              "category": "受動態",
+              "q": "次の日本語に合う英文を書きなさい。『米は日本で育てられています。』",
+              "a": "Rice is grown in Japan."
+            }
+          },
+          {
+            "token": "textbook",
+            "count": 2,
+            "example": {
+              "id": "TH2-IMP-0001",
+              "category": "命令文",
+              "q": "『教科書を開きなさい。』を英語で書きなさい。",
+              "a": "Open your textbook."
+            }
+          },
+          {
+            "token": "akio",
+            "count": 2,
+            "example": {
+              "id": "TH2-V2-0083",
+              "category": "文型②（call A B，make A B）",
+              "q": "『先生は私をアキオと呼びました。』を英語で書きなさい。",
+              "a": "The teacher called me Akio."
+            }
+          },
+          {
+            "token": "pochi",
+            "count": 2,
+            "example": {
+              "id": "TH2-V2-0089",
+              "category": "文型②（call A B，make A B）",
+              "q": "『私たちはこの犬をポチと呼びます。』を英語で書きなさい。",
+              "a": "We call this dog Pochi."
+            }
+          },
+          {
+            "token": "yamaguchi",
+            "count": 2,
+            "example": {
+              "id": "TH2-PC-0095",
+              "category": "現在完了形（継続），現在完了進行形",
+              "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
+              "a": "I have lived in Yamaguchi for five years."
+            }
+          },
+          {
+            "token": "eager",
+            "count": 2,
+            "example": {
+              "id": "FF2-INF2-0098",
+              "category": "不定詞②",
+              "q": "『彼女は英語を学ぶことに熱心です。』を英語で書きなさい。",
+              "a": "She is eager to learn English."
+            }
+          },
+          {
+            "token": "loudly",
+            "count": 2,
+            "example": {
+              "id": "EX2-IMP-0032",
+              "category": "命令文",
+              "q": "『図書館で大きな声で話してはいけません。』を英語で書きなさい。",
+              "a": "Don’t talk loudly in the library."
+            }
+          },
+          {
+            "token": "bank",
+            "count": 2,
+            "example": {
+              "id": "EX2-TH-0048",
+              "category": "there is ～ の文",
+              "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+              "a": "There is a bank across from the station."
+            }
+          },
+          {
+            "token": "solve",
+            "count": 2,
+            "example": {
+              "id": "NX2-BAL-0065",
+              "category": "不定詞②",
+              "q": "『この問題は解きやすいです。』に合う英文を書きなさい。",
+              "a": "This problem is easy to solve."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 1,
+            "example": {
+              "id": "M2Y-CONJ-0145",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『おなかがすいていたので、昼食を作りました』",
+              "a": "I was hungry so I made lunch."
+            }
+          },
+          {
+            "token": "sleepy",
+            "count": 1,
+            "example": {
+              "id": "M2-CONJ2-0752",
+              "category": "接続詞",
+              "q": "次の日本語に合う英文を書きなさい。『彼は眠かったですが、早く起きました。』",
+              "a": "He got up early, but he was sleepy."
+            }
+          },
+          {
+            "token": "tv",
+            "count": 1,
+            "example": {
+              "id": "F2-DP-0084",
+              "category": "be動詞と一般動詞（過去形）",
+              "q": "We did not watch TV last night. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "一般動詞の文"
+            }
+          },
+          {
+            "token": "interest",
+            "count": 1,
+            "example": {
+              "id": "FF2-FORM1-0038",
+              "category": "文型①（look ～，give A B）",
+              "q": "The idea sounds interest. の誤りを直しなさい。",
+              "a": "The idea sounds interesting."
+            }
+          },
+          {
+            "token": "chair",
+            "count": 1,
+            "example": {
+              "id": "EX2-INF2-0060",
+              "category": "不定詞②",
+              "q": "『このいすは座り心地がよいです。』を英語で書きなさい。",
+              "a": "This chair is comfortable to sit on."
+            }
+          },
+          {
+            "token": "result",
+            "count": 1,
+            "example": {
+              "id": "EX2-INF2-0061",
+              "category": "不定詞②",
+              "q": "『私はその結果を見て驚きました。』を英語で書きなさい。",
+              "a": "I was surprised to see the result."
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "未来表現",
+            "total": 706,
+            "exact_solvable": 474,
+            "solvable_ignoring_proper": 518,
+            "old_positive": 136,
+            "exact_pct": 67.14,
+            "ignore_proper_pct": 73.37
+          },
+          {
+            "category": "不定詞",
+            "total": 448,
+            "exact_solvable": 392,
+            "solvable_ignoring_proper": 412,
+            "old_positive": 128,
+            "exact_pct": 87.5,
+            "ignore_proper_pct": 91.96
+          },
+          {
+            "category": "動名詞",
+            "total": 406,
+            "exact_solvable": 322,
+            "solvable_ignoring_proper": 334,
+            "old_positive": 112,
+            "exact_pct": 79.31,
+            "ignore_proper_pct": 82.27
+          },
+          {
+            "category": "一般動詞",
+            "total": 344,
+            "exact_solvable": 252,
+            "solvable_ignoring_proper": 314,
+            "old_positive": 18,
+            "exact_pct": 73.26,
+            "ignore_proper_pct": 91.28
+          },
+          {
+            "category": "助動詞",
+            "total": 340,
+            "exact_solvable": 316,
+            "solvable_ignoring_proper": 316,
+            "old_positive": 106,
+            "exact_pct": 92.94,
+            "ignore_proper_pct": 92.94
+          },
+          {
+            "category": "比較",
+            "total": 268,
+            "exact_solvable": 87,
+            "solvable_ignoring_proper": 238,
+            "old_positive": 109,
+            "exact_pct": 32.46,
+            "ignore_proper_pct": 88.81
+          },
+          {
+            "category": "三単現",
+            "total": 220,
+            "exact_solvable": 160,
+            "solvable_ignoring_proper": 200,
+            "old_positive": 6,
+            "exact_pct": 72.73,
+            "ignore_proper_pct": 90.91
+          },
+          {
+            "category": "一般動詞の過去形",
+            "total": 196,
+            "exact_solvable": 166,
+            "solvable_ignoring_proper": 179,
+            "old_positive": 11,
+            "exact_pct": 84.69,
+            "ignore_proper_pct": 91.33
+          },
+          {
+            "category": "過去の疑問文・否定文",
+            "total": 124,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 113,
+            "old_positive": 9,
+            "exact_pct": 82.26,
+            "ignore_proper_pct": 91.13
+          },
+          {
+            "category": "be動詞",
+            "total": 108,
+            "exact_solvable": 108,
+            "solvable_ignoring_proper": 108,
+            "old_positive": 0,
+            "exact_pct": 100,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "不規則動詞",
+            "total": 64,
+            "exact_solvable": 48,
+            "solvable_ignoring_proper": 56,
+            "old_positive": 0,
+            "exact_pct": 75,
+            "ignore_proper_pct": 87.5
+          },
+          {
+            "category": "接続詞",
+            "total": 48,
+            "exact_solvable": 30,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 8,
+            "exact_pct": 62.5,
+            "ignore_proper_pct": 62.5
+          },
+          {
+            "category": "文型②（call A B，make A B）",
+            "total": 47,
+            "exact_solvable": 26,
+            "solvable_ignoring_proper": 43,
+            "old_positive": 6,
+            "exact_pct": 55.32,
+            "ignore_proper_pct": 91.49
+          },
+          {
+            "category": "be動詞と一般動詞（過去形）",
+            "total": 41,
+            "exact_solvable": 37,
+            "solvable_ignoring_proper": 40,
+            "old_positive": 5,
+            "exact_pct": 90.24,
+            "ignore_proper_pct": 97.56
+          },
+          {
+            "category": "受動態",
+            "total": 38,
+            "exact_solvable": 31,
+            "solvable_ignoring_proper": 33,
+            "old_positive": 3,
+            "exact_pct": 81.58,
+            "ignore_proper_pct": 86.84
+          },
+          {
+            "category": "現在完了形（完了・経験）",
+            "total": 36,
+            "exact_solvable": 23,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 6,
+            "exact_pct": 63.89,
+            "ignore_proper_pct": 83.33
+          },
+          {
+            "category": "人称代名詞",
+            "total": 30,
+            "exact_solvable": 14,
+            "solvable_ignoring_proper": 30,
+            "old_positive": 0,
+            "exact_pct": 46.67,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "進行形",
+            "total": 30,
+            "exact_solvable": 20,
+            "solvable_ignoring_proper": 20,
+            "old_positive": 2,
+            "exact_pct": 66.67,
+            "ignore_proper_pct": 66.67
+          },
+          {
+            "category": "文型①（look ～，give A B）",
+            "total": 30,
+            "exact_solvable": 21,
+            "solvable_ignoring_proper": 23,
+            "old_positive": 13,
+            "exact_pct": 70,
+            "ignore_proper_pct": 76.67
+          },
+          {
+            "category": "命令文",
+            "total": 28,
+            "exact_solvable": 22,
+            "solvable_ignoring_proper": 22,
+            "old_positive": 6,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "there is ～ の文",
+            "total": 28,
+            "exact_solvable": 23,
+            "solvable_ignoring_proper": 23,
+            "old_positive": 3,
+            "exact_pct": 82.14,
+            "ignore_proper_pct": 82.14
+          },
+          {
+            "category": "不定詞②",
+            "total": 28,
+            "exact_solvable": 22,
+            "solvable_ignoring_proper": 22,
+            "old_positive": 13,
+            "exact_pct": 78.57,
+            "ignore_proper_pct": 78.57
+          },
+          {
+            "category": "現在完了形（継続），現在完了進行形",
+            "total": 27,
+            "exact_solvable": 13,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 3,
+            "exact_pct": 48.15,
+            "ignore_proper_pct": 55.56
+          },
+          {
+            "category": "be動詞と一般動詞（現在形）",
+            "total": 26,
+            "exact_solvable": 25,
+            "solvable_ignoring_proper": 26,
+            "old_positive": 6,
+            "exact_pct": 96.15,
+            "ignore_proper_pct": 100
+          },
+          {
+            "category": "疑問詞",
+            "total": 26,
+            "exact_solvable": 17,
+            "solvable_ignoring_proper": 17,
+            "old_positive": 5,
+            "exact_pct": 65.38,
+            "ignore_proper_pct": 65.38
+          },
+          {
+            "category": "読解・会話完成",
+            "total": 20,
+            "exact_solvable": 8,
+            "solvable_ignoring_proper": 15,
+            "old_positive": 3,
+            "exact_pct": 40,
+            "ignore_proper_pct": 75
+          }
+        ]
+      },
+      "中3": {
+        "total": 3920,
+        "old_positive": 154,
+        "old_positive_pct": 3.93,
+        "reconstructed_exact_solvable": 2937,
+        "reconstructed_exact_solvable_pct": 74.92,
+        "reconstructed_solvable_ignoring_proper_names": 3223,
+        "reconstructed_solvable_ignoring_proper_names_pct": 82.22,
+        "reconstructed_required_stage_counts": {
+          "0": 2726,
+          "16": 180,
+          "63": 16,
+          "96": 15
+        },
+        "top_unresolved_tokens": [
+          {
+            "token": "ken",
+            "count": 104,
+            "example": {
+              "id": "M3N-00061",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Ken / soccer / plays / every morning )",
+              "a": "Ken plays soccer every morning."
+            }
+          },
+          {
+            "token": "c",
+            "count": 92,
+            "example": {
+              "id": "M3C-01403",
+              "category": "不定詞②",
+              "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+              "a": "B"
+            }
+          },
+          {
+            "token": "key",
+            "count": 85,
+            "example": {
+              "id": "M3C-00016",
+              "category": "現在完了形（完了・経験）",
+              "q": "I have lost my key. を疑問文にしなさい。",
+              "a": "Have I lost my key?"
+            }
+          },
+          {
+            "token": "tom",
+            "count": 84,
+            "example": {
+              "id": "M3N-00073",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Tom / baseball / plays / after class )",
+              "a": "Tom plays baseball after class."
+            }
+          },
+          {
+            "token": "tv",
+            "count": 72,
+            "example": {
+              "id": "M3C-00181",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "I watch TV. を疑問文にしなさい。",
+              "a": "Do I watch TV?"
+            }
+          },
+          {
+            "token": "kyoto",
+            "count": 61,
+            "example": {
+              "id": "M3C-00015",
+              "category": "現在完了形（完了・経験）",
+              "q": "I have been to Kyoto once. を疑問文にしなさい。",
+              "a": "Have I been to Kyoto once?"
+            }
+          },
+          {
+            "token": "yuki",
+            "count": 44,
+            "example": {
+              "id": "M3N-00067",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Yuki / tennis / plays / every evening )",
+              "a": "Yuki plays tennis every evening."
+            }
+          },
+          {
+            "token": "emi",
+            "count": 44,
+            "example": {
+              "id": "M3N-00079",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( Emi / basketball / plays / before breakfast )",
+              "a": "Emi plays basketball before breakfast."
+            }
+          },
+          {
+            "token": "volleyball",
+            "count": 42,
+            "example": {
+              "id": "M3N-00025",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( we / volleyball / play / on Sunday )",
+              "a": "We play volleyball on Sunday."
+            }
+          },
+          {
+            "token": "badminton",
+            "count": 42,
+            "example": {
+              "id": "M3N-00031",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( they / badminton / play / before dinner )",
+              "a": "They play badminton before dinner."
+            }
+          },
+          {
+            "token": "tired",
+            "count": 36,
+            "example": {
+              "id": "M3C-01504",
+              "category": "疑問詞",
+              "q": "答えが “Because I am tired.” になる質問文を書きなさい。",
+              "a": "Why do you go to bed early?"
+            }
+          },
+          {
+            "token": "town",
+            "count": 34,
+            "example": {
+              "id": "M3N-00086",
+              "category": "英語の語順",
+              "q": "The boy the town go after breakfast. の誤りを直しなさい。",
+              "a": "The boy goes to the town after breakfast."
+            }
+          },
+          {
+            "token": "chair",
+            "count": 22,
+            "example": {
+              "id": "M3C-01361",
+              "category": "関係代名詞",
+              "q": "This is the chair ( who / which / where ) I bought yesterday.",
+              "a": "which"
+            }
+          },
+          {
+            "token": "fly",
+            "count": 21,
+            "example": {
+              "id": "M3C-01390",
+              "category": "仮定法",
+              "q": "If I were a bird, I could fly in the sky. 問い：文の意味を書きなさい。",
+              "a": "（仮定法の意味）"
+            }
+          },
+          {
+            "token": "skating",
+            "count": 21,
+            "example": {
+              "id": "M3N-00055",
+              "category": "英語の語順",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( my sister / skating / plays / after lunch )",
+              "a": "my sister goes skating after lunch."
+            }
+          },
+          {
+            "token": "tom's",
+            "count": 20,
+            "example": {
+              "id": "M3N-00486",
+              "category": "人称代名詞",
+              "q": "This is Tom's book. を it を使って書きかえなさい。",
+              "a": "It is his book."
+            }
+          },
+          {
+            "token": "rainy",
+            "count": 20,
+            "example": {
+              "id": "M3N-01084",
+              "category": "接続詞",
+              "q": "If it was rainy, I stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+              "a": "Because it was rainy, I stayed home."
+            }
+          },
+          {
+            "token": "absent",
+            "count": 20,
+            "example": {
+              "id": "M3N-01085",
+              "category": "接続詞",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+              "a": "He was absent because he was sick."
+            }
+          },
+          {
+            "token": "sick",
+            "count": 20,
+            "example": {
+              "id": "M3N-01085",
+              "category": "接続詞",
+              "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+              "a": "He was absent because he was sick."
+            }
+          },
+          {
+            "token": "test",
+            "count": 20,
+            "example": {
+              "id": "M3N-01086",
+              "category": "接続詞",
+              "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+              "a": "一生懸命勉強すれば、そのテストに合格するでしょう。"
+            }
+          },
+          {
+            "token": "sung",
+            "count": 20,
+            "example": {
+              "id": "M3N-01564",
+              "category": "受動態",
+              "q": "This song is sing by many students. の誤りを直しなさい。",
+              "a": "This song is sung by many students."
+            }
+          },
+          {
+            "token": "train",
+            "count": 20,
+            "example": {
+              "id": "M3N-01926",
+              "category": "不定詞②",
+              "q": "He got up early to catch the first train. 問い：この文の意味として最も適切なものを書きなさい。",
+              "a": "彼は始発電車に乗るために早く起きました。"
+            }
+          },
+          {
+            "token": "classroom",
+            "count": 14,
+            "example": {
+              "id": "M3N-00050",
+              "category": "英語の語順",
+              "q": "My brother the classroom go before school. の誤りを直しなさい。",
+              "a": "My brother goes to the classroom before school."
+            }
+          },
+          {
+            "token": "pool",
+            "count": 14,
+            "example": {
+              "id": "M3N-00068",
+              "category": "英語の語順",
+              "q": "Yuki the pool go every evening. の誤りを直しなさい。",
+              "a": "Yuki goes to the pool every evening."
+            }
+          },
+          {
+            "token": "zoo",
+            "count": 14,
+            "example": {
+              "id": "M3N-00080",
+              "category": "英語の語順",
+              "q": "Emi the zoo go before breakfast. の誤りを直しなさい。",
+              "a": "Emi goes to the zoo before breakfast."
+            }
+          },
+          {
+            "token": "hungry",
+            "count": 14,
+            "example": {
+              "id": "M3N-00145",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "We are hungry. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "sleepy",
+            "count": 14,
+            "example": {
+              "id": "M3N-00157",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "My father is sleepy. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "slow",
+            "count": 14,
+            "example": {
+              "id": "M3N-00223",
+              "category": "be動詞と一般動詞（現在形）",
+              "q": "The teachers is slow. は be動詞の文か、一般動詞の文か答えなさい。",
+              "a": "Be動詞の文"
+            }
+          },
+          {
+            "token": "larger",
+            "count": 10,
+            "example": {
+              "id": "M3C-01207",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりlargeです。』",
+              "a": "This bag is larger than that one."
+            }
+          },
+          {
+            "token": "largest",
+            "count": 10,
+            "example": {
+              "id": "M3C-01208",
+              "category": "比較",
+              "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんlargeです。』",
+              "a": "This bag is the largest of the three."
+            }
+          },
+          {
+            "token": "hungrier",
+            "count": 4,
+            "example": {
+              "id": "M3N-01345",
+              "category": "比較",
+              "q": "My desk is (      ) than yours. (hungry) の（ ）内を正しくしなさい。",
+              "a": "Hungrier"
+            }
+          },
+          {
+            "token": "freer",
+            "count": 4,
+            "example": {
+              "id": "M3N-01351",
+              "category": "比較",
+              "q": "My chair is (      ) than yours. (free) の（ ）内を正しくしなさい。",
+              "a": "Freer"
+            }
+          },
+          {
+            "token": "sleepier",
+            "count": 4,
+            "example": {
+              "id": "M3N-01357",
+              "category": "比較",
+              "q": "My table is (      ) than yours. (sleepy) の（ ）内を正しくしなさい。",
+              "a": "Sleepier"
+            }
+          },
+          {
+            "token": "nicer",
+            "count": 4,
+            "example": {
+              "id": "M3N-01381",
+              "category": "比較",
+              "q": "My window is (      ) than yours. (nice) の（ ）内を正しくしなさい。",
+              "a": "Nicer"
+            }
+          },
+          {
+            "token": "slower",
+            "count": 4,
+            "example": {
+              "id": "M3N-01423",
+              "category": "比較",
+              "q": "My camera is (      ) than yours. (slow) の（ ）内を正しくしなさい。",
+              "a": "Slower"
+            }
+          },
+          {
+            "token": "hungriest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01346",
+              "category": "比較",
+              "q": "This is the (      ) desk in the room. (hungry) の（ ）内を正しくしなさい。",
+              "a": "Hungriest"
+            }
+          },
+          {
+            "token": "freest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01352",
+              "category": "比較",
+              "q": "This is the (      ) chair in the room. (free) の（ ）内を正しくしなさい。",
+              "a": "Freest"
+            }
+          },
+          {
+            "token": "sleepiest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01358",
+              "category": "比較",
+              "q": "This is the (      ) table in the room. (sleepy) の（ ）内を正しくしなさい。",
+              "a": "Sleepiest"
+            }
+          },
+          {
+            "token": "nicest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01382",
+              "category": "比較",
+              "q": "This is the (      ) window in the room. (nice) の（ ）内を正しくしなさい。",
+              "a": "Nicest"
+            }
+          },
+          {
+            "token": "slowest",
+            "count": 3,
+            "example": {
+              "id": "M3N-01424",
+              "category": "比較",
+              "q": "This is the (      ) camera in the room. (slow) の（ ）内を正しくしなさい。",
+              "a": "Slowest"
+            }
+          },
+          {
+            "token": "bus",
+            "count": 2,
+            "example": {
+              "id": "M3C-01408",
+              "category": "不定詞②",
+              "q": "He got up early to catch the bus. 問い：この文の意味を書きなさい。",
+              "a": "彼はバスに乗るために早く起きました。"
+            }
+          },
+          {
+            "token": "chairs",
+            "count": 2,
+            "example": {
+              "id": "M3N-00752",
+              "category": "命令文，there is ～ の文",
+              "q": "(      ) seven chairs in the room. 空所に入る最も適切な語を書きなさい。",
+              "a": "There are"
+            }
+          },
+          {
+            "token": "sunny",
+            "count": 1,
+            "example": {
+              "id": "M3C-01400",
+              "category": "仮定法",
+              "q": "If it were sunny, we could go to the park. 問い：文の意味を書きなさい。",
+              "a": "（仮定法の意味）"
+            }
+          }
+        ],
+        "category_stats": [
+          {
+            "category": "助動詞",
+            "total": 360,
+            "exact_solvable": 310,
+            "solvable_ignoring_proper": 322,
+            "old_positive": 1,
+            "exact_pct": 86.11,
+            "ignore_proper_pct": 89.44
+          },
+          {
+            "category": "現在完了形（完了・経験）",
+            "total": 360,
+            "exact_solvable": 206,
+            "solvable_ignoring_proper": 268,
+            "old_positive": 41,
+            "exact_pct": 57.22,
+            "ignore_proper_pct": 74.44
+          },
+          {
+            "category": "現在完了形（継続），現在完了進行形",
+            "total": 360,
+            "exact_solvable": 340,
+            "solvable_ignoring_proper": 340,
+            "old_positive": 105,
+            "exact_pct": 94.44,
+            "ignore_proper_pct": 94.44
+          },
+          {
+            "category": "be動詞と一般動詞（現在形）",
+            "total": 240,
+            "exact_solvable": 177,
+            "solvable_ignoring_proper": 201,
+            "old_positive": 0,
+            "exact_pct": 73.75,
+            "ignore_proper_pct": 83.75
+          },
+          {
+            "category": "be動詞と一般動詞（過去形）",
+            "total": 240,
+            "exact_solvable": 177,
+            "solvable_ignoring_proper": 201,
+            "old_positive": 0,
+            "exact_pct": 73.75,
+            "ignore_proper_pct": 83.75
+          },
+          {
+            "category": "進行形",
+            "total": 240,
+            "exact_solvable": 183,
+            "solvable_ignoring_proper": 207,
+            "old_positive": 0,
+            "exact_pct": 76.25,
+            "ignore_proper_pct": 86.25
+          },
+          {
+            "category": "未来の文",
+            "total": 240,
+            "exact_solvable": 195,
+            "solvable_ignoring_proper": 211,
+            "old_positive": 1,
+            "exact_pct": 81.25,
+            "ignore_proper_pct": 87.92
+          },
+          {
+            "category": "比較",
+            "total": 240,
+            "exact_solvable": 171,
+            "solvable_ignoring_proper": 187,
+            "old_positive": 0,
+            "exact_pct": 71.25,
+            "ignore_proper_pct": 77.92
+          },
+          {
+            "category": "関係代名詞",
+            "total": 185,
+            "exact_solvable": 178,
+            "solvable_ignoring_proper": 178,
+            "old_positive": 0,
+            "exact_pct": 96.22,
+            "ignore_proper_pct": 96.22
+          },
+          {
+            "category": "分詞と間接疑問文",
+            "total": 158,
+            "exact_solvable": 132,
+            "solvable_ignoring_proper": 132,
+            "old_positive": 0,
+            "exact_pct": 83.54,
+            "ignore_proper_pct": 83.54
+          },
+          {
+            "category": "文型",
+            "total": 155,
+            "exact_solvable": 85,
+            "solvable_ignoring_proper": 125,
+            "old_positive": 0,
+            "exact_pct": 54.84,
+            "ignore_proper_pct": 80.65
+          },
+          {
+            "category": "仮定法",
+            "total": 136,
+            "exact_solvable": 113,
+            "solvable_ignoring_proper": 114,
+            "old_positive": 0,
+            "exact_pct": 83.09,
+            "ignore_proper_pct": 83.82
+          },
+          {
+            "category": "命令文，there is ～ の文",
+            "total": 136,
+            "exact_solvable": 128,
+            "solvable_ignoring_proper": 128,
+            "old_positive": 1,
+            "exact_pct": 94.12,
+            "ignore_proper_pct": 94.12
+          },
+          {
+            "category": "不定詞②",
+            "total": 132,
+            "exact_solvable": 75,
+            "solvable_ignoring_proper": 79,
+            "old_positive": 0,
+            "exact_pct": 56.82,
+            "ignore_proper_pct": 59.85
+          },
+          {
+            "category": "人称代名詞",
+            "total": 132,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 106,
+            "old_positive": 0,
+            "exact_pct": 77.27,
+            "ignore_proper_pct": 80.3
+          },
+          {
+            "category": "疑問詞",
+            "total": 126,
+            "exact_solvable": 102,
+            "solvable_ignoring_proper": 112,
+            "old_positive": 3,
+            "exact_pct": 80.95,
+            "ignore_proper_pct": 88.89
+          },
+          {
+            "category": "英語の語順",
+            "total": 120,
+            "exact_solvable": 64,
+            "solvable_ignoring_proper": 78,
+            "old_positive": 1,
+            "exact_pct": 53.33,
+            "ignore_proper_pct": 65
+          },
+          {
+            "category": "接続詞",
+            "total": 120,
+            "exact_solvable": 32,
+            "solvable_ignoring_proper": 32,
+            "old_positive": 1,
+            "exact_pct": 26.67,
+            "ignore_proper_pct": 26.67
+          },
+          {
+            "category": "不定詞①，動名詞",
+            "total": 120,
+            "exact_solvable": 89,
+            "solvable_ignoring_proper": 105,
+            "old_positive": 0,
+            "exact_pct": 74.17,
+            "ignore_proper_pct": 87.5
+          },
+          {
+            "category": "受動態",
+            "total": 120,
+            "exact_solvable": 78,
+            "solvable_ignoring_proper": 97,
+            "old_positive": 0,
+            "exact_pct": 65,
+            "ignore_proper_pct": 80.83
+          }
+        ]
+      }
+    }
+  },
+  "global_unresolved_tokens": [
+    {
+      "token": "ken",
+      "count": 528
+    },
+    {
+      "token": "tv",
+      "count": 398
+    },
+    {
+      "token": "kyoto",
+      "count": 280
+    },
+    {
+      "token": "science",
+      "count": 272
+    },
+    {
+      "token": "tom",
+      "count": 266
+    },
+    {
+      "token": "takumi",
+      "count": 198
+    },
+    {
+      "token": "mika",
+      "count": 194
+    },
+    {
+      "token": "c",
+      "count": 184
+    },
+    {
+      "token": "key",
+      "count": 176
+    },
+    {
+      "token": "math",
+      "count": 160
+    },
+    {
+      "token": "grandmother",
+      "count": 142
+    },
+    {
+      "token": "emi",
+      "count": 122
+    },
+    {
+      "token": "yuki",
+      "count": 96
+    },
+    {
+      "token": "test",
+      "count": 94
+    },
+    {
+      "token": "tired",
+      "count": 88
+    },
+    {
+      "token": "phone",
+      "count": 84
+    },
+    {
+      "token": "volleyball",
+      "count": 84
+    },
+    {
+      "token": "badminton",
+      "count": 84
+    },
+    {
+      "token": "chair",
+      "count": 80
+    },
+    {
+      "token": "larger",
+      "count": 72
+    },
+    {
+      "token": "novel",
+      "count": 68
+    },
+    {
+      "token": "town",
+      "count": 68
+    },
+    {
+      "token": "absent",
+      "count": 52
+    },
+    {
+      "token": "sick",
+      "count": 50
+    },
+    {
+      "token": "rainy",
+      "count": 46
+    },
+    {
+      "token": "fly",
+      "count": 42
+    },
+    {
+      "token": "skating",
+      "count": 42
+    },
+    {
+      "token": "classroom",
+      "count": 40
+    },
+    {
+      "token": "tom's",
+      "count": 40
+    },
+    {
+      "token": "sung",
+      "count": 40
+    },
+    {
+      "token": "train",
+      "count": 40
+    },
+    {
+      "token": "usually",
+      "count": 36
+    },
+    {
+      "token": "abroad",
+      "count": 36
+    },
+    {
+      "token": "app",
+      "count": 36
+    },
+    {
+      "token": "hungry",
+      "count": 32
+    },
+    {
+      "token": "zoo",
+      "count": 30
+    },
+    {
+      "token": "sleepy",
+      "count": 30
+    },
+    {
+      "token": "largest",
+      "count": 28
+    },
+    {
+      "token": "pool",
+      "count": 28
+    },
+    {
+      "token": "slow",
+      "count": 28
+    },
+    {
+      "token": "wall",
+      "count": 26
+    },
+    {
+      "token": "cram",
+      "count": 26
+    },
+    {
+      "token": "hokkaido",
+      "count": 24
+    },
+    {
+      "token": "since",
+      "count": 24
+    },
+    {
+      "token": "sunny",
+      "count": 20
+    },
+    {
+      "token": "ball",
+      "count": 18
+    },
+    {
+      "token": "osaka",
+      "count": 18
+    },
+    {
+      "token": "sushi",
+      "count": 16
+    },
+    {
+      "token": "blue",
+      "count": 12
+    },
+    {
+      "token": "sato",
+      "count": 12
+    },
+    {
+      "token": "bus",
+      "count": 12
+    },
+    {
+      "token": "tonight",
+      "count": 8
+    },
+    {
+      "token": "sky",
+      "count": 8
+    },
+    {
+      "token": "aki",
+      "count": 8
+    },
+    {
+      "token": "hungrier",
+      "count": 8
+    },
+    {
+      "token": "freer",
+      "count": 8
+    },
+    {
+      "token": "sleepier",
+      "count": 8
+    },
+    {
+      "token": "nicer",
+      "count": 8
+    },
+    {
+      "token": "slower",
+      "count": 8
+    },
+    {
+      "token": "yamaguchi",
+      "count": 6
+    },
+    {
+      "token": "shoes",
+      "count": 6
+    },
+    {
+      "token": "twice",
+      "count": 6
+    },
+    {
+      "token": "newspaper",
+      "count": 6
+    },
+    {
+      "token": "bookstore",
+      "count": 6
+    },
+    {
+      "token": "present",
+      "count": 6
+    },
+    {
+      "token": "hungriest",
+      "count": 6
+    },
+    {
+      "token": "freest",
+      "count": 6
+    },
+    {
+      "token": "sleepiest",
+      "count": 6
+    },
+    {
+      "token": "nicest",
+      "count": 6
+    },
+    {
+      "token": "slowest",
+      "count": 6
+    },
+    {
+      "token": "pencil",
+      "count": 4
+    },
+    {
+      "token": "case",
+      "count": 4
+    },
+    {
+      "token": "grown",
+      "count": 4
+    },
+    {
+      "token": "textbook",
+      "count": 4
+    },
+    {
+      "token": "akio",
+      "count": 4
+    },
+    {
+      "token": "pochi",
+      "count": 4
+    },
+    {
+      "token": "eager",
+      "count": 4
+    },
+    {
+      "token": "loudly",
+      "count": 4
+    },
+    {
+      "token": "bank",
+      "count": 4
+    },
+    {
+      "token": "solve",
+      "count": 4
+    },
+    {
+      "token": "chairs",
+      "count": 4
+    },
+    {
+      "token": "clock",
+      "count": 2
+    },
+    {
+      "token": "tokyo",
+      "count": 2
+    },
+    {
+      "token": "fukuoka",
+      "count": 2
+    },
+    {
+      "token": "interest",
+      "count": 2
+    },
+    {
+      "token": "result",
+      "count": 2
+    }
+  ]
+}
