@@ -17,8 +17,14 @@ if(src.includes(semanticNeedle)){
   src=src.replace(semanticNeedle,"{base:'write',ger:'writing',jp:'書くこと'}");
   changed++;
 }
+const cacheNeedle="return vocabFallbackLexicallySafe(item) && passesPrereqGrammar(item) && passesQualityGate(item);";
+const cacheReplacement="return vocabFallbackLexicallySafe(item) && passesQualityGate(item);";
+if(src.includes(cacheNeedle)){
+  src=src.replace(cacheNeedle,cacheReplacement);
+  changed++;
+}
 fs.writeFileSync(path,src);
 fs.mkdirSync('audit',{recursive:true});
-fs.writeFileSync('audit/VOCAB_SAFE_INSTALLER_SOURCE_REPAIR.json',JSON.stringify({repairedAt:new Date().toISOString(),changes:changed},null,2)+'\n');
-console.log(JSON.stringify({changes:changed},null,2));
+fs.writeFileSync('audit/VOCAB_SAFE_INSTALLER_SOURCE_REPAIR.json',JSON.stringify({repairedAt:new Date().toISOString(),changes:changed,contextDependentPrereqCacheRepair:!src.includes(cacheNeedle)},null,2)+'\n');
+console.log(JSON.stringify({changes:changed,contextDependentPrereqCacheRepair:!src.includes(cacheNeedle)},null,2));
 if(changed<1) console.log('installer source already repaired');
