@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-25T23:08:14.828Z",
+  "generated_at": "2026-08-25T23:17:25.559Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "totals": {
     "rows": 2682,
     "zeroed": 0,
     "severe_under_25pct": 0,
     "under_50pct": 376,
-    "min_retention_pct": 27.12
+    "min_retention_pct": 29.08
   },
   "final_section": {
     "rows": 106,
@@ -20,7 +20,7 @@
     "zeroed": 0,
     "severe_under_25pct": 0,
     "under_50pct": 76,
-    "min_retention_pct": 27.12
+    "min_retention_pct": 29.08
   },
   "by_scope": {
     "中1/サンシャイン": {
@@ -29,7 +29,7 @@
       "zeroed_rows": 0,
       "severe_under_25pct_rows": 0,
       "under_50pct_rows": 47,
-      "min_retention_pct": 27.12
+      "min_retention_pct": 29.08
     },
     "中1/ニューホライズン": {
       "sections": 46,
@@ -81,8 +81,8 @@
       "section_count": 39,
       "category": "一般動詞（過去形）",
       "off": 612,
-      "on": 166,
-      "retention_pct": 27.12,
+      "on": 178,
+      "retention_pct": 29.08,
       "zeroed": false,
       "severe_under_25pct": false,
       "under_50pct": true
@@ -782,7 +782,7 @@
       "zeroed_rows": 0,
       "severe_rows": 0,
       "under_50_rows": 5,
-      "min_retention_pct": 27.12,
+      "min_retention_pct": 29.08,
       "worst": {
         "grade": "中1",
         "textbook": "サンシャイン",
@@ -791,8 +791,8 @@
         "section_count": 39,
         "category": "一般動詞（過去形）",
         "off": 612,
-        "on": 166,
-        "retention_pct": 27.12,
+        "on": 178,
+        "retention_pct": 29.08,
         "zeroed": false,
         "severe_under_25pct": false,
         "under_50pct": true
