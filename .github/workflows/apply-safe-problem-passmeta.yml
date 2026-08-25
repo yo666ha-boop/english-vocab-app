@@ -1,0 +1,44 @@
+name: Apply safe problem passMeta
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/apply_safe_problem_passmeta.mjs
+      - .github/workflows/apply-safe-problem-passmeta.yml
+      - audit/PROBLEM_APP_PASSMETA_APPLY_TRIGGER.md
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply audited safe passMeta to problem app
+        run: node tools/apply_safe_problem_passmeta.mjs
+      - name: Validate embedded JSON
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const s=fs.readFileSync('problem-app/index.html','utf8');
+          for (const id of ['qb-data','meta-data']) {
+            const m=new RegExp(`<script\\s+id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/script>`,'i').exec(s);
+            if(!m) throw new Error(id+' missing');
+            JSON.parse(m[1]);
+          }
+          console.log('embedded JSON PASS');
+          NODE
+      - name: Commit branch patch and audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html audit/PROBLEM_APP_PASSMETA_APPLY_RESULT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: rebuild problem-app vocabulary gate metadata [skip ci]'
+          git push
