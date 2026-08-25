@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "added_runtime_categories": [
+    "中1 there is ～・look ～ の文",
+    "中2 疑問詞",
+    "中2 進行形",
+    "中2 未来表現",
+    "中2 未来の文",
+    "中3 現在完了形（完了・経験）"
+  ],
+  "design": "generic category-level elementary-safe fallbacks; existing grammar chronology, lexical safety, quality gate, and per-category/type floor remain authoritative; no problem-ID, textbook, section, retention-threshold, or measured-count exception"
+}
