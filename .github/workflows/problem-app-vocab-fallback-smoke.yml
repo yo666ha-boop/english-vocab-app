@@ -1,0 +1,166 @@
+name: Problem app vocab fallback smoke
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - .github/workflows/problem-app-vocab-fallback-smoke.yml
+      - audit/PROBLEM_APP_VOCAB_FALLBACK_SMOKE_TRIGGER.md
+
+permissions:
+  contents: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Run fallback generation/save/print smoke
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json, re
+
+          url = Path('problem-app/index.html').resolve().as_uri()
+          out = {'url': url, 'cases': [], 'page_errors': [], 'console_errors': []}
+
+          def candidate_count(text):
+              m = re.search(r'この条件で使える候補\s*(\d+)件', text or '')
+              return int(m.group(1)) if m else None
+
+          def select_only(page, selector, value):
+              page.evaluate("""
+                ({selector,value}) => {
+                  const els=Array.from(document.querySelectorAll(selector));
+                  els.forEach(x=>{
+                    x.checked=x.value===value;
+                    x.dispatchEvent(new Event('change',{bubbles:true}));
+                  });
+                }
+              """, {'selector': selector, 'value': value})
+
+          def set_case(page, grade, textbook, stage, qtype):
+              page.select_option('#subjectSelect','英語')
+              page.select_option('#gradeSelect',grade)
+              page.wait_for_timeout(50)
+              page.select_option('#textbookSelect',textbook)
+              page.wait_for_timeout(50)
+              sections=page.locator('#sectionSelect option').evaluate_all("els=>els.map(x=>x.value).filter(Boolean)")
+              assert sections, f'no sections {grade} {textbook}'
+              page.select_option('#sectionSelect',sections[-1])
+              page.select_option('#vocabMode','on')
+              select_only(page,'input[data-stage]',stage)
+              select_only(page,'input[data-type]',qtype)
+              page.select_option('#questionCount','20')
+              page.select_option('#pickMode','ordered')
+              page.wait_for_timeout(100)
+              return sections[-1]
+
+          def ids_in_preview(page):
+              vals=page.locator('#questionPreview .qnum').all_inner_texts()
+              ids=[]
+              for x in vals:
+                  m=re.search(r'Q\d+\s+([^\s　/]+)',x)
+                  if m: ids.append(m.group(1))
+              return ids
+
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              page=browser.new_page()
+              page.on('pageerror', lambda exc: out['page_errors'].append(str(exc)))
+              page.on('console', lambda msg: out['console_errors'].append(msg.text) if msg.type=='error' else None)
+              page.goto(url,wait_until='load')
+              books=page.locator('#textbookSelect option').evaluate_all("els=>els.map(x=>x.value).filter(Boolean)")
+              assert books, 'textbook options empty after load'
+
+              # Case 1: gerund / correction. The original bank has only 18 quality-eligible items of this type,
+              # so a 20-question ordered set must include deterministic fallback items.
+              sec=set_case(page,'中2','サンシャイン','動名詞','間違い直し')
+              status=page.locator('#builderStatus').inner_text()
+              cand=candidate_count(status)
+              assert cand is not None and cand>=30, f'gerund candidates {cand}: {status}'
+              page.get_by_role('button',name='問題を作成').click()
+              page.wait_for_timeout(50)
+              ids=ids_in_preview(page)
+              vf=[x for x in ids if x.startswith('VF-')]
+              assert len(ids)==20, f'gerund generated {len(ids)}'
+              assert vf, f'gerund fallback not used: {ids}'
+
+              # Persist currentQuestionIds through the normal change autosave path and prove synthetic IDs restore.
+              page.select_option('#pickMode','random')
+              page.wait_for_timeout(100)
+              page.reload(wait_until='load')
+              page.wait_for_timeout(100)
+              restored=ids_in_preview(page)
+              restored_vf=[x for x in restored if x.startswith('VF-')]
+              assert len(restored)==20, f'gerund restored {len(restored)}'
+              assert restored_vf, f'fallback IDs not restored: {restored}'
+
+              # Print path: stub a child window and verify current questions are rendered into print HTML.
+              page.evaluate("""
+                () => {
+                  window.__printHtml=''; window.__printCalled=false; window.__printWin=null;
+                  window.open=()=>{
+                    const w={
+                      document:{write:s=>{window.__printHtml=String(s)},close:()=>{}},
+                      focus:()=>{}, print:()=>{window.__printCalled=true}, onload:null
+                    };
+                    window.__printWin=w; return w;
+                  };
+                }
+              """)
+              page.get_by_role('button',name='印刷').click()
+              page.wait_for_timeout(50)
+              page.evaluate("() => { if(window.__printWin && typeof window.__printWin.onload==='function') window.__printWin.onload(); }")
+              page.wait_for_timeout(100)
+              print_html=page.evaluate("window.__printHtml")
+              assert 'VF-' in print_html, 'fallback problem missing from print HTML'
+              out['cases'].append({'name':'sunshine_g2_gerund_correction','section':sec,'candidates':cand,'generated':len(ids),'fallback_generated':len(vf),'restored':len(restored),'fallback_restored':len(restored_vf),'print_contains_fallback':True})
+
+              # Case 2: conjunction / reading. Ensure a formerly sparse grammar/type can still generate 20.
+              sec=set_case(page,'中3','サンシャイン','接続詞','読解')
+              status=page.locator('#builderStatus').inner_text()
+              cand=candidate_count(status)
+              assert cand is not None and cand>=30, f'conjunction candidates {cand}: {status}'
+              page.get_by_role('button',name='問題を作成').click()
+              page.wait_for_timeout(50)
+              ids=ids_in_preview(page)
+              vf=[x for x in ids if x.startswith('VF-')]
+              assert len(ids)==20, f'conjunction generated {len(ids)}'
+              assert vf, f'conjunction fallback not used: {ids}'
+              out['cases'].append({'name':'sunshine_g3_conjunction_reading','section':sec,'candidates':cand,'generated':len(ids),'fallback_generated':len(vf)})
+
+              assert not out['page_errors'], out['page_errors']
+              assert not out['console_errors'], out['console_errors']
+              browser.close()
+
+          out['result']='PASS'
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/PROBLEM_APP_VOCAB_FALLBACK_SMOKE.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit smoke result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_VOCAB_FALLBACK_SMOKE.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record vocab fallback end-to-end smoke [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
