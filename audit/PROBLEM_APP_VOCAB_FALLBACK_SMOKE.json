@@ -1,0 +1,25 @@
+{
+  "url": "file:///home/runner/work/english-vocab-app/english-vocab-app/problem-app/index.html",
+  "cases": [
+    {
+      "name": "sunshine_g2_gerund_correction",
+      "section": "Reading 3",
+      "candidates": 30,
+      "generated": 20,
+      "fallback_generated": 8,
+      "restored": 20,
+      "fallback_restored": 8,
+      "print_contains_fallback": true
+    },
+    {
+      "name": "sunshine_g3_conjunction_reading",
+      "section": "Special Project",
+      "candidates": 30,
+      "generated": 20,
+      "fallback_generated": 20
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "result": "PASS"
+}
