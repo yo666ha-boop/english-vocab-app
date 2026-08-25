@@ -5,7 +5,8 @@
     "tools/install_vocab_safe_fallback_v1.mjs"
   ],
   "added_runtime_categories": [
-    "中2 there is ～ の文"
+    "中2 there is ～ の文",
+    "中1 区別"
   ],
-  "design": "generic elementary-safe category fallback using exact stageMap runtime category; existing grammar chronology and lexical safety remain authoritative; no problem-ID, textbook, section, or measured-count exception"
+  "design": "generic elementary-safe category fallback using exact stageMap runtime categories; existing grammar chronology and lexical safety remain authoritative; no problem-ID, textbook, section, or measured-count exception"
 }

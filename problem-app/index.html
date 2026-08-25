@@ -974,6 +974,41 @@ function buildThereIsFallbacks() {
   return out;
 }
 
+function buildBeVsVerbFallbacks() {
+  const beRows=[
+    ['I am a student.','私は生徒です。'],['You are a student.','あなたは生徒です。'],
+    ['He is a student.','彼は生徒です。'],['She is a student.','彼女は生徒です。'],
+    ['We are at school.','私たちは学校にいます。'],['They are at home.','彼らは家にいます。'],
+    ['It is a book.','それは本です。'],['I am at home.','私は家にいます。']
+  ];
+  const verbRows=[
+    ['I study English.','私は英語を勉強します。'],['You read a book.','あなたは本を読みます。'],
+    ['We play.','私たちは遊びます。'],['They sing.','彼らは歌います。'],
+    ['I like English.','私は英語が好きです。'],['You write.','あなたは書きます。'],
+    ['We cook.','私たちは料理します。'],['They swim.','彼らは泳ぎます。']
+  ];
+  const out=[]; let n=1;
+  for(const [full,jp] of beRows){
+    const stem=String(n++).padStart(3,'0');
+    out.push(vocabFallbackItem('中1','区別','見分け','DIST-BE-'+stem,full+' は be動詞の文か、一般動詞の文か答えなさい。','be動詞の文'));
+    out.push(vocabFallbackItem('中1','区別','英作文','DIST-BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+  }
+  n=1;
+  for(const [full,jp] of verbRows){
+    const stem=String(n++).padStart(3,'0');
+    out.push(vocabFallbackItem('中1','区別','見分け','DIST-VERB-'+stem,full+' は be動詞の文か、一般動詞の文か答えなさい。','一般動詞の文'));
+    out.push(vocabFallbackItem('中1','区別','英作文','DIST-VERB-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+  }
+  const fixes=[
+    ['I am study English.','I study English.'],['You are read a book.','You read a book.'],
+    ['We are play.','We play.'],['They are sing.','They sing.'],
+    ['I a student.','I am a student.'],['You a student.','You are a student.'],
+    ['He a student.','He is a student.'],['She a student.','She is a student.']
+  ];
+  fixes.forEach((r,i)=>out.push(vocabFallbackItem('中1','区別','間違い直し','DIST-FIX-'+String(i+1).padStart(3,'0'),r[0]+' の誤りを直しなさい。',r[1])));
+  return out;
+}
+
 function buildConjunctionFallbacks() {
   const subjects=[
     {en:'I',low:'I',jp:'私は',be:'am'},
@@ -1014,7 +1049,7 @@ function buildConjunctionFallbacks() {
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildThereIsFallbacks(),buildBeVsVerbFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;
