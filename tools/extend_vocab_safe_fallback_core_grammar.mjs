@@ -127,17 +127,14 @@ function patch(path){
     const i=src.indexOf(anchor); if(i<0) throw new Error(`${path}: conjunction builder anchor missing for pattern one`);
     src=src.slice(0,i)+patternOneBuilder+'\n'+src.slice(i);
   }
-  if(!src.includes("'give'")){
-    src=src.replace(' get use eat drink sleep make take study',' get give use eat drink sleep make take study');
-  }
-  if(!src.includes("'happy'")){
-    src=src.replace(' good bad big small new old long short hot cold nice cute',' good bad big small new old long short hot cold nice cute happy');
-  }
+  if(!src.includes(' get give use eat')) src=src.replace(' get use eat drink sleep make take study',' get give use eat drink sleep make take study');
+  if(!src.includes('nice cute happy school')) src=src.replace(' good bad big small new old long short hot cold nice cute school',' good bad big small new old long short hot cold nice cute happy school');
   if(!src.includes('buildPatternOneFallbacks(),buildGerundFallbacks()')){
     src=src.replace('buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildGerundFallbacks()','buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGerundFallbacks()');
   }
   if(!src.includes('buildImperativeFallbacks(),buildPresentVerbFallbacks()')) throw new Error(`${path}: fallback bank concat patch missing`);
   if(!src.includes('buildPatternOneFallbacks(),buildGerundFallbacks()')) throw new Error(`${path}: pattern one bank concat patch missing`);
+  if(!src.includes(' get give use eat') || !src.includes('nice cute happy school')) throw new Error(`${path}: fallback safe-base extension missing`);
   fs.writeFileSync(path,src);
 }
 patch(APP);
