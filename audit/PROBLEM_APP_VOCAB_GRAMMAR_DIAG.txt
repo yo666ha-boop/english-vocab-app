@@ -270,7 +270,7 @@ div>
   
   <script id="qb-data" type="application/json">[{"id":"E1-BQ-001","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"not の位置ミス","cause":"変形ルール未定着","q":"He is busy. を否定文にしなさい。","a":"He is not busy."},{"id":"E1-BQ-002","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"be動詞を前に出せない","cause":"疑問文の型不足","q":"You are happy. を疑問文にしなさい。","a":"Are you happy?"},{"id":"E1-BQ-003","subject":"英語","grade":"中1","category":"be動詞","type":"答え方","mistake":"Yes/No 応答ミス","cause":"答え方の型不足","q":"Are you a student? に Yes で答えなさい。","a":"Yes, I am."},{"id":"E1-BQ-004","subject":"英語","grade":"中1","category":"be動詞","type":"並びかえ","mistake":"not の位置ミス","cause":"語順不安定","q":"次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )","a":"She is not kind."},{"id":"E1-BQ-005","subject":"英語","grade":"中1","category":"be動詞","type":"間違い直し","mistake":"主語に合う be 動詞ミス","cause":"主語と動詞の対応不足","q":"Are he busy? の誤りを直しなさい。","a":"Is he busy?"},{"id":"E1-BQ-006","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"am not の位置ミス","cause":"否定文の型不足","q":"I am busy. を否定文にしなさい。","a":"I am not busy."},{"id":"E1-BQ-007","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"疑問文の語順ミス","cause":"be動詞を前に出せない","q":"She is a teacher. を疑問文にしなさい。","a":"Is she a teacher?"},{"id":"E1-B
 
---- 単語制限 #4 @ 2606127 ---
+--- 単語制限 #4 @ 2606186 ---
 n a;
 }
 
@@ -2519,7 +2519,7 @@ const grammarChronology = {
       '進行形':'__start__',
     
 
---- vocab #18 @ 2589623 ---
+--- vocab #18 @ 2589682 ---
 n = GRAMMAR_CHRONOLOGY_VERSION;
     el('stageArea').dataset.learnedGrammarCount = String(stages.length);
     el('stageArea').dataset.allGrammarCount = String(allStages.length);
@@ -2595,7 +2595,7 @@ function requiredGrammarStageIndex(item) {
   if (item.subject !== '英語') return -1;
   const text = String(item.q || '') + ' ' + String(item.a || '');
 
---- vocab #19 @ 2589705 ---
+--- vocab #19 @ 2589764 ---
 String(stages.length);
     el('stageArea').dataset.allGrammarCount = String(allStages.length);
   }
@@ -2672,7 +2672,7 @@ function requiredGrammarStageIndex(item) {
   let req = Math.max(0, targetStageIndex(item));
   const bump = i => { if (i >= 0
 
---- vocab #20 @ 2589777 ---
+--- vocab #20 @ 2589836 ---
 ing(allStages.length);
   }
 }
@@ -2750,7 +2750,7 @@ function requiredGrammarStageIndex(item) {
 
   // Detect only structures that can make 
 
---- vocab #21 @ 2589987 ---
+--- vocab #21 @ 2590046 ---
 e value="${t}" checked> <span>${t}</span>
 </label>`).join('');
 }
@@ -2823,7 +2823,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za-z]+ing\b/i.test(text
 
---- vocab #22 @ 2595112 ---
+--- vocab #22 @ 2595171 ---
 n|done)/i.test(both)) return false;
   if (/Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/.test(both)) return false;
   if (/\b(?:You|We|They)\s+was\b/i.test(both)) return false;
@@ -2860,7 +2860,7 @@ let _vocabFallbackBankCache = null;
 
 const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here
 
---- vocab #23 @ 2595979 ---
+--- vocab #23 @ 2596038 ---
 vidence: do not let a mislabeled vocabulary-only item through.
   if (item.category === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
   if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
@@ -2896,7 +2896,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && 
 
---- vocab #24 @ 2596061 ---
+--- vocab #24 @ 2596120 ---
  === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
   if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
   const infinitiveBlank = item.type === '空所補充' && /^to$/i.test(a) && /\(\s*\)\s*[A-Za-z]+\b/.test(q);
@@ -2932,7 +2932,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e'); }
   for(c
 
---- vocab #25 @ 2596112 ---
+--- vocab #25 @ 2596171 ---
 false;
   if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
   const infinitiveBlank = item.type === '空所補充' && /^to$/i.test(a) && /\(\s*\)\s*[A-Za-z]+\b/.test(q);
@@ -2968,7 +2968,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.slice(0,-3)+'e'); }
   for(const x of [...out]) if(x.length>3 && x.at(-1)===x.a
 
---- vocab #26 @ 2596150 ---
+--- vocab #26 @ 2596209 ---
  !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
   const infinitiveBlank = item.type === '空所補充' && /^to$/i.test(a) && /\(\s*\)\s*[A-Za-z]+\b/.test(q);
   if ((item.category === '不定詞' || item.category === '不定詞①' || item.category === '不定詞②') && !/\bto\s+[A-Za-z]+\b/i.test(both) && !infinitiveBlank) return false;
@@ -3004,7 +3004,7 @@ function vocabFallbackTokenBases(token) {
   for(const x of [...out]) if(x.length>3 && x.at(-1)===x.at(-2)) out.add(x.slice(0,-1));
   retur
 
---- vocab #27 @ 2596968 ---
+--- vocab #27 @ 2597027 ---
 ALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
@@ -3043,7 +3043,7 @@ function buildGerundFallbacks() {
     {base:'read a book',ger:'reading a book',jp:'本を読むこと'},
     {base:'write',ger:'w
 
---- vocab #28 @ 2597192 ---
+--- vocab #28 @ 2597251 ---
 d but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
@@ -3083,7 +3083,7 @@ function buildGerundFallbacks() {
     {base:'run in the park',ger:'running in the park',jp:'公園で走ること'},
     {base:'cook at home',ger:'cooking at home',j
 
---- vocab #29 @ 2597299 ---
+--- vocab #29 @ 2597358 ---
 y read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
@@ -3125,7 +3125,7 @@ function buildGerundFallbacks() {
     {base:'study English',ger:'studying English',jp:'英語を勉強すること'},
     {base:'speak English',
 
---- vocab #30 @ 2597340 ---
+--- vocab #30 @ 2597399 ---
  cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV`.toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
@@ -3168,7 +3168,7 @@ function buildGerundFallbacks() {
     {base:'speak English',ger:'speaking English',jp:'英語を話すこと'},
    
 
---- vocab #31 @ 2597979 ---
+--- vocab #31 @ 2598038 ---
 n:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -3220,7 +3220,7 @@ function buildGerundFallbacks() {
     out.push(vocabFallbackItem('中2','動名詞','変形','GER-CHANGE-'+stem,full+' を否定文にしなさい。',s.en+' do not like '+act.ger+'.'));
     out.push(vocabFallbackItem('中2','動名詞','間違い直し','GER-FIX-'+s
 
---- vocab #32 @ 2598163 ---
+--- vocab #32 @ 2598222 ---
 e();
   const out=new Set([t]);
   if(VOCAB_FALLBACK_IRREGULAR.has(t)) out.add(VOCAB_FALLBACK_IRREGULAR.get(t));
@@ -3277,7 +3277,7 @@ function buildConjunctionFallbacks() {
     {en:'I',low:'I',jp:'私は',be:'am'},
     {en:'You',low
 
---- vocab #33 @ 2598203 ---
+--- vocab #33 @ 2598262 ---
 B_FALLBACK_IRREGULAR.has(t)) out.add(VOCAB_FALLBACK_IRREGULAR.get(t));
   if(t.length>4 && t.endsWith('ies')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('es')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3333,7 +3333,7 @@ function buildConjunctionFallbacks() {
     {en:'You',low:'you',jp:'あなたは',be:'are'},
     {en:'We'
 
---- vocab #34 @ 2598253 ---
+--- vocab #34 @ 2598312 ---
 K_IRREGULAR.get(t));
   if(t.length>4 && t.endsWith('ies')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('es')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3390,7 +3390,7 @@ function buildConjunctionFallbacks() {
     {en:'We',low:'we',jp:'私たちは',be:'are'},
     {en:'They',low:
 
---- vocab #35 @ 2598439 ---
+--- vocab #35 @ 2598498 ---
 gth>3 && t.endsWith('s') && !t.endsWith('ss')) out.add(t.slice(0,-1));
   if(t.length>4 && t.endsWith('ied')) out.add(t.slice(0,-3)+'y');
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
@@ -3448,7 +3448,7 @@ function buildConjunctionFallbacks() {
   for(const s of subjects) {
     scenarios.push({conj:'because',hint:'〜なので',en:s.en+' go home because it is cold.',jp:s.jp+'寒いので家に帰りま
 
---- vocab #36 @ 2599412 ---
+--- vocab #36 @ 2599471 ---
 ts=[
     {en:'I',jp:'私は'}, {en:'You',jp:'あなたは'}, {en:'We',jp:'私たちは'}, {en:'They',jp:'彼らは'}
   ];
@@ -3500,7 +3500,7 @@ function buildConjunctionFallbacks() {
     const stem=String(i+1).padStart(3,'0');
     const blank=sc.
 
---- vocab #37 @ 2599512 ---
+--- vocab #37 @ 2599571 ---
 nst acts=[
     {base:'play with a dog',ger:'playing with a dog',jp:'犬と遊ぶこと'},
     {base:'read a book',ger:'reading a book',jp:'本を読むこと'},
@@ -3550,7 +3550,7 @@ function buildConjunctionFallbacks() {
     const blank=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'(      )');
     const select=sc.en.replace(new RegEx
 
---- vocab #38 @ 2599614 ---
+--- vocab #38 @ 2599673 ---
 ger:'reading a book',jp:'本を読むこと'},
     {base:'write',ger:'writing',jp:'書くこと'},
     {base:'sing',ger:'singing',jp:'歌うこと'},
@@ -3599,7 +3599,7 @@ function buildConjunctionFallbacks() {
     const select=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'( because / if / when )');
     const wrong=sc.conj==='because'?'if':(sc.co
 
---- vocab #39 @ 2599735 ---
+--- vocab #39 @ 2599794 ---
 
     {base:'swim',ger:'swimming',jp:'泳ぐこと'},
     {base:'run in the park',ger:'running in the park',jp:'公園で走ること'},
@@ -3647,7 +3647,7 @@ function buildConjunctionFallbacks() {
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'because':'if');
     const wrongSentence=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),m=>m[0]===m[0].toUpp
 
---- vocab #40 @ 2601795 ---
+--- vocab #40 @ 2601854 ---
 :s.en+' cook when '+s.low+' '+s.be+' at home.',jp:s.jp+'家にいるとき、料理します。'});
     scenarios.push({conj:'if',hint:'もし〜なら',en:'If '+s.low+' '+s.be+' at home, '+s.low+' read a book.',jp:'もし家にいるなら、'+s.jp+'本を読みます。'});
   }
@@ -3701,7 +3701,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
   for(const item of vocabFallbackBank()) {
     if(item
 
---- vocab #41 @ 2601909 ---
+--- vocab #41 @ 2601968 ---
 ら',en:'If '+s.low+' '+s.be+' at home, '+s.low+' read a book.',jp:'もし家にいるなら、'+s.jp+'本を読みます。'});
   }
   const out=[];
@@ -3756,7 +3756,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
   
 
---- vocab #42 @ 2602011 ---
+--- vocab #42 @ 2602070 ---
 onst out=[];
   scenarios.forEach((sc,i)=>{
     const stem=String(i+1).padStart(3,'0');
@@ -3810,7 +3810,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(it
 
---- vocab #43 @ 2602118 ---
+--- vocab #43 @ 2602177 ---
 n.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'(      )');
     const select=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'( because / if / when )');
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'because':'if');
@@ -3862,7 +3862,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
     const key=item.category
 
---- vocab #44 @ 2602239 ---
+--- vocab #44 @ 2602298 ---
 'i'),'( because / if / when )');
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'because':'if');
     const wrongSentence=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),m=>m[0]===m[0].toUpperCase()?wrong[0].toUpperCase()+wrong.slice(1):wrong);
@@ -3915,7 +3915,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if((counts.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=S
 
---- vocab #45 @ 2602343 ---
+--- vocab #45 @ 2602402 ---
 );
     const wrongSentence=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),m=>m[0]===m[0].toUpperCase()?wrong[0].toUpperCase()+wrong.slice(1):wrong);
     const clean=sc.en.replace(/[.,]/g,'').split(/\s+/);
@@ -3969,7 +3969,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if(seenText.has(textKey)) continue;
     seenText.add
 
---- vocab #46 @ 2602480 ---
+--- vocab #46 @ 2602539 ---
 ice(1):wrong);
     const clean=sc.en.replace(/[.,]/g,'').split(/\s+/);
     const shift=(i%Math.max(1,clean.length-1))+1;
@@ -4028,7 +4028,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
 }
 // ---- END VOCAB_
 
---- vocab #47 @ 2602508 ---
+--- vocab #47 @ 2602567 ---
 an=sc.en.replace(/[.,]/g,'').split(/\s+/);
     const shift=(i%Math.max(1,clean.length-1))+1;
     const scrambled=clean.slice(shift).concat(clean.slice(0,shift)).join(' / ');
@@ -4088,7 +4088,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
 
 funct
 
---- vocab #48 @ 2602540 ---
+--- vocab #48 @ 2602599 ---
 it(/\s+/);
     const shift=(i%Math.max(1,clean.length-1))+1;
     const scrambled=clean.slice(shift).concat(clean.slice(0,shift)).join(' / ');
@@ -4148,7 +4148,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
 
 function baseFiltered(overrideMode) {
 
---- vocab #49 @ 2602663 ---
+--- vocab #49 @ 2602722 ---
 ift)).join(' / ');
     out.push(vocabFallbackItem('中3','接続詞','空所補充','CONJ-FILL-'+stem,blank+' 「'+sc.hint+'」に合う接続詞を書きなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','選択','CONJ-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
@@ -4210,7 +4210,7 @@ function baseFiltered(overrideMode) {
   const categories = selectedCategories();
   const types 
 
---- vocab #50 @ 2602814 ---
+--- vocab #50 @ 2602873 ---
 FallbackItem('中3','接続詞','選択','CONJ-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
     out.push(vocabFallbackItem('中3','接続詞','間違い直し','CONJ-FIX-'+stem,wrongSentence+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
@@ -4362,7 +4362,7 @@ const grammarChronology = {
       '進行形':'__start__',
       '命令
 
---- vocabulary #2 @ 2595112 ---
+--- vocabulary #2 @ 2595171 ---
 n|done)/i.test(both)) return false;
   if (/Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/.test(both)) return false;
   if (/\b(?:You|We|They)\s+was\b/i.test(both)) return false;
@@ -4881,7 +4881,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -4910,8 +4911,6 @@ function learnedGrammarStages(textbook=currentTextbook(), grade=currentGrade(), 
   const currentIdx = grammarChronologySectionIndex(textbook, grade, section);
   if (currentIdx < 0) return [];
   return all.filter(stage => Object.prototype.hasOwnProperty.call(spec, stage) && currentIdx >= grammarChronologyAnchorIndex(textbook, grade, spec[stage]));
-}
-window.__mikamiGrammarChronologyVersion = GRAMMAR_CHRONO
 
 --- grammar #7 @ 2586121 ---
 :'Unit 1',
@@ -4950,7 +4949,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -4981,15 +4981,10 @@ function learnedGrammarStages(textbook=currentTextbook(), grade=currentGrade(), 
   return all.filter(stage => Object.prototype.hasOwnProperty.call(spec, stage) && currentIdx >= grammarChronologyAnchorIndex(textbook, grade, spec[stage]));
 }
 window.__mikamiGrammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
-window.__mikamiGrammarChronologySources = grammarChronologySources;
-window.__mikamiGrammarChronology = grammarChrono
+window.__mikamiGrammarChronologySources = grammarChronolo
 
---- grammar #8 @ 2586269 ---
-null,
-      '不定詞②':'Unit 5'
-    },
-    '中3': {
-      '英語の語順':'__start__',
+--- grammar #8 @ 2586328 ---
+':'__start__',
       'be動詞と一般動詞（現在形）':'__start__',
       'be動詞と一般動詞（過去形）':'__start__',
       '疑問詞':'__start__',
@@ -5016,7 +5011,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5054,9 +5050,8 @@ window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 function renderStageOptions(preserveSelection = true) {
   const allStages = subje
 
---- grammar #9 @ 2586346 ---
-   'be動詞と一般動詞（現在形）':'__start__',
-      'be動詞と一般動詞（過去形）':'__start__',
+--- grammar #9 @ 2586405 ---
+start__',
       '疑問詞':'__start__',
       '人称代名詞':'__start__',
       '進行形':'__start__',
@@ -5081,7 +5076,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5120,10 +5116,8 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   const exist
 
---- grammar #10 @ 2586482 ---
-start__',
-      '命令文，there is ～ の文':'__start__',
-      '未来の文':'__start__',
+--- grammar #10 @ 2586541 ---
+文':'__start__',
       '助動詞':'__start__',
       '接続詞':'__start__',
       '不定詞①，動名詞':'__start__',
@@ -5143,7 +5137,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5183,10 +5178,8 @@ function renderStageOptions(preserveSelection = true) {
   const existing = new Map(Array.from(document.querySelectorAll('input[data-stage]')).map(x => [x.value, x.checked]));
   const stages = currentSubjec
 
---- grammar #11 @ 2586546 ---
-_start__',
-      '助動詞':'__start__',
-      '接続詞':'__start__',
+--- grammar #11 @ 2586605 ---
+,
       '不定詞①，動名詞':'__start__',
       '比較':'__start__',
       '文型':'Unit 1',
@@ -5204,7 +5197,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5245,10 +5239,8 @@ function renderStageOptions(preserveSelection = true) {
   const stages = currentSubject() === '英語' ? learnedGrammarStages() : allStages;
   el('stageAr
 
---- grammar #12 @ 2586594 ---
-'__start__',
-      '不定詞①，動名詞':'__start__',
-      '比較':'__start__',
+--- grammar #12 @ 2586653 ---
+art__',
       '文型':'Unit 1',
       '受動態':'__start__',
       '現在完了形（完了・経験）':'Unit 1',
@@ -5264,7 +5256,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5306,10 +5299,8 @@ function renderStageOptions(preserveSelection = true) {
   el('stageArea').innerHTML = stages.map(s => {
     const che
 
---- grammar #13 @ 2586764 ---
-'Unit 2',
-      '不定詞②':'Unit 3',
-      '分詞と間接疑問文':'Unit 4',
+--- grammar #13 @ 2586823 ---
+
       '関係代名詞':'Unit 5',
       '仮定法':'Unit 6'
     }
@@ -5319,7 +5310,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5363,11 +5355,10 @@ function renderStageOptions(preserveSelection = true) {
     return '<label class="ck">
 <input type="checkbox" data-stage value="' + s + '" ' + (checked ? 'ch
 
---- grammar #14 @ 2586958 ---
-e('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
-}
-function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+--- grammar #14 @ 2587017 ---
+ion grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5416,9 +5407,10 @@ function renderStageOptions(preserveSelection = true) {
     el('stageArea').dataset.grammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
     el('st
 
---- grammar #15 @ 2587023 ---
-ammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+--- grammar #15 @ 2587082 ---
+urrentGrade()) {
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5468,8 +5460,8 @@ function renderStageOptions(preserveSelection = true) {
     el('stageArea').dataset.learnedGrammarCount = String(stages.length);
   
 
---- grammar #16 @ 2587115 ---
-sections?.[textbook] || {})[grade] || []);
+--- grammar #16 @ 2587174 ---
+tions?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -5523,7 +5515,7 @@ function renderStageOptions(preserveSelection = true) {
 
 function render
 
---- grammar #17 @ 2587241 ---
+--- grammar #17 @ 2587300 ---
 ns = grammarChronologySections(textbook, grade);
   const exact = sections.indexOf(section);
   if (exact >= 0) return exact;
@@ -5577,7 +5569,7 @@ function renderTypeOptions() {
   const types = subjectConfig[currentSubject()].types;
   el('typeArea').innerHTML = types.map(t => `<label cla
 
---- grammar #18 @ 2587426 ---
+--- grammar #18 @ 2587485 ---
 ions.findIndex(x => grammarChronologyKey(x) === target);
 }
 function grammarChronologyAnchorIndex(textbook, grade, anchor) {
@@ -5633,7 +5625,7 @@ function renderTypeOptions() {
 function selectedValues(selector) {
   return Array.from(document.querySelectorAll
 
---- grammar #19 @ 2587493 ---
+--- grammar #19 @ 2587552 ---
  grammarChronologyAnchorIndex(textbook, grade, anchor) {
   if (anchor === '__start__') return 0;
   if (anchor == null) return Number.POSITIVE_INFINITY;
@@ -5690,7 +5682,7 @@ function selectedValues(selector) {
 
 function selectedCat
 
---- grammar #20 @ 2587679 ---
+--- grammar #20 @ 2587738 ---
 gySections(textbook, grade);
   const targets = Array.isArray(anchor) ? anchor : [anchor];
   let best = Number.POSITIVE_INFINITY;
@@ -5748,7 +5740,7 @@ function selectedCategories() {
   const map = subjectConfig[currentSubject()].stageMap[currentGrade()] || {};
   const s
 
---- grammar #21 @ 2587757 ---
+--- grammar #21 @ 2587816 ---
 : [anchor];
   let best = Number.POSITIVE_INFINITY;
   for (const raw of targets) {
@@ -5806,7 +5798,7 @@ function selectedCategories() {
   const set = new Set();
   stages.forEach(stage => (map[stage] || [stage]).forEach(c =>
 
---- grammar #22 @ 2587784 ---
+--- grammar #22 @ 2587843 ---
 mber.POSITIVE_INFINITY;
   for (const raw of targets) {
     const target = grammarChronologyKey(raw);
@@ -5864,7 +5856,7 @@ function selectedCategories() {
   stages.forEach(stage => (map[stage] || [stage]).forEach(c => set.add(c)));
   return Arr
 
---- grammar #23 @ 2587827 ---
+--- grammar #23 @ 2587886 ---
  targets) {
     const target = grammarChronologyKey(raw);
     let idx = sections.findIndex(x => grammarChronologyKey(x).startsWith(target));
@@ -5924,7 +5916,7 @@ function selectedCategories() {
 
 function passesVocab(item,
 
---- grammar #24 @ 2587854 ---
+--- grammar #24 @ 2587913 ---
 t = grammarChronologyKey(raw);
     let idx = sections.findIndex(x => grammarChronologyKey(x).startsWith(target));
     if (idx < 0) idx = sections.findIndex(x => grammarChronologyKey(x).includes(target));
@@ -5984,7 +5976,7 @@ function selectedCategories() {
 function passesVocab(item, overrideMode) {
   if (item
 
---- grammar #25 @ 2587895 ---
+--- grammar #25 @ 2587954 ---
 x = sections.findIndex(x => grammarChronologyKey(x).startsWith(target));
     if (idx < 0) idx = sections.findIndex(x => grammarChronologyKey(x).includes(target));
     if (idx >= 0) best = Math.min(best, idx);
@@ -6044,7 +6036,7 @@ function passesVocab(item, overrideMode) {
   if (item.subject !== '英語') return true;
   if (ite
 
---- grammar #26 @ 2587915 ---
+--- grammar #26 @ 2587974 ---
 ex(x => grammarChronologyKey(x).startsWith(target));
     if (idx < 0) idx = sections.findIndex(x => grammarChronologyKey(x).includes(target));
     if (idx >= 0) best = Math.min(best, idx);
@@ -6104,7 +6096,7 @@ function passesVocab(item, overrideMode) {
   if (item.subject !== '英語') return true;
   if (item._vocabFallback ===
 
---- grammar #27 @ 2587956 ---
+--- grammar #27 @ 2588015 ---
 h(target));
     if (idx < 0) idx = sections.findIndex(x => grammarChronologyKey(x).includes(target));
     if (idx >= 0) best = Math.min(best, idx);
@@ -6165,7 +6157,7 @@ function passesVocab(item, overrideMode) {
   if (item._vocabFallback === true) return true;
   const mode = overri
 
---- grammar #28 @ 2587979 ---
+--- grammar #28 @ 2588038 ---
  < 0) idx = sections.findIndex(x => grammarChronologyKey(x).includes(target));
     if (idx >= 0) best = Math.min(best, idx);
   }
@@ -6225,7 +6217,7 @@ function passesVocab(item, overrideMode) {
   if (item._vocabFallback === true) return true;
   const mode = overrideMode || (useVocabGate
 
---- grammar #29 @ 2588311 ---
+--- grammar #29 @ 2588370 ---
   const spec = grammarChronology?.[textbook]?.[grade] || {};
   const currentIdx = grammarChronologySectionIndex(textbook, grade, section);
   if (currentIdx < 0) return [];
@@ -6285,7 +6277,7 @@ function passesVocab(item, overrideMode) {
   if (minIdx === -2) return true;
   if (!Number.isInteger(minIdx) 
 
---- grammar #30 @ 2588700 ---
+--- grammar #30 @ 2588759 ---
 GY_VERSION;
 window.__mikamiGrammarChronologySources = grammarChronologySources;
 window.__mikamiGrammarChronology = grammarChronology;
@@ -6349,7 +6341,7 @@ function selectedStageCeiling() {
   const stages = subjectConfig['英語'].stagesByGrade[currentGrade()] || [];
   const selected = selectedVa
 
---- grammar #31 @ 2588727 ---
+--- grammar #31 @ 2588786 ---
 GrammarChronologySources = grammarChronologySources;
 window.__mikamiGrammarChronology = grammarChronology;
 window.__mikamiLearnedGrammarStages = learnedGrammarStages;
@@ -6413,7 +6405,7 @@ function selectedStageCeiling() {
   const selected = selectedValues('input[data-stage]');
 
 
---- grammar #32 @ 2588790 ---
+--- grammar #32 @ 2588849 ---
 ikamiGrammarChronology = grammarChronology;
 window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 
@@ -6477,7 +6469,7 @@ function selectedStageCeiling() {
   if (!selected.length) return -1;
   return selected.reduce((ma
 
---- grammar #33 @ 2588859 ---
+--- grammar #33 @ 2588918 ---
 mmarStages = learnedGrammarStages;
 
 function renderStageOptions(preserveSelection = true) {
@@ -6543,7 +6535,7 @@ function selectedStageCeiling() {
 
 function stageInde
 
---- grammar #34 @ 2590268 ---
+--- grammar #34 @ 2590327 ---
 if (!stages.length) return [];
   const map = subjectConfig[currentSubject()].stageMap[currentGrade()] || {};
   const set = new Set();
@@ -6609,7 +6601,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndexByNameContains('助動詞','can'));
   if (/\bto\s+(?:be|have|do|play|study|read|write|watch|v
 
---- grammar #35 @ 2591297 ---
+--- grammar #35 @ 2591356 ---
 TEGER;
   const stages = subjectConfig['英語'].stagesByGrade[currentGrade()] || [];
   const selected = selectedValues('input[data-stage]');
@@ -6657,7 +6649,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(?:have|has) been [A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('現在完了形（継続）'));
   if (/\b(?:who|which|that)\s+(?:is|are|was|were|has|have|can|w
 
---- grammar #36 @ 2591629 ---
+--- grammar #36 @ 2591688 ---
 語'].stagesByGrade[currentGrade()] || [];
   for (let i = 0; i < stages.length; i++) {
     const s = stages[i];
@@ -6703,7 +6695,7 @@ function requiredGrammarStageIndex(item) {
 function passesPrereqGrammar(item) {
   
 
---- grammar #37 @ 2593418 ---
+--- grammar #37 @ 2593477 ---
 dexByNameContains('比較'));
   if (/\b(am|is|are|was|were)\s+(?:made|used|written|spoken|known|called|played|studied|visited|built|seen|loved)\b/i.test(text)) bump(stageIndexByNameContains('受動態'));
   if (/\b(?:have|has)\s+(?:ever\s+|never\s+|already\s+|just\s+)?(?:been|visited|finished|lost|lived|studied|seen|done|written|read|known|used|played|gone|made|eaten|had)\b/i.test(text)) bump(stageIndexByNameContains('現在完了形'));
@@ -6749,7 +6741,7 @@ function passesQualityGate(item) {
   if (item.category === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
   if (
 
---- grammar #38 @ 2593578 ---
+--- grammar #38 @ 2593637 ---
 (stageIndexByNameContains('受動態'));
   if (/\b(?:have|has)\s+(?:ever\s+|never\s+|already\s+|just\s+)?(?:been|visited|finished|lost|lived|studied|seen|done|written|read|known|used|played|gone|made|eaten|had)\b/i.test(text)) bump(stageIndexByNameContains('現在完了形'));
   if (/\b(?:have|has) been [A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('現在完了形（継続）'));
@@ -6795,7 +6787,7 @@ function passesQualityGate(item) {
   if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
   const infinitiveBlank = item.type === '空所補充' && /^to$/i.t
 
---- grammar #39 @ 2595070 ---
+--- grammar #39 @ 2595129 ---
 sited|been|finished|lost|lived|studied|seen|done)/i.test(both)) return false;
   if (/Did You ne\b|Do You\b|Do They\b|Does She\b|Does He\b/.test(both)) return false;
   if (/\b(?:You|We|They)\s+was\b/i.test(both)) return false;
@@ -6832,7 +6824,7 @@ let _vocabFallbackBankCache = null;
 
 const VOCAB_FALLBACK_SAFE_BASE = new Set(String.raw`I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about i
 
---- grammar #40 @ 2596033 ---
+--- grammar #40 @ 2596092 ---
 through.
   if (item.category === '動名詞' && !/[A-Za-z]+ing\b/.test(both)) return false;
   if (item.category === '比較' && !/\bthan\b|\bas\s+\w+\s+as\b|\bmost\b|\w+est\b/i.test(both)) return false;
@@ -6868,7 +6860,7 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-3)); out.add(t.s
 
---- grammar #41 @ 2602862 ---
+--- grammar #41 @ 2602921 ---
 ,select+' 正しい接続詞を選びなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
     out.push(vocabFallbackItem('中3','接続詞','間違い直し','CONJ-FIX-'+stem,wrongSentence+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
@@ -6932,7 +6924,7 @@ function baseFiltered(overrideMode) {
     if (item.grade !== grade) return false;
     if (categories.length && !cate
 
---- grammar #42 @ 2603806 ---
+--- grammar #42 @ 2603865 ---
 });
   return _vocabFallbackBankCache;
 }
@@ -7003,7 +6995,7 @@ function updateBuilderStatus(candidates) {
   if (subj === '英語') {
     msg += ' / 教科
 
---- grammar #43 @ 2604858 ---
+--- grammar #43 @ 2604917 ---
 s.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
@@ -8453,7 +8445,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8485,8 +8478,7 @@ function learnedGrammarStages(textbook=currentTextbook(), grade=currentGrade(), 
 }
 window.__mikamiGrammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
 window.__mikamiGrammarChronologySources = grammarChronologySources;
-window.__mikamiGrammarChronology = grammarChronology;
-window.__mikamiLearne
+window.__mikamiG
 
 --- textbook #23 @ 2586163 ---
 （call A B，make A B）':'Unit 1',
@@ -8523,7 +8515,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8555,13 +8548,10 @@ function learnedGrammarStages(textbook=currentTextbook(), grade=currentGrade(), 
 }
 window.__mikamiGrammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
 window.__mikamiGrammarChronologySources = grammarChronologySources;
-window.__mikamiGrammarChronology = grammarChronology;
-window.__mikamiLearnedGrammarStages =
+window.__mikamiGrammarChronology
 
---- textbook #24 @ 2586226 ---
-了形（完了・経験）':null,
-      '現在完了形（継続），現在完了進行形':null,
-      '不定詞②':'Unit 5'
+--- textbook #24 @ 2586282 ---
+不定詞②':'Unit 5'
     },
     '中3': {
       '英語の語順':'__start__',
@@ -8591,7 +8581,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8626,13 +8617,10 @@ window.__mikamiGrammarChronologySources = grammarChronologySources;
 window.__mikamiGrammarChronology = grammarChronology;
 window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 
-function renderStageOptions(preserveSel
+function renderStageOptions(preserve
 
---- textbook #25 @ 2586299 ---
-  },
-    '中3': {
-      '英語の語順':'__start__',
-      'be動詞と一般動詞（現在形）':'__start__',
+--- textbook #25 @ 2586358 ---
+詞（現在形）':'__start__',
       'be動詞と一般動詞（過去形）':'__start__',
       '疑問詞':'__start__',
       '人称代名詞':'__start__',
@@ -8658,7 +8646,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8696,10 +8685,8 @@ window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stag
 
---- textbook #26 @ 2586372 ---
-rt__',
-      'be動詞と一般動詞（過去形）':'__start__',
-      '疑問詞':'__start__',
+--- textbook #26 @ 2586431 ---
+tart__',
       '人称代名詞':'__start__',
       '進行形':'__start__',
       '命令文，there is ～ の文':'__start__',
@@ -8723,7 +8710,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8762,10 +8750,7 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   const existing = new Map(Array.from(do
 
---- textbook #27 @ 2586623 ---
-:'__start__',
-      '比較':'__start__',
-      '文型':'Unit 1',
+--- textbook #27 @ 2586682 ---
       '受動態':'__start__',
       '現在完了形（完了・経験）':'Unit 1',
       '現在完了形（継続），現在完了進行形':'Unit 2',
@@ -8780,7 +8765,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8822,11 +8808,8 @@ function renderStageOptions(preserveSelection = true) {
   el('stageArea').innerHTML = stages.map(s => {
     const checked = preserveSelection && ex
 
---- textbook #28 @ 2586790 ---
-it 3',
-      '分詞と間接疑問文':'Unit 4',
-      '関係代名詞':'Unit 5',
-      '仮定法':'Unit 6'
+--- textbook #28 @ 2586849 ---
+     '仮定法':'Unit 6'
     }
   }
 };
@@ -8834,7 +8817,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -8878,7 +8862,7 @@ function renderStageOptions(preserveSelection = true) {
     return '<label class="ck">
 <input type="checkbox" data-stage value="' + s + '" ' + (checked ? 'checked' : '') + '> <span>' +
 
---- textbook #29 @ 2587255 ---
+--- textbook #29 @ 2587314 ---
 ronologySections(textbook, grade);
   const exact = sections.indexOf(section);
   if (exact >= 0) return exact;
@@ -8933,7 +8917,7 @@ function renderTypeOptions() {
   el('typeArea').innerHTML = types.map(t => `<label class="ck">
 <input 
 
---- textbook #30 @ 2587271 ---
+--- textbook #30 @ 2587330 ---
 (textbook, grade);
   const exact = sections.indexOf(section);
   if (exact >= 0) return exact;
@@ -8988,7 +8972,7 @@ function renderTypeOptions() {
   el('typeArea').innerHTML = types.map(t => `<label class="ck">
 <input type="checkbox" 
 
---- textbook #31 @ 2587446 ---
+--- textbook #31 @ 2587505 ---
 grammarChronologyKey(x) === target);
 }
 function grammarChronologyAnchorIndex(textbook, grade, anchor) {
@@ -9044,7 +9028,7 @@ function renderTypeOptions() {
 function selectedValues(selector) {
   return Array.from(document.querySelectorAll(selector + ':checked
 
---- textbook #32 @ 2587523 ---
+--- textbook #32 @ 2587582 ---
 textbook, grade, anchor) {
   if (anchor === '__start__') return 0;
   if (anchor == null) return Number.POSITIVE_INFINITY;
@@ -9102,7 +9086,7 @@ function selectedValues(selector) {
 function selectedCategories() {
   const stages = se
 
---- textbook #33 @ 2587708 ---
+--- textbook #33 @ 2587767 ---
   const targets = Array.isArray(anchor) ? anchor : [anchor];
   let best = Number.POSITIVE_INFINITY;
   for (const raw of targets) {
@@ -9160,7 +9144,7 @@ function selectedCategories() {
   const set = new Set();
   stages.forEa
 
---- textbook #34 @ 2589963 ---
+--- textbook #34 @ 2590022 ---
 type="checkbox" data-type value="${t}" checked> <span>${t}</span>
 </label>`).join('');
 }
@@ -9233,7 +9217,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za
 
---- textbook #35 @ 2605627 ---
+--- textbook #35 @ 2605686 ---
 s.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -9300,7 +9284,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: 
 
---- textbook #36 @ 2608890 ---
+--- textbook #36 @ 2608949 ---
 size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -9360,7 +9344,7 @@ function refreshList() {
 function syncListSelectors() {
   el('listSubject').value = currentSubjec
 
---- textbook #37 @ 2611174 ---
+--- textbook #37 @ 2611233 ---
 nt = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -9416,7 +9400,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]
 
---- textbook #38 @ 2612995 ---
+--- textbook #38 @ 2613054 ---
 dEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
   document.addEventListener('change', evt => {
@@ -11336,7 +11320,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11368,13 +11353,10 @@ function learnedGrammarStages(textbook=currentTextbook(), grade=currentGrade(), 
 }
 window.__mikamiGrammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
 window.__mikamiGrammarChronologySources = grammarChronologySources;
-window.__mikamiGrammarChronology = grammarChronology;
-window.__mi
+window
 
---- section #28 @ 2586215 ---
-
-      '現在完了形（完了・経験）':null,
-      '現在完了形（継続），現在完了進行形':null,
+--- section #28 @ 2586271 ---
+ll,
       '不定詞②':'Unit 5'
     },
     '中3': {
@@ -11405,7 +11387,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11440,14 +11423,10 @@ window.__mikamiGrammarChronologySources = grammarChronologySources;
 window.__mikamiGrammarChronology = grammarChronology;
 window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 
-function renderStageOptions
+function renderStageOpti
 
---- section #29 @ 2586286 ---
-':'Unit 5'
-    },
-    '中3': {
-      '英語の語順':'__start__',
-      'be動詞と一般動詞（現在形）':'__start__',
+--- section #29 @ 2586345 ---
+    'be動詞と一般動詞（現在形）':'__start__',
       'be動詞と一般動詞（過去形）':'__start__',
       '疑問詞':'__start__',
       '人称代名詞':'__start__',
@@ -11473,7 +11452,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11511,9 +11491,8 @@ window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentS
 
---- section #30 @ 2586316 ---
-      '英語の語順':'__start__',
-      'be動詞と一般動詞（現在形）':'__start__',
+--- section #30 @ 2586375 ---
+_',
       'be動詞と一般動詞（過去形）':'__start__',
       '疑問詞':'__start__',
       '人称代名詞':'__start__',
@@ -11539,7 +11518,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11577,10 +11557,8 @@ window.__mikamiLearnedGrammarStages = learnedGrammarStages;
 function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[curren
 
---- section #31 @ 2586335 ---
-art__',
-      'be動詞と一般動詞（現在形）':'__start__',
-      'be動詞と一般動詞（過去形）':'__start__',
+--- section #31 @ 2586394 ---
+詞（過去形）':'__start__',
       '疑問詞':'__start__',
       '人称代名詞':'__start__',
       '進行形':'__start__',
@@ -11605,7 +11583,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11644,10 +11623,8 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   
 
---- section #32 @ 2586363 ---
-）':'__start__',
-      'be動詞と一般動詞（過去形）':'__start__',
-      '疑問詞':'__start__',
+--- section #32 @ 2586422 ---
+疑問詞':'__start__',
       '人称代名詞':'__start__',
       '進行形':'__start__',
       '命令文，there is ～ の文':'__start__',
@@ -11671,7 +11648,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11710,10 +11688,8 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   const existing = new Map(Arr
 
---- section #33 @ 2586406 ---
-tart__',
-      '疑問詞':'__start__',
-      '人称代名詞':'__start__',
+--- section #33 @ 2586465 ---
+,
       '進行形':'__start__',
       '命令文，there is ～ の文':'__start__',
       '未来の文':'__start__',
@@ -11736,7 +11712,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11775,10 +11752,8 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   const existing = new Map(Array.from(document.querySelectorAll('input[da
 
---- section #34 @ 2586423 ---
-問詞':'__start__',
-      '人称代名詞':'__start__',
-      '進行形':'__start__',
+--- section #34 @ 2586482 ---
+start__',
       '命令文，there is ～ の文':'__start__',
       '未来の文':'__start__',
       '助動詞':'__start__',
@@ -11800,7 +11775,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11839,10 +11815,8 @@ function renderStageOptions(preserveSelection = true) {
   const allStages = subjectConfig[currentSubject()].stagesByGrade[currentGrade()] || [];
   const existing = new Map(Array.from(document.querySelectorAll('input[data-stage]')).map(
 
---- section #35 @ 2586503 ---
-there is ～ の文':'__start__',
-      '未来の文':'__start__',
-      '助動詞':'__start__',
+--- section #35 @ 2586562 ---
+ '助動詞':'__start__',
       '接続詞':'__start__',
       '不定詞①，動名詞':'__start__',
       '比較':'__start__',
@@ -11861,7 +11835,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11901,10 +11876,8 @@ function renderStageOptions(preserveSelection = true) {
   const existing = new Map(Array.from(document.querySelectorAll('input[data-stage]')).map(x => [x.value, x.checked]));
   const stages = currentSubject() === '英語' ? learne
 
---- section #36 @ 2586522 ---
-tart__',
-      '未来の文':'__start__',
-      '助動詞':'__start__',
+--- section #36 @ 2586581 ---
+
       '接続詞':'__start__',
       '不定詞①，動名詞':'__start__',
       '比較':'__start__',
@@ -11923,7 +11896,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -11963,10 +11937,8 @@ function renderStageOptions(preserveSelection = true) {
   const existing = new Map(Array.from(document.querySelectorAll('input[data-stage]')).map(x => [x.value, x.checked]));
   const stages = currentSubject() === '英語' ? learnedGrammarStages() : 
 
---- section #37 @ 2586753 ---
-），現在完了進行形':'Unit 2',
-      '不定詞②':'Unit 3',
-      '分詞と間接疑問文':'Unit 4',
+--- section #37 @ 2586812 ---
+':'Unit 4',
       '関係代名詞':'Unit 5',
       '仮定法':'Unit 6'
     }
@@ -11976,7 +11948,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -12020,10 +11993,8 @@ function renderStageOptions(preserveSelection = true) {
     return '<label class="ck">
 <input type="checkbox" data-stage value="' + s + '" ' + (ch
 
---- section #38 @ 2586781 ---
-不定詞②':'Unit 3',
-      '分詞と間接疑問文':'Unit 4',
-      '関係代名詞':'Unit 5',
+--- section #38 @ 2586840 ---
+nit 5',
       '仮定法':'Unit 6'
     }
   }
@@ -12032,7 +12003,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -12076,11 +12048,10 @@ function renderStageOptions(preserveSelection = true) {
     return '<label class="ck">
 <input type="checkbox" data-stage value="' + s + '" ' + (checked ? 'checked' : '') + '>
 
---- section #39 @ 2586999 ---
-werCase();
-}
-function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+--- section #39 @ 2587058 ---
+rrentTextbook(), grade=currentGrade()) {
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -12129,9 +12100,9 @@ function renderStageOptions(preserveSelection = true) {
     el('stageArea').dataset.grammarChronologyVersion = GRAMMAR_CHRONOLOGY_VERSION;
     el('stageArea').dataset.learnedGrammarCount = S
 
---- section #40 @ 2587091 ---
-de()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+--- section #40 @ 2587150 ---
+'');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);
@@ -12181,7 +12152,7 @@ function renderStageOptions(preserveSelection = true) {
     el('stageArea').dataset.learnedGrammarCount = String(stages.length);
     el('stageArea').dataset.allGrammarCount = String(allStages.length)
 
---- section #41 @ 2587305 ---
+--- section #41 @ 2587364 ---
  sections.indexOf(section);
   if (exact >= 0) return exact;
   const target = grammarChronologyKey(section);
@@ -12235,7 +12206,7 @@ function renderTypeOptions() {
   el('typeArea').innerHTML = types.map(t => `<label class="ck">
 <input type="checkbox" data-type value="${t}" checked> <
 
---- section #42 @ 2587317 ---
+--- section #42 @ 2587376 ---
 dexOf(section);
   if (exact >= 0) return exact;
   const target = grammarChronologyKey(section);
@@ -12289,7 +12260,7 @@ function renderTypeOptions() {
   el('typeArea').innerHTML = types.map(t => `<label class="ck">
 <input type="checkbox" data-type value="${t}" checked> <span>${t}</s
 
---- section #43 @ 2587510 ---
+--- section #43 @ 2587569 ---
 yAnchorIndex(textbook, grade, anchor) {
   if (anchor === '__start__') return 0;
   if (anchor == null) return Number.POSITIVE_INFINITY;
@@ -12347,7 +12318,7 @@ function selectedValues(selector) {
 function selectedCategories() {
   con
 
---- section #44 @ 2587540 ---
+--- section #44 @ 2587599 ---
 anchor) {
   if (anchor === '__start__') return 0;
   if (anchor == null) return Number.POSITIVE_INFINITY;
@@ -12405,7 +12376,7 @@ function selectedValues(selector) {
 function selectedCategories() {
   const stages = selectedValues('in
 
---- section #45 @ 2590181 ---
+--- section #45 @ 2590240 ---
 unction selectedCategories() {
   const stages = selectedValues('input[data-stage]');
   if (!stages.length) return [];
@@ -12472,7 +12443,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndex
 
---- section #46 @ 2605662 ---
+--- section #46 @ 2605721 ---
 pe)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -12539,7 +12510,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: Math.ceil(pageQuestions.length / 2
 
---- section #47 @ 2608747 ---
+--- section #47 @ 2608806 ---
 n;overflow:hidden;page-break-after:always;break-after:page}
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
@@ -12593,7 +12564,7 @@ function refreshList() {
 <td>${item.category}</td>
 <td>${ite
 
---- section #48 @ 2608963 ---
+--- section #48 @ 2609022 ---
 ;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -12657,7 +12628,7 @@ function syncListSelectors() {
 
 function wireEvents() 
 
---- section #49 @ 2609132 ---
+--- section #49 @ 2609191 ---
 splay:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
   .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
   .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
@@ -12721,7 +12692,7 @@ function wireEvents() {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); u
 
---- section #50 @ 2610851 ---
+--- section #50 @ 2610910 ---
 bject === '英語' && item.grade === currentGrade() && !passesVocab(item, vocabMode)) return false;
     if (kw) {
       const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
@@ -12776,7 +12747,7 @@ function wireEvents() {
   if (el('importJsonBtn')) el('importJsonBtn').addEventListener('click', () => el('importJsonInput').click());
   if (el('i
 
-===== grade : 10590 hits =====
+===== grade : 10592 hits =====
 --- grade #1 @ 4559 ---
 ">問題作成・問題一覧・問題プリント印刷のためのアプリです。答案写真の分析、配布資料、面談資料、印刷用レポートは「みかみ塾 答案分析GPT」で作成します。</div>
   <div class="btns" style="margin-top:12px">
@@ -13403,7 +13374,7 @@ function renderTabs() {
 function renderTextbookOptions() {
   el('textbookSelect').innerHTML = meta.textbooks.map(tb => `<option>${t
 
---- filter #3 @ 2587596 ---
+--- filter #3 @ 2587655 ---
 anchor == null) return Number.POSITIVE_INFINITY;
   const sections = grammarChronologySections(textbook, grade);
   const targets = Array.isArray(anchor) ? anchor : [anchor];
@@ -13461,7 +13432,7 @@ function selectedCategories() {
   if (!stages.length) return [];
   c
 
---- filter #4 @ 2602690 ---
+--- filter #4 @ 2602749 ---
 push(vocabFallbackItem('中3','接続詞','空所補充','CONJ-FILL-'+stem,blank+' 「'+sc.hint+'」に合う接続詞を書きなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','選択','CONJ-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
     out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
@@ -13522,7 +13493,7 @@ function baseFiltered(overrideMode) {
   const categories = selectedCategories();
   const types = selectedValues('input[data
 
---- filter #5 @ 2604321 ---
+--- filter #5 @ 2604380 ---
 s.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
@@ -13592,7 +13563,7 @@ function renderQuestions() {
     currentQuestions = [];
     el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。
 
---- filter #6 @ 2604529 ---
+--- filter #6 @ 2604588 ---
  if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
@@ -13661,7 +13632,7 @@ function renderQuestions() {
   currentQuestions = picked;
   el('questionPreview').classList.toggle(
 
---- filter #7 @ 2605371 ---
+--- filter #7 @ 2605430 ---
 electedValues('input[data-type]');
   const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
@@ -13729,7 +13700,7 @@ function printQuestions() {
   const pages = [];
   for (let startIndex = 0; sta
 
---- filter #8 @ 2605966 ---
+--- filter #8 @ 2606025 ---
 t a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
@@ -13797,7 +13768,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:
 
---- filter #9 @ 2609793 ---
+--- filter #9 @ 2609852 ---
 tbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div>
 <div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div>
 </section>`).join('')}
@@ -13859,7 +13830,7 @@ function wireEvents() {
   document.addEventListener('change', evt => {
     if (evt.target.ma
 
---- filter #10 @ 2610962 ---
+--- filter #10 @ 2611021 ---
      const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
       if (!hay.includes(kw)) return false;
     }
@@ -13913,7 +13884,7 @@ function wireEvents() {
   if (el('importJsonInput')) el('importJsonInput').addEventListener('change', evt => {
     const file = evt.target.files 
 
---- filter #11 @ 2611151 ---
+--- filter #11 @ 2611210 ---
 'listStatus').textContent = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -13969,7 +13940,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>
 
---- filter #12 @ 2611301 ---
+--- filter #12 @ 2611360 ---
 el('listBody').innerHTML = rows.map(item => `
     <tr>
 <td>${item.id}</td>
@@ -14029,7 +14000,7 @@ renderTypeOptions();
 syncListSelectors();
 wireE
 
---- filter #13 @ 2611425 ---
+--- filter #13 @ 2611484 ---
 {item.category}</td>
 <td>${item.type}</td>
 <td>${item.q}</td>
@@ -14088,7 +14059,7 @@ try {
   if (saved) applyState(JSON.parse(saved));
 } catch (e) {}
 
---- filter #14 @ 2611517 ---
+--- filter #14 @ 2611576 ---
 ('');
 }
 
@@ -14148,7 +14119,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #15 @ 2611669 ---
+--- filter #15 @ 2611728 ---
  {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); updateBuilderStatus(baseFiltered()); });
@@ -14200,7 +14171,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #16 @ 2613256 ---
+--- filter #16 @ 2613315 ---
 t', evt => {
     if (evt.target.closest('input[type=text], textarea')) autoSave();
   });
@@ -14234,7 +14205,7 @@ updateBuilderStatus(baseFiltered());
 </html>
 
 ===== candidate : 8 hits =====
---- candidate #1 @ 2605264 ---
+--- candidate #1 @ 2605323 ---
 rentSubject();
   const grade = currentGrade();
   const categories = selectedCategories();
@@ -14302,7 +14273,7 @@ function printQuestions() {
 <div class="n">Q${index + 1}　${escapeHtml(q.id)}</div>
 <div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div c
 
---- candidate #2 @ 2605548 ---
+--- candidate #2 @ 2605607 ---
 ories.length && !categories.includes(item.category)) return false;
     if (types.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
@@ -14369,7 +14340,7 @@ function printQuestions() {
     pages.push({
       html: pageQuestions.map
 
---- candidate #3 @ 2605787 ---
+--- candidate #3 @ 2605846 ---
     if (!passesQualityGate(item)) return false;
     return true;
   });
@@ -14442,7 +14413,7 @@ function printQuestions() {
 <style>
   @p
 
---- candidate #4 @ 2605949 ---
+--- candidate #4 @ 2606008 ---
 fle(arr) {
   const a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
@@ -14511,7 +14482,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#
 
---- candidate #5 @ 2606000 ---
+--- candidate #5 @ 2606059 ---
 length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
@@ -14579,7 +14550,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:2
 
---- candidate #6 @ 2606020 ---
+--- candidate #6 @ 2606079 ---
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
@@ -14646,7 +14617,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:281mm;display:flex;fl
 
---- candidate #7 @ 2606222 ---
+--- candidate #7 @ 2606281 ---
 de = currentGrade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14707,7 +14678,7 @@ function printQuestions() {
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 a
 
---- candidate #8 @ 2606236 ---
+--- candidate #8 @ 2606295 ---
 ade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14794,6 +14765,7 @@ currentSectionIndex
 currentTextbook
 filter
 grade
+gradeKey
 gradeSelect
 grammar
 grammarChronology
