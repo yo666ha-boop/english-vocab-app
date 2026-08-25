@@ -145,7 +145,8 @@ jobs:
                           page.select_option('#sectionSelect', sec['value'])
                           page.wait_for_timeout(3)
                           rows = []
-                          for st in stages:
+                          section_stages = stage_defs(page)
+                          for st in section_stages:
                               select_only_stage(page, st['index'])
                               page.select_option('#vocabMode', 'off')
                               page.wait_for_timeout(2)
@@ -183,8 +184,8 @@ jobs:
                           })
                           result['summary']['sections_measured'] += 1
                       result['grammar_attrition'][grade][tb] = {
-                          'stage_count': len(stages),
-                          'stages': stages,
+                          'stage_count': len(section_stages),
+                          'stages': section_stages,
                           'sections': attr_sections
                       }
 
