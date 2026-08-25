@@ -455,7 +455,8 @@ function grammarChronologyKey(value) {
   return String(value ?? '').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();
 }
 function grammarChronologySections(textbook=currentTextbook(), grade=currentGrade()) {
-  return ((meta.sections?.[textbook] || {})[grade] || []);
+  const gradeKey = String(grade ?? '').replace('中','');
+  return ((meta.sections?.[textbook] || {})[gradeKey] || []);
 }
 function grammarChronologySectionIndex(textbook, grade, section) {
   const sections = grammarChronologySections(textbook, grade);

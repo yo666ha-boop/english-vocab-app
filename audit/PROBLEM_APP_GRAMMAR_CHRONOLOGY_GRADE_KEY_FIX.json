@@ -1,0 +1,9 @@
+{
+  "fixed_at_utc": "2026-08-25T15:19:12.864Z",
+  "appChanged": true,
+  "installerChanged": true,
+  "defect": "grammar chronology used 中1/中2/中3 directly against meta.sections numeric grade keys 1/2/3",
+  "fix": "normalize currentGrade by removing 中 before meta.sections lookup",
+  "questionIdHardcode": false,
+  "rootIndexModified": false
+}
