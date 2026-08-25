@@ -1,0 +1,4596 @@
+{
+  "generated_at": "2026-08-25T14:32:02.262Z",
+  "source_gap_file": "audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json",
+  "explanation": "This audit classifies mature final-section under-50% categories by passMeta rejection coordinate, problem type, surface tokens, and morphology-normalized lemma candidates. It does not itself whitelist words or hard-code problem IDs.",
+  "records": [
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "現在完了形（完了・経験）",
+      "off": 36,
+      "on": 11,
+      "retention_pct": 30.56,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 36,
+      "accepted_by_final_passmeta": 11,
+      "rejected_by_final_passmeta": 25,
+      "rejection_coordinate_values": {
+        "-1": 25
+      },
+      "rejected_type_counts": {
+        "英作文": 10,
+        "空所補充": 3,
+        "見分け": 6,
+        "間違い直し": 6
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "have",
+          "count": 18
+        },
+        {
+          "value": "already",
+          "count": 14
+        },
+        {
+          "value": "has",
+          "count": 13
+        },
+        {
+          "value": "my",
+          "count": 12
+        },
+        {
+          "value": "i",
+          "count": 8
+        },
+        {
+          "value": "kyoto",
+          "count": 6
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "finished",
+          "count": 5
+        },
+        {
+          "value": "never",
+          "count": 5
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "to",
+          "count": 5
+        },
+        {
+          "value": "visited",
+          "count": 5
+        },
+        {
+          "value": "been",
+          "count": 4
+        },
+        {
+          "value": "book",
+          "count": 4
+        },
+        {
+          "value": "dinner",
+          "count": 4
+        },
+        {
+          "value": "he",
+          "count": 4
+        },
+        {
+          "value": "hokkaido",
+          "count": 4
+        },
+        {
+          "value": "homework",
+          "count": 4
+        },
+        {
+          "value": "key",
+          "count": 4
+        },
+        {
+          "value": "letters",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "their",
+          "count": 4
+        },
+        {
+          "value": "they",
+          "count": 4
+        },
+        {
+          "value": "three",
+          "count": 4
+        },
+        {
+          "value": "times",
+          "count": 4
+        },
+        {
+          "value": "today",
+          "count": 4
+        },
+        {
+          "value": "two",
+          "count": 4
+        },
+        {
+          "value": "done",
+          "count": 3
+        },
+        {
+          "value": "lost",
+          "count": 3
+        },
+        {
+          "value": "twice",
+          "count": 3
+        },
+        {
+          "value": "written",
+          "count": 3
+        },
+        {
+          "value": "read",
+          "count": 2
+        },
+        {
+          "value": "reading",
+          "count": 2
+        },
+        {
+          "value": "the",
+          "count": 2
+        },
+        {
+          "value": "this",
+          "count": 2
+        },
+        {
+          "value": "be",
+          "count": 1
+        },
+        {
+          "value": "do",
+          "count": 1
+        },
+        {
+          "value": "finish",
+          "count": 1
+        },
+        {
+          "value": "lose",
+          "count": 1
+        },
+        {
+          "value": "play",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "have",
+          "count": 31
+        },
+        {
+          "value": "already",
+          "count": 14
+        },
+        {
+          "value": "has",
+          "count": 13
+        },
+        {
+          "value": "my",
+          "count": 12
+        },
+        {
+          "value": "i",
+          "count": 8
+        },
+        {
+          "value": "finish",
+          "count": 6
+        },
+        {
+          "value": "kyoto",
+          "count": 6
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "be",
+          "count": 5
+        },
+        {
+          "value": "finishe",
+          "count": 5
+        },
+        {
+          "value": "finished",
+          "count": 5
+        },
+        {
+          "value": "nev",
+          "count": 5
+        },
+        {
+          "value": "never",
+          "count": 5
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "to",
+          "count": 5
+        },
+        {
+          "value": "visit",
+          "count": 5
+        },
+        {
+          "value": "visite",
+          "count": 5
+        },
+        {
+          "value": "visited",
+          "count": 5
+        },
+        {
+          "value": "been",
+          "count": 4
+        },
+        {
+          "value": "book",
+          "count": 4
+        },
+        {
+          "value": "din",
+          "count": 4
+        },
+        {
+          "value": "dinn",
+          "count": 4
+        },
+        {
+          "value": "dinner",
+          "count": 4
+        },
+        {
+          "value": "do",
+          "count": 4
+        },
+        {
+          "value": "he",
+          "count": 4
+        },
+        {
+          "value": "hokkaido",
+          "count": 4
+        },
+        {
+          "value": "homework",
+          "count": 4
+        },
+        {
+          "value": "key",
+          "count": 4
+        },
+        {
+          "value": "letter",
+          "count": 4
+        },
+        {
+          "value": "letters",
+          "count": 4
+        },
+        {
+          "value": "lose",
+          "count": 4
+        },
+        {
+          "value": "moth",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "read",
+          "count": 4
+        },
+        {
+          "value": "their",
+          "count": 4
+        },
+        {
+          "value": "they",
+          "count": 4
+        },
+        {
+          "value": "thre",
+          "count": 4
+        },
+        {
+          "value": "three",
+          "count": 4
+        },
+        {
+          "value": "tim",
+          "count": 4
+        },
+        {
+          "value": "time",
+          "count": 4
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-PERF-0092",
+          "type": "英作文",
+          "q": "『彼女は京都へ2回行ったことがあります。』を英語で書きなさい。",
+          "a": "She has been to Kyoto twice.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF1-0103",
+          "type": "英作文",
+          "q": "『彼女は京都を2回訪れたことがあります。』を英語で書きなさい。",
+          "a": "She has visited Kyoto twice.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF1-0104",
+          "type": "空所補充",
+          "q": "She (      ) visited Kyoto twice.",
+          "a": "has",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF1-0105",
+          "type": "英作文",
+          "q": "『私たちはすでにこの本を読みました。』を英語で書きなさい。",
+          "a": "We have already read this book.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF1-0106",
+          "type": "空所補充",
+          "q": "We (      ) already read this book.",
+          "a": "have",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0067",
+          "type": "英作文",
+          "q": "『私はもう夕食を食べ終えました。』を英語で書きなさい。",
+          "a": "I have already finished my dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0068",
+          "type": "見分け",
+          "q": "I have already finished my dinner. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Already",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0069",
+          "type": "間違い直し",
+          "q": "I have already finish my dinner. の誤りを直しなさい。",
+          "a": "I have already finished my dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0073",
+          "type": "英作文",
+          "q": "『私たちは京都を3回訪れたことがあります。』を英語で書きなさい。",
+          "a": "We have visited Kyoto three times.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0074",
+          "type": "見分け",
+          "q": "We have visited Kyoto three times. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "経験・完了",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0075",
+          "type": "間違い直し",
+          "q": "We have play tennis three times. の誤りを直しなさい。",
+          "a": "We have visited Kyoto three times.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0079",
+          "type": "英作文",
+          "q": "『母は一度も北海道へ行ったことがありません。』を英語で書きなさい。",
+          "a": "My mother has never been to Hokkaido.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0080",
+          "type": "見分け",
+          "q": "My mother has never been to Hokkaido. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Never",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0081",
+          "type": "間違い直し",
+          "q": "My mother has never be to Hokkaido. の誤りを直しなさい。",
+          "a": "My mother has never been to Hokkaido.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0082",
+          "type": "英作文",
+          "q": "『彼らはすでに宿題をしました。』を英語で書きなさい。",
+          "a": "They have already done their homework.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0083",
+          "type": "見分け",
+          "q": "They have already done their homework. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Already",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0084",
+          "type": "間違い直し",
+          "q": "They have already do their homework. の誤りを直しなさい。",
+          "a": "They have already done their homework.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0085",
+          "type": "英作文",
+          "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
+          "a": "I have lost my key.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0086",
+          "type": "見分け",
+          "q": "I have lost my key. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "経験・完了",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0087",
+          "type": "間違い直し",
+          "q": "I have lose my key. の誤りを直しなさい。",
+          "a": "I have lost my key.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "動名詞",
+      "off": 396,
+      "on": 134,
+      "retention_pct": 33.84,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 406,
+      "accepted_by_final_passmeta": 102,
+      "rejected_by_final_passmeta": 304,
+      "rejection_coordinate_values": {
+        "-1": 304
+      },
+      "rejected_type_counts": {
+        "空所補充": 70,
+        "英作文": 132,
+        "変形": 84,
+        "間違い直し": 18
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "to",
+          "count": 76
+        },
+        {
+          "value": "he",
+          "count": 69
+        },
+        {
+          "value": "she",
+          "count": 69
+        },
+        {
+          "value": "english",
+          "count": 62
+        },
+        {
+          "value": "i",
+          "count": 58
+        },
+        {
+          "value": "music",
+          "count": 58
+        },
+        {
+          "value": "they",
+          "count": 58
+        },
+        {
+          "value": "we",
+          "count": 58
+        },
+        {
+          "value": "you",
+          "count": 58
+        },
+        {
+          "value": "enjoy",
+          "count": 56
+        },
+        {
+          "value": "science",
+          "count": 54
+        },
+        {
+          "value": "the",
+          "count": 54
+        },
+        {
+          "value": "reading",
+          "count": 53
+        },
+        {
+          "value": "speaking",
+          "count": 53
+        },
+        {
+          "value": "listening",
+          "count": 49
+        },
+        {
+          "value": "start",
+          "count": 48
+        },
+        {
+          "value": "making",
+          "count": 45
+        },
+        {
+          "value": "studying",
+          "count": 45
+        },
+        {
+          "value": "using",
+          "count": 45
+        },
+        {
+          "value": "practice",
+          "count": 38
+        },
+        {
+          "value": "comics",
+          "count": 36
+        },
+        {
+          "value": "dinner",
+          "count": 36
+        },
+        {
+          "value": "lunch",
+          "count": 36
+        },
+        {
+          "value": "phone",
+          "count": 36
+        },
+        {
+          "value": "stop",
+          "count": 36
+        },
+        {
+          "value": "love",
+          "count": 35
+        },
+        {
+          "value": "enjoys",
+          "count": 30
+        },
+        {
+          "value": "not",
+          "count": 30
+        },
+        {
+          "value": "starts",
+          "count": 30
+        },
+        {
+          "value": "basketball",
+          "count": 26
+        },
+        {
+          "value": "books",
+          "count": 26
+        },
+        {
+          "value": "playing",
+          "count": 26
+        },
+        {
+          "value": "friend",
+          "count": 24
+        },
+        {
+          "value": "my",
+          "count": 24
+        },
+        {
+          "value": "practices",
+          "count": 24
+        },
+        {
+          "value": "stops",
+          "count": 24
+        },
+        {
+          "value": "loves",
+          "count": 23
+        },
+        {
+          "value": "like",
+          "count": 22
+        },
+        {
+          "value": "begins",
+          "count": 20
+        },
+        {
+          "value": "do",
+          "count": 20
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "enjoy",
+          "count": 86
+        },
+        {
+          "value": "start",
+          "count": 78
+        },
+        {
+          "value": "to",
+          "count": 76
+        },
+        {
+          "value": "he",
+          "count": 69
+        },
+        {
+          "value": "she",
+          "count": 69
+        },
+        {
+          "value": "english",
+          "count": 62
+        },
+        {
+          "value": "practice",
+          "count": 62
+        },
+        {
+          "value": "read",
+          "count": 62
+        },
+        {
+          "value": "speak",
+          "count": 62
+        },
+        {
+          "value": "stop",
+          "count": 60
+        },
+        {
+          "value": "study",
+          "count": 60
+        },
+        {
+          "value": "i",
+          "count": 58
+        },
+        {
+          "value": "listen",
+          "count": 58
+        },
+        {
+          "value": "love",
+          "count": 58
+        },
+        {
+          "value": "music",
+          "count": 58
+        },
+        {
+          "value": "they",
+          "count": 58
+        },
+        {
+          "value": "we",
+          "count": 58
+        },
+        {
+          "value": "you",
+          "count": 58
+        },
+        {
+          "value": "make",
+          "count": 54
+        },
+        {
+          "value": "science",
+          "count": 54
+        },
+        {
+          "value": "the",
+          "count": 54
+        },
+        {
+          "value": "use",
+          "count": 54
+        },
+        {
+          "value": "reade",
+          "count": 53
+        },
+        {
+          "value": "reading",
+          "count": 53
+        },
+        {
+          "value": "speake",
+          "count": 53
+        },
+        {
+          "value": "speaking",
+          "count": 53
+        },
+        {
+          "value": "us",
+          "count": 51
+        },
+        {
+          "value": "listene",
+          "count": 49
+        },
+        {
+          "value": "listening",
+          "count": 49
+        },
+        {
+          "value": "mak",
+          "count": 45
+        },
+        {
+          "value": "making",
+          "count": 45
+        },
+        {
+          "value": "studye",
+          "count": 45
+        },
+        {
+          "value": "studying",
+          "count": 45
+        },
+        {
+          "value": "using",
+          "count": 45
+        },
+        {
+          "value": "begin",
+          "count": 36
+        },
+        {
+          "value": "comic",
+          "count": 36
+        },
+        {
+          "value": "comics",
+          "count": 36
+        },
+        {
+          "value": "din",
+          "count": 36
+        },
+        {
+          "value": "dinn",
+          "count": 36
+        },
+        {
+          "value": "dinner",
+          "count": 36
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "M2-GER-0587",
+          "type": "空所補充",
+          "q": "I like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0588",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』",
+          "a": "I like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0589",
+          "type": "空所補充",
+          "q": "I enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0590",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』",
+          "a": "I enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0591",
+          "type": "空所補充",
+          "q": "I love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0592",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』",
+          "a": "I love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0593",
+          "type": "空所補充",
+          "q": "I practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0594",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』",
+          "a": "I practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0595",
+          "type": "空所補充",
+          "q": "You like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0596",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは バスケットボールをすることが好きだ。』",
+          "a": "You like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0597",
+          "type": "空所補充",
+          "q": "You enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0598",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 本を読むことを楽しむ。』",
+          "a": "You enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0599",
+          "type": "空所補充",
+          "q": "You love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0600",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 音楽を聞くことが大好きだ。』",
+          "a": "You love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0601",
+          "type": "空所補充",
+          "q": "You practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0602",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 英語を話すことを練習する。』",
+          "a": "You practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0603",
+          "type": "空所補充",
+          "q": "We like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0604",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは バスケットボールをすることが好きだ。』",
+          "a": "We like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0605",
+          "type": "空所補充",
+          "q": "We enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0606",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 本を読むことを楽しむ。』",
+          "a": "We enjoy reading books.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "文型①（look ～，give A B）",
+      "off": 30,
+      "on": 11,
+      "retention_pct": 36.67,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 30,
+      "accepted_by_final_passmeta": 11,
+      "rejected_by_final_passmeta": 19,
+      "rejection_coordinate_values": {
+        "-1": 19
+      },
+      "rejected_type_counts": {
+        "英作文": 8,
+        "間違い直し": 5,
+        "読解": 6
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "the",
+          "count": 11
+        },
+        {
+          "value": "this",
+          "count": 9
+        },
+        {
+          "value": "a",
+          "count": 8
+        },
+        {
+          "value": "my",
+          "count": 8
+        },
+        {
+          "value": "beautiful",
+          "count": 6
+        },
+        {
+          "value": "advice",
+          "count": 4
+        },
+        {
+          "value": "delicious",
+          "count": 4
+        },
+        {
+          "value": "gave",
+          "count": 4
+        },
+        {
+          "value": "give",
+          "count": 4
+        },
+        {
+          "value": "looks",
+          "count": 4
+        },
+        {
+          "value": "map",
+          "count": 4
+        },
+        {
+          "value": "morning",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "please",
+          "count": 4
+        },
+        {
+          "value": "present",
+          "count": 4
+        },
+        {
+          "value": "showed",
+          "count": 4
+        },
+        {
+          "value": "sister",
+          "count": 4
+        },
+        {
+          "value": "sky",
+          "count": 4
+        },
+        {
+          "value": "some",
+          "count": 4
+        },
+        {
+          "value": "soup",
+          "count": 4
+        },
+        {
+          "value": "teacher",
+          "count": 4
+        },
+        {
+          "value": "us",
+          "count": 4
+        },
+        {
+          "value": "looked",
+          "count": 3
+        },
+        {
+          "value": "he",
+          "count": 2
+        },
+        {
+          "value": "idea",
+          "count": 2
+        },
+        {
+          "value": "interesting",
+          "count": 2
+        },
+        {
+          "value": "sounds",
+          "count": 2
+        },
+        {
+          "value": "takumi",
+          "count": 2
+        },
+        {
+          "value": "flower",
+          "count": 1
+        },
+        {
+          "value": "flowers",
+          "count": 1
+        },
+        {
+          "value": "is",
+          "count": 1
+        },
+        {
+          "value": "look",
+          "count": 1
+        },
+        {
+          "value": "to",
+          "count": 1
+        },
+        {
+          "value": "was",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "the",
+          "count": 11
+        },
+        {
+          "value": "thi",
+          "count": 9
+        },
+        {
+          "value": "this",
+          "count": 9
+        },
+        {
+          "value": "a",
+          "count": 8
+        },
+        {
+          "value": "give",
+          "count": 8
+        },
+        {
+          "value": "look",
+          "count": 8
+        },
+        {
+          "value": "my",
+          "count": 8
+        },
+        {
+          "value": "beautiful",
+          "count": 6
+        },
+        {
+          "value": "advice",
+          "count": 4
+        },
+        {
+          "value": "deliciou",
+          "count": 4
+        },
+        {
+          "value": "delicious",
+          "count": 4
+        },
+        {
+          "value": "gave",
+          "count": 4
+        },
+        {
+          "value": "looks",
+          "count": 4
+        },
+        {
+          "value": "map",
+          "count": 4
+        },
+        {
+          "value": "morn",
+          "count": 4
+        },
+        {
+          "value": "morne",
+          "count": 4
+        },
+        {
+          "value": "morning",
+          "count": 4
+        },
+        {
+          "value": "moth",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "please",
+          "count": 4
+        },
+        {
+          "value": "present",
+          "count": 4
+        },
+        {
+          "value": "show",
+          "count": 4
+        },
+        {
+          "value": "showe",
+          "count": 4
+        },
+        {
+          "value": "showed",
+          "count": 4
+        },
+        {
+          "value": "sist",
+          "count": 4
+        },
+        {
+          "value": "sister",
+          "count": 4
+        },
+        {
+          "value": "sky",
+          "count": 4
+        },
+        {
+          "value": "some",
+          "count": 4
+        },
+        {
+          "value": "soup",
+          "count": 4
+        },
+        {
+          "value": "teach",
+          "count": 4
+        },
+        {
+          "value": "teacher",
+          "count": 4
+        },
+        {
+          "value": "us",
+          "count": 4
+        },
+        {
+          "value": "looke",
+          "count": 3
+        },
+        {
+          "value": "looked",
+          "count": 3
+        },
+        {
+          "value": "be",
+          "count": 2
+        },
+        {
+          "value": "flower",
+          "count": 2
+        },
+        {
+          "value": "he",
+          "count": 2
+        },
+        {
+          "value": "idea",
+          "count": 2
+        },
+        {
+          "value": "interest",
+          "count": 2
+        },
+        {
+          "value": "intereste",
+          "count": 2
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-V1-0083",
+          "type": "英作文",
+          "q": "『この花は美しく見えます。』を英語で書きなさい。",
+          "a": "This flower looks beautiful.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-VFORM-0093",
+          "type": "英作文",
+          "q": "『その花は美しく見えます。』を英語で書きなさい。",
+          "a": "The flowers look beautiful.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0025",
+          "type": "英作文",
+          "q": "『先生は私たちに地図を見せました。』を英語で書きなさい。",
+          "a": "The teacher showed us a map.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0026",
+          "type": "間違い直し",
+          "q": "The teacher showed a map us. の誤りを直しなさい。",
+          "a": "The teacher showed us a map.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0027",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 The teacher showed us a map.",
+          "a": "先生は私たちに地図を見せました。",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0028",
+          "type": "英作文",
+          "q": "『このスープはおいしそうに見えます。』を英語で書きなさい。",
+          "a": "This soup looks delicious.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0029",
+          "type": "間違い直し",
+          "q": "This soup is delicious. の誤りを直しなさい。",
+          "a": "This soup looks delicious.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0030",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 This soup looks delicious.",
+          "a": "このスープはおいしそうに見えます。",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0031",
+          "type": "英作文",
+          "q": "『今朝、空は美しく見えました。』を英語で書きなさい。",
+          "a": "The sky looked beautiful this morning.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0032",
+          "type": "間違い直し",
+          "q": "The sky was beautiful this morning. の誤りを直しなさい。",
+          "a": "The sky looked beautiful this morning.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0033",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 The sky looked beautiful this morning.",
+          "a": "今朝、空は美しく見えました。",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0034",
+          "type": "英作文",
+          "q": "『母は姉（妹）にプレゼントをあげました。』を英語で書きなさい。",
+          "a": "My mother gave my sister a present.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0035",
+          "type": "間違い直し",
+          "q": "My mother gave to my sister a present. の誤りを直しなさい。",
+          "a": "My mother gave my sister a present.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0036",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 My mother gave my sister a present.",
+          "a": "母は姉（妹）にプレゼントをあげました。",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0037",
+          "type": "英作文",
+          "q": "『その考えはおもしろそうに聞こえます。』を英語で書きなさい。",
+          "a": "The idea sounds interesting.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0039",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 The idea sounds interesting.",
+          "a": "その考えはおもしろそうに聞こえます。",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0040",
+          "type": "英作文",
+          "q": "『タクミにいくつか助言をしてください。』を英語で書きなさい。",
+          "a": "Please give Takumi some advice.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0041",
+          "type": "間違い直し",
+          "q": "Please give some advice He. の誤りを直しなさい。",
+          "a": "Please give He some advice.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-FORM1-0042",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 Please give Takumi some advice.",
+          "a": "タクミにいくつか助言をしてください。",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "疑問詞",
+      "off": 18,
+      "on": 7,
+      "retention_pct": 38.89,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 26,
+      "accepted_by_final_passmeta": 8,
+      "rejected_by_final_passmeta": 18,
+      "rejection_coordinate_values": {
+        "-1": 18
+      },
+      "rejected_type_counts": {
+        "答えから質問文": 11,
+        "選択": 5,
+        "読解": 2
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "to",
+          "count": 11
+        },
+        {
+          "value": "i",
+          "count": 10
+        },
+        {
+          "value": "what",
+          "count": 9
+        },
+        {
+          "value": "you",
+          "count": 8
+        },
+        {
+          "value": "going",
+          "count": 7
+        },
+        {
+          "value": "when",
+          "count": 7
+        },
+        {
+          "value": "where",
+          "count": 7
+        },
+        {
+          "value": "how",
+          "count": 6
+        },
+        {
+          "value": "the",
+          "count": 6
+        },
+        {
+          "value": "do",
+          "count": 5
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "why",
+          "count": 5
+        },
+        {
+          "value": "he",
+          "count": 4
+        },
+        {
+          "value": "your",
+          "count": 4
+        },
+        {
+          "value": "am",
+          "count": 3
+        },
+        {
+          "value": "because",
+          "count": 3
+        },
+        {
+          "value": "belong",
+          "count": 3
+        },
+        {
+          "value": "can",
+          "count": 3
+        },
+        {
+          "value": "club",
+          "count": 3
+        },
+        {
+          "value": "english",
+          "count": 3
+        },
+        {
+          "value": "go",
+          "count": 3
+        },
+        {
+          "value": "is",
+          "count": 3
+        },
+        {
+          "value": "it",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "put",
+          "count": 3
+        },
+        {
+          "value": "studying",
+          "count": 3
+        },
+        {
+          "value": "tennis",
+          "count": 3
+        },
+        {
+          "value": "this",
+          "count": 3
+        },
+        {
+          "value": "weekend",
+          "count": 3
+        },
+        {
+          "value": "are",
+          "count": 2
+        },
+        {
+          "value": "at",
+          "count": 2
+        },
+        {
+          "value": "brother",
+          "count": 2
+        },
+        {
+          "value": "bus",
+          "count": 2
+        },
+        {
+          "value": "by",
+          "count": 2
+        },
+        {
+          "value": "desk",
+          "count": 2
+        },
+        {
+          "value": "does",
+          "count": 2
+        },
+        {
+          "value": "grandmother",
+          "count": 2
+        },
+        {
+          "value": "guitar",
+          "count": 2
+        },
+        {
+          "value": "often",
+          "count": 2
+        },
+        {
+          "value": "on",
+          "count": 2
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "to",
+          "count": 11
+        },
+        {
+          "value": "be",
+          "count": 10
+        },
+        {
+          "value": "go",
+          "count": 10
+        },
+        {
+          "value": "i",
+          "count": 10
+        },
+        {
+          "value": "what",
+          "count": 9
+        },
+        {
+          "value": "do",
+          "count": 8
+        },
+        {
+          "value": "you",
+          "count": 8
+        },
+        {
+          "value": "goe",
+          "count": 7
+        },
+        {
+          "value": "going",
+          "count": 7
+        },
+        {
+          "value": "when",
+          "count": 7
+        },
+        {
+          "value": "where",
+          "count": 7
+        },
+        {
+          "value": "how",
+          "count": 6
+        },
+        {
+          "value": "the",
+          "count": 6
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "study",
+          "count": 5
+        },
+        {
+          "value": "why",
+          "count": 5
+        },
+        {
+          "value": "he",
+          "count": 4
+        },
+        {
+          "value": "your",
+          "count": 4
+        },
+        {
+          "value": "am",
+          "count": 3
+        },
+        {
+          "value": "because",
+          "count": 3
+        },
+        {
+          "value": "belong",
+          "count": 3
+        },
+        {
+          "value": "can",
+          "count": 3
+        },
+        {
+          "value": "club",
+          "count": 3
+        },
+        {
+          "value": "english",
+          "count": 3
+        },
+        {
+          "value": "is",
+          "count": 3
+        },
+        {
+          "value": "it",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "practice",
+          "count": 3
+        },
+        {
+          "value": "put",
+          "count": 3
+        },
+        {
+          "value": "start",
+          "count": 3
+        },
+        {
+          "value": "studye",
+          "count": 3
+        },
+        {
+          "value": "studying",
+          "count": 3
+        },
+        {
+          "value": "tenni",
+          "count": 3
+        },
+        {
+          "value": "tennis",
+          "count": 3
+        },
+        {
+          "value": "thi",
+          "count": 3
+        },
+        {
+          "value": "this",
+          "count": 3
+        },
+        {
+          "value": "weekend",
+          "count": 3
+        },
+        {
+          "value": "are",
+          "count": 2
+        },
+        {
+          "value": "at",
+          "count": 2
+        },
+        {
+          "value": "broth",
+          "count": 2
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-WH-0060",
+          "type": "答えから質問文",
+          "q": "I am going to study math. に合う質問文を書きなさい。",
+          "a": "What are you going to do?",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-WH-0086",
+          "type": "答えから質問文",
+          "q": "She is going to study science tomorrow. に合う質問文を書きなさい。",
+          "a": "What is She going to do tomorrow?",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-WH-0087",
+          "type": "答えから質問文",
+          "q": "Because I was sick. に合う質問文を書きなさい。",
+          "a": "Why were you absent yesterday?",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-WH-0088",
+          "type": "答えから質問文",
+          "q": "I will play tennis next month. に合う質問文を書きなさい。",
+          "a": "When will you play tennis?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0071",
+          "type": "答えから質問文",
+          "q": "I am going to visit my grandmother this weekend. に合う質問文を書きなさい。",
+          "a": "What are you going to do this weekend?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0072",
+          "type": "選択",
+          "q": "I am going to visit my grandmother this weekend. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。",
+          "a": "What",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0075",
+          "type": "答えから質問文",
+          "q": "He started studying English at seven. に合う質問文を書きなさい。",
+          "a": "When did He start studying English?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0076",
+          "type": "選択",
+          "q": "He started studying English at seven. に合う疑問詞を ( What / When / Where / How ) から選びなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0077",
+          "type": "答えから質問文",
+          "q": "Because she passed the test. に合う質問文を書きなさい。",
+          "a": "Why is She happy today?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0078",
+          "type": "選択",
+          "q": "Because she passed the test. に合う疑問詞を ( What / Why / When / Where ) から選びなさい。",
+          "a": "Why",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0079",
+          "type": "答えから質問文",
+          "q": "I can go there by bus. に合う質問文を書きなさい。",
+          "a": "How can you go to the museum?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0080",
+          "type": "選択",
+          "q": "I can go there by bus. に合う疑問詞を ( What / Why / How / Where ) から選びなさい。",
+          "a": "How",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0081",
+          "type": "答えから質問文",
+          "q": "I put it on your desk. に合う質問文を書きなさい。",
+          "a": "Where have you put my notebook?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-WH-0082",
+          "type": "選択",
+          "q": "I put it on your desk. に合う疑問詞を ( What / Who / When / Where ) から選びなさい。",
+          "a": "Where",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-WH-0024",
+          "type": "答えから質問文",
+          "q": "I belong to the tennis club. に合う質問文を書きなさい。",
+          "a": "Which club do you belong to?",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-WH-0025",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 Which club do you belong to?",
+          "a": "あなたはどのクラブに所属していますか。",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-WH-0030",
+          "type": "答えから質問文",
+          "q": "He practices it every day. に合う質問文を書きなさい。",
+          "a": "How often does your brother practice the guitar?",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-WH-0031",
+          "type": "読解",
+          "q": "『How often does your brother practice the guitar?』を日本語にしなさい。",
+          "a": "あなたの兄（弟）はどのくらいの頻度でギターを練習しますか。",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "現在完了形（継続），現在完了進行形",
+      "off": 27,
+      "on": 11,
+      "retention_pct": 40.74,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 27,
+      "accepted_by_final_passmeta": 11,
+      "rejected_by_final_passmeta": 16,
+      "rejection_coordinate_values": {
+        "-1": 16
+      },
+      "rejected_type_counts": {
+        "英作文": 12,
+        "見分け": 4
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "since",
+          "count": 15
+        },
+        {
+          "value": "has",
+          "count": 8
+        },
+        {
+          "value": "have",
+          "count": 8
+        },
+        {
+          "value": "been",
+          "count": 7
+        },
+        {
+          "value": "for",
+          "count": 6
+        },
+        {
+          "value": "i",
+          "count": 4
+        },
+        {
+          "value": "she",
+          "count": 4
+        },
+        {
+          "value": "six",
+          "count": 4
+        },
+        {
+          "value": "english",
+          "count": 3
+        },
+        {
+          "value": "father",
+          "count": 3
+        },
+        {
+          "value": "here",
+          "count": 3
+        },
+        {
+          "value": "in",
+          "count": 3
+        },
+        {
+          "value": "lived",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "we",
+          "count": 3
+        },
+        {
+          "value": "worked",
+          "count": 3
+        },
+        {
+          "value": "years",
+          "count": 3
+        },
+        {
+          "value": "each",
+          "count": 2
+        },
+        {
+          "value": "five",
+          "count": 2
+        },
+        {
+          "value": "known",
+          "count": 2
+        },
+        {
+          "value": "last",
+          "count": 2
+        },
+        {
+          "value": "other",
+          "count": 2
+        },
+        {
+          "value": "practicing",
+          "count": 2
+        },
+        {
+          "value": "studying",
+          "count": 2
+        },
+        {
+          "value": "this",
+          "count": 2
+        },
+        {
+          "value": "yamaguchi",
+          "count": 2
+        },
+        {
+          "value": "year",
+          "count": 2
+        },
+        {
+          "value": "april",
+          "count": 1
+        },
+        {
+          "value": "at",
+          "count": 1
+        },
+        {
+          "value": "he",
+          "count": 1
+        },
+        {
+          "value": "hospital",
+          "count": 1
+        },
+        {
+          "value": "monday",
+          "count": 1
+        },
+        {
+          "value": "months",
+          "count": 1
+        },
+        {
+          "value": "nine",
+          "count": 1
+        },
+        {
+          "value": "piano",
+          "count": 1
+        },
+        {
+          "value": "room",
+          "count": 1
+        },
+        {
+          "value": "stayed",
+          "count": 1
+        },
+        {
+          "value": "teaching",
+          "count": 1
+        },
+        {
+          "value": "ten",
+          "count": 1
+        },
+        {
+          "value": "tennis",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "have",
+          "count": 16
+        },
+        {
+          "value": "since",
+          "count": 15
+        },
+        {
+          "value": "has",
+          "count": 8
+        },
+        {
+          "value": "be",
+          "count": 7
+        },
+        {
+          "value": "been",
+          "count": 7
+        },
+        {
+          "value": "for",
+          "count": 6
+        },
+        {
+          "value": "year",
+          "count": 5
+        },
+        {
+          "value": "i",
+          "count": 4
+        },
+        {
+          "value": "she",
+          "count": 4
+        },
+        {
+          "value": "six",
+          "count": 4
+        },
+        {
+          "value": "english",
+          "count": 3
+        },
+        {
+          "value": "fath",
+          "count": 3
+        },
+        {
+          "value": "father",
+          "count": 3
+        },
+        {
+          "value": "here",
+          "count": 3
+        },
+        {
+          "value": "in",
+          "count": 3
+        },
+        {
+          "value": "liv",
+          "count": 3
+        },
+        {
+          "value": "live",
+          "count": 3
+        },
+        {
+          "value": "lived",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "we",
+          "count": 3
+        },
+        {
+          "value": "work",
+          "count": 3
+        },
+        {
+          "value": "worke",
+          "count": 3
+        },
+        {
+          "value": "worked",
+          "count": 3
+        },
+        {
+          "value": "years",
+          "count": 3
+        },
+        {
+          "value": "each",
+          "count": 2
+        },
+        {
+          "value": "five",
+          "count": 2
+        },
+        {
+          "value": "know",
+          "count": 2
+        },
+        {
+          "value": "known",
+          "count": 2
+        },
+        {
+          "value": "last",
+          "count": 2
+        },
+        {
+          "value": "oth",
+          "count": 2
+        },
+        {
+          "value": "other",
+          "count": 2
+        },
+        {
+          "value": "practic",
+          "count": 2
+        },
+        {
+          "value": "practice",
+          "count": 2
+        },
+        {
+          "value": "practicing",
+          "count": 2
+        },
+        {
+          "value": "study",
+          "count": 2
+        },
+        {
+          "value": "studye",
+          "count": 2
+        },
+        {
+          "value": "studying",
+          "count": 2
+        },
+        {
+          "value": "thi",
+          "count": 2
+        },
+        {
+          "value": "this",
+          "count": 2
+        },
+        {
+          "value": "yamaguchi",
+          "count": 2
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-PERF2-0094",
+          "type": "英作文",
+          "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+          "a": "He has been studying English since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF2-0108",
+          "type": "英作文",
+          "q": "『彼女は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+          "a": "She has been studying English since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0095",
+          "type": "英作文",
+          "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
+          "a": "I have lived in Yamaguchi for five years.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0096",
+          "type": "見分け",
+          "q": "I have lived in Yamaguchi for five years. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "For",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0097",
+          "type": "英作文",
+          "q": "『彼女は6時からずっとピアノを練習しています。』を英語で書きなさい。",
+          "a": "She has been practicing the piano since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0098",
+          "type": "見分け",
+          "q": "She has been practicing tennis since six. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0101",
+          "type": "英作文",
+          "q": "『私たちは去年から知り合いです。』を英語で書きなさい。",
+          "a": "We have known each other since last year.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0102",
+          "type": "見分け",
+          "q": "We have known each other since last year. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0105",
+          "type": "英作文",
+          "q": "『父は2010年からここで働いています。』を英語で書きなさい。",
+          "a": "My father has worked here since 2010.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0106",
+          "type": "見分け",
+          "q": "My father has worked here since 2010. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PC-0091",
+          "type": "英作文",
+          "q": "『私は2020年からここに住んでいます。』を英語で書きなさい。",
+          "a": "I have lived here since 2020.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PC-0094",
+          "type": "英作文",
+          "q": "『父は4月からこの病院で働いています。』を英語で書きなさい。",
+          "a": "My father has worked at this hospital since April.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0056",
+          "type": "英作文",
+          "q": "『私は9時からずっとあなたを待っています。』を英語で書きなさい。",
+          "a": "I have been waiting for you since nine.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0057",
+          "type": "英作文",
+          "q": "『彼女は10年間英語を教えています。』を英語で書きなさい。",
+          "a": "She has been teaching English for ten years.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0058",
+          "type": "英作文",
+          "q": "『彼らは月曜日から東京に滞在しています。』を英語で書きなさい。",
+          "a": "They have stayed in Tokyo since Monday.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0059",
+          "type": "英作文",
+          "q": "『私たちは2か月間この部屋を使っています。』を英語で書きなさい。",
+          "a": "We have been using this room for two months.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "Power-Up 6",
+      "position": 39,
+      "section_count": 39,
+      "category": "there is ～，look ～ の文",
+      "off": 14,
+      "on": 6,
+      "retention_pct": 42.86,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 0,
+      "accepted_by_final_passmeta": 0,
+      "rejected_by_final_passmeta": 0,
+      "rejection_coordinate_values": {},
+      "rejected_type_counts": {},
+      "top_rejected_surface_tokens": [],
+      "top_rejected_lemma_candidates": [],
+      "rejected_samples": []
+    },
+    {
+      "grade": "中3",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 2",
+      "position": 30,
+      "section_count": 30,
+      "category": "現在完了形（完了・経験）",
+      "off": 360,
+      "on": 156,
+      "retention_pct": 43.33,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 360,
+      "accepted_by_final_passmeta": 156,
+      "rejected_by_final_passmeta": 204,
+      "rejection_coordinate_values": {
+        "-1": 204
+      },
+      "rejected_type_counts": {
+        "変形": 184,
+        "選択": 20
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "have",
+          "count": 280
+        },
+        {
+          "value": "lost",
+          "count": 180
+        },
+        {
+          "value": "key",
+          "count": 140
+        },
+        {
+          "value": "has",
+          "count": 128
+        },
+        {
+          "value": "visited",
+          "count": 128
+        },
+        {
+          "value": "been",
+          "count": 120
+        },
+        {
+          "value": "before",
+          "count": 120
+        },
+        {
+          "value": "kyoto",
+          "count": 120
+        },
+        {
+          "value": "once",
+          "count": 120
+        },
+        {
+          "value": "to",
+          "count": 120
+        },
+        {
+          "value": "tokyo",
+          "count": 120
+        },
+        {
+          "value": "i",
+          "count": 100
+        },
+        {
+          "value": "he",
+          "count": 60
+        },
+        {
+          "value": "she",
+          "count": 60
+        },
+        {
+          "value": "they",
+          "count": 60
+        },
+        {
+          "value": "we",
+          "count": 60
+        },
+        {
+          "value": "you",
+          "count": 60
+        },
+        {
+          "value": "my",
+          "count": 42
+        },
+        {
+          "value": "the",
+          "count": 30
+        },
+        {
+          "value": "am",
+          "count": 20
+        },
+        {
+          "value": "can't",
+          "count": 20
+        },
+        {
+          "value": "door",
+          "count": 20
+        },
+        {
+          "value": "her",
+          "count": 20
+        },
+        {
+          "value": "his",
+          "count": 20
+        },
+        {
+          "value": "losing",
+          "count": 20
+        },
+        {
+          "value": "now",
+          "count": 20
+        },
+        {
+          "value": "open",
+          "count": 20
+        },
+        {
+          "value": "our",
+          "count": 20
+        },
+        {
+          "value": "so",
+          "count": 20
+        },
+        {
+          "value": "their",
+          "count": 20
+        },
+        {
+          "value": "your",
+          "count": 20
+        },
+        {
+          "value": "three",
+          "count": 8
+        },
+        {
+          "value": "times",
+          "count": 8
+        },
+        {
+          "value": "boy",
+          "count": 2
+        },
+        {
+          "value": "brother",
+          "count": 2
+        },
+        {
+          "value": "classroom",
+          "count": 2
+        },
+        {
+          "value": "emi",
+          "count": 2
+        },
+        {
+          "value": "pool",
+          "count": 2
+        },
+        {
+          "value": "town",
+          "count": 2
+        },
+        {
+          "value": "yuki",
+          "count": 2
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "have",
+          "count": 408
+        },
+        {
+          "value": "lose",
+          "count": 200
+        },
+        {
+          "value": "lost",
+          "count": 180
+        },
+        {
+          "value": "be",
+          "count": 140
+        },
+        {
+          "value": "key",
+          "count": 140
+        },
+        {
+          "value": "has",
+          "count": 128
+        },
+        {
+          "value": "visit",
+          "count": 128
+        },
+        {
+          "value": "visite",
+          "count": 128
+        },
+        {
+          "value": "visited",
+          "count": 128
+        },
+        {
+          "value": "been",
+          "count": 120
+        },
+        {
+          "value": "before",
+          "count": 120
+        },
+        {
+          "value": "kyoto",
+          "count": 120
+        },
+        {
+          "value": "once",
+          "count": 120
+        },
+        {
+          "value": "to",
+          "count": 120
+        },
+        {
+          "value": "tokyo",
+          "count": 120
+        },
+        {
+          "value": "i",
+          "count": 100
+        },
+        {
+          "value": "he",
+          "count": 60
+        },
+        {
+          "value": "she",
+          "count": 60
+        },
+        {
+          "value": "they",
+          "count": 60
+        },
+        {
+          "value": "we",
+          "count": 60
+        },
+        {
+          "value": "you",
+          "count": 60
+        },
+        {
+          "value": "my",
+          "count": 42
+        },
+        {
+          "value": "the",
+          "count": 30
+        },
+        {
+          "value": "am",
+          "count": 20
+        },
+        {
+          "value": "ca",
+          "count": 20
+        },
+        {
+          "value": "can",
+          "count": 20
+        },
+        {
+          "value": "can't",
+          "count": 20
+        },
+        {
+          "value": "door",
+          "count": 20
+        },
+        {
+          "value": "her",
+          "count": 20
+        },
+        {
+          "value": "his",
+          "count": 20
+        },
+        {
+          "value": "los",
+          "count": 20
+        },
+        {
+          "value": "losing",
+          "count": 20
+        },
+        {
+          "value": "now",
+          "count": 20
+        },
+        {
+          "value": "open",
+          "count": 20
+        },
+        {
+          "value": "our",
+          "count": 20
+        },
+        {
+          "value": "so",
+          "count": 20
+        },
+        {
+          "value": "their",
+          "count": 20
+        },
+        {
+          "value": "your",
+          "count": 20
+        },
+        {
+          "value": "thre",
+          "count": 8
+        },
+        {
+          "value": "three",
+          "count": 8
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "M3C-00014",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00015",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00016",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00034",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00035",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00036",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00054",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00055",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00056",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00074",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00075",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00076",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00094",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00095",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00096",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00114",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00115",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00116",
+          "type": "変形",
+          "q": "I have lost my key. を疑問文にしなさい。",
+          "a": "Have I lost my key?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00134",
+          "type": "変形",
+          "q": "I have visited Tokyo before. を疑問文にしなさい。",
+          "a": "Have I visited Tokyo before?",
+          "passMeta": -1
+        },
+        {
+          "id": "M3C-00135",
+          "type": "変形",
+          "q": "I have been to Kyoto once. を疑問文にしなさい。",
+          "a": "Have I been to Kyoto once?",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "現在完了形（継続），現在完了進行形",
+      "off": 27,
+      "on": 12,
+      "retention_pct": 44.44,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 27,
+      "accepted_by_final_passmeta": 12,
+      "rejected_by_final_passmeta": 15,
+      "rejection_coordinate_values": {
+        "-1": 15
+      },
+      "rejected_type_counts": {
+        "英作文": 11,
+        "見分け": 4
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "since",
+          "count": 15
+        },
+        {
+          "value": "have",
+          "count": 8
+        },
+        {
+          "value": "has",
+          "count": 7
+        },
+        {
+          "value": "been",
+          "count": 5
+        },
+        {
+          "value": "for",
+          "count": 5
+        },
+        {
+          "value": "i",
+          "count": 5
+        },
+        {
+          "value": "here",
+          "count": 4
+        },
+        {
+          "value": "lived",
+          "count": 4
+        },
+        {
+          "value": "six",
+          "count": 4
+        },
+        {
+          "value": "father",
+          "count": 3
+        },
+        {
+          "value": "five",
+          "count": 3
+        },
+        {
+          "value": "in",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "she",
+          "count": 3
+        },
+        {
+          "value": "worked",
+          "count": 3
+        },
+        {
+          "value": "years",
+          "count": 3
+        },
+        {
+          "value": "each",
+          "count": 2
+        },
+        {
+          "value": "english",
+          "count": 2
+        },
+        {
+          "value": "known",
+          "count": 2
+        },
+        {
+          "value": "last",
+          "count": 2
+        },
+        {
+          "value": "other",
+          "count": 2
+        },
+        {
+          "value": "practicing",
+          "count": 2
+        },
+        {
+          "value": "studying",
+          "count": 2
+        },
+        {
+          "value": "we",
+          "count": 2
+        },
+        {
+          "value": "yamaguchi",
+          "count": 2
+        },
+        {
+          "value": "year",
+          "count": 2
+        },
+        {
+          "value": "april",
+          "count": 1
+        },
+        {
+          "value": "at",
+          "count": 1
+        },
+        {
+          "value": "he",
+          "count": 1
+        },
+        {
+          "value": "hospital",
+          "count": 1
+        },
+        {
+          "value": "monday",
+          "count": 1
+        },
+        {
+          "value": "nine",
+          "count": 1
+        },
+        {
+          "value": "piano",
+          "count": 1
+        },
+        {
+          "value": "stayed",
+          "count": 1
+        },
+        {
+          "value": "tennis",
+          "count": 1
+        },
+        {
+          "value": "the",
+          "count": 1
+        },
+        {
+          "value": "they",
+          "count": 1
+        },
+        {
+          "value": "this",
+          "count": 1
+        },
+        {
+          "value": "tokyo",
+          "count": 1
+        },
+        {
+          "value": "waiting",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "have",
+          "count": 15
+        },
+        {
+          "value": "since",
+          "count": 15
+        },
+        {
+          "value": "has",
+          "count": 7
+        },
+        {
+          "value": "be",
+          "count": 5
+        },
+        {
+          "value": "been",
+          "count": 5
+        },
+        {
+          "value": "for",
+          "count": 5
+        },
+        {
+          "value": "i",
+          "count": 5
+        },
+        {
+          "value": "year",
+          "count": 5
+        },
+        {
+          "value": "here",
+          "count": 4
+        },
+        {
+          "value": "liv",
+          "count": 4
+        },
+        {
+          "value": "live",
+          "count": 4
+        },
+        {
+          "value": "lived",
+          "count": 4
+        },
+        {
+          "value": "six",
+          "count": 4
+        },
+        {
+          "value": "fath",
+          "count": 3
+        },
+        {
+          "value": "father",
+          "count": 3
+        },
+        {
+          "value": "five",
+          "count": 3
+        },
+        {
+          "value": "in",
+          "count": 3
+        },
+        {
+          "value": "my",
+          "count": 3
+        },
+        {
+          "value": "she",
+          "count": 3
+        },
+        {
+          "value": "work",
+          "count": 3
+        },
+        {
+          "value": "worke",
+          "count": 3
+        },
+        {
+          "value": "worked",
+          "count": 3
+        },
+        {
+          "value": "years",
+          "count": 3
+        },
+        {
+          "value": "each",
+          "count": 2
+        },
+        {
+          "value": "english",
+          "count": 2
+        },
+        {
+          "value": "know",
+          "count": 2
+        },
+        {
+          "value": "known",
+          "count": 2
+        },
+        {
+          "value": "last",
+          "count": 2
+        },
+        {
+          "value": "oth",
+          "count": 2
+        },
+        {
+          "value": "other",
+          "count": 2
+        },
+        {
+          "value": "practic",
+          "count": 2
+        },
+        {
+          "value": "practice",
+          "count": 2
+        },
+        {
+          "value": "practicing",
+          "count": 2
+        },
+        {
+          "value": "study",
+          "count": 2
+        },
+        {
+          "value": "studye",
+          "count": 2
+        },
+        {
+          "value": "studying",
+          "count": 2
+        },
+        {
+          "value": "we",
+          "count": 2
+        },
+        {
+          "value": "yamaguchi",
+          "count": 2
+        },
+        {
+          "value": "april",
+          "count": 1
+        },
+        {
+          "value": "at",
+          "count": 1
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-PERF2-0094",
+          "type": "英作文",
+          "q": "『彼は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+          "a": "He has been studying English since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF2-0107",
+          "type": "英作文",
+          "q": "『私は5年間ここに住んでいます。』を英語で書きなさい。",
+          "a": "I have lived here for five years.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF2-0108",
+          "type": "英作文",
+          "q": "『彼女は6時からずっと英語を勉強しています。』を英語で書きなさい。",
+          "a": "She has been studying English since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0095",
+          "type": "英作文",
+          "q": "『私は5年間山口に住んでいます。』を英語で書きなさい。",
+          "a": "I have lived in Yamaguchi for five years.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0096",
+          "type": "見分け",
+          "q": "I have lived in Yamaguchi for five years. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "For",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0097",
+          "type": "英作文",
+          "q": "『彼女は6時からずっとピアノを練習しています。』を英語で書きなさい。",
+          "a": "She has been practicing the piano since six.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0098",
+          "type": "見分け",
+          "q": "She has been practicing tennis since six. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0101",
+          "type": "英作文",
+          "q": "『私たちは去年から知り合いです。』を英語で書きなさい。",
+          "a": "We have known each other since last year.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0102",
+          "type": "見分け",
+          "q": "We have known each other since last year. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0105",
+          "type": "英作文",
+          "q": "『父は2010年からここで働いています。』を英語で書きなさい。",
+          "a": "My father has worked here since 2010.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PC-0106",
+          "type": "見分け",
+          "q": "My father has worked here since 2010. に合う時間表現の考え方として近いものを選びなさい。",
+          "a": "Since",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PC-0091",
+          "type": "英作文",
+          "q": "『私は2020年からここに住んでいます。』を英語で書きなさい。",
+          "a": "I have lived here since 2020.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PC-0094",
+          "type": "英作文",
+          "q": "『父は4月からこの病院で働いています。』を英語で書きなさい。",
+          "a": "My father has worked at this hospital since April.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0056",
+          "type": "英作文",
+          "q": "『私は9時からずっとあなたを待っています。』を英語で書きなさい。",
+          "a": "I have been waiting for you since nine.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PC-0058",
+          "type": "英作文",
+          "q": "『彼らは月曜日から東京に滞在しています。』を英語で書きなさい。",
+          "a": "They have stayed in Tokyo since Monday.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "there is ～ の文",
+      "off": 28,
+      "on": 13,
+      "retention_pct": 46.43,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 28,
+      "accepted_by_final_passmeta": 13,
+      "rejected_by_final_passmeta": 15,
+      "rejection_coordinate_values": {
+        "-1": 15
+      },
+      "rejected_type_counts": {
+        "英作文": 6,
+        "空所補充": 4,
+        "変形": 4,
+        "読解": 1
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "the",
+          "count": 19
+        },
+        {
+          "value": "there",
+          "count": 15
+        },
+        {
+          "value": "a",
+          "count": 11
+        },
+        {
+          "value": "is",
+          "count": 11
+        },
+        {
+          "value": "are",
+          "count": 8
+        },
+        {
+          "value": "station",
+          "count": 7
+        },
+        {
+          "value": "near",
+          "count": 5
+        },
+        {
+          "value": "bench",
+          "count": 4
+        },
+        {
+          "value": "bookstore",
+          "count": 4
+        },
+        {
+          "value": "cat",
+          "count": 4
+        },
+        {
+          "value": "in",
+          "count": 4
+        },
+        {
+          "value": "many",
+          "count": 4
+        },
+        {
+          "value": "on",
+          "count": 4
+        },
+        {
+          "value": "park",
+          "count": 4
+        },
+        {
+          "value": "pictures",
+          "count": 4
+        },
+        {
+          "value": "trees",
+          "count": 4
+        },
+        {
+          "value": "two",
+          "count": 4
+        },
+        {
+          "value": "under",
+          "count": 4
+        },
+        {
+          "value": "wall",
+          "count": 4
+        },
+        {
+          "value": "across",
+          "count": 2
+        },
+        {
+          "value": "bank",
+          "count": 2
+        },
+        {
+          "value": "from",
+          "count": 2
+        },
+        {
+          "value": "convenience",
+          "count": 1
+        },
+        {
+          "value": "store",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "be",
+          "count": 19
+        },
+        {
+          "value": "the",
+          "count": 19
+        },
+        {
+          "value": "there",
+          "count": 15
+        },
+        {
+          "value": "a",
+          "count": 11
+        },
+        {
+          "value": "is",
+          "count": 11
+        },
+        {
+          "value": "are",
+          "count": 8
+        },
+        {
+          "value": "station",
+          "count": 7
+        },
+        {
+          "value": "near",
+          "count": 5
+        },
+        {
+          "value": "bench",
+          "count": 4
+        },
+        {
+          "value": "bookstore",
+          "count": 4
+        },
+        {
+          "value": "cat",
+          "count": 4
+        },
+        {
+          "value": "in",
+          "count": 4
+        },
+        {
+          "value": "many",
+          "count": 4
+        },
+        {
+          "value": "on",
+          "count": 4
+        },
+        {
+          "value": "park",
+          "count": 4
+        },
+        {
+          "value": "pictur",
+          "count": 4
+        },
+        {
+          "value": "picture",
+          "count": 4
+        },
+        {
+          "value": "pictures",
+          "count": 4
+        },
+        {
+          "value": "tre",
+          "count": 4
+        },
+        {
+          "value": "tree",
+          "count": 4
+        },
+        {
+          "value": "trees",
+          "count": 4
+        },
+        {
+          "value": "two",
+          "count": 4
+        },
+        {
+          "value": "und",
+          "count": 4
+        },
+        {
+          "value": "under",
+          "count": 4
+        },
+        {
+          "value": "wal",
+          "count": 4
+        },
+        {
+          "value": "wall",
+          "count": 4
+        },
+        {
+          "value": "acros",
+          "count": 2
+        },
+        {
+          "value": "across",
+          "count": 2
+        },
+        {
+          "value": "bank",
+          "count": 2
+        },
+        {
+          "value": "from",
+          "count": 2
+        },
+        {
+          "value": "convenience",
+          "count": 1
+        },
+        {
+          "value": "store",
+          "count": 1
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-TH-0081",
+          "type": "英作文",
+          "q": "『駅の近くにコンビニが1軒あります。』を英語で書きなさい。",
+          "a": "There is a convenience store near the station.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0035",
+          "type": "英作文",
+          "q": "『駅の近くに本屋が1軒あります。』を英語で書きなさい。",
+          "a": "There is a bookstore near the station.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0036",
+          "type": "空所補充",
+          "q": "(      ) a bookstore near the station. に入る語を書きなさい。",
+          "a": "Is",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0037",
+          "type": "変形",
+          "q": "There is a bookstore near the station. を疑問文にしなさい。",
+          "a": "Is there a bookstore near the station?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0038",
+          "type": "英作文",
+          "q": "『公園にはたくさんの木があります。』を英語で書きなさい。",
+          "a": "There are many trees in the park.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0039",
+          "type": "空所補充",
+          "q": "(      ) many trees in the park. に入る語を書きなさい。",
+          "a": "Are",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0040",
+          "type": "変形",
+          "q": "There are many trees in the park. を疑問文にしなさい。",
+          "a": "Are there many trees in the park?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0041",
+          "type": "英作文",
+          "q": "『ベンチの下にねこが1匹います。』を英語で書きなさい。",
+          "a": "There is a cat under the bench.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0042",
+          "type": "空所補充",
+          "q": "(      ) a cat under the bench. に入る語を書きなさい。",
+          "a": "Is",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0043",
+          "type": "変形",
+          "q": "There is a cat under the bench. を疑問文にしなさい。",
+          "a": "Is there a cat under the bench?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0050",
+          "type": "英作文",
+          "q": "『壁には2枚の絵があります。』を英語で書きなさい。",
+          "a": "There are two pictures on the wall.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0051",
+          "type": "空所補充",
+          "q": "(      ) two pictures on the wall. に入る語を書きなさい。",
+          "a": "Are",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-TH-0052",
+          "type": "変形",
+          "q": "There are two pictures on the wall. を疑問文にしなさい。",
+          "a": "Are there two pictures on the wall?",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-TH-0048",
+          "type": "英作文",
+          "q": "『駅の向かいに銀行があります。』を英語で書きなさい。",
+          "a": "There is a bank across from the station.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-TH-0049",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 There is a bank across from the station.",
+          "a": "駅の向かいに銀行があります。",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "進行形",
+      "off": 30,
+      "on": 14,
+      "retention_pct": 46.67,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 30,
+      "accepted_by_final_passmeta": 14,
+      "rejected_by_final_passmeta": 16,
+      "rejection_coordinate_values": {
+        "-1": 16
+      },
+      "rejected_type_counts": {
+        "英作文": 6,
+        "変形": 9,
+        "読解": 1
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "now",
+          "count": 25
+        },
+        {
+          "value": "are",
+          "count": 16
+        },
+        {
+          "value": "the",
+          "count": 12
+        },
+        {
+          "value": "practicing",
+          "count": 8
+        },
+        {
+          "value": "they",
+          "count": 8
+        },
+        {
+          "value": "talking",
+          "count": 7
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "a",
+          "count": 5
+        },
+        {
+          "value": "classroom",
+          "count": 5
+        },
+        {
+          "value": "cleaning",
+          "count": 5
+        },
+        {
+          "value": "guitar",
+          "count": 5
+        },
+        {
+          "value": "her",
+          "count": 5
+        },
+        {
+          "value": "is",
+          "count": 5
+        },
+        {
+          "value": "newspaper",
+          "count": 5
+        },
+        {
+          "value": "not",
+          "count": 5
+        },
+        {
+          "value": "reading",
+          "count": 5
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "teacher",
+          "count": 5
+        },
+        {
+          "value": "with",
+          "count": 5
+        },
+        {
+          "value": "am",
+          "count": 4
+        },
+        {
+          "value": "i",
+          "count": 4
+        },
+        {
+          "value": "basketball",
+          "count": 3
+        },
+        {
+          "value": "about",
+          "count": 2
+        },
+        {
+          "value": "test",
+          "count": 2
+        },
+        {
+          "value": "you",
+          "count": 2
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "be",
+          "count": 25
+        },
+        {
+          "value": "now",
+          "count": 25
+        },
+        {
+          "value": "are",
+          "count": 16
+        },
+        {
+          "value": "the",
+          "count": 12
+        },
+        {
+          "value": "practic",
+          "count": 8
+        },
+        {
+          "value": "practice",
+          "count": 8
+        },
+        {
+          "value": "practicing",
+          "count": 8
+        },
+        {
+          "value": "they",
+          "count": 8
+        },
+        {
+          "value": "talk",
+          "count": 7
+        },
+        {
+          "value": "talke",
+          "count": 7
+        },
+        {
+          "value": "talking",
+          "count": 7
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "a",
+          "count": 5
+        },
+        {
+          "value": "classroom",
+          "count": 5
+        },
+        {
+          "value": "clean",
+          "count": 5
+        },
+        {
+          "value": "cleane",
+          "count": 5
+        },
+        {
+          "value": "cleaning",
+          "count": 5
+        },
+        {
+          "value": "guitar",
+          "count": 5
+        },
+        {
+          "value": "her",
+          "count": 5
+        },
+        {
+          "value": "is",
+          "count": 5
+        },
+        {
+          "value": "newspap",
+          "count": 5
+        },
+        {
+          "value": "newspaper",
+          "count": 5
+        },
+        {
+          "value": "not",
+          "count": 5
+        },
+        {
+          "value": "read",
+          "count": 5
+        },
+        {
+          "value": "reade",
+          "count": 5
+        },
+        {
+          "value": "reading",
+          "count": 5
+        },
+        {
+          "value": "she",
+          "count": 5
+        },
+        {
+          "value": "teach",
+          "count": 5
+        },
+        {
+          "value": "teacher",
+          "count": 5
+        },
+        {
+          "value": "with",
+          "count": 5
+        },
+        {
+          "value": "am",
+          "count": 4
+        },
+        {
+          "value": "i",
+          "count": 4
+        },
+        {
+          "value": "basketbal",
+          "count": 3
+        },
+        {
+          "value": "basketball",
+          "count": 3
+        },
+        {
+          "value": "about",
+          "count": 2
+        },
+        {
+          "value": "test",
+          "count": 2
+        },
+        {
+          "value": "you",
+          "count": 2
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "R2-PROG-0079",
+          "type": "英作文",
+          "q": "『彼らは今バスケットボールを練習しています。』を英語で書きなさい。",
+          "a": "They are practicing basketball now.",
+          "passMeta": -1
+        },
+        {
+          "id": "R2-PROG-0080",
+          "type": "変形",
+          "q": "They are practicing basketball now. を否定文にしなさい。",
+          "a": "They are not practicing basketball now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0017",
+          "type": "英作文",
+          "q": "『私は今新聞を読んでいます。』を英語で書きなさい。",
+          "a": "I am reading a newspaper now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0018",
+          "type": "変形",
+          "q": "I am reading a newspaper now. を疑問文にしなさい。",
+          "a": "Are you reading a newspaper now?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0019",
+          "type": "変形",
+          "q": "I am reading a newspaper now. を否定文にしなさい。",
+          "a": "I am not reading a newspaper now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0020",
+          "type": "英作文",
+          "q": "『彼女は今先生と話しています。』を英語で書きなさい。",
+          "a": "She is talking with her teacher now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0021",
+          "type": "変形",
+          "q": "She is talking with her teacher now. を疑問文にしなさい。",
+          "a": "Is she talking with her teacher now?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0022",
+          "type": "変形",
+          "q": "She is talking with her teacher now. を否定文にしなさい。",
+          "a": "She is not talking with her teacher now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0023",
+          "type": "英作文",
+          "q": "『彼らは今ギターを練習しています。』を英語で書きなさい。",
+          "a": "They are practicing the guitar now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0024",
+          "type": "変形",
+          "q": "They are practicing the guitar now. を疑問文にしなさい。",
+          "a": "Are they practicing the guitar now?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0025",
+          "type": "変形",
+          "q": "They are practicing the guitar now. を否定文にしなさい。",
+          "a": "They are not practicing the guitar now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0026",
+          "type": "英作文",
+          "q": "『私たちは今教室をそうじしています。』を英語で書きなさい。",
+          "a": "We are cleaning the classroom now.",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0027",
+          "type": "変形",
+          "q": "We are cleaning the classroom now. を疑問文にしなさい。",
+          "a": "Are you cleaning the classroom now?",
+          "passMeta": -1
+        },
+        {
+          "id": "TH2-PROG-0028",
+          "type": "変形",
+          "q": "We are cleaning the classroom now. を否定文にしなさい。",
+          "a": "We are not cleaning the classroom now.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PROG-0046",
+          "type": "英作文",
+          "q": "『私たちは今そのテストについて話しています。』を英語で書きなさい。",
+          "a": "We are talking about the test now.",
+          "passMeta": -1
+        },
+        {
+          "id": "EX2-PROG-0047",
+          "type": "読解",
+          "q": "次の英文を日本語にしなさい。 We are talking about the test now.",
+          "a": "私たちは今そのテストについて話しています。",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "現在完了形（完了・経験）",
+      "off": 36,
+      "on": 17,
+      "retention_pct": 47.22,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 36,
+      "accepted_by_final_passmeta": 17,
+      "rejected_by_final_passmeta": 19,
+      "rejection_coordinate_values": {
+        "-1": 19
+      },
+      "rejected_type_counts": {
+        "英作文": 7,
+        "空所補充": 2,
+        "見分け": 5,
+        "間違い直し": 5
+      },
+      "top_rejected_surface_tokens": [
+        {
+          "value": "have",
+          "count": 18
+        },
+        {
+          "value": "already",
+          "count": 14
+        },
+        {
+          "value": "my",
+          "count": 12
+        },
+        {
+          "value": "i",
+          "count": 8
+        },
+        {
+          "value": "has",
+          "count": 6
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "finished",
+          "count": 5
+        },
+        {
+          "value": "never",
+          "count": 5
+        },
+        {
+          "value": "book",
+          "count": 4
+        },
+        {
+          "value": "dinner",
+          "count": 4
+        },
+        {
+          "value": "hokkaido",
+          "count": 4
+        },
+        {
+          "value": "homework",
+          "count": 4
+        },
+        {
+          "value": "key",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "their",
+          "count": 4
+        },
+        {
+          "value": "they",
+          "count": 4
+        },
+        {
+          "value": "three",
+          "count": 4
+        },
+        {
+          "value": "times",
+          "count": 4
+        },
+        {
+          "value": "to",
+          "count": 4
+        },
+        {
+          "value": "been",
+          "count": 3
+        },
+        {
+          "value": "done",
+          "count": 3
+        },
+        {
+          "value": "kyoto",
+          "count": 3
+        },
+        {
+          "value": "lost",
+          "count": 3
+        },
+        {
+          "value": "visited",
+          "count": 3
+        },
+        {
+          "value": "read",
+          "count": 2
+        },
+        {
+          "value": "reading",
+          "count": 2
+        },
+        {
+          "value": "she",
+          "count": 2
+        },
+        {
+          "value": "the",
+          "count": 2
+        },
+        {
+          "value": "this",
+          "count": 2
+        },
+        {
+          "value": "be",
+          "count": 1
+        },
+        {
+          "value": "do",
+          "count": 1
+        },
+        {
+          "value": "finish",
+          "count": 1
+        },
+        {
+          "value": "lose",
+          "count": 1
+        },
+        {
+          "value": "play",
+          "count": 1
+        },
+        {
+          "value": "tennis",
+          "count": 1
+        }
+      ],
+      "top_rejected_lemma_candidates": [
+        {
+          "value": "have",
+          "count": 24
+        },
+        {
+          "value": "already",
+          "count": 14
+        },
+        {
+          "value": "my",
+          "count": 12
+        },
+        {
+          "value": "i",
+          "count": 8
+        },
+        {
+          "value": "finish",
+          "count": 6
+        },
+        {
+          "value": "has",
+          "count": 6
+        },
+        {
+          "value": "we",
+          "count": 6
+        },
+        {
+          "value": "finishe",
+          "count": 5
+        },
+        {
+          "value": "finished",
+          "count": 5
+        },
+        {
+          "value": "nev",
+          "count": 5
+        },
+        {
+          "value": "never",
+          "count": 5
+        },
+        {
+          "value": "be",
+          "count": 4
+        },
+        {
+          "value": "book",
+          "count": 4
+        },
+        {
+          "value": "din",
+          "count": 4
+        },
+        {
+          "value": "dinn",
+          "count": 4
+        },
+        {
+          "value": "dinner",
+          "count": 4
+        },
+        {
+          "value": "do",
+          "count": 4
+        },
+        {
+          "value": "hokkaido",
+          "count": 4
+        },
+        {
+          "value": "homework",
+          "count": 4
+        },
+        {
+          "value": "key",
+          "count": 4
+        },
+        {
+          "value": "lose",
+          "count": 4
+        },
+        {
+          "value": "moth",
+          "count": 4
+        },
+        {
+          "value": "mother",
+          "count": 4
+        },
+        {
+          "value": "read",
+          "count": 4
+        },
+        {
+          "value": "their",
+          "count": 4
+        },
+        {
+          "value": "they",
+          "count": 4
+        },
+        {
+          "value": "thre",
+          "count": 4
+        },
+        {
+          "value": "three",
+          "count": 4
+        },
+        {
+          "value": "tim",
+          "count": 4
+        },
+        {
+          "value": "time",
+          "count": 4
+        },
+        {
+          "value": "times",
+          "count": 4
+        },
+        {
+          "value": "to",
+          "count": 4
+        },
+        {
+          "value": "been",
+          "count": 3
+        },
+        {
+          "value": "done",
+          "count": 3
+        },
+        {
+          "value": "kyoto",
+          "count": 3
+        },
+        {
+          "value": "lost",
+          "count": 3
+        },
+        {
+          "value": "visit",
+          "count": 3
+        },
+        {
+          "value": "visite",
+          "count": 3
+        },
+        {
+          "value": "visited",
+          "count": 3
+        },
+        {
+          "value": "reade",
+          "count": 2
+        }
+      ],
+      "rejected_samples": [
+        {
+          "id": "F2-PERF1-0105",
+          "type": "英作文",
+          "q": "『私たちはすでにこの本を読みました。』を英語で書きなさい。",
+          "a": "We have already read this book.",
+          "passMeta": -1
+        },
+        {
+          "id": "F2-PERF1-0106",
+          "type": "空所補充",
+          "q": "We (      ) already read this book.",
+          "a": "have",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0067",
+          "type": "英作文",
+          "q": "『私はもう夕食を食べ終えました。』を英語で書きなさい。",
+          "a": "I have already finished my dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0068",
+          "type": "見分け",
+          "q": "I have already finished my dinner. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Already",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0069",
+          "type": "間違い直し",
+          "q": "I have already finish my dinner. の誤りを直しなさい。",
+          "a": "I have already finished my dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0073",
+          "type": "英作文",
+          "q": "『私たちは京都を3回訪れたことがあります。』を英語で書きなさい。",
+          "a": "We have visited Kyoto three times.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0074",
+          "type": "見分け",
+          "q": "We have visited Kyoto three times. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "経験・完了",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0075",
+          "type": "間違い直し",
+          "q": "We have play tennis three times. の誤りを直しなさい。",
+          "a": "We have visited Kyoto three times.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0079",
+          "type": "英作文",
+          "q": "『母は一度も北海道へ行ったことがありません。』を英語で書きなさい。",
+          "a": "My mother has never been to Hokkaido.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0080",
+          "type": "見分け",
+          "q": "My mother has never been to Hokkaido. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Never",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0081",
+          "type": "間違い直し",
+          "q": "My mother has never be to Hokkaido. の誤りを直しなさい。",
+          "a": "My mother has never been to Hokkaido.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0082",
+          "type": "英作文",
+          "q": "『彼らはすでに宿題をしました。』を英語で書きなさい。",
+          "a": "They have already done their homework.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0083",
+          "type": "見分け",
+          "q": "They have already done their homework. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "Already",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0084",
+          "type": "間違い直し",
+          "q": "They have already do their homework. の誤りを直しなさい。",
+          "a": "They have already done their homework.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0085",
+          "type": "英作文",
+          "q": "『私は鍵をなくしてしまいました。』を英語で書きなさい。",
+          "a": "I have lost my key.",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0086",
+          "type": "見分け",
+          "q": "I have lost my key. に含まれる現在完了のキーワードを答えなさい。",
+          "a": "経験・完了",
+          "passMeta": -1
+        },
+        {
+          "id": "FF2-PERF-0087",
+          "type": "間違い直し",
+          "q": "I have lose my key. の誤りを直しなさい。",
+          "a": "I have lost my key.",
+          "passMeta": -1
+        },
+        {
+          "id": "NX2-BAL-0063",
+          "type": "英作文",
+          "q": "『彼女はすでにその本を読み終えました。』に合う英文を書きなさい。",
+          "a": "She has already finished reading the book.",
+          "passMeta": -1
+        },
+        {
+          "id": "NX2-BAL-0064",
+          "type": "空所補充",
+          "q": "She (      ) already finished reading the book. に入る語を書きなさい。",
+          "a": "has",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "未来の文",
+      "off": 401,
+      "on": 190,
+      "retention_pct": 47.38,
+      "zeroed": false,
+      "severe_under_25pct": false,
+      "under_50pct": true,
+      "original_pool": 0,
+      "accepted_by_final_passmeta": 0,
+      "rejected_by_final_passmeta": 0,
+      "rejection_coordinate_values": {},
+      "rejected_type_counts": {},
+      "top_rejected_surface_tokens": [],
+      "top_rejected_lemma_candidates": [],
+      "rejected_samples": []
+    }
+  ]
+}
