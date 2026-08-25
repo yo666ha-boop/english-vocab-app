@@ -7,10 +7,10 @@
   "added_runtime_categories": [
     "命令文",
     "一般動詞",
-    "文型①"
+    "文型①（look ～，give A B）"
   ],
   "expanded_runtime_categories": [
     "be動詞"
   ],
-  "design": "category-level elementary-safe fallback for learned grammar; be-present diversified across subject/complement and answer forms; sentence-pattern fallback covers look+complement and give A B; existing prerequisite and lexical safety gates remain authoritative; no problem-ID, textbook, section, or measured-count exception"
+  "design": "category-level elementary-safe fallback for learned grammar; pattern-one fallback uses exact runtime stageMap category; existing prerequisite and lexical safety gates remain authoritative; no problem-ID, textbook, section, or measured-count exception"
 }

@@ -247,17 +247,17 @@ function buildPatternOneFallbacks() {
   for(const [s,c] of lookRows){
     const stem=String(n++).padStart(3,'0');
     const full=s+' look'+((s==='He'||s==='She'||s==='It')?'s':'')+' '+c+'.';
-    out.push(vocabFallbackItem('中2','文型①','空所補充','PAT1-LOOK-FILL-'+stem,s+' (      ) '+c+'. 「～に見える」の意味になるように動詞を書きなさい。',(s==='He'||s==='She'||s==='It')?'looks':'look'));
-    out.push(vocabFallbackItem('中2','文型①','英作文','PAT1-LOOK-WRITE-'+stem,'「'+s+'は'+c+'に見えます。」の意味になる英文を書きなさい。',full));
-    out.push(vocabFallbackItem('中2','文型①','間違い直し','PAT1-LOOK-FIX-'+stem,s+' is look '+c+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','空所補充','PAT1-LOOK-FILL-'+stem,s+' (      ) '+c+'. 「～に見える」の意味になるように動詞を書きなさい。',(s==='He'||s==='She'||s==='It')?'looks':'look'));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','英作文','PAT1-LOOK-WRITE-'+stem,'「'+s+'は'+c+'に見えます。」の意味になる英文を書きなさい。',full));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','間違い直し','PAT1-LOOK-FIX-'+stem,s+' is look '+c+'. の誤りを直しなさい。',full));
   }
   for(const [s,p,o] of giveRows){
     const stem=String(n++).padStart(3,'0');
     const verb=(s==='He'||s==='She')?'gives':'give';
     const full=s+' '+verb+' '+p+' '+o+'.';
-    out.push(vocabFallbackItem('中2','文型①','空所補充','PAT1-GIVE-FILL-'+stem,s+' (      ) '+p+' '+o+'. 「人に物を与える」の意味になるように動詞を書きなさい。',verb));
-    out.push(vocabFallbackItem('中2','文型①','英作文','PAT1-GIVE-WRITE-'+stem,'「'+s+'は'+p+'に'+o+'を与えます。」の意味になる英文を書きなさい。',full));
-    out.push(vocabFallbackItem('中2','文型①','並びかえ','PAT1-GIVE-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+o+' / '+p+' / '+verb+' / '+s+' )',full));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','空所補充','PAT1-GIVE-FILL-'+stem,s+' (      ) '+p+' '+o+'. 「人に物を与える」の意味になるように動詞を書きなさい。',verb));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','英作文','PAT1-GIVE-WRITE-'+stem,'「'+s+'は'+p+'に'+o+'を与えます。」の意味になる英文を書きなさい。',full));
+    out.push(vocabFallbackItem('中2','文型①（look ～，give A B）','並びかえ','PAT1-GIVE-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+o+' / '+p+' / '+verb+' / '+s+' )',full));
   }
   return out;
 }
