@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
+const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
 const data=JSON.parse(fs.readFileSync(input,'utf8'));
 const rows=[];
 const byScope={};
@@ -72,9 +73,21 @@ const out={
   zeroed:rows.filter(x=>x.zeroed),
   severe_under_25pct:rows.filter(x=>x.severe_under_25pct),
 };
+const gapOut={
+  generated_at:out.generated_at,
+  scope:data.scope||null,
+  final_section_totals:{
+    category_rows:finalRows.length,
+    zeroed:finalRows.filter(x=>x.zeroed).length,
+    severe_under_25pct:finalRows.filter(x=>x.severe_under_25pct).length,
+    under_50pct:finalRows.filter(x=>x.under_50pct).length
+  },
+  final_under_50pct:finalRows.filter(x=>x.under_50pct),
+  late_quarter_severe_under_25pct:lateRows.filter(x=>x.severe_under_25pct),
+  note:'Final-section rows are mature-grade diagnostics: by the final textbook section, all grammar stages in that grade should be available. Early-section zero/severe rows must not be treated as defects until textbook grammar chronology is applied.'
+};
 fs.writeFileSync(output,JSON.stringify(out,null,2)+'\n');
+fs.writeFileSync(gapOutput,JSON.stringify(gapOut,null,2)+'\n');
 console.log(JSON.stringify(out.totals,null,2));
-console.log('Final-section severe');
-console.log(JSON.stringify(out.final_section.severe_under_25pct,null,2));
 console.log('Final-section under 50');
-console.log(JSON.stringify(out.final_section.under_50pct,null,2));
+console.log(JSON.stringify(gapOut.final_under_50pct,null,2));
