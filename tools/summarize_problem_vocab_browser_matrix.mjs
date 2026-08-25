@@ -8,6 +8,7 @@ import fs from 'node:fs';
 // 2026-08-26: rerun after imperative/present-verb fallback expansion.
 // 2026-08-26: rerun after pattern-one runtime-category fallback fix.
 // 2026-08-26: rerun after remaining severe grammar fallback expansion.
+// 2026-08-26: rerun after past-tense runtime-category fallback fix.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
 const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
