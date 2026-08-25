@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 
+// 2026-08-26: rerun after context-dependent fallback cache fix and fresh final gaps.
 const html=fs.readFileSync('problem-app/index.html','utf8');
 const gaps=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json','utf8'));
 const outPath='audit/PROBLEM_APP_VOCAB_FINAL_GAP_CAUSES.json';
