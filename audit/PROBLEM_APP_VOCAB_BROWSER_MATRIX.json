@@ -1,0 +1,186 @@
+{
+  "url": "file:///home/runner/work/english-vocab-app/english-vocab-app/problem-app/index.html",
+  "matrix": {
+    "中1": {
+      "サンシャイン": {
+        "vocab_off_all_grammar": {
+          "candidates": 2600,
+          "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 2600件 / 教科書: サンシャイン / 単語はここまで: プレステップ2"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 39,
+            "section": "プレステップ2",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 0件 / 教科書: サンシャイン / 単語はここまで: プレステップ2"
+          },
+          {
+            "position": 20,
+            "section_count": 39,
+            "section": "PROGRAM 4-2",
+            "candidates": 510,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 510件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 4-2"
+          },
+          {
+            "position": 39,
+            "section_count": 39,
+            "section": "Power-Up 6",
+            "candidates": 1864,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1864件 / 教科書: サンシャイン / 単語はここまで: Power-Up 6"
+          }
+        ]
+      },
+      "ニューホライズン": {
+        "vocab_off_all_grammar": {
+          "candidates": 2600,
+          "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 2600件 / 教科書: ニューホライズン / 単語はここまで: プレステップ2"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 46,
+            "section": "プレステップ2",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 0件 / 教科書: ニューホライズン / 単語はここまで: プレステップ2"
+          },
+          {
+            "position": 24,
+            "section_count": 46,
+            "section": "Unit 5-2",
+            "candidates": 408,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 408件 / 教科書: ニューホライズン / 単語はここまで: Unit 5-2"
+          },
+          {
+            "position": 46,
+            "section_count": 46,
+            "section": "Let's Read",
+            "candidates": 1835,
+            "status": "全問題 10513件 / 中1の英語元データ 2884件 / この条件で使える候補 1835件 / 教科書: ニューホライズン / 単語はここまで: Let's Read"
+          }
+        ]
+      }
+    },
+    "中2": {
+      "サンシャイン": {
+        "vocab_off_all_grammar": {
+          "candidates": 3055,
+          "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 3055件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 1-1"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 33,
+            "section": "PROGRAM 1-1",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 0件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 1-1"
+          },
+          {
+            "position": 17,
+            "section_count": 33,
+            "section": "Power-Up 3 / Step 3",
+            "candidates": 62,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 62件 / 教科書: サンシャイン / 単語はここまで: Power-Up 3 / Step 3"
+          },
+          {
+            "position": 33,
+            "section_count": 33,
+            "section": "Reading 3",
+            "candidates": 217,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 217件 / 教科書: サンシャイン / 単語はここまで: Reading 3"
+          }
+        ]
+      },
+      "ニューホライズン": {
+        "vocab_off_all_grammar": {
+          "candidates": 3055,
+          "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 3055件 / 教科書: ニューホライズン / 単語はここまで: Unit 0"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 35,
+            "section": "Unit 0",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 0件 / 教科書: ニューホライズン / 単語はここまで: Unit 0"
+          },
+          {
+            "position": 18,
+            "section_count": 35,
+            "section": "Unit 4-3・4",
+            "candidates": 234,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 234件 / 教科書: ニューホライズン / 単語はここまで: Unit 4-3・4"
+          },
+          {
+            "position": 35,
+            "section_count": 35,
+            "section": "Let's Read 3",
+            "candidates": 672,
+            "status": "全問題 10513件 / 中2の英語元データ 3707件 / この条件で使える候補 672件 / 教科書: ニューホライズン / 単語はここまで: Let's Read 3"
+          }
+        ]
+      }
+    },
+    "中3": {
+      "サンシャイン": {
+        "vocab_off_all_grammar": {
+          "candidates": 3920,
+          "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 3920件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 1-1"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 27,
+            "section": "PROGRAM 1-1",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 0件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 1-1"
+          },
+          {
+            "position": 14,
+            "section_count": 27,
+            "section": "PROGRAM 4-3",
+            "candidates": 208,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 208件 / 教科書: サンシャイン / 単語はここまで: PROGRAM 4-3"
+          },
+          {
+            "position": 27,
+            "section_count": 27,
+            "section": "Special Project",
+            "candidates": 208,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 208件 / 教科書: サンシャイン / 単語はここまで: Special Project"
+          }
+        ]
+      },
+      "ニューホライズン": {
+        "vocab_off_all_grammar": {
+          "candidates": 3920,
+          "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 3920件 / 教科書: ニューホライズン / 単語はここまで: Unit 0"
+        },
+        "vocab_on_sections": [
+          {
+            "position": 1,
+            "section_count": 30,
+            "section": "Unit 0",
+            "candidates": 0,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 0件 / 教科書: ニューホライズン / 単語はここまで: Unit 0"
+          },
+          {
+            "position": 16,
+            "section_count": 30,
+            "section": "Unit 4-2",
+            "candidates": 154,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 154件 / 教科書: ニューホライズン / 単語はここまで: Unit 4-2"
+          },
+          {
+            "position": 30,
+            "section_count": 30,
+            "section": "Let's Read 2",
+            "candidates": 154,
+            "status": "全問題 10513件 / 中3の英語元データ 3920件 / この条件で使える候補 154件 / 教科書: ニューホライズン / 単語はここまで: Let's Read 2"
+          }
+        ]
+      }
+    }
+  },
+  "console_errors": []
+}
