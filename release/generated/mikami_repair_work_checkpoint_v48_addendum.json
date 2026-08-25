@@ -1,0 +1,23 @@
+{
+  "checkpoint_version": "v48",
+  "recorded_at": "2026-08-25T11:06:00Z",
+  "repository": "yo666ha-boop/english-vocab-app",
+  "branch": "mikami-canonical-repair",
+  "actual_head_before_checkpoint": "4b62d4f1bb0b69d43f45a15a280eca7f8f1505f0",
+  "problem_app_print_correction": {
+    "main_commit": "b456fd6b1f5260daab4779f56acf74f6625b3bb0",
+    "problem": "Previous fixed page height plus header exceeded available A4 content height, causing page overflow, overlap, and 20 questions to spill beyond two pages.",
+    "fix": "Each A4 page is now a height-limited flex container; title and metadata consume fixed space and the 2-column grid flexes only into the remaining space. Its 5 rows are therefore constrained inside the page.",
+    "expected": "20 questions = exactly two A4 portrait pages; 10 answer boxes per page; no overlap or third page.",
+    "pages_run": {
+      "id": 32840628656,
+      "status": "queued"
+    }
+  },
+  "protected": {
+    "root_main_index_html": "UNCHANGED",
+    "vercel_project": "UNCHANGED (prj_k85GEgd76tQvHoL8YC9IDjnq553e)",
+    "automation_schedule": "NOT_MODIFIED"
+  },
+  "overall_completion": false
+}
