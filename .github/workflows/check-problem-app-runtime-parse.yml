@@ -1,0 +1,40 @@
+name: Check problem app runtime parse
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/check_problem_app_runtime_parse.mjs
+      - .github/workflows/check-problem-app-runtime-parse.yml
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Parse-check app runtime
+        run: node tools/check_problem_app_runtime_parse.mjs
+      - name: Commit result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'diag: record problem app runtime parse check [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
