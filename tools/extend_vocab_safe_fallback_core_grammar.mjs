@@ -75,6 +75,7 @@ const expandedBePresent=String.raw`function buildBePresentFallbacks() {
 
 const patternOneBuilder=String.raw`
 function buildPatternOneFallbacks() {
+  const category='文型①（look ～，give A B）';
   const lookRows=[
     ['You','good'],['He','good'],['She','nice'],['It','nice'],['You','happy'],['He','happy'],['She','happy'],
     ['It','new'],['It','old'],['It','big'],['It','small'],['You','cute'],['She','cute']
@@ -87,17 +88,17 @@ function buildPatternOneFallbacks() {
   for(const [s,c] of lookRows){
     const stem=String(n++).padStart(3,'0');
     const full=s+' look'+((s==='He'||s==='She'||s==='It')?'s':'')+' '+c+'.';
-    out.push(vocabFallbackItem('中2','文型①','空所補充','PAT1-LOOK-FILL-'+stem,s+' (      ) '+c+'. 「～に見える」の意味になるように動詞を書きなさい。',(s==='He'||s==='She'||s==='It')?'looks':'look'));
-    out.push(vocabFallbackItem('中2','文型①','英作文','PAT1-LOOK-WRITE-'+stem,'「'+s+'は'+c+'に見えます。」の意味になる英文を書きなさい。',full));
-    out.push(vocabFallbackItem('中2','文型①','間違い直し','PAT1-LOOK-FIX-'+stem,s+' is look '+c+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中2',category,'空所補充','PAT1-LOOK-FILL-'+stem,s+' (      ) '+c+'. 「～に見える」の意味になるように動詞を書きなさい。',(s==='He'||s==='She'||s==='It')?'looks':'look'));
+    out.push(vocabFallbackItem('中2',category,'英作文','PAT1-LOOK-WRITE-'+stem,'「'+s+'は'+c+'に見えます。」の意味になる英文を書きなさい。',full));
+    out.push(vocabFallbackItem('中2',category,'間違い直し','PAT1-LOOK-FIX-'+stem,s+' is look '+c+'. の誤りを直しなさい。',full));
   }
   for(const [s,p,o] of giveRows){
     const stem=String(n++).padStart(3,'0');
     const verb=(s==='He'||s==='She')?'gives':'give';
     const full=s+' '+verb+' '+p+' '+o+'.';
-    out.push(vocabFallbackItem('中2','文型①','空所補充','PAT1-GIVE-FILL-'+stem,s+' (      ) '+p+' '+o+'. 「人に物を与える」の意味になるように動詞を書きなさい。',verb));
-    out.push(vocabFallbackItem('中2','文型①','英作文','PAT1-GIVE-WRITE-'+stem,'「'+s+'は'+p+'に'+o+'を与えます。」の意味になる英文を書きなさい。',full));
-    out.push(vocabFallbackItem('中2','文型①','並びかえ','PAT1-GIVE-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+o+' / '+p+' / '+verb+' / '+s+' )',full));
+    out.push(vocabFallbackItem('中2',category,'空所補充','PAT1-GIVE-FILL-'+stem,s+' (      ) '+p+' '+o+'. 「人に物を与える」の意味になるように動詞を書きなさい。',verb));
+    out.push(vocabFallbackItem('中2',category,'英作文','PAT1-GIVE-WRITE-'+stem,'「'+s+'は'+p+'に'+o+'を与えます。」の意味になる英文を書きなさい。',full));
+    out.push(vocabFallbackItem('中2',category,'並びかえ','PAT1-GIVE-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+o+' / '+p+' / '+verb+' / '+s+' )',full));
   }
   return out;
 }
@@ -122,6 +123,9 @@ function patch(path){
       '$1buildImperativeFallbacks(),buildPresentVerbFallbacks(),$2');
   }
   src=replaceFunction(src,'buildBePresentFallbacks',expandedBePresent,'buildPastProgressiveFallbacks',path);
+  if(src.includes("vocabFallbackItem('中2','文型①',")){
+    src=src.replaceAll("vocabFallbackItem('中2','文型①',","vocabFallbackItem('中2','文型①（look ～，give A B）',");
+  }
   if(!src.includes('function buildPatternOneFallbacks()')){
     const anchor='function buildConjunctionFallbacks() {';
     const i=src.indexOf(anchor); if(i<0) throw new Error(`${path}: conjunction builder anchor missing for pattern one`);
@@ -135,10 +139,11 @@ function patch(path){
   if(!src.includes('buildImperativeFallbacks(),buildPresentVerbFallbacks()')) throw new Error(`${path}: fallback bank concat patch missing`);
   if(!src.includes('buildPatternOneFallbacks(),buildGerundFallbacks()')) throw new Error(`${path}: pattern one bank concat patch missing`);
   if(!src.includes(' get give use eat') || !src.includes('nice cute happy school')) throw new Error(`${path}: fallback safe-base extension missing`);
+  if(!src.includes("'文型①（look ～，give A B）'")) throw new Error(`${path}: pattern one runtime category mapping missing`);
   fs.writeFileSync(path,src);
 }
 patch(APP);
 patch(INSTALLER);
 fs.mkdirSync('audit',{recursive:true});
-fs.writeFileSync(OUT,JSON.stringify({result:'PASS',files:[APP,INSTALLER],added_runtime_categories:['命令文','一般動詞','文型①'],expanded_runtime_categories:['be動詞'],design:'category-level elementary-safe fallback for learned grammar; be-present diversified across subject/complement and answer forms; sentence-pattern fallback covers look+complement and give A B; existing prerequisite and lexical safety gates remain authoritative; no problem-ID, textbook, section, or measured-count exception'},null,2)+'\n');
+fs.writeFileSync(OUT,JSON.stringify({result:'PASS',files:[APP,INSTALLER],added_runtime_categories:['命令文','一般動詞','文型①（look ～，give A B）'],expanded_runtime_categories:['be動詞'],design:'category-level elementary-safe fallback for learned grammar; pattern-one fallback uses exact runtime stageMap category; existing prerequisite and lexical safety gates remain authoritative; no problem-ID, textbook, section, or measured-count exception'},null,2)+'\n');
 console.log('PASS: core learned-grammar vocab-safe fallbacks installed/expanded');
