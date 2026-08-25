@@ -1,0 +1,51 @@
+name: Problem grammar chronology browser smoke
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/test_problem_grammar_chronology.py
+      - .github/workflows/problem-grammar-chronology-smoke.yml
+      - problem-app/index.html
+
+permissions:
+  contents: write
+
+concurrency:
+  group: problem-grammar-chronology-smoke
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Run chronology browser smoke
+        run: python tools/test_problem_grammar_chronology.py
+      - name: Require protected root unchanged in worktree
+        run: git diff --exit-code -- index.html
+      - name: Commit smoke evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_SMOKE.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record grammar chronology browser smoke [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
