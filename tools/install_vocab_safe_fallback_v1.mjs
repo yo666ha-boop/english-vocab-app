@@ -20,7 +20,7 @@ const fallbackCode=String.raw`
 const VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE = 30;
 let _vocabFallbackBankCache = null;
 
-const VOCAB_FALLBACK_SAFE_BASE = new Set("I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV".toLowerCase().split(/\s+/));
+const VOCAB_FALLBACK_SAFE_BASE = new Set("I you he she we they my your his her their it our am is are can do not yes no a the this that and but what who where when how I'm you're have like want know go come get give walk use eat drink sleep make take study read write speak listen look watch play cook sing swim run meet live help good bad big small new old long short hot cold nice cute happy school teacher student friend English Japanese name class club home city country family bag book pen notebook picture park room dog cat in on at to from with of for be was were been being does did done has had because if as than could may might must should will would shall more most less least there me him us them these those whose why about into over under after before between here please let TV".toLowerCase().split(/\s+/));
 const VOCAB_FALLBACK_IRREGULAR = new Map(Object.entries({went:'go',gone:'go',came:'come',made:'make',took:'take',taken:'take',wrote:'write',written:'write',did:'do',done:'do',has:'have',had:'have',was:'be',were:'be'}));
 
 function vocabFallbackTokenBases(token) {
@@ -262,6 +262,70 @@ function buildPatternOneFallbacks() {
   return out;
 }
 
+
+function buildGrade1ConjunctionFallbacks() {
+  const rows=[
+    ['I study English','I like English','and','私は英語を勉強し、英語が好きです。'],
+    ['I read a book','I write','and','私は本を読み、書きます。'],
+    ['You sing','I listen','and','あなたが歌い、私は聞きます。'],
+    ['I like English','I do not like math','but','私は英語が好きですが、数学は好きではありません。'],
+    ['I am at home','I am happy','and','私は家にいて、うれしいです。'],
+    ['He is a student','She is a student','and','彼も彼女も生徒です。'],
+    ['I play','I am happy','because','私は遊ぶので、うれしいです。'],
+    ['I study English','I like English','because','私は英語が好きなので、英語を勉強します。']
+  ];
+  const out=[]; let n=1;
+  for(const [a,b,c,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=a+' '+c+' '+b+'.';
+    out.push(vocabFallbackItem('中1','接続詞','空所補充','G1-CONJ-FILL-'+stem,a+' (      ) '+b+'. 文の意味に合う接続詞を書きなさい。',c));
+    out.push(vocabFallbackItem('中1','接続詞','英作文','G1-CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','接続詞','並びかえ','G1-CONJ-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+b+' / '+c+' / '+a+' )',full));
+  }
+  return out;
+}
+
+function buildPastVerbFallbacks() {
+  const rows=[
+    ['I','play','played','私は遊びました。'],['I','study','studied','私は勉強しました。'],['I','cook','cooked','私は料理しました。'],
+    ['I','walk','walked','私は歩きました。'],['I','use','used','私は使いました。'],['I','like','liked','私は好きでした。'],
+    ['We','play','played','私たちは遊びました。'],['They','study','studied','彼らは勉強しました。'],['You','cook','cooked','あなたは料理しました。'],
+    ['He','play','played','彼は遊びました。'],['She','study','studied','彼女は勉強しました。'],['He','use','used','彼は使いました。']
+  ];
+  const out=[]; let n=1;
+  for(const [s,base,past,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=s+' '+past+'.';
+    out.push(vocabFallbackItem('中1','一般動詞（過去形）','空所補充','PAST-FILL-'+stem,s+' (      ) yesterday. '+base+'を過去形にして書きなさい。',past));
+    out.push(vocabFallbackItem('中1','一般動詞（過去形）','変形','PAST-CHANGE-'+stem,s+' '+base+'. を過去の文にしなさい。',full));
+    out.push(vocabFallbackItem('中1','一般動詞（過去形）','英作文','PAST-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+  }
+  return out;
+}
+
+function buildPresentPerfectContinuousFallbacks() {
+  const rows=[
+    ['I','have','study English','studying English','私はずっと英語を勉強しています。'],
+    ['I','have','read a book','reading a book','私はずっと本を読んでいます。'],
+    ['I','have','play','playing','私はずっと遊んでいます。'],
+    ['You','have','study English','studying English','あなたはずっと英語を勉強しています。'],
+    ['We','have','study English','studying English','私たちはずっと英語を勉強しています。'],
+    ['They','have','play','playing','彼らはずっと遊んでいます。'],
+    ['He','has','study English','studying English','彼はずっと英語を勉強しています。'],
+    ['She','has','read a book','reading a book','彼女はずっと本を読んでいます。']
+  ];
+  const cat='現在完了形（継続），現在完了進行形';
+  const out=[]; let n=1;
+  for(const [s,aux,base,ing,jp] of rows){
+    const stem=String(n++).padStart(3,'0');
+    const full=s+' '+aux+' been '+ing+'.';
+    out.push(vocabFallbackItem('中3',cat,'空所補充','PPC-FILL-'+stem,s+' '+aux+' been (      ). 現在完了進行形になるように書きなさい。',ing));
+    out.push(vocabFallbackItem('中3',cat,'英作文','PPC-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中3',cat,'並びかえ','PPC-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+ing+' / been / '+aux+' / '+s+' )',full));
+  }
+  return out;
+}
+
 function buildConjunctionFallbacks() {
   const subjects=[
     {en:'I',low:'I',jp:'私は',be:'am'},
@@ -302,7 +366,7 @@ function buildConjunctionFallbacks() {
 
 function vocabFallbackBank() {
   if(_vocabFallbackBankCache) return _vocabFallbackBankCache;
-  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
+  const all=buildBePresentFallbacks().concat(buildPastProgressiveFallbacks(),buildBePastFallbacks(),buildWordOrderFallbacks(),buildImperativeFallbacks(),buildPresentVerbFallbacks(),buildPatternOneFallbacks(),buildGrade1ConjunctionFallbacks(),buildPastVerbFallbacks(),buildPresentPerfectContinuousFallbacks(),buildGerundFallbacks(),buildConjunctionFallbacks());
   const seen=new Set();
   _vocabFallbackBankCache=all.filter(item=>{
     const k=item.id+'\\n'+item.q+'\\n'+item.a;

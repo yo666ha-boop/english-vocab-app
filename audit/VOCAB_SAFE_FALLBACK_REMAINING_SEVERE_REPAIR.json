@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "added_runtime_categories": [
+    "中1 接続詞",
+    "中1 一般動詞（過去形）",
+    "中3 現在完了形（継続），現在完了進行形"
+  ],
+  "design": "generic category-level safe fallback only; grammar chronology and lexical gate remain authoritative; no problem-ID, textbook, section, or measured-count exception"
+}
