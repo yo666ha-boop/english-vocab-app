@@ -1,0 +1,21 @@
+{
+  "applied_at_utc": "2026-08-25T15:16:13.117Z",
+  "status": "installed",
+  "marker": "GRAMMAR_CHRONOLOGY_R7_2025_V1",
+  "version": "r7-2025-publisher-plan-v1",
+  "problem_html_bytes": 3812351,
+  "problem_html_sha256": "8b33c8f190534c7ca48db3a51c7b0ec97743ba8c38b36cff29ecb3a1ad3ccf8c",
+  "source_basis": {
+    "sunshine": "Kairyudo official R7/2025 annual teaching plans, grades 1-3",
+    "new_horizon": "Tokyo Shoseki official R7/2025 annual teaching plans, grades 1-3"
+  },
+  "invariants": {
+    "root_index_modified": false,
+    "question_id_hardcode": false,
+    "future_grammar_hidden_until_source_anchor": true,
+    "g2_current_perfect_hidden": true,
+    "rerender_on_textbook_change": true,
+    "rerender_on_section_change": true,
+    "restore_after_textbook_and_section": true
+  }
+}

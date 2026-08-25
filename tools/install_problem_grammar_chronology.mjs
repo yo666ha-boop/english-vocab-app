@@ -208,9 +208,13 @@ function renderStageOptions(preserveSelection = true) {
   }
 }`;
 
-const renderRe = /function renderStageOptions\(\) \{\n  const stages = subjectConfig\[currentSubject\(\)\]\.stagesByGrade\[currentGrade\(\)\] \|\| \[\];\n  el\('stageArea'\)\.innerHTML = stages\.map\(s => `<label class=\\"ck\\"><input type=\\"checkbox\\" data-stage value=\\"\$\{s\}\\" checked> <span>\$\{s\}<\\\/span><\\\/label>`\)\.join\(''\);\n\}/;
-if (!renderRe.test(html)) throw new Error('renderStageOptions baseline not found');
-html = html.replace(renderRe, block);
+const renderStart = html.indexOf('function renderStageOptions');
+if (renderStart < 0) throw new Error('renderStageOptions function not found');
+let renderEnd = html.indexOf('\n}\n\nfunction renderTypeOptions', renderStart);
+if (renderEnd < 0) renderEnd = html.indexOf('\r\n}\r\n\r\nfunction renderTypeOptions', renderStart);
+if (renderEnd < 0) throw new Error('renderStageOptions end anchor not found');
+renderEnd += html[renderEnd] === '\r' ? 3 : 2;
+html = html.slice(0, renderStart) + block + html.slice(renderEnd);
 
 function replaceOnce(oldText, newText, label) {
   if (!html.includes(oldText)) throw new Error(label + ' baseline not found');
