@@ -24,11 +24,11 @@ function buildBePresentFallbacks() {
     const full=s.en+' '+s.be+' '+c.en+'.';
     const neg=s.en+' '+s.be+' not '+c.en+'.';
     const jp=s.jp+c.jp+'。';
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
-    out.push(vocabFallbackItem('中1','be動詞（現在形）','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
+    out.push(vocabFallbackItem('中1','be動詞','空所補充','BE-FILL-'+stem,s.en+' (      ) '+c.en+'. 「'+jp+'」の意味になるように空所を埋めなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','選択','BE-CHOICE-'+stem,s.en+' ( am / is / are ) '+c.en+'. 正しい語を選びなさい。',s.be));
+    out.push(vocabFallbackItem('中1','be動詞','変形','BE-CHANGE-'+stem,full+' を否定文にしなさい。',neg));
+    out.push(vocabFallbackItem('中1','be動詞','英作文','BE-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jp+'』',full));
+    out.push(vocabFallbackItem('中1','be動詞','間違い直し','BE-FIX-'+stem,s.en+' '+s.wrong+' '+c.en+'. の誤りを直しなさい。',full));
   }
   return out;
 }

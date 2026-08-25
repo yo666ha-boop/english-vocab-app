@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "changed": [
+    {
+      "path": "problem-app/index.html",
+      "replacements": 5
+    },
+    {
+      "path": "tools/install_vocab_safe_fallback_v1.mjs",
+      "replacements": 5
+    },
+    {
+      "path": "tools/extend_vocab_safe_fallback_core_grammar.mjs",
+      "replacements": 5
+    }
+  ],
+  "display_stage": "be動詞（現在形）",
+  "runtime_stage_map_category": "be動詞",
+  "rule": "Fallback items use the actual problem-bank category selected by subjectConfig[英語].stageMap, while chronology continues to expose the display stage. No problem-ID, textbook, section, or measured-count exception."
+}
