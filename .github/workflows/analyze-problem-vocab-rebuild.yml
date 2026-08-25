@@ -1,0 +1,32 @@
+name: Analyze problem vocab rebuild
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/analyze_problem_vocab_rebuild.mjs
+      - .github/workflows/analyze-problem-vocab-rebuild.yml
+      - audit/PROBLEM_APP_VOCAB_REBUILD_TRIGGER.md
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Analyze canonical vocabulary coverage
+        run: node tools/analyze_problem_vocab_rebuild.mjs
+      - name: Commit analysis
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_VOCAB_REBUILD_ANALYSIS.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'diag: record canonical problem vocab rebuild analysis [skip ci]'
+          git push
