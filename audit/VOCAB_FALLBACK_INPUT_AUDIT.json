@@ -1,0 +1,2287 @@
+{
+  "generatedAt": "2026-08-25T12:31:20.323Z",
+  "elementary": {
+    "pdfUnique": 104,
+    "runtimeUnique": 104,
+    "runtimeTokenCount": 104,
+    "missingFromRuntime": [],
+    "extraInRuntime": [],
+    "exactSetMatch": true
+  },
+  "severe": [
+    {
+      "textbook": "サンシャイン",
+      "grade": "中2",
+      "category": "動名詞",
+      "finalOrdinal": 33,
+      "qualityEligible": 396,
+      "passed": 92,
+      "rejected": 304,
+      "retentionPct": 23.23,
+      "rejectedTypes": {
+        "英作文": 132,
+        "変形": 84,
+        "空所補充": 70,
+        "間違い直し": 18
+      },
+      "topNonElementaryTokens": [
+        [
+          "music",
+          58
+        ],
+        [
+          "enjoy",
+          56
+        ],
+        [
+          "science",
+          54
+        ],
+        [
+          "reading",
+          53
+        ],
+        [
+          "speaking",
+          53
+        ],
+        [
+          "listening",
+          49
+        ],
+        [
+          "start",
+          48
+        ],
+        [
+          "making",
+          45
+        ],
+        [
+          "studying",
+          45
+        ],
+        [
+          "using",
+          45
+        ],
+        [
+          "practice",
+          38
+        ],
+        [
+          "comics",
+          36
+        ],
+        [
+          "dinner",
+          36
+        ],
+        [
+          "lunch",
+          36
+        ],
+        [
+          "phone",
+          36
+        ],
+        [
+          "stop",
+          36
+        ],
+        [
+          "love",
+          35
+        ],
+        [
+          "enjoys",
+          30
+        ],
+        [
+          "starts",
+          30
+        ],
+        [
+          "basketball",
+          26
+        ],
+        [
+          "books",
+          26
+        ],
+        [
+          "playing",
+          26
+        ],
+        [
+          "practices",
+          24
+        ],
+        [
+          "stops",
+          24
+        ],
+        [
+          "loves",
+          23
+        ],
+        [
+          "begins",
+          20
+        ],
+        [
+          "cooking",
+          18
+        ],
+        [
+          "internet",
+          18
+        ],
+        [
+          "begin",
+          16
+        ],
+        [
+          "does",
+          10
+        ],
+        [
+          "mika",
+          6
+        ],
+        [
+          "takumi",
+          6
+        ],
+        [
+          "us",
+          6
+        ],
+        [
+          "likes",
+          4
+        ]
+      ],
+      "samples": [
+        {
+          "id": "M2-GER-0587",
+          "type": "空所補充",
+          "q": "I like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0588",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』",
+          "a": "I like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0589",
+          "type": "空所補充",
+          "q": "I enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0590",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』",
+          "a": "I enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0591",
+          "type": "空所補充",
+          "q": "I love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0592",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』",
+          "a": "I love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0593",
+          "type": "空所補充",
+          "q": "I practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0594",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』",
+          "a": "I practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0595",
+          "type": "空所補充",
+          "q": "You like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0596",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは バスケットボールをすることが好きだ。』",
+          "a": "You like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0597",
+          "type": "空所補充",
+          "q": "You enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0598",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 本を読むことを楽しむ。』",
+          "a": "You enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0599",
+          "type": "空所補充",
+          "q": "You love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0600",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 音楽を聞くことが大好きだ。』",
+          "a": "You love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0601",
+          "type": "空所補充",
+          "q": "You practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0602",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 英語を話すことを練習する。』",
+          "a": "You practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0603",
+          "type": "空所補充",
+          "q": "We like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0604",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは バスケットボールをすることが好きだ。』",
+          "a": "We like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0605",
+          "type": "空所補充",
+          "q": "We enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0606",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 本を読むことを楽しむ。』",
+          "a": "We enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0607",
+          "type": "空所補充",
+          "q": "We love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0608",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 音楽を聞くことが大好きだ。』",
+          "a": "We love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0609",
+          "type": "空所補充",
+          "q": "We practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0610",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 英語を話すことを練習する。』",
+          "a": "We practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0611",
+          "type": "空所補充",
+          "q": "They like (      ).",
+          "a": "Playing basketball",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0612",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは バスケットボールをすることが好きだ。』",
+          "a": "They like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0613",
+          "type": "空所補充",
+          "q": "They enjoy (      ).",
+          "a": "Reading books",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0614",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは 本を読むことを楽しむ。』",
+          "a": "They enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0615",
+          "type": "空所補充",
+          "q": "They love (      ).",
+          "a": "Listening to music",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0616",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは 音楽を聞くことが大好きだ。』",
+          "a": "They love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0617",
+          "type": "空所補充",
+          "q": "They practice (      ).",
+          "a": "Speaking English",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER-0618",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは 英語を話すことを練習する。』",
+          "a": "They practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0481",
+          "type": "変形",
+          "q": "I like playing basketball. を否定文にしなさい。",
+          "a": "I do not like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0482",
+          "type": "英作文",
+          "q": "『私は バスケットボールをすることが好きだ。』に合う文を書きなさい。",
+          "a": "I like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0483",
+          "type": "変形",
+          "q": "I enjoy reading books. を否定文にしなさい。",
+          "a": "I do not enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0484",
+          "type": "英作文",
+          "q": "『私は 本を読むことを楽しむ。』に合う文を書きなさい。",
+          "a": "I enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0485",
+          "type": "変形",
+          "q": "I love listening to music. を否定文にしなさい。",
+          "a": "I do not love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0486",
+          "type": "英作文",
+          "q": "『私は 音楽を聞くことが大好きだ。』に合う文を書きなさい。",
+          "a": "I love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0487",
+          "type": "変形",
+          "q": "I practice speaking English. を否定文にしなさい。",
+          "a": "I do not practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0488",
+          "type": "英作文",
+          "q": "『私は 英語を話すことを練習する。』に合う文を書きなさい。",
+          "a": "I practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0491",
+          "type": "変形",
+          "q": "I start making dinner. を否定文にしなさい。",
+          "a": "I do not start making dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0492",
+          "type": "英作文",
+          "q": "『私は 夕食を作り始める。』に合う文を書きなさい。",
+          "a": "I start making dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0505",
+          "type": "変形",
+          "q": "You like playing basketball. を否定文にしなさい。",
+          "a": "You do not like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0506",
+          "type": "英作文",
+          "q": "『あなたは バスケットボールをすることが好きだ。』に合う文を書きなさい。",
+          "a": "You like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0507",
+          "type": "変形",
+          "q": "You enjoy reading books. を否定文にしなさい。",
+          "a": "You do not enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0508",
+          "type": "英作文",
+          "q": "『あなたは 本を読むことを楽しむ。』に合う文を書きなさい。",
+          "a": "You enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0509",
+          "type": "変形",
+          "q": "You love listening to music. を否定文にしなさい。",
+          "a": "You do not love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0510",
+          "type": "英作文",
+          "q": "『あなたは 音楽を聞くことが大好きだ。』に合う文を書きなさい。",
+          "a": "You love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0511",
+          "type": "変形",
+          "q": "You practice speaking English. を否定文にしなさい。",
+          "a": "You do not practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0512",
+          "type": "英作文",
+          "q": "『あなたは 英語を話すことを練習する。』に合う文を書きなさい。",
+          "a": "You practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0515",
+          "type": "変形",
+          "q": "You start making dinner. を否定文にしなさい。",
+          "a": "You do not start making dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0516",
+          "type": "英作文",
+          "q": "『あなたは 夕食を作り始める。』に合う文を書きなさい。",
+          "a": "You start making dinner.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0529",
+          "type": "変形",
+          "q": "We like playing basketball. を否定文にしなさい。",
+          "a": "We do not like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0530",
+          "type": "英作文",
+          "q": "『私たちは バスケットボールをすることが好きだ。』に合う文を書きなさい。",
+          "a": "We like playing basketball.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0531",
+          "type": "変形",
+          "q": "We enjoy reading books. を否定文にしなさい。",
+          "a": "We do not enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0532",
+          "type": "英作文",
+          "q": "『私たちは 本を読むことを楽しむ。』に合う文を書きなさい。",
+          "a": "We enjoy reading books.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0533",
+          "type": "変形",
+          "q": "We love listening to music. を否定文にしなさい。",
+          "a": "We do not love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0534",
+          "type": "英作文",
+          "q": "『私たちは 音楽を聞くことが大好きだ。』に合う文を書きなさい。",
+          "a": "We love listening to music.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0535",
+          "type": "変形",
+          "q": "We practice speaking English. を否定文にしなさい。",
+          "a": "We do not practice speaking English.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2X-GER-0536",
+          "type": "英作文",
+          "q": "『私たちは 英語を話すことを練習する。』に合う文を書きなさい。",
+          "a": "We practice speaking English.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "textbook": "サンシャイン",
+      "grade": "中3",
+      "category": "接続詞",
+      "finalOrdinal": 27,
+      "qualityEligible": 120,
+      "passed": 25,
+      "rejected": 95,
+      "retentionPct": 20.83,
+      "rejectedTypes": {
+        "並びかえ": 20,
+        "英作文": 20,
+        "読解": 20,
+        "間違い直し": 20,
+        "空所補充": 10,
+        "選択": 5
+      },
+      "topNonElementaryTokens": [
+        [
+          "was",
+          125
+        ],
+        [
+          "because",
+          90
+        ],
+        [
+          "if",
+          45
+        ],
+        [
+          "stayed",
+          45
+        ],
+        [
+          "absent",
+          40
+        ],
+        [
+          "rainy",
+          40
+        ],
+        [
+          "sick",
+          40
+        ],
+        [
+          "tired",
+          21
+        ],
+        [
+          "bed",
+          20
+        ],
+        [
+          "early",
+          20
+        ],
+        [
+          "hard",
+          20
+        ],
+        [
+          "pass",
+          20
+        ],
+        [
+          "test",
+          20
+        ],
+        [
+          "went",
+          20
+        ],
+        [
+          "will",
+          20
+        ],
+        [
+          "arrive",
+          10
+        ],
+        [
+          "call",
+          10
+        ],
+        [
+          "me",
+          10
+        ],
+        [
+          "boy",
+          5
+        ],
+        [
+          "brother",
+          5
+        ],
+        [
+          "emi",
+          5
+        ],
+        [
+          "father",
+          5
+        ],
+        [
+          "girl",
+          5
+        ],
+        [
+          "ken",
+          5
+        ],
+        [
+          "mother",
+          5
+        ],
+        [
+          "sister",
+          5
+        ],
+        [
+          "team",
+          5
+        ],
+        [
+          "tom",
+          5
+        ],
+        [
+          "yuki",
+          5
+        ],
+        [
+          "station",
+          2
+        ],
+        [
+          "classroom",
+          1
+        ],
+        [
+          "gym",
+          1
+        ],
+        [
+          "hospital",
+          1
+        ],
+        [
+          "hungry",
+          1
+        ],
+        [
+          "museum",
+          1
+        ],
+        [
+          "office",
+          1
+        ],
+        [
+          "pool",
+          1
+        ],
+        [
+          "sad",
+          1
+        ],
+        [
+          "sleepy",
+          1
+        ],
+        [
+          "slow",
+          1
+        ],
+        [
+          "town",
+          1
+        ],
+        [
+          "zoo",
+          1
+        ]
+      ],
+      "samples": [
+        {
+          "id": "M3N-01083",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Iは疲れていたので、早く寝ました。』",
+          "a": "I went to bed early because I was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01084",
+          "type": "間違い直し",
+          "q": "If it was rainy, I stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, I stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01085",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01086",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01089",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Youは疲れていたので、早く寝ました。』",
+          "a": "You went to bed early because you was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01090",
+          "type": "間違い直し",
+          "q": "If it was rainy, you stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, you stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01091",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01092",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01093",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was tired. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01094",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the station. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01095",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Heは疲れていたので、早く寝ました。』",
+          "a": "He went to bed early because he was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01096",
+          "type": "間違い直し",
+          "q": "If it was rainy, he stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, he stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01097",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01098",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01101",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Sheは疲れていたので、早く寝ました。』",
+          "a": "She went to bed early because she was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01102",
+          "type": "間違い直し",
+          "q": "If it was rainy, she stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, she stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01103",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01104",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01105",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was hungry. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01107",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Weは疲れていたので、早く寝ました。』",
+          "a": "We went to bed early because we was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01108",
+          "type": "間違い直し",
+          "q": "If it was rainy, we stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, we stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01109",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01110",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01112",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the hospital. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01113",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Theyは疲れていたので、早く寝ました。』",
+          "a": "They went to bed early because they was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01114",
+          "type": "間違い直し",
+          "q": "If it was rainy, they stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, they stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01115",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01116",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01117",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was sleepy. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01118",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the museum. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01119",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My fatherは疲れていたので、早く寝ました。』",
+          "a": "My father went to bed early because my father was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01120",
+          "type": "間違い直し",
+          "q": "If it was rainy, my father stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my father stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01121",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01122",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01123",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was sad. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01125",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My motherは疲れていたので、早く寝ました。』",
+          "a": "My mother went to bed early because my mother was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01126",
+          "type": "間違い直し",
+          "q": "If it was rainy, my mother stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my mother stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01127",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01128",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01130",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the classroom. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01131",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My brotherは疲れていたので、早く寝ました。』",
+          "a": "My brother went to bed early because my brother was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01132",
+          "type": "間違い直し",
+          "q": "If it was rainy, my brother stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my brother stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01133",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01134",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01137",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My sisterは疲れていたので、早く寝ました。』",
+          "a": "My sister went to bed early because my sister was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01138",
+          "type": "間違い直し",
+          "q": "If it was rainy, my sister stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my sister stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01139",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01140",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01142",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the gym. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01143",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Kenは疲れていたので、早く寝ました。』",
+          "a": "Ken went to bed early because Ken was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01144",
+          "type": "間違い直し",
+          "q": "If it was rainy, Ken stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Ken stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01145",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01146",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01148",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the pool. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01149",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Yukiは疲れていたので、早く寝ました。』",
+          "a": "Yuki went to bed early because Yuki was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01150",
+          "type": "間違い直し",
+          "q": "If it was rainy, Yuki stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Yuki stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01151",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01152",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01154",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the office. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01155",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Tomは疲れていたので、早く寝ました。』",
+          "a": "Tom went to bed early because Tom was tired.",
+          "passMeta": -1
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "textbook": "ニューホライズン",
+      "grade": "中2",
+      "category": "動名詞",
+      "finalOrdinal": 35,
+      "qualityEligible": 396,
+      "passed": 306,
+      "rejected": 90,
+      "retentionPct": 77.27,
+      "rejectedTypes": {
+        "英作文": 42,
+        "変形": 18,
+        "空所補充": 18,
+        "間違い直し": 12
+      },
+      "topNonElementaryTokens": [
+        [
+          "science",
+          54
+        ],
+        [
+          "studying",
+          45
+        ],
+        [
+          "using",
+          45
+        ],
+        [
+          "phone",
+          36
+        ],
+        [
+          "stop",
+          36
+        ],
+        [
+          "stops",
+          24
+        ],
+        [
+          "begins",
+          20
+        ],
+        [
+          "internet",
+          18
+        ],
+        [
+          "start",
+          18
+        ],
+        [
+          "begin",
+          16
+        ],
+        [
+          "starts",
+          6
+        ],
+        [
+          "us",
+          6
+        ],
+        [
+          "mika",
+          2
+        ],
+        [
+          "takumi",
+          2
+        ]
+      ],
+      "samples": [
+        {
+          "id": "M2Y-GER-0254",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』",
+          "a": "I stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0255",
+          "type": "間違い直し",
+          "q": "I stop to us. の誤りを直しなさい。",
+          "a": "I stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0256",
+          "type": "英作文",
+          "q": "『私は インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "I stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0257",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』",
+          "a": "I start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0258",
+          "type": "間違い直し",
+          "q": "I start to study. の誤りを直しなさい。",
+          "a": "I start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0259",
+          "type": "英作文",
+          "q": "『私は 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "I start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0269",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは インターネットを使うのをやめる。』",
+          "a": "You stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0270",
+          "type": "間違い直し",
+          "q": "You stop to us. の誤りを直しなさい。",
+          "a": "You stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0271",
+          "type": "英作文",
+          "q": "『あなたは インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "You stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0272",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『あなたは 理科を勉強し始める。』",
+          "a": "You start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0273",
+          "type": "間違い直し",
+          "q": "You start to study. の誤りを直しなさい。",
+          "a": "You start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0274",
+          "type": "英作文",
+          "q": "『あなたは 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "You start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0284",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは インターネットを使うのをやめる。』",
+          "a": "We stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0285",
+          "type": "間違い直し",
+          "q": "We stop to us. の誤りを直しなさい。",
+          "a": "We stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0286",
+          "type": "英作文",
+          "q": "『私たちは インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "We stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0287",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『私たちは 理科を勉強し始める。』",
+          "a": "We start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0288",
+          "type": "間違い直し",
+          "q": "We start to study. の誤りを直しなさい。",
+          "a": "We start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0289",
+          "type": "英作文",
+          "q": "『私たちは 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "We start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0299",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは インターネットを使うのをやめる。』",
+          "a": "They stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0300",
+          "type": "間違い直し",
+          "q": "They stop to us. の誤りを直しなさい。",
+          "a": "They stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0301",
+          "type": "英作文",
+          "q": "『彼らは インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "They stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0302",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼らは 理科を勉強し始める。』",
+          "a": "They start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0303",
+          "type": "間違い直し",
+          "q": "They start to study. の誤りを直しなさい。",
+          "a": "They start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0304",
+          "type": "英作文",
+          "q": "『彼らは 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "They start studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0314",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼は インターネットを使うのをやめる。』",
+          "a": "He stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0315",
+          "type": "間違い直し",
+          "q": "He stop to us. の誤りを直しなさい。",
+          "a": "He stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0316",
+          "type": "英作文",
+          "q": "『彼は インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "He stop using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0317",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼は 理科を勉強し始める。』",
+          "a": "He starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0318",
+          "type": "間違い直し",
+          "q": "He start to study. の誤りを直しなさい。",
+          "a": "He starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0319",
+          "type": "英作文",
+          "q": "『彼は 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "He starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0329",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼女は インターネットを使うのをやめる。』",
+          "a": "She stops using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0330",
+          "type": "間違い直し",
+          "q": "She stops to us. の誤りを直しなさい。",
+          "a": "She stops using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0331",
+          "type": "英作文",
+          "q": "『彼女は インターネットを使うのをやめる。』に合う文を書きなさい。",
+          "a": "She stops using the internet.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0332",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『彼女は 理科を勉強し始める。』",
+          "a": "She starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0333",
+          "type": "間違い直し",
+          "q": "She start to study. の誤りを直しなさい。",
+          "a": "She starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2Y-GER-0334",
+          "type": "英作文",
+          "q": "『彼女は 理科を勉強し始める。』に合う文を書きなさい。",
+          "a": "She starts studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0812",
+          "type": "空所補充",
+          "q": "I stop (      ). 「スマホを使うのをやめる」",
+          "a": "using the phone",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0813",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私は スマホを使うのをやめる。』",
+          "a": "I stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0814",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I stop (use) the phone.",
+          "a": "I stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0818",
+          "type": "空所補充",
+          "q": "I begin (      ). 「理科を勉強し始める」",
+          "a": "studying science",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0819",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』",
+          "a": "I begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0820",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I begin (study) science.",
+          "a": "I begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0866",
+          "type": "空所補充",
+          "q": "You stop (      ). 「スマホを使うのをやめる」",
+          "a": "using the phone",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0867",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『あなたは スマホを使うのをやめる。』",
+          "a": "You stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0868",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You stop (use) the phone.",
+          "a": "You stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0872",
+          "type": "空所補充",
+          "q": "You begin (      ). 「理科を勉強し始める」",
+          "a": "studying science",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0873",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『あなたは 理科を勉強し始める。』",
+          "a": "You begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0874",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 You begin (study) science.",
+          "a": "You begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0920",
+          "type": "空所補充",
+          "q": "We stop (      ). 「スマホを使うのをやめる」",
+          "a": "using the phone",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0921",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私たちは スマホを使うのをやめる。』",
+          "a": "We stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0922",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We stop (use) the phone.",
+          "a": "We stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0926",
+          "type": "空所補充",
+          "q": "We begin (      ). 「理科を勉強し始める」",
+          "a": "studying science",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0927",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私たちは 理科を勉強し始める。』",
+          "a": "We begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0928",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 We begin (study) science.",
+          "a": "We begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0974",
+          "type": "空所補充",
+          "q": "They stop (      ). 「スマホを使うのをやめる」",
+          "a": "using the phone",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0975",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『彼らは スマホを使うのをやめる。』",
+          "a": "They stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0976",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 They stop (use) the phone.",
+          "a": "They stop using the phone.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0980",
+          "type": "空所補充",
+          "q": "They begin (      ). 「理科を勉強し始める」",
+          "a": "studying science",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0981",
+          "type": "英作文",
+          "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『彼らは 理科を勉強し始める。』",
+          "a": "They begin studying science.",
+          "passMeta": -1
+        },
+        {
+          "id": "M2-GER2-0982",
+          "type": "変形",
+          "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 They begin (study) science.",
+          "a": "They begin studying science.",
+          "passMeta": -1
+        }
+      ]
+    },
+    {
+      "textbook": "ニューホライズン",
+      "grade": "中3",
+      "category": "接続詞",
+      "finalOrdinal": 30,
+      "qualityEligible": 120,
+      "passed": 31,
+      "rejected": 89,
+      "retentionPct": 25.83,
+      "rejectedTypes": {
+        "並びかえ": 20,
+        "英作文": 20,
+        "読解": 20,
+        "間違い直し": 20,
+        "選択": 5,
+        "空所補充": 4
+      },
+      "topNonElementaryTokens": [
+        [
+          "was",
+          125
+        ],
+        [
+          "because",
+          90
+        ],
+        [
+          "if",
+          45
+        ],
+        [
+          "stayed",
+          45
+        ],
+        [
+          "absent",
+          40
+        ],
+        [
+          "rainy",
+          40
+        ],
+        [
+          "sick",
+          40
+        ],
+        [
+          "tired",
+          21
+        ],
+        [
+          "bed",
+          20
+        ],
+        [
+          "early",
+          20
+        ],
+        [
+          "hard",
+          20
+        ],
+        [
+          "pass",
+          20
+        ],
+        [
+          "test",
+          20
+        ],
+        [
+          "went",
+          20
+        ],
+        [
+          "will",
+          20
+        ],
+        [
+          "boy",
+          5
+        ],
+        [
+          "brother",
+          5
+        ],
+        [
+          "emi",
+          5
+        ],
+        [
+          "father",
+          5
+        ],
+        [
+          "girl",
+          5
+        ],
+        [
+          "ken",
+          5
+        ],
+        [
+          "mother",
+          5
+        ],
+        [
+          "sister",
+          5
+        ],
+        [
+          "team",
+          5
+        ],
+        [
+          "tom",
+          5
+        ],
+        [
+          "yuki",
+          5
+        ],
+        [
+          "arrive",
+          4
+        ],
+        [
+          "call",
+          4
+        ],
+        [
+          "me",
+          4
+        ],
+        [
+          "classroom",
+          1
+        ],
+        [
+          "hungry",
+          1
+        ],
+        [
+          "pool",
+          1
+        ],
+        [
+          "sleepy",
+          1
+        ],
+        [
+          "slow",
+          1
+        ],
+        [
+          "strong",
+          1
+        ],
+        [
+          "town",
+          1
+        ],
+        [
+          "zoo",
+          1
+        ]
+      ],
+      "samples": [
+        {
+          "id": "M3N-01083",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Iは疲れていたので、早く寝ました。』",
+          "a": "I went to bed early because I was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01084",
+          "type": "間違い直し",
+          "q": "If it was rainy, I stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, I stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01085",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01086",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01089",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Youは疲れていたので、早く寝ました。』",
+          "a": "You went to bed early because you was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01090",
+          "type": "間違い直し",
+          "q": "If it was rainy, you stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, you stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01091",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01092",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01093",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was tired. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01095",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Heは疲れていたので、早く寝ました。』",
+          "a": "He went to bed early because he was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01096",
+          "type": "間違い直し",
+          "q": "If it was rainy, he stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, he stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01097",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01098",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01101",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Sheは疲れていたので、早く寝ました。』",
+          "a": "She went to bed early because she was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01102",
+          "type": "間違い直し",
+          "q": "If it was rainy, she stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, she stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01103",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01104",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01105",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was hungry. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01107",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Weは疲れていたので、早く寝ました。』",
+          "a": "We went to bed early because we was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01108",
+          "type": "間違い直し",
+          "q": "If it was rainy, we stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, we stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01109",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01110",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01113",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Theyは疲れていたので、早く寝ました。』",
+          "a": "They went to bed early because they was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01114",
+          "type": "間違い直し",
+          "q": "If it was rainy, they stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, they stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01115",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01116",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01117",
+          "type": "選択",
+          "q": "I stayed at home ( because / if / when ) I was sleepy. 正しいものを選びなさい。",
+          "a": "Because",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01119",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My fatherは疲れていたので、早く寝ました。』",
+          "a": "My father went to bed early because my father was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01120",
+          "type": "間違い直し",
+          "q": "If it was rainy, my father stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my father stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01121",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01122",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01125",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My motherは疲れていたので、早く寝ました。』",
+          "a": "My mother went to bed early because my mother was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01126",
+          "type": "間違い直し",
+          "q": "If it was rainy, my mother stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my mother stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01127",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01128",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01130",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the classroom. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01131",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My brotherは疲れていたので、早く寝ました。』",
+          "a": "My brother went to bed early because my brother was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01132",
+          "type": "間違い直し",
+          "q": "If it was rainy, my brother stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my brother stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01133",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01134",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01137",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『My sisterは疲れていたので、早く寝ました。』",
+          "a": "My sister went to bed early because my sister was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01138",
+          "type": "間違い直し",
+          "q": "If it was rainy, my sister stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, my sister stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01139",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01140",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01143",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Kenは疲れていたので、早く寝ました。』",
+          "a": "Ken went to bed early because Ken was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01144",
+          "type": "間違い直し",
+          "q": "If it was rainy, Ken stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Ken stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01145",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01146",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01148",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the pool. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01149",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Yukiは疲れていたので、早く寝ました。』",
+          "a": "Yuki went to bed early because Yuki was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01150",
+          "type": "間違い直し",
+          "q": "If it was rainy, Yuki stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Yuki stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01151",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01152",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01155",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Tomは疲れていたので、早く寝ました。』",
+          "a": "Tom went to bed early because Tom was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01156",
+          "type": "間違い直し",
+          "q": "If it was rainy, Tom stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Tom stayed home.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01157",
+          "type": "並びかえ",
+          "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+          "a": "He was absent because he was sick.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01158",
+          "type": "読解",
+          "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+          "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01160",
+          "type": "空所補充",
+          "q": "Call me (      ) you arrive at the zoo. 「〜するとき」に合う語を書きなさい。",
+          "a": "When",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01161",
+          "type": "英作文",
+          "q": "次の日本語に合う英文を書きなさい。『Emiは疲れていたので、早く寝ました。』",
+          "a": "Emi went to bed early because Emi was tired.",
+          "passMeta": -1
+        },
+        {
+          "id": "M3N-01162",
+          "type": "間違い直し",
+          "q": "If it was rainy, Emi stayed home. を『雨だったので家にいた』の意味になるように直しなさい。",
+          "a": "Because it was rainy, Emi stayed home.",
+          "passMeta": -1
+        }
+      ]
+    }
+  ]
+}
