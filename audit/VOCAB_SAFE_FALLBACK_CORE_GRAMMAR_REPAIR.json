@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "added_categories": [
+    "be動詞（現在形）",
+    "過去進行形"
+  ],
+  "design": "grammar-category fallback uses only existing elementary-safe vocabulary and existing prerequisite/quality gates; no problem-ID, section, textbook, or measured-count exception"
+}
