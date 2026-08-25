@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 
+// 2026-08-26: rerun after dynamic learned-grammar matrix landed.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
 const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
@@ -84,7 +85,7 @@ const gapOut={
   },
   final_under_50pct:finalRows.filter(x=>x.under_50pct),
   late_quarter_severe_under_25pct:lateRows.filter(x=>x.severe_under_25pct),
-  note:'Final-section rows are mature-grade diagnostics: by the final textbook section, all grammar stages in that grade should be available. Early-section zero/severe rows must not be treated as defects until textbook grammar chronology is applied.'
+  note:'Rows are chronology-aware when the source matrix exposes only currently learned stages. Final-section rows remain mature-grade diagnostics.'
 };
 fs.writeFileSync(output,JSON.stringify(out,null,2)+'\n');
 fs.writeFileSync(gapOutput,JSON.stringify(gapOut,null,2)+'\n');
