@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "changes": [
+    "there/look Japanese prompts now exactly match the English place/content",
+    "question-word Who examples now have semantically valid answers",
+    "question-word answer-to-question prompts use natural Japanese ask labels"
+  ],
+  "design": "wording/semantic quality refinement only; IDs, categories, types, generic floor, chronology, and lexical safety policy unchanged"
+}
