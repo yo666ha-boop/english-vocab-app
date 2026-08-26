@@ -1,0 +1,50 @@
+{
+  "url": "file:///home/runner/work/english-vocab-app/english-vocab-app/problem-app/index.html",
+  "grade": {
+    "中1": {
+      "categories": 1,
+      "sections": 39
+    },
+    "中2": {
+      "categories": 12,
+      "sections": 33
+    },
+    "changed": true
+  },
+  "textbook": {
+    "NH_sections": 35,
+    "SS_sections": 33,
+    "changed": true
+  },
+  "section": {
+    "first": {
+      "v": "PROGRAM 1-1",
+      "t": "PROGRAM 1-1"
+    },
+    "last": {
+      "v": "Reading 3",
+      "t": "Reading 3"
+    },
+    "first_candidates": null,
+    "last_candidates": null,
+    "selected_value": "Reading 3"
+  },
+  "random": {
+    "category": "動名詞",
+    "type": "英作文",
+    "ordered_count": 0,
+    "random_count": 0,
+    "ordered_ids": [],
+    "random_ids": [],
+    "different": false
+  },
+  "search": {
+    "discovered": []
+  },
+  "result": "FAIL",
+  "failures": [
+    "section selection produced no candidate status",
+    "ordered/random generation did not create 20 questions",
+    "no visible search control discovered"
+  ]
+}
