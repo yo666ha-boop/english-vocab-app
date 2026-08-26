@@ -1063,8 +1063,9 @@ function buildConjunctionFallbacks() {
     scenarios.push({conj:'if',hint:'もし〜なら',en:'If '+s.low+' '+s.be+' at home, '+s.low+' read a book.',jp:'もし家にいるなら、'+s.jp+'本を読みます。'});
   }
   const out=[];
-  scenarios.forEach((sc,i)=>{
+  for(const grade of ['中2','中3']) scenarios.forEach((sc,i)=>{
     const stem=String(i+1).padStart(3,'0');
+    const prefix=grade==='中2'?'G2-CONJ':'CONJ';
     const blank=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'(      )');
     const select=sc.en.replace(new RegExp('\\b'+sc.conj+'\\b','i'),'( because / if / when )');
     const wrong=sc.conj==='because'?'if':(sc.conj==='if'?'because':'if');
@@ -1072,16 +1073,15 @@ function buildConjunctionFallbacks() {
     const clean=sc.en.replace(/[.,]/g,'').split(/\s+/);
     const shift=(i%Math.max(1,clean.length-1))+1;
     const scrambled=clean.slice(shift).concat(clean.slice(0,shift)).join(' / ');
-    out.push(vocabFallbackItem('中3','接続詞','空所補充','CONJ-FILL-'+stem,blank+' 「'+sc.hint+'」に合う接続詞を書きなさい。',sc.conj));
-    out.push(vocabFallbackItem('中3','接続詞','選択','CONJ-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
-    out.push(vocabFallbackItem('中3','接続詞','英作文','CONJ-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
-    out.push(vocabFallbackItem('中3','接続詞','間違い直し','CONJ-FIX-'+stem,wrongSentence+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
-    out.push(vocabFallbackItem('中3','接続詞','読解','CONJ-READ-'+stem,sc.en+' 問い：この文の内容を日本語で書きなさい。',sc.jp));
-    out.push(vocabFallbackItem('中3','接続詞','並びかえ','CONJ-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+scrambled+' )',sc.en));
+    out.push(vocabFallbackItem(grade,'接続詞','空所補充',prefix+'-FILL-'+stem,blank+' 「'+sc.hint+'」に合う接続詞を書きなさい。',sc.conj));
+    out.push(vocabFallbackItem(grade,'接続詞','選択',prefix+'-CHOICE-'+stem,select+' 正しい接続詞を選びなさい。',sc.conj));
+    out.push(vocabFallbackItem(grade,'接続詞','英作文',prefix+'-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+sc.jp+'』',sc.en));
+    out.push(vocabFallbackItem(grade,'接続詞','間違い直し',prefix+'-FIX-'+stem,wrongSentence+' を『'+sc.jp+'』の意味になるように直しなさい。',sc.en));
+    out.push(vocabFallbackItem(grade,'接続詞','読解',prefix+'-READ-'+stem,sc.en+' 問い：この文の内容を日本語で書きなさい。',sc.jp));
+    out.push(vocabFallbackItem(grade,'接続詞','並びかえ',prefix+'-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+scrambled+' )',sc.en));
   });
   return out;
 }
-
 
 function buildCombinedThereLookFallbacks() {
   // Exact runtime category used by the combined G1 display stage.
@@ -1126,15 +1126,16 @@ function buildQuestionWordFallbacks() {
     {wh:'What',ask:'もの',body:'do we study',answer:'English.'},
     {wh:'Who',ask:'人',body:'is a teacher',answer:'She is a teacher.'}
   ];
-  const out=[]; let n=1;
-  for(const r of rows){
-    const stem=String(n++).padStart(3,'0');
+  const out=[];
+  for(const grade of ['中1','中2']) rows.forEach((r,i)=>{
+    const stem=String(i+1).padStart(3,'0');
+    const prefix=grade==='中1'?'G1-WH':'WH';
     const full=r.wh+' '+r.body+'?';
-    out.push(vocabFallbackItem('中2',cat,'空所補充','WH-FILL-'+stem,'(      ) '+r.body+'? — '+r.answer+' 空所に入る疑問詞を書きなさい。',r.wh));
-    out.push(vocabFallbackItem('中2',cat,'選択','WH-CHOICE-'+stem,'( What / Who / Where ) '+r.body+'? — '+r.answer+' 最も適切な疑問詞を選びなさい。',r.wh));
-    out.push(vocabFallbackItem('中2',cat,'答えから質問文','WH-Q-'+stem,r.answer+' という答えになるように、'+r.ask+'をたずねる疑問文を書きなさい。',full));
-    out.push(vocabFallbackItem('中2',cat,'並びかえ','WH-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+r.body+' / '+r.wh+' )',full));
-  }
+    out.push(vocabFallbackItem(grade,cat,'空所補充',prefix+'-FILL-'+stem,'(      ) '+r.body+'? — '+r.answer+' 空所に入る疑問詞を書きなさい。',r.wh));
+    out.push(vocabFallbackItem(grade,cat,'選択',prefix+'-CHOICE-'+stem,'( What / Who / Where ) '+r.body+'? — '+r.answer+' 最も適切な疑問詞を選びなさい。',r.wh));
+    out.push(vocabFallbackItem(grade,cat,'答えから質問文',prefix+'-Q-'+stem,r.answer+' という答えになるように、'+r.ask+'をたずねる疑問文を書きなさい。',full));
+    out.push(vocabFallbackItem(grade,cat,'並びかえ',prefix+'-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+r.body+' / '+r.wh+' )',full));
+  });
   return out;
 }
 

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-08-26T06:58:52.326Z",
+  "result": "PASS",
+  "files": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "repair": {
+    "question_words": [
+      "中1",
+      "中2"
+    ],
+    "conjunctions": [
+      "中2",
+      "中3"
+    ]
+  },
+  "policy": "generalize existing safe category-level fallback builders across grades where the same learned grammar category is used; no textbook/unit/problem-ID/count exception; grammar chronology, vocabulary chronology, lexical safety, quality, and supplemental cap remain authoritative"
+}
