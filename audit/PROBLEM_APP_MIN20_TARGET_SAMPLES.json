@@ -1,0 +1,524 @@
+{
+  "人称代名詞": [
+    {
+      "id": "R2-PRON-0061",
+      "type": "選択",
+      "q": "Ken is talking to me. ( I / me / my ) am his friend.",
+      "a": "I"
+    },
+    {
+      "id": "R2-PRON-0062",
+      "type": "空所補充",
+      "q": "Ken knows me. He often talks with (      ).",
+      "a": "me"
+    },
+    {
+      "id": "R2-PRON-0063",
+      "type": "選択",
+      "q": "I am talking to you. ( you / you / your ) are my friend.",
+      "a": "you"
+    },
+    {
+      "id": "R2-PRON-0064",
+      "type": "空所補充",
+      "q": "I know you. I often talk with (      ).",
+      "a": "You"
+    },
+    {
+      "id": "R2-PRON-0065",
+      "type": "選択",
+      "q": "This is Ken. ( he / him / his ) is my friend.",
+      "a": "He"
+    },
+    {
+      "id": "R2-PRON-0066",
+      "type": "空所補充",
+      "q": "I know Ken. I often talk with (      ).",
+      "a": "him"
+    },
+    {
+      "id": "R2-PRON-0067",
+      "type": "選択",
+      "q": "This is Emi. ( she / her / hers ) is my friend.",
+      "a": "She"
+    },
+    {
+      "id": "R2-PRON-0068",
+      "type": "空所補充",
+      "q": "I know Emi. I often talk with (      ).",
+      "a": "her"
+    },
+    {
+      "id": "R2-PRON-0069",
+      "type": "選択",
+      "q": "Ken and I are in the same club. ( we / us / our ) are good friends.",
+      "a": "We"
+    },
+    {
+      "id": "R2-PRON-0070",
+      "type": "空所補充",
+      "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+      "a": "us"
+    },
+    {
+      "id": "R2-PRON-0071",
+      "type": "選択",
+      "q": "Ken and Emi are my classmates. ( they / them / their ) are my friends.",
+      "a": "They"
+    },
+    {
+      "id": "R2-PRON-0072",
+      "type": "空所補充",
+      "q": "I know Ken and Emi. I often talk with (      ).",
+      "a": "them"
+    },
+    {
+      "id": "FF2-PRON-0001",
+      "type": "選択",
+      "q": "( I / me / my ) teacher is kind.",
+      "a": "My"
+    },
+    {
+      "id": "FF2-PRON-0002",
+      "type": "空所補充",
+      "q": "My brother knows me. He wants to help (      ).",
+      "a": "me"
+    },
+    {
+      "id": "FF2-PRON-0003",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『これは私です。先生は私に英語を教えます。』",
+      "a": "This is me. My teacher teaches me English."
+    },
+    {
+      "id": "FF2-PRON-0004",
+      "type": "選択",
+      "q": "( you / you / your ) teacher is kind.",
+      "a": "Your"
+    },
+    {
+      "id": "FF2-PRON-0005",
+      "type": "空所補充",
+      "q": "I know you. I want to help (      ).",
+      "a": "You"
+    },
+    {
+      "id": "FF2-PRON-0006",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『これはあなたです。先生はあなたに英語を教えます。』",
+      "a": "This is you. My teacher teaches you English."
+    },
+    {
+      "id": "FF2-PRON-0007",
+      "type": "選択",
+      "q": "( he / him / his ) teacher is kind.",
+      "a": "His"
+    },
+    {
+      "id": "FF2-PRON-0008",
+      "type": "空所補充",
+      "q": "I know Ken. I want to help (      ).",
+      "a": "him"
+    },
+    {
+      "id": "FF2-PRON-0009",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『彼はケンです。私は彼に英語を教えます。』",
+      "a": "He is Ken. I teach him English."
+    },
+    {
+      "id": "FF2-PRON-0010",
+      "type": "選択",
+      "q": "( she / her / hers ) teacher is kind.",
+      "a": "Her"
+    },
+    {
+      "id": "FF2-PRON-0011",
+      "type": "空所補充",
+      "q": "I know Emi. I want to help (      ).",
+      "a": "her"
+    },
+    {
+      "id": "FF2-PRON-0012",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『彼女はミカです。私は彼女に英語を教えます。』",
+      "a": "She is Mika. I teach her English."
+    },
+    {
+      "id": "FF2-PRON-0013",
+      "type": "選択",
+      "q": "( we / us / our ) teacher is kind.",
+      "a": "Our"
+    },
+    {
+      "id": "FF2-PRON-0014",
+      "type": "空所補充",
+      "q": "My teacher knows Ken and me. She wants to help (      ).",
+      "a": "us"
+    },
+    {
+      "id": "FF2-PRON-0015",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『私たちは1年生です。先生は私たちに英語を教えます。』",
+      "a": "We are first-year students. Our teacher teaches us English."
+    },
+    {
+      "id": "FF2-PRON-0016",
+      "type": "選択",
+      "q": "( they / them / their ) teacher is kind.",
+      "a": "Their"
+    },
+    {
+      "id": "FF2-PRON-0017",
+      "type": "空所補充",
+      "q": "I know Ken and Emi. I want to help (      ).",
+      "a": "them"
+    },
+    {
+      "id": "FF2-PRON-0018",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『彼らは野球部です。先生は彼らに英語を教えます。』",
+      "a": "They are in the baseball club. Their teacher teaches them English."
+    }
+  ],
+  "不定詞②": [
+    {
+      "id": "R2-INF2-0095",
+      "type": "英作文",
+      "q": "『私はあなたに会えてうれしいです。』を英語で書きなさい。",
+      "a": "I am happy to see you."
+    },
+    {
+      "id": "R2-INF2-0096",
+      "type": "英作文",
+      "q": "『この本は読みやすいです。』を英語で書きなさい。",
+      "a": "This book is easy to read."
+    },
+    {
+      "id": "F2-INF2-0110",
+      "type": "英作文",
+      "q": "『あなたに会えてうれしいです。』を英語で書きなさい。",
+      "a": "I am glad to see you."
+    },
+    {
+      "id": "F2-INF2-0111",
+      "type": "英作文",
+      "q": "『このバッグは運びやすいです。』を英語で書きなさい。",
+      "a": "This bag is easy to carry."
+    },
+    {
+      "id": "F2-INF2-0112",
+      "type": "英作文",
+      "q": "『彼はその知らせを聞いて驚きました。』を英語で書きなさい。",
+      "a": "He was surprised to hear the news."
+    },
+    {
+      "id": "F2-INF2-0113",
+      "type": "英作文",
+      "q": "『この部屋はそうじしにくいです。』を英語で書きなさい。",
+      "a": "This room is difficult to clean."
+    },
+    {
+      "id": "TH2-INF2-0107",
+      "type": "英作文",
+      "q": "『私はまた友だちに会えてうれしいです。』を英語で書きなさい。",
+      "a": "I am glad to see my friends again."
+    },
+    {
+      "id": "TH2-INF2-0108",
+      "type": "空所補充",
+      "q": "I am glad (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "TH2-INF2-0109",
+      "type": "英作文",
+      "q": "『この問題は答えにくいです。』を英語で書きなさい。",
+      "a": "This question is hard to answer."
+    },
+    {
+      "id": "TH2-INF2-0110",
+      "type": "空所補充",
+      "q": "This question is hard (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "TH2-INF2-0111",
+      "type": "英作文",
+      "q": "『その本は読んでいておもしろいです。』を英語で書きなさい。",
+      "a": "The book is interesting to read."
+    },
+    {
+      "id": "TH2-INF2-0112",
+      "type": "空所補充",
+      "q": "The book is interesting (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "TH2-INF2-0113",
+      "type": "英作文",
+      "q": "『彼女はその知らせを聞いてうれしかったです。』を英語で書きなさい。",
+      "a": "She was happy to hear the news."
+    },
+    {
+      "id": "TH2-INF2-0114",
+      "type": "空所補充",
+      "q": "She was happy (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "TH2-INF2-0115",
+      "type": "英作文",
+      "q": "『この部屋は使いやすいです。』を英語で書きなさい。",
+      "a": "This room is easy to use."
+    },
+    {
+      "id": "TH2-INF2-0116",
+      "type": "空所補充",
+      "q": "This room is easy (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "TH2-INF2-0117",
+      "type": "英作文",
+      "q": "『彼は今出発する準備ができています。』を英語で書きなさい。",
+      "a": "He is ready to leave now."
+    },
+    {
+      "id": "TH2-INF2-0118",
+      "type": "空所補充",
+      "q": "He is ready (      ). に入る語を書きなさい。",
+      "a": "to"
+    },
+    {
+      "id": "FF2-INF2-0095",
+      "type": "英作文",
+      "q": "『この机は動かしやすいです。』を英語で書きなさい。",
+      "a": "This desk is easy to move."
+    },
+    {
+      "id": "FF2-INF2-0096",
+      "type": "英作文",
+      "q": "『それを聞いて残念です。』を英語で書きなさい。",
+      "a": "I am sorry to hear that."
+    },
+    {
+      "id": "FF2-INF2-0097",
+      "type": "英作文",
+      "q": "『この川は泳ぐには危険です。』を英語で書きなさい。",
+      "a": "This river is dangerous to swim in."
+    },
+    {
+      "id": "FF2-INF2-0098",
+      "type": "英作文",
+      "q": "『彼女は英語を学ぶことに熱心です。』を英語で書きなさい。",
+      "a": "She is eager to learn English."
+    },
+    {
+      "id": "EX2-INF2-0060",
+      "type": "英作文",
+      "q": "『このいすは座り心地がよいです。』を英語で書きなさい。",
+      "a": "This chair is comfortable to sit on."
+    },
+    {
+      "id": "EX2-INF2-0061",
+      "type": "英作文",
+      "q": "『私はその結果を見て驚きました。』を英語で書きなさい。",
+      "a": "I was surprised to see the result."
+    },
+    {
+      "id": "EX2-INF2-0062",
+      "type": "英作文",
+      "q": "『この箱は運びやすいです。』を英語で書きなさい。",
+      "a": "This box is easy to carry."
+    },
+    {
+      "id": "EX2-INF2-0063",
+      "type": "英作文",
+      "q": "『彼女は英語を上達させることに熱心です。』を英語で書きなさい。",
+      "a": "She is eager to improve her English."
+    },
+    {
+      "id": "NX2-BAL-0065",
+      "type": "英作文",
+      "q": "『この問題は解きやすいです。』に合う英文を書きなさい。",
+      "a": "This problem is easy to solve."
+    },
+    {
+      "id": "NX2-BAL-0066",
+      "type": "空所補充",
+      "q": "This problem (      ) easy to solve. に入る語を書きなさい。",
+      "a": "is"
+    }
+  ],
+  "命令文": [
+    {
+      "id": "R2-IMP-0073",
+      "type": "英作文",
+      "q": "『左に曲がりなさい。』を英語で書きなさい。",
+      "a": "Turn left."
+    },
+    {
+      "id": "R2-IMP-0074",
+      "type": "英作文",
+      "q": "『右に曲がりなさい。』を英語で書きなさい。",
+      "a": "Turn right."
+    },
+    {
+      "id": "R2-IMP-0075",
+      "type": "英作文",
+      "q": "『廊下を走ってはいけません。』を英語で書きなさい。",
+      "a": "Don’t run in the hallway."
+    },
+    {
+      "id": "R2-IMP-0076",
+      "type": "英作文",
+      "q": "『どうか私を手伝ってください。』を英語で書きなさい。",
+      "a": "Please help me."
+    },
+    {
+      "id": "TH2-IMP-0001",
+      "type": "英作文",
+      "q": "『教科書を開きなさい。』を英語で書きなさい。",
+      "a": "Open your textbook."
+    },
+    {
+      "id": "TH2-IMP-0002",
+      "type": "選択",
+      "q": "命令文として正しいものを ( Open your textbook. / You Open your textbook. ) から選びなさい。",
+      "a": "Open your textbook."
+    },
+    {
+      "id": "TH2-IMP-0003",
+      "type": "英作文",
+      "q": "『どうぞ座ってください。』を英語で書きなさい。",
+      "a": "Please sit down."
+    },
+    {
+      "id": "TH2-IMP-0004",
+      "type": "選択",
+      "q": "命令文として正しいものを ( Please sit down. / You Please sit down. ) から選びなさい。",
+      "a": "Please sit down."
+    },
+    {
+      "id": "TH2-IMP-0005",
+      "type": "英作文",
+      "q": "『遅れてはいけません。』を英語で書きなさい。",
+      "a": "Don’t be late."
+    },
+    {
+      "id": "TH2-IMP-0006",
+      "type": "選択",
+      "q": "否定の命令文として正しいものを ( Don’t be late. / You Don’t be late. ) から選びなさい。",
+      "a": "Don’t be late."
+    },
+    {
+      "id": "TH2-IMP-0007",
+      "type": "英作文",
+      "q": "『ここでスマホを使ってはいけません。』を英語で書きなさい。",
+      "a": "Don’t use your phone here."
+    },
+    {
+      "id": "TH2-IMP-0008",
+      "type": "選択",
+      "q": "否定の命令文として正しいものを ( Don’t use your phone here. / You Don’t use your phone here. ) から選びなさい。",
+      "a": "Don’t use your phone here."
+    },
+    {
+      "id": "TH2-IMP-0009",
+      "type": "英作文",
+      "q": "『電気を消しなさい。』を英語で書きなさい。",
+      "a": "Turn off the light."
+    },
+    {
+      "id": "TH2-IMP-0010",
+      "type": "選択",
+      "q": "命令文として正しいものを ( Turn off the light. / You Turn off the light. ) から選びなさい。",
+      "a": "Turn off the light."
+    },
+    {
+      "id": "TH2-IMP-0011",
+      "type": "英作文",
+      "q": "『あなたの答えを見せてください。』を英語で書きなさい。",
+      "a": "Please show me your answer."
+    },
+    {
+      "id": "TH2-IMP-0012",
+      "type": "選択",
+      "q": "命令文として正しいものを ( Please show me your answer. / You Please show me your answer. ) から選びなさい。",
+      "a": "Please show me your answer."
+    },
+    {
+      "id": "TH2-IMP-0013",
+      "type": "英作文",
+      "q": "『帰り道に気をつけなさい。』を英語で書きなさい。",
+      "a": "Be careful on your way home."
+    },
+    {
+      "id": "TH2-IMP-0014",
+      "type": "選択",
+      "q": "命令文として正しいものを ( Be careful on your way home. / You Be careful on your way home. ) から選びなさい。",
+      "a": "Be careful on your way home."
+    },
+    {
+      "id": "TH2-IMP-0015",
+      "type": "英作文",
+      "q": "『宿題を忘れてはいけません。』を英語で書きなさい。",
+      "a": "Don’t forget your homework."
+    },
+    {
+      "id": "TH2-IMP-0016",
+      "type": "選択",
+      "q": "否定の命令文として正しいものを ( Don’t forget your homework. / You Don’t forget your homework. ) から選びなさい。",
+      "a": "Don’t forget your homework."
+    },
+    {
+      "id": "EX2-IMP-0032",
+      "type": "英作文",
+      "q": "『図書館で大きな声で話してはいけません。』を英語で書きなさい。",
+      "a": "Don’t talk loudly in the library."
+    },
+    {
+      "id": "EX2-IMP-0033",
+      "type": "間違い直し",
+      "q": "You Don’t talk loudly in the library. の誤りを直しなさい。",
+      "a": "Don’t talk loudly in the library."
+    },
+    {
+      "id": "EX2-IMP-0034",
+      "type": "英作文",
+      "q": "『その答えを私に教えてください。』を英語で書きなさい。",
+      "a": "Please tell me the answer."
+    },
+    {
+      "id": "EX2-IMP-0035",
+      "type": "間違い直し",
+      "q": "You Please tell me the answer. の誤りを直しなさい。",
+      "a": "Please tell me the answer."
+    },
+    {
+      "id": "EX2-IMP-0036",
+      "type": "英作文",
+      "q": "『クラスメートに親切にしなさい。』を英語で書きなさい。",
+      "a": "Be kind to your classmates."
+    },
+    {
+      "id": "EX2-IMP-0037",
+      "type": "間違い直し",
+      "q": "You Be kind to your classmates. の誤りを直しなさい。",
+      "a": "Be kind to your classmates."
+    },
+    {
+      "id": "EX2-IMP-0038",
+      "type": "英作文",
+      "q": "『ここにかばんを置いていってはいけません。』を英語で書きなさい。",
+      "a": "Don’t leave your bag here."
+    },
+    {
+      "id": "EX2-IMP-0039",
+      "type": "間違い直し",
+      "q": "You Don’t leave your bag here. の誤りを直しなさい。",
+      "a": "Don’t leave your bag here."
+    }
+  ]
+}
