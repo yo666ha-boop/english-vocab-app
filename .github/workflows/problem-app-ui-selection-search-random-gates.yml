@@ -1,0 +1,161 @@
+name: Problem app UI selection search random gates
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - .github/workflows/problem-app-ui-selection-search-random-gates.yml
+      - audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_TRIGGER.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: problem-app-ui-selection-search-random-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ui-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Exercise explicit UI gates
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json,re
+
+          url=Path('problem-app/index.html').resolve().as_uri()
+          out={'url':url,'grade':{},'textbook':{},'section':{},'random':{},'search':{},'result':'PASS','failures':[]}
+          def fail(msg):
+              out['failures'].append(msg);out['result']='FAIL'
+          def options(page,sel):
+              return page.locator(sel+' option').evaluate_all("els=>els.map(x=>({v:x.value,t:(x.textContent||'').trim()})).filter(x=>x.v)")
+          def ids(page):
+              vals=page.locator('#questionPreview .qnum').all_inner_texts();ans=[]
+              for x in vals:
+                  m=re.search(r'Q\\d+\\s+([^\\s　/]+)',x)
+                  if m: ans.append(m.group(1))
+              return ans
+          def choose_option(page,sel,needles):
+              os=options(page,sel)
+              for n in needles:
+                  for o in os:
+                      if o['v']==n or o['t']==n or n.lower() in o['t'].lower():
+                          page.select_option(sel,o['v']);page.wait_for_timeout(100);return o
+              raise AssertionError(f'{sel}: {needles} not in {os}')
+          def candidate(page):
+              t=page.locator('#builderStatus').inner_text();m=re.search(r'この条件で使える候補\\s*(\\d+)件',t)
+              return int(m.group(1)) if m else None
+
+          with sync_playwright() as p:
+              b=p.chromium.launch();page=b.new_page(viewport={'width':1280,'height':900})
+              errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+              page.goto(url,wait_until='load')
+              page.select_option('#subjectSelect','英語');page.wait_for_timeout(100)
+
+              # Grade selection must actually refresh dependent UI.
+              try:
+                  page.select_option('#gradeSelect','中1');page.wait_for_timeout(120)
+                  g1cats=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
+                  g1secs=options(page,'#sectionSelect')
+                  page.select_option('#gradeSelect','中2');page.wait_for_timeout(120)
+                  g2cats=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
+                  g2secs=options(page,'#sectionSelect')
+                  out['grade']={'中1':{'categories':len(g1cats),'sections':len(g1secs)},'中2':{'categories':len(g2cats),'sections':len(g2secs)},'changed':g1cats!=g2cats or g1secs!=g2secs}
+                  if not out['grade']['changed']: fail('grade selection did not refresh category/section choices')
+              except Exception as e: fail('grade gate: '+repr(e))
+
+              # Textbook selection must update unit choices.
+              try:
+                  page.select_option('#gradeSelect','中2');page.wait_for_timeout(80)
+                  nh=choose_option(page,'#textbookSelect',['ニューホライズン','NH']);nhsecs=options(page,'#sectionSelect')
+                  ss=choose_option(page,'#textbookSelect',['サンシャイン','SS']);sssecs=options(page,'#sectionSelect')
+                  out['textbook']={'NH_sections':len(nhsecs),'SS_sections':len(sssecs),'changed':nhsecs!=sssecs}
+                  if not out['textbook']['changed']: fail('textbook selection did not refresh section choices')
+              except Exception as e: fail('textbook gate: '+repr(e))
+
+              # Unit/section selection must hold selected value and produce a usable candidate status.
+              try:
+                  secs=options(page,'#sectionSelect');assert len(secs)>=2
+                  page.select_option('#sectionSelect',secs[0]['v']);page.wait_for_timeout(120);c1=candidate(page)
+                  page.select_option('#sectionSelect',secs[-1]['v']);page.wait_for_timeout(120);c2=candidate(page)
+                  out['section']={'first':secs[0],'last':secs[-1],'first_candidates':c1,'last_candidates':c2,'selected_value':page.locator('#sectionSelect').input_value()}
+                  if out['section']['selected_value']!=secs[-1]['v']: fail('section select value did not persist')
+                  if c2 is None: fail('section selection produced no candidate status')
+              except Exception as e: fail('section gate: '+repr(e))
+
+              # Random mode must generate the requested number and differ from ordered output when pool permits.
+              try:
+                  page.select_option('#vocabMode','on');page.wait_for_timeout(100)
+                  stages=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
+                  stage='動名詞' if '動名詞' in stages else stages[0]
+                  page.evaluate("""v=>document.querySelectorAll('input[data-stage]').forEach(x=>{x.checked=x.value===v;x.dispatchEvent(new Event('change',{bubbles:true}))})""",stage)
+                  types=page.locator('input[data-type]').evaluate_all("els=>els.map(x=>x.value)")
+                  typ='英作文' if '英作文' in types else types[0]
+                  page.evaluate("""v=>document.querySelectorAll('input[data-type]').forEach(x=>{x.checked=x.value===v;x.dispatchEvent(new Event('change',{bubbles:true}))})""",typ)
+                  choose_option(page,'#questionCount',['20','20問']);page.wait_for_timeout(100)
+                  choose_option(page,'#pickMode',['上から順','ordered','順番','先頭から']);page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(120);ordered=ids(page)
+                  choose_option(page,'#pickMode',['ランダム','random','無作為']);page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(120);random_ids=ids(page)
+                  out['random']={'category':stage,'type':typ,'ordered_count':len(ordered),'random_count':len(random_ids),'ordered_ids':ordered,'random_ids':random_ids,'different':ordered!=random_ids}
+                  if len(ordered)!=20 or len(random_ids)!=20: fail('ordered/random generation did not create 20 questions')
+                  if candidate(page) and candidate(page)>20 and ordered==random_ids: fail('random generation matched ordered sequence despite pool > 20')
+              except Exception as e: fail('random gate: '+repr(e))
+
+              # Discover a real visible search control; interact with it and verify input/event acceptance.
+              try:
+                  fields=page.locator('input,textarea').evaluate_all("""els=>els.map((x,i)=>({i,id:x.id||'',name:x.name||'',type:x.type||'',placeholder:x.placeholder||'',aria:x.getAttribute('aria-label')||'',visible:!!(x.offsetWidth||x.offsetHeight||x.getClientRects().length)})).filter(x=>x.visible)""")
+                  candidates=[]
+                  for f in fields:
+                      blob=' '.join([f['id'],f['name'],f['type'],f['placeholder'],f['aria']]).lower()
+                      if f['type']=='search' or 'search' in blob or '検索' in blob:
+                          candidates.append(f)
+                  out['search']['discovered']=candidates
+                  if not candidates:
+                      fail('no visible search control discovered')
+                  else:
+                      f=candidates[0]
+                      if f['id']: loc=page.locator('#'+f['id'])
+                      elif f['name']: loc=page.locator(f"[name='{f['name']}']").first
+                      else: loc=page.locator('input,textarea').nth(f['i'])
+                      before=loc.input_value();loc.fill('English');loc.dispatch_event('input');loc.dispatch_event('change');page.wait_for_timeout(150);after=loc.input_value()
+                      out['search'].update({'target':f,'before':before,'after':after,'accepted':after=='English'})
+                      if after!='English': fail('search control did not accept input')
+              except Exception as e: fail('search gate: '+repr(e))
+
+              if errors: fail('page errors: '+repr(errors))
+              b.close()
+
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit UI gate evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json || exit 1
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: record explicit selection search random UI gates [skip ci]'
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Enforce UI gates
+        if: always()
+        shell: python
+        run: |
+          import json
+          x=json.load(open('audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json',encoding='utf-8'))
+          assert x['result']=='PASS',x['failures']
