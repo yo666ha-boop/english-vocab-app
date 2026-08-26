@@ -1,0 +1,536 @@
+{
+  "generated_at": "2026-08-26T03:14:17.097Z",
+  "source_low_retention": "audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json",
+  "source_passmeta_audit": "audit/PROBLEM_APP_PASSMETA_SAFE_AUDIT.json",
+  "persistent_group_count": 1,
+  "results": [
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "category": "動名詞",
+      "rows": 33,
+      "first_section": "PROGRAM 1-1",
+      "last_section": "Reading 3",
+      "min_retention_pct": 33.33,
+      "max_retention_pct": 33.84,
+      "runtime_mapped_categories": [
+        "動名詞"
+      ],
+      "original_pool": 406,
+      "unresolved_problem_count": 304,
+      "matched_global_unresolved_token_count": 17,
+      "top_unresolved_tokens": [
+        {
+          "token": "science",
+          "count": 45,
+          "examples": [
+            {
+              "id": "M2Y-GER-0257",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』",
+              "a": "I start studying science."
+            },
+            {
+              "id": "M2Y-GER-0258",
+              "type": "間違い直し",
+              "q": "I start to study. の誤りを直しなさい。",
+              "a": "I start studying science."
+            },
+            {
+              "id": "M2Y-GER-0259",
+              "type": "英作文",
+              "q": "『私は 理科を勉強し始める。』に合う文を書きなさい。",
+              "a": "I start studying science."
+            },
+            {
+              "id": "M2Y-GER-0272",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは 理科を勉強し始める。』",
+              "a": "You start studying science."
+            }
+          ]
+        },
+        {
+          "token": "enjoy",
+          "count": 44,
+          "examples": [
+            {
+              "id": "M2-GER-0589",
+              "type": "空所補充",
+              "q": "I enjoy (      ).",
+              "a": "Reading books"
+            },
+            {
+              "id": "M2-GER-0590",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は 本を読むことを楽しむ。』",
+              "a": "I enjoy reading books."
+            },
+            {
+              "id": "M2-GER-0597",
+              "type": "空所補充",
+              "q": "You enjoy (      ).",
+              "a": "Reading books"
+            },
+            {
+              "id": "M2-GER-0598",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは 本を読むことを楽しむ。』",
+              "a": "You enjoy reading books."
+            }
+          ]
+        },
+        {
+          "token": "music",
+          "count": 43,
+          "examples": [
+            {
+              "id": "M2-GER-0591",
+              "type": "空所補充",
+              "q": "I love (      ).",
+              "a": "Listening to music"
+            },
+            {
+              "id": "M2-GER-0592",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』",
+              "a": "I love listening to music."
+            },
+            {
+              "id": "M2-GER-0599",
+              "type": "空所補充",
+              "q": "You love (      ).",
+              "a": "Listening to music"
+            },
+            {
+              "id": "M2-GER-0600",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは 音楽を聞くことが大好きだ。』",
+              "a": "You love listening to music."
+            }
+          ]
+        },
+        {
+          "token": "start",
+          "count": 36,
+          "examples": [
+            {
+              "id": "M2X-GER-0491",
+              "type": "変形",
+              "q": "I start making dinner. を否定文にしなさい。",
+              "a": "I do not start making dinner."
+            },
+            {
+              "id": "M2X-GER-0492",
+              "type": "英作文",
+              "q": "『私は 夕食を作り始める。』に合う文を書きなさい。",
+              "a": "I start making dinner."
+            },
+            {
+              "id": "M2X-GER-0515",
+              "type": "変形",
+              "q": "You start making dinner. を否定文にしなさい。",
+              "a": "You do not start making dinner."
+            },
+            {
+              "id": "M2X-GER-0516",
+              "type": "英作文",
+              "q": "『あなたは 夕食を作り始める。』に合う文を書きなさい。",
+              "a": "You start making dinner."
+            }
+          ]
+        },
+        {
+          "token": "practice",
+          "count": 30,
+          "examples": [
+            {
+              "id": "M2-GER-0593",
+              "type": "空所補充",
+              "q": "I practice (      ).",
+              "a": "Speaking English"
+            },
+            {
+              "id": "M2-GER-0594",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は 英語を話すことを練習する。』",
+              "a": "I practice speaking English."
+            },
+            {
+              "id": "M2-GER-0601",
+              "type": "空所補充",
+              "q": "You practice (      ).",
+              "a": "Speaking English"
+            },
+            {
+              "id": "M2-GER-0602",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは 英語を話すことを練習する。』",
+              "a": "You practice speaking English."
+            }
+          ]
+        },
+        {
+          "token": "comics",
+          "count": 27,
+          "examples": [
+            {
+              "id": "M2-GER2-0800",
+              "type": "空所補充",
+              "q": "I enjoy (      ). 「まんがを読むことを楽しむ」",
+              "a": "reading comics"
+            },
+            {
+              "id": "M2-GER2-0801",
+              "type": "英作文",
+              "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私は まんがを読むことを楽しむ。』",
+              "a": "I enjoy reading comics."
+            },
+            {
+              "id": "M2-GER2-0802",
+              "type": "変形",
+              "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I enjoy (read) comics.",
+              "a": "I enjoy reading comics."
+            },
+            {
+              "id": "M2-GER2-0854",
+              "type": "空所補充",
+              "q": "You enjoy (      ). 「まんがを読むことを楽しむ」",
+              "a": "reading comics"
+            }
+          ]
+        },
+        {
+          "token": "phone",
+          "count": 27,
+          "examples": [
+            {
+              "id": "M2-GER2-0812",
+              "type": "空所補充",
+              "q": "I stop (      ). 「スマホを使うのをやめる」",
+              "a": "using the phone"
+            },
+            {
+              "id": "M2-GER2-0813",
+              "type": "英作文",
+              "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私は スマホを使うのをやめる。』",
+              "a": "I stop using the phone."
+            },
+            {
+              "id": "M2-GER2-0814",
+              "type": "変形",
+              "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I stop (use) the phone.",
+              "a": "I stop using the phone."
+            },
+            {
+              "id": "M2-GER2-0866",
+              "type": "空所補充",
+              "q": "You stop (      ). 「スマホを使うのをやめる」",
+              "a": "using the phone"
+            }
+          ]
+        },
+        {
+          "token": "stop",
+          "count": 27,
+          "examples": [
+            {
+              "id": "M2Y-GER-0254",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は インターネットを使うのをやめる。』",
+              "a": "I stop using the internet."
+            },
+            {
+              "id": "M2Y-GER-0255",
+              "type": "間違い直し",
+              "q": "I stop to us. の誤りを直しなさい。",
+              "a": "I stop using the internet."
+            },
+            {
+              "id": "M2Y-GER-0256",
+              "type": "英作文",
+              "q": "『私は インターネットを使うのをやめる。』に合う文を書きなさい。",
+              "a": "I stop using the internet."
+            },
+            {
+              "id": "M2Y-GER-0269",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは インターネットを使うのをやめる。』",
+              "a": "You stop using the internet."
+            }
+          ]
+        },
+        {
+          "token": "love",
+          "count": 26,
+          "examples": [
+            {
+              "id": "M2-GER-0591",
+              "type": "空所補充",
+              "q": "I love (      ).",
+              "a": "Listening to music"
+            },
+            {
+              "id": "M2-GER-0592",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は 音楽を聞くことが大好きだ。』",
+              "a": "I love listening to music."
+            },
+            {
+              "id": "M2-GER-0599",
+              "type": "空所補充",
+              "q": "You love (      ).",
+              "a": "Listening to music"
+            },
+            {
+              "id": "M2-GER-0600",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは 音楽を聞くことが大好きだ。』",
+              "a": "You love listening to music."
+            }
+          ]
+        },
+        {
+          "token": "enjoys",
+          "count": 25,
+          "examples": [
+            {
+              "id": "M2X-GER-0579",
+              "type": "変形",
+              "q": "He enjoys reading books. を否定文にしなさい。",
+              "a": "He does not enjoy reading books."
+            },
+            {
+              "id": "M2X-GER-0580",
+              "type": "英作文",
+              "q": "『彼は 本を読むことを楽しむ。』に合う文を書きなさい。",
+              "a": "He enjoys reading books."
+            },
+            {
+              "id": "M2X-GER-0603",
+              "type": "変形",
+              "q": "She enjoys reading books. を否定文にしなさい。",
+              "a": "She does not enjoy reading books."
+            },
+            {
+              "id": "M2X-GER-0604",
+              "type": "英作文",
+              "q": "『彼女は 本を読むことを楽しむ。』に合う文を書きなさい。",
+              "a": "She enjoys reading books."
+            }
+          ]
+        },
+        {
+          "token": "starts",
+          "count": 25,
+          "examples": [
+            {
+              "id": "M2X-GER-0587",
+              "type": "変形",
+              "q": "He starts making dinner. を否定文にしなさい。",
+              "a": "He does not start making dinner."
+            },
+            {
+              "id": "M2X-GER-0588",
+              "type": "英作文",
+              "q": "『彼は 夕食を作り始める。』に合う文を書きなさい。",
+              "a": "He starts making dinner."
+            },
+            {
+              "id": "M2X-GER-0611",
+              "type": "変形",
+              "q": "She starts making dinner. を否定文にしなさい。",
+              "a": "She does not start making dinner."
+            },
+            {
+              "id": "M2X-GER-0612",
+              "type": "英作文",
+              "q": "『彼女は 夕食を作り始める。』に合う文を書きなさい。",
+              "a": "She starts making dinner."
+            }
+          ]
+        },
+        {
+          "token": "basketball",
+          "count": 20,
+          "examples": [
+            {
+              "id": "M2-GER-0587",
+              "type": "空所補充",
+              "q": "I like (      ).",
+              "a": "Playing basketball"
+            },
+            {
+              "id": "M2-GER-0588",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『私は バスケットボールをすることが好きだ。』",
+              "a": "I like playing basketball."
+            },
+            {
+              "id": "M2-GER-0595",
+              "type": "空所補充",
+              "q": "You like (      ).",
+              "a": "Playing basketball"
+            },
+            {
+              "id": "M2-GER-0596",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『あなたは バスケットボールをすることが好きだ。』",
+              "a": "You like playing basketball."
+            }
+          ]
+        },
+        {
+          "token": "practices",
+          "count": 19,
+          "examples": [
+            {
+              "id": "M2X-GER-0583",
+              "type": "変形",
+              "q": "He practices speaking English. を否定文にしなさい。",
+              "a": "He does not practice speaking English."
+            },
+            {
+              "id": "M2X-GER-0584",
+              "type": "英作文",
+              "q": "『彼は 英語を話すことを練習する。』に合う文を書きなさい。",
+              "a": "He practices speaking English."
+            },
+            {
+              "id": "M2X-GER-0607",
+              "type": "変形",
+              "q": "She practices speaking English. を否定文にしなさい。",
+              "a": "She does not practice speaking English."
+            },
+            {
+              "id": "M2X-GER-0608",
+              "type": "英作文",
+              "q": "『彼女は 英語を話すことを練習する。』に合う文を書きなさい。",
+              "a": "She practices speaking English."
+            }
+          ]
+        },
+        {
+          "token": "loves",
+          "count": 18,
+          "examples": [
+            {
+              "id": "M2X-GER-0582",
+              "type": "英作文",
+              "q": "『彼は 音楽を聞くことが大好きだ。』に合う文を書きなさい。",
+              "a": "He loves listening to music."
+            },
+            {
+              "id": "M2X-GER-0605",
+              "type": "変形",
+              "q": "She loves listening to music. を否定文にしなさい。",
+              "a": "She does not love listening to music."
+            },
+            {
+              "id": "M2X-GER-0606",
+              "type": "英作文",
+              "q": "『彼女は 音楽を聞くことが大好きだ。』に合う文を書きなさい。",
+              "a": "She loves listening to music."
+            },
+            {
+              "id": "M2-GER2-1031",
+              "type": "空所補充",
+              "q": "He loves (      ). 「音楽を聞くことが大好きだ」",
+              "a": "listening to music"
+            }
+          ]
+        },
+        {
+          "token": "stops",
+          "count": 18,
+          "examples": [
+            {
+              "id": "M2Y-GER-0329",
+              "type": "英作文",
+              "q": "次の日本語に合う英文を書きなさい。『彼女は インターネットを使うのをやめる。』",
+              "a": "She stops using the internet."
+            },
+            {
+              "id": "M2Y-GER-0330",
+              "type": "間違い直し",
+              "q": "She stops to us. の誤りを直しなさい。",
+              "a": "She stops using the internet."
+            },
+            {
+              "id": "M2Y-GER-0331",
+              "type": "英作文",
+              "q": "『彼女は インターネットを使うのをやめる。』に合う文を書きなさい。",
+              "a": "She stops using the internet."
+            },
+            {
+              "id": "M2-GER2-1028",
+              "type": "空所補充",
+              "q": "He stops (      ). 「スマホを使うのをやめる」",
+              "a": "using the phone"
+            }
+          ]
+        },
+        {
+          "token": "begins",
+          "count": 15,
+          "examples": [
+            {
+              "id": "M2-GER2-1034",
+              "type": "空所補充",
+              "q": "He begins (      ). 「理科を勉強し始める」",
+              "a": "studying science"
+            },
+            {
+              "id": "M2-GER2-1035",
+              "type": "英作文",
+              "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『彼は 理科を勉強し始める。』",
+              "a": "He begins studying science."
+            },
+            {
+              "id": "M2-GER2-1036",
+              "type": "変形",
+              "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 He begins (study) science.",
+              "a": "He begins studying science."
+            },
+            {
+              "id": "M2-GER2-1088",
+              "type": "空所補充",
+              "q": "She begins (      ). 「理科を勉強し始める」",
+              "a": "studying science"
+            }
+          ]
+        },
+        {
+          "token": "begin",
+          "count": 12,
+          "examples": [
+            {
+              "id": "M2-GER2-0818",
+              "type": "空所補充",
+              "q": "I begin (      ). 「理科を勉強し始める」",
+              "a": "studying science"
+            },
+            {
+              "id": "M2-GER2-0819",
+              "type": "英作文",
+              "q": "動名詞を使って、次の日本語に合う英文を書きなさい。『私は 理科を勉強し始める。』",
+              "a": "I begin studying science."
+            },
+            {
+              "id": "M2-GER2-0820",
+              "type": "変形",
+              "q": "次の英文の（　）内の動詞を動名詞に直して、英文を完成させなさい。 I begin (study) science.",
+              "a": "I begin studying science."
+            },
+            {
+              "id": "M2-GER2-0872",
+              "type": "空所補充",
+              "q": "You begin (      ). 「理科を勉強し始める」",
+              "a": "studying science"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
