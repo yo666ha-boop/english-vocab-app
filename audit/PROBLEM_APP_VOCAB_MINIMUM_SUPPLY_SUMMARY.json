@@ -1,0 +1,218 @@
+{
+  "generated_at": "2026-08-26T06:26:41.909Z",
+  "total_rows": 2682,
+  "min_on": 10,
+  "below_20_count": 205,
+  "late_quarter_below_20_count": 79,
+  "final_section_below_20_count": 8,
+  "final_section_below_20": [
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "Power-Up 6",
+      "position": 39,
+      "section_count": 39,
+      "category": "can",
+      "off": 19,
+      "on": 19,
+      "retention_pct": 100
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "Power-Up 6",
+      "position": 39,
+      "section_count": 39,
+      "category": "現在進行形",
+      "off": 17,
+      "on": 17,
+      "retention_pct": 100
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read",
+      "position": 46,
+      "section_count": 46,
+      "category": "can",
+      "off": 19,
+      "on": 19,
+      "retention_pct": 100
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read",
+      "position": 46,
+      "section_count": 46,
+      "category": "現在進行形",
+      "off": 17,
+      "on": 17,
+      "retention_pct": 100
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "人称代名詞",
+      "off": 22,
+      "on": 13,
+      "retention_pct": 59.09
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "不定詞②",
+      "off": 22,
+      "on": 13,
+      "retention_pct": 59.09
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "命令文",
+      "off": 28,
+      "on": 18,
+      "retention_pct": 64.29
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "不定詞②",
+      "off": 22,
+      "on": 15,
+      "retention_pct": 68.18
+    }
+  ],
+  "final_with_off_at_least_20": [
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "人称代名詞",
+      "off": 22,
+      "on": 13,
+      "retention_pct": 59.09
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "Reading 3",
+      "position": 33,
+      "section_count": 33,
+      "category": "不定詞②",
+      "off": 22,
+      "on": 13,
+      "retention_pct": 59.09
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "命令文",
+      "off": 28,
+      "on": 18,
+      "retention_pct": 64.29
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "section": "Let's Read 3",
+      "position": 35,
+      "section_count": 35,
+      "category": "不定詞②",
+      "off": 22,
+      "on": 15,
+      "retention_pct": 68.18
+    }
+  ],
+  "late_unique_groups": [
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "category": "人称代名詞",
+      "min_on": 13,
+      "off": 22,
+      "last_position": 33,
+      "section_count": 33
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "category": "不定詞②",
+      "min_on": 13,
+      "off": 22,
+      "last_position": 33,
+      "section_count": 33
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "category": "不定詞②",
+      "min_on": 15,
+      "off": 22,
+      "last_position": 35,
+      "section_count": 35
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "category": "現在進行形",
+      "min_on": 17,
+      "off": 17,
+      "last_position": 46,
+      "section_count": 46
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "category": "can",
+      "min_on": 19,
+      "off": 19,
+      "last_position": 46,
+      "section_count": 46
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "category": "現在進行形",
+      "min_on": 17,
+      "off": 17,
+      "last_position": 39,
+      "section_count": 39
+    },
+    {
+      "grade": "中2",
+      "textbook": "ニューホライズン",
+      "category": "命令文",
+      "min_on": 18,
+      "off": 28,
+      "last_position": 35,
+      "section_count": 35
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "category": "can",
+      "min_on": 19,
+      "off": 19,
+      "last_position": 39,
+      "section_count": 39
+    }
+  ]
+}
