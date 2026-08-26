@@ -1,11 +1,10 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 
-// 2026-08-26: rerun after all past-stage category fallbacks matrix.
 const MATRIX='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const HTML='problem-app/index.html';
 const OUT='audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json';
-const AUDIT_THRESHOLD_PCT=33;
+const AUDIT_THRESHOLD_PCT=50;
 
 function scriptJson(html,id){
   const m=new RegExp(`<script\\s+id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/script>`,'i').exec(html);
@@ -42,10 +41,41 @@ for(const z of low){
     else other++;
     if(samples.length<20) samples.push({id:item.id,category:item.category,type:item.type,passMeta:Number.isFinite(v)?v:null,reason,q:item.q,a:item.a});
   }
-  records.push({grade:z.grade,textbook:z.textbook,section:z.section,position:z.position,category:z.category,off:z.off,on:z.on,retention_pct:z.retention_pct,runtime_mapped_categories:mapped,original_pool:pool.length,allowed_by_coordinate:allowed,blocked_unresolved:unresolved,blocked_future:future,blocked_other:other,original_types:byType,blocked_samples:samples});
+  records.push({grade:z.grade,textbook:z.textbook,section:z.section,position:z.position,section_count:z.section_count,category:z.category,off:z.off,on:z.on,retention_pct:z.retention_pct,runtime_mapped_categories:mapped,original_pool:pool.length,allowed_by_coordinate:allowed,blocked_unresolved:unresolved,blocked_future:future,blocked_other:other,original_types:byType,blocked_samples:samples});
 }
+
 const byCategory={};
-for(const r of records){const k=`${r.grade}/${r.category}`;const x=byCategory[k]??={rows:0,min_retention_pct:100,total_off:0,total_on:0,total_unresolved:0,total_future:0};x.rows++;x.min_retention_pct=Math.min(x.min_retention_pct,Number(r.retention_pct));x.total_off+=Number(r.off);x.total_on+=Number(r.on);x.total_unresolved+=r.blocked_unresolved;x.total_future+=r.blocked_future;}
+const byScopeCategory={};
+for(const r of records){
+  const k=`${r.grade}/${r.category}`;
+  const x=byCategory[k]??={rows:0,min_retention_pct:100,max_retention_pct:0,total_off:0,total_on:0,total_unresolved:0,total_future:0};
+  x.rows++;x.min_retention_pct=Math.min(x.min_retention_pct,Number(r.retention_pct));x.max_retention_pct=Math.max(x.max_retention_pct,Number(r.retention_pct));x.total_off+=Number(r.off);x.total_on+=Number(r.on);x.total_unresolved+=r.blocked_unresolved;x.total_future+=r.blocked_future;
+
+  const sk=`${r.grade}/${r.textbook}/${r.category}`;
+  const s=byScopeCategory[sk]??={grade:r.grade,textbook:r.textbook,category:r.category,rows:0,section_count:r.section_count,first_position:r.position,last_position:r.position,first_section:r.section,last_section:r.section,min_retention_pct:100,max_retention_pct:0,total_unresolved:0,total_future:0,late_quarter_rows:0,final_section_under50:false};
+  s.rows++;
+  if(r.position<s.first_position){s.first_position=r.position;s.first_section=r.section;}
+  if(r.position>s.last_position){s.last_position=r.position;s.last_section=r.section;}
+  s.min_retention_pct=Math.min(s.min_retention_pct,Number(r.retention_pct));
+  s.max_retention_pct=Math.max(s.max_retention_pct,Number(r.retention_pct));
+  s.total_unresolved+=r.blocked_unresolved;
+  s.total_future+=r.blocked_future;
+  const lateStart=Math.max(1,Math.floor(r.section_count*0.75)+1);
+  if(r.position>=lateStart)s.late_quarter_rows++;
+  if(r.position===r.section_count)s.final_section_under50=true;
+}
+const progression=Object.values(byScopeCategory).map(s=>({
+  ...s,
+  classification:s.final_section_under50?'persistent_to_final':s.late_quarter_rows>0?'persists_into_late_quarter':'early_or_mid_only',
+  unresolved_share_pct:(s.total_unresolved+s.total_future)>0?Math.round((s.total_unresolved/(s.total_unresolved+s.total_future))*10000)/100:null,
+  future_share_pct:(s.total_unresolved+s.total_future)>0?Math.round((s.total_future/(s.total_unresolved+s.total_future))*10000)/100:null
+})).sort((a,b)=>a.min_retention_pct-b.min_retention_pct||b.rows-a.rows);
+const progressionSummary={
+  groups:progression.length,
+  persistent_to_final:progression.filter(x=>x.classification==='persistent_to_final').length,
+  persists_into_late_quarter:progression.filter(x=>x.classification==='persists_into_late_quarter').length,
+  early_or_mid_only:progression.filter(x=>x.classification==='early_or_mid_only').length
+};
 const severeCount=records.filter(r=>Number(r.retention_pct)<25).length;
-fs.writeFileSync(OUT,JSON.stringify({generated_at:new Date().toISOString(),source:MATRIX,audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,records,by_category:byCategory},null,2)+'\n');
-console.log(JSON.stringify({audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,worst:records.slice(0,20).map(r=>({grade:r.grade,textbook:r.textbook,section:r.section,category:r.category,off:r.off,on:r.on,retention:r.retention_pct,pool:r.original_pool,allowed:r.allowed_by_coordinate,unresolved:r.blocked_unresolved,future:r.blocked_future,types:r.original_types}))},null,2));
+fs.writeFileSync(OUT,JSON.stringify({generated_at:new Date().toISOString(),source:MATRIX,audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,progression_summary:progressionSummary,progression,records,by_category:byCategory},null,2)+'\n');
+console.log(JSON.stringify({audit_threshold_pct:AUDIT_THRESHOLD_PCT,low_count:records.length,severe_count:severeCount,progression_summary:progressionSummary,worst_groups:progression.slice(0,30),worst_rows:records.slice(0,20).map(r=>({grade:r.grade,textbook:r.textbook,section:r.section,category:r.category,off:r.off,on:r.on,retention:r.retention_pct,pool:r.original_pool,allowed:r.allowed_by_coordinate,unresolved:r.blocked_unresolved,future:r.blocked_future,types:r.original_types}))},null,2));
