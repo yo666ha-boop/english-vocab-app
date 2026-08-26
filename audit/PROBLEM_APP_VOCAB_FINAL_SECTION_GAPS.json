@@ -1,28 +1,13 @@
 {
-  "generated_at": "2026-08-25T23:49:52.441Z",
+  "generated_at": "2026-08-26T06:18:25.468Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "scope": "final section of each grade/textbook; learned grammar only because matrix stages are dynamically read from actual UI",
   "summary": {
     "rows": 106,
     "zeroed": 0,
     "severe_under_25pct": 0,
-    "under_50pct": 1,
-    "min_retention_pct": 33.84
+    "under_50pct": 0,
+    "min_retention_pct": 50
   },
-  "gaps": [
-    {
-      "grade": "中2",
-      "textbook": "サンシャイン",
-      "section": "Reading 3",
-      "position": 33,
-      "section_count": 33,
-      "category": "動名詞",
-      "off": 396,
-      "on": 134,
-      "retention_pct": 33.84,
-      "zeroed": false,
-      "severe_under_25pct": false,
-      "under_50pct": true
-    }
-  ]
+  "gaps": []
 }
