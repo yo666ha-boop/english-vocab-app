@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-26T06:33:03.554Z",
+  "marker": "VOCAB_MIN20_SUPPLY_V1",
+  "html_marker_count": 2,
+  "installer_marker_count": 2,
+  "categories": [
+    "中2/命令文",
+    "中2/人称代名詞",
+    "中2/不定詞②"
+  ],
+  "policy": "generic grade/category safe fallback only; no textbook/unit/problem-ID exception"
+}
