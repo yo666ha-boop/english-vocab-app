@@ -98,6 +98,7 @@ jobs:
                   page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(100)
                   ids=generated_ids(page);assert len(ids)==20,(name,ids)
                   vf=sum(1 for x in ids if x.startswith('VF-'));assert vf>0,(name,ids)
+                  select_option(page,'#pickMode',['ランダム','random','無作為']);page.wait_for_timeout(120)
                   page.reload(wait_until='load');page.wait_for_timeout(120)
                   restored=generated_ids(page);assert restored==ids,(name,'save/restore mismatch',ids,restored)
                   print_html=capture_print(page)
