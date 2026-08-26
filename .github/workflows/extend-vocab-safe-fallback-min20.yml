@@ -1,0 +1,61 @@
+name: Extend vocab-safe fallback min20
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/extend_vocab_safe_fallback_min20.mjs
+      - .github/workflows/extend-vocab-safe-fallback-min20.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extend-vocab-safe-fallback-min20-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+      - name: Apply generic grade2 minimum-supply fallbacks
+        run: node tools/extend_vocab_safe_fallback_min20.mjs
+      - name: Validate runtime syntax
+        run: node tools/check_problem_app_runtime_parse.mjs
+      - name: Record repair evidence
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const html=fs.readFileSync('problem-app/index.html','utf8');
+          const installer=fs.readFileSync('tools/install_vocab_safe_fallback_v1.mjs','utf8');
+          const out={generated_at:new Date().toISOString(),marker:'VOCAB_MIN20_SUPPLY_V1',html_marker_count:(html.match(/VOCAB_MIN20_SUPPLY_V1/g)||[]).length,installer_marker_count:(installer.match(/VOCAB_MIN20_SUPPLY_V1/g)||[]).length,categories:['中2/命令文','中2/人称代名詞','中2/不定詞②'],policy:'generic grade/category safe fallback only; no textbook/unit/problem-ID exception'};
+          fs.writeFileSync('audit/VOCAB_SAFE_FALLBACK_MIN20_REPAIR.json',JSON.stringify(out,null,2)+'\n');
+          NODE
+      - name: Commit repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html tools/install_vocab_safe_fallback_v1.mjs audit/VOCAB_SAFE_FALLBACK_MIN20_REPAIR.json audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: add generic grade2 minimum-supply fallbacks [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            git fetch origin "${branch}"
+            git rebase "origin/${branch}"
+            sleep 2
+          done
+          exit 1
