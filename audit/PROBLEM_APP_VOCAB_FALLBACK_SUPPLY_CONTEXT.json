@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-08-26T04:20:26.671Z",
+  "purpose": "diagnostic only; no production mutation",
+  "context": {
+    "grade": "中2",
+    "textbook": "サンシャイン",
+    "category": "動名詞",
+    "final_section": "Reading 3",
+    "position": 33
+  },
+  "observed": {
+    "original_pool": 406,
+    "unresolved_problem_count": 304,
+    "final_off": 396,
+    "final_on": 134,
+    "final_retention_pct": 33.84
+  },
+  "runtime_policy": {
+    "target_per_category_type": 30,
+    "meaning": "originals count toward fixed category/type target; fallback is appended only until total reaches target"
+  },
+  "supply": {
+    "lexically_safe_gerund_templates": 160,
+    "by_type": {
+      "変形": 40,
+      "空所補充": 40,
+      "英作文": 40,
+      "間違い直し": 40
+    }
+  },
+  "estimates": {
+    "resolved_original_from_pool_minus_unresolved": 102,
+    "current_append_capacity": 36,
+    "current_total_estimate": 138,
+    "blocked_replacement_capacity": 138,
+    "blocked_fill_total_estimate": 240,
+    "model_delta_vs_actual_on": 4
+  },
+  "by_type": {
+    "変形": {
+      "original_pool": 108,
+      "resolved_original_estimate": 24,
+      "blocked_original": 84,
+      "safe_template_supply": 40,
+      "current_target_total": 30,
+      "current_append_capacity": 6,
+      "blocked_replacement_capacity": 40,
+      "current_total_estimate": 30,
+      "blocked_fill_total_estimate": 64
+    },
+    "空所補充": {
+      "original_pool": 88,
+      "resolved_original_estimate": 18,
+      "blocked_original": 70,
+      "safe_template_supply": 40,
+      "current_target_total": 30,
+      "current_append_capacity": 12,
+      "blocked_replacement_capacity": 40,
+      "current_total_estimate": 30,
+      "blocked_fill_total_estimate": 58
+    },
+    "英作文": {
+      "original_pool": 180,
+      "resolved_original_estimate": 48,
+      "blocked_original": 132,
+      "safe_template_supply": 40,
+      "current_target_total": 30,
+      "current_append_capacity": 0,
+      "blocked_replacement_capacity": 40,
+      "current_total_estimate": 48,
+      "blocked_fill_total_estimate": 88
+    },
+    "間違い直し": {
+      "original_pool": 30,
+      "resolved_original_estimate": 12,
+      "blocked_original": 18,
+      "safe_template_supply": 40,
+      "current_target_total": 30,
+      "current_append_capacity": 18,
+      "blocked_replacement_capacity": 18,
+      "current_total_estimate": 30,
+      "blocked_fill_total_estimate": 30
+    }
+  },
+  "interpretation": {
+    "current_cap_bottleneck": true,
+    "candidate_formula": "For each learned category/type, derive desired supplemental count from blocked originals, but cap it by generic lexically-safe template supply; never target the full OFF pool and never relax vocabulary chronology.",
+    "safe_to_apply_now": false,
+    "reason": "This audit is intentionally conservative. resolved_original is estimated from passMeta unresolved counts and still needs actual runtime per-section measurement before production semantics change."
+  }
+}
