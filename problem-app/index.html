@@ -1244,9 +1244,9 @@ function buildGrade2PronounFallbacks() {
     const stem=String(n++).padStart(3,'0');
     const cap=r.sub[0].toUpperCase()+r.sub.slice(1);
     out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-SUB-'+stem,'( '+r.sub+' / '+r.obj+' / '+r.poss+' ) '+r.be+' '+r.pred+'. 正しい代名詞を選びなさい。',cap));
-    out.push(vocabFallbackItem('中2','人称代名詞','空所補充','G2-PRON-OBJ-'+stem,cap+' is my friend. I often talk with (      ).',r.obj));
+    out.push(vocabFallbackItem('中2','人称代名詞','空所補充','G2-PRON-OBJ-'+stem,'主格 '+cap+' に対応する目的格を空所に書きなさい。 I often talk with (      ).',r.obj));
     out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-POSS-'+stem,'This is ( '+r.poss+' / '+r.obj+' / '+r.sub+' ) book. 正しい代名詞を選びなさい。',r.poss));
-    out.push(vocabFallbackItem('中2','人称代名詞','間違い直し','G2-PRON-FIX-'+stem,cap+' is my friend. I often talk with '+r.wrong+'. 2文目の代名詞の誤りを直しなさい。',cap+' is my friend. I often talk with '+r.obj+'.'));
+    out.push(vocabFallbackItem('中2','人称代名詞','間違い直し','G2-PRON-FIX-'+stem,'主格 '+cap+' に対応する目的格を使うように誤りを直しなさい。 I often talk with '+r.wrong+'.','I often talk with '+r.obj+'.'));
   }
   return out;
 }
