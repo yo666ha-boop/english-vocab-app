@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T03:14:17.097Z",
+  "generated_at": "2026-08-26T03:16:13.157Z",
   "source_low_retention": "audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json",
   "source_passmeta_audit": "audit/PROBLEM_APP_PASSMETA_SAFE_AUDIT.json",
   "persistent_group_count": 1,
@@ -18,6 +18,31 @@
       ],
       "original_pool": 406,
       "unresolved_problem_count": 304,
+      "original_types": {
+        "英作文": 180,
+        "変形": 108,
+        "空所補充": 88,
+        "間違い直し": 30
+      },
+      "unresolved_types": {
+        "英作文": 132,
+        "変形": 84,
+        "空所補充": 70,
+        "間違い直し": 18
+      },
+      "final_section": {
+        "section": "Reading 3",
+        "position": 33,
+        "off": 396,
+        "on": 134,
+        "retention_pct": 33.84,
+        "original_types": {
+          "空所補充": 88,
+          "英作文": 180,
+          "変形": 108,
+          "間違い直し": 30
+        }
+      },
       "matched_global_unresolved_token_count": 17,
       "top_unresolved_tokens": [
         {
