@@ -1,7 +1,7 @@
 {
-  "bytes": 3861404,
-  "chars": 2645900,
-  "newlines": 1487,
+  "bytes": 3861592,
+  "chars": 2646096,
+  "newlines": 1488,
   "occurrences": {
     "単語制限": 4,
     "単語": 56,
@@ -17,7 +17,7 @@
     "textbook": 38,
     "unit": 108,
     "section": 54,
-    "grade": 10601,
+    "grade": 10615,
     "filter": 16,
     "candidate": 8
   },
