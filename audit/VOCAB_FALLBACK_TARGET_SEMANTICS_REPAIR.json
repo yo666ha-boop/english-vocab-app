@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-08-26T03:17:34.169Z",
+  "marker": "VOCAB_FALLBACK_TARGET_FROM_LEARNED_SUPPLY_V1",
+  "changed": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "policy": "For each selected learned grammar category/type, vocabulary-ON safe fallback may replace blocked supply only up to the vocabulary-OFF pool that passes prerequisite grammar and quality gates.",
+  "arbitrary_target_removed": true,
+  "problem_id_hardcode": false,
+  "section_hardcode": false,
+  "textbook_hardcode": false
+}
