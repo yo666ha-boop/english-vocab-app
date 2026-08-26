@@ -25,26 +25,68 @@
       "v": "Reading 3",
       "t": "Reading 3"
     },
-    "first_candidates": null,
-    "last_candidates": null,
+    "first_candidates": 1072,
+    "last_candidates": 2069,
     "selected_value": "Reading 3"
   },
   "random": {
     "category": "動名詞",
     "type": "英作文",
-    "ordered_count": 0,
-    "random_count": 0,
-    "ordered_ids": [],
-    "random_ids": [],
-    "different": false
+    "ordered_count": 20,
+    "random_count": 20,
+    "ordered_ids": [
+      "M2X-GER-0586",
+      "M2X-GER-0610",
+      "M2Y-GER-0245",
+      "M2Y-GER-0247",
+      "M2Y-GER-0251",
+      "M2Y-GER-0253",
+      "M2Y-GER-0260",
+      "M2Y-GER-0262",
+      "M2Y-GER-0266",
+      "M2Y-GER-0268",
+      "M2Y-GER-0275",
+      "M2Y-GER-0277",
+      "M2Y-GER-0281",
+      "M2Y-GER-0283",
+      "M2Y-GER-0290",
+      "M2Y-GER-0292",
+      "M2Y-GER-0296",
+      "M2Y-GER-0298",
+      "M2Y-GER-0305",
+      "M2Y-GER-0307"
+    ],
+    "random_ids": [
+      "M2-GER2-0912",
+      "M2Y-GER-0298",
+      "M2-GER2-0960",
+      "M2Y-GER-0247",
+      "M2-GER2-1014",
+      "M2Y-GER-0268",
+      "M2Y-GER-0266",
+      "M2Y-GER-0328",
+      "M2-GER2-0858",
+      "M2Y-GER-0260",
+      "M2Y-GER-0251",
+      "M2Y-GER-0281",
+      "M2-GER2-0798",
+      "M2-GER2-1020",
+      "M2Y-GER-0296",
+      "M2-GER2-1182",
+      "M2Y-GER-0292",
+      "M2Y-GER-0262",
+      "M2Y-GER-0283",
+      "M2-GER2-0906"
+    ],
+    "different": true,
+    "candidate_count": 44
   },
   "search": {
+    "all_visible_text_fields": [],
     "discovered": []
   },
   "result": "FAIL",
   "failures": [
-    "section selection produced no candidate status",
-    "ordered/random generation did not create 20 questions",
     "no visible search control discovered"
   ]
 }
