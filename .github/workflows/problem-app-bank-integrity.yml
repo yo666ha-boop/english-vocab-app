@@ -1,5 +1,6 @@
 name: Problem app bank integrity
 
+# 2026-08-26: rerun final candidate after supplemental-only fallback allowance.
 on:
   push:
     branches:
