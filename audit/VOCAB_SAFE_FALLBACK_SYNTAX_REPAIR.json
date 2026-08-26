@@ -1,7 +1,9 @@
 {
-  "repairedAt": "2026-08-25T17:17:47.240Z",
+  "repairedAt": "2026-08-26T04:21:45.886Z",
   "escapedBackticksRemoved": 0,
   "semanticPossessiveRepair": 0,
-  "contextDependentPrereqCacheRepair": 1,
-  "htmlBytes": 3812383
+  "contextDependentPrereqCacheRepair": 0,
+  "supplementalFallbackCapRepair": 1,
+  "installerSupplementalFallbackCapRepair": 1,
+  "htmlBytes": 3857100
 }

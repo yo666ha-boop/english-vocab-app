@@ -1237,6 +1237,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     counts.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
+  counts.clear(); // supplemental fallback cap: originals do not consume the fallback allowance
   const extras=[];
   for(const item of vocabFallbackBank()) {
     if(item.grade!==grade) continue;
