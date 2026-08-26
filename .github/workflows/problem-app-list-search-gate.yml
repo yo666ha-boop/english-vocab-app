@@ -1,0 +1,73 @@
+name: Problem app list search gate
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - .github/workflows/problem-app-list-search-gate.yml
+      - audit/PROBLEM_APP_LIST_SEARCH_TRIGGER.md
+
+permissions:
+  contents: write
+
+jobs:
+  search-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Exercise problem-list keyword search
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json,re
+          url=Path('problem-app/index.html').resolve().as_uri()
+          out={'url':url,'result':'FAIL'}
+          def only(page,selector,value):
+              page.evaluate("""({selector,value})=>Array.from(document.querySelectorAll(selector)).forEach(x=>{x.checked=x.value===value;x.dispatchEvent(new Event('change',{bubbles:true}))})""",{'selector':selector,'value':value})
+          with sync_playwright() as p:
+              b=p.chromium.launch();page=b.new_page(viewport={'width':1280,'height':900});errors=[]
+              page.on('pageerror',lambda e:errors.append(str(e)))
+              page.goto(url,wait_until='load')
+              page.select_option('#subjectSelect','英語');page.select_option('#gradeSelect','中2');page.wait_for_timeout(80)
+              page.select_option('#textbookSelect','サンシャイン');page.wait_for_timeout(80)
+              secs=page.locator('#sectionSelect option').evaluate_all("els=>els.map(x=>x.value).filter(Boolean)");assert secs
+              page.select_option('#sectionSelect',secs[-1]);page.select_option('#vocabMode','on')
+              only(page,'input[data-stage]','動名詞');only(page,'input[data-type]','間違い直し')
+              page.select_option('#questionCount','20');page.select_option('#pickMode','top');page.wait_for_timeout(150)
+              status=page.locator('#builderStatus').inner_text();m=re.search(r'この条件で使える候補\s*(\d+)件',status);assert m and int(m.group(1))>=20,status
+              page.locator('#generateBtn').click();page.wait_for_timeout(120)
+              labels=page.locator('#questionPreview .qnum').all_inner_texts();ids=[]
+              for x in labels:
+                  mm=re.search(r'Q\d+\s+([^\s　/]+)',x)
+                  if mm:ids.append(mm.group(1))
+              assert len(ids)==20,ids
+              target=ids[0]
+              page.locator('#toListBtn').click();page.wait_for_timeout(120)
+              kw=page.locator('#listKeyword');assert kw.is_visible();assert '問題文 / 解答 / ID' in (kw.get_attribute('placeholder') or '')
+              kw.fill(target);page.locator('#refreshListBtn').click();page.wait_for_timeout(120)
+              rows=page.locator('#listBody tr');texts=rows.all_inner_texts();list_status=page.locator('#listStatus').inner_text()
+              assert texts,(target,list_status)
+              assert any(target in t for t in texts),(target,texts[:5],list_status)
+              out={'url':url,'target_id':target,'generated_count':len(ids),'search_visible':True,'result_rows':len(texts),'matching_rows':sum(target in t for t in texts),'list_status':list_status,'page_errors':errors,'result':'PASS' if not errors else 'FAIL'}
+              b.close()
+          Path('audit').mkdir(exist_ok=True);Path('audit/PROBLEM_APP_LIST_SEARCH_GATE.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          assert out['result']=='PASS',out
+      - name: Commit search evidence
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_LIST_SEARCH_GATE.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record real problem-list search gate [skip ci]'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
