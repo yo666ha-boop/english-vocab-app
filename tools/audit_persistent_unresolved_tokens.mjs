@@ -13,6 +13,11 @@ function scriptJson(html,id){
 function tokensOf(s){
   return [...String(s??'').replace(/[’‘]/g,"'").matchAll(/[A-Za-z]+(?:'[A-Za-z]+)?/g)].map(m=>m[0].toLowerCase());
 }
+function countTypes(items){
+  const out={};
+  for(const item of items) out[item.type]=(out[item.type]||0)+1;
+  return Object.fromEntries(Object.entries(out).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));
+}
 
 const low=JSON.parse(fs.readFileSync(LOW,'utf8'));
 const safe=JSON.parse(fs.readFileSync(SAFE,'utf8'));
@@ -45,15 +50,18 @@ for(const group of persistent){
     }
   }
   const tokens=[...counts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).map(([token,count])=>({token,count,examples:examples.get(token)}));
+  const finalRecord=[...records].sort((a,b)=>b.position-a.position)[0];
   results.push({
     grade:group.grade,textbook:group.textbook,category:group.category,
     rows:group.rows,first_section:group.first_section,last_section:group.last_section,
     min_retention_pct:group.min_retention_pct,max_retention_pct:group.max_retention_pct,
     runtime_mapped_categories:mapped,original_pool:pool.length,unresolved_problem_count:unresolved.length,
+    original_types:countTypes(pool),unresolved_types:countTypes(unresolved),
+    final_section:{section:finalRecord.section,position:finalRecord.position,off:finalRecord.off,on:finalRecord.on,retention_pct:finalRecord.retention_pct,original_types:finalRecord.original_types},
     matched_global_unresolved_token_count:tokens.length,
     top_unresolved_tokens:tokens.slice(0,80)
   });
 }
 const out={generated_at:new Date().toISOString(),source_low_retention:LOW,source_passmeta_audit:SAFE,persistent_group_count:persistent.length,results};
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');
-console.log(JSON.stringify({persistent_group_count:persistent.length,results:results.map(r=>({grade:r.grade,textbook:r.textbook,category:r.category,pool:r.original_pool,unresolved:r.unresolved_problem_count,top:r.top_unresolved_tokens.slice(0,30).map(x=>[x.token,x.count])}))},null,2));
+console.log(JSON.stringify({persistent_group_count:persistent.length,results:results.map(r=>({grade:r.grade,textbook:r.textbook,category:r.category,pool:r.original_pool,unresolved:r.unresolved_problem_count,original_types:r.original_types,unresolved_types:r.unresolved_types,final_section:r.final_section,top:r.top_unresolved_tokens.slice(0,30).map(x=>[x.token,x.count])}))},null,2));
