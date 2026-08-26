@@ -1,0 +1,46 @@
+name: Rollback vocab fallback target semantics
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/rollback_vocab_fallback_target_semantics.mjs
+      - .github/workflows/rollback-vocab-fallback-target-semantics.yml
+
+permissions:
+  contents: write
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-vocab-grammar-range-20260825
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync branch
+        run: |
+          git fetch origin fix-vocab-grammar-range-20260825
+          git reset --hard origin/fix-vocab-grammar-range-20260825
+      - name: Roll back regressive target semantics
+        run: node tools/rollback_vocab_fallback_target_semantics.mjs
+      - name: Validate embedded JSON and runtime syntax
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'),vm=require('vm');
+          const s=fs.readFileSync('problem-app/index.html','utf8');
+          for(const id of ['qb-data','meta-data']){const m=new RegExp(`<script\\s+id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/script>`,'i').exec(s);if(!m)throw new Error(id+' missing');JSON.parse(m[1]);}
+          for(const code of [...s.matchAll(/<script(?![^>]*type=["']application\/json["'])[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).filter(x=>x.trim()))new vm.Script(code);
+          console.log('JSON + runtime syntax PASS');
+          NODE
+      - name: Commit rollback
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html tools/install_vocab_safe_fallback_v1.mjs audit/VOCAB_FALLBACK_TARGET_SEMANTICS_ROLLBACK.json
+          git commit -m 'fix: rollback regressive fallback target semantics [skip ci]'
+          git pull --rebase origin fix-vocab-grammar-range-20260825
+          git push
