@@ -22,3 +22,4 @@ Post-learned-supply-fallback-target-semantics full browser matrix rerun requeste
 Post-regression-rollback verification full browser matrix rerun requested on 2026-08-26 12:26 JST.
 Post-supplemental-fallback-allowance full browser matrix rerun requested on 2026-08-26 13:22 JST.
 Post-grade2-min20-generic-fallback full browser matrix rerun requested on 2026-08-26 15:34 JST.
+Post-pronoun-fallback-quality-refinement full browser matrix rerun requested on 2026-08-26 15:36 JST.
