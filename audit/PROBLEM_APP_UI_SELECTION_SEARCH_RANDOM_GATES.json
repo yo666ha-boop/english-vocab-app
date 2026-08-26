@@ -25,8 +25,8 @@
       "v": "Reading 3",
       "t": "Reading 3"
     },
-    "first_candidates": 1072,
-    "last_candidates": 2069,
+    "first_candidates": 1270,
+    "last_candidates": 2397,
     "selected_value": "Reading 3"
   },
   "random": {
@@ -57,29 +57,29 @@
       "M2Y-GER-0307"
     ],
     "random_ids": [
+      "M2-GER2-1176",
+      "VF-G2-GER-WRITE-012",
+      "M2-GER2-0804",
+      "VF-G2-GER-WRITE-015",
+      "M2-GER2-0966",
+      "M2Y-GER-0311",
+      "VF-G2-GER-WRITE-019",
       "M2-GER2-0912",
+      "VF-G2-GER-WRITE-027",
+      "VF-G2-GER-WRITE-008",
+      "VF-G2-GER-WRITE-005",
+      "M2X-GER-0586",
+      "VF-G2-GER-WRITE-010",
+      "M2-GER2-1074",
+      "M2-GER2-1236",
+      "M2Y-GER-0245",
+      "VF-G2-GER-WRITE-022",
       "M2Y-GER-0298",
-      "M2-GER2-0960",
-      "M2Y-GER-0247",
-      "M2-GER2-1014",
-      "M2Y-GER-0268",
-      "M2Y-GER-0266",
-      "M2Y-GER-0328",
-      "M2-GER2-0858",
-      "M2Y-GER-0260",
-      "M2Y-GER-0251",
-      "M2Y-GER-0281",
-      "M2-GER2-0798",
-      "M2-GER2-1020",
-      "M2Y-GER-0296",
-      "M2-GER2-1182",
-      "M2Y-GER-0292",
-      "M2Y-GER-0262",
-      "M2Y-GER-0283",
-      "M2-GER2-0906"
+      "VF-G2-GER-WRITE-009",
+      "VF-G2-GER-WRITE-006"
     ],
     "different": true,
-    "candidate_count": 44
+    "candidate_count": 74
   },
   "search": {
     "all_visible_text_fields": [],
