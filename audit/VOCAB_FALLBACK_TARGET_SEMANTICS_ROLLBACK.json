@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-08-26T03:25:23.628Z",
+  "changed": [
+    "problem-app/index.html",
+    "tools/install_vocab_safe_fallback_v1.mjs"
+  ],
+  "reason": "Exhaustive browser matrix regression: prior 0/0/232 became zeroed=3, under25=152, under50=564. Preserve last known good behavior while root cause is investigated."
+}

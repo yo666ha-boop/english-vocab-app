@@ -1230,17 +1230,6 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
   const grade=currentGrade();
   const selectedCategorySet=new Set(categories||[]);
   const selectedTypeSet=new Set(types||[]);
-  // VOCAB_FALLBACK_TARGET_FROM_LEARNED_SUPPLY_V1: derive the replacement ceiling from the same learned-grammar/quality pool
-  // that is available with vocabulary filtering OFF. This avoids an arbitrary per-type count cap.
-  const targetCounts=new Map();
-  for(const item of qb) {
-    if(item.subject!=='英語' || item.grade!==grade) continue;
-    if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
-    if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
-    if(!passesPrereqGrammar(item) || !passesQualityGate(item)) continue;
-    const key=item.category+'\u0000'+item.type;
-    targetCounts.set(key,(targetCounts.get(key)||0)+1);
-  }
   const counts=new Map();
   const seenText=new Set();
   for(const item of originals) {
@@ -1255,8 +1244,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
     const key=item.category+'\\u0000'+item.type;
-    const target=targetCounts.get(key)||0;
-    if(!target || (counts.get(key)||0)>=target) continue;
+    if((counts.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
     seenText.add(textKey);
