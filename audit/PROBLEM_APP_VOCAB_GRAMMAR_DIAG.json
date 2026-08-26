@@ -1,7 +1,7 @@
 {
-  "bytes": 3857004,
-  "chars": 2642354,
-  "newlines": 1430,
+  "bytes": 3857100,
+  "chars": 2642450,
+  "newlines": 1431,
   "occurrences": {
     "単語制限": 4,
     "単語": 56,
@@ -227,6 +227,7 @@
     "_vocabFallback",
     "_vocabFallbackBankCache",
     "allGrammarCount",
+    "allowance",
     "appendVocabFallbacks",
     "baseFiltered",
     "buildGrade1ConjunctionFallbacks",

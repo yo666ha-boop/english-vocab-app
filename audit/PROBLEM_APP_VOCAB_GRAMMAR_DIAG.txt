@@ -270,7 +270,7 @@ div>
   
   <script id="qb-data" type="application/json">[{"id":"E1-BQ-001","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"not の位置ミス","cause":"変形ルール未定着","q":"He is busy. を否定文にしなさい。","a":"He is not busy."},{"id":"E1-BQ-002","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"be動詞を前に出せない","cause":"疑問文の型不足","q":"You are happy. を疑問文にしなさい。","a":"Are you happy?"},{"id":"E1-BQ-003","subject":"英語","grade":"中1","category":"be動詞","type":"答え方","mistake":"Yes/No 応答ミス","cause":"答え方の型不足","q":"Are you a student? に Yes で答えなさい。","a":"Yes, I am."},{"id":"E1-BQ-004","subject":"英語","grade":"中1","category":"be動詞","type":"並びかえ","mistake":"not の位置ミス","cause":"語順不安定","q":"次の語(句)を正しい順に並べかえなさい。 ( is / she / not / kind )","a":"She is not kind."},{"id":"E1-BQ-005","subject":"英語","grade":"中1","category":"be動詞","type":"間違い直し","mistake":"主語に合う be 動詞ミス","cause":"主語と動詞の対応不足","q":"Are he busy? の誤りを直しなさい。","a":"Is he busy?"},{"id":"E1-BQ-006","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"am not の位置ミス","cause":"否定文の型不足","q":"I am busy. を否定文にしなさい。","a":"I am not busy."},{"id":"E1-BQ-007","subject":"英語","grade":"中1","category":"be動詞","type":"変形","mistake":"疑問文の語順ミス","cause":"be動詞を前に出せない","q":"She is a teacher. を疑問文にしなさい。","a":"Is she a teacher?"},{"id":"E1-B
 
---- 単語制限 #4 @ 2635180 ---
+--- 単語制限 #4 @ 2635276 ---
 n a;
 }
 
@@ -6916,12 +6916,8 @@ function vocabFallbackTokenBases(token) {
   if(t.length>3 && t.endsWith('ed')) { out.add(t.slice(0,-2)); out.add(t.slice(0,-1)); }
   if(t.length>4 && t.endsWith('ing')) { out.add(t.slice(0,-
 
---- grammar #41 @ 2632859 ---
-});
-  return _vocabFallbackBankCache;
-}
-
-function appendVocabFallbacks(originals, categories, types, overrideMode) {
+--- grammar #41 @ 2632955 ---
+pes, overrideMode) {
   const mode=overrideMode || (useVocabGate() ? 'on' : 'off');
   if(currentSubject()!=='英語' || mode==='off') return originals;
   const grade=currentGrade();
@@ -6934,6 +6930,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     counts.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
+  counts.clear(); // supplemental fallback cap: originals do not consume the fallback allowance
   const extras=[];
   for(const item of vocabFallbackBank()) {
     if(item.grade!==grade) continue;
@@ -6987,7 +6984,7 @@ function updateBuilderStatus(candidates) {
   if (subj === '英語') {
     msg += ' / 教科
 
---- grammar #42 @ 2633911 ---
+--- grammar #42 @ 2634007 ---
 s.get(key)||0)>=VOCAB_FALLBACK_TARGET_PER_CATEGORY_TYPE) continue;
     const textKey=String(item.q||'')+'\\u0000'+String(item.a||'');
     if(seenText.has(textKey)) continue;
@@ -9209,7 +9206,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(will|won't)\b|\b(am|is|are) going to\b/i.test(text)) bump(stageIndexByNameContains('未来'));
   if (/\b(was|were)\s+[A-Za
 
---- textbook #35 @ 2634680 ---
+--- textbook #35 @ 2634776 ---
 s.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -9276,7 +9273,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: 
 
---- textbook #36 @ 2637943 ---
+--- textbook #36 @ 2638039 ---
 size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -9336,7 +9333,7 @@ function refreshList() {
 function syncListSelectors() {
   el('listSubject').value = currentSubjec
 
---- textbook #37 @ 2640227 ---
+--- textbook #37 @ 2640323 ---
 nt = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -9392,7 +9389,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]
 
---- textbook #38 @ 2642048 ---
+--- textbook #38 @ 2642144 ---
 dEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
   document.addEventListener('change', evt => {
@@ -12435,7 +12432,7 @@ function requiredGrammarStageIndex(item) {
   if (/\b(am|is|are)\s+[A-Za-z]+ing\b/i.test(text)) bump(stageIndexByNameContains('進行形'));
   if (/\b(can|must|may|should)\b/i.test(text)) bump(stageIndex
 
---- section #46 @ 2634715 ---
+--- section #46 @ 2634811 ---
 pe)) return false;
     if (!passesVocab(item, overrideMode)) return false;
     if (!passesPrereqGrammar(item)) return false;
@@ -12502,7 +12499,7 @@ function printQuestions() {
       html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
       rows: Math.ceil(pageQuestions.length / 2
 
---- section #47 @ 2637800 ---
+--- section #47 @ 2637896 ---
 n;overflow:hidden;page-break-after:always;break-after:page}
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
@@ -12556,7 +12553,7 @@ function refreshList() {
 <td>${item.category}</td>
 <td>${ite
 
---- section #48 @ 2638016 ---
+--- section #48 @ 2638112 ---
 ;padding-bottom:2mm;border-bottom:0.3mm solid #555}
   .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
   .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
@@ -12620,7 +12617,7 @@ function syncListSelectors() {
 
 function wireEvents() 
 
---- section #49 @ 2638185 ---
+--- section #49 @ 2638281 ---
 splay:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
   .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
   .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
@@ -12684,7 +12681,7 @@ function wireEvents() {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); u
 
---- section #50 @ 2639904 ---
+--- section #50 @ 2640000 ---
 bject === '英語' && item.grade === currentGrade() && !passesVocab(item, vocabMode)) return false;
     if (kw) {
       const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
@@ -13456,6 +13453,7 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
     counts.set(key,(counts.get(key)||0)+1);
     seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
   }
+  counts.clear(); // supplemental fallback cap: originals do not consume the fallback allowance
   const extras=[];
   for(const item of vocabFallbackBank()) {
     if(item.grade!==grade) continue;
@@ -13477,14 +13475,12 @@ function appendVocabFallbacks(originals, categories, types, overrideMode) {
 function baseFiltered(overrideMode) {
   const subj = currentSubject();
   const grade = currentGrade();
-  const categories = selectedCategories();
-  const types = selectedValues('input[data-type]');
-  const originals =
+  const categories
 
---- filter #5 @ 2633374 ---
-s.set(key,(counts.get(key)||0)+1);
-    seenText.add(String(item.q||'')+'\\u0000'+String(item.a||''));
+--- filter #5 @ 2633470 ---
+''));
   }
+  counts.clear(); // supplemental fallback cap: originals do not consume the fallback allowance
   const extras=[];
   for(const item of vocabFallbackBank()) {
     if(item.grade!==grade) continue;
@@ -13551,7 +13547,7 @@ function renderQuestions() {
     currentQuestions = [];
     el('questionPreview').innerHTML = 'この条件では問題が見つかりませんでした。
 
---- filter #6 @ 2633582 ---
+--- filter #6 @ 2633678 ---
  if(selectedCategorySet.size && !selectedCategorySet.has(item.category)) continue;
     if(selectedTypeSet.size && !selectedTypeSet.has(item.type)) continue;
     if(!passesPrereqGrammar(item) || !passesQualityGate(item) || !vocabFallbackLexicallySafe(item)) continue;
@@ -13620,7 +13616,7 @@ function renderQuestions() {
   currentQuestions = picked;
   el('questionPreview').classList.toggle(
 
---- filter #7 @ 2634424 ---
+--- filter #7 @ 2634520 ---
 electedValues('input[data-type]');
   const originals = qb.filter(item => {
     if (item.subject !== subj) return false;
@@ -13688,7 +13684,7 @@ function printQuestions() {
   const pages = [];
   for (let startIndex = 0; sta
 
---- filter #8 @ 2635019 ---
+--- filter #8 @ 2635115 ---
 t a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
@@ -13756,7 +13752,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:
 
---- filter #9 @ 2638846 ---
+--- filter #9 @ 2638942 ---
 tbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div>
 <div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div>
 </section>`).join('')}
@@ -13818,7 +13814,7 @@ function wireEvents() {
   document.addEventListener('change', evt => {
     if (evt.target.ma
 
---- filter #10 @ 2640015 ---
+--- filter #10 @ 2640111 ---
      const hay = (item.id + ' ' + item.category + ' ' + item.type + ' ' + item.q + ' ' + item.a).toLowerCase();
       if (!hay.includes(kw)) return false;
     }
@@ -13872,7 +13868,7 @@ function wireEvents() {
   if (el('importJsonInput')) el('importJsonInput').addEventListener('change', evt => {
     const file = evt.target.files 
 
---- filter #11 @ 2640204 ---
+--- filter #11 @ 2640300 ---
 'listStatus').textContent = '一覧 ' + rows.length + '件';
   el('listStatus').classList.toggle('good', rows.length > 0);
   rows = rows.slice(0, limit);
@@ -13928,7 +13924,7 @@ function wireEvents() {
 
 function esc(s){ return String(s ?? '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>
 
---- filter #12 @ 2640354 ---
+--- filter #12 @ 2640450 ---
 el('listBody').innerHTML = rows.map(item => `
     <tr>
 <td>${item.id}</td>
@@ -13988,7 +13984,7 @@ renderTypeOptions();
 syncListSelectors();
 wireE
 
---- filter #13 @ 2640478 ---
+--- filter #13 @ 2640574 ---
 {item.category}</td>
 <td>${item.type}</td>
 <td>${item.q}</td>
@@ -14047,7 +14043,7 @@ try {
   if (saved) applyState(JSON.parse(saved));
 } catch (e) {}
 
---- filter #14 @ 2640570 ---
+--- filter #14 @ 2640666 ---
 ('');
 }
 
@@ -14107,7 +14103,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #15 @ 2640722 ---
+--- filter #15 @ 2640818 ---
  {
   renderTabs();
   el('subjectSelect').addEventListener('change', () => { renderSectionOptions(); renderStageOptions(false); renderTypeOptions(); syncListSelectors(); updateBuilderStatus(baseFiltered()); });
@@ -14159,7 +14155,7 @@ updateBuilderStatus(baseFiltered());
 </body>
 </html>
 
---- filter #16 @ 2642309 ---
+--- filter #16 @ 2642405 ---
 t', evt => {
     if (evt.target.closest('input[type=text], textarea')) autoSave();
   });
@@ -14193,7 +14189,7 @@ updateBuilderStatus(baseFiltered());
 </html>
 
 ===== candidate : 8 hits =====
---- candidate #1 @ 2634317 ---
+--- candidate #1 @ 2634413 ---
 rentSubject();
   const grade = currentGrade();
   const categories = selectedCategories();
@@ -14261,7 +14257,7 @@ function printQuestions() {
 <div class="n">Q${index + 1}　${escapeHtml(q.id)}</div>
 <div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div c
 
---- candidate #2 @ 2634601 ---
+--- candidate #2 @ 2634697 ---
 ories.length && !categories.includes(item.category)) return false;
     if (types.length && !types.includes(item.type)) return false;
     if (!passesVocab(item, overrideMode)) return false;
@@ -14328,7 +14324,7 @@ function printQuestions() {
     pages.push({
       html: pageQuestions.map
 
---- candidate #3 @ 2634840 ---
+--- candidate #3 @ 2634936 ---
     if (!passesQualityGate(item)) return false;
     return true;
   });
@@ -14401,7 +14397,7 @@ function printQuestions() {
 <style>
   @p
 
---- candidate #4 @ 2635002 ---
+--- candidate #4 @ 2635098 ---
 fle(arr) {
   const a = arr.slice();
   for (let i=a.length-1;i>0;i--) {
@@ -14470,7 +14466,7 @@ function printQuestions() {
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#
 
---- candidate #5 @ 2635053 ---
+--- candidate #5 @ 2635149 ---
 length-1;i>0;i--) {
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
@@ -14538,7 +14534,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:2
 
---- candidate #6 @ 2635073 ---
+--- candidate #6 @ 2635169 ---
     const j = Math.floor(Math.random() * (i+1));
     const tmp = a[i]; a[i] = a[j]; a[j] = tmp;
   }
@@ -14605,7 +14601,7 @@ function printQuestions() {
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
   .page{height:281mm;display:flex;fl
 
---- candidate #7 @ 2635275 ---
+--- candidate #7 @ 2635371 ---
 de = currentGrade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14666,7 +14662,7 @@ function printQuestions() {
   .page:last-child{page-break-after:auto;break-after:auto}
   h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 a
 
---- candidate #8 @ 2635289 ---
+--- candidate #8 @ 2635385 ---
 ade();
   const sameGradeCount = qb.filter(x => x.subject === subj && x.grade === grade).length;
   let msg = '全問題 ' + meta.counts.all + '件 / ' + grade + 'の' + subj + '元データ ' + sameGradeCount + '件 / この条件で使える候補 ' + candidates.length + '件';
@@ -14744,6 +14740,7 @@ __mikamiLearnedGrammarStages
 _vocabFallback
 _vocabFallbackBankCache
 allGrammarCount
+allowance
 appendVocabFallbacks
 baseFiltered
 buildGrade1ConjunctionFallbacks
