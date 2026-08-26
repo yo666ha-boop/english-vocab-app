@@ -1,0 +1,83 @@
+{
+  "url": "file:///home/runner/work/english-vocab-app/english-vocab-app/problem-app/index.html",
+  "desktop": [
+    {
+      "browser": "chromium",
+      "section": "Reading 3",
+      "candidates": 30,
+      "generated": 20,
+      "fallback_generated": 8,
+      "save_restore_exact": true,
+      "print_html_chars": 4896,
+      "layout": {
+        "w": 1280,
+        "sw": 1280,
+        "h": 900,
+        "sh": 1674
+      }
+    },
+    {
+      "browser": "firefox",
+      "section": "Reading 3",
+      "candidates": 30,
+      "generated": 20,
+      "fallback_generated": 8,
+      "save_restore_exact": true,
+      "print_html_chars": 4896,
+      "layout": {
+        "w": 1280,
+        "sw": 1280,
+        "h": 900,
+        "sh": 1675
+      }
+    },
+    {
+      "browser": "webkit",
+      "section": "Reading 3",
+      "candidates": 30,
+      "generated": 20,
+      "fallback_generated": 8,
+      "save_restore_exact": true,
+      "print_html_chars": 4896,
+      "layout": {
+        "w": 1280,
+        "sw": 1280,
+        "h": 900,
+        "sh": 1674
+      }
+    }
+  ],
+  "mobile": {
+    "browser": "webkit",
+    "profile": "iPhone-equivalent 390x844 touch",
+    "section": "Reading 3",
+    "candidates": 30,
+    "generated": 20,
+    "fallback_generated": 8,
+    "layout": {
+      "w": 390,
+      "sw": 390,
+      "h": 844,
+      "preview": {
+        "x": 33,
+        "y": 694.4375,
+        "width": 324,
+        "height": 1883,
+        "top": 694.4375,
+        "right": 357,
+        "bottom": 2577.4375,
+        "left": 33
+      }
+    }
+  },
+  "a4": {
+    "pages": 2,
+    "first_page_points": [
+      595.92,
+      842.88
+    ],
+    "pdf_bytes": 108248,
+    "answer_marker_in_print_html": true
+  },
+  "result": "PASS"
+}
