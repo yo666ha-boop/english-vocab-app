@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 // 2026-08-26: refresh from post-pronoun-quality final-candidate matrix.
 // 2026-08-26: distinguish true restriction-caused shortages from bank-size shortages.
+// 2026-08-26: refresh after multigrade common fallback repair.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json';
 const data=JSON.parse(fs.readFileSync(input,'utf8'));
