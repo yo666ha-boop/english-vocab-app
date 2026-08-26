@@ -15,6 +15,7 @@ import fs from 'node:fs';
 // 2026-08-26: rerun summary after final common grammar fallbacks matrix.
 // 2026-08-26: rerun summary after supplemental-only fallback allowance matrix.
 // 2026-08-26: rerun summary from post-pronoun-quality final-candidate matrix.
+// 2026-08-26: rerun summary after multigrade common fallback repair.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX_SUMMARY.json';
 const gapOutput='audit/PROBLEM_APP_VOCAB_FINAL_SECTION_GAPS.json';
