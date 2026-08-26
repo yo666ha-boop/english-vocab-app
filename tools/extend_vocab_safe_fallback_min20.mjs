@@ -23,31 +23,34 @@ function buildGrade2ImperativeFallbacks() {
 
 function buildGrade2PronounFallbacks() {
   const rows=[
-    {sub:'I',obj:'me',poss:'my',wrong:'him'}, {sub:'you',obj:'you',poss:'your',wrong:'me'},
-    {sub:'he',obj:'him',poss:'his',wrong:'her'}, {sub:'she',obj:'her',poss:'her',wrong:'him'},
-    {sub:'we',obj:'us',poss:'our',wrong:'them'}, {sub:'they',obj:'them',poss:'their',wrong:'us'}
+    {sub:'I',obj:'me',poss:'my',be:'am',pred:'a student',wrong:'him'},
+    {sub:'you',obj:'you',poss:'your',be:'are',pred:'my friend',wrong:'me'},
+    {sub:'he',obj:'him',poss:'his',be:'is',pred:'my friend',wrong:'her'},
+    {sub:'she',obj:'her',poss:'her',be:'is',pred:'my friend',wrong:'him'},
+    {sub:'we',obj:'us',poss:'our',be:'are',pred:'friends',wrong:'them'},
+    {sub:'they',obj:'them',poss:'their',be:'are',pred:'friends',wrong:'us'}
   ];
   const out=[]; let n=1;
   for(const r of rows){
     const stem=String(n++).padStart(3,'0');
     const cap=r.sub[0].toUpperCase()+r.sub.slice(1);
-    out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-SUB-'+stem,'( '+r.sub+' / '+r.obj+' / '+r.poss+' ) am I talking about? '+cap+' is my friend.',cap));
-    out.push(vocabFallbackItem('中2','人称代名詞','空所補充','G2-PRON-OBJ-'+stem,'I know '+cap+'. I often talk with (      ).',r.obj));
-    out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-POSS-'+stem,'This is ( '+r.poss+' / '+r.obj+' / '+r.sub+' ) book.',r.poss[0].toUpperCase()+r.poss.slice(1)));
-    out.push(vocabFallbackItem('中2','人称代名詞','間違い直し','G2-PRON-FIX-'+stem,'I know '+cap+'. I often talk with '+r.wrong+'. の代名詞の誤りを直しなさい。','I know '+cap+'. I often talk with '+r.obj+'.'));
+    out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-SUB-'+stem,'( '+r.sub+' / '+r.obj+' / '+r.poss+' ) '+r.be+' '+r.pred+'. 正しい代名詞を選びなさい。',cap));
+    out.push(vocabFallbackItem('中2','人称代名詞','空所補充','G2-PRON-OBJ-'+stem,cap+' is my friend. I often talk with (      ).',r.obj));
+    out.push(vocabFallbackItem('中2','人称代名詞','選択','G2-PRON-POSS-'+stem,'This is ( '+r.poss+' / '+r.obj+' / '+r.sub+' ) book. 正しい代名詞を選びなさい。',r.poss));
+    out.push(vocabFallbackItem('中2','人称代名詞','間違い直し','G2-PRON-FIX-'+stem,cap+' is my friend. I often talk with '+r.wrong+'. 2文目の代名詞の誤りを直しなさい。',cap+' is my friend. I often talk with '+r.obj+'.'));
   }
   return out;
 }
 
 function buildGrade2Infinitive2Fallbacks() {
-  const subjects=[['I','am'],['You','are'],['He','is'],['She','is'],['We','are'],['They','are']];
-  const actions=['meet you','read this book','study English','play in the park','cook at home','write','sing','swim'];
+  const subjects=[['I','am','私は'],['You','are','あなたは'],['He','is','彼は'],['She','is','彼女は'],['We','are','私たちは'],['They','are','彼らは']];
+  const actions=[['meet you','あなたに会えて'],['read this book','この本を読めて'],['study English','英語を勉強できて'],['play in the park','公園で遊べて'],['cook at home','家で料理できて'],['write','書けて'],['sing','歌えて'],['swim','泳げて']];
   const out=[]; let n=1;
-  for(const [s,be] of subjects) for(const act of actions){
+  for(const [s,be,jps] of subjects) for(const [act,jpa] of actions){
     const stem=String(n++).padStart(3,'0');
     const full=s+' '+be+' happy to '+act+'.';
     out.push(vocabFallbackItem('中2','不定詞②','空所補充','G2-INF2-FILL-'+stem,s+' '+be+' happy (      ) '+act+'. 不定詞になるように書きなさい。','to'));
-    out.push(vocabFallbackItem('中2','不定詞②','英作文','G2-INF2-WRITE-'+stem,'「'+s+'は'+act+'することができてうれしい」という意味になる英文を書きなさい。',full));
+    out.push(vocabFallbackItem('中2','不定詞②','英作文','G2-INF2-WRITE-'+stem,'次の日本語に合う英文を書きなさい。『'+jps+jpa+'うれしいです。』',full));
     out.push(vocabFallbackItem('中2','不定詞②','並びかえ','G2-INF2-ORDER-'+stem,'次の語(句)を正しい順に並べかえなさい。 ( '+act+' / to / happy / '+be+' / '+s+' )',full));
     out.push(vocabFallbackItem('中2','不定詞②','間違い直し','G2-INF2-FIX-'+stem,s+' '+be+' happy '+act+'. の誤りを直しなさい。',full));
   }
