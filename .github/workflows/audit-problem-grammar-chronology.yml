@@ -1,6 +1,6 @@
 name: Audit problem grammar chronology
 
-# 2026-08-26: rerun final candidate after supplemental-only fallback allowance.
+# 2026-08-26: rerun final candidate after multigrade common fallback repair.
 on:
   push:
     branches:
