@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 
+// 2026-08-26: refresh from post-pronoun-quality final-candidate matrix.
 const input='audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json';
 const output='audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json';
 const data=JSON.parse(fs.readFileSync(input,'utf8'));
