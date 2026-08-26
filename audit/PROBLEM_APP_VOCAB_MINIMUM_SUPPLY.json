@@ -1,11 +1,82 @@
 {
-  "generated_at": "2026-08-26T06:52:27.612Z",
+  "generated_at": "2026-08-26T06:54:37.550Z",
   "source": "audit/PROBLEM_APP_VOCAB_BROWSER_MATRIX.json",
   "total_rows": 2682,
   "min_on": 12,
   "below_20_count": 91,
   "late_quarter_below_20_count": 43,
   "final_section_below_20_count": 4,
+  "restriction_caused_below_20_count": 6,
+  "late_quarter_restriction_caused_below_20_count": 0,
+  "final_section_restriction_caused_below_20_count": 0,
+  "restriction_caused_below_20": [
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 3-1",
+      "position": 16,
+      "section_count": 46,
+      "category": "疑問詞",
+      "off": 36,
+      "on": 14,
+      "retention_pct": 38.89
+    },
+    {
+      "grade": "中1",
+      "textbook": "ニューホライズン",
+      "section": "Unit 3-2",
+      "position": 17,
+      "section_count": 46,
+      "category": "疑問詞",
+      "off": 36,
+      "on": 15,
+      "retention_pct": 41.67
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-1",
+      "position": 4,
+      "section_count": 33,
+      "category": "接続詞",
+      "off": 48,
+      "on": 17,
+      "retention_pct": 35.42
+    },
+    {
+      "grade": "中2",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 2-2",
+      "position": 5,
+      "section_count": 33,
+      "category": "接続詞",
+      "off": 48,
+      "on": 17,
+      "retention_pct": 35.42
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 3-1",
+      "position": 15,
+      "section_count": 39,
+      "category": "疑問詞",
+      "off": 36,
+      "on": 19,
+      "retention_pct": 52.78
+    },
+    {
+      "grade": "中1",
+      "textbook": "サンシャイン",
+      "section": "PROGRAM 3-2",
+      "position": 16,
+      "section_count": 39,
+      "category": "疑問詞",
+      "off": 36,
+      "on": 19,
+      "retention_pct": 52.78
+    }
+  ],
   "below_20": [
     {
       "grade": "中1",
