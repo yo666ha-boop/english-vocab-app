@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T02:18:05.330Z",
+  "generated_at": "2026-08-26T02:18:23.150Z",
   "source": "audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json",
   "audit_threshold_pct": 50,
   "under_threshold_rows": 232,
