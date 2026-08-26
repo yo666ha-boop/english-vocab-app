@@ -20,3 +20,4 @@ Post-final-common-grammar-fallback full browser matrix rerun requested on 2026-0
 Post-problem-answer-conflict-repair full browser matrix rerun requested on 2026-08-26 08:59 JST.
 Post-learned-supply-fallback-target-semantics full browser matrix rerun requested on 2026-08-26 12:18 JST.
 Post-regression-rollback verification full browser matrix rerun requested on 2026-08-26 12:26 JST.
+Post-supplemental-fallback-allowance full browser matrix rerun requested on 2026-08-26 13:22 JST.
