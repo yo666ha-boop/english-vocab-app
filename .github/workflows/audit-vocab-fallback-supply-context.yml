@@ -1,0 +1,42 @@
+name: Audit vocab fallback supply context
+
+on:
+  push:
+    branches:
+      - fix-vocab-grammar-range-20260825
+    paths:
+      - tools/audit_vocab_fallback_supply_context.mjs
+      - .github/workflows/audit-vocab-fallback-supply-context.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-vocab-fallback-supply-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-vocab-grammar-range-20260825
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync branch
+        run: |
+          git fetch origin fix-vocab-grammar-range-20260825
+          git reset --hard origin/fix-vocab-grammar-range-20260825
+      - name: Audit fallback supply context
+        run: node tools/audit_vocab_fallback_supply_context.mjs
+      - name: Commit audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_VOCAB_FALLBACK_SUPPLY_CONTEXT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'audit: record vocab fallback supply context [skip ci]'
+          git pull --rebase origin fix-vocab-grammar-range-20260825
+          git push
