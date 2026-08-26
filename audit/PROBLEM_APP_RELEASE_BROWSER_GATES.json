@@ -4,7 +4,7 @@
     {
       "browser": "chromium",
       "section": "Reading 3",
-      "candidates": 30,
+      "candidates": 42,
       "generated": 20,
       "fallback_generated": 8,
       "save_restore_exact": true,
@@ -19,7 +19,7 @@
     {
       "browser": "firefox",
       "section": "Reading 3",
-      "candidates": 30,
+      "candidates": 42,
       "generated": 20,
       "fallback_generated": 8,
       "save_restore_exact": true,
@@ -34,7 +34,7 @@
     {
       "browser": "webkit",
       "section": "Reading 3",
-      "candidates": 30,
+      "candidates": 42,
       "generated": 20,
       "fallback_generated": 8,
       "save_restore_exact": true,
@@ -51,7 +51,7 @@
     "browser": "webkit",
     "profile": "iPhone-equivalent 390x844 touch",
     "section": "Reading 3",
-    "candidates": 30,
+    "candidates": 42,
     "generated": 20,
     "fallback_generated": 8,
     "layout": {
