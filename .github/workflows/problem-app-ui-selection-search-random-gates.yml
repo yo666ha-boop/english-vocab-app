@@ -43,7 +43,7 @@ jobs:
           def ids(page):
               vals=page.locator('#questionPreview .qnum').all_inner_texts();ans=[]
               for x in vals:
-                  m=re.search(r'Q\\d+\\s+([^\\s　/]+)',x)
+                  m=re.search(r'Q\d+\s+([^\s　/]+)',x)
                   if m: ans.append(m.group(1))
               return ans
           def choose_option(page,sel,needles):
@@ -54,7 +54,7 @@ jobs:
                           page.select_option(sel,o['v']);page.wait_for_timeout(100);return o
               raise AssertionError(f'{sel}: {needles} not in {os}')
           def candidate(page):
-              t=page.locator('#builderStatus').inner_text();m=re.search(r'この条件で使える候補\\s*(\\d+)件',t)
+              t=page.locator('#builderStatus').inner_text();m=re.search(r'この条件で使える候補\s*(\d+)件',t)
               return int(m.group(1)) if m else None
 
           with sync_playwright() as p:
@@ -63,7 +63,6 @@ jobs:
               page.goto(url,wait_until='load')
               page.select_option('#subjectSelect','英語');page.wait_for_timeout(100)
 
-              # Grade selection must actually refresh dependent UI.
               try:
                   page.select_option('#gradeSelect','中1');page.wait_for_timeout(120)
                   g1cats=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
@@ -75,7 +74,6 @@ jobs:
                   if not out['grade']['changed']: fail('grade selection did not refresh category/section choices')
               except Exception as e: fail('grade gate: '+repr(e))
 
-              # Textbook selection must update unit choices.
               try:
                   page.select_option('#gradeSelect','中2');page.wait_for_timeout(80)
                   nh=choose_option(page,'#textbookSelect',['ニューホライズン','NH']);nhsecs=options(page,'#sectionSelect')
@@ -84,7 +82,6 @@ jobs:
                   if not out['textbook']['changed']: fail('textbook selection did not refresh section choices')
               except Exception as e: fail('textbook gate: '+repr(e))
 
-              # Unit/section selection must hold selected value and produce a usable candidate status.
               try:
                   secs=options(page,'#sectionSelect');assert len(secs)>=2
                   page.select_option('#sectionSelect',secs[0]['v']);page.wait_for_timeout(120);c1=candidate(page)
@@ -94,7 +91,6 @@ jobs:
                   if c2 is None: fail('section selection produced no candidate status')
               except Exception as e: fail('section gate: '+repr(e))
 
-              # Random mode must generate the requested number and differ from ordered output when pool permits.
               try:
                   page.select_option('#vocabMode','on');page.wait_for_timeout(100)
                   stages=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
@@ -106,14 +102,14 @@ jobs:
                   choose_option(page,'#questionCount',['20','20問']);page.wait_for_timeout(100)
                   choose_option(page,'#pickMode',['上から順','ordered','順番','先頭から']);page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(120);ordered=ids(page)
                   choose_option(page,'#pickMode',['ランダム','random','無作為']);page.get_by_role('button',name='問題を作成').click();page.wait_for_timeout(120);random_ids=ids(page)
-                  out['random']={'category':stage,'type':typ,'ordered_count':len(ordered),'random_count':len(random_ids),'ordered_ids':ordered,'random_ids':random_ids,'different':ordered!=random_ids}
+                  out['random']={'category':stage,'type':typ,'ordered_count':len(ordered),'random_count':len(random_ids),'ordered_ids':ordered,'random_ids':random_ids,'different':ordered!=random_ids,'candidate_count':candidate(page)}
                   if len(ordered)!=20 or len(random_ids)!=20: fail('ordered/random generation did not create 20 questions')
                   if candidate(page) and candidate(page)>20 and ordered==random_ids: fail('random generation matched ordered sequence despite pool > 20')
               except Exception as e: fail('random gate: '+repr(e))
 
-              # Discover a real visible search control; interact with it and verify input/event acceptance.
               try:
                   fields=page.locator('input,textarea').evaluate_all("""els=>els.map((x,i)=>({i,id:x.id||'',name:x.name||'',type:x.type||'',placeholder:x.placeholder||'',aria:x.getAttribute('aria-label')||'',visible:!!(x.offsetWidth||x.offsetHeight||x.getClientRects().length)})).filter(x=>x.visible)""")
+                  out['search']['all_visible_text_fields']=[f for f in fields if f['type'] in ('text','search') or f['placeholder'] or f['aria']]
                   candidates=[]
                   for f in fields:
                       blob=' '.join([f['id'],f['name'],f['type'],f['placeholder'],f['aria']]).lower()
