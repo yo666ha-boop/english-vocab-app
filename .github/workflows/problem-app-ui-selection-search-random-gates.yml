@@ -91,6 +91,7 @@ jobs:
                   if c2 is None: fail('section selection produced no candidate status')
               except Exception as e: fail('section gate: '+repr(e))
 
+              random_ids=[]
               try:
                   page.select_option('#vocabMode','on');page.wait_for_timeout(100)
                   stages=page.locator('input[data-stage]').evaluate_all("els=>els.map(x=>x.value)")
@@ -108,24 +109,18 @@ jobs:
               except Exception as e: fail('random gate: '+repr(e))
 
               try:
-                  fields=page.locator('input,textarea').evaluate_all("""els=>els.map((x,i)=>({i,id:x.id||'',name:x.name||'',type:x.type||'',placeholder:x.placeholder||'',aria:x.getAttribute('aria-label')||'',visible:!!(x.offsetWidth||x.offsetHeight||x.getClientRects().length)})).filter(x=>x.visible)""")
-                  out['search']['all_visible_text_fields']=[f for f in fields if f['type'] in ('text','search') or f['placeholder'] or f['aria']]
-                  candidates=[]
-                  for f in fields:
-                      blob=' '.join([f['id'],f['name'],f['type'],f['placeholder'],f['aria']]).lower()
-                      if f['type']=='search' or 'search' in blob or '検索' in blob:
-                          candidates.append(f)
-                  out['search']['discovered']=candidates
-                  if not candidates:
-                      fail('no visible search control discovered')
-                  else:
-                      f=candidates[0]
-                      if f['id']: loc=page.locator('#'+f['id'])
-                      elif f['name']: loc=page.locator(f"[name='{f['name']}']").first
-                      else: loc=page.locator('input,textarea').nth(f['i'])
-                      before=loc.input_value();loc.fill('English');loc.dispatch_event('input');loc.dispatch_event('change');page.wait_for_timeout(150);after=loc.input_value()
-                      out['search'].update({'target':f,'before':before,'after':after,'accepted':after=='English'})
-                      if after!='English': fail('search control did not accept input')
+                  if not random_ids: raise AssertionError('no generated ids available for list search')
+                  target=random_ids[0]
+                  page.locator('#toListBtn').click();page.wait_for_timeout(120)
+                  kw=page.locator('#listKeyword')
+                  if not kw.is_visible(): raise AssertionError('problem-list search control is not visible')
+                  placeholder=kw.get_attribute('placeholder') or ''
+                  kw.fill(target);page.locator('#refreshListBtn').click();page.wait_for_timeout(120)
+                  rows=page.locator('#listBody tr');texts=rows.all_inner_texts();list_status=page.locator('#listStatus').inner_text()
+                  matching=sum(target in t for t in texts)
+                  out['search']={'screen':'problem-list','target_id':target,'visible':True,'placeholder':placeholder,'result_rows':len(texts),'matching_rows':matching,'list_status':list_status,'accepted':kw.input_value()==target}
+                  if '問題文 / 解答 / ID' not in placeholder: fail('problem-list search placeholder does not advertise question/answer/ID search')
+                  if not texts or matching<1: fail('problem-list ID search returned no matching row')
               except Exception as e: fail('search gate: '+repr(e))
 
               if errors: fail('page errors: '+repr(errors))
