@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 
 // Compact evidence for deciding which under-50 groups still persist late enough to need a generic fix.
+// 2026-08-26: refresh after supplemental-only fallback allowance matrix.
 const IN='audit/PROBLEM_APP_VOCAB_LOW_RETENTION_ROWS.json';
 const OUT='audit/PROBLEM_APP_VOCAB_LOW_RETENTION_SUMMARY.json';
 const audit=JSON.parse(fs.readFileSync(IN,'utf8'));
