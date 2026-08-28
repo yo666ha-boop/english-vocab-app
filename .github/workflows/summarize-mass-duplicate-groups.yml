@@ -1,0 +1,34 @@
+name: Summarize mass duplicate groups
+on:
+  push:
+    branches: [fix-problem-content-quality-20260828]
+    paths:
+      - 'tools/summarize_mass_duplicate_groups.mjs'
+      - 'audit/PROBLEM_APP_MASS_DUPLICATE_TRIGGER.md'
+permissions:
+  contents: write
+concurrency:
+  group: summarize-mass-duplicate-groups-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Summarize mass duplicates
+        run: node tools/summarize_mass_duplicate_groups.mjs
+      - name: Commit evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_MASS_DUPLICATE_GROUPS.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'audit: record mass duplicate groups [skip ci]'
+          git pull --rebase origin fix-problem-content-quality-20260828
+          git push origin HEAD:fix-problem-content-quality-20260828
