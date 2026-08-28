@@ -1,51 +1,34 @@
 {
-  "generated_at": "2026-08-28T14:27:39.602Z",
+  "generated_at": "2026-08-28T15:18:33.009Z",
   "choice_repairs": 0,
-  "correction_repairs": 2,
-  "passive_choice_cleanup": 4,
+  "correction_repairs": 0,
+  "passive_choice_cleanup": 0,
+  "plural_passive_agreement_repairs": 2,
   "unhandled_corrections": [],
   "samples": [
     {
-      "id": "F1-CAN-0010",
-      "kind": "correction",
-      "before": "Can you play tennis ? の誤りを直しなさい。",
-      "after": "Can you to play tennis? の誤りを直しなさい。",
-      "a": "Can you play tennis?"
+      "id": "M3N-01600",
+      "kind": "plural_passive_agreement",
+      "before": {
+        "q": "These pictures is take by many people. の誤りを直しなさい。",
+        "a": "These pictures is taken by many people."
+      },
+      "after": {
+        "q": "These pictures are take by many people. の誤りを直しなさい。",
+        "a": "These pictures are taken by many people."
+      }
     },
     {
-      "id": "F1-CAN-0012",
-      "kind": "correction",
-      "before": "Can they use this computer ? の誤りを直しなさい。",
-      "after": "Can they to use this computer? の誤りを直しなさい。",
-      "a": "Can they use this computer?"
-    },
-    {
-      "id": "M3N-01632",
-      "kind": "passive_choice_cleanup",
-      "before": "This book is ( written / write / writeing ) by many people. 正しいものを選びなさい。",
-      "after": "This book is ( written / write / writing ) by many people. 正しいものを選びなさい。",
-      "a": "Written"
-    },
-    {
-      "id": "M3N-01644",
-      "kind": "passive_choice_cleanup",
-      "before": "These pictures is ( taken / take / takeing ) by many people. 正しいものを選びなさい。",
-      "after": "These pictures are ( taken / take / taking ) by many people. 正しいものを選びなさい。",
-      "a": "Taken"
-    },
-    {
-      "id": "M3N-01656",
-      "kind": "passive_choice_cleanup",
-      "before": "The cake is ( made / make / makeing ) by many people. 正しいものを選びなさい。",
-      "after": "The cake is ( made / make / making ) by many people. 正しいものを選びなさい。",
-      "a": "Made"
-    },
-    {
-      "id": "M3N-01674",
-      "kind": "passive_choice_cleanup",
-      "before": "The bike is ( used / use / useing ) by many people. 正しいものを選びなさい。",
-      "after": "The bike is ( used / use / using ) by many people. 正しいものを選びなさい。",
-      "a": "Used"
+      "id": "M3N-01678",
+      "kind": "plural_passive_agreement",
+      "before": {
+        "q": "These pictures is take in Kyoto. の誤りを直しなさい。",
+        "a": "These pictures is taken in Kyoto."
+      },
+      "after": {
+        "q": "These pictures are take in Kyoto. の誤りを直しなさい。",
+        "a": "These pictures are taken in Kyoto."
+      }
     }
   ]
 }

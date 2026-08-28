@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-08-28T15:18:06.030Z",
+  "generated_at": "2026-08-28T15:18:33.403Z",
   "source": "problem-app/index.html",
-  "result": "FAIL",
-  "hard_failures": [
-    "subject_verb_agreement:2"
-  ],
+  "result": "PASS",
+  "hard_failures": [],
   "english_count": 10511,
   "hybrid_japanese_translation": {
     "count": 0,
@@ -13,30 +11,9 @@
     "samples": []
   },
   "subject_verb_agreement": {
-    "count": 2,
-    "by_prefix": {
-      "M3N": 2
-    },
-    "samples": [
-      {
-        "id": "M3N-01600",
-        "kind": "demonstrative_plural_is",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "間違い直し",
-        "q": "These pictures is take by many people. の誤りを直しなさい。",
-        "a": "These pictures is taken by many people."
-      },
-      {
-        "id": "M3N-01678",
-        "kind": "demonstrative_plural_is",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "間違い直し",
-        "q": "These pictures is take in Kyoto. の誤りを直しなさい。",
-        "a": "These pictures is taken in Kyoto."
-      }
-    ]
+    "count": 0,
+    "by_prefix": {},
+    "samples": []
   },
   "possessive_substitution": {
     "count": 0,
