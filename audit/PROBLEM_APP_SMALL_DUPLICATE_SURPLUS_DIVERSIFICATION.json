@@ -1,0 +1,1536 @@
+{
+  "generated_at": "2026-08-28T12:25:23.218Z",
+  "small_groups_before": 628,
+  "small_rows_before": 1488,
+  "changed_rows": 343,
+  "groups_touched": 294,
+  "by_family": {
+    "中1/be動詞/変形": 18,
+    "中2/be動詞/変形": 33,
+    "中3/be動詞と一般動詞（現在形）/変形": 30,
+    "中1/三単現/変形": 12,
+    "中1/be動詞/間違い直し": 24,
+    "中1/三単現/空所補充": 10,
+    "中2/三単現/間違い直し": 24,
+    "中2/三単現/変形": 22,
+    "中1/頻度副詞/空所補充": 10,
+    "中1/並びかえ/並びかえ": 12,
+    "中2/未来表現/変形": 12,
+    "中2/未来表現/間違い直し": 12,
+    "中2/不定詞/空所補充": 20,
+    "中2/不定詞/間違い直し": 20,
+    "中2/動名詞/空所補充": 16,
+    "中2/動名詞/変形": 16,
+    "中2/助動詞/並びかえ": 16,
+    "中2/助動詞/選択": 16,
+    "中3/分詞と間接疑問文/空所補充": 20
+  },
+  "unsupported_surplus": {
+    "中2/一般動詞/英作文": 1,
+    "中2/be動詞と一般動詞（現在形）/見分け": 1,
+    "中3/be動詞と一般動詞（現在形）/見分け": 2,
+    "中2/be動詞と一般動詞（現在形）/間違い直し": 1,
+    "中1/英作文/英作文": 1,
+    "中3/疑問詞/答えから質問文": 1,
+    "中1/be動詞/答え方": 3,
+    "中1/三単現/間違い直し": 7,
+    "中1/頻度副詞/並びかえ": 6,
+    "中3/be動詞と一般動詞（過去形）/変形": 4,
+    "中2/一般動詞の過去形/変形": 8,
+    "中2/助動詞/英作文": 9,
+    "中2/比較/英作文": 11,
+    "中2/比較/並びかえ": 7,
+    "中3/助動詞/変形": 5,
+    "中1/人称代名詞/空所補充": 6,
+    "中1/命令文/英作文": 1,
+    "中3/進行形/間違い直し": 1,
+    "中3/進行形/変形": 2,
+    "中2/文型①（look ～，give A B）/英作文": 1,
+    "中3/未来の文/変形": 1,
+    "中3/現在完了形（完了・経験）/変形": 7,
+    "中3/現在完了形（継続），現在完了進行形/変形": 12,
+    "中3/比較/英作文": 18,
+    "中3/関係代名詞/選択": 28,
+    "中3/仮定法/間違い直し": 8,
+    "中3/命令文，there is ～ の文/変形": 1,
+    "中3/疑問詞/答え方": 4,
+    "中3/疑問詞/選択": 4,
+    "中3/疑問詞/空所補充": 15,
+    "中3/人称代名詞/選択": 14,
+    "中3/人称代名詞/間違い直し": 10,
+    "中3/命令文，there is ～ の文/英作文": 4,
+    "中3/命令文，there is ～ の文/読解": 14,
+    "中3/接続詞/空所補充": 4,
+    "中3/接続詞/並びかえ": 4,
+    "中3/接続詞/読解": 4,
+    "中3/不定詞①，動名詞/選択": 8,
+    "中3/不定詞①，動名詞/並びかえ": 5,
+    "中3/文型/見分け": 14,
+    "中3/文型/間違い直し": 8,
+    "中3/文型/英作文": 1,
+    "中3/受動態/空所補充": 14,
+    "中3/受動態/間違い直し": 15,
+    "中3/受動態/選択": 10,
+    "中3/現在完了形（完了・経験）/空所補充": 18,
+    "中3/現在完了形（完了・経験）/間違い直し": 15,
+    "中3/現在完了形（完了・経験）/英作文": 4,
+    "中3/現在完了形（完了・経験）/選択": 15,
+    "中3/現在完了形（継続），現在完了進行形/空所補充": 11,
+    "中3/現在完了形（継続），現在完了進行形/英作文": 13,
+    "中3/現在完了形（継続），現在完了進行形/間違い直し": 11,
+    "中3/現在完了形（継続），現在完了進行形/選択": 8,
+    "中3/分詞と間接疑問文/選択": 12,
+    "中3/分詞と間接疑問文/間違い直し": 12,
+    "中3/分詞と間接疑問文/英作文": 12,
+    "中3/関係代名詞/間違い直し": 15,
+    "中3/関係代名詞/並びかえ": 15,
+    "中3/仮定法/英作文": 15
+  },
+  "samples": [
+    {
+      "id": "GEN-BE-0210",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Tom is busy. を疑問文にしなさい。",
+        "a": "Is Tom busy?"
+      },
+      "after": {
+        "q": "Tom is young. を疑問文にしなさい。",
+        "a": "Is Tom young?"
+      }
+    },
+    {
+      "id": "M2-BE-0001",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Tom is busy. を疑問文にしなさい。",
+        "a": "Is Tom busy?"
+      },
+      "after": {
+        "q": "Ken is young. を否定文にしなさい。",
+        "a": "Ken is not young."
+      }
+    },
+    {
+      "id": "M3C-00001",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Tom is busy. を疑問文にしなさい。",
+        "a": "Is Tom busy?"
+      },
+      "after": {
+        "q": "Ken studies English. を否定文にしなさい。",
+        "a": "Ken does not study English."
+      }
+    },
+    {
+      "id": "GEN-3RD-1218",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He plays soccer. を否定文にしなさい。",
+        "a": "He does not play soccer."
+      },
+      "after": {
+        "q": "Tom studies English every day. を疑問文にしなさい。",
+        "a": "Does Tom study English every day?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1005",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does she play tennis?"
+      },
+      "after": {
+        "q": "Ken studies English every day. を否定文にしなさい。",
+        "a": "Ken does not study English every day."
+      }
+    },
+    {
+      "id": "M2-BE-0003",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Ken is busy. を否定文にしなさい。",
+        "a": "Ken is not busy."
+      },
+      "after": {
+        "q": "Bob is young. を否定文にしなさい。",
+        "a": "Bob is not young."
+      }
+    },
+    {
+      "id": "GEN-BE-0198",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Mike is busy. を疑問文にしなさい。",
+        "a": "Is Mike busy?"
+      },
+      "after": {
+        "q": "Emi is young. を否定文にしなさい。",
+        "a": "Emi is not young."
+      }
+    },
+    {
+      "id": "M2-BE-0005",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mike is busy. を疑問文にしなさい。",
+        "a": "Is Mike busy?"
+      },
+      "after": {
+        "q": "Lucy is young. を疑問文にしなさい。",
+        "a": "Is Lucy young?"
+      }
+    },
+    {
+      "id": "M3C-00021",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Mike is busy. を疑問文にしなさい。",
+        "a": "Is Mike busy?"
+      },
+      "after": {
+        "q": "Aya studies English. を否定文にしなさい。",
+        "a": "Aya does not study English."
+      }
+    },
+    {
+      "id": "M3C-00881",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Yuki is kind. を疑問文にしなさい。",
+        "a": "Is Yuki kind?"
+      },
+      "after": {
+        "q": "Mary studies English. を否定文にしなさい。",
+        "a": "Mary does not study English."
+      }
+    },
+    {
+      "id": "M2-BE-0007",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Bob is busy. を否定文にしなさい。",
+        "a": "Bob is not busy."
+      },
+      "after": {
+        "q": "Ann is young. を疑問文にしなさい。",
+        "a": "Is Ann young?"
+      }
+    },
+    {
+      "id": "M2-BE-0113",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mike is free. を疑問文にしなさい。",
+        "a": "Is Mike free?"
+      },
+      "after": {
+        "q": "Kate is young. を否定文にしなさい。",
+        "a": "Kate is not young."
+      }
+    },
+    {
+      "id": "GEN-BE-0182",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "John is busy. を疑問文にしなさい。",
+        "a": "Is John busy?"
+      },
+      "after": {
+        "q": "Ken is kind. を否定文にしなさい。",
+        "a": "Ken is not kind."
+      }
+    },
+    {
+      "id": "M2-BE-0011",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "John is busy. を疑問文にしなさい。",
+        "a": "Is John busy?"
+      },
+      "after": {
+        "q": "Emi is kind. を否定文にしなさい。",
+        "a": "Emi is not kind."
+      }
+    },
+    {
+      "id": "M3C-00041",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "John is busy. を疑問文にしなさい。",
+        "a": "Is John busy?"
+      },
+      "after": {
+        "q": "Kate studies English. を否定文にしなさい。",
+        "a": "Kate does not study English."
+      }
+    },
+    {
+      "id": "GEN-BE-0374",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Mike is tired. を疑問文にしなさい。",
+        "a": "Is Mike tired?"
+      },
+      "after": {
+        "q": "Aya is kind. を否定文にしなさい。",
+        "a": "Aya is not kind."
+      }
+    },
+    {
+      "id": "M2-BE-0081",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mike is tired. を疑問文にしなさい。",
+        "a": "Is Mike tired?"
+      },
+      "after": {
+        "q": "Kate is kind. を否定文にしなさい。",
+        "a": "Kate is not kind."
+      }
+    },
+    {
+      "id": "M3C-00421",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Mike is tired. を疑問文にしなさい。",
+        "a": "Is Mike tired?"
+      },
+      "after": {
+        "q": "Ken plays soccer. を否定文にしなさい。",
+        "a": "Ken does not play soccer."
+      }
+    },
+    {
+      "id": "GEN-BE-0345",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Emi is busy. を否定文にしなさい。",
+        "a": "Emi is not busy."
+      },
+      "after": {
+        "q": "Ken is ready. を否定文にしなさい。",
+        "a": "Ken is not ready."
+      }
+    },
+    {
+      "id": "M2-BE-0017",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Emi is busy. を否定文にしなさい。",
+        "a": "Emi is not busy."
+      },
+      "after": {
+        "q": "Bob is ready. を否定文にしなさい。",
+        "a": "Bob is not ready."
+      }
+    },
+    {
+      "id": "M2-BE-0107",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Tom is free. を疑問文にしなさい。",
+        "a": "Is Tom free?"
+      },
+      "after": {
+        "q": "Emi is ready. を否定文にしなさい。",
+        "a": "Emi is not ready."
+      }
+    },
+    {
+      "id": "M3N-00126",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Ken is hungry. を疑問文にしなさい。",
+        "a": "Is Ken hungry?"
+      },
+      "after": {
+        "q": "Bob plays soccer. を否定文にしなさい。",
+        "a": "Bob does not play soccer."
+      }
+    },
+    {
+      "id": "M3C-00022",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Bob is busy. を疑問文にしなさい。",
+        "a": "Is Bob busy?"
+      },
+      "after": {
+        "q": "Emi plays soccer. を否定文にしなさい。",
+        "a": "Emi does not play soccer."
+      }
+    },
+    {
+      "id": "M2-BE-0019",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Yuki is busy. を疑問文にしなさい。",
+        "a": "Is Yuki busy?"
+      },
+      "after": {
+        "q": "Yuki is ready. を疑問文にしなさい。",
+        "a": "Is Yuki ready?"
+      }
+    },
+    {
+      "id": "M3C-00081",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Yuki is busy. を疑問文にしなさい。",
+        "a": "Is Yuki busy?"
+      },
+      "after": {
+        "q": "Mary plays soccer. を否定文にしなさい。",
+        "a": "Mary does not play soccer."
+      }
+    },
+    {
+      "id": "GEN-BE-0149",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Aya is busy. を否定文にしなさい。",
+        "a": "Aya is not busy."
+      },
+      "after": {
+        "q": "Lucy is ready. を疑問文にしなさい。",
+        "a": "Is Lucy ready?"
+      }
+    },
+    {
+      "id": "M2-BE-0021",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Aya is busy. を否定文にしなさい。",
+        "a": "Aya is not busy."
+      },
+      "after": {
+        "q": "Mary is ready. を否定文にしなさい。",
+        "a": "Mary is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0362",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Ken is tired. を否定文にしなさい。",
+        "a": "Ken is not tired."
+      },
+      "after": {
+        "q": "Ann is ready. を疑問文にしなさい。",
+        "a": "Is Ann ready?"
+      }
+    },
+    {
+      "id": "M2-BE-0077",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Ken is tired. を否定文にしなさい。",
+        "a": "Ken is not tired."
+      },
+      "after": {
+        "q": "Kate is ready. を否定文にしなさい。",
+        "a": "Kate is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0194",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Emi is happy. を否定文にしなさい。",
+        "a": "Emi is not happy."
+      },
+      "after": {
+        "q": "Emi is hungry. を否定文にしなさい。",
+        "a": "Emi is not hungry."
+      }
+    },
+    {
+      "id": "M2-BE-0053",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Emi is happy. を否定文にしなさい。",
+        "a": "Emi is not happy."
+      },
+      "after": {
+        "q": "Aya is hungry. を否定文にしなさい。",
+        "a": "Aya is not hungry."
+      }
+    },
+    {
+      "id": "M2-BE-0023",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Lucy is busy. を疑問文にしなさい。",
+        "a": "Is Lucy busy?"
+      },
+      "after": {
+        "q": "Ann is hungry. を疑問文にしなさい。",
+        "a": "Is Ann hungry?"
+      }
+    },
+    {
+      "id": "M3C-00161",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Lucy is busy. を疑問文にしなさい。",
+        "a": "Is Lucy busy?"
+      },
+      "after": {
+        "q": "Kate plays soccer. を否定文にしなさい。",
+        "a": "Kate does not play soccer."
+      }
+    },
+    {
+      "id": "M3C-00821",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Mike is kind. を疑問文にしなさい。",
+        "a": "Is Mike kind?"
+      },
+      "after": {
+        "q": "Bob reads books. を否定文にしなさい。",
+        "a": "Bob does not read books."
+      }
+    },
+    {
+      "id": "M2-BE-0027",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mary is busy. を否定文にしなさい。",
+        "a": "Mary is not busy."
+      },
+      "after": {
+        "q": "Kate is hungry. を否定文にしなさい。",
+        "a": "Kate is not hungry."
+      }
+    },
+    {
+      "id": "M2-BE-0033",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Ann is busy. を疑問文にしなさい。",
+        "a": "Is Ann busy?"
+      },
+      "after": {
+        "q": "Mike is fine. を疑問文にしなさい。",
+        "a": "Is Mike fine?"
+      }
+    },
+    {
+      "id": "M3C-00181",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Ann is busy. を疑問文にしなさい。",
+        "a": "Is Ann busy?"
+      },
+      "after": {
+        "q": "Emi reads books. を否定文にしなさい。",
+        "a": "Emi does not read books."
+      }
+    },
+    {
+      "id": "M2-BE-0035",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Kate is busy. を否定文にしなさい。",
+        "a": "Kate is not busy."
+      },
+      "after": {
+        "q": "Bob is fine. を否定文にしなさい。",
+        "a": "Bob is not fine."
+      }
+    },
+    {
+      "id": "GEN-BE-0398",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Tom is happy. を疑問文にしなさい。",
+        "a": "Is Tom happy?"
+      },
+      "after": {
+        "q": "Ann is fine. を疑問文にしなさい。",
+        "a": "Is Ann fine?"
+      }
+    },
+    {
+      "id": "M2-BE-0037",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Tom is happy. を疑問文にしなさい。",
+        "a": "Is Tom happy?"
+      },
+      "after": {
+        "q": "Kate is fine. を否定文にしなさい。",
+        "a": "Kate is not fine."
+      }
+    },
+    {
+      "id": "GEN-BE-0341",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Ken is happy. を否定文にしなさい。",
+        "a": "Ken is not happy."
+      },
+      "after": {
+        "q": "Tom is quiet. を疑問文にしなさい。",
+        "a": "Is Tom quiet?"
+      }
+    },
+    {
+      "id": "M2-BE-0039",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Ken is happy. を否定文にしなさい。",
+        "a": "Ken is not happy."
+      },
+      "after": {
+        "q": "Ken is quiet. を否定文にしなさい。",
+        "a": "Ken is not quiet."
+      }
+    },
+    {
+      "id": "M2-BE-0043",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mike is happy. を疑問文にしなさい。",
+        "a": "Is Mike happy?"
+      },
+      "after": {
+        "q": "Mike is quiet. を疑問文にしなさい。",
+        "a": "Is Mike quiet?"
+      }
+    },
+    {
+      "id": "M3C-00442",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Emi is tired. を疑問文にしなさい。",
+        "a": "Is Emi tired?"
+      },
+      "after": {
+        "q": "Aya reads books. を否定文にしなさい。",
+        "a": "Aya does not read books."
+      }
+    },
+    {
+      "id": "M2-BE-0049",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Bob is happy. を否定文にしなさい。",
+        "a": "Bob is not happy."
+      },
+      "after": {
+        "q": "Bob is quiet. を否定文にしなさい。",
+        "a": "Bob is not quiet."
+      }
+    },
+    {
+      "id": "GEN-BE-0302",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "John is happy. を疑問文にしなさい。",
+        "a": "Is John happy?"
+      },
+      "after": {
+        "q": "John is quiet. を疑問文にしなさい。",
+        "a": "Is John quiet?"
+      }
+    },
+    {
+      "id": "M2-BE-0051",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "John is happy. を疑問文にしなさい。",
+        "a": "Is John happy?"
+      },
+      "after": {
+        "q": "Emi is quiet. を否定文にしなさい。",
+        "a": "Emi is not quiet."
+      }
+    },
+    {
+      "id": "GEN-BE-0202",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Yuki is happy. を疑問文にしなさい。",
+        "a": "Is Yuki happy?"
+      },
+      "after": {
+        "q": "Yuki is quiet. を疑問文にしなさい。",
+        "a": "Is Yuki quiet?"
+      }
+    },
+    {
+      "id": "M2-BE-0055",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Yuki is happy. を疑問文にしなさい。",
+        "a": "Is Yuki happy?"
+      },
+      "after": {
+        "q": "Aya is quiet. を否定文にしなさい。",
+        "a": "Aya is not quiet."
+      }
+    },
+    {
+      "id": "GEN-BE-0377",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Aya is happy. を否定文にしなさい。",
+        "a": "Aya is not happy."
+      },
+      "after": {
+        "q": "Lucy is quiet. を疑問文にしなさい。",
+        "a": "Is Lucy quiet?"
+      }
+    },
+    {
+      "id": "M2-BE-0059",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Aya is happy. を否定文にしなさい。",
+        "a": "Aya is not happy."
+      },
+      "after": {
+        "q": "Mary is quiet. を否定文にしなさい。",
+        "a": "Mary is not quiet."
+      }
+    },
+    {
+      "id": "M2-BE-0065",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Lucy is happy. を疑問文にしなさい。",
+        "a": "Is Lucy happy?"
+      },
+      "after": {
+        "q": "Ann is quiet. を疑問文にしなさい。",
+        "a": "Is Ann quiet?"
+      }
+    },
+    {
+      "id": "GEN-BE-0329",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Mary is happy. を否定文にしなさい。",
+        "a": "Mary is not happy."
+      },
+      "after": {
+        "q": "Kate is quiet. を否定文にしなさい。",
+        "a": "Kate is not quiet."
+      }
+    },
+    {
+      "id": "M2-BE-0067",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Mary is happy. を否定文にしなさい。",
+        "a": "Mary is not happy."
+      },
+      "after": {
+        "q": "Tom is careful. を疑問文にしなさい。",
+        "a": "Is Tom careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0069",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Ann is happy. を疑問文にしなさい。",
+        "a": "Is Ann happy?"
+      },
+      "after": {
+        "q": "Ken is careful. を否定文にしなさい。",
+        "a": "Ken is not careful."
+      }
+    },
+    {
+      "id": "M3N-00132",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Bob is hungry. を疑問文にしなさい。",
+        "a": "Is Bob hungry?"
+      },
+      "after": {
+        "q": "Kate reads books. を否定文にしなさい。",
+        "a": "Kate does not read books."
+      }
+    },
+    {
+      "id": "GEN-BE-0470",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Lucy is tired. を疑問文にしなさい。",
+        "a": "Is Lucy tired?"
+      },
+      "after": {
+        "q": "Mike is careful. を疑問文にしなさい。",
+        "a": "Is Mike careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0097",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Lucy is tired. を疑問文にしなさい。",
+        "a": "Is Lucy tired?"
+      },
+      "after": {
+        "q": "Bob is careful. を否定文にしなさい。",
+        "a": "Bob is not careful."
+      }
+    },
+    {
+      "id": "M3C-00561",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Lucy is tired. を疑問文にしなさい。",
+        "a": "Is Lucy tired?"
+      },
+      "after": {
+        "q": "Ken uses a computer. を否定文にしなさい。",
+        "a": "Ken does not use a computer."
+      }
+    },
+    {
+      "id": "M2-BE-0071",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Kate is happy. を否定文にしなさい。",
+        "a": "Kate is not happy."
+      },
+      "after": {
+        "q": "John is careful. を疑問文にしなさい。",
+        "a": "Is John careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0125",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Aya is free. を否定文にしなさい。",
+        "a": "Aya is not free."
+      },
+      "after": {
+        "q": "Emi is careful. を否定文にしなさい。",
+        "a": "Emi is not careful."
+      }
+    },
+    {
+      "id": "GEN-BE-0413",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Emi is tired. を否定文にしなさい。",
+        "a": "Emi is not tired."
+      },
+      "after": {
+        "q": "Yuki is careful. を疑問文にしなさい。",
+        "a": "Is Yuki careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0087",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Emi is tired. を否定文にしなさい。",
+        "a": "Emi is not tired."
+      },
+      "after": {
+        "q": "Aya is careful. を否定文にしなさい。",
+        "a": "Aya is not careful."
+      }
+    },
+    {
+      "id": "M3C-00882",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Aya is kind. を疑問文にしなさい。",
+        "a": "Is Aya kind?"
+      },
+      "after": {
+        "q": "Bob uses a computer. を否定文にしなさい。",
+        "a": "Bob does not use a computer."
+      }
+    },
+    {
+      "id": "GEN-BE-0394",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "Tom is tired. を疑問文にしなさい。",
+        "a": "Is Tom tired?"
+      },
+      "after": {
+        "q": "Lucy is careful. を疑問文にしなさい。",
+        "a": "Is Lucy careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0075",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "Tom is tired. を疑問文にしなさい。",
+        "a": "Is Tom tired?"
+      },
+      "after": {
+        "q": "Mary is careful. を否定文にしなさい。",
+        "a": "Mary is not careful."
+      }
+    },
+    {
+      "id": "M3C-00401",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Tom is tired. を疑問文にしなさい。",
+        "a": "Is Tom tired?"
+      },
+      "after": {
+        "q": "Emi uses a computer. を否定文にしなさい。",
+        "a": "Emi does not use a computer."
+      }
+    },
+    {
+      "id": "M3N-00125",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Tom is hungry. を疑問文にしなさい。",
+        "a": "Is Tom hungry?"
+      },
+      "after": {
+        "q": "Kate uses a computer. を否定文にしなさい。",
+        "a": "Kate does not use a computer."
+      }
+    },
+    {
+      "id": "M3C-00402",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Ken is tired. を疑問文にしなさい。",
+        "a": "Is Ken tired?"
+      },
+      "after": {
+        "q": "Ken visits the library. を否定文にしなさい。",
+        "a": "Ken does not visit the library."
+      }
+    },
+    {
+      "id": "M3C-00562",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Mary is tired. を疑問文にしなさい。",
+        "a": "Is Mary tired?"
+      },
+      "after": {
+        "q": "Bob visits the library. を否定文にしなさい。",
+        "a": "Bob does not visit the library."
+      }
+    },
+    {
+      "id": "GEN-BE-0390",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "John is tired. を疑問文にしなさい。",
+        "a": "Is John tired?"
+      },
+      "after": {
+        "q": "Ann is careful. を疑問文にしなさい。",
+        "a": "Is Ann careful?"
+      }
+    },
+    {
+      "id": "M2-BE-0085",
+      "family": "中2/be動詞/変形",
+      "before": {
+        "q": "John is tired. を疑問文にしなさい。",
+        "a": "Is John tired?"
+      },
+      "after": {
+        "q": "Kate is careful. を否定文にしなさい。",
+        "a": "Kate is not careful."
+      }
+    },
+    {
+      "id": "M3C-00441",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "John is tired. を疑問文にしなさい。",
+        "a": "Is John tired?"
+      },
+      "after": {
+        "q": "Mary visits the library. を否定文にしなさい。",
+        "a": "Mary does not visit the library."
+      }
+    },
+    {
+      "id": "M3C-00082",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Aya is busy. を疑問文にしなさい。",
+        "a": "Is Aya busy?"
+      },
+      "after": {
+        "q": "Kate visits the library. を否定文にしなさい。",
+        "a": "Kate does not visit the library."
+      }
+    },
+    {
+      "id": "M3C-00481",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Yuki is tired. を疑問文にしなさい。",
+        "a": "Is Yuki tired?"
+      },
+      "after": {
+        "q": "Ken watches TV. を否定文にしなさい。",
+        "a": "Ken does not watch TV."
+      }
+    },
+    {
+      "id": "M3C-00801",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Tom is kind. を疑問文にしなさい。",
+        "a": "Is Tom kind?"
+      },
+      "after": {
+        "q": "Bob watches TV. を否定文にしなさい。",
+        "a": "Bob does not watch TV."
+      }
+    },
+    {
+      "id": "M3C-00802",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Ken is kind. を疑問文にしなさい。",
+        "a": "Is Ken kind?"
+      },
+      "after": {
+        "q": "Emi watches TV. を否定文にしなさい。",
+        "a": "Emi does not watch TV."
+      }
+    },
+    {
+      "id": "M3N-00131",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Mike is hungry. を疑問文にしなさい。",
+        "a": "Is Mike hungry?"
+      },
+      "after": {
+        "q": "Aya watches TV. を否定文にしなさい。",
+        "a": "Aya does not watch TV."
+      }
+    },
+    {
+      "id": "M3C-00482",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Aya is tired. を疑問文にしなさい。",
+        "a": "Is Aya tired?"
+      },
+      "after": {
+        "q": "Mary watches TV. を否定文にしなさい。",
+        "a": "Mary does not watch TV."
+      }
+    },
+    {
+      "id": "M3C-00002",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "Ken is busy. を疑問文にしなさい。",
+        "a": "Is Ken busy?"
+      },
+      "after": {
+        "q": "Kate watches TV. を否定文にしなさい。",
+        "a": "Kate does not watch TV."
+      }
+    },
+    {
+      "id": "GEN-BE-0506",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a student. の誤りを直しなさい。",
+        "a": "He is a student."
+      },
+      "after": {
+        "q": "Tom are happy. の誤りを直しなさい。",
+        "a": "Tom is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0530",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a student. の誤りを直しなさい。",
+        "a": "He is a student."
+      },
+      "after": {
+        "q": "Ken are happy. の誤りを直しなさい。",
+        "a": "Ken is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0508",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a teacher. の誤りを直しなさい。",
+        "a": "He is a teacher."
+      },
+      "after": {
+        "q": "Mike are happy. の誤りを直しなさい。",
+        "a": "Mike is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0532",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a teacher. の誤りを直しなさい。",
+        "a": "He is a teacher."
+      },
+      "after": {
+        "q": "Bob are happy. の誤りを直しなさい。",
+        "a": "Bob is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0510",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a baseball player. の誤りを直しなさい。",
+        "a": "He is a baseball player."
+      },
+      "after": {
+        "q": "John are happy. の誤りを直しなさい。",
+        "a": "John is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0534",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a baseball player. の誤りを直しなさい。",
+        "a": "He is a baseball player."
+      },
+      "after": {
+        "q": "Emi are happy. の誤りを直しなさい。",
+        "a": "Emi is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0512",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a tennis player. の誤りを直しなさい。",
+        "a": "He is a tennis player."
+      },
+      "after": {
+        "q": "Yuki are happy. の誤りを直しなさい。",
+        "a": "Yuki is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0536",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are a tennis player. の誤りを直しなさい。",
+        "a": "He is a tennis player."
+      },
+      "after": {
+        "q": "Aya are happy. の誤りを直しなさい。",
+        "a": "Aya is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0514",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are at school. の誤りを直しなさい。",
+        "a": "He is at school."
+      },
+      "after": {
+        "q": "Lucy are happy. の誤りを直しなさい。",
+        "a": "Lucy is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0538",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are at school. の誤りを直しなさい。",
+        "a": "He is at school."
+      },
+      "after": {
+        "q": "Mary are happy. の誤りを直しなさい。",
+        "a": "Mary is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0516",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are in the library. の誤りを直しなさい。",
+        "a": "He is in the library."
+      },
+      "after": {
+        "q": "Ann are happy. の誤りを直しなさい。",
+        "a": "Ann is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0540",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "He are in the library. の誤りを直しなさい。",
+        "a": "He is in the library."
+      },
+      "after": {
+        "q": "Kate are happy. の誤りを直しなさい。",
+        "a": "Kate is happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0518",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a student. の誤りを直しなさい。",
+        "a": "She is a student."
+      },
+      "after": {
+        "q": "Tom are busy. の誤りを直しなさい。",
+        "a": "Tom is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0542",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a student. の誤りを直しなさい。",
+        "a": "She is a student."
+      },
+      "after": {
+        "q": "Ken are busy. の誤りを直しなさい。",
+        "a": "Ken is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0520",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a teacher. の誤りを直しなさい。",
+        "a": "She is a teacher."
+      },
+      "after": {
+        "q": "Mike are busy. の誤りを直しなさい。",
+        "a": "Mike is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0544",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a teacher. の誤りを直しなさい。",
+        "a": "She is a teacher."
+      },
+      "after": {
+        "q": "Bob are busy. の誤りを直しなさい。",
+        "a": "Bob is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0522",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a baseball player. の誤りを直しなさい。",
+        "a": "She is a baseball player."
+      },
+      "after": {
+        "q": "John are busy. の誤りを直しなさい。",
+        "a": "John is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0546",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a baseball player. の誤りを直しなさい。",
+        "a": "She is a baseball player."
+      },
+      "after": {
+        "q": "Emi are busy. の誤りを直しなさい。",
+        "a": "Emi is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0524",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a tennis player. の誤りを直しなさい。",
+        "a": "She is a tennis player."
+      },
+      "after": {
+        "q": "Yuki are busy. の誤りを直しなさい。",
+        "a": "Yuki is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0548",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are a tennis player. の誤りを直しなさい。",
+        "a": "She is a tennis player."
+      },
+      "after": {
+        "q": "Aya are busy. の誤りを直しなさい。",
+        "a": "Aya is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0526",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are at school. の誤りを直しなさい。",
+        "a": "She is at school."
+      },
+      "after": {
+        "q": "Lucy are busy. の誤りを直しなさい。",
+        "a": "Lucy is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0550",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are at school. の誤りを直しなさい。",
+        "a": "She is at school."
+      },
+      "after": {
+        "q": "Mary are busy. の誤りを直しなさい。",
+        "a": "Mary is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0528",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are in the library. の誤りを直しなさい。",
+        "a": "She is in the library."
+      },
+      "after": {
+        "q": "Ann are busy. の誤りを直しなさい。",
+        "a": "Ann is busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0552",
+      "family": "中1/be動詞/間違い直し",
+      "before": {
+        "q": "She are in the library. の誤りを直しなさい。",
+        "a": "She is in the library."
+      },
+      "after": {
+        "q": "Kate are busy. の誤りを直しなさい。",
+        "a": "Kate is busy."
+      }
+    },
+    {
+      "id": "M3C-00122",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "before": {
+        "q": "I help at home. を否定文にしなさい。",
+        "a": "I do not help at home."
+      },
+      "after": {
+        "q": "Bob listens to music. を否定文にしなさい。",
+        "a": "Bob does not listen to music."
+      }
+    },
+    {
+      "id": "GEN-3RD-1013",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He plays tennis. を疑問文にしなさい。",
+        "a": "Does he play tennis?"
+      },
+      "after": {
+        "q": "Mike studies English every day. を疑問文にしなさい。",
+        "a": "Does Mike study English every day?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1123",
+      "family": "中1/三単現/空所補充",
+      "before": {
+        "q": "He (      ) every day. 「テニスをします」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Plays tennis"
+      },
+      "after": {
+        "q": "Tom (      ) English every day. (study) の語を正しく変化させなさい。",
+        "a": "Studies"
+      }
+    },
+    {
+      "id": "M2-3RD-0238",
+      "family": "中2/三単現/間違い直し",
+      "before": {
+        "q": "He play tennis every day. の誤りを直しなさい。",
+        "a": "He plays tennis every day."
+      },
+      "after": {
+        "q": "Ken study English every day. の誤りを直しなさい。",
+        "a": "Ken studies English every day."
+      }
+    },
+    {
+      "id": "M2-3RD-0278",
+      "family": "中2/三単現/間違い直し",
+      "before": {
+        "q": "He play tennis every day. の誤りを直しなさい。",
+        "a": "He plays tennis every day."
+      },
+      "after": {
+        "q": "Mike study English every day. の誤りを直しなさい。",
+        "a": "Mike studies English every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1235",
+      "family": "中1/三単現/空所補充",
+      "before": {
+        "q": "He (      ) every day. 「英語を勉強します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Studies English"
+      },
+      "after": {
+        "q": "Ken (      ) English every day. (study) の語を正しく変化させなさい。",
+        "a": "Studies"
+      }
+    },
+    {
+      "id": "GEN-3RD-1210",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He cleans the room. を否定文にしなさい。",
+        "a": "He does not clean the room."
+      },
+      "after": {
+        "q": "Bob studies English every day. を否定文にしなさい。",
+        "a": "Bob does not study English every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1158",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He listens to music. を否定文にしなさい。",
+        "a": "He does not listen to music."
+      },
+      "after": {
+        "q": "John studies English every day. を疑問文にしなさい。",
+        "a": "Does John study English every day?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1057",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does he help at home?"
+      },
+      "after": {
+        "q": "Emi studies English every day. を否定文にしなさい。",
+        "a": "Emi does not study English every day."
+      }
+    },
+    {
+      "id": "M2-3RD-0239",
+      "family": "中2/三単現/変形",
+      "before": {
+        "q": "He helps at home. を否定文にしなさい。",
+        "a": "He does not help at home."
+      },
+      "after": {
+        "q": "Yuki studies English every day. を疑問文にしなさい。",
+        "a": "Does Yuki study English every day?"
+      }
+    },
+    {
+      "id": "M2-3RD-0279",
+      "family": "中2/三単現/変形",
+      "before": {
+        "q": "He helps at home. を否定文にしなさい。",
+        "a": "He does not help at home."
+      },
+      "after": {
+        "q": "Aya studies English every day. を否定文にしなさい。",
+        "a": "Aya does not study English every day."
+      }
+    },
+    {
+      "id": "M2-3RD-0240",
+      "family": "中2/三単現/間違い直し",
+      "before": {
+        "q": "He help at home every day. の誤りを直しなさい。",
+        "a": "He helps at home every day."
+      },
+      "after": {
+        "q": "John study English every day. の誤りを直しなさい。",
+        "a": "John studies English every day."
+      }
+    },
+    {
+      "id": "M2-3RD-0280",
+      "family": "中2/三単現/間違い直し",
+      "before": {
+        "q": "He help at home every day. の誤りを直しなさい。",
+        "a": "He helps at home every day."
+      },
+      "after": {
+        "q": "Emi study English every day. の誤りを直しなさい。",
+        "a": "Emi studies English every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1031",
+      "family": "中1/三単現/空所補充",
+      "before": {
+        "q": "He (      ) every day. 「コンピューターを使います」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Uses a computer"
+      },
+      "after": {
+        "q": "Mike (      ) English every day. (study) の語を正しく変化させなさい。",
+        "a": "Studies"
+      }
+    },
+    {
+      "id": "GEN-3RD-1021",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does he cook dinner?"
+      },
+      "after": {
+        "q": "Lucy studies English every day. を疑問文にしなさい。",
+        "a": "Does Lucy study English every day?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1039",
+      "family": "中1/三単現/空所補充",
+      "before": {
+        "q": "He (      ) every day. 「夕食を作ります」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Cooks dinner"
+      },
+      "after": {
+        "q": "Bob (      ) English every day. (study) の語を正しく変化させなさい。",
+        "a": "Studies"
+      }
+    }
+  ],
+  "duplicate_groups_after": 337,
+  "duplicate_rows_after": 854,
+  "duplicate_excess_after": 517,
+  "duplicate_row_ratio_after": 0.081248,
+  "groups_ge5_after": 0
+}

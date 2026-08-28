@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T12:22:58.828Z",
+  "generated_at": "2026-08-28T12:25:23.541Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,39 +31,20 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 628,
-    "row_count": 1488,
-    "duplicate_excess": 860,
-    "row_ratio": 0.141566,
-    "excess_ratio": 0.081819,
+    "group_count": 337,
+    "row_count": 854,
+    "duplicate_excess": 517,
+    "row_ratio": 0.081248,
+    "excess_ratio": 0.049187,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
-      "中1/be動詞/変形": 71,
       "中3/関係代名詞/選択": 45,
       "中2/比較/間違い直し": 44,
-      "中2/三単現/変形": 40,
-      "中2/三単現/間違い直し": 40,
-      "中2/不定詞/空所補充": 40,
-      "中2/不定詞/間違い直し": 40,
-      "中2/be動詞/変形": 38,
-      "中3/分詞と間接疑問文/空所補充": 38,
-      "中1/be動詞/間違い直し": 36,
-      "中2/助動詞/並びかえ": 32,
-      "中2/助動詞/選択": 32,
-      "中2/動名詞/変形": 32,
-      "中2/動名詞/空所補充": 32,
-      "中3/be動詞と一般動詞（現在形）/変形": 30,
       "中3/現在完了形（完了・経験）/空所補充": 28,
-      "中1/三単現/変形": 25,
-      "中1/並びかえ/並びかえ": 24,
-      "中2/未来表現/変形": 24,
-      "中2/未来表現/間違い直し": 24,
       "中3/比較/英作文": 24,
       "中3/現在完了形（継続），現在完了進行形/変形": 24,
       "中2/比較/英作文": 22,
-      "中1/三単現/空所補充": 20,
-      "中1/頻度副詞/空所補充": 20,
       "中3/人称代名詞/選択": 20,
       "中3/仮定法/英作文": 20,
       "中3/分詞と間接疑問文/英作文": 20,
@@ -84,11 +65,11 @@
       "中3/分詞と間接疑問文/間違い直し": 19,
       "中2/助動詞/英作文": 18,
       "中3/人称代名詞/間違い直し": 18,
-      "中1/三単現/間違い直し": 16,
       "中3/不定詞①，動名詞/選択": 16,
       "中3/仮定法/間違い直し": 16,
       "中3/文型/間違い直し": 16,
       "中3/現在完了形（継続），現在完了進行形/選択": 16,
+      "中1/三単現/間違い直し": 14,
       "中2/比較/並びかえ": 14,
       "中3/現在完了形（完了・経験）/変形": 14,
       "中1/頻度副詞/並びかえ": 12,
@@ -107,6 +88,8 @@
       "中1/人称代名詞/空所補充": 6,
       "中2/人称代名詞/空所補充": 6,
       "中3/be動詞と一般動詞（過去形）/変形": 5,
+      "中1/be動詞/変形": 4,
+      "中2/be動詞/変形": 4,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
       "中1/現在進行形/変形": 2,
@@ -117,7 +100,6 @@
       "中3/進行形/変形": 2,
       "中1/can/変形": 1,
       "中1/there is ～・look ～ の文/英作文": 1,
-      "中1/一般動詞/変形": 1,
       "中1/一般動詞/英作文": 1,
       "中1/区別/間違い直し": 1,
       "中1/命令文/英作文": 1,
@@ -127,7 +109,6 @@
       "中1/英作文/英作文": 1,
       "中2/be動詞と一般動詞（現在形）/見分け": 1,
       "中2/be動詞と一般動詞（現在形）/間違い直し": 1,
-      "中2/一般動詞/変形": 1,
       "中2/一般動詞/英作文": 1,
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
@@ -135,32 +116,12 @@
       "中3/進行形/間違い直し": 1
     },
     "by_family_groups": {
-      "中1/be動詞/変形": 53,
-      "中2/be動詞/変形": 38,
-      "中3/be動詞と一般動詞（現在形）/変形": 30,
-      "中2/三単現/変形": 20,
-      "中2/三単現/間違い直し": 20,
-      "中2/不定詞/空所補充": 20,
-      "中2/不定詞/間違い直し": 20,
-      "中3/分詞と間接疑問文/空所補充": 18,
       "中3/関係代名詞/選択": 17,
-      "中2/助動詞/並びかえ": 16,
-      "中2/助動詞/選択": 16,
-      "中2/動名詞/変形": 16,
-      "中2/動名詞/空所補充": 16,
-      "中1/三単現/変形": 13,
-      "中1/be動詞/間違い直し": 12,
-      "中1/並びかえ/並びかえ": 12,
-      "中2/未来表現/変形": 12,
-      "中2/未来表現/間違い直し": 12,
       "中2/比較/間違い直し": 12,
       "中3/現在完了形（継続），現在完了進行形/変形": 12,
       "中2/比較/英作文": 11,
-      "中1/三単現/空所補充": 10,
-      "中1/頻度副詞/空所補充": 10,
       "中3/受動態/選択": 10,
       "中3/現在完了形（完了・経験）/空所補充": 10,
-      "中1/三単現/間違い直し": 9,
       "中2/助動詞/英作文": 9,
       "中3/現在完了形（継続），現在完了進行形/空所補充": 9,
       "中3/現在完了形（継続），現在完了進行形/間違い直し": 9,
@@ -172,6 +133,7 @@
       "中3/分詞と間接疑問文/英作文": 8,
       "中3/文型/間違い直し": 8,
       "中3/現在完了形（継続），現在完了進行形/選択": 8,
+      "中1/三単現/間違い直し": 7,
       "中2/比較/並びかえ": 7,
       "中3/分詞と間接疑問文/選択": 7,
       "中3/分詞と間接疑問文/間違い直し": 7,
@@ -193,6 +155,8 @@
       "中3/疑問詞/空所補充": 5,
       "中3/関係代名詞/並びかえ": 5,
       "中3/関係代名詞/間違い直し": 5,
+      "中1/be動詞/変形": 4,
+      "中2/be動詞/変形": 4,
       "中3/be動詞と一般動詞（過去形）/変形": 4,
       "中3/不定詞①，動名詞/並びかえ": 4,
       "中3/命令文，there is ～ の文/英作文": 4,
@@ -210,7 +174,6 @@
       "中3/進行形/変形": 2,
       "中1/can/変形": 1,
       "中1/there is ～・look ～ の文/英作文": 1,
-      "中1/一般動詞/変形": 1,
       "中1/一般動詞/英作文": 1,
       "中1/区別/間違い直し": 1,
       "中1/命令文/英作文": 1,
@@ -220,7 +183,6 @@
       "中1/英作文/英作文": 1,
       "中2/be動詞と一般動詞（現在形）/見分け": 1,
       "中2/be動詞と一般動詞（現在形）/間違い直し": 1,
-      "中2/一般動詞/変形": 1,
       "中2/一般動詞/英作文": 1,
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
@@ -341,36 +303,6 @@
         ],
         "grade_category_types": [
           "中3/受動態/空所補充"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "He help at home every day. の誤りを直しなさい。",
-        "a": "He helps at home every day.",
-        "sample_ids": [
-          "GEN-3RD-0880",
-          "GEN-3RD-1140",
-          "M2-3RD-0240",
-          "M2-3RD-0280"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し",
-          "中2/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "He play tennis every day. の誤りを直しなさい。",
-        "a": "He plays tennis every day.",
-        "sample_ids": [
-          "GEN-3RD-0860",
-          "GEN-3RD-0996",
-          "M2-3RD-0238",
-          "M2-3RD-0278"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し",
-          "中2/三単現/間違い直し"
         ]
       },
       {
@@ -585,86 +517,6 @@
       },
       {
         "count": 4,
-        "q": "John is busy. を疑問文にしなさい。",
-        "a": "Is John busy?",
-        "sample_ids": [
-          "GEN-BE-0046",
-          "GEN-BE-0182",
-          "M2-BE-0011",
-          "M3C-00041"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "John is tired. を疑問文にしなさい。",
-        "a": "Is John tired?",
-        "sample_ids": [
-          "GEN-BE-0370",
-          "GEN-BE-0390",
-          "M2-BE-0085",
-          "M3C-00441"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "Lucy is tired. を疑問文にしなさい。",
-        "a": "Is Lucy tired?",
-        "sample_ids": [
-          "GEN-BE-0226",
-          "GEN-BE-0470",
-          "M2-BE-0097",
-          "M3C-00561"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "Mike is busy. を疑問文にしなさい。",
-        "a": "Is Mike busy?",
-        "sample_ids": [
-          "GEN-BE-0006",
-          "GEN-BE-0198",
-          "M2-BE-0005",
-          "M3C-00021"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "Mike is tired. を疑問文にしなさい。",
-        "a": "Is Mike tired?",
-        "sample_ids": [
-          "GEN-BE-0054",
-          "GEN-BE-0374",
-          "M2-BE-0081",
-          "M3C-00421"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
         "q": "My bike is more fast than your bike. の誤りを直しなさい。",
         "a": "My bike is faster than your bike.",
         "sample_ids": [
@@ -703,21 +555,6 @@
         ],
         "grade_category_types": [
           "中3/命令文，there is ～ の文/読解"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "She helps at home. を否定文にしなさい。",
-        "a": "She does not help at home.",
-        "sample_ids": [
-          "GEN-3RD-0942",
-          "GEN-3RD-1202",
-          "M2-3RD-0259",
-          "M2-3RD-0299"
-        ],
-        "grade_category_types": [
-          "中1/三単現/変形",
-          "中2/三単現/変形"
         ]
       },
       {
@@ -1044,22 +881,6 @@
       },
       {
         "count": 4,
-        "q": "Tom is busy. を疑問文にしなさい。",
-        "a": "Is Tom busy?",
-        "sample_ids": [
-          "E1-BQ-002",
-          "GEN-BE-0210",
-          "M2-BE-0001",
-          "M3C-00001"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 4,
         "q": "Tom is more tall than Ken. の誤りを直しなさい。",
         "a": "Tom is taller than Ken.",
         "sample_ids": [
@@ -1070,22 +891,6 @@
         ],
         "grade_category_types": [
           "中2/比較/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "Tom is tired. を疑問文にしなさい。",
-        "a": "Is Tom tired?",
-        "sample_ids": [
-          "GEN-BE-0306",
-          "GEN-BE-0394",
-          "M2-BE-0075",
-          "M3C-00401"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
         ]
       },
       {
@@ -1327,75 +1132,6 @@
       },
       {
         "count": 3,
-        "q": "Ann is busy. を疑問文にしなさい。",
-        "a": "Is Ann busy?",
-        "sample_ids": [
-          "GEN-BE-0126",
-          "M2-BE-0033",
-          "M3C-00181"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Aya is busy. を否定文にしなさい。",
-        "a": "Aya is not busy.",
-        "sample_ids": [
-          "GEN-BE-0086",
-          "GEN-BE-0149",
-          "M2-BE-0021"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Aya is happy. を否定文にしなさい。",
-        "a": "Aya is not happy.",
-        "sample_ids": [
-          "GEN-BE-0205",
-          "GEN-BE-0377",
-          "M2-BE-0059"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Do you know (      ) she goes there? 「彼女がどのように行くか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "How",
-        "sample_ids": [
-          "M3N-02066",
-          "M3N-02096",
-          "M3N-02126"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Do you know (      ) she lives? 「彼女がどこに住んでいるか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "Where",
-        "sample_ids": [
-          "M3N-02072",
-          "M3N-02102",
-          "M3N-02132"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 3,
         "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
         "a": "ドアを開けないでください。",
         "sample_ids": [
@@ -1422,126 +1158,6 @@
       },
       {
         "count": 3,
-        "q": "Emi is busy. を否定文にしなさい。",
-        "a": "Emi is not busy.",
-        "sample_ids": [
-          "GEN-BE-0058",
-          "GEN-BE-0345",
-          "M2-BE-0017"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Emi is happy. を否定文にしなさい。",
-        "a": "Emi is not happy.",
-        "sample_ids": [
-          "GEN-BE-0093",
-          "GEN-BE-0194",
-          "M2-BE-0053"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Emi is tired. を否定文にしなさい。",
-        "a": "Emi is not tired.",
-        "sample_ids": [
-          "GEN-BE-0285",
-          "GEN-BE-0413",
-          "M2-BE-0087"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are a baseball player. の誤りを直しなさい。",
-        "a": "He is a baseball player.",
-        "sample_ids": [
-          "GEN-BE-0486",
-          "GEN-BE-0510",
-          "GEN-BE-0534"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are a student. の誤りを直しなさい。",
-        "a": "He is a student.",
-        "sample_ids": [
-          "GEN-BE-0482",
-          "GEN-BE-0506",
-          "GEN-BE-0530"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are a teacher. の誤りを直しなさい。",
-        "a": "He is a teacher.",
-        "sample_ids": [
-          "GEN-BE-0484",
-          "GEN-BE-0508",
-          "GEN-BE-0532"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are a tennis player. の誤りを直しなさい。",
-        "a": "He is a tennis player.",
-        "sample_ids": [
-          "GEN-BE-0488",
-          "GEN-BE-0512",
-          "GEN-BE-0536"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are at school. の誤りを直しなさい。",
-        "a": "He is at school.",
-        "sample_ids": [
-          "GEN-BE-0490",
-          "GEN-BE-0514",
-          "GEN-BE-0538"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He are in the library. の誤りを直しなさい。",
-        "a": "He is in the library.",
-        "sample_ids": [
-          "GEN-BE-0492",
-          "GEN-BE-0516",
-          "GEN-BE-0540"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
         "q": "He has stayed in Japan since three years. の誤りを直しなさい。",
         "a": "He has stayed in Japan for three years.",
         "sample_ids": [
@@ -1564,20 +1180,6 @@
         ],
         "grade_category_types": [
           "中3/現在完了形（継続），現在完了進行形/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "He helps at home. を否定文にしなさい。",
-        "a": "He does not help at home.",
-        "sample_ids": [
-          "GEN-3RD-0878",
-          "M2-3RD-0239",
-          "M2-3RD-0279"
-        ],
-        "grade_category_types": [
-          "中1/三単現/変形",
-          "中2/三単現/変形"
         ]
       },
       {
@@ -1751,77 +1353,6 @@
       },
       {
         "count": 3,
-        "q": "John is happy. を疑問文にしなさい。",
-        "a": "Is John happy?",
-        "sample_ids": [
-          "GEN-BE-0178",
-          "GEN-BE-0302",
-          "M2-BE-0051"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Ken is happy. を否定文にしなさい。",
-        "a": "Ken is not happy.",
-        "sample_ids": [
-          "GEN-BE-0162",
-          "GEN-BE-0341",
-          "M2-BE-0039"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Ken is tired. を否定文にしなさい。",
-        "a": "Ken is not tired.",
-        "sample_ids": [
-          "GEN-BE-0089",
-          "GEN-BE-0362",
-          "M2-BE-0077"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Lucy is busy. を疑問文にしなさい。",
-        "a": "Is Lucy busy?",
-        "sample_ids": [
-          "GEN-BE-0098",
-          "M2-BE-0023",
-          "M3C-00161"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Mary is happy. を否定文にしなさい。",
-        "a": "Mary is not happy.",
-        "sample_ids": [
-          "GEN-BE-0217",
-          "GEN-BE-0329",
-          "M2-BE-0067"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
         "q": "Me play soccer. の誤りを直しなさい。",
         "a": "I play soccer.",
         "sample_ids": [
@@ -1870,112 +1401,6 @@
         ],
         "grade_category_types": [
           "中3/命令文，there is ～ の文/読解"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are a baseball player. の誤りを直しなさい。",
-        "a": "She is a baseball player.",
-        "sample_ids": [
-          "GEN-BE-0498",
-          "GEN-BE-0522",
-          "GEN-BE-0546"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are a student. の誤りを直しなさい。",
-        "a": "She is a student.",
-        "sample_ids": [
-          "GEN-BE-0494",
-          "GEN-BE-0518",
-          "GEN-BE-0542"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are a teacher. の誤りを直しなさい。",
-        "a": "She is a teacher.",
-        "sample_ids": [
-          "GEN-BE-0496",
-          "GEN-BE-0520",
-          "GEN-BE-0544"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are a tennis player. の誤りを直しなさい。",
-        "a": "She is a tennis player.",
-        "sample_ids": [
-          "GEN-BE-0500",
-          "GEN-BE-0524",
-          "GEN-BE-0548"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are at school. の誤りを直しなさい。",
-        "a": "She is at school.",
-        "sample_ids": [
-          "GEN-BE-0502",
-          "GEN-BE-0526",
-          "GEN-BE-0550"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She are in the library. の誤りを直しなさい。",
-        "a": "She is in the library.",
-        "sample_ids": [
-          "GEN-BE-0504",
-          "GEN-BE-0528",
-          "GEN-BE-0552"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She help at home every day. の誤りを直しなさい。",
-        "a": "She helps at home every day.",
-        "sample_ids": [
-          "GEN-3RD-0944",
-          "M2-3RD-0260",
-          "M2-3RD-0300"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し",
-          "中2/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "She play tennis every day. の誤りを直しなさい。",
-        "a": "She plays tennis every day.",
-        "sample_ids": [
-          "GEN-3RD-0924",
-          "M2-3RD-0258",
-          "M2-3RD-0298"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し",
-          "中2/三単現/間違い直し"
         ]
       },
       {
@@ -2175,64 +1600,6 @@
       },
       {
         "count": 3,
-        "q": "Tom is happy. を疑問文にしなさい。",
-        "a": "Is Tom happy?",
-        "sample_ids": [
-          "GEN-BE-0161",
-          "GEN-BE-0398",
-          "M2-BE-0037"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Yuki is busy. を疑問文にしなさい。",
-        "a": "Is Yuki busy?",
-        "sample_ids": [
-          "GEN-BE-0082",
-          "M2-BE-0019",
-          "M3C-00081"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Yuki is happy. を疑問文にしなさい。",
-        "a": "Is Yuki happy?",
-        "sample_ids": [
-          "GEN-BE-0190",
-          "GEN-BE-0202",
-          "M2-BE-0055"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "Yuki is tired. を疑問文にしなさい。",
-        "a": "Is Yuki tired?",
-        "sample_ids": [
-          "GEN-BE-0429",
-          "M2-BE-0091",
-          "M3C-00481"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 3,
         "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
         "a": "I have lived in this town since Saturday.",
         "sample_ids": [
@@ -2376,54 +1743,6 @@
       },
       {
         "count": 2,
-        "q": "( can / He / play / tennis )",
-        "a": "He can play tennis.",
-        "sample_ids": [
-          "M2-MOD2-1350",
-          "M2-MOD2-1397"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( can / He / speak / English )",
-        "a": "He can speak English.",
-        "sample_ids": [
-          "M2-MOD2-1353",
-          "M2-MOD2-1399"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( can / She / play / tennis )",
-        "a": "She can play tennis.",
-        "sample_ids": [
-          "M2-MOD2-1374",
-          "M2-MOD2-1413"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( can / She / speak / English )",
-        "a": "She can speak English.",
-        "sample_ids": [
-          "M2-MOD2-1377",
-          "M2-MOD2-1415"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
         "q": "( He / than / Ken / is / busier )",
         "a": "He is busier than Ken.",
         "sample_ids": [
@@ -2508,102 +1827,6 @@
       },
       {
         "count": 2,
-        "q": "( must / He / do / my / homework )",
-        "a": "He must do my homework.",
-        "sample_ids": [
-          "M2-MOD2-1356",
-          "M2-MOD2-1401"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( must / He / help / my / mother )",
-        "a": "He must help my mother.",
-        "sample_ids": [
-          "M2-MOD2-1359",
-          "M2-MOD2-1403"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( must / She / do / my / homework )",
-        "a": "She must do my homework.",
-        "sample_ids": [
-          "M2-MOD2-1380",
-          "M2-MOD2-1417"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( must / She / help / my / mother )",
-        "a": "She must help my mother.",
-        "sample_ids": [
-          "M2-MOD2-1383",
-          "M2-MOD2-1419"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( should / He / go / to / bed / early )",
-        "a": "He should go to bed early.",
-        "sample_ids": [
-          "M2-MOD2-1362",
-          "M2-MOD2-1405"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( should / He / study / every / day )",
-        "a": "He should study every day.",
-        "sample_ids": [
-          "M2-MOD2-1365",
-          "M2-MOD2-1407"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( should / She / go / to / bed / early )",
-        "a": "She should go to bed early.",
-        "sample_ids": [
-          "M2-MOD2-1386",
-          "M2-MOD2-1421"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( should / She / study / every / day )",
-        "a": "She should study every day.",
-        "sample_ids": [
-          "M2-MOD2-1389",
-          "M2-MOD2-1423"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
         "q": "( When / Why / Where ) do you go to the library? 「どこへ」に合うものを選びなさい。",
         "a": "Where",
         "sample_ids": [
@@ -2652,54 +1875,6 @@
       },
       {
         "count": 2,
-        "q": "( will / He / be / busy / tomorrow )",
-        "a": "He will be busy tomorrow.",
-        "sample_ids": [
-          "M2-MOD2-1368",
-          "M2-MOD2-1409"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( will / He / play / soccer / tomorrow )",
-        "a": "He will play soccer tomorrow.",
-        "sample_ids": [
-          "M2-MOD2-1371",
-          "M2-MOD2-1411"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( will / She / be / busy / tomorrow )",
-        "a": "She will be busy tomorrow.",
-        "sample_ids": [
-          "M2-MOD2-1392",
-          "M2-MOD2-1425"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "( will / She / play / soccer / tomorrow )",
-        "a": "She will play soccer tomorrow.",
-        "sample_ids": [
-          "M2-MOD2-1395",
-          "M2-MOD2-1427"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
         "q": "『その花は美しく見えます。』を英語で書きなさい。",
         "a": "The flower looks beautiful.",
         "sample_ids": [
@@ -2722,32 +1897,6 @@
         "grade_category_types": [
           "中2/命令文/英作文",
           "中1/命令文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Ann is happy. を疑問文にしなさい。",
-        "a": "Is Ann happy?",
-        "sample_ids": [
-          "GEN-BE-0218",
-          "M2-BE-0069"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Ann is tired. を疑問文にしなさい。",
-        "a": "Is Ann tired?",
-        "sample_ids": [
-          "M2-BE-0101",
-          "M3C-00581"
-        ],
-        "grade_category_types": [
-          "中2/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
         ]
       },
       {
@@ -2776,45 +1925,6 @@
       },
       {
         "count": 2,
-        "q": "Aya is busy. を疑問文にしなさい。",
-        "a": "Is Aya busy?",
-        "sample_ids": [
-          "GEN-BE-0422",
-          "M3C-00082"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Aya is free. を否定文にしなさい。",
-        "a": "Aya is not free.",
-        "sample_ids": [
-          "GEN-BE-0269",
-          "M2-BE-0125"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Aya is kind. を疑問文にしなさい。",
-        "a": "Is Aya kind?",
-        "sample_ids": [
-          "GEN-BE-0294",
-          "M3C-00882"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 2,
         "q": "Aya is tired. を否定文にしなさい。",
         "a": "Aya is not tired.",
         "sample_ids": [
@@ -2824,19 +1934,6 @@
         "grade_category_types": [
           "中1/be動詞/変形",
           "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Aya is tired. を疑問文にしなさい。",
-        "a": "Is Aya tired?",
-        "sample_ids": [
-          "GEN-BE-0466",
-          "M3C-00482"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
         ]
       },
       {
@@ -2873,58 +1970,6 @@
         ],
         "grade_category_types": [
           "中3/不定詞①，動名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Bob is busy. を否定文にしなさい。",
-        "a": "Bob is not busy.",
-        "sample_ids": [
-          "GEN-BE-0018",
-          "M2-BE-0007"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Bob is busy. を疑問文にしなさい。",
-        "a": "Is Bob busy?",
-        "sample_ids": [
-          "GEN-BE-0078",
-          "M3C-00022"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Bob is happy. を否定文にしなさい。",
-        "a": "Bob is not happy.",
-        "sample_ids": [
-          "GEN-BE-0177",
-          "M2-BE-0049"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中2/be動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Bob is hungry. を疑問文にしなさい。",
-        "a": "Is Bob hungry?",
-        "sample_ids": [
-          "GEN-BE-0222",
-          "M3N-00132"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
         ]
       },
       {
@@ -3002,78 +2047,6 @@
       },
       {
         "count": 2,
-        "q": "Do you know (      ) he is busy? 「彼がなぜ忙しいか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "Why",
-        "sample_ids": [
-          "M3N-02120",
-          "M3N-02150"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Do you know (      ) he wants? 「彼が何がほしいか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "What",
-        "sample_ids": [
-          "M3N-02048",
-          "M3N-02078"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Do you know (      ) he will come? 「彼がいつ来るか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "When",
-        "sample_ids": [
-          "M3N-02084",
-          "M3N-02114"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Do you know (      ) she is busy? 「彼女がなぜ忙しいか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "Why",
-        "sample_ids": [
-          "M3N-02060",
-          "M3N-02090"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Do you know (      ) she wants? 「彼女が何がほしいか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "What",
-        "sample_ids": [
-          "M3N-02108",
-          "M3N-02138"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Do you know (      ) she will come? 「彼女がいつ来るか」になるように、空所に入る最も適切な語を書きなさい。",
-        "a": "When",
-        "sample_ids": [
-          "M3N-02054",
-          "M3N-02144"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/空所補充"
-        ]
-      },
-      {
-        "count": 2,
         "q": "Emi ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
         "a": "Has worked",
         "sample_ids": [
@@ -3106,19 +2079,6 @@
         ],
         "grade_category_types": [
           "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Emi is tired. を疑問文にしなさい。",
-        "a": "Is Emi tired?",
-        "sample_ids": [
-          "GEN-BE-0174",
-          "M3C-00442"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/変形",
-          "中3/be動詞と一般動詞（現在形）/変形"
         ]
       },
       {
@@ -3195,326 +2155,1243 @@
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「コンピューターを使います」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Uses a computer",
+        "q": "He has been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Has he been playing tennis for two hours?",
         "sample_ids": [
-          "GEN-3RD-0883",
-          "GEN-3RD-1031"
+          "M3C-00419",
+          "M3C-00937"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「テニスをします」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Plays tennis",
+        "q": "He has been to Kyoto once. を疑問文にしなさい。",
+        "a": "Has he been to Kyoto once?",
         "sample_ids": [
-          "GEN-3RD-0859",
-          "GEN-3RD-1123"
+          "M3C-00415",
+          "M3C-00693"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（完了・経験）/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「図書館を訪れます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Visits the library",
+        "q": "He has been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Has he been using this computer since this morning?",
         "sample_ids": [
-          "GEN-3RD-0891",
-          "GEN-3RD-1175"
+          "M3C-00420",
+          "M3C-01178"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「夕食を作ります」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Cooks dinner",
+        "q": "He has stayed in Japan since eight years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for eight years.",
         "sample_ids": [
-          "GEN-3RD-0887",
-          "GEN-3RD-1039"
+          "M3N-01840",
+          "M3N-01894"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「学校へ歩いて行きます」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Walks to school",
+        "q": "He has stayed in Japan since five years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for five years.",
         "sample_ids": [
-          "GEN-3RD-0895",
-          "GEN-3RD-1091"
+          "M3N-01822",
+          "M3N-01876"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「皿を洗います」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Washes the dishes",
+        "q": "He has stayed in Japan since four years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for four years.",
         "sample_ids": [
-          "GEN-3RD-0911",
-          "GEN-3RD-1227"
+          "M3N-01816",
+          "M3N-01870"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) every day. 「英語を勉強します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Studies English",
+        "q": "He has stayed in Japan since nine years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for nine years.",
         "sample_ids": [
-          "GEN-3RD-0867",
-          "GEN-3RD-1235"
+          "M3N-01846",
+          "M3N-01900"
         ],
         "grade_category_types": [
-          "中1/三単現/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) plays soccer. 「たいてい」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Usually",
+        "q": "He has stayed in Japan since seven years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for seven years.",
         "sample_ids": [
-          "GEN-FREQ-1302",
-          "GEN-FREQ-1312"
+          "M3N-01834",
+          "M3N-01888"
         ],
         "grade_category_types": [
-          "中1/頻度副詞/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) practices tennis. 「ときどき」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Sometimes",
+        "q": "He has stayed in Japan since six years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for six years.",
         "sample_ids": [
-          "GEN-FREQ-1304",
-          "GEN-FREQ-1314"
+          "M3N-01828",
+          "M3N-01882"
         ],
         "grade_category_types": [
-          "中1/頻度副詞/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) visits the library. 「よく」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Often",
+        "q": "He has stayed in Japan since ten years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for ten years.",
         "sample_ids": [
-          "GEN-FREQ-1303",
-          "GEN-FREQ-1313"
+          "M3N-01852",
+          "M3N-01906"
         ],
         "grade_category_types": [
-          "中1/頻度副詞/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) visits the library. 「決して〜ない」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Never",
+        "q": "He help at home every day. の誤りを直しなさい。",
+        "a": "He helps at home every day.",
         "sample_ids": [
-          "GEN-FREQ-1305",
-          "GEN-FREQ-1315"
+          "GEN-3RD-0880",
+          "GEN-3RD-1140"
         ],
         "grade_category_types": [
-          "中1/頻度副詞/空所補充"
+          "中1/三単現/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He (      ) walks to school. 「いつも」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Always",
+        "q": "He is play tennis. の誤りを直しなさい。",
+        "a": "He plays tennis.",
         "sample_ids": [
-          "GEN-FREQ-1301",
-          "GEN-FREQ-1311"
+          "E1-BD-004",
+          "R2-DIST-0055"
         ],
         "grade_category_types": [
-          "中1/頻度副詞/空所補充"
+          "中1/区別/間違い直し",
+          "中2/be動詞と一般動詞（現在形）/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He ( can / is / does ) play tennis.",
-        "a": "Can",
+        "q": "He play tennis every day. の誤りを直しなさい。",
+        "a": "He plays tennis every day.",
         "sample_ids": [
-          "M2-MOD2-1351",
-          "M2-MOD2-1398"
+          "GEN-3RD-0860",
+          "GEN-3RD-0996"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中1/三単現/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He ( can / is / does ) speak English.",
-        "a": "Can",
+        "q": "He study English every day. の誤りを直しなさい。",
+        "a": "He studies English every day.",
         "sample_ids": [
-          "M2-MOD2-1354",
-          "M2-MOD2-1400"
+          "GEN-3RD-0868",
+          "GEN-3RD-1004"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中1/三単現/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He ( must / is / does ) do my homework.",
-        "a": "Must",
+        "q": "He walk to school every day. の誤りを直しなさい。",
+        "a": "He walks to school every day.",
         "sample_ids": [
-          "M2-MOD2-1357",
-          "M2-MOD2-1402"
+          "GEN-3RD-0896",
+          "GEN-3RD-1108"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中1/三単現/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He ( must / is / does ) help my mother.",
-        "a": "Must",
+        "q": "I am going to play tennis. を疑問文にしなさい。",
+        "a": "Am I going to play tennis?",
         "sample_ids": [
-          "M2-MOD2-1360",
-          "M2-MOD2-1404"
+          "M3C-00008",
+          "M3N-00843"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中3/未来の文/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He ( should / is / does ) go to bed early.",
-        "a": "Should",
+        "q": "I am study English now. の誤りを直しなさい。",
+        "a": "I am studying English now.",
         "sample_ids": [
-          "M2-MOD2-1363",
-          "M2-MOD2-1406"
+          "F1-PROG-0044",
+          "M3N-00604"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中1/現在進行形/間違い直し",
+          "中3/進行形/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He ( should / is / does ) study every day.",
-        "a": "Should",
+        "q": "I am studying English now. を疑問文にしなさい。",
+        "a": "Am I studying English now?",
         "sample_ids": [
-          "M2-MOD2-1366",
-          "M2-MOD2-1408"
+          "F1-PROG-0045",
+          "M3C-00025"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中1/現在進行形/変形",
+          "中3/進行形/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He ( will / is / does ) be busy tomorrow.",
-        "a": "Will",
+        "q": "I don't know (A) what does he want (B) what he wants (C) he what. 正しいものを選びなさい。",
+        "a": "B",
         "sample_ids": [
-          "M2-MOD2-1369",
-          "M2-MOD2-1410"
+          "M3N-02049",
+          "M3N-02121"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中3/分詞と間接疑問文/選択"
         ]
       },
       {
         "count": 2,
-        "q": "He ( will / is / does ) play soccer tomorrow.",
-        "a": "Will",
+        "q": "I don't know (A) when does he come (B) when he comes (C) he when. 正しいものを選びなさい。",
+        "a": "B",
         "sample_ids": [
-          "M2-MOD2-1372",
-          "M2-MOD2-1412"
+          "M3N-02055",
+          "M3N-02127"
         ],
         "grade_category_types": [
-          "中2/助動詞/選択"
+          "中3/分詞と間接疑問文/選択"
         ]
       },
       {
         "count": 2,
-        "q": "He begins (      ). 「理科を勉強し始める」",
-        "a": "studying science",
+        "q": "I don't know (A) why does he study English (B) why he studies English (C) he why. 正しいものを選びなさい。",
+        "a": "B",
         "sample_ids": [
-          "M2-GER2-1034",
-          "M2-GER2-1142"
+          "M3N-02061",
+          "M3N-02133"
         ],
         "grade_category_types": [
-          "中2/動名詞/空所補充"
+          "中3/分詞と間接疑問文/選択"
         ]
       },
       {
         "count": 2,
-        "q": "He cleans the room. を否定文にしなさい。",
-        "a": "He does not clean the room.",
+        "q": "I don't know what does he want. の誤りを直しなさい。",
+        "a": "I don't know what he wants.",
         "sample_ids": [
-          "GEN-3RD-0870",
-          "GEN-3RD-1210"
+          "M3N-02050",
+          "M3N-02122"
         ],
         "grade_category_types": [
-          "中1/三単現/変形"
+          "中3/分詞と間接疑問文/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He cook curry every day. の誤りを直しなさい。",
-        "a": "He cooks curry every day.",
+        "q": "I don't know when does he come. の誤りを直しなさい。",
+        "a": "I don't know when he comes.",
         "sample_ids": [
-          "M2-3RD-0242",
-          "M2-3RD-0282"
+          "M3N-02056",
+          "M3N-02128"
         ],
         "grade_category_types": [
-          "中2/三単現/間違い直し"
+          "中3/分詞と間接疑問文/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He cooks curry. を否定文にしなさい。",
-        "a": "He does not cook curry.",
+        "q": "I don't know why does he study English. の誤りを直しなさい。",
+        "a": "I don't know why he studies English.",
         "sample_ids": [
-          "M2-3RD-0241",
-          "M2-3RD-0281"
+          "M3N-02062",
+          "M3N-02134"
         ],
         "grade_category_types": [
-          "中2/三単現/変形"
+          "中3/分詞と間接疑問文/間違い直し"
         ]
       },
       {
         "count": 2,
-        "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does he cook dinner?",
+        "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Have I been playing tennis for two hours?",
         "sample_ids": [
-          "GEN-3RD-0885",
-          "GEN-3RD-1021"
+          "M3C-00019",
+          "M3C-00779"
         ],
         "grade_category_types": [
-          "中1/三単現/変形"
+          "中3/現在完了形（継続），現在完了進行形/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He enjoys (      ). 「まんがを読むことを楽しむ」",
-        "a": "reading comics",
+        "q": "I have been to Kyoto once. を疑問文にしなさい。",
+        "a": "Have I been to Kyoto once?",
         "sample_ids": [
-          "M2-GER2-1016",
-          "M2-GER2-1124"
+          "M3C-00015",
+          "M3C-00315"
         ],
         "grade_category_types": [
-          "中2/動名詞/空所補充"
+          "中3/現在完了形（完了・経験）/変形"
         ]
       },
       {
         "count": 2,
-        "q": "He finishes (      ). 「宿題を終える」",
-        "a": "doing homework",
+        "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Have I been using this computer since this morning?",
         "sample_ids": [
-          "M2-GER2-1019",
-          "M2-GER2-1127"
+          "M3C-00020",
+          "M3C-00478"
         ],
         "grade_category_types": [
-          "中2/動名詞/空所補充"
+          "中3/現在完了形（継続），現在完了進行形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01837",
+          "M3N-01891"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01819",
+          "M3N-01873"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01813",
+          "M3N-01867"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01843",
+          "M3N-01897"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01831",
+          "M3N-01885"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01825",
+          "M3N-01879"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For",
+        "sample_ids": [
+          "M3N-01849",
+          "M3N-01903"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I help at home. を yesterday を使って過去の文にしなさい。",
+        "a": "I helped at home yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1878",
+          "M2-PAST-0339"
+        ],
+        "grade_category_types": [
+          "中1/一般動詞の過去形/変形",
+          "中2/一般動詞の過去形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I know Emi. I often talk with (      ).",
+        "a": "her",
+        "sample_ids": [
+          "R2-PRON-0068",
+          "F1-PRON-0023"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I know Ken and Emi. I often talk with (      ).",
+        "a": "them",
+        "sample_ids": [
+          "R2-PRON-0072",
+          "F1-PRON-0029"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I know Ken. I often talk with (      ).",
+        "a": "him",
+        "sample_ids": [
+          "R2-PRON-0066",
+          "F1-PRON-0020"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I know you. I often talk with (      ).",
+        "a": "You",
+        "sample_ids": [
+          "R2-PRON-0064",
+          "F1-PRON-0017"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I play tennis. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文",
+        "sample_ids": [
+          "E1-BD-002",
+          "M3N-00122"
+        ],
+        "grade_category_types": [
+          "中1/区別/見分け",
+          "中3/be動詞と一般動詞（現在形）/見分け"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I play tennis. を yesterday を使って過去の文にしなさい。",
+        "a": "I played tennis yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1863",
+          "M2-PAST-0337"
+        ],
+        "grade_category_types": [
+          "中1/一般動詞の過去形/変形",
+          "中2/一般動詞の過去形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did I play tennis yesterday?",
+        "sample_ids": [
+          "M3C-00003",
+          "M3N-00246"
+        ],
+        "grade_category_types": [
+          "中3/be動詞と一般動詞（過去形）/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I was busy yesterday. を否定文にしなさい。",
+        "a": "I was not busy yesterday.",
+        "sample_ids": [
+          "GEN-PBE-1506",
+          "M3N-00245"
+        ],
+        "grade_category_types": [
+          "中1/過去のbe動詞/変形",
+          "中3/be動詞と一般動詞（過去形）/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I went to the library by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the library?",
+        "sample_ids": [
+          "M3N-00363",
+          "M3N-00465"
+        ],
+        "grade_category_types": [
+          "中3/疑問詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I went to the park by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the park?",
+        "sample_ids": [
+          "M3N-00369",
+          "M3N-00471"
+        ],
+        "grade_category_types": [
+          "中3/疑問詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I went to the room by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the room?",
+        "sample_ids": [
+          "M3N-00387",
+          "M3N-00477"
+        ],
+        "grade_category_types": [
+          "中3/疑問詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I went to the station by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the station?",
+        "sample_ids": [
+          "M3N-00375",
+          "M3N-00459"
+        ],
+        "grade_category_types": [
+          "中3/疑問詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I am you, I would help my friend. の誤りを直しなさい。",
+        "a": "If I were you, I would help my friend.",
+        "sample_ids": [
+          "M3C-01391",
+          "M3N-02368"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I am you, I would practice tennis. の誤りを直しなさい。",
+        "a": "If I were you, I would practice tennis.",
+        "sample_ids": [
+          "M3C-01395",
+          "M3N-02380"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I am you, I would study English. の誤りを直しなさい。",
+        "a": "If I were you, I would study English.",
+        "sample_ids": [
+          "M3C-01387",
+          "M3N-02356"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I am you, I would use this computer. の誤りを直しなさい。",
+        "a": "If I were you, I would use this computer.",
+        "sample_ids": [
+          "M3C-01399",
+          "M3N-02392"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I was you, I would clean the room. の誤りを直しなさい。",
+        "a": "If I were you, I would clean the room.",
+        "sample_ids": [
+          "M3C-01393",
+          "M3N-02374"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I was you, I would read this book. の誤りを直しなさい。",
+        "a": "If I were you, I would read this book.",
+        "sample_ids": [
+          "M3C-01389",
+          "M3N-02362"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I was you, I would visit Kyoto. の誤りを直しなさい。",
+        "a": "If I were you, I would visit Kyoto.",
+        "sample_ids": [
+          "M3C-01397",
+          "M3N-02386"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "If I was you, I would write a letter. の誤りを直しなさい。",
+        "a": "If I were you, I would write a letter.",
+        "sample_ids": [
+          "M3C-01401",
+          "M3N-02398"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Is he busy? に Yes で答えなさい。",
+        "a": "Yes, he is.",
+        "sample_ids": [
+          "GEN-BE-0167",
+          "GEN-BE-0279"
+        ],
+        "grade_category_types": [
+          "中1/be動詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Is he kind? に Yes で答えなさい。",
+        "a": "Yes, he is.",
+        "sample_ids": [
+          "GEN-BE-0179",
+          "GEN-BE-0303"
+        ],
+        "grade_category_types": [
+          "中1/be動詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Is she kind? に Yes で答えなさい。",
+        "a": "Yes, she is.",
+        "sample_ids": [
+          "GEN-BE-0219",
+          "GEN-BE-0451"
+        ],
+        "grade_category_types": [
+          "中1/be動詞/答え方"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "John ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked",
+        "sample_ids": [
+          "M3N-01830",
+          "M3N-01902"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "John finished ( to clean / cleaning / clean ) the room. 正しいものを選びなさい。",
+        "a": "Cleaning",
+        "sample_ids": [
+          "M3N-01227",
+          "M3N-01299"
+        ],
+        "grade_category_types": [
+          "中3/不定詞①，動名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked",
+        "sample_ids": [
+          "M3N-01812",
+          "M3N-01884"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+        "a": "Playing",
+        "sample_ids": [
+          "M3N-01209",
+          "M3N-01281"
+        ],
+        "grade_category_types": [
+          "中3/不定詞①，動名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken has been studying English for three hours. を疑問文にしなさい。",
+        "a": "Has Ken been studying English for three hours?",
+        "sample_ids": [
+          "M3C-00998",
+          "M3C-01020"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken has been to Osaka once. を疑問文にしなさい。",
+        "a": "Has Ken been to Osaka once?",
+        "sample_ids": [
+          "M3C-00056",
+          "M3C-00896"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（完了・経験）/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken knows me. He often talks with (      ).",
+        "a": "me",
+        "sample_ids": [
+          "R2-PRON-0062",
+          "F1-PRON-0014"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Ken stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "Kenは疲れていたので家にいました。",
+        "sample_ids": [
+          "M3N-01092",
+          "M3N-01164"
+        ],
+        "grade_category_types": [
+          "中3/接続詞/読解"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Mary is tired. を否定文にしなさい。",
+        "a": "Mary is not tired.",
+        "sample_ids": [
+          "GEN-BE-0477",
+          "M2-BE-0099"
+        ],
+        "grade_category_types": [
+          "中1/be動詞/変形",
+          "中2/be動詞/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me go running. の誤りを直しなさい。",
+        "a": "I go running.",
+        "sample_ids": [
+          "M3N-00526",
+          "M3N-00580"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me go swimming. の誤りを直しなさい。",
+        "a": "I go swimming.",
+        "sample_ids": [
+          "M3N-00520",
+          "M3N-00586"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me play badminton. の誤りを直しなさい。",
+        "a": "I play badminton.",
+        "sample_ids": [
+          "M3N-00514",
+          "M3N-00574"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me play baseball. の誤りを直しなさい。",
+        "a": "I play baseball.",
+        "sample_ids": [
+          "M3N-00496",
+          "M3N-00556"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me play basketball. の誤りを直しなさい。",
+        "a": "I play basketball.",
+        "sample_ids": [
+          "M3N-00502",
+          "M3N-00562"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Me play volleyball. の誤りを直しなさい。",
+        "a": "I play volleyball.",
+        "sample_ids": [
+          "M3N-00508",
+          "M3N-00568"
+        ],
+        "grade_category_types": [
+          "中3/人称代名詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Mike ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked",
+        "sample_ids": [
+          "M3N-01818",
+          "M3N-01890"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Mike finished ( to write / writing / write ) the letter. 正しいものを選びなさい。",
+        "a": "Writing",
+        "sample_ids": [
+          "M3N-01215",
+          "M3N-01287"
+        ],
+        "grade_category_types": [
+          "中3/不定詞①，動名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+        "a": "us",
+        "sample_ids": [
+          "R2-PRON-0070",
+          "F1-PRON-0026"
+        ],
+        "grade_category_types": [
+          "中2/人称代名詞/空所補充",
+          "中1/人称代名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "Open the door. を否定の命令文にしなさい。",
+        "a": "Do not open the door.",
+        "sample_ids": [
+          "M3C-01506",
+          "M3N-00790"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She can play tennis. を疑問文にしなさい。",
+        "a": "Can she play tennis?",
+        "sample_ids": [
+          "R1-CAN-0051",
+          "M3C-00609"
+        ],
+        "grade_category_types": [
+          "中1/can/変形",
+          "中3/助動詞/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She cook dinner every day. の誤りを直しなさい。",
+        "a": "She cooks dinner every day.",
+        "sample_ids": [
+          "GEN-3RD-0952",
+          "GEN-3RD-1100"
+        ],
+        "grade_category_types": [
+          "中1/三単現/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She has been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Has she been playing tennis for two hours?",
+        "sample_ids": [
+          "M3C-00619",
+          "M3C-00880"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She has been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Has she been using this computer since this morning?",
+        "sample_ids": [
+          "M3C-00620",
+          "M3C-00957"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "Be動詞の文",
+        "sample_ids": [
+          "E1-BD-001",
+          "R2-DIST-0053"
+        ],
+        "grade_category_types": [
+          "中1/区別/見分け",
+          "中2/be動詞と一般動詞（現在形）/見分け"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She use a computer every day. の誤りを直しなさい。",
+        "a": "She uses a computer every day.",
+        "sample_ids": [
+          "GEN-3RD-0948",
+          "GEN-3RD-1092"
+        ],
+        "grade_category_types": [
+          "中1/三単現/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She visit the library every day. の誤りを直しなさい。",
+        "a": "She visits the library every day.",
+        "sample_ids": [
+          "GEN-3RD-0956",
+          "GEN-3RD-1236"
+        ],
+        "grade_category_types": [
+          "中1/三単現/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "She was happy yesterday. を否定文にしなさい。",
+        "a": "She was not happy yesterday.",
+        "sample_ids": [
+          "GEN-PBE-1653",
+          "M3N-00263"
+        ],
+        "grade_category_types": [
+          "中1/過去のbe動詞/変形",
+          "中3/be動詞と一般動詞（過去形）/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The bag ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02190",
+          "M3N-02262"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The bike ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02184",
+          "M3N-02256"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was made",
+        "sample_ids": [
+          "M3N-01620",
+          "M3N-01680"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The computer ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3C-01345",
+          "M3N-02232"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
+        "a": "Was closed",
+        "sample_ids": [
+          "M3N-01608",
+          "M3N-01668"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02202",
+          "M3N-02274"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The letter ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3C-01324",
+          "M3N-02214"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was written",
+        "sample_ids": [
+          "M3N-01566",
+          "M3N-01626"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The movie ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02178",
+          "M3N-02250"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The picture ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3C-01341",
+          "M3N-02220"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken",
+        "sample_ids": [
+          "M3N-01584",
+          "M3N-01644"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The question ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3C-01343",
+          "M3N-02226"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned",
+        "sample_ids": [
+          "M3N-01572",
+          "M3N-01632"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The room ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02166",
+          "M3N-02238"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The song ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02172",
+          "M3N-02244"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which",
+        "sample_ids": [
+          "M3N-02196",
+          "M3N-02268"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
+        "a": "Are opened",
+        "sample_ids": [
+          "M3N-01602",
+          "M3N-01662"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
         ]
       }
     ]
