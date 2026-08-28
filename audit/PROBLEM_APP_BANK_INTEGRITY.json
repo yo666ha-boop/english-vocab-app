@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:21:32.486Z",
+  "generated_at": "2026-08-28T14:29:07.282Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -114,7 +114,7 @@
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 263,
+    "count": 283,
     "top": [
       {
         "normalized_question": "( ) do you want? 「何」に合う最も適切な語を書きなさい。",

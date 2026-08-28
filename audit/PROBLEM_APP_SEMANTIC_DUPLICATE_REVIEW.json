@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T14:21:32.807Z",
+  "generated_at": "2026-08-28T14:29:07.736Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 263,
-  "duplicate_excess": 356,
+  "duplicate_group_count": 283,
+  "duplicate_excess": 376,
   "classification_group_counts": {
-    "same_family_copy": 229,
+    "same_family_copy": 249,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 322,
+    "same_family_copy": 342,
     "cross_category": 34
   },
   "review_priority": {
@@ -4008,6 +4008,44 @@
       "excess": 1,
       "same_prefix": false,
       "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "I like read books. の誤りを直しなさい。",
+      "a": "I like to read books.",
+      "ids": [
+        "M2X-INF-0476",
+        "M2-INF2-0778"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "I need study harder. の誤りを直しなさい。",
+      "a": "I need to study harder.",
+      "ids": [
+        "M2X-INF-0474",
+        "M2-INF2-0775"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
         "中3/be動詞と一般動詞（過去形）/変形"
       ],
       "prefixes": [
@@ -4019,6 +4057,63 @@
       "ids": [
         "M3C-00003",
         "M3N-00246"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "I use this box keep letters. の誤りを直しなさい。",
+      "a": "I use this box to keep letters.",
+      "ids": [
+        "M2X-INF-0480",
+        "M2-INF2-0784"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "I want be a teacher. の誤りを直しなさい。",
+      "a": "I want to be a teacher.",
+      "ids": [
+        "M2X-INF-0472",
+        "M2-INF2-0772"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "I want play tennis. の誤りを直しなさい。",
+      "a": "I want to play tennis.",
+      "ids": [
+        "M2X-INF-0470",
+        "M2-INF2-0769"
       ]
     },
     {
@@ -4266,6 +4361,291 @@
       "ids": [
         "M3C-01343",
         "M3N-02226"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "They like read books. の誤りを直しなさい。",
+      "a": "They like to read books.",
+      "ids": [
+        "M2X-INF-0548",
+        "M2-INF2-0940"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "They need study harder. の誤りを直しなさい。",
+      "a": "They need to study harder.",
+      "ids": [
+        "M2X-INF-0546",
+        "M2-INF2-0937"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "They use this box keep letters. の誤りを直しなさい。",
+      "a": "They use this box to keep letters.",
+      "ids": [
+        "M2X-INF-0552",
+        "M2-INF2-0946"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "They want be a teacher. の誤りを直しなさい。",
+      "a": "They want to be a teacher.",
+      "ids": [
+        "M2X-INF-0544",
+        "M2-INF2-0934"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "They want play tennis. の誤りを直しなさい。",
+      "a": "They want to play tennis.",
+      "ids": [
+        "M2X-INF-0542",
+        "M2-INF2-0931"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "We like read books. の誤りを直しなさい。",
+      "a": "We like to read books.",
+      "ids": [
+        "M2X-INF-0524",
+        "M2-INF2-0886"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "We need study harder. の誤りを直しなさい。",
+      "a": "We need to study harder.",
+      "ids": [
+        "M2X-INF-0522",
+        "M2-INF2-0883"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "We use this box keep letters. の誤りを直しなさい。",
+      "a": "We use this box to keep letters.",
+      "ids": [
+        "M2X-INF-0528",
+        "M2-INF2-0892"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "We want be a teacher. の誤りを直しなさい。",
+      "a": "We want to be a teacher.",
+      "ids": [
+        "M2X-INF-0520",
+        "M2-INF2-0880"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "We want play tennis. の誤りを直しなさい。",
+      "a": "We want to play tennis.",
+      "ids": [
+        "M2X-INF-0518",
+        "M2-INF2-0877"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "You like read books. の誤りを直しなさい。",
+      "a": "You like to read books.",
+      "ids": [
+        "M2X-INF-0500",
+        "M2-INF2-0832"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "You need study harder. の誤りを直しなさい。",
+      "a": "You need to study harder.",
+      "ids": [
+        "M2X-INF-0498",
+        "M2-INF2-0829"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "You use this box keep letters. の誤りを直しなさい。",
+      "a": "You use this box to keep letters.",
+      "ids": [
+        "M2X-INF-0504",
+        "M2-INF2-0838"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "You want be a teacher. の誤りを直しなさい。",
+      "a": "You want to be a teacher.",
+      "ids": [
+        "M2X-INF-0496",
+        "M2-INF2-0826"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2X-INF",
+        "M2-INF2"
+      ],
+      "q": "You want play tennis. の誤りを直しなさい。",
+      "a": "You want to play tennis.",
+      "ids": [
+        "M2X-INF-0494",
+        "M2-INF2-0823"
       ]
     }
   ],
