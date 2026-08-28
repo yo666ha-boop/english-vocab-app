@@ -1,5 +1,368 @@
 {
-  "generated_at": "2026-08-28T11:25:34.359Z",
+  "generated_at": "2026-08-28T11:27:28.242Z",
+  "hybrid_rows": 343,
+  "top_tokens": [
+    {
+      "token": "this",
+      "count": 76
+    },
+    {
+      "token": "the",
+      "count": 56
+    },
+    {
+      "token": "my",
+      "count": 40
+    },
+    {
+      "token": "that",
+      "count": 24
+    },
+    {
+      "token": "busy",
+      "count": 22
+    },
+    {
+      "token": "good",
+      "count": 22
+    },
+    {
+      "token": "kind",
+      "count": 22
+    },
+    {
+      "token": "small",
+      "count": 22
+    },
+    {
+      "token": "dog",
+      "count": 20
+    },
+    {
+      "token": "easy",
+      "count": 20
+    },
+    {
+      "token": "large",
+      "count": 20
+    },
+    {
+      "token": "computer",
+      "count": 18
+    },
+    {
+      "token": "bag",
+      "count": 16
+    },
+    {
+      "token": "bike",
+      "count": 16
+    },
+    {
+      "token": "book",
+      "count": 16
+    },
+    {
+      "token": "our",
+      "count": 16
+    },
+    {
+      "token": "park",
+      "count": 16
+    },
+    {
+      "token": "picture",
+      "count": 16
+    },
+    {
+      "token": "room",
+      "count": 16
+    },
+    {
+      "token": "city",
+      "count": 14
+    },
+    {
+      "token": "school",
+      "count": 14
+    },
+    {
+      "token": "friend",
+      "count": 12
+    },
+    {
+      "token": "box",
+      "count": 7
+    },
+    {
+      "token": "tree",
+      "count": 7
+    },
+    {
+      "token": "car",
+      "count": 6
+    },
+    {
+      "token": "game",
+      "count": 6
+    },
+    {
+      "token": "ball",
+      "count": 5
+    },
+    {
+      "token": "camera",
+      "count": 5
+    },
+    {
+      "token": "cat",
+      "count": 5
+    },
+    {
+      "token": "desk",
+      "count": 5
+    },
+    {
+      "token": "door",
+      "count": 5
+    },
+    {
+      "token": "flower",
+      "count": 5
+    },
+    {
+      "token": "table",
+      "count": 5
+    },
+    {
+      "token": "window",
+      "count": 5
+    },
+    {
+      "token": "boy",
+      "count": 4
+    },
+    {
+      "token": "brother",
+      "count": 4
+    },
+    {
+      "token": "chair",
+      "count": 4
+    },
+    {
+      "token": "father",
+      "count": 4
+    },
+    {
+      "token": "girl",
+      "count": 4
+    },
+    {
+      "token": "he",
+      "count": 4
+    },
+    {
+      "token": "mother",
+      "count": 4
+    },
+    {
+      "token": "office",
+      "count": 4
+    },
+    {
+      "token": "pen",
+      "count": 4
+    },
+    {
+      "token": "she",
+      "count": 4
+    },
+    {
+      "token": "sister",
+      "count": 4
+    },
+    {
+      "token": "station",
+      "count": 4
+    },
+    {
+      "token": "student",
+      "count": 4
+    },
+    {
+      "token": "teacher",
+      "count": 4
+    },
+    {
+      "token": "team",
+      "count": 4
+    },
+    {
+      "token": "they",
+      "count": 4
+    },
+    {
+      "token": "we",
+      "count": 4
+    },
+    {
+      "token": "you",
+      "count": 4
+    },
+    {
+      "token": "friday",
+      "count": 3
+    },
+    {
+      "token": "i",
+      "count": 3
+    },
+    {
+      "token": "library",
+      "count": 3
+    },
+    {
+      "token": "monday",
+      "count": 3
+    },
+    {
+      "token": "saturday",
+      "count": 3
+    },
+    {
+      "token": "thursday",
+      "count": 3
+    },
+    {
+      "token": "tuesday",
+      "count": 3
+    },
+    {
+      "token": "wednesday",
+      "count": 3
+    },
+    {
+      "token": "zoo",
+      "count": 3
+    },
+    {
+      "token": "big",
+      "count": 2
+    },
+    {
+      "token": "classroom",
+      "count": 2
+    },
+    {
+      "token": "cold",
+      "count": 2
+    },
+    {
+      "token": "cute",
+      "count": 2
+    },
+    {
+      "token": "fast",
+      "count": 2
+    },
+    {
+      "token": "free",
+      "count": 2
+    },
+    {
+      "token": "happy",
+      "count": 2
+    },
+    {
+      "token": "hospital",
+      "count": 2
+    },
+    {
+      "token": "hot",
+      "count": 2
+    },
+    {
+      "token": "hungry",
+      "count": 2
+    },
+    {
+      "token": "kitchen",
+      "count": 2
+    },
+    {
+      "token": "museum",
+      "count": 2
+    },
+    {
+      "token": "nice",
+      "count": 2
+    },
+    {
+      "token": "old",
+      "count": 2
+    },
+    {
+      "token": "sad",
+      "count": 2
+    },
+    {
+      "token": "sleepy",
+      "count": 2
+    },
+    {
+      "token": "slow",
+      "count": 2
+    },
+    {
+      "token": "store",
+      "count": 2
+    },
+    {
+      "token": "strong",
+      "count": 2
+    },
+    {
+      "token": "sunday",
+      "count": 2
+    },
+    {
+      "token": "tired",
+      "count": 2
+    },
+    {
+      "token": "town",
+      "count": 2
+    },
+    {
+      "token": "young",
+      "count": 2
+    },
+    {
+      "token": "basketball",
+      "count": 1
+    },
+    {
+      "token": "case",
+      "count": 1
+    },
+    {
+      "token": "gym",
+      "count": 1
+    },
+    {
+      "token": "pencil",
+      "count": 1
+    },
+    {
+      "token": "pool",
+      "count": 1
+    },
+    {
+      "token": "wall",
+      "count": 1
+    }
+  ],
   "groups": [
     {
       "prefix": "M3C",
