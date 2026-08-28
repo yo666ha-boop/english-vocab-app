@@ -1,3 +1,4 @@
+// v9 generic duplicate diversification; retrigger after semantic gate path correction
 import fs from 'node:fs';
 const HTML='problem-app/index.html',OUT='audit/PROBLEM_APP_HIGH_CONFIDENCE_DUPLICATE_DIVERSIFICATION_V9.json';let html=fs.readFileSync(HTML,'utf8');const re=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i,m=re.exec(html);if(!m)throw Error('qb-data');const all=JSON.parse(m[1]),rows=all.filter(x=>x?.subject==='英語');
 const norm=s=>String(s??'').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase(),key=x=>norm(x.q)+'\u0000'+norm(x.a),fam=x=>`${x.grade}/${x.category}/${x.type}`,pref=x=>String(x.id||'').split('-')[0];const by=new Map();for(const x of rows){const a=by.get(key(x))||[];a.push(x);by.set(key(x),a);}const used=new Set(rows.map(key));
