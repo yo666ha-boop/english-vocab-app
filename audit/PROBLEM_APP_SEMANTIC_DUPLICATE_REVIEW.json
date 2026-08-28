@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-28T14:18:42.248Z",
+  "generated_at": "2026-08-28T14:20:00.762Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 295,
-  "duplicate_excess": 427,
+  "duplicate_group_count": 263,
+  "duplicate_excess": 356,
   "classification_group_counts": {
-    "same_family_copy": 261,
+    "same_family_copy": 229,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 393,
+    "same_family_copy": 322,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 229,
-    "same_family_same_prefix_excess": 332,
+    "same_family_same_prefix_groups": 197,
+    "same_family_same_prefix_excess": 261,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
@@ -65,46 +65,6 @@
       "excess": 3,
       "same_prefix": true,
       "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02043",
-        "M3N-02067",
-        "M3N-02115",
-        "M3N-02139"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know where does he live. の誤りを直しなさい。",
-      "a": "I don't know where he lives.",
-      "ids": [
-        "M3N-02044",
-        "M3N-02068",
-        "M3N-02116",
-        "M3N-02140"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
         "中3/現在完了形（完了・経験）/間違い直し"
       ],
       "prefixes": [
@@ -117,106 +77,6 @@
         "M3N-01738",
         "M3N-01768",
         "M3N-01798"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "窓を開けてください。",
-      "ids": [
-        "M3N-00732",
-        "M3N-00768",
-        "M3N-00804",
-        "M3N-00840"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "静かにしてください。",
-      "ids": [
-        "M3N-00726",
-        "M3N-00762",
-        "M3N-00798",
-        "M3N-00834"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
-      "a": "The boy who plays tennis is kind.",
-      "ids": [
-        "M3N-02170",
-        "M3N-02200",
-        "M3N-02230",
-        "M3N-02260"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
-      "a": "who",
-      "ids": [
-        "M3N-02161",
-        "M3N-02197",
-        "M3N-02233",
-        "M3N-02269"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
-      "a": "The girl who lives next door is kind.",
-      "ids": [
-        "M3N-02164",
-        "M3N-02194",
-        "M3N-02224",
-        "M3N-02254"
       ]
     },
     {
@@ -250,26 +110,6 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
-      "a": "The student who studies English is kind.",
-      "ids": [
-        "M3N-02176",
-        "M3N-02206",
-        "M3N-02236",
-        "M3N-02266"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
       "a": "The woman who teaches us is kind.",
       "ids": [
@@ -277,46 +117,6 @@
         "M3N-02218",
         "M3N-02248",
         "M3N-02278"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01448",
-        "M3N-01484",
-        "M3N-01520",
-        "M3N-01556"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01442",
-        "M3N-01478",
-        "M3N-01514",
-        "M3N-01550"
       ]
     },
     {
@@ -370,46 +170,6 @@
       "prefixes": [
         "M3C"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
-      "a": "This game is easier than that one.",
-      "ids": [
-        "M3C-01203",
-        "M3C-01215",
-        "M3C-01227",
-        "M3C-01287"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
-      "a": "Tom is the busiest of the three.",
-      "ids": [
-        "M3C-01202",
-        "M3C-01214",
-        "M3C-01226",
-        "M3C-01286"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
       "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
       "a": "Tom is the kindest of the three.",
       "ids": [
@@ -417,26 +177,6 @@
         "M3C-01222",
         "M3C-01234",
         "M3C-01294"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
-      "a": "Tom is busier than Ken.",
-      "ids": [
-        "M3C-01201",
-        "M3C-01213",
-        "M3C-01225",
-        "M3C-01285"
       ]
     },
     {
@@ -557,66 +297,6 @@
         "M3N-02313",
         "M3N-02343",
         "M3N-02373"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
-      "a": "The student who is reading a book",
-      "ids": [
-        "M3N-02177",
-        "M3N-02207",
-        "M3N-02237",
-        "M3N-02267"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
-      "a": "The boy who is riding a bike",
-      "ids": [
-        "M3N-02165",
-        "M3N-02195",
-        "M3N-02225",
-        "M3N-02255"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / singing / song / girl / is / a )",
-      "a": "The girl who is singing a song",
-      "ids": [
-        "M3N-02171",
-        "M3N-02201",
-        "M3N-02231",
-        "M3N-02261"
       ]
     },
     {
@@ -784,25 +464,6 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02073",
-        "M3N-02097",
-        "M3N-02145"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
       "a": "B",
       "ids": [
@@ -828,25 +489,6 @@
         "M3N-02085",
         "M3N-02109",
         "M3N-02157"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know what does she want. の誤りを直しなさい。",
-      "a": "I don't know what she wants.",
-      "ids": [
-        "M3N-02074",
-        "M3N-02098",
-        "M3N-02146"
       ]
     },
     {
@@ -1045,25 +687,6 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "座ってください。",
-      "ids": [
-        "M3N-00738",
-        "M3N-00774",
-        "M3N-00810"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
         "中3/文型/見分け"
       ],
       "prefixes": [
@@ -1075,25 +698,6 @@
         "M3N-01460",
         "M3N-01496",
         "M3N-01532"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01454",
-        "M3N-01490",
-        "M3N-01526"
       ]
     },
     {
@@ -1221,69 +825,12 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
-      "a": "I don't know when she will come.",
-      "ids": [
-        "M3N-02064",
-        "M3N-02112",
-        "M3N-02136"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
       "a": "I don't know where she lives.",
       "ids": [
         "M3N-02076",
         "M3N-02100",
         "M3N-02148"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
-      "a": "I don't know why she is busy.",
-      "ids": [
-        "M3N-02058",
-        "M3N-02106",
-        "M3N-02130"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
-      "a": "I don't know what she wants.",
-      "ids": [
-        "M3N-02070",
-        "M3N-02094",
-        "M3N-02142"
       ]
     },
     {
@@ -2126,114 +1673,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) what does he want (B) what he wants (C) he what. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02049",
-        "M3N-02121"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) when does he come (B) when he comes (C) he when. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02055",
-        "M3N-02127"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) why does he study English (B) why he studies English (C) he why. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02061",
-        "M3N-02133"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know what does he want. の誤りを直しなさい。",
-      "a": "I don't know what he wants.",
-      "ids": [
-        "M3N-02050",
-        "M3N-02122"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know when does he come. の誤りを直しなさい。",
-      "a": "I don't know when he comes.",
-      "ids": [
-        "M3N-02056",
-        "M3N-02128"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know why does he study English. の誤りを直しなさい。",
-      "a": "I don't know why he studies English.",
-      "ids": [
-        "M3N-02062",
-        "M3N-02134"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/現在完了形（継続），現在完了進行形/変形"
       ],
       "prefixes": [
@@ -2923,42 +2362,6 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "The bag ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02190",
-        "M3N-02262"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The bike ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02184",
-        "M3N-02256"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
       "a": "which",
       "ids": [
@@ -2972,52 +2375,16 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/関係代名詞/選択"
+        "中3/関係代名詞/間違い直し"
       ],
       "prefixes": [
         "M3N"
       ],
-      "q": "The movie ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
+      "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
+      "a": "The student who studies English is kind.",
       "ids": [
-        "M3N-02178",
-        "M3N-02250"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The room ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02166",
-        "M3N-02238"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The song ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02172",
-        "M3N-02244"
+        "M3N-02176",
+        "M3N-02266"
       ]
     },
     {
@@ -3090,6 +2457,24 @@
       "ids": [
         "M3N-01475",
         "M3N-01547"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01454",
+        "M3N-01526"
       ]
     },
     {
@@ -3548,6 +2933,24 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+      "a": "This game is easier than that one.",
+      "ids": [
+        "M3C-01203",
+        "M3C-01287"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
         "中2/比較/英作文"
       ],
       "prefixes": [
@@ -3913,47 +3316,11 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼がどこに住んでいるのかわかりません。』",
-      "a": "I don't know where he lives.",
-      "ids": [
-        "M3N-02052",
-        "M3N-02124"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
       "a": "I don't know why he is busy.",
       "ids": [
         "M3N-02082",
         "M3N-02154"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼が何をほしいのかわかりません。』",
-      "a": "I don't know what he wants.",
-      "ids": [
-        "M3N-02046",
-        "M3N-02118"
       ]
     },
     {
@@ -4170,6 +3537,24 @@
       "ids": [
         "M3N-01260",
         "M3N-01308"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
+      "a": "The student who is reading a book",
+      "ids": [
+        "M3N-02177",
+        "M3N-02267"
       ]
     },
     {

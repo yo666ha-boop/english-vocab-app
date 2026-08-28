@@ -1,0 +1,742 @@
+{
+  "generated_at": "2026-08-28T14:20:00.363Z",
+  "groups_eligible": 58,
+  "changed_rows": 71,
+  "groups_touched": 36,
+  "by_family": {
+    "中3/比較/英作文": 8,
+    "中3/命令文，there is ～ の文/読解": 8,
+    "中3/文型/見分け": 7,
+    "中3/分詞と間接疑問文/選択": 8,
+    "中3/分詞と間接疑問文/間違い直し": 8,
+    "中3/分詞と間接疑問文/英作文": 8,
+    "中3/関係代名詞/選択": 8,
+    "中3/関係代名詞/間違い直し": 8,
+    "中3/関係代名詞/並びかえ": 8
+  },
+  "samples": [
+    {
+      "id": "M3C-01213",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
+        "a": "Tom is busier than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きいです。』",
+        "a": "This bag is bigger than that one."
+      }
+    },
+    {
+      "id": "M3C-01225",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
+        "a": "Tom is busier than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より簡単です。』",
+        "a": "This book is easier than that one."
+      }
+    },
+    {
+      "id": "M3C-01285",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
+        "a": "Tom is busier than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高いです。』",
+        "a": "Tom is taller than Ken."
+      }
+    },
+    {
+      "id": "M3C-01214",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
+        "a": "Tom is the busiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『エミはユキより若いです。』",
+        "a": "Emi is younger than Yuki."
+      }
+    },
+    {
+      "id": "M3C-01226",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
+        "a": "Tom is the busiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長いです。』",
+        "a": "This river is longer than that river."
+      }
+    },
+    {
+      "id": "M3C-01286",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
+        "a": "Tom is the busiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速いです。』",
+        "a": "My bike is faster than your bike."
+      }
+    },
+    {
+      "id": "M3C-01215",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+        "a": "This game is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽いです。』",
+        "a": "This box is lighter than that one."
+      }
+    },
+    {
+      "id": "M3C-01227",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+        "a": "This game is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広いです。』",
+        "a": "This room is larger than that one."
+      }
+    },
+    {
+      "id": "M3N-00762",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "静かにしてください。"
+      },
+      "after": {
+        "q": "Open the door, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ドアを開けてください。"
+      }
+    },
+    {
+      "id": "M3N-00798",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "静かにしてください。"
+      },
+      "after": {
+        "q": "Close the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "窓を閉めてください。"
+      }
+    },
+    {
+      "id": "M3N-00834",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "静かにしてください。"
+      },
+      "after": {
+        "q": "Look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この写真を見なさい。"
+      }
+    },
+    {
+      "id": "M3N-00768",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "窓を開けてください。"
+      },
+      "after": {
+        "q": "Read this book, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この本を読んでください。"
+      }
+    },
+    {
+      "id": "M3N-00804",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "窓を開けてください。"
+      },
+      "after": {
+        "q": "Please come here. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ここへ来てください。"
+      }
+    },
+    {
+      "id": "M3N-00840",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "窓を開けてください。"
+      },
+      "after": {
+        "q": "Do not run here. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ここで走ってはいけません。"
+      }
+    },
+    {
+      "id": "M3N-00774",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "座ってください。"
+      },
+      "after": {
+        "q": "There is a book on the desk. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "机の上に本があります。"
+      }
+    },
+    {
+      "id": "M3N-00810",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "座ってください。"
+      },
+      "after": {
+        "q": "There are two students in the room. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "部屋に生徒が2人います。"
+      }
+    },
+    {
+      "id": "M3N-01478",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "We call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01514",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "My friends call me Mike. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01550",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "She gave me a book. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01484",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "Tom showed us a picture. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01520",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "My mother made me lunch. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01556",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "Ken sent Emi a letter. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01490",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "They named the dog Pochi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-02067",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) where does Tom live (B) where Tom lives (C) lives Tom where. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02115",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) when does school start (B) when school starts (C) starts school when. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02139",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) why does Emi study English (B) why Emi studies English (C) English studies Emi why. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02068",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know where does he live. の誤りを直しなさい。",
+        "a": "I don't know where he lives."
+      },
+      "after": {
+        "q": "I don't know where does Tom live. の誤りを直しなさい。",
+        "a": "I don't know where Tom lives."
+      }
+    },
+    {
+      "id": "M3N-02116",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know where does he live. の誤りを直しなさい。",
+        "a": "I don't know where he lives."
+      },
+      "after": {
+        "q": "I don't know when does school start. の誤りを直しなさい。",
+        "a": "I don't know when school starts."
+      }
+    },
+    {
+      "id": "M3N-02140",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know where does he live. の誤りを直しなさい。",
+        "a": "I don't know where he lives."
+      },
+      "after": {
+        "q": "I don't know why does Emi study English. の誤りを直しなさい。",
+        "a": "I don't know why Emi studies English."
+      }
+    },
+    {
+      "id": "M3N-02118",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼が何をほしいのかわかりません。』",
+        "a": "I don't know what he wants."
+      },
+      "after": {
+        "q": "「私はトムがどこに住んでいるか知りません。」を英語にしなさい。",
+        "a": "I don't know where Tom lives."
+      }
+    },
+    {
+      "id": "M3N-02121",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) what does he want (B) what he wants (C) he what. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) how does Ken go to school (B) how Ken goes to school (C) school to goes Ken how. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02122",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know what does he want. の誤りを直しなさい。",
+        "a": "I don't know what he wants."
+      },
+      "after": {
+        "q": "I don't know how does Ken go to school. の誤りを直しなさい。",
+        "a": "I don't know how Ken goes to school."
+      }
+    },
+    {
+      "id": "M3N-02124",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼がどこに住んでいるのかわかりません。』",
+        "a": "I don't know where he lives."
+      },
+      "after": {
+        "q": "「私は学校がいつ始まるか知りません。」を英語にしなさい。",
+        "a": "I don't know when school starts."
+      }
+    },
+    {
+      "id": "M3N-02127",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) when does he come (B) when he comes (C) he when. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) what does Mike want (B) what Mike wants (C) wants Mike what. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02128",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know when does he come. の誤りを直しなさい。",
+        "a": "I don't know when he comes."
+      },
+      "after": {
+        "q": "I don't know what does Mike want. の誤りを直しなさい。",
+        "a": "I don't know what Mike wants."
+      }
+    },
+    {
+      "id": "M3N-02106",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
+        "a": "I don't know why she is busy."
+      },
+      "after": {
+        "q": "「私はエミがなぜ英語を勉強するか知りません。」を英語にしなさい。",
+        "a": "I don't know why Emi studies English."
+      }
+    },
+    {
+      "id": "M3N-02130",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
+        "a": "I don't know why she is busy."
+      },
+      "after": {
+        "q": "「私はケンがどのように学校へ行くか知りません。」を英語にしなさい。",
+        "a": "I don't know how Ken goes to school."
+      }
+    },
+    {
+      "id": "M3N-02133",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) why does he study English (B) why he studies English (C) he why. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) where does Aya play tennis (B) where Aya plays tennis (C) tennis plays Aya where. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02134",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know why does he study English. の誤りを直しなさい。",
+        "a": "I don't know why he studies English."
+      },
+      "after": {
+        "q": "I don't know where does Aya play tennis. の誤りを直しなさい。",
+        "a": "I don't know where Aya plays tennis."
+      }
+    },
+    {
+      "id": "M3N-02112",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
+        "a": "I don't know when she will come."
+      },
+      "after": {
+        "q": "「私はマイクが何をほしがっているか知りません。」を英語にしなさい。",
+        "a": "I don't know what Mike wants."
+      }
+    },
+    {
+      "id": "M3N-02136",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
+        "a": "I don't know when she will come."
+      },
+      "after": {
+        "q": "「私はアヤがどこでテニスをするか知りません。」を英語にしなさい。",
+        "a": "I don't know where Aya plays tennis."
+      }
+    },
+    {
+      "id": "M3N-02094",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
+        "a": "I don't know what she wants."
+      },
+      "after": {
+        "q": "「私は彼らがいつここへ来るか知りません。」を英語にしなさい。",
+        "a": "I don't know when they come here."
+      }
+    },
+    {
+      "id": "M3N-02142",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
+        "a": "I don't know what she wants."
+      },
+      "after": {
+        "q": "「私はユキがなぜ忙しいか知りません。」を英語にしなさい。",
+        "a": "I don't know why Yuki is busy."
+      }
+    },
+    {
+      "id": "M3N-02097",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) when do they come here (B) when they come here (C) here come they when. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02145",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) why is Yuki busy (B) why Yuki is busy (C) busy is Yuki why. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02098",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know what does she want. の誤りを直しなさい。",
+        "a": "I don't know what she wants."
+      },
+      "after": {
+        "q": "I don't know when do they come here. の誤りを直しなさい。",
+        "a": "I don't know when they come here."
+      }
+    },
+    {
+      "id": "M3N-02146",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know what does she want. の誤りを直しなさい。",
+        "a": "I don't know what she wants."
+      },
+      "after": {
+        "q": "I don't know why is Yuki busy. の誤りを直しなさい。",
+        "a": "I don't know why Yuki is busy."
+      }
+    },
+    {
+      "id": "M3N-02197",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The boy ( who / which / where ) plays soccer is my friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02233",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The girl ( who / which / where ) studies English is kind. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02269",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The man ( who / which / where ) works here is Mr. Brown. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02194",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+        "a": "The girl who lives next door is kind."
+      },
+      "after": {
+        "q": "The boy which plays soccer is my friend. の誤りを、who を使って直しなさい。",
+        "a": "The boy who plays soccer is my friend."
+      }
+    },
+    {
+      "id": "M3N-02224",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+        "a": "The girl who lives next door is kind."
+      },
+      "after": {
+        "q": "The girl which studies English is kind. の誤りを、who を使って直しなさい。",
+        "a": "The girl who studies English is kind."
+      }
+    },
+    {
+      "id": "M3N-02254",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+        "a": "The girl who lives next door is kind."
+      },
+      "after": {
+        "q": "The man which works here is Mr. Brown. の誤りを、who を使って直しなさい。",
+        "a": "The man who works here is Mr. Brown."
+      }
+    },
+    {
+      "id": "M3N-02195",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
+        "a": "The boy who is riding a bike"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( boy / plays / is / friend / The / who / soccer / my )",
+        "a": "The boy who plays soccer is my friend."
+      }
+    },
+    {
+      "id": "M3N-02225",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
+        "a": "The boy who is riding a bike"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( girl / studies / is / The / who / English / kind )",
+        "a": "The girl who studies English is kind."
+      }
+    },
+    {
+      "id": "M3N-02255",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
+        "a": "The boy who is riding a bike"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( man / works / is / Brown / The / who / here / Mr )",
+        "a": "The man who works here is Mr. Brown."
+      }
+    },
+    {
+      "id": "M3N-02238",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The room ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which"
+      },
+      "after": {
+        "q": "The woman ( who / which / where ) teaches us English is kind. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02200",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
+        "a": "The boy who plays tennis is kind."
+      },
+      "after": {
+        "q": "The woman which teaches us English is kind. の誤りを、who を使って直しなさい。",
+        "a": "The woman who teaches us English is kind."
+      }
+    },
+    {
+      "id": "M3N-02230",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
+        "a": "The boy who plays tennis is kind."
+      },
+      "after": {
+        "q": "The student which reads many books is Ken. の誤りを、who を使って直しなさい。",
+        "a": "The student who reads many books is Ken."
+      }
+    },
+    {
+      "id": "M3N-02260",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
+        "a": "The boy who plays tennis is kind."
+      },
+      "after": {
+        "q": "The teacher which lives near school is friendly. の誤りを、who を使って直しなさい。",
+        "a": "The teacher who lives near school is friendly."
+      }
+    }
+  ],
+  "duplicate_groups_after": 263,
+  "duplicate_excess_after": 356,
+  "groups_ge5_after": 0
+}

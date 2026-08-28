@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:18:42.097Z",
+  "generated_at": "2026-08-28T14:20:00.622Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,30 +31,22 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 295,
-    "row_count": 722,
-    "duplicate_excess": 427,
-    "row_ratio": 0.06869,
-    "excess_ratio": 0.040624,
+    "group_count": 263,
+    "row_count": 619,
+    "duplicate_excess": 356,
+    "row_ratio": 0.058891,
+    "excess_ratio": 0.033869,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
-      "中3/関係代名詞/選択": 45,
       "中2/比較/間違い直し": 44,
-      "中3/比較/英作文": 24,
+      "中3/関係代名詞/選択": 31,
       "中3/現在完了形（継続），現在完了進行形/変形": 24,
       "中2/比較/英作文": 22,
       "中3/仮定法/英作文": 20,
-      "中3/分詞と間接疑問文/英作文": 20,
-      "中3/命令文，there is ～ の文/読解": 20,
-      "中3/文型/見分け": 20,
       "中3/現在完了形（継続），現在完了進行形/空所補充": 20,
       "中3/現在完了形（継続），現在完了進行形/英作文": 20,
       "中3/現在完了形（継続），現在完了進行形/間違い直し": 20,
-      "中3/関係代名詞/並びかえ": 20,
-      "中3/関係代名詞/間違い直し": 20,
-      "中3/分詞と間接疑問文/選択": 19,
-      "中3/分詞と間接疑問文/間違い直し": 19,
       "中2/助動詞/英作文": 18,
       "中3/人称代名詞/間違い直し": 18,
       "中3/不定詞①，動名詞/選択": 16,
@@ -63,12 +55,17 @@
       "中3/現在完了形（継続），現在完了進行形/選択": 16,
       "中1/三単現/間違い直し": 14,
       "中2/比較/並びかえ": 14,
+      "中3/比較/英作文": 14,
       "中3/現在完了形（完了・経験）/変形": 14,
       "中1/頻度副詞/並びかえ": 12,
       "中3/人称代名詞/選択": 12,
+      "中3/文型/見分け": 11,
       "中3/現在完了形（完了・経験）/空所補充": 10,
+      "中3/関係代名詞/並びかえ": 10,
+      "中3/関係代名詞/間違い直し": 10,
       "中3/不定詞①，動名詞/並びかえ": 9,
       "中3/助動詞/変形": 9,
+      "中3/命令文，there is ～ の文/読解": 9,
       "中1/一般動詞の過去形/変形": 8,
       "中2/一般動詞の過去形/変形": 8,
       "中3/命令文，there is ～ の文/英作文": 8,
@@ -77,10 +74,13 @@
       "中3/接続詞/読解": 8,
       "中3/疑問詞/答え方": 8,
       "中3/疑問詞/選択": 8,
+      "中3/分詞と間接疑問文/英作文": 7,
       "中3/疑問詞/空所補充": 7,
       "中1/be動詞/答え方": 6,
       "中1/人称代名詞/空所補充": 6,
       "中2/人称代名詞/空所補充": 6,
+      "中3/分詞と間接疑問文/選択": 6,
+      "中3/分詞と間接疑問文/間違い直し": 6,
       "中3/be動詞と一般動詞（過去形）/変形": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
@@ -114,10 +114,10 @@
       "中3/進行形/間違い直し": 1
     },
     "by_family_groups": {
-      "中3/関係代名詞/選択": 17,
       "中2/比較/間違い直し": 12,
       "中3/現在完了形（継続），現在完了進行形/変形": 12,
       "中2/比較/英作文": 11,
+      "中3/関係代名詞/選択": 11,
       "中2/助動詞/英作文": 9,
       "中3/現在完了形（継続），現在完了進行形/空所補充": 9,
       "中3/現在完了形（継続），現在完了進行形/間違い直し": 9,
@@ -126,25 +126,17 @@
       "中3/不定詞①，動名詞/選択": 8,
       "中3/人称代名詞/間違い直し": 8,
       "中3/仮定法/間違い直し": 8,
-      "中3/分詞と間接疑問文/英作文": 8,
       "中3/文型/間違い直し": 8,
       "中3/現在完了形（継続），現在完了進行形/選択": 8,
       "中1/三単現/間違い直し": 7,
       "中2/比較/並びかえ": 7,
-      "中3/分詞と間接疑問文/選択": 7,
-      "中3/分詞と間接疑問文/間違い直し": 7,
       "中3/現在完了形（完了・経験）/変形": 7,
       "中3/現在完了形（継続），現在完了進行形/英作文": 7,
       "中1/人称代名詞/空所補充": 6,
       "中1/頻度副詞/並びかえ": 6,
       "中2/人称代名詞/空所補充": 6,
-      "中3/命令文，there is ～ の文/読解": 6,
-      "中3/文型/見分け": 6,
-      "中3/比較/英作文": 6,
       "中3/仮定法/英作文": 5,
       "中3/助動詞/変形": 5,
-      "中3/関係代名詞/並びかえ": 5,
-      "中3/関係代名詞/間違い直し": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
       "中3/be動詞と一般動詞（過去形）/変形": 4,
@@ -154,14 +146,22 @@
       "中3/接続詞/並びかえ": 4,
       "中3/接続詞/空所補充": 4,
       "中3/接続詞/読解": 4,
+      "中3/文型/見分け": 4,
+      "中3/比較/英作文": 4,
       "中3/現在完了形（完了・経験）/空所補充": 4,
       "中3/疑問詞/答え方": 4,
       "中3/疑問詞/選択": 4,
       "中1/be動詞/答え方": 3,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
+      "中3/分詞と間接疑問文/英作文": 3,
+      "中3/命令文，there is ～ の文/読解": 3,
+      "中3/関係代名詞/並びかえ": 3,
+      "中3/関係代名詞/間違い直し": 3,
       "中1/現在進行形/変形": 2,
       "中3/be動詞と一般動詞（現在形）/見分け": 2,
+      "中3/分詞と間接疑問文/選択": 2,
+      "中3/分詞と間接疑問文/間違い直し": 2,
       "中3/疑問詞/空所補充": 2,
       "中3/進行形/変形": 2,
       "中1/can/変形": 1,
@@ -233,34 +233,6 @@
       },
       {
         "count": 4,
-        "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
-        "a": "B",
-        "sample_ids": [
-          "M3N-02043",
-          "M3N-02067",
-          "M3N-02115",
-          "M3N-02139"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "I don't know where does he live. の誤りを直しなさい。",
-        "a": "I don't know where he lives.",
-        "sample_ids": [
-          "M3N-02044",
-          "M3N-02068",
-          "M3N-02116",
-          "M3N-02140"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
         "q": "I have did the work before. の誤りを直しなさい。",
         "a": "I have done the work before.",
         "sample_ids": [
@@ -289,34 +261,6 @@
       },
       {
         "count": 4,
-        "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
-        "a": "窓を開けてください。",
-        "sample_ids": [
-          "M3N-00732",
-          "M3N-00768",
-          "M3N-00804",
-          "M3N-00840"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/読解"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
-        "a": "静かにしてください。",
-        "sample_ids": [
-          "M3N-00726",
-          "M3N-00762",
-          "M3N-00798",
-          "M3N-00834"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/読解"
-        ]
-      },
-      {
-        "count": 4,
         "q": "The boy ( who / which / where ) is studying is John's friend. 正しいものを選びなさい。",
         "a": "who",
         "sample_ids": [
@@ -338,34 +282,6 @@
           "M3N-02191",
           "M3N-02227",
           "M3N-02263"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
-        "a": "The boy who plays tennis is kind.",
-        "sample_ids": [
-          "M3N-02170",
-          "M3N-02200",
-          "M3N-02230",
-          "M3N-02260"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
-        "a": "who",
-        "sample_ids": [
-          "M3N-02161",
-          "M3N-02197",
-          "M3N-02233",
-          "M3N-02269"
         ],
         "grade_category_types": [
           "中3/関係代名詞/選択"
@@ -401,20 +317,6 @@
       },
       {
         "count": 4,
-        "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
-        "a": "The girl who lives next door is kind.",
-        "sample_ids": [
-          "M3N-02164",
-          "M3N-02194",
-          "M3N-02224",
-          "M3N-02254"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
         "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
         "a": "The man who works here is kind.",
         "sample_ids": [
@@ -422,20 +324,6 @@
           "M3N-02212",
           "M3N-02242",
           "M3N-02272"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
-        "a": "The student who studies English is kind.",
-        "sample_ids": [
-          "M3N-02176",
-          "M3N-02206",
-          "M3N-02236",
-          "M3N-02266"
         ],
         "grade_category_types": [
           "中3/関係代名詞/間違い直し"
@@ -453,34 +341,6 @@
         ],
         "grade_category_types": [
           "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-        "a": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01448",
-          "M3N-01484",
-          "M3N-01520",
-          "M3N-01556"
-        ],
-        "grade_category_types": [
-          "中3/文型/見分け"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-        "a": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01442",
-          "M3N-01478",
-          "M3N-01514",
-          "M3N-01550"
-        ],
-        "grade_category_types": [
-          "中3/文型/見分け"
         ]
       },
       {
@@ -597,34 +457,6 @@
       },
       {
         "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
-        "a": "This game is easier than that one.",
-        "sample_ids": [
-          "M3C-01203",
-          "M3C-01215",
-          "M3C-01227",
-          "M3C-01287"
-        ],
-        "grade_category_types": [
-          "中3/比較/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
-        "a": "Tom is the busiest of the three.",
-        "sample_ids": [
-          "M3C-01202",
-          "M3C-01214",
-          "M3C-01226",
-          "M3C-01286"
-        ],
-        "grade_category_types": [
-          "中3/比較/英作文"
-        ]
-      },
-      {
-        "count": 4,
         "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
         "a": "Tom is the kindest of the three.",
         "sample_ids": [
@@ -632,20 +464,6 @@
           "M3C-01222",
           "M3C-01234",
           "M3C-01294"
-        ],
-        "grade_category_types": [
-          "中3/比較/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
-        "a": "Tom is busier than Ken.",
-        "sample_ids": [
-          "M3C-01201",
-          "M3C-01213",
-          "M3C-01225",
-          "M3C-01285"
         ],
         "grade_category_types": [
           "中3/比較/英作文"
@@ -733,48 +551,6 @@
         ],
         "grade_category_types": [
           "中3/仮定法/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
-        "a": "The student who is reading a book",
-        "sample_ids": [
-          "M3N-02177",
-          "M3N-02207",
-          "M3N-02237",
-          "M3N-02267"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/並びかえ"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
-        "a": "The boy who is riding a bike",
-        "sample_ids": [
-          "M3N-02165",
-          "M3N-02195",
-          "M3N-02225",
-          "M3N-02255"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/並びかえ"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / singing / song / girl / is / a )",
-        "a": "The girl who is singing a song",
-        "sample_ids": [
-          "M3N-02171",
-          "M3N-02201",
-          "M3N-02231",
-          "M3N-02261"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/並びかえ"
         ]
       },
       {
@@ -885,19 +661,6 @@
       },
       {
         "count": 3,
-        "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
-        "a": "B",
-        "sample_ids": [
-          "M3N-02073",
-          "M3N-02097",
-          "M3N-02145"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 3,
         "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
         "a": "B",
         "sample_ids": [
@@ -920,19 +683,6 @@
         ],
         "grade_category_types": [
           "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "I don't know what does she want. の誤りを直しなさい。",
-        "a": "I don't know what she wants.",
-        "sample_ids": [
-          "M3N-02074",
-          "M3N-02098",
-          "M3N-02146"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/間違い直し"
         ]
       },
       {
@@ -1067,19 +817,6 @@
       },
       {
         "count": 3,
-        "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
-        "a": "座ってください。",
-        "sample_ids": [
-          "M3N-00738",
-          "M3N-00774",
-          "M3N-00810"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/読解"
-        ]
-      },
-      {
-        "count": 3,
         "q": "The book ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
         "a": "which",
         "sample_ids": [
@@ -1099,19 +836,6 @@
           "M3N-01460",
           "M3N-01496",
           "M3N-01532"
-        ],
-        "grade_category_types": [
-          "中3/文型/見分け"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-        "a": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01454",
-          "M3N-01490",
-          "M3N-01526"
         ],
         "grade_category_types": [
           "中3/文型/見分け"
@@ -1249,51 +973,12 @@
       },
       {
         "count": 3,
-        "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
-        "a": "I don't know when she will come.",
-        "sample_ids": [
-          "M3N-02064",
-          "M3N-02112",
-          "M3N-02136"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 3,
         "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
         "a": "I don't know where she lives.",
         "sample_ids": [
           "M3N-02076",
           "M3N-02100",
           "M3N-02148"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
-        "a": "I don't know why she is busy.",
-        "sample_ids": [
-          "M3N-02058",
-          "M3N-02106",
-          "M3N-02130"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
-        "a": "I don't know what she wants.",
-        "sample_ids": [
-          "M3N-02070",
-          "M3N-02094",
-          "M3N-02142"
         ],
         "grade_category_types": [
           "中3/分詞と間接疑問文/英作文"
@@ -1958,78 +1643,6 @@
         "grade_category_types": [
           "中1/現在進行形/変形",
           "中3/進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know (A) what does he want (B) what he wants (C) he what. 正しいものを選びなさい。",
-        "a": "B",
-        "sample_ids": [
-          "M3N-02049",
-          "M3N-02121"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know (A) when does he come (B) when he comes (C) he when. 正しいものを選びなさい。",
-        "a": "B",
-        "sample_ids": [
-          "M3N-02055",
-          "M3N-02127"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know (A) why does he study English (B) why he studies English (C) he why. 正しいものを選びなさい。",
-        "a": "B",
-        "sample_ids": [
-          "M3N-02061",
-          "M3N-02133"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know what does he want. の誤りを直しなさい。",
-        "a": "I don't know what he wants.",
-        "sample_ids": [
-          "M3N-02050",
-          "M3N-02122"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know when does he come. の誤りを直しなさい。",
-        "a": "I don't know when he comes.",
-        "sample_ids": [
-          "M3N-02056",
-          "M3N-02128"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I don't know why does he study English. の誤りを直しなさい。",
-        "a": "I don't know why he studies English.",
-        "sample_ids": [
-          "M3N-02062",
-          "M3N-02134"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/間違い直し"
         ]
       },
       {
@@ -2792,30 +2405,6 @@
       },
       {
         "count": 2,
-        "q": "The bag ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02190",
-          "M3N-02262"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "The bike ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02184",
-          "M3N-02256"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
         "q": "The computer ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
         "a": "which",
         "sample_ids": [
@@ -2852,18 +2441,6 @@
       },
       {
         "count": 2,
-        "q": "The movie ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02178",
-          "M3N-02250"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
         "q": "The picture ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
         "a": "which",
         "sample_ids": [
@@ -2888,26 +2465,14 @@
       },
       {
         "count": 2,
-        "q": "The room ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
+        "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
+        "a": "The student who studies English is kind.",
         "sample_ids": [
-          "M3N-02166",
-          "M3N-02238"
+          "M3N-02176",
+          "M3N-02266"
         ],
         "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "The song ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02172",
-          "M3N-02244"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
+          "中3/関係代名詞/間違い直し"
         ]
       },
       {
@@ -2969,6 +2534,18 @@
         ],
         "grade_category_types": [
           "中3/文型/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文",
+        "sample_ids": [
+          "M3N-01454",
+          "M3N-01526"
+        ],
+        "grade_category_types": [
+          "中3/文型/見分け"
         ]
       },
       {
@@ -3350,6 +2927,392 @@
         ],
         "grade_category_types": [
           "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』",
+        "a": "You must not be late.",
+        "sample_ids": [
+          "M2-MOD-0631",
+          "M2-MOD-0632"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『あなたは何が好きですか。』",
+        "a": "What do you like?",
+        "sample_ids": [
+          "E1-WH-004",
+          "E1-WR-010"
+        ],
+        "grade_category_types": [
+          "中1/疑問詞/英作文",
+          "中1/英作文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
+        "a": "Emi is younger than Yuki.",
+        "sample_ids": [
+          "M2Y-COMP-0407",
+          "M2Y-COMP-0446"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
+        "a": "This bag is larger than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0395",
+          "M2Y-COMP-0434"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+        "a": "This game is easier than that one.",
+        "sample_ids": [
+          "M3C-01203",
+          "M3C-01287"
+        ],
+        "grade_category_types": [
+          "中3/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
+        "a": "This question is easier than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0401",
+          "M2Y-COMP-0440"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
+        "a": "This river is longer than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0419",
+          "M2Y-COMP-0458"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』",
+        "a": "This movie is more exciting than that movie.",
+        "sample_ids": [
+          "M2Y-COMP-0425",
+          "M2Y-COMP-0464"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
+        "a": "This book is smaller than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0398",
+          "M2Y-COMP-0437"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この机はあの机より重い。』",
+        "a": "This desk is heavier than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0416",
+          "M2Y-COMP-0455"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』",
+        "a": "This box is lighter than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0422",
+          "M2Y-COMP-0461"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
+        "a": "This room is larger than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0410",
+          "M2Y-COMP-0449"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
+        "a": "The exercise made me strong.",
+        "sample_ids": [
+          "M3N-01528",
+          "M3N-01534"
+        ],
+        "grade_category_types": [
+          "中3/文型/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+        "a": "Tom is taller than Ken.",
+        "sample_ids": [
+          "M2Y-COMP-0404",
+          "M2Y-COMP-0443"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
+        "a": "Do not run in the park.",
+        "sample_ids": [
+          "M3N-00727",
+          "M3N-00829"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
+        "a": "Do not run in the library.",
+        "sample_ids": [
+          "M3N-00721",
+          "M3N-00823"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
+        "a": "They have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0645",
+          "M2-MOD-0646"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
+        "a": "They must not be late.",
+        "sample_ids": [
+          "M2-MOD-0647",
+          "M2-MOD-0648"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
+        "a": "We have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0637",
+          "M2-MOD-0638"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
+        "a": "We must not be late.",
+        "sample_ids": [
+          "M2-MOD-0639",
+          "M2-MOD-0640"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+        "a": "My bike is faster than your bike.",
+        "sample_ids": [
+          "M2Y-COMP-0413",
+          "M2Y-COMP-0452"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
+        "a": "I must finish my homework.",
+        "sample_ids": [
+          "M2-MOD-0619",
+          "M2-MOD-0620"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
+        "a": "I have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0621",
+          "M2-MOD-0622"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
+        "a": "I must not be late.",
+        "sample_ids": [
+          "M2-MOD-0623",
+          "M2-MOD-0624"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は彼がいつ来るのかわかりません。』",
+        "a": "I don't know when he will come.",
+        "sample_ids": [
+          "M3N-02088",
+          "M3N-02160"
+        ],
+        "grade_category_types": [
+          "中3/分詞と間接疑問文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
+        "a": "I don't know why he is busy.",
+        "sample_ids": [
+          "M3N-02082",
+          "M3N-02154"
+        ],
+        "grade_category_types": [
+          "中3/分詞と間接疑問文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Sunday.",
+        "sample_ids": [
+          "M3N-01839",
+          "M3N-01881"
+        ],
+        "grade_category_types": [
+          "中3/現在完了形（継続），現在完了進行形/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は毎日英語を勉強します。』",
+        "a": "I study English every day.",
+        "sample_ids": [
+          "E1-DQ-013",
+          "M2X-RV-0015"
+        ],
+        "grade_category_types": [
+          "中1/一般動詞/英作文",
+          "中2/一般動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『部屋では走らないでください。』",
+        "a": "Do not run in the room.",
+        "sample_ids": [
+          "M3N-00745",
+          "M3N-00835"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『駅では走らないでください。』",
+        "a": "Do not run in the station.",
+        "sample_ids": [
+          "M3N-00733",
+          "M3N-00817"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / He / busy )",
+        "a": "He is always busy.",
+        "sample_ids": [
+          "GEN-FREQ-1333",
+          "GEN-FREQ-1339"
+        ],
+        "grade_category_types": [
+          "中1/頻度副詞/並びかえ"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )",
+        "a": "She is always busy.",
+        "sample_ids": [
+          "GEN-FREQ-1336",
+          "GEN-FREQ-1342"
+        ],
+        "grade_category_types": [
+          "中1/頻度副詞/並びかえ"
         ]
       }
     ]
