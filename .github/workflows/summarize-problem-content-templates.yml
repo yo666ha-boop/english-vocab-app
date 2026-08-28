@@ -1,0 +1,27 @@
+name: Summarize problem content templates
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix-problem-content-quality-20260828]
+    paths:
+      - 'tools/summarize_problem_content_templates.mjs'
+      - '.github/workflows/summarize-problem-content-templates.yml'
+permissions:
+  contents: write
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+          fetch-depth: 0
+      - run: |
+          git fetch origin fix-problem-content-quality-20260828
+          git reset --hard origin/fix-problem-content-quality-20260828
+      - run: node tools/summarize_problem_content_templates.mjs
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add audit/PROBLEM_APP_CONTENT_TEMPLATE_SUMMARY.json
+          if ! git diff --cached --quiet; then git commit -m 'audit: record content template families [skip ci]' && git push; fi
