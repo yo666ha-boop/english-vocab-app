@@ -1,94 +1,18 @@
 {
-  "generated_at": "2026-08-28T14:26:11.562Z",
+  "generated_at": "2026-08-28T14:27:39.732Z",
   "english_count": 10511,
   "counts": {
     "duplicate_choice_options": 0,
-    "correction_source_equals_answer": 2,
+    "correction_source_equals_answer": 0,
     "answer_not_in_choice_options": 0,
-    "suspicious_choice_spelling_review": 4
+    "suspicious_choice_spelling_review": 0
   },
-  "hard_failures": [
-    "correction_source_equals_answer:2"
-  ],
-  "review_signals": [
-    "suspicious_choice_spelling:4"
-  ],
+  "hard_failures": [],
+  "review_signals": [],
   "samples": {
     "duplicate_choice_options": [],
-    "correction_source_equals_answer": [
-      {
-        "id": "F1-CAN-0010",
-        "grade": "中1",
-        "category": "can",
-        "type": "間違い直し",
-        "q": "Can you play tennis ? の誤りを直しなさい。",
-        "a": "Can you play tennis?",
-        "extracted_source": "Can you play tennis ?"
-      },
-      {
-        "id": "F1-CAN-0012",
-        "grade": "中1",
-        "category": "can",
-        "type": "間違い直し",
-        "q": "Can they use this computer ? の誤りを直しなさい。",
-        "a": "Can they use this computer?",
-        "extracted_source": "Can they use this computer ?"
-      }
-    ],
+    "correction_source_equals_answer": [],
     "answer_not_in_choice_options": [],
-    "suspicious_choice_spelling_review": [
-      {
-        "id": "M3N-01632",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "選択",
-        "q": "This book is ( written / write / writeing ) by many people. 正しいものを選びなさい。",
-        "a": "Written",
-        "options": [
-          "written",
-          "write",
-          "writeing"
-        ]
-      },
-      {
-        "id": "M3N-01644",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "選択",
-        "q": "These pictures is ( taken / take / takeing ) by many people. 正しいものを選びなさい。",
-        "a": "Taken",
-        "options": [
-          "taken",
-          "take",
-          "takeing"
-        ]
-      },
-      {
-        "id": "M3N-01656",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "選択",
-        "q": "The cake is ( made / make / makeing ) by many people. 正しいものを選びなさい。",
-        "a": "Made",
-        "options": [
-          "made",
-          "make",
-          "makeing"
-        ]
-      },
-      {
-        "id": "M3N-01674",
-        "grade": "中3",
-        "category": "受動態",
-        "type": "選択",
-        "q": "The bike is ( used / use / useing ) by many people. 正しいものを選びなさい。",
-        "a": "Used",
-        "options": [
-          "used",
-          "use",
-          "useing"
-        ]
-      }
-    ]
+    "suspicious_choice_spelling_review": []
   }
 }

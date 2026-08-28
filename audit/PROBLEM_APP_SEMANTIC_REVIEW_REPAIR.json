@@ -1,441 +1,51 @@
 {
-  "generated_at": "2026-08-28T14:26:11.432Z",
-  "choice_repairs": 14,
-  "correction_repairs": 54,
-  "unhandled_corrections": [
+  "generated_at": "2026-08-28T14:27:39.602Z",
+  "choice_repairs": 0,
+  "correction_repairs": 2,
+  "passive_choice_cleanup": 4,
+  "unhandled_corrections": [],
+  "samples": [
     {
       "id": "F1-CAN-0010",
-      "category": "can",
-      "q": "Can you play tennis ? の誤りを直しなさい。",
+      "kind": "correction",
+      "before": "Can you play tennis ? の誤りを直しなさい。",
+      "after": "Can you to play tennis? の誤りを直しなさい。",
       "a": "Can you play tennis?"
     },
     {
       "id": "F1-CAN-0012",
-      "category": "can",
-      "q": "Can they use this computer ? の誤りを直しなさい。",
+      "kind": "correction",
+      "before": "Can they use this computer ? の誤りを直しなさい。",
+      "after": "Can they to use this computer? の誤りを直しなさい。",
       "a": "Can they use this computer?"
-    }
-  ],
-  "samples": [
-    {
-      "id": "GEN-WH-0842",
-      "kind": "choice",
-      "before": "Because I was busy. に合う疑問詞を選びなさい。 (Why / What / Why)",
-      "after": "Because I was busy. に合う疑問詞を選びなさい。 (Why / What / Who)",
-      "a": "Why"
     },
     {
-      "id": "GEN-WH-0848",
-      "kind": "choice",
-      "before": "English. に合う疑問詞を選びなさい。 (What / What / Why)",
-      "after": "English. に合う疑問詞を選びなさい。 (What / Who / Whose)",
-      "a": "What"
+      "id": "M3N-01632",
+      "kind": "passive_choice_cleanup",
+      "before": "This book is ( written / write / writeing ) by many people. 正しいものを選びなさい。",
+      "after": "This book is ( written / write / writing ) by many people. 正しいものを選びなさい。",
+      "a": "Written"
     },
     {
-      "id": "M2-REV-0023",
-      "kind": "choice",
-      "before": "I ( read English books / read English books ) yesterday.",
-      "after": "I (read English books / reads English books / is reading English books) yesterday.",
-      "a": "Read English books"
+      "id": "M3N-01644",
+      "kind": "passive_choice_cleanup",
+      "before": "These pictures is ( taken / take / takeing ) by many people. 正しいものを選びなさい。",
+      "after": "These pictures are ( taken / take / taking ) by many people. 正しいものを選びなさい。",
+      "a": "Taken"
     },
     {
-      "id": "M2-REV-0071",
-      "kind": "choice",
-      "before": "You ( read English books / read English books ) yesterday.",
-      "after": "You (read English books / reads English books / is reading English books) yesterday.",
-      "a": "Read English books"
+      "id": "M3N-01656",
+      "kind": "passive_choice_cleanup",
+      "before": "The cake is ( made / make / makeing ) by many people. 正しいものを選びなさい。",
+      "after": "The cake is ( made / make / making ) by many people. 正しいものを選びなさい。",
+      "a": "Made"
     },
     {
-      "id": "M2-REV-0119",
-      "kind": "choice",
-      "before": "We ( read English books / read English books ) yesterday.",
-      "after": "We (read English books / reads English books / is reading English books) yesterday.",
-      "a": "Read English books"
-    },
-    {
-      "id": "M2-REV-0167",
-      "kind": "choice",
-      "before": "They ( read English books / read English books ) yesterday.",
-      "after": "They (read English books / reads English books / is reading English books) yesterday.",
-      "a": "Read English books"
-    },
-    {
-      "id": "M2-REV-0203",
-      "kind": "choice",
-      "before": "Mike ( read / read / reads ) books yesterday. 正しいものを選びなさい。",
-      "after": "Mike (read / reads / is reading) books yesterday. 正しいものを選びなさい。",
-      "a": "Read"
-    },
-    {
-      "id": "M2-REV-0267",
-      "kind": "choice",
-      "before": "Yuki ( read / read / reads ) books yesterday. 正しいものを選びなさい。",
-      "after": "Yuki (read / reads / is reading) books yesterday. 正しいものを選びなさい。",
-      "a": "Read"
-    },
-    {
-      "id": "M2-REV-0321",
-      "kind": "choice",
-      "before": "Ann ( read / read / reads ) books yesterday. 正しいものを選びなさい。",
-      "after": "Ann (read / reads / is reading) books yesterday. 正しいものを選びなさい。",
-      "a": "Read"
-    },
-    {
-      "id": "M2-INF2-0769",
-      "kind": "correction",
-      "before": "I want to play tennis . の誤りを直しなさい。",
-      "after": "I want play tennis. の誤りを直しなさい。",
-      "a": "I want to play tennis."
-    },
-    {
-      "id": "M2-INF2-0772",
-      "kind": "correction",
-      "before": "I want to be a teacher . の誤りを直しなさい。",
-      "after": "I want be a teacher. の誤りを直しなさい。",
-      "a": "I want to be a teacher."
-    },
-    {
-      "id": "M2-INF2-0775",
-      "kind": "correction",
-      "before": "I need to study harder . の誤りを直しなさい。",
-      "after": "I need study harder. の誤りを直しなさい。",
-      "a": "I need to study harder."
-    },
-    {
-      "id": "M2-INF2-0778",
-      "kind": "correction",
-      "before": "I like to read books . の誤りを直しなさい。",
-      "after": "I like read books. の誤りを直しなさい。",
-      "a": "I like to read books."
-    },
-    {
-      "id": "M2-INF2-0781",
-      "kind": "correction",
-      "before": "I went to the library to study . の誤りを直しなさい。",
-      "after": "I went to the library study. の誤りを直しなさい。",
-      "a": "I went to the library to study."
-    },
-    {
-      "id": "M2-INF2-0784",
-      "kind": "correction",
-      "before": "I use this box to keep letters . の誤りを直しなさい。",
-      "after": "I use this box keep letters. の誤りを直しなさい。",
-      "a": "I use this box to keep letters."
-    },
-    {
-      "id": "M2-INF2-0787",
-      "kind": "correction",
-      "before": "I hope to play tennis . の誤りを直しなさい。",
-      "after": "I hope play tennis. の誤りを直しなさい。",
-      "a": "I hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-0790",
-      "kind": "correction",
-      "before": "I try to speak English . の誤りを直しなさい。",
-      "after": "I try speak English. の誤りを直しなさい。",
-      "a": "I try to speak English."
-    },
-    {
-      "id": "M2-INF2-0793",
-      "kind": "correction",
-      "before": "I have to get up early . の誤りを直しなさい。",
-      "after": "I have get up early. の誤りを直しなさい。",
-      "a": "I have to get up early."
-    },
-    {
-      "id": "M2-INF2-0796",
-      "kind": "correction",
-      "before": "I plan to join the music club . の誤りを直しなさい。",
-      "after": "I plan join the music club. の誤りを直しなさい。",
-      "a": "I plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-0823",
-      "kind": "correction",
-      "before": "You want to play tennis . の誤りを直しなさい。",
-      "after": "You want play tennis. の誤りを直しなさい。",
-      "a": "You want to play tennis."
-    },
-    {
-      "id": "M2-INF2-0826",
-      "kind": "correction",
-      "before": "You want to be a teacher . の誤りを直しなさい。",
-      "after": "You want be a teacher. の誤りを直しなさい。",
-      "a": "You want to be a teacher."
-    },
-    {
-      "id": "M2-INF2-0829",
-      "kind": "correction",
-      "before": "You need to study harder . の誤りを直しなさい。",
-      "after": "You need study harder. の誤りを直しなさい。",
-      "a": "You need to study harder."
-    },
-    {
-      "id": "M2-INF2-0832",
-      "kind": "correction",
-      "before": "You like to read books . の誤りを直しなさい。",
-      "after": "You like read books. の誤りを直しなさい。",
-      "a": "You like to read books."
-    },
-    {
-      "id": "M2-INF2-0835",
-      "kind": "correction",
-      "before": "You went to the library to study . の誤りを直しなさい。",
-      "after": "You went to the library study. の誤りを直しなさい。",
-      "a": "You went to the library to study."
-    },
-    {
-      "id": "M2-INF2-0838",
-      "kind": "correction",
-      "before": "You use this box to keep letters . の誤りを直しなさい。",
-      "after": "You use this box keep letters. の誤りを直しなさい。",
-      "a": "You use this box to keep letters."
-    },
-    {
-      "id": "M2-INF2-0841",
-      "kind": "correction",
-      "before": "You hope to play tennis . の誤りを直しなさい。",
-      "after": "You hope play tennis. の誤りを直しなさい。",
-      "a": "You hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-0844",
-      "kind": "correction",
-      "before": "You try to speak English . の誤りを直しなさい。",
-      "after": "You try speak English. の誤りを直しなさい。",
-      "a": "You try to speak English."
-    },
-    {
-      "id": "M2-INF2-0847",
-      "kind": "correction",
-      "before": "You have to get up early . の誤りを直しなさい。",
-      "after": "You have get up early. の誤りを直しなさい。",
-      "a": "You have to get up early."
-    },
-    {
-      "id": "M2-INF2-0850",
-      "kind": "correction",
-      "before": "You plan to join the music club . の誤りを直しなさい。",
-      "after": "You plan join the music club. の誤りを直しなさい。",
-      "a": "You plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-0877",
-      "kind": "correction",
-      "before": "We want to play tennis . の誤りを直しなさい。",
-      "after": "We want play tennis. の誤りを直しなさい。",
-      "a": "We want to play tennis."
-    },
-    {
-      "id": "M2-INF2-0880",
-      "kind": "correction",
-      "before": "We want to be a teacher . の誤りを直しなさい。",
-      "after": "We want be a teacher. の誤りを直しなさい。",
-      "a": "We want to be a teacher."
-    },
-    {
-      "id": "M2-INF2-0883",
-      "kind": "correction",
-      "before": "We need to study harder . の誤りを直しなさい。",
-      "after": "We need study harder. の誤りを直しなさい。",
-      "a": "We need to study harder."
-    },
-    {
-      "id": "M2-INF2-0886",
-      "kind": "correction",
-      "before": "We like to read books . の誤りを直しなさい。",
-      "after": "We like read books. の誤りを直しなさい。",
-      "a": "We like to read books."
-    },
-    {
-      "id": "M2-INF2-0889",
-      "kind": "correction",
-      "before": "We went to the library to study . の誤りを直しなさい。",
-      "after": "We went to the library study. の誤りを直しなさい。",
-      "a": "We went to the library to study."
-    },
-    {
-      "id": "M2-INF2-0892",
-      "kind": "correction",
-      "before": "We use this box to keep letters . の誤りを直しなさい。",
-      "after": "We use this box keep letters. の誤りを直しなさい。",
-      "a": "We use this box to keep letters."
-    },
-    {
-      "id": "M2-INF2-0895",
-      "kind": "correction",
-      "before": "We hope to play tennis . の誤りを直しなさい。",
-      "after": "We hope play tennis. の誤りを直しなさい。",
-      "a": "We hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-0898",
-      "kind": "correction",
-      "before": "We try to speak English . の誤りを直しなさい。",
-      "after": "We try speak English. の誤りを直しなさい。",
-      "a": "We try to speak English."
-    },
-    {
-      "id": "M2-INF2-0901",
-      "kind": "correction",
-      "before": "We have to get up early . の誤りを直しなさい。",
-      "after": "We have get up early. の誤りを直しなさい。",
-      "a": "We have to get up early."
-    },
-    {
-      "id": "M2-INF2-0904",
-      "kind": "correction",
-      "before": "We plan to join the music club . の誤りを直しなさい。",
-      "after": "We plan join the music club. の誤りを直しなさい。",
-      "a": "We plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-0931",
-      "kind": "correction",
-      "before": "They want to play tennis . の誤りを直しなさい。",
-      "after": "They want play tennis. の誤りを直しなさい。",
-      "a": "They want to play tennis."
-    },
-    {
-      "id": "M2-INF2-0934",
-      "kind": "correction",
-      "before": "They want to be a teacher . の誤りを直しなさい。",
-      "after": "They want be a teacher. の誤りを直しなさい。",
-      "a": "They want to be a teacher."
-    },
-    {
-      "id": "M2-INF2-0937",
-      "kind": "correction",
-      "before": "They need to study harder . の誤りを直しなさい。",
-      "after": "They need study harder. の誤りを直しなさい。",
-      "a": "They need to study harder."
-    },
-    {
-      "id": "M2-INF2-0940",
-      "kind": "correction",
-      "before": "They like to read books . の誤りを直しなさい。",
-      "after": "They like read books. の誤りを直しなさい。",
-      "a": "They like to read books."
-    },
-    {
-      "id": "M2-INF2-0943",
-      "kind": "correction",
-      "before": "They went to the library to study . の誤りを直しなさい。",
-      "after": "They went to the library study. の誤りを直しなさい。",
-      "a": "They went to the library to study."
-    },
-    {
-      "id": "M2-INF2-0946",
-      "kind": "correction",
-      "before": "They use this box to keep letters . の誤りを直しなさい。",
-      "after": "They use this box keep letters. の誤りを直しなさい。",
-      "a": "They use this box to keep letters."
-    },
-    {
-      "id": "M2-INF2-0949",
-      "kind": "correction",
-      "before": "They hope to play tennis . の誤りを直しなさい。",
-      "after": "They hope play tennis. の誤りを直しなさい。",
-      "a": "They hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-0952",
-      "kind": "correction",
-      "before": "They try to speak English . の誤りを直しなさい。",
-      "after": "They try speak English. の誤りを直しなさい。",
-      "a": "They try to speak English."
-    },
-    {
-      "id": "M2-INF2-0955",
-      "kind": "correction",
-      "before": "They have to get up early . の誤りを直しなさい。",
-      "after": "They have get up early. の誤りを直しなさい。",
-      "a": "They have to get up early."
-    },
-    {
-      "id": "M2-INF2-0958",
-      "kind": "correction",
-      "before": "They plan to join the music club . の誤りを直しなさい。",
-      "after": "They plan join the music club. の誤りを直しなさい。",
-      "a": "They plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-0997",
-      "kind": "correction",
-      "before": "He went to the library to study . の誤りを直しなさい。",
-      "after": "He went to the library study. の誤りを直しなさい。",
-      "a": "He went to the library to study."
-    },
-    {
-      "id": "M2-INF2-1003",
-      "kind": "correction",
-      "before": "He hope to play tennis . の誤りを直しなさい。",
-      "after": "He hope play tennis. の誤りを直しなさい。",
-      "a": "He hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-1006",
-      "kind": "correction",
-      "before": "He try to speak English . の誤りを直しなさい。",
-      "after": "He try speak English. の誤りを直しなさい。",
-      "a": "He try to speak English."
-    },
-    {
-      "id": "M2-INF2-1012",
-      "kind": "correction",
-      "before": "He plan to join the music club . の誤りを直しなさい。",
-      "after": "He plan join the music club. の誤りを直しなさい。",
-      "a": "He plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-1051",
-      "kind": "correction",
-      "before": "She went to the library to study . の誤りを直しなさい。",
-      "after": "She went to the library study. の誤りを直しなさい。",
-      "a": "She went to the library to study."
-    },
-    {
-      "id": "M2-INF2-1057",
-      "kind": "correction",
-      "before": "She hope to play tennis . の誤りを直しなさい。",
-      "after": "She hope play tennis. の誤りを直しなさい。",
-      "a": "She hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-1060",
-      "kind": "correction",
-      "before": "She try to speak English . の誤りを直しなさい。",
-      "after": "She try speak English. の誤りを直しなさい。",
-      "a": "She try to speak English."
-    },
-    {
-      "id": "M2-INF2-1066",
-      "kind": "correction",
-      "before": "She plan to join the music club . の誤りを直しなさい。",
-      "after": "She plan join the music club. の誤りを直しなさい。",
-      "a": "She plan to join the music club."
-    },
-    {
-      "id": "M2-INF2-1213",
-      "kind": "correction",
-      "before": "My friend went to the library to study . の誤りを直しなさい。",
-      "after": "My friend went to the library study. の誤りを直しなさい。",
-      "a": "My friend went to the library to study."
-    },
-    {
-      "id": "M2-INF2-1219",
-      "kind": "correction",
-      "before": "My friend hope to play tennis . の誤りを直しなさい。",
-      "after": "My friend hope play tennis. の誤りを直しなさい。",
-      "a": "My friend hope to play tennis."
-    },
-    {
-      "id": "M2-INF2-1222",
-      "kind": "correction",
-      "before": "My friend try to speak English . の誤りを直しなさい。",
-      "after": "My friend try speak English. の誤りを直しなさい。",
-      "a": "My friend try to speak English."
+      "id": "M3N-01674",
+      "kind": "passive_choice_cleanup",
+      "before": "The bike is ( used / use / useing ) by many people. 正しいものを選びなさい。",
+      "after": "The bike is ( used / use / using ) by many people. 正しいものを選びなさい。",
+      "a": "Used"
     }
   ]
 }
