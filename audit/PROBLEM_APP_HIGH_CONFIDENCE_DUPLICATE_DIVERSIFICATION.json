@@ -1,0 +1,984 @@
+{
+  "generated_at": "2026-08-28T14:18:41.604Z",
+  "groups_seen": 337,
+  "groups_eligible": 56,
+  "changed_rows": 90,
+  "groups_touched": 44,
+  "by_family": {
+    "中3/疑問詞/空所補充": 10,
+    "中3/人称代名詞/選択": 6,
+    "中3/受動態/空所補充": 12,
+    "中3/受動態/間違い直し": 12,
+    "中3/受動態/選択": 10,
+    "中3/現在完了形（完了・経験）/空所補充": 12,
+    "中3/現在完了形（完了・経験）/間違い直し": 12,
+    "中3/現在完了形（完了・経験）/英作文": 4,
+    "中3/現在完了形（完了・経験）/選択": 12
+  },
+  "samples": [
+    {
+      "id": "M3N-00396",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+        "a": "Why"
+      },
+      "after": {
+        "q": "(      ) does Tom live? 「どこに住んでいますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "Where"
+      }
+    },
+    {
+      "id": "M3N-00426",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+        "a": "Why"
+      },
+      "after": {
+        "q": "(      ) does school start? 「いつ学校が始まりますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "When"
+      }
+    },
+    {
+      "id": "M3N-00456",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+        "a": "Why"
+      },
+      "after": {
+        "q": "(      ) do you study English? 「なぜ英語を勉強しますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "Why"
+      }
+    },
+    {
+      "id": "M3N-00402",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "(      ) do you go to school? 「どのように学校へ行きますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "How"
+      }
+    },
+    {
+      "id": "M3N-00432",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "(      ) do you want? 「何がほしいですか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "What"
+      }
+    },
+    {
+      "id": "M3N-00462",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "(      ) does Emi study? 「どこでエミは勉強しますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "Where"
+      }
+    },
+    {
+      "id": "M3N-00408",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "(      ) do they play soccer? 「いつ彼らはサッカーをしますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "When"
+      }
+    },
+    {
+      "id": "M3N-00438",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "(      ) does Ken read books? 「なぜケンは本を読みますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "Why"
+      }
+    },
+    {
+      "id": "M3N-00468",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "(      ) does Aya come here? 「どのようにアヤはここへ来ますか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "How"
+      }
+    },
+    {
+      "id": "M3N-00414",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+        "a": "How"
+      },
+      "after": {
+        "q": "(      ) does Mike need? 「何がマイクには必要ですか」という意味になるように、空所に入る最も適切な疑問詞を書きなさい。",
+        "a": "What"
+      }
+    },
+    {
+      "id": "M3N-00519",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+        "a": "He"
+      },
+      "after": {
+        "q": "( He / Him / His ) teaches us English. 文の主語として正しいものを選びなさい。",
+        "a": "He"
+      }
+    },
+    {
+      "id": "M3N-00555",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+        "a": "He"
+      },
+      "after": {
+        "q": "( Her / Her / She ) plays tennis well. 文の主語として正しいものを選びなさい。",
+        "a": "She"
+      }
+    },
+    {
+      "id": "M3N-00591",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+        "a": "He"
+      },
+      "after": {
+        "q": "( They / Them / Their ) study English every day. 文の主語として正しいものを選びなさい。",
+        "a": "They"
+      }
+    },
+    {
+      "id": "M3N-00525",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
+        "a": "Him"
+      },
+      "after": {
+        "q": "( Us / Our / We ) use this room. 文の主語として正しいものを選びなさい。",
+        "a": "We"
+      }
+    },
+    {
+      "id": "M3N-00561",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
+        "a": "Him"
+      },
+      "after": {
+        "q": "( I / Me / My ) like this book. 文の主語として正しいものを選びなさい。",
+        "a": "I"
+      }
+    },
+    {
+      "id": "M3N-00597",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
+        "a": "Him"
+      },
+      "after": {
+        "q": "( You / Your / You ) know the answer. 文の主語として正しいものを選びなさい。",
+        "a": "You"
+      }
+    },
+    {
+      "id": "M3N-01597",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
+        "a": "Spoken"
+      },
+      "after": {
+        "q": "English is (      ) by many people. (speak) の語を正しい形にしなさい。",
+        "a": "Spoken"
+      }
+    },
+    {
+      "id": "M3N-01633",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
+        "a": "Spoken"
+      },
+      "after": {
+        "q": "This book is (      ) by many people. (write) の語を正しい形にしなさい。",
+        "a": "Written"
+      }
+    },
+    {
+      "id": "M3N-01669",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
+        "a": "Spoken"
+      },
+      "after": {
+        "q": "The room is (      ) by many people. (clean) の語を正しい形にしなさい。",
+        "a": "Cleaned"
+      }
+    },
+    {
+      "id": "M3N-01594",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This song is sing by many students. の誤りを直しなさい。",
+        "a": "This song is sung by many students."
+      },
+      "after": {
+        "q": "English is speak by many people. の誤りを直しなさい。",
+        "a": "English is spoken by many people."
+      }
+    },
+    {
+      "id": "M3N-01624",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This song is sing by many students. の誤りを直しなさい。",
+        "a": "This song is sung by many students."
+      },
+      "after": {
+        "q": "This book is write by many people. の誤りを直しなさい。",
+        "a": "This book is written by many people."
+      }
+    },
+    {
+      "id": "M3N-01654",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This song is sing by many students. の誤りを直しなさい。",
+        "a": "This song is sung by many students."
+      },
+      "after": {
+        "q": "The room is clean by many people. の誤りを直しなさい。",
+        "a": "The room is cleaned by many people."
+      }
+    },
+    {
+      "id": "M3N-01626",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was written"
+      },
+      "after": {
+        "q": "English is ( spoken / speak / speaking ) by many people. 正しいものを選びなさい。",
+        "a": "Spoken"
+      }
+    },
+    {
+      "id": "M3N-01603",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
+        "a": "Read"
+      },
+      "after": {
+        "q": "These pictures is (      ) by many people. (take) の語を正しい形にしなさい。",
+        "a": "Taken"
+      }
+    },
+    {
+      "id": "M3N-01639",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
+        "a": "Read"
+      },
+      "after": {
+        "q": "The window is (      ) by many people. (open) の語を正しい形にしなさい。",
+        "a": "Opened"
+      }
+    },
+    {
+      "id": "M3N-01675",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
+        "a": "Read"
+      },
+      "after": {
+        "q": "The cake is (      ) by many people. (make) の語を正しい形にしなさい。",
+        "a": "Made"
+      }
+    },
+    {
+      "id": "M3N-01600",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This letter is write by many students. の誤りを直しなさい。",
+        "a": "This letter is written by many students."
+      },
+      "after": {
+        "q": "These pictures is take by many people. の誤りを直しなさい。",
+        "a": "These pictures is taken by many people."
+      }
+    },
+    {
+      "id": "M3N-01630",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This letter is write by many students. の誤りを直しなさい。",
+        "a": "This letter is written by many students."
+      },
+      "after": {
+        "q": "The window is open by many people. の誤りを直しなさい。",
+        "a": "The window is opened by many people."
+      }
+    },
+    {
+      "id": "M3N-01660",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This letter is write by many students. の誤りを直しなさい。",
+        "a": "This letter is written by many students."
+      },
+      "after": {
+        "q": "The cake is make by many people. の誤りを直しなさい。",
+        "a": "The cake is made by many people."
+      }
+    },
+    {
+      "id": "M3N-01632",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "This book is ( written / write / writeing ) by many people. 正しいものを選びなさい。",
+        "a": "Written"
+      }
+    },
+    {
+      "id": "M3N-01609",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "The room is (      ) by many students. (clean) の（ ）内を正しくしなさい。",
+        "a": "Cleaned"
+      },
+      "after": {
+        "q": "The letter is (      ) by many people. (send) の語を正しい形にしなさい。",
+        "a": "Sent"
+      }
+    },
+    {
+      "id": "M3N-01645",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "The room is (      ) by many students. (clean) の（ ）内を正しくしなさい。",
+        "a": "Cleaned"
+      },
+      "after": {
+        "q": "The song is (      ) by many people. (sing) の語を正しい形にしなさい。",
+        "a": "Sung"
+      }
+    },
+    {
+      "id": "M3N-01606",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "The room is clean by many students. の誤りを直しなさい。",
+        "a": "The room is cleaned by many students."
+      },
+      "after": {
+        "q": "The letter is send by many people. の誤りを直しなさい。",
+        "a": "The letter is sent by many people."
+      }
+    },
+    {
+      "id": "M3N-01636",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "The room is clean by many students. の誤りを直しなさい。",
+        "a": "The room is cleaned by many students."
+      },
+      "after": {
+        "q": "The song is sing by many people. の誤りを直しなさい。",
+        "a": "The song is sung by many people."
+      }
+    },
+    {
+      "id": "M3N-01666",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "The room is clean by many students. の誤りを直しなさい。",
+        "a": "The room is cleaned by many students."
+      },
+      "after": {
+        "q": "The bike is use by many people. の誤りを直しなさい。",
+        "a": "The bike is used by many people."
+      }
+    },
+    {
+      "id": "M3N-01638",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "This song ( sing / was sung / is doing ) at school. 正しいものを選びなさい。",
+        "a": "Was sung"
+      },
+      "after": {
+        "q": "The room is ( cleaned / clean / cleaning ) by many people. 正しいものを選びなさい。",
+        "a": "Cleaned"
+      }
+    },
+    {
+      "id": "M3N-01615",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This song is (      ) by many students. (sing) の（ ）内を正しくしなさい。",
+        "a": "Sung"
+      },
+      "after": {
+        "q": "The bike is (      ) by many people. (use) の語を正しい形にしなさい。",
+        "a": "Used"
+      }
+    },
+    {
+      "id": "M3N-01651",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This song is (      ) by many students. (sing) の（ ）内を正しくしなさい。",
+        "a": "Sung"
+      },
+      "after": {
+        "q": "The door is (      ) by many people. (close) の語を正しい形にしなさい。",
+        "a": "Closed"
+      }
+    },
+    {
+      "id": "M3N-01612",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This book is read by many students. の誤りを直しなさい。",
+        "a": "This book is read by many students."
+      },
+      "after": {
+        "q": "The door is close by many people. の誤りを直しなさい。",
+        "a": "The door is closed by many people."
+      }
+    },
+    {
+      "id": "M3N-01642",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This book is read by many students. の誤りを直しなさい。",
+        "a": "This book is read by many students."
+      },
+      "after": {
+        "q": "The game is play by many people. の誤りを直しなさい。",
+        "a": "The game is played by many people."
+      }
+    },
+    {
+      "id": "M3N-01672",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This book is read by many students. の誤りを直しなさい。",
+        "a": "This book is read by many students."
+      },
+      "after": {
+        "q": "The homework is finish by many people. の誤りを直しなさい。",
+        "a": "The homework is finished by many people."
+      }
+    },
+    {
+      "id": "M3N-01644",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "These pictures is ( taken / take / takeing ) by many people. 正しいものを選びなさい。",
+        "a": "Taken"
+      }
+    },
+    {
+      "id": "M3N-01621",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "The letter is (      ) by many students. (write) の（ ）内を正しくしなさい。",
+        "a": "Written"
+      },
+      "after": {
+        "q": "The game is (      ) by many people. (play) の語を正しい形にしなさい。",
+        "a": "Played"
+      }
+    },
+    {
+      "id": "M3N-01657",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "The letter is (      ) by many students. (write) の（ ）内を正しくしなさい。",
+        "a": "Written"
+      },
+      "after": {
+        "q": "The homework is (      ) by many people. (finish) の語を正しい形にしなさい。",
+        "a": "Finished"
+      }
+    },
+    {
+      "id": "M3N-01650",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are doing ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "The window is ( opened / open / opening ) by many people. 正しいものを選びなさい。",
+        "a": "Opened"
+      }
+    },
+    {
+      "id": "M3N-01656",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "This computer ( use / is used / is doing ) every day. 正しいものを選びなさい。",
+        "a": "Is used"
+      },
+      "after": {
+        "q": "The cake is ( made / make / makeing ) by many people. 正しいものを選びなさい。",
+        "a": "Made"
+      }
+    },
+    {
+      "id": "M3N-01662",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
+        "a": "Are opened"
+      },
+      "after": {
+        "q": "The letter is ( sent / send / sending ) by many people. 正しいものを選びなさい。",
+        "a": "Sent"
+      }
+    },
+    {
+      "id": "M3N-01668",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
+        "a": "Was closed"
+      },
+      "after": {
+        "q": "The song is ( sung / sing / singing ) by many people. 正しいものを選びなさい。",
+        "a": "Sung"
+      }
+    },
+    {
+      "id": "M3N-01674",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
+        "a": "Is spoken"
+      },
+      "after": {
+        "q": "The bike is ( used / use / useing ) by many people. 正しいものを選びなさい。",
+        "a": "Used"
+      }
+    },
+    {
+      "id": "M3N-01680",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was made"
+      },
+      "after": {
+        "q": "The door is ( closed / close / closeing ) by many people. 正しいものを選びなさい。",
+        "a": "Closed"
+      }
+    },
+    {
+      "id": "M3N-01717",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+        "a": "Finished"
+      },
+      "after": {
+        "q": "I have just (      ) my homework. (finish) の語を正しい形にしなさい。",
+        "a": "Finished"
+      }
+    },
+    {
+      "id": "M3N-01753",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+        "a": "Finished"
+      },
+      "after": {
+        "q": "I have just (      ) the letter. (write) の語を正しい形にしなさい。",
+        "a": "Written"
+      }
+    },
+    {
+      "id": "M3N-01789",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+        "a": "Finished"
+      },
+      "after": {
+        "q": "I have just (      ) that movie. (see) の語を正しい形にしなさい。",
+        "a": "Seen"
+      }
+    },
+    {
+      "id": "M3N-01784",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "Have you ever (      ) to the library? (be) の（ ）内を正しくしなさい。",
+        "a": "Been"
+      },
+      "after": {
+        "q": "I have just (      ) lunch. (eat) の語を正しい形にしなさい。",
+        "a": "Eaten"
+      }
+    },
+    {
+      "id": "M3N-01714",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have went there before. の誤りを直しなさい。",
+        "a": "I have gone there before."
+      },
+      "after": {
+        "q": "I have finish my homework before. の誤りを直しなさい。",
+        "a": "I have finished my homework before."
+      }
+    },
+    {
+      "id": "M3N-01744",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have went there before. の誤りを直しなさい。",
+        "a": "I have gone there before."
+      },
+      "after": {
+        "q": "I have write the letter before. の誤りを直しなさい。",
+        "a": "I have written the letter before."
+      }
+    },
+    {
+      "id": "M3N-01774",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have went there before. の誤りを直しなさい。",
+        "a": "I have gone there before."
+      },
+      "after": {
+        "q": "I have see that movie before. の誤りを直しなさい。",
+        "a": "I have seen that movie before."
+      }
+    },
+    {
+      "id": "M3N-01787",
+      "family": "中3/現在完了形（完了・経験）/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は一度も図書館へ行ったことがありません。』",
+        "a": "I have never been to the library."
+      },
+      "after": {
+        "q": "「私は宿題を終えました。」を現在完了形を使って英語にしなさい。",
+        "a": "I have finished my homework."
+      }
+    },
+    {
+      "id": "M3N-01716",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
+        "a": "Have lost"
+      },
+      "after": {
+        "q": "I ( have finished / finished / am finished ) my homework. 正しいものを選びなさい。",
+        "a": "Have finished"
+      }
+    },
+    {
+      "id": "M3N-01746",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
+        "a": "Have lost"
+      },
+      "after": {
+        "q": "I ( have written / written / am written ) the letter. 正しいものを選びなさい。",
+        "a": "Have written"
+      }
+    },
+    {
+      "id": "M3N-01776",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
+        "a": "Have lost"
+      },
+      "after": {
+        "q": "I ( have seen / seen / am seen ) that movie. 正しいものを選びなさい。",
+        "a": "Have seen"
+      }
+    },
+    {
+      "id": "M3N-01723",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
+        "a": "Written"
+      },
+      "after": {
+        "q": "I have just (      ) my key. (lose) の語を正しい形にしなさい。",
+        "a": "Lost"
+      }
+    },
+    {
+      "id": "M3N-01759",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
+        "a": "Written"
+      },
+      "after": {
+        "q": "I have just (      ) the work. (do) の語を正しい形にしなさい。",
+        "a": "Done"
+      }
+    },
+    {
+      "id": "M3N-01795",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
+        "a": "Written"
+      },
+      "after": {
+        "q": "I have just (      ) this book. (read) の語を正しい形にしなさい。",
+        "a": "Read"
+      }
+    },
+    {
+      "id": "M3N-01790",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "Have you ever (      ) to the park? (be) の（ ）内を正しくしなさい。",
+        "a": "Been"
+      },
+      "after": {
+        "q": "I have just (      ) Kyoto. (visit) の語を正しい形にしなさい。",
+        "a": "Visited"
+      }
+    },
+    {
+      "id": "M3N-01720",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have saw that movie before. の誤りを直しなさい。",
+        "a": "I have seen that movie before."
+      },
+      "after": {
+        "q": "I have eat lunch before. の誤りを直しなさい。",
+        "a": "I have eaten lunch before."
+      }
+    },
+    {
+      "id": "M3N-01750",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have saw that movie before. の誤りを直しなさい。",
+        "a": "I have seen that movie before."
+      },
+      "after": {
+        "q": "I have lose my key before. の誤りを直しなさい。",
+        "a": "I have lost my key before."
+      }
+    },
+    {
+      "id": "M3N-01780",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have saw that movie before. の誤りを直しなさい。",
+        "a": "I have seen that movie before."
+      },
+      "after": {
+        "q": "I have do the work before. の誤りを直しなさい。",
+        "a": "I have done the work before."
+      }
+    },
+    {
+      "id": "M3N-01793",
+      "family": "中3/現在完了形（完了・経験）/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は一度も公園へ行ったことがありません。』",
+        "a": "I have never been to the park."
+      },
+      "after": {
+        "q": "「私は手紙を書き終えました。」を現在完了形を使って英語にしなさい。",
+        "a": "I have written the letter."
+      }
+    },
+    {
+      "id": "M3N-01722",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
+        "a": "Have finished"
+      },
+      "after": {
+        "q": "I ( have eaten / eaten / am eaten ) lunch. 正しいものを選びなさい。",
+        "a": "Have eaten"
+      }
+    },
+    {
+      "id": "M3N-01752",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
+        "a": "Have finished"
+      },
+      "after": {
+        "q": "I ( have lost / lost / am lost ) my key. 正しいものを選びなさい。",
+        "a": "Have lost"
+      }
+    },
+    {
+      "id": "M3N-01782",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
+        "a": "Have finished"
+      },
+      "after": {
+        "q": "I ( have done / done / am done ) the work. 正しいものを選びなさい。",
+        "a": "Have done"
+      }
+    },
+    {
+      "id": "M3N-01729",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) this movie. (see) の（ ）内を正しくしなさい。",
+        "a": "Seen"
+      },
+      "after": {
+        "q": "I have just (      ) Mr. Brown. (meet) の語を正しい形にしなさい。",
+        "a": "Met"
+      }
+    },
+    {
+      "id": "M3N-01765",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) this movie. (see) の（ ）内を正しくしなさい。",
+        "a": "Seen"
+      },
+      "after": {
+        "q": "I have just (      ) the picture. (take) の語を正しい形にしなさい。",
+        "a": "Taken"
+      }
+    },
+    {
+      "id": "M3N-01778",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "Have you ever (      ) to the station? (be) の（ ）内を正しくしなさい。",
+        "a": "Been"
+      },
+      "after": {
+        "q": "I have just (      ) lunch. (make) の語を正しい形にしなさい。",
+        "a": "Made"
+      }
+    },
+    {
+      "id": "M3N-01726",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have wrote the letter before. の誤りを直しなさい。",
+        "a": "I have written the letter before."
+      },
+      "after": {
+        "q": "I have read this book before. の誤りを直しなさい。",
+        "a": "I have read this book before."
+      }
+    },
+    {
+      "id": "M3N-01756",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have wrote the letter before. の誤りを直しなさい。",
+        "a": "I have written the letter before."
+      },
+      "after": {
+        "q": "I have visit Kyoto before. の誤りを直しなさい。",
+        "a": "I have visited Kyoto before."
+      }
+    },
+    {
+      "id": "M3N-01786",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have wrote the letter before. の誤りを直しなさい。",
+        "a": "I have written the letter before."
+      },
+      "after": {
+        "q": "I have meet Mr. Brown before. の誤りを直しなさい。",
+        "a": "I have met Mr. Brown before."
+      }
+    },
+    {
+      "id": "M3N-01781",
+      "family": "中3/現在完了形（完了・経験）/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は一度も駅へ行ったことがありません。』",
+        "a": "I have never been to the station."
+      },
+      "after": {
+        "q": "「私はその映画を見たことがあります。」を現在完了形を使って英語にしなさい。",
+        "a": "I have seen that movie."
+      }
+    },
+    {
+      "id": "M3N-01728",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have seen / seen / am seen ) this movie, so I know the story. 正しいものを選びなさい。",
+        "a": "Have seen"
+      },
+      "after": {
+        "q": "I ( have read / read / am read ) this book. 正しいものを選びなさい。",
+        "a": "Have read"
+      }
+    }
+  ],
+  "duplicate_groups_after": 295,
+  "duplicate_rows_after": 722,
+  "duplicate_excess_after": 427,
+  "groups_ge5_after": 0
+}

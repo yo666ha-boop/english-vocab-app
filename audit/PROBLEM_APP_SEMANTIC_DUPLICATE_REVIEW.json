@@ -1,64 +1,24 @@
 {
-  "generated_at": "2026-08-28T13:12:24.191Z",
+  "generated_at": "2026-08-28T14:18:42.248Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 337,
-  "duplicate_excess": 517,
+  "duplicate_group_count": 295,
+  "duplicate_excess": 427,
   "classification_group_counts": {
-    "same_family_copy": 303,
+    "same_family_copy": 261,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 483,
+    "same_family_copy": 393,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 271,
-    "same_family_same_prefix_excess": 422,
+    "same_family_same_prefix_groups": 229,
+    "same_family_same_prefix_excess": 332,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
   "same_family_same_prefix": [
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/疑問詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
-      "a": "How",
-      "ids": [
-        "M3N-00384",
-        "M3N-00414",
-        "M3N-00444",
-        "M3N-00474"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/疑問詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
-      "a": "Why",
-      "ids": [
-        "M3N-00366",
-        "M3N-00396",
-        "M3N-00426",
-        "M3N-00456"
-      ]
-    },
     {
       "classification": "same_family_copy",
       "count": 4,
@@ -85,86 +45,6 @@
       "excess": 3,
       "same_prefix": true,
       "families": [
-        "中3/疑問詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
-      "a": "When",
-      "ids": [
-        "M3N-00378",
-        "M3N-00408",
-        "M3N-00438",
-        "M3N-00468"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/疑問詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
-      "a": "Where",
-      "ids": [
-        "M3N-00372",
-        "M3N-00402",
-        "M3N-00432",
-        "M3N-00462"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
-      "a": "He",
-      "ids": [
-        "M3N-00483",
-        "M3N-00519",
-        "M3N-00555",
-        "M3N-00591"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
-      "a": "Spoken",
-      "ids": [
-        "M3N-01561",
-        "M3N-01597",
-        "M3N-01633",
-        "M3N-01669"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
         "中3/現在完了形（完了・経験）/選択"
       ],
       "prefixes": [
@@ -177,86 +57,6 @@
         "M3N-01740",
         "M3N-01770",
         "M3N-01800"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
-      "a": "Have finished",
-      "ids": [
-        "M3N-01692",
-        "M3N-01722",
-        "M3N-01752",
-        "M3N-01782"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
-      "a": "Have lost",
-      "ids": [
-        "M3N-01686",
-        "M3N-01716",
-        "M3N-01746",
-        "M3N-01776"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I ( have seen / seen / am seen ) this movie, so I know the story. 正しいものを選びなさい。",
-      "a": "Have seen",
-      "ids": [
-        "M3N-01698",
-        "M3N-01728",
-        "M3N-01758",
-        "M3N-01788"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I ( have written / written / am written ) the letter, so I can send it now. 正しいものを選びなさい。",
-      "a": "Have written",
-      "ids": [
-        "M3N-01704",
-        "M3N-01734",
-        "M3N-01764",
-        "M3N-01794"
       ]
     },
     {
@@ -310,26 +110,6 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "I have ate lunch before. の誤りを直しなさい。",
-      "a": "I have eaten lunch before.",
-      "ids": [
-        "M3N-01702",
-        "M3N-01732",
-        "M3N-01762",
-        "M3N-01792"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "I have did the work before. の誤りを直しなさい。",
       "a": "I have done the work before.",
       "ids": [
@@ -337,126 +117,6 @@
         "M3N-01738",
         "M3N-01768",
         "M3N-01798"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
-      "a": "Finished",
-      "ids": [
-        "M3N-01681",
-        "M3N-01717",
-        "M3N-01753",
-        "M3N-01789"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
-      "a": "Written",
-      "ids": [
-        "M3N-01687",
-        "M3N-01723",
-        "M3N-01759",
-        "M3N-01795"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have saw that movie before. の誤りを直しなさい。",
-      "a": "I have seen that movie before.",
-      "ids": [
-        "M3N-01690",
-        "M3N-01720",
-        "M3N-01750",
-        "M3N-01780"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have went there before. の誤りを直しなさい。",
-      "a": "I have gone there before.",
-      "ids": [
-        "M3N-01684",
-        "M3N-01714",
-        "M3N-01744",
-        "M3N-01774"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have wrote the letter before. の誤りを直しなさい。",
-      "a": "I have written the letter before.",
-      "ids": [
-        "M3N-01696",
-        "M3N-01726",
-        "M3N-01756",
-        "M3N-01786"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
-      "a": "Him",
-      "ids": [
-        "M3N-00489",
-        "M3N-00525",
-        "M3N-00561",
-        "M3N-00597"
       ]
     },
     {
@@ -585,26 +245,6 @@
       "excess": 3,
       "same_prefix": true,
       "families": [
-        "中3/受動態/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The room is clean by many students. の誤りを直しなさい。",
-      "a": "The room is cleaned by many students.",
-      "ids": [
-        "M3N-01576",
-        "M3N-01606",
-        "M3N-01636",
-        "M3N-01666"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
         "中3/関係代名詞/間違い直し"
       ],
       "prefixes": [
@@ -685,46 +325,6 @@
       "excess": 3,
       "same_prefix": true,
       "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
-      "a": "Read",
-      "ids": [
-        "M3N-01567",
-        "M3N-01603",
-        "M3N-01639",
-        "M3N-01675"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This book is read by many students. の誤りを直しなさい。",
-      "a": "This book is read by many students.",
-      "ids": [
-        "M3N-01582",
-        "M3N-01612",
-        "M3N-01642",
-        "M3N-01672"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
         "中3/受動態/間違い直し"
       ],
       "prefixes": [
@@ -737,46 +337,6 @@
         "M3N-01618",
         "M3N-01648",
         "M3N-01678"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This letter is write by many students. の誤りを直しなさい。",
-      "a": "This letter is written by many students.",
-      "ids": [
-        "M3N-01570",
-        "M3N-01600",
-        "M3N-01630",
-        "M3N-01660"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This song is sing by many students. の誤りを直しなさい。",
-      "a": "This song is sung by many students.",
-      "ids": [
-        "M3N-01564",
-        "M3N-01594",
-        "M3N-01624",
-        "M3N-01654"
       ]
     },
     {
@@ -1105,6 +665,25 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+      "a": "How",
+      "ids": [
+        "M3N-00384",
+        "M3N-00444",
+        "M3N-00474"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
         "中3/人称代名詞/選択"
       ],
       "prefixes": [
@@ -1319,25 +898,6 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
-      "a": "Eaten",
-      "ids": [
-        "M3N-01699",
-        "M3N-01735",
-        "M3N-01771"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
       "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
       "a": "Done",
       "ids": [
@@ -1363,25 +923,6 @@
         "M3N-01711",
         "M3N-01747",
         "M3N-01783"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have just (      ) this movie. (see) の（ ）内を正しくしなさい。",
-      "a": "Seen",
-      "ids": [
-        "M3N-01693",
-        "M3N-01729",
-        "M3N-01765"
       ]
     },
     {
@@ -1523,44 +1064,6 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The letter is (      ) by many students. (write) の（ ）内を正しくしなさい。",
-      "a": "Written",
-      "ids": [
-        "M3N-01585",
-        "M3N-01621",
-        "M3N-01657"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The room is (      ) by many students. (clean) の（ ）内を正しくしなさい。",
-      "a": "Cleaned",
-      "ids": [
-        "M3N-01573",
-        "M3N-01609",
-        "M3N-01645"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
         "中3/文型/見分け"
       ],
       "prefixes": [
@@ -1686,25 +1189,6 @@
         "M3N-00495",
         "M3N-00531",
         "M3N-00567"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This song is (      ) by many students. (sing) の（ ）内を正しくしなさい。",
-      "a": "Sung",
-      "ids": [
-        "M3N-01579",
-        "M3N-01615",
-        "M3N-01651"
       ]
     },
     {
@@ -2372,60 +1856,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
-      "a": "Is spoken",
-      "ids": [
-        "M3N-01614",
-        "M3N-01674"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Have you ever (      ) to the library? (be) の（ ）内を正しくしなさい。",
-      "a": "Been",
-      "ids": [
-        "M3N-01682",
-        "M3N-01784"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Have you ever (      ) to the park? (be) の（ ）内を正しくしなさい。",
-      "a": "Been",
-      "ids": [
-        "M3N-01688",
-        "M3N-01790"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/現在完了形（完了・経験）/空所補充"
       ],
       "prefixes": [
@@ -2436,24 +1866,6 @@
       "ids": [
         "M3N-01706",
         "M3N-01796"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Have you ever (      ) to the station? (be) の（ ）内を正しくしなさい。",
-      "a": "Been",
-      "ids": [
-        "M3N-01694",
-        "M3N-01778"
       ]
     },
     {
@@ -2868,6 +2280,24 @@
       "ids": [
         "M3C-00020",
         "M3C-00478"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
+      "a": "Eaten",
+      "ids": [
+        "M3N-01699",
+        "M3N-01771"
       ]
     },
     {
@@ -3524,42 +2954,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
-      "a": "Was made",
-      "ids": [
-        "M3N-01620",
-        "M3N-01680"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
-      "a": "Was closed",
-      "ids": [
-        "M3N-01608",
-        "M3N-01668"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/関係代名詞/選択"
       ],
       "prefixes": [
@@ -3578,24 +2972,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
-      "a": "Was written",
-      "ids": [
-        "M3N-01566",
-        "M3N-01626"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/関係代名詞/選択"
       ],
       "prefixes": [
@@ -3606,42 +2982,6 @@
       "ids": [
         "M3N-02178",
         "M3N-02250"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
-      "a": "Were taken",
-      "ids": [
-        "M3N-01584",
-        "M3N-01644"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
-      "a": "Was cleaned",
-      "ids": [
-        "M3N-01572",
-        "M3N-01632"
       ]
     },
     {
@@ -3696,42 +3036,6 @@
       "ids": [
         "M3N-02196",
         "M3N-02268"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
-      "a": "Are opened",
-      "ids": [
-        "M3N-01602",
-        "M3N-01662"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "These books ( read / are read / are doing ) every year. 正しいものを選びなさい。",
-      "a": "Are read",
-      "ids": [
-        "M3N-01590",
-        "M3N-01650"
       ]
     },
     {
@@ -3876,42 +3180,6 @@
       "ids": [
         "M3N-01481",
         "M3N-01553"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This computer ( use / is used / is doing ) every day. 正しいものを選びなさい。",
-      "a": "Is used",
-      "ids": [
-        "M3N-01596",
-        "M3N-01656"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This song ( sing / was sung / is doing ) at school. 正しいものを選びなさい。",
-      "a": "Was sung",
-      "ids": [
-        "M3N-01578",
-        "M3N-01638"
       ]
     },
     {
@@ -4614,78 +3882,6 @@
       "ids": [
         "M2-MOD-0623",
         "M2-MOD-0624"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は一度も公園へ行ったことがありません。』",
-      "a": "I have never been to the park.",
-      "ids": [
-        "M3N-01691",
-        "M3N-01793"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は一度も図書館へ行ったことがありません。』",
-      "a": "I have never been to the library.",
-      "ids": [
-        "M3N-01685",
-        "M3N-01787"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は一度も部屋へ行ったことがありません。』",
-      "a": "I have never been to the room.",
-      "ids": [
-        "M3N-01709",
-        "M3N-01799"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は一度も駅へ行ったことがありません。』",
-      "a": "I have never been to the station.",
-      "ids": [
-        "M3N-01697",
-        "M3N-01781"
       ]
     },
     {
