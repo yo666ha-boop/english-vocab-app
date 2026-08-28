@@ -19,3 +19,4 @@ for(let i=0;i<lines.length;i++){try{JSON.parse(lines[i]);}catch(e){parseErrors.p
 const ids=new Set(rows.map(x=>x.id));const sha256=crypto.createHash('sha256').update(text).digest('hex');
 const manifest={generated_at:new Date().toISOString(),source:HTML,output:OUT,line_count:lines.length,parse_error_count:parseErrors.length,unique_id_count:ids.size,required_field_missing_count:missing.length,sha256,bytes:Buffer.byteLength(text),result:(lines.length===10511&&parseErrors.length===0&&ids.size===10511&&missing.length===0)?'PASS':'FAIL',missing_samples:missing.slice(0,50),parse_error_samples:parseErrors.slice(0,20)};
 fs.writeFileSync(MAN,JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify(manifest,null,2));if(manifest.result!=='PASS')process.exit(2);
+// 2026-08-29 final export trigger after v10 content-quality completion candidate.
