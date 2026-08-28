@@ -3,7 +3,7 @@ name: Problem app release browser gates
 on:
   push:
     branches:
-      - fix-vocab-grammar-range-20260825
+      - fix-problem-content-quality-20260828
     paths:
       - .github/workflows/problem-app-release-browser-gates.yml
       - audit/PROBLEM_APP_RELEASE_BROWSER_TRIGGER.md
