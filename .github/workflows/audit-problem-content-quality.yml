@@ -8,6 +8,9 @@ on:
     paths:
       - 'problem-app/index.html'
       - 'tools/audit_problem_content_quality.mjs'
+      - 'tools/repair_content_semantic_residuals.mjs'
+      - 'tools/diversify_problem_ge5_duplicates.mjs'
+      - 'tools/diversify_problem_medium_duplicates.mjs'
       - '.github/workflows/audit-problem-content-quality.yml'
 
 permissions:
