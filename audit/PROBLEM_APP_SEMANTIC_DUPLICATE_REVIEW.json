@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-28T15:31:40.977Z",
+  "generated_at": "2026-08-28T16:13:14.597Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 140,
-  "duplicate_excess": 169,
+  "duplicate_group_count": 120,
+  "duplicate_excess": 149,
   "classification_group_counts": {
-    "same_family_copy": 106,
+    "same_family_copy": 86,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 135,
+    "same_family_copy": 115,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 54,
-    "same_family_same_prefix_excess": 54,
+    "same_family_same_prefix_groups": 34,
+    "same_family_same_prefix_excess": 34,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
@@ -35,60 +35,6 @@
       "ids": [
         "M3N-00526",
         "M3N-00580"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02202",
-        "M3N-02274"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
-      "a": "which",
-      "ids": [
-        "M3N-02196",
-        "M3N-02268"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/関係代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
-      "a": "The woman who teaches us is kind.",
-      "ids": [
-        "M3N-02188",
-        "M3N-02278"
       ]
     },
     {
@@ -241,114 +187,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/助動詞/変形"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "You must go to the library now. を疑問文にしなさい。",
-      "a": "Must you go to the library now?",
-      "ids": [
-        "M3N-00963",
-        "M3N-01065"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/助動詞/変形"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "You must go to the park now. を疑問文にしなさい。",
-      "a": "Must you go to the park now?",
-      "ids": [
-        "M3N-00969",
-        "M3N-01071"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/助動詞/変形"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "You must go to the room now. を疑問文にしなさい。",
-      "a": "Must you go to the room now?",
-      "ids": [
-        "M3N-00987",
-        "M3N-01077"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/助動詞/変形"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "You must go to the station now. を疑問文にしなさい。",
-      "a": "Must you go to the station now?",
-      "ids": [
-        "M3N-00975",
-        "M3N-01059"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
-      "a": "You have to get up early.",
-      "ids": [
-        "M2-MOD-0629",
-        "M2-MOD-0630"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』",
-      "a": "You must not be late.",
-      "ids": [
-        "M2-MOD-0631",
-        "M2-MOD-0632"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中2/比較/英作文"
       ],
       "prefixes": [
@@ -359,42 +197,6 @@
       "ids": [
         "M2Y-COMP-0407",
         "M2Y-COMP-0446"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
-      "a": "This bag is larger than that one.",
-      "ids": [
-        "M2Y-COMP-0395",
-        "M2Y-COMP-0434"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
-      "a": "This question is easier than that one.",
-      "ids": [
-        "M2Y-COMP-0401",
-        "M2Y-COMP-0440"
       ]
     },
     {
@@ -431,24 +233,6 @@
       "ids": [
         "M2Y-COMP-0425",
         "M2Y-COMP-0464"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
-      "a": "This book is smaller than that one.",
-      "ids": [
-        "M2Y-COMP-0398",
-        "M2Y-COMP-0437"
       ]
     },
     {
@@ -529,24 +313,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
-      "a": "Tom is taller than Ken.",
-      "ids": [
-        "M2Y-COMP-0404",
-        "M2Y-COMP-0443"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/命令文，there is ～ の文/英作文"
       ],
       "prefixes": [
@@ -583,78 +349,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
-      "a": "They have to get up early.",
-      "ids": [
-        "M2-MOD-0645",
-        "M2-MOD-0646"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
-      "a": "They must not be late.",
-      "ids": [
-        "M2-MOD-0647",
-        "M2-MOD-0648"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
-      "a": "We have to get up early.",
-      "ids": [
-        "M2-MOD-0637",
-        "M2-MOD-0638"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
-      "a": "We must not be late.",
-      "ids": [
-        "M2-MOD-0639",
-        "M2-MOD-0640"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中2/比較/英作文"
       ],
       "prefixes": [
@@ -665,60 +359,6 @@
       "ids": [
         "M2Y-COMP-0413",
         "M2Y-COMP-0452"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
-      "a": "I must finish my homework.",
-      "ids": [
-        "M2-MOD-0619",
-        "M2-MOD-0620"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
-      "a": "I have to get up early.",
-      "ids": [
-        "M2-MOD-0621",
-        "M2-MOD-0622"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/助動詞/英作文"
-      ],
-      "prefixes": [
-        "M2-MOD"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
-      "a": "I must not be late.",
-      "ids": [
-        "M2-MOD-0623",
-        "M2-MOD-0624"
       ]
     },
     {

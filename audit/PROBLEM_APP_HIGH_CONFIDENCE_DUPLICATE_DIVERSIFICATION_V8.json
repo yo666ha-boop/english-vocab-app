@@ -1,0 +1,258 @@
+{
+  "generated_at": "2026-08-28T16:13:14.146Z",
+  "groups_eligible": 35,
+  "groups_touched": 20,
+  "changed_rows": 20,
+  "by_family": {
+    "中2/助動詞/英作文": 9,
+    "中2/比較/英作文": 4,
+    "中3/助動詞/変形": 4,
+    "中3/関係代名詞/間違い直し": 1,
+    "中3/関係代名詞/選択": 2
+  },
+  "samples": [
+    {
+      "id": "M2-MOD-0620",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
+        "a": "I must finish my homework."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは早く起きなければならない。』",
+        "a": "You have to get up early."
+      }
+    },
+    {
+      "id": "M2-MOD-0622",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
+        "a": "I have to get up early."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは遅れてはいけない。』",
+        "a": "You must not be late."
+      }
+    },
+    {
+      "id": "M2-MOD-0624",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
+        "a": "I must not be late."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたはこの部屋を掃除しなければならない。』",
+        "a": "You have to clean this room."
+      }
+    },
+    {
+      "id": "M2-MOD-0630",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
+        "a": "You have to get up early."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたはここで走ってはいけない。』",
+        "a": "You must not run here."
+      }
+    },
+    {
+      "id": "M2-MOD-0632",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』",
+        "a": "You must not be late."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは今日宿題をしなければならない。』",
+        "a": "You have to do your homework today."
+      }
+    },
+    {
+      "id": "M2-MOD-0638",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
+        "a": "We have to get up early."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたはこの本を読まなければならない。』",
+        "a": "You have to read this book."
+      }
+    },
+    {
+      "id": "M2-MOD-0640",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
+        "a": "We must not be late."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは今出発しなければならない。』",
+        "a": "You must leave now."
+      }
+    },
+    {
+      "id": "M2-MOD-0646",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
+        "a": "They have to get up early."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは静かにしなければならない。』",
+        "a": "You must be quiet."
+      }
+    },
+    {
+      "id": "M2-MOD-0648",
+      "family": "中2/助動詞/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
+        "a": "They must not be late."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは明日学校へ行かなければならない。』",
+        "a": "You have to go to school tomorrow."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0434",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この自転車はあの自転車より速い。』",
+        "a": "This bike is faster than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0437",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
+        "a": "This book is smaller than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『英語は数学より人気がある。』",
+        "a": "English is more popular than math."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0440",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この花はあの花より美しい。』",
+        "a": "This flower is more beautiful than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0443",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+        "a": "Tom is taller than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ケンはマイクより忙しい。』",
+        "a": "Ken is busier than Mike."
+      }
+    },
+    {
+      "id": "M3N-01065",
+      "family": "中3/助動詞/変形",
+      "before": {
+        "q": "You must go to the library now. を疑問文にしなさい。",
+        "a": "Must you go to the library now?"
+      },
+      "after": {
+        "q": "You must go to the park now. を否定文にしなさい。",
+        "a": "You must not go to the park now."
+      }
+    },
+    {
+      "id": "M3N-01071",
+      "family": "中3/助動詞/変形",
+      "before": {
+        "q": "You must go to the park now. を疑問文にしなさい。",
+        "a": "Must you go to the park now?"
+      },
+      "after": {
+        "q": "You must go to school now. を否定文にしなさい。",
+        "a": "You must not go to school now."
+      }
+    },
+    {
+      "id": "M3N-01059",
+      "family": "中3/助動詞/変形",
+      "before": {
+        "q": "You must go to the station now. を疑問文にしなさい。",
+        "a": "Must you go to the station now?"
+      },
+      "after": {
+        "q": "You must go to the zoo now. を否定文にしなさい。",
+        "a": "You must not go to the zoo now."
+      }
+    },
+    {
+      "id": "M3N-01077",
+      "family": "中3/助動詞/変形",
+      "before": {
+        "q": "You must go to the room now. を疑問文にしなさい。",
+        "a": "Must you go to the room now?"
+      },
+      "after": {
+        "q": "You must go to the store now. を否定文にしなさい。",
+        "a": "You must not go to the store now."
+      }
+    },
+    {
+      "id": "M3N-02278",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+        "a": "The woman who teaches us is kind."
+      },
+      "after": {
+        "q": "The book who Kate used yesterday is mine. の誤りを、which を使って直しなさい。",
+        "a": "The book which Kate used yesterday is mine."
+      }
+    },
+    {
+      "id": "M3N-02268",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which"
+      },
+      "after": {
+        "q": "The book ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which"
+      }
+    },
+    {
+      "id": "M3N-02274",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+        "a": "which"
+      },
+      "after": {
+        "q": "The bag ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+        "a": "which"
+      }
+    }
+  ],
+  "duplicate_groups_after": 120,
+  "duplicate_excess_after": 149,
+  "groups_ge5_after": 0
+}

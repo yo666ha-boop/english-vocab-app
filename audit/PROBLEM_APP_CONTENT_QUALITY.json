@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:31:40.739Z",
+  "generated_at": "2026-08-28T16:13:14.391Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,23 +31,21 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 140,
-    "row_count": 309,
-    "duplicate_excess": 169,
-    "row_ratio": 0.029398,
-    "excess_ratio": 0.016078,
+    "group_count": 120,
+    "row_count": 269,
+    "duplicate_excess": 149,
+    "row_ratio": 0.025592,
+    "excess_ratio": 0.014176,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
       "中2/比較/間違い直し": 44,
       "中2/不定詞/間違い直し": 40,
-      "中3/関係代名詞/選択": 31,
-      "中2/比較/英作文": 22,
-      "中2/助動詞/英作文": 18,
+      "中3/関係代名詞/選択": 27,
       "中3/仮定法/間違い直し": 16,
       "中3/文型/間違い直し": 16,
+      "中2/比較/英作文": 14,
       "中1/頻度副詞/並びかえ": 12,
-      "中3/助動詞/変形": 9,
       "中1/一般動詞の過去形/変形": 8,
       "中2/一般動詞の過去形/変形": 8,
       "中3/命令文，there is ～ の文/英作文": 8,
@@ -68,7 +66,6 @@
       "中3/未来の文/変形": 2,
       "中3/進行形/変形": 2,
       "中3/関係代名詞/並びかえ": 2,
-      "中3/関係代名詞/間違い直し": 2,
       "中1/can/変形": 1,
       "中1/there is ～・look ～ の文/英作文": 1,
       "中1/一般動詞/英作文": 1,
@@ -83,23 +80,22 @@
       "中2/一般動詞/英作文": 1,
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
+      "中3/助動詞/変形": 1,
       "中3/疑問詞/答えから質問文": 1,
       "中3/進行形/間違い直し": 1
     },
     "by_family_groups": {
       "中2/不定詞/間違い直し": 20,
       "中2/比較/間違い直し": 12,
-      "中2/比較/英作文": 11,
-      "中3/関係代名詞/選択": 11,
-      "中2/助動詞/英作文": 9,
+      "中3/関係代名詞/選択": 9,
       "中1/一般動詞の過去形/変形": 8,
       "中2/一般動詞の過去形/変形": 8,
       "中3/仮定法/間違い直し": 8,
       "中3/文型/間違い直し": 8,
+      "中2/比較/英作文": 7,
       "中1/人称代名詞/空所補充": 6,
       "中1/頻度副詞/並びかえ": 6,
       "中2/人称代名詞/空所補充": 6,
-      "中3/助動詞/変形": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
       "中3/be動詞と一般動詞（過去形）/変形": 4,
@@ -126,13 +122,13 @@
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
       "中3/人称代名詞/間違い直し": 1,
+      "中3/助動詞/変形": 1,
       "中3/命令文，there is ～ の文/変形": 1,
       "中3/文型/英作文": 1,
       "中3/未来の文/変形": 1,
       "中3/疑問詞/答えから質問文": 1,
       "中3/進行形/間違い直し": 1,
-      "中3/関係代名詞/並びかえ": 1,
-      "中3/関係代名詞/間違い直し": 1
+      "中3/関係代名詞/並びかえ": 1
     },
     "top": [
       {
@@ -859,18 +855,6 @@
       },
       {
         "count": 2,
-        "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02202",
-          "M3N-02274"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
         "q": "The letter ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
         "a": "which",
         "sample_ids": [
@@ -903,30 +887,6 @@
         ],
         "grade_category_types": [
           "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
-        "a": "which",
-        "sample_ids": [
-          "M3N-02196",
-          "M3N-02268"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
-        "a": "The woman who teaches us is kind.",
-        "sample_ids": [
-          "M3N-02188",
-          "M3N-02278"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
         ]
       },
       {
@@ -1250,54 +1210,6 @@
       },
       {
         "count": 2,
-        "q": "You must go to the library now. を疑問文にしなさい。",
-        "a": "Must you go to the library now?",
-        "sample_ids": [
-          "M3N-00963",
-          "M3N-01065"
-        ],
-        "grade_category_types": [
-          "中3/助動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You must go to the park now. を疑問文にしなさい。",
-        "a": "Must you go to the park now?",
-        "sample_ids": [
-          "M3N-00969",
-          "M3N-01071"
-        ],
-        "grade_category_types": [
-          "中3/助動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You must go to the room now. を疑問文にしなさい。",
-        "a": "Must you go to the room now?",
-        "sample_ids": [
-          "M3N-00987",
-          "M3N-01077"
-        ],
-        "grade_category_types": [
-          "中3/助動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You must go to the station now. を疑問文にしなさい。",
-        "a": "Must you go to the station now?",
-        "sample_ids": [
-          "M3N-00975",
-          "M3N-01059"
-        ],
-        "grade_category_types": [
-          "中3/助動詞/変形"
-        ]
-      },
-      {
-        "count": 2,
         "q": "You need study harder. の誤りを直しなさい。",
         "a": "You need to study harder.",
         "sample_ids": [
@@ -1385,30 +1297,6 @@
       },
       {
         "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
-        "a": "You have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0629",
-          "M2-MOD-0630"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』",
-        "a": "You must not be late.",
-        "sample_ids": [
-          "M2-MOD-0631",
-          "M2-MOD-0632"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
         "q": "次の日本語に合う英文を書きなさい。『あなたは何が好きですか。』",
         "a": "What do you like?",
         "sample_ids": [
@@ -1434,30 +1322,6 @@
       },
       {
         "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
-        "a": "This bag is larger than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0395",
-          "M2Y-COMP-0434"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
-        "a": "This question is easier than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0401",
-          "M2Y-COMP-0440"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
         "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
         "a": "This river is longer than that one.",
         "sample_ids": [
@@ -1475,18 +1339,6 @@
         "sample_ids": [
           "M2Y-COMP-0425",
           "M2Y-COMP-0464"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
-        "a": "This book is smaller than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0398",
-          "M2Y-COMP-0437"
         ],
         "grade_category_types": [
           "中2/比較/英作文"
@@ -1542,18 +1394,6 @@
       },
       {
         "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
-        "a": "Tom is taller than Ken.",
-        "sample_ids": [
-          "M2Y-COMP-0404",
-          "M2Y-COMP-0443"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
         "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
         "a": "Do not run in the park.",
         "sample_ids": [
@@ -1578,54 +1418,6 @@
       },
       {
         "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
-        "a": "They have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0645",
-          "M2-MOD-0646"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
-        "a": "They must not be late.",
-        "sample_ids": [
-          "M2-MOD-0647",
-          "M2-MOD-0648"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
-        "a": "We have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0637",
-          "M2-MOD-0638"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
-        "a": "We must not be late.",
-        "sample_ids": [
-          "M2-MOD-0639",
-          "M2-MOD-0640"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
         "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
         "a": "My bike is faster than your bike.",
         "sample_ids": [
@@ -1634,42 +1426,6 @@
         ],
         "grade_category_types": [
           "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
-        "a": "I must finish my homework.",
-        "sample_ids": [
-          "M2-MOD-0619",
-          "M2-MOD-0620"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
-        "a": "I have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0621",
-          "M2-MOD-0622"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
-        "a": "I must not be late.",
-        "sample_ids": [
-          "M2-MOD-0623",
-          "M2-MOD-0624"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
         ]
       },
       {
