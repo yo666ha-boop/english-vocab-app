@@ -1,0 +1,53 @@
+name: Problem content regression core
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-problem-content-quality-20260828
+    paths:
+      - '.github/workflows/problem-content-regression-core.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Runtime parse
+        run: node tools/check_problem_app_runtime_parse.mjs
+      - name: Bank integrity
+        run: node tools/audit_problem_app_bank_integrity.mjs
+      - name: Content quality
+        run: node tools/audit_problem_content_quality.mjs
+      - name: Grammar chronology
+        run: node tools/audit_problem_grammar_chronology.mjs
+      - name: Morphology regression
+        run: node tools/audit_vocab_morphology_regression.mjs
+      - name: Zeroed-row vocabulary regression
+        run: node tools/audit_vocab_zeroed_rows.mjs
+      - name: Minimum supply regression
+        run: node tools/audit_problem_vocab_minimum_supply.mjs
+      - name: Verify English bank cardinality
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const h=fs.readFileSync('problem-app/index.html','utf8');const m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data missing');const all=JSON.parse(m[1]);const e=all.filter(x=>x&&x.subject==='英語');const ids=new Set(e.map(x=>x.id));const missing=e.filter(x=>!x.id||!x.grade||!x.category||!x.type||!x.q||!x.a);if(e.length!==10511||ids.size!==10511||missing.length)throw Error(JSON.stringify({count:e.length,unique:ids.size,missing:missing.length}));console.log(JSON.stringify({count:e.length,unique:ids.size,missing:0}));
+          NODE
+      - name: Commit fresh regression evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          if git diff --cached --quiet; then
+            echo 'No evidence changes'
+          else
+            git commit -m 'audit: refresh core problem content regressions [skip ci]'
+            git push
+          fi
