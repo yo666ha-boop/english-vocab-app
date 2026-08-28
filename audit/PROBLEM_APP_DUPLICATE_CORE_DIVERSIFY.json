@@ -1,0 +1,1461 @@
+{
+  "generated_at": "2026-08-28T11:36:59.996Z",
+  "changed_rows": 1264,
+  "groups_touched": 359,
+  "by_family": {
+    "中1/be動詞/変形": 176,
+    "中1/三単現/変形": 128,
+    "中1/過去のbe動詞/答え方": 93,
+    "中1/be動詞/答え方": 92,
+    "中1/be動詞/空所補充": 112,
+    "中1/三単現/空所補充": 64,
+    "中1/三単現/間違い直し": 64,
+    "中1/過去のbe動詞/変形": 176,
+    "中2/一般動詞/英作文": 44,
+    "中3/現在完了形（完了・経験）/変形": 117,
+    "中3/現在完了形（継続），現在完了進行形/変形": 198
+  },
+  "samples": [
+    {
+      "id": "GEN-BE-0169",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "He is ready. を否定文にしなさい。",
+        "a": "He is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0173",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "She is ready. を否定文にしなさい。",
+        "a": "She is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0189",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Tom is sad. を否定文にしなさい。",
+        "a": "Tom is not sad."
+      }
+    },
+    {
+      "id": "GEN-BE-0197",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Ken is good. を否定文にしなさい。",
+        "a": "Ken is not good."
+      }
+    },
+    {
+      "id": "GEN-BE-0245",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Emi is old. を否定文にしなさい。",
+        "a": "Emi is not old."
+      }
+    },
+    {
+      "id": "GEN-BE-0249",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Yuki is young. を否定文にしなさい。",
+        "a": "Yuki is not young."
+      }
+    },
+    {
+      "id": "GEN-BE-0253",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Mike is kind. を否定文にしなさい。",
+        "a": "Mike is not kind."
+      }
+    },
+    {
+      "id": "GEN-BE-0269",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Aya is free. を否定文にしなさい。",
+        "a": "Aya is not free."
+      }
+    },
+    {
+      "id": "GEN-BE-0277",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Bob is hungry. を否定文にしなさい。",
+        "a": "Bob is not hungry."
+      }
+    },
+    {
+      "id": "GEN-BE-0325",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Lucy is tired. を否定文にしなさい。",
+        "a": "Lucy is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0329",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "Mary is happy. を否定文にしなさい。",
+        "a": "Mary is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0333",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "John is busy. を否定文にしなさい。",
+        "a": "John is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0349",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "John is ready. を否定文にしなさい。",
+        "a": "John is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0357",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を否定文にしなさい。",
+        "a": "He is not busy."
+      },
+      "after": {
+        "q": "She is tired. を否定文にしなさい。",
+        "a": "She is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0062",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are happy. を疑問文にしなさい。",
+        "a": "Are you happy?"
+      },
+      "after": {
+        "q": "Tom is free. を疑問文にしなさい。",
+        "a": "Is Tom free?"
+      }
+    },
+    {
+      "id": "GEN-BE-0066",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are happy. を疑問文にしなさい。",
+        "a": "Are you happy?"
+      },
+      "after": {
+        "q": "Ken is hungry. を疑問文にしなさい。",
+        "a": "Is Ken hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0005",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を否定文にしなさい。",
+        "a": "I am not busy."
+      },
+      "after": {
+        "q": "Ken is sad. を否定文にしなさい。",
+        "a": "Ken is not sad."
+      }
+    },
+    {
+      "id": "GEN-BE-0013",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を否定文にしなさい。",
+        "a": "I am not busy."
+      },
+      "after": {
+        "q": "Emi is good. を否定文にしなさい。",
+        "a": "Emi is not good."
+      }
+    },
+    {
+      "id": "GEN-BE-0029",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を否定文にしなさい。",
+        "a": "I am not busy."
+      },
+      "after": {
+        "q": "Yuki is old. を否定文にしなさい。",
+        "a": "Yuki is not old."
+      }
+    },
+    {
+      "id": "GEN-BE-0037",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を否定文にしなさい。",
+        "a": "I am not busy."
+      },
+      "after": {
+        "q": "Mike is young. を否定文にしなさい。",
+        "a": "Mike is not young."
+      }
+    },
+    {
+      "id": "GEN-BE-0129",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を否定文にしなさい。",
+        "a": "They are not busy."
+      },
+      "after": {
+        "q": "Yuki is tired. を否定文にしなさい。",
+        "a": "Yuki is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0133",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を否定文にしなさい。",
+        "a": "They are not busy."
+      },
+      "after": {
+        "q": "Mike is happy. を否定文にしなさい。",
+        "a": "Mike is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0149",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を否定文にしなさい。",
+        "a": "They are not busy."
+      },
+      "after": {
+        "q": "Aya is busy. を否定文にしなさい。",
+        "a": "Aya is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0157",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を否定文にしなさい。",
+        "a": "They are not busy."
+      },
+      "after": {
+        "q": "Aya is ready. を否定文にしなさい。",
+        "a": "Aya is not ready."
+      }
+    },
+    {
+      "id": "GEN-3RD-1026",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He plays soccer. を否定文にしなさい。",
+        "a": "He does not play soccer."
+      },
+      "after": {
+        "q": "Mike walks to school. を否定文にしなさい。",
+        "a": "Mike does not walk to school."
+      }
+    },
+    {
+      "id": "GEN-3RD-1154",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "He plays soccer. を否定文にしなさい。",
+        "a": "He does not play soccer."
+      },
+      "after": {
+        "q": "Aya visits the library. を否定文にしなさい。",
+        "a": "Aya does not visit the library."
+      }
+    },
+    {
+      "id": "GEN-3RD-1049",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does she play tennis?"
+      },
+      "after": {
+        "q": "Bob plays soccer. を疑問文にしなさい。",
+        "a": "Does Bob play soccer?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1177",
+      "family": "中1/三単現/変形",
+      "before": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does she play tennis?"
+      },
+      "after": {
+        "q": "Bob uses a computer. を疑問文にしなさい。",
+        "a": "Does Bob use a computer?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1508",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Lucy kind? に Yes で答えなさい。",
+        "a": "Yes, she was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1511",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Mary free? に Yes で答えなさい。",
+        "a": "Yes, she was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1514",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was John hungry? に Yes で答えなさい。",
+        "a": "Yes, he was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1526",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was he tired? に Yes で答えなさい。",
+        "a": "Yes, he was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1532",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was she happy? に Yes で答えなさい。",
+        "a": "Yes, she was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1538",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Tom busy? に Yes で答えなさい。",
+        "a": "Yes, he was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1541",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Tom ready? に Yes で答えなさい。",
+        "a": "Yes, he was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1544",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Ken fine? に Yes で答えなさい。",
+        "a": "Yes, he was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1556",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Emi sad? に Yes で答えなさい。",
+        "a": "Yes, she was."
+      }
+    },
+    {
+      "id": "GEN-PBE-1562",
+      "family": "中1/過去のbe動詞/答え方",
+      "before": {
+        "q": "Were you busy yesterday? に Yes で答えなさい。",
+        "a": "Yes, I was."
+      },
+      "after": {
+        "q": "Was Yuki good? に Yes で答えなさい。",
+        "a": "Yes, she was."
+      }
+    },
+    {
+      "id": "GEN-BE-0021",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am happy. を否定文にしなさい。",
+        "a": "I am not happy."
+      },
+      "after": {
+        "q": "Mary is fine. を否定文にしなさい。",
+        "a": "Mary is not fine."
+      }
+    },
+    {
+      "id": "GEN-BE-0025",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am happy. を否定文にしなさい。",
+        "a": "I am not happy."
+      },
+      "after": {
+        "q": "John is sad. を否定文にしなさい。",
+        "a": "John is not sad."
+      }
+    },
+    {
+      "id": "GEN-BE-0022",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am happy. を疑問文にしなさい。",
+        "a": "Am I happy?"
+      },
+      "after": {
+        "q": "He is hungry. を疑問文にしなさい。",
+        "a": "Is he hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0026",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am happy. を疑問文にしなさい。",
+        "a": "Am I happy?"
+      },
+      "after": {
+        "q": "She is tired. を疑問文にしなさい。",
+        "a": "Is she tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0023",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you happy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is she good? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0027",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you happy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Tom old? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0043",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you happy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Ken young? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0063",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you happy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Emi kind? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0067",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you happy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Yuki free? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0024",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Ken (      ) happy.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0028",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Emi (      ) busy.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0010",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を疑問文にしなさい。",
+        "a": "Am I busy?"
+      },
+      "after": {
+        "q": "Emi is young. を疑問文にしなさい。",
+        "a": "Is Emi young?"
+      }
+    },
+    {
+      "id": "GEN-BE-0014",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を疑問文にしなさい。",
+        "a": "Am I busy?"
+      },
+      "after": {
+        "q": "Yuki is kind. を疑問文にしなさい。",
+        "a": "Is Yuki kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0030",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を疑問文にしなさい。",
+        "a": "Am I busy?"
+      },
+      "after": {
+        "q": "Mike is free. を疑問文にしなさい。",
+        "a": "Is Mike free?"
+      }
+    },
+    {
+      "id": "GEN-BE-0038",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を疑問文にしなさい。",
+        "a": "Am I busy?"
+      },
+      "after": {
+        "q": "Aya is hungry. を疑問文にしなさい。",
+        "a": "Is Aya hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0011",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Yuki ready? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0015",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Mike fine? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0031",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Aya sad? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0039",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Bob good? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0047",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Lucy old? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0051",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Mary young? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0055",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is John kind? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0071",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is he free? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0079",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you busy? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is she hungry? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0012",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Aya (      ) free.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0016",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Bob (      ) hungry.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0032",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Lucy (      ) tired.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0040",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "I (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "am"
+      },
+      "after": {
+        "q": "Mary (      ) happy.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0059",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you kind? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is Mary tired? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0075",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are you fine? に Yes で答えなさい。",
+        "a": "Yes, I am."
+      },
+      "after": {
+        "q": "Is John old? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0061",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are happy. を否定文にしなさい。",
+        "a": "You are not happy."
+      },
+      "after": {
+        "q": "She is hungry. を否定文にしなさい。",
+        "a": "She is not hungry."
+      }
+    },
+    {
+      "id": "GEN-BE-0065",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are happy. を否定文にしなさい。",
+        "a": "You are not happy."
+      },
+      "after": {
+        "q": "Tom is busy. を否定文にしなさい。",
+        "a": "Tom is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0064",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Tom (      ) kind.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0068",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Ken (      ) free.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0049",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を否定文にしなさい。",
+        "a": "You are not busy."
+      },
+      "after": {
+        "q": "Ken is fine. を否定文にしなさい。",
+        "a": "Ken is not fine."
+      }
+    },
+    {
+      "id": "GEN-BE-0053",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を否定文にしなさい。",
+        "a": "You are not busy."
+      },
+      "after": {
+        "q": "Emi is sad. を否定文にしなさい。",
+        "a": "Emi is not sad."
+      }
+    },
+    {
+      "id": "GEN-BE-0069",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を否定文にしなさい。",
+        "a": "You are not busy."
+      },
+      "after": {
+        "q": "Yuki is good. を否定文にしなさい。",
+        "a": "Yuki is not good."
+      }
+    },
+    {
+      "id": "GEN-BE-0077",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を否定文にしなさい。",
+        "a": "You are not busy."
+      },
+      "after": {
+        "q": "Mike is old. を否定文にしなさい。",
+        "a": "Mike is not old."
+      }
+    },
+    {
+      "id": "GEN-BE-0050",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を疑問文にしなさい。",
+        "a": "Are you busy?"
+      },
+      "after": {
+        "q": "Yuki is hungry. を疑問文にしなさい。",
+        "a": "Is Yuki hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0054",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を疑問文にしなさい。",
+        "a": "Are you busy?"
+      },
+      "after": {
+        "q": "Mike is tired. を疑問文にしなさい。",
+        "a": "Is Mike tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0070",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を疑問文にしなさい。",
+        "a": "Are you busy?"
+      },
+      "after": {
+        "q": "Aya is happy. を疑問文にしなさい。",
+        "a": "Is Aya happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0078",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を疑問文にしなさい。",
+        "a": "Are you busy?"
+      },
+      "after": {
+        "q": "Bob is busy. を疑問文にしなさい。",
+        "a": "Is Bob busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0052",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Mike (      ) good.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0056",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Aya (      ) old.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0072",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Bob (      ) young.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0080",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "You (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Lucy (      ) kind.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0101",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are happy. を否定文にしなさい。",
+        "a": "We are not happy."
+      },
+      "after": {
+        "q": "Lucy is young. を否定文にしなさい。",
+        "a": "Lucy is not young."
+      }
+    },
+    {
+      "id": "GEN-BE-0105",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are happy. を否定文にしなさい。",
+        "a": "We are not happy."
+      },
+      "after": {
+        "q": "Mary is kind. を否定文にしなさい。",
+        "a": "Mary is not kind."
+      }
+    },
+    {
+      "id": "GEN-BE-0102",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are happy. を疑問文にしなさい。",
+        "a": "Are we happy?"
+      },
+      "after": {
+        "q": "Mary is ready. を疑問文にしなさい。",
+        "a": "Is Mary ready?"
+      }
+    },
+    {
+      "id": "GEN-BE-0106",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are happy. を疑問文にしなさい。",
+        "a": "Are we happy?"
+      },
+      "after": {
+        "q": "John is fine. を疑問文にしなさい。",
+        "a": "Is John fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0103",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we happy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is he young? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0107",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we happy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is she free? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0104",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "She (      ) sad.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0108",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Tom (      ) good.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0089",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を否定文にしなさい。",
+        "a": "We are not busy."
+      },
+      "after": {
+        "q": "Ken is tired. を否定文にしなさい。",
+        "a": "Ken is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0093",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を否定文にしなさい。",
+        "a": "We are not busy."
+      },
+      "after": {
+        "q": "Emi is happy. を否定文にしなさい。",
+        "a": "Emi is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0109",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を否定文にしなさい。",
+        "a": "We are not busy."
+      },
+      "after": {
+        "q": "Yuki is busy. を否定文にしなさい。",
+        "a": "Yuki is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0117",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を否定文にしなさい。",
+        "a": "We are not busy."
+      },
+      "after": {
+        "q": "Yuki is ready. を否定文にしなさい。",
+        "a": "Yuki is not ready."
+      }
+    },
+    {
+      "id": "GEN-BE-0090",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を疑問文にしなさい。",
+        "a": "Are we busy?"
+      },
+      "after": {
+        "q": "Emi is old. を疑問文にしなさい。",
+        "a": "Is Emi old?"
+      }
+    },
+    {
+      "id": "GEN-BE-0094",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を疑問文にしなさい。",
+        "a": "Are we busy?"
+      },
+      "after": {
+        "q": "Yuki is old. を疑問文にしなさい。",
+        "a": "Is Yuki old?"
+      }
+    },
+    {
+      "id": "GEN-BE-0110",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を疑問文にしなさい。",
+        "a": "Are we busy?"
+      },
+      "after": {
+        "q": "Mike is kind. を疑問文にしなさい。",
+        "a": "Is Mike kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0118",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を疑問文にしなさい。",
+        "a": "Are we busy?"
+      },
+      "after": {
+        "q": "Aya is free. を疑問文にしなさい。",
+        "a": "Is Aya free?"
+      }
+    },
+    {
+      "id": "GEN-BE-0091",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we busy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is Mike busy? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0095",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we busy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is Mike ready? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0111",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we busy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is Aya fine? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0119",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are we busy? に Yes で答えなさい。",
+        "a": "Yes, we are."
+      },
+      "after": {
+        "q": "Is Bob sad? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0092",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Aya (      ) kind.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0096",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Bob (      ) free.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0112",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Lucy (      ) hungry.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0120",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "We (      ) busy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Mary (      ) tired.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0141",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are happy. を否定文にしなさい。",
+        "a": "They are not happy."
+      },
+      "after": {
+        "q": "Mary is hungry. を否定文にしなさい。",
+        "a": "Mary is not hungry."
+      }
+    },
+    {
+      "id": "GEN-BE-0145",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are happy. を否定文にしなさい。",
+        "a": "They are not happy."
+      },
+      "after": {
+        "q": "John is tired. を否定文にしなさい。",
+        "a": "John is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0142",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are happy. を疑問文にしなさい。",
+        "a": "Are they happy?"
+      },
+      "after": {
+        "q": "John is good. を疑問文にしなさい。",
+        "a": "Is John good?"
+      }
+    },
+    {
+      "id": "GEN-BE-0146",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are happy. を疑問文にしなさい。",
+        "a": "Are they happy?"
+      },
+      "after": {
+        "q": "He is old. を疑問文にしなさい。",
+        "a": "Is he old?"
+      }
+    },
+    {
+      "id": "GEN-BE-0143",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are they happy? に Yes で答えなさい。",
+        "a": "Yes, they are."
+      },
+      "after": {
+        "q": "Is she tired? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      }
+    },
+    {
+      "id": "GEN-BE-0147",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Are they happy? に Yes で答えなさい。",
+        "a": "Yes, they are."
+      },
+      "after": {
+        "q": "Is Tom busy? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      }
+    },
+    {
+      "id": "GEN-BE-0144",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "They (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Tom (      ) young.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0148",
+      "family": "中1/be動詞/空所補充",
+      "before": {
+        "q": "They (      ) happy. 「です」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "are"
+      },
+      "after": {
+        "q": "Ken (      ) kind.",
+        "a": "is"
+      }
+    },
+    {
+      "id": "GEN-BE-0130",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を疑問文にしなさい。",
+        "a": "Are they busy?"
+      },
+      "after": {
+        "q": "Ken is ready. を疑問文にしなさい。",
+        "a": "Is Ken ready?"
+      }
+    },
+    {
+      "id": "GEN-BE-0134",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を疑問文にしなさい。",
+        "a": "Are they busy?"
+      },
+      "after": {
+        "q": "Emi is fine. を疑問文にしなさい。",
+        "a": "Is Emi fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0150",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を疑問文にしなさい。",
+        "a": "Are they busy?"
+      },
+      "after": {
+        "q": "Yuki is sad. を疑問文にしなさい。",
+        "a": "Is Yuki sad?"
+      }
+    },
+    {
+      "id": "GEN-BE-0158",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を疑問文にしなさい。",
+        "a": "Are they busy?"
+      },
+      "after": {
+        "q": "Mike is good. を疑問文にしなさい。",
+        "a": "Is Mike good?"
+      }
+    }
+  ],
+  "skipped_no_candidate": 136
+}
