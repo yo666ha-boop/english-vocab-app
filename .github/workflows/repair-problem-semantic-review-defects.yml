@@ -1,0 +1,41 @@
+name: Repair problem semantic review defects
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix-problem-content-quality-20260828]
+    paths:
+      - 'tools/repair_problem_semantic_review_defects.mjs'
+      - '.github/workflows/repair-problem-semantic-review-defects.yml'
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - run: git pull --ff-only origin fix-problem-content-quality-20260828
+      - run: node --check tools/repair_problem_semantic_review_defects.mjs
+      - name: Repair bank defects
+        run: node tools/repair_problem_semantic_review_defects.mjs
+      - name: Re-audit semantic signals
+        shell: bash
+        run: |
+          set +e
+          node tools/audit_problem_semantic_review_signals.mjs
+          code=$?
+          set -e
+          echo semantic_audit_exit=$code
+      - name: Validate structure and content quality
+        run: |
+          node - <<'NODE'
+          const fs=require('fs'),h=fs.readFileSync('problem-app/index.html','utf8'),m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data');const a=JSON.parse(m[1]),e=a.filter(x=>x?.subject==='英語');if(e.length!==10511||new Set(e.map(x=>x.id)).size!==10511)throw Error('bank structure');
+          NODE
+          node tools/audit_problem_content_quality.mjs
+      - name: Commit bank and evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add problem-app/index.html audit/PROBLEM_APP_SEMANTIC_REVIEW_REPAIR.json audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json audit/PROBLEM_APP_CONTENT_QUALITY.json
+          if git diff --cached --quiet; then echo 'No changes'; else git commit -m 'fix: repair semantic review defects [skip ci]' && git push; fi
