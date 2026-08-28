@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-08-28T11:14:55.154Z",
+  "source": "problem-app/index.html",
+  "english_count": 10511,
+  "change_count": 18,
+  "by_reason": {
+    "female_subject_possessive": 7,
+    "male_subject_possessive": 7,
+    "plural_subject_be_agreement": 1,
+    "pronoun_be_agreement": 3
+  },
+  "changes": [
+    {
+      "id": "GEN-PREP-1264",
+      "field": "a",
+      "reason": "plural_subject_be_agreement",
+      "before": "The shoes is under the desk.",
+      "after": "The shoes are under the desk."
+    },
+    {
+      "id": "M2X-GER-0586",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He finishes doing my homework.",
+      "after": "He finishes doing his homework."
+    },
+    {
+      "id": "M2X-GER-0610",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She finishes doing my homework.",
+      "after": "She finishes doing her homework."
+    },
+    {
+      "id": "M2Y-INF-0218",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He needs to help my parents.",
+      "after": "He needs to help his parents."
+    },
+    {
+      "id": "M2Y-INF-0220",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He needs to help my parents.",
+      "after": "He needs to help his parents."
+    },
+    {
+      "id": "M2Y-INF-0233",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She needs to help my parents.",
+      "after": "She needs to help her parents."
+    },
+    {
+      "id": "M2Y-INF-0235",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She needs to help my parents.",
+      "after": "She needs to help her parents."
+    },
+    {
+      "id": "M2-FUT2-0585",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He will clean my room tomorrow.",
+      "after": "He will clean his room tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0586",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He is going to clean my room tomorrow.",
+      "after": "He is going to clean his room tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0597",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He will help my father tomorrow.",
+      "after": "He will help his father tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0598",
+      "field": "a",
+      "reason": "male_subject_possessive",
+      "before": "He is going to help my father tomorrow.",
+      "after": "He is going to help his father tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0625",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She will clean my room tomorrow.",
+      "after": "She will clean her room tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0626",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She is going to clean my room tomorrow.",
+      "after": "She is going to clean her room tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0637",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She will help my father tomorrow.",
+      "after": "She will help her father tomorrow."
+    },
+    {
+      "id": "M2-FUT2-0638",
+      "field": "a",
+      "reason": "female_subject_possessive",
+      "before": "She is going to help my father tomorrow.",
+      "after": "She is going to help her father tomorrow."
+    },
+    {
+      "id": "M3N-01089",
+      "field": "a",
+      "reason": "pronoun_be_agreement",
+      "before": "You went to bed early because you was tired.",
+      "after": "You went to bed early because you were tired."
+    },
+    {
+      "id": "M3N-01107",
+      "field": "a",
+      "reason": "pronoun_be_agreement",
+      "before": "We went to bed early because we was tired.",
+      "after": "We went to bed early because we were tired."
+    },
+    {
+      "id": "M3N-01113",
+      "field": "a",
+      "reason": "pronoun_be_agreement",
+      "before": "They went to bed early because they was tired.",
+      "after": "They went to bed early because they were tired."
+    }
+  ]
+}
