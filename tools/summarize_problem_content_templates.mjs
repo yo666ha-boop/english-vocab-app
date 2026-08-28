@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+// Summarize mixed-language English-composition template families for common-cause repair.
 const h=fs.readFileSync('problem-app/index.html','utf8');
 const m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data');
 const rows=JSON.parse(m[1]).filter(x=>x?.subject==='英語');
