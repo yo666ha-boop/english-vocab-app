@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:20:42.466Z",
+  "generated_at": "2026-08-28T15:27:38.613Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -25,7 +25,7 @@
   "missing_required_fields": [],
   "duplicate_ids": [],
   "normalized_question_conflicts": {
-    "count": 5,
+    "count": 6,
     "top": [
       {
         "normalized_question": "he helps at home. を否定文にしなさい。",
@@ -131,11 +131,32 @@
             "a": "This room is larger than that room."
           }
         ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が料理人なら、おいしい料理を作れるのに。』",
+        "count": 2,
+        "answer_count": 2,
+        "samples": [
+          {
+            "id": "M3N-02373",
+            "grade": "中3",
+            "category": "仮定法",
+            "type": "英作文",
+            "a": "If I were a chef, I could cook good food."
+          },
+          {
+            "id": "M3N-02385",
+            "grade": "中3",
+            "category": "仮定法",
+            "type": "英作文",
+            "a": "If I were a chef, I could cook delicious food."
+          }
+        ]
       }
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 238,
+    "count": 215,
     "top": [
       {
         "normalized_question": "emi is more young than yuki. の誤りを直しなさい。",
@@ -281,47 +302,6 @@
         ]
       },
       {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
-        "count": 4,
-        "answer": "If I were a cat, I could jump high.",
-        "sample_ids": [
-          "M3N-02301",
-          "M3N-02331",
-          "M3N-02361",
-          "M3N-02391"
-        ]
-      },
-      {
-        "normalized_question": "don’t open the door. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 3,
-        "answer": "ドアを開けないでください。",
-        "sample_ids": [
-          "M3N-00756",
-          "M3N-00792",
-          "M3N-00828"
-        ]
-      },
-      {
-        "normalized_question": "don’t run here. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 3,
-        "answer": "ここで走らないでください。",
-        "sample_ids": [
-          "M3N-00744",
-          "M3N-00780",
-          "M3N-00816"
-        ]
-      },
-      {
-        "normalized_question": "please look at this picture. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 3,
-        "answer": "この写真を見てください。",
-        "sample_ids": [
-          "M3N-00750",
-          "M3N-00786",
-          "M3N-00822"
-        ]
-      },
-      {
         "normalized_question": "the book ( who / which / where ) ken used yesterday is mine. 正しいものを選びなさい。",
         "count": 3,
         "answer": "which",
@@ -332,36 +312,6 @@
         ]
       },
       {
-        "normalized_question": "they call her aya. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 3,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01460",
-          "M3N-01496",
-          "M3N-01532"
-        ]
-      },
-      {
-        "normalized_question": "they call her kate. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 3,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01472",
-          "M3N-01508",
-          "M3N-01544"
-        ]
-      },
-      {
-        "normalized_question": "they call her mary. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 3,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01466",
-          "M3N-01502",
-          "M3N-01538"
-        ]
-      },
-      {
         "normalized_question": "this box is more light than that one. の誤りを直しなさい。",
         "count": 3,
         "answer": "This box is lighter than that one.",
@@ -369,16 +319,6 @@
           "M2Y-COMP-0423",
           "M2Y-COMP-0459",
           "M2-COMP2-1489"
-        ]
-      },
-      {
-        "normalized_question": "this computer is ( ) by many students. (use) の( )内を正しくしなさい。",
-        "count": 3,
-        "answer": "Used",
-        "sample_ids": [
-          "M3N-01591",
-          "M3N-01627",
-          "M3N-01663"
         ]
       },
       {
@@ -409,96 +349,6 @@
           "M2Y-COMP-0420",
           "M2Y-COMP-0456",
           "M2-COMP2-1486"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
-        "count": 3,
-        "answer": "Tom is the kindest of the three.",
-        "sample_ids": [
-          "M3C-01210",
-          "M3C-01234",
-          "M3C-01294"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Saturday.",
-        "sample_ids": [
-          "M3N-01833",
-          "M3N-01875",
-          "M3N-01917"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
-        "count": 3,
-        "answer": "I don't know where she lives.",
-        "sample_ids": [
-          "M3N-02076",
-          "M3N-02100",
-          "M3N-02148"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Monday.",
-        "sample_ids": [
-          "M3N-01803",
-          "M3N-01845",
-          "M3N-01887"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Thursday.",
-        "sample_ids": [
-          "M3N-01821",
-          "M3N-01863",
-          "M3N-01905"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Wednesday.",
-        "sample_ids": [
-          "M3N-01815",
-          "M3N-01857",
-          "M3N-01899"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Tuesday.",
-        "sample_ids": [
-          "M3N-01809",
-          "M3N-01851",
-          "M3N-01893"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
-        "count": 3,
-        "answer": "I have lived in this town since Friday.",
-        "sample_ids": [
-          "M3N-01827",
-          "M3N-01869",
-          "M3N-01911"
-        ]
-      },
-      {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( english / fun / learn / is / to )",
-        "count": 3,
-        "answer": "English is fun to learn.",
-        "sample_ids": [
-          "M3N-01224",
-          "M3N-01272",
-          "M3N-01320"
         ]
       },
       {
@@ -1084,6 +934,159 @@
         "sample_ids": [
           "M3C-01387",
           "M3N-02356"
+        ]
+      },
+      {
+        "normalized_question": "if i am you, i would use this computer. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "If I were you, I would use this computer.",
+        "sample_ids": [
+          "M3C-01399",
+          "M3N-02392"
+        ]
+      },
+      {
+        "normalized_question": "if i was you, i would clean the room. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "If I were you, I would clean the room.",
+        "sample_ids": [
+          "M3C-01393",
+          "M3N-02374"
+        ]
+      },
+      {
+        "normalized_question": "if i was you, i would read this book. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "If I were you, I would read this book.",
+        "sample_ids": [
+          "M3C-01389",
+          "M3N-02362"
+        ]
+      },
+      {
+        "normalized_question": "if i was you, i would visit kyoto. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "If I were you, I would visit Kyoto.",
+        "sample_ids": [
+          "M3C-01397",
+          "M3N-02386"
+        ]
+      },
+      {
+        "normalized_question": "if i was you, i would write a letter. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "If I were you, I would write a letter.",
+        "sample_ids": [
+          "M3C-01401",
+          "M3N-02398"
+        ]
+      },
+      {
+        "normalized_question": "is he busy? に yes で答えなさい。",
+        "count": 2,
+        "answer": "Yes, he is.",
+        "sample_ids": [
+          "GEN-BE-0167",
+          "GEN-BE-0279"
+        ]
+      },
+      {
+        "normalized_question": "is he kind? に yes で答えなさい。",
+        "count": 2,
+        "answer": "Yes, he is.",
+        "sample_ids": [
+          "GEN-BE-0179",
+          "GEN-BE-0303"
+        ]
+      },
+      {
+        "normalized_question": "is she kind? に yes で答えなさい。",
+        "count": 2,
+        "answer": "Yes, she is.",
+        "sample_ids": [
+          "GEN-BE-0219",
+          "GEN-BE-0451"
+        ]
+      },
+      {
+        "normalized_question": "john ( has worked / worked / is work ) here since monday. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Has worked",
+        "sample_ids": [
+          "M3N-01830",
+          "M3N-01902"
+        ]
+      },
+      {
+        "normalized_question": "john finished ( to clean / cleaning / clean ) the room. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Cleaning",
+        "sample_ids": [
+          "M3N-01227",
+          "M3N-01299"
+        ]
+      },
+      {
+        "normalized_question": "ken ( has worked / worked / is work ) here since april. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Has worked",
+        "sample_ids": [
+          "M3N-01812",
+          "M3N-01884"
+        ]
+      },
+      {
+        "normalized_question": "ken enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Playing",
+        "sample_ids": [
+          "M3N-01209",
+          "M3N-01281"
+        ]
+      },
+      {
+        "normalized_question": "ken has been studying english for three hours. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has Ken been studying English for three hours?",
+        "sample_ids": [
+          "M3C-00998",
+          "M3C-01020"
+        ]
+      },
+      {
+        "normalized_question": "ken has been to osaka once. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has Ken been to Osaka once?",
+        "sample_ids": [
+          "M3C-00056",
+          "M3C-00896"
+        ]
+      },
+      {
+        "normalized_question": "ken knows me. he often talks with ( ).",
+        "count": 2,
+        "answer": "me",
+        "sample_ids": [
+          "R2-PRON-0062",
+          "F1-PRON-0014"
+        ]
+      },
+      {
+        "normalized_question": "ken stayed home because he was tired. 問い:この文の内容として最も適切なものを書きなさい。",
+        "count": 2,
+        "answer": "Kenは疲れていたので家にいました。",
+        "sample_ids": [
+          "M3N-01092",
+          "M3N-01164"
+        ]
+      },
+      {
+        "normalized_question": "mary is tired. を否定文にしなさい。",
+        "count": 2,
+        "answer": "Mary is not tired.",
+        "sample_ids": [
+          "GEN-BE-0477",
+          "M2-BE-0099"
         ]
       }
     ]

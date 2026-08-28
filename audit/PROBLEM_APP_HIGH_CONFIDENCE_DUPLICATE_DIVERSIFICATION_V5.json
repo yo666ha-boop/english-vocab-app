@@ -1,0 +1,513 @@
+{
+  "generated_at": "2026-08-28T15:27:38.254Z",
+  "groups_eligible": 26,
+  "groups_touched": 24,
+  "changed_rows": 41,
+  "by_family": {
+    "中3/比較/英作文": 2,
+    "中3/命令文，there is ～ の文/読解": 6,
+    "中3/不定詞①，動名詞/並びかえ": 5,
+    "中3/文型/見分け": 7,
+    "中3/受動態/空所補充": 2,
+    "中3/現在完了形（継続），現在完了進行形/英作文": 11,
+    "中3/分詞と間接疑問文/英作文": 4,
+    "中3/仮定法/英作文": 4
+  },
+  "samples": [
+    {
+      "id": "M3C-01234",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
+        "a": "Tom is the kindest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の男の子の中でいちばん背が高いです。』",
+        "a": "Tom is the tallest of the three boys."
+      }
+    },
+    {
+      "id": "M3C-01294",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
+        "a": "Tom is the kindest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『エミは3人の女の子の中でいちばん若いです。』",
+        "a": "Emi is the youngest of the three girls."
+      }
+    },
+    {
+      "id": "M3N-00780",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Don’t run here. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ここで走らないでください。"
+      },
+      "after": {
+        "q": "Please close the window. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "窓を閉めてください。"
+      }
+    },
+    {
+      "id": "M3N-00816",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Don’t run here. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ここで走らないでください。"
+      },
+      "after": {
+        "q": "Please read this book. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この本を読んでください。"
+      }
+    },
+    {
+      "id": "M3N-00786",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この写真を見てください。"
+      },
+      "after": {
+        "q": "Don’t touch this box. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この箱に触らないでください。"
+      }
+    },
+    {
+      "id": "M3N-00822",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Please look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "この写真を見てください。"
+      },
+      "after": {
+        "q": "Don’t use this computer. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "このコンピューターを使わないでください。"
+      }
+    },
+    {
+      "id": "M3N-00792",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ドアを開けないでください。"
+      },
+      "after": {
+        "q": "Don’t eat here. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ここで食べないでください。"
+      }
+    },
+    {
+      "id": "M3N-00828",
+      "family": "中3/命令文，there is ～ の文/読解",
+      "before": {
+        "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "ドアを開けないでください。"
+      },
+      "after": {
+        "q": "There is a pen on the desk. 問い：この英文の意味として最も適切なものを書きなさい。",
+        "a": "机の上にペンが1本あります。"
+      }
+    },
+    {
+      "id": "M3N-01272",
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( English / fun / learn / is / to )",
+        "a": "English is fun to learn."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / to / English / fun / learn )",
+        "a": "English is fun to learn."
+      }
+    },
+    {
+      "id": "M3N-01320",
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( English / fun / learn / is / to )",
+        "a": "English is fun to learn."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( book / easy / read / This / is / to )",
+        "a": "This book is easy to read."
+      }
+    },
+    {
+      "id": "M3N-01302",
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / book / easy / read )",
+        "a": "That book is easy to read."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( question / difficult / answer / This / is / to )",
+        "a": "This question is difficult to answer."
+      }
+    },
+    {
+      "id": "M3N-01308",
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / question / easy / answer )",
+        "a": "That question is easy to answer."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / to / every / It / important / study / day )",
+        "a": "It is important to study every day."
+      }
+    },
+    {
+      "id": "M3N-01314",
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / heavy / carry / bag / too / to )",
+        "a": "That bag is too heavy to carry."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( want / visit / I / to / Kyoto )",
+        "a": "I want to visit Kyoto."
+      }
+    },
+    {
+      "id": "M3N-01526",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "They call him Mike. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01496",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Aya. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "We call her Yuki. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01532",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Aya. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "My friends call me Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01502",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Mary. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "She gave me a notebook. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01538",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Mary. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "Mr. Brown taught us English. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01508",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Kate. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "Aya bought her brother a book. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "人に物を与える文"
+      }
+    },
+    {
+      "id": "M3N-01544",
+      "family": "中3/文型/見分け",
+      "before": {
+        "q": "They call her Kate. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      },
+      "after": {
+        "q": "We call the cat Tama. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+        "a": "AをBと呼ぶ文"
+      }
+    },
+    {
+      "id": "M3N-01627",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This computer is (      ) by many students. (use) の（ ）内を正しくしなさい。",
+        "a": "Used"
+      },
+      "after": {
+        "q": "English is (      ) in many countries. (speak) の（ ）内を正しくしなさい。",
+        "a": "Spoken"
+      }
+    },
+    {
+      "id": "M3N-01663",
+      "family": "中3/受動態/空所補充",
+      "before": {
+        "q": "This computer is (      ) by many students. (use) の（ ）内を正しくしなさい。",
+        "a": "Used"
+      },
+      "after": {
+        "q": "This room is (      ) every day. (clean) の（ ）内を正しくしなさい。",
+        "a": "Cleaned"
+      }
+    },
+    {
+      "id": "M3N-01845",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Monday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は3年間ずっと英語を勉強しています。』",
+        "a": "I have studied English for three years."
+      }
+    },
+    {
+      "id": "M3N-01887",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Monday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは5年間ずっとこの市に住んでいます。』",
+        "a": "We have lived in this city for five years."
+      }
+    },
+    {
+      "id": "M3N-01851",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Tuesday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは4月からずっとケンを知っています。』",
+        "a": "They have known Ken since April."
+      }
+    },
+    {
+      "id": "M3N-01893",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Tuesday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼女は今朝からずっと英語を勉強しています。』",
+        "a": "She has studied English since this morning."
+      }
+    },
+    {
+      "id": "M3N-01857",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Wednesday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼は2年間ずっと日本に住んでいます。』",
+        "a": "He has lived in Japan for two years."
+      }
+    },
+    {
+      "id": "M3N-01899",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Wednesday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は1時間ずっとこの本を読んでいます。』",
+        "a": "I have been reading this book for an hour."
+      }
+    },
+    {
+      "id": "M3N-01863",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Thursday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは正午からずっとテニスを練習しています。』",
+        "a": "We have been practicing tennis since noon."
+      }
+    },
+    {
+      "id": "M3N-01905",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Thursday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは20分間ずっとバスを待っています。』",
+        "a": "They have been waiting for the bus for twenty minutes."
+      }
+    },
+    {
+      "id": "M3N-01869",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Friday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼女は今朝からずっとこのコンピューターを使っています。』",
+        "a": "She has been using this computer since this morning."
+      }
+    },
+    {
+      "id": "M3N-01911",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Friday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼は2時間ずっとサッカーをしています。』",
+        "a": "He has been playing soccer for two hours."
+      }
+    },
+    {
+      "id": "M3N-01875",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Saturday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は30分間ずっと手紙を書いています。』",
+        "a": "I have been writing a letter for thirty minutes."
+      }
+    },
+    {
+      "id": "M3N-02100",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
+        "a": "I don't know where she lives."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私はトムがどこに住んでいるのかわかりません。』",
+        "a": "I don't know where Tom lives."
+      }
+    },
+    {
+      "id": "M3N-02148",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
+        "a": "I don't know where she lives."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は学校がいつ始まるのかわかりません。』",
+        "a": "I don't know when school starts."
+      }
+    },
+    {
+      "id": "M3N-02154",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
+        "a": "I don't know why he is busy."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私はエミがなぜ英語を勉強するのかわかりません。』",
+        "a": "I don't know why Emi studies English."
+      }
+    },
+    {
+      "id": "M3N-02160",
+      "family": "中3/分詞と間接疑問文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は彼がいつ来るのかわかりません。』",
+        "a": "I don't know when he will come."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私はケンがどのように学校へ行くのかわかりません。』",
+        "a": "I don't know how Ken goes to school."
+      }
+    },
+    {
+      "id": "M3N-02385",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+        "a": "If I were a teacher, I could help students."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が料理人なら、おいしい料理を作れるのに。』",
+        "a": "If I were a chef, I could cook delicious food."
+      }
+    },
+    {
+      "id": "M3N-02331",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
+        "a": "If I were a cat, I could jump high."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が写真家なら、たくさん写真を撮れるのに。』",
+        "a": "If I were a photographer, I could take many pictures."
+      }
+    },
+    {
+      "id": "M3N-02361",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
+        "a": "If I were a cat, I could jump high."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、英語を教えられるのに。』",
+        "a": "If I were a teacher, I could teach English."
+      }
+    },
+    {
+      "id": "M3N-02391",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
+        "a": "If I were a cat, I could jump high."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が音楽家なら、人々のために音楽を演奏できるのに。』",
+        "a": "If I were a musician, I could play music for people."
+      }
+    }
+  ],
+  "duplicate_groups_after": 215,
+  "duplicate_excess_after": 246,
+  "groups_ge5_after": 0
+}

@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-28T15:20:42.922Z",
+  "generated_at": "2026-08-28T15:27:39.036Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 238,
-  "duplicate_excess": 287,
+  "duplicate_group_count": 215,
+  "duplicate_excess": 246,
   "classification_group_counts": {
-    "same_family_copy": 204,
+    "same_family_copy": 181,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 253,
+    "same_family_copy": 212,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 152,
-    "same_family_same_prefix_excess": 172,
+    "same_family_same_prefix_groups": 129,
+    "same_family_same_prefix_excess": 131,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
@@ -37,330 +37,6 @@
         "M3N-02337",
         "M3N-02367",
         "M3N-02397"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/仮定法/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
-      "a": "If I were a cat, I could jump high.",
-      "ids": [
-        "M3N-02301",
-        "M3N-02331",
-        "M3N-02361",
-        "M3N-02391"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "ドアを開けないでください。",
-      "ids": [
-        "M3N-00756",
-        "M3N-00792",
-        "M3N-00828"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Don’t run here. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "ここで走らないでください。",
-      "ids": [
-        "M3N-00744",
-        "M3N-00780",
-        "M3N-00816"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Please look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "この写真を見てください。",
-      "ids": [
-        "M3N-00750",
-        "M3N-00786",
-        "M3N-00822"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call her Aya. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01460",
-        "M3N-01496",
-        "M3N-01532"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call her Kate. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01472",
-        "M3N-01508",
-        "M3N-01544"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call her Mary. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01466",
-        "M3N-01502",
-        "M3N-01538"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This computer is (      ) by many students. (use) の（ ）内を正しくしなさい。",
-      "a": "Used",
-      "ids": [
-        "M3N-01591",
-        "M3N-01627",
-        "M3N-01663"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
-      "a": "Tom is the kindest of the three.",
-      "ids": [
-        "M3C-01210",
-        "M3C-01234",
-        "M3C-01294"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Saturday.",
-      "ids": [
-        "M3N-01833",
-        "M3N-01875",
-        "M3N-01917"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
-      "a": "I don't know where she lives.",
-      "ids": [
-        "M3N-02076",
-        "M3N-02100",
-        "M3N-02148"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Monday.",
-      "ids": [
-        "M3N-01803",
-        "M3N-01845",
-        "M3N-01887"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Thursday.",
-      "ids": [
-        "M3N-01821",
-        "M3N-01863",
-        "M3N-01905"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Wednesday.",
-      "ids": [
-        "M3N-01815",
-        "M3N-01857",
-        "M3N-01899"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Tuesday.",
-      "ids": [
-        "M3N-01809",
-        "M3N-01851",
-        "M3N-01893"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Friday.",
-      "ids": [
-        "M3N-01827",
-        "M3N-01869",
-        "M3N-01911"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/不定詞①，動名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( English / fun / learn / is / to )",
-      "a": "English is fun to learn.",
-      "ids": [
-        "M3N-01224",
-        "M3N-01272",
-        "M3N-01320"
       ]
     },
     {
@@ -1611,24 +1287,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01454",
-        "M3N-01526"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/文型/間違い直し"
       ],
       "prefixes": [
@@ -2241,24 +1899,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/仮定法/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
-      "a": "If I were a teacher, I could help students.",
-      "ids": [
-        "M3N-02295",
-        "M3N-02385"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/命令文，there is ～ の文/英作文"
       ],
       "prefixes": [
@@ -2439,34 +2079,16 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/分詞と間接疑問文/英作文"
+        "中3/現在完了形（継続），現在完了進行形/英作文"
       ],
       "prefixes": [
         "M3N"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼がいつ来るのかわかりません。』",
-      "a": "I don't know when he will come.",
+      "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Saturday.",
       "ids": [
-        "M3N-02088",
-        "M3N-02160"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
-      "a": "I don't know why he is busy.",
-      "ids": [
-        "M3N-02082",
-        "M3N-02154"
+        "M3N-01833",
+        "M3N-01917"
       ]
     },
     {
@@ -2629,60 +2251,6 @@
       "ids": [
         "GEN-FREQ-1338",
         "GEN-FREQ-1344"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/不定詞①，動名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / heavy / carry / bag / too / to )",
-      "a": "That bag is too heavy to carry.",
-      "ids": [
-        "M3N-01266",
-        "M3N-01314"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/不定詞①，動名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / book / easy / read )",
-      "a": "That book is easy to read.",
-      "ids": [
-        "M3N-01254",
-        "M3N-01302"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/不定詞①，動名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / question / easy / answer )",
-      "a": "That question is easy to answer.",
-      "ids": [
-        "M3N-01260",
-        "M3N-01308"
       ]
     },
     {
