@@ -1,10 +1,34 @@
 {
-  "generated_at": "2026-08-28T11:37:00.392Z",
+  "generated_at": "2026-08-28T11:39:40.467Z",
   "english_count": 10511,
   "duplicate_row_count": 2746,
   "duplicate_excess": 1933,
   "duplicate_group_count": 813,
   "row_ratio": 0.26125,
+  "group_size_histogram": {
+    "2": 615,
+    "3": 111,
+    "4": 15,
+    "5": 1,
+    "6": 9,
+    "7": 1,
+    "9": 1,
+    "10": 16,
+    "20": 43,
+    "28": 1
+  },
+  "mass_duplicate_ge5": {
+    "group_count": 72,
+    "row_count": 1123,
+    "excess": 1051,
+    "row_ratio": 0.10684
+  },
+  "mass_duplicate_ge10": {
+    "group_count": 60,
+    "row_count": 1048,
+    "excess": 988,
+    "row_ratio": 0.099705
+  },
   "family_summary": [
     {
       "family": "中3/現在完了形（完了・経験）/変形",
@@ -8629,6 +8653,1701 @@
       ],
       "prefixes": [
         "M2-GER2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He studies English. を否定文にしなさい。",
+      "a": "He does not study English.",
+      "ids": [
+        "GEN-3RD-0866",
+        "M3C-00422"
+      ],
+      "families": [
+        "中1/三単現/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He studies English. を疑問文にしなさい。",
+      "a": "Does he study English?",
+      "ids": [
+        "GEN-3RD-0865",
+        "M3C-00421"
+      ],
+      "families": [
+        "中1/三単現/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He studies math. を否定文にしなさい。",
+      "a": "He does not study math.",
+      "ids": [
+        "M2-3RD-0229",
+        "M2-3RD-0269"
+      ],
+      "families": [
+        "中2/三単現/変形"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He study English every day. の誤りを直しなさい。",
+      "a": "He studies English every day.",
+      "ids": [
+        "GEN-3RD-0868",
+        "GEN-3RD-1004"
+      ],
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He study math every day. の誤りを直しなさい。",
+      "a": "He studies math every day.",
+      "ids": [
+        "M2-3RD-0230",
+        "M2-3RD-0270"
+      ],
+      "families": [
+        "中2/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He try (      ) speak English.",
+      "a": "to",
+      "ids": [
+        "M2-INF2-1004",
+        "M2-INF2-1112"
+      ],
+      "families": [
+        "中2/不定詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He try to speak English . の誤りを直しなさい。",
+      "a": "He try to speak English.",
+      "ids": [
+        "M2-INF2-1006",
+        "M2-INF2-1114"
+      ],
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He use the internet every day. の誤りを直しなさい。",
+      "a": "He uses the internet every day.",
+      "ids": [
+        "M2-3RD-0232",
+        "M2-3RD-0272"
+      ],
+      "families": [
+        "中2/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He use this box to keep letters . の誤りを直しなさい。",
+      "a": "He uses this box to keep letters.",
+      "ids": [
+        "M2-INF2-1000",
+        "M2-INF2-1108"
+      ],
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He uses the internet. を否定文にしなさい。",
+      "a": "He does not use the internet.",
+      "ids": [
+        "M2-3RD-0231",
+        "M2-3RD-0271"
+      ],
+      "families": [
+        "中2/三単現/変形"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He uses this box (      ) keep letters.",
+      "a": "to",
+      "ids": [
+        "M2-INF2-0998",
+        "M2-INF2-1106"
+      ],
+      "families": [
+        "中2/不定詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He visits Kyoto. を否定文にしなさい。",
+      "a": "He does not play tennis.",
+      "ids": [
+        "M2-3RD-0237",
+        "M2-3RD-0277"
+      ],
+      "families": [
+        "中2/三単現/変形"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He visits the library. を否定文にしなさい。",
+      "a": "He does not visit the library.",
+      "ids": [
+        "GEN-3RD-0890",
+        "GEN-3RD-1074"
+      ],
+      "families": [
+        "中1/三単現/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He walk to school every day. の誤りを直しなさい。",
+      "a": "He walks to school every day.",
+      "ids": [
+        "GEN-3RD-0896",
+        "GEN-3RD-1108"
+      ],
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He walks to school. を疑問文にしなさい。",
+      "a": "Does he walk to school?",
+      "ids": [
+        "GEN-3RD-0893",
+        "GEN-3RD-1193"
+      ],
+      "families": [
+        "中1/三単現/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He want to be a teacher . の誤りを直しなさい。",
+      "a": "He wants to be a teacher.",
+      "ids": [
+        "M2-INF2-0988",
+        "M2-INF2-1096"
+      ],
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He want to play tennis . の誤りを直しなさい。",
+      "a": "He wants to play tennis.",
+      "ids": [
+        "M2-INF2-0985",
+        "M2-INF2-1093"
+      ],
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He wants (      ) be a teacher.",
+      "a": "to",
+      "ids": [
+        "M2-INF2-0986",
+        "M2-INF2-1094"
+      ],
+      "families": [
+        "中2/不定詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He wants (      ) play tennis.",
+      "a": "to",
+      "ids": [
+        "M2-INF2-0983",
+        "M2-INF2-1091"
+      ],
+      "families": [
+        "中2/不定詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He watch a movie every day. の誤りを直しなさい。",
+      "a": "He watches a movie every day.",
+      "ids": [
+        "M2-3RD-0228",
+        "M2-3RD-0268"
+      ],
+      "families": [
+        "中2/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He watched TV yesterday. を否定文にしなさい。",
+      "a": "He did not watch TV yesterday.",
+      "ids": [
+        "E1-PASTDID-002",
+        "M3C-00584"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "E1-PASTDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He watches a movie. を否定文にしなさい。",
+      "a": "He does not watch a movie.",
+      "ids": [
+        "M2-3RD-0227",
+        "M2-3RD-0267"
+      ],
+      "families": [
+        "中2/三単現/変形"
+      ],
+      "prefixes": [
+        "M2-3RD"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He watches TV. を否定文にしなさい。",
+      "a": "He does not watch TV.",
+      "ids": [
+        "GEN-3RD-0862",
+        "M3C-00582"
+      ],
+      "families": [
+        "中1/三単現/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He watches TV. を疑問文にしなさい。",
+      "a": "Does he watch TV?",
+      "ids": [
+        "GEN-3RD-0861",
+        "M3C-00581"
+      ],
+      "families": [
+        "中1/三単現/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-3RD",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He went to the library (      ) study.",
+      "a": "to",
+      "ids": [
+        "M2-INF2-0995",
+        "M2-INF2-1103"
+      ],
+      "families": [
+        "中2/不定詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He went to the library to study . の誤りを直しなさい。",
+      "a": "He went to the library to study.",
+      "ids": [
+        "M2-INF2-0997",
+        "M2-INF2-1105"
+      ],
+      "families": [
+        "中2/不定詞/間違い直し"
+      ],
+      "prefixes": [
+        "M2-INF2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will go to school. を疑問文にしなさい。",
+      "a": "Will he go to school?",
+      "ids": [
+        "M2Y-FUT-0074",
+        "M2Y-FUT-0110"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will make lunch. を疑問文にしなさい。",
+      "a": "Will he make lunch?",
+      "ids": [
+        "M2Y-FUT-0080",
+        "M2Y-FUT-0116"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will read this book. を疑問文にしなさい。",
+      "a": "Will he read this book?",
+      "ids": [
+        "M2Y-FUT-0089",
+        "M2Y-FUT-0125"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will study English harder. を疑問文にしなさい。",
+      "a": "Will he study English harder?",
+      "ids": [
+        "M2Y-FUT-0086",
+        "M2Y-FUT-0122"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will visit the science museum. を疑問文にしなさい。",
+      "a": "Will he visit the science museum?",
+      "ids": [
+        "M2Y-FUT-0083",
+        "M2Y-FUT-0119"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "He will watch a baseball game. を疑問文にしなさい。",
+      "a": "Will he watch a baseball game?",
+      "ids": [
+        "M2Y-FUT-0077",
+        "M2Y-FUT-0113"
+      ],
+      "families": [
+        "中2/未来表現/変形"
+      ],
+      "prefixes": [
+        "M2Y-FUT"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I (      ) busy.",
+      "a": "am",
+      "ids": [
+        "M2-BE-0002",
+        "M2-BE-0006"
+      ],
+      "families": [
+        "中2/be動詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I (      ) happy.",
+      "a": "am",
+      "ids": [
+        "M2-BE-0004",
+        "M2-BE-0008"
+      ],
+      "families": [
+        "中2/be動詞/空所補充"
+      ],
+      "prefixes": [
+        "M2-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I am going to play tennis. を疑問文にしなさい。",
+      "a": "Am I going to play tennis?",
+      "ids": [
+        "M3C-00008",
+        "M3N-00843"
+      ],
+      "families": [
+        "中3/未来の文/変形"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I am kind. を疑問文にしなさい。",
+      "a": "Am I kind?",
+      "ids": [
+        "GEN-BE-0018",
+        "M2-BE-0011"
+      ],
+      "families": [
+        "中1/be動詞/変形",
+        "中2/be動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-BE",
+        "M2-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I am study English now. の誤りを直しなさい。",
+      "a": "I am studying English now.",
+      "ids": [
+        "F1-PROG-0044",
+        "M3N-00604"
+      ],
+      "families": [
+        "中1/現在進行形/間違い直し",
+        "中3/進行形/間違い直し"
+      ],
+      "prefixes": [
+        "F1-PROG",
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I am studying English now. を疑問文にしなさい。",
+      "a": "Am I studying English now?",
+      "ids": [
+        "F1-PROG-0045",
+        "M3C-00025"
+      ],
+      "families": [
+        "中1/現在進行形/変形",
+        "中3/進行形/変形"
+      ],
+      "prefixes": [
+        "F1-PROG",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I ate breakfast yesterday. を疑問文にしなさい。",
+      "a": "Did I eat breakfast yesterday?",
+      "ids": [
+        "GEN-PDID-2075",
+        "GEN-IRR-2190"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I came to my house yesterday. を疑問文にしなさい。",
+      "a": "Did I come to my house yesterday?",
+      "ids": [
+        "GEN-PDID-2077",
+        "GEN-IRR-2193"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I cook dinner. を否定文にしなさい。",
+      "a": "I do not cook dinner.",
+      "ids": [
+        "GEN-PRS-0582",
+        "M3C-00162"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I cook dinner. を疑問文にしなさい。",
+      "a": "Do I cook dinner?",
+      "ids": [
+        "GEN-PRS-0581",
+        "M3C-00161"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I cooked dinner yesterday. を否定文にしなさい。",
+      "a": "I did not cook dinner yesterday.",
+      "ids": [
+        "GEN-PDID-2070",
+        "M3C-00164"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I cooked dinner yesterday. を疑問文にしなさい。",
+      "a": "Did I cook dinner yesterday?",
+      "ids": [
+        "GEN-PDID-2069",
+        "M3C-00163"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I did my homework yesterday. を疑問文にしなさい。",
+      "a": "Did I do my homework yesterday?",
+      "ids": [
+        "GEN-PDID-2081",
+        "GEN-IRR-2199"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I got up at six yesterday. を疑問文にしなさい。",
+      "a": "Did I get up at six yesterday?",
+      "ids": [
+        "GEN-PDID-2083",
+        "GEN-IRR-2202"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I had a test yesterday. を疑問文にしなさい。",
+      "a": "Did I have a test yesterday?",
+      "ids": [
+        "GEN-PDID-2079",
+        "GEN-IRR-2196"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Have I been playing tennis for two hours?",
+      "ids": [
+        "M3C-00019",
+        "M3C-00779"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have been to Kyoto once. を疑問文にしなさい。",
+      "a": "Have I been to Kyoto once?",
+      "ids": [
+        "M3C-00015",
+        "M3C-00315"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Have I been using this computer since this morning?",
+      "ids": [
+        "M3C-00020",
+        "M3C-00478"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01837",
+        "M3N-01891"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01819",
+        "M3N-01873"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01813",
+        "M3N-01867"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01843",
+        "M3N-01897"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01831",
+        "M3N-01885"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01825",
+        "M3N-01879"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01849",
+        "M3N-01903"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I help at home. を yesterday を使って過去の文にしなさい。",
+      "a": "I helped at home yesterday.",
+      "ids": [
+        "GEN-PAST-1878",
+        "M2-PAST-0339"
+      ],
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I help at home. を疑問文にしなさい。",
+      "a": "Do I help at home?",
+      "ids": [
+        "GEN-PRS-0573",
+        "M2-PRS-0159"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中2/一般動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M2-PRS"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I helped at home yesterday. を疑問文にしなさい。",
+      "a": "Did I help at home yesterday?",
+      "ids": [
+        "GEN-PDID-2065",
+        "M2-PAST-0340"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中2/過去の疑問文・否定文/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M2-PAST"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I know Emi. I often talk with (      ).",
+      "a": "her",
+      "ids": [
+        "R2-PRON-0068",
+        "F1-PRON-0023"
+      ],
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I know Ken and Emi. I often talk with (      ).",
+      "a": "them",
+      "ids": [
+        "R2-PRON-0072",
+        "F1-PRON-0029"
+      ],
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I know Ken. I often talk with (      ).",
+      "a": "him",
+      "ids": [
+        "R2-PRON-0066",
+        "F1-PRON-0020"
+      ],
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I know you. I often talk with (      ).",
+      "a": "You",
+      "ids": [
+        "R2-PRON-0064",
+        "F1-PRON-0017"
+      ],
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I listen to music. を否定文にしなさい。",
+      "a": "I do not listen to music.",
+      "ids": [
+        "GEN-PRS-0570",
+        "M3C-00042"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I listen to music. を疑問文にしなさい。",
+      "a": "Do I listen to music?",
+      "ids": [
+        "GEN-PRS-0569",
+        "M3C-00041"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I listened to music yesterday. を否定文にしなさい。",
+      "a": "I did not listen to music yesterday.",
+      "ids": [
+        "GEN-PDID-2064",
+        "M3C-00044"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I listened to music yesterday. を疑問文にしなさい。",
+      "a": "Did I listen to music yesterday?",
+      "ids": [
+        "GEN-PDID-2063",
+        "M3C-00043"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I made a cake yesterday. を疑問文にしなさい。",
+      "a": "Did I make a cake yesterday?",
+      "ids": [
+        "GEN-PDID-2085",
+        "GEN-IRR-2205"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I play tennis. は be動詞の文か、一般動詞の文か答えなさい。",
+      "a": "一般動詞の文",
+      "ids": [
+        "E1-BD-002",
+        "M3N-00122"
+      ],
+      "families": [
+        "中1/区別/見分け",
+        "中3/be動詞と一般動詞（現在形）/見分け"
+      ],
+      "prefixes": [
+        "E1-BD",
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I play tennis. を yesterday を使って過去の文にしなさい。",
+      "a": "I played tennis yesterday.",
+      "ids": [
+        "GEN-PAST-1863",
+        "M2-PAST-0337"
+      ],
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I play tennis. を否定文にしなさい。",
+      "a": "I do not play tennis.",
+      "ids": [
+        "GEN-PRS-0554",
+        "M3C-00002"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I played tennis yesterday. を否定文にしなさい。",
+      "a": "I did not play tennis yesterday.",
+      "ids": [
+        "GEN-PDID-2056",
+        "M3C-00004"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I read books. を否定文にしなさい。",
+      "a": "I do not read books.",
+      "ids": [
+        "GEN-PRS-0598",
+        "M3C-00082"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I read books. を疑問文にしなさい。",
+      "a": "Do I read books?",
+      "ids": [
+        "GEN-PRS-0597",
+        "M3C-00081"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I saw a movie yesterday. を疑問文にしなさい。",
+      "a": "Did I see a movie yesterday?",
+      "ids": [
+        "GEN-PDID-2073",
+        "GEN-IRR-2187"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I studied English yesterday. を否定文にしなさい。",
+      "a": "I did not study English yesterday.",
+      "ids": [
+        "GEN-PDID-2060",
+        "M3C-00024"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I studied English yesterday. を疑問文にしなさい。",
+      "a": "Did I study English yesterday?",
+      "ids": [
+        "GEN-PDID-2059",
+        "M3C-00023"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I study English. を否定文にしなさい。",
+      "a": "I do not study English.",
+      "ids": [
+        "GEN-PRS-0562",
+        "M3C-00022"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I study English. を疑問文にしなさい。",
+      "a": "Do I study English?",
+      "ids": [
+        "GEN-PRS-0561",
+        "M3C-00021"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I was busy yesterday. を否定文にしなさい。",
+      "a": "I was not busy yesterday.",
+      "ids": [
+        "GEN-PBE-1506",
+        "M3N-00245"
+      ],
+      "families": [
+        "中1/過去のbe動詞/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PBE",
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I watch TV. を否定文にしなさい。",
+      "a": "I do not watch TV.",
+      "ids": [
+        "GEN-PRS-0558",
+        "M3C-00182"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I watch TV. を疑問文にしなさい。",
+      "a": "Do I watch TV?",
+      "ids": [
+        "GEN-PRS-0557",
+        "M3C-00181"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I watched TV yesterday. を否定文にしなさい。",
+      "a": "I did not watch TV yesterday.",
+      "ids": [
+        "GEN-PDID-2058",
+        "M3C-00184"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I watched TV yesterday. を疑問文にしなさい。",
+      "a": "Did I watch TV yesterday?",
+      "ids": [
+        "GEN-PDID-2057",
+        "M3C-00183"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I went to the library by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the library?",
+      "ids": [
+        "M3N-00363",
+        "M3N-00465"
+      ],
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I went to the park by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the park?",
+      "ids": [
+        "M3N-00369",
+        "M3N-00471"
+      ],
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I went to the park yesterday. を疑問文にしなさい。",
+      "a": "Did I go to the park yesterday?",
+      "ids": [
+        "GEN-PDID-2071",
+        "GEN-IRR-2184"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I went to the room by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the room?",
+      "ids": [
+        "M3N-00387",
+        "M3N-00477"
+      ],
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I went to the station by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the station?",
+      "ids": [
+        "M3N-00375",
+        "M3N-00459"
+      ],
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Is he busy? に Yes で答えなさい。",
+      "a": "Yes, he is.",
+      "ids": [
+        "GEN-BE-0167",
+        "GEN-BE-0279"
+      ],
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Is he kind? に Yes で答えなさい。",
+      "a": "Yes, he is.",
+      "ids": [
+        "GEN-BE-0179",
+        "GEN-BE-0303"
+      ],
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Is she kind? に Yes で答えなさい。",
+      "a": "Yes, she is.",
+      "ids": [
+        "GEN-BE-0219",
+        "GEN-BE-0451"
+      ],
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is beautifuller than Tom. の誤りを直しなさい。",
+      "a": "Ken is more beautiful than Tom.",
+      "ids": [
+        "M2-COMP2-1474",
+        "M2-COMP2-1522"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is more busy than Tom. の誤りを直しなさい。",
+      "a": "Ken is busier than Tom.",
+      "ids": [
+        "M2-COMP2-1468",
+        "M2-COMP2-1516"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is more fast than Tom. の誤りを直しなさい。",
+      "a": "Ken is faster than Tom.",
+      "ids": [
+        "M2-COMP2-1459",
+        "M2-COMP2-1507"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is more small than Tom. の誤りを直しなさい。",
+      "a": "Ken is smaller than Tom.",
+      "ids": [
+        "M2-COMP2-1456",
+        "M2-COMP2-1504"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is more tall than Tom. の誤りを直しなさい。",
+      "a": "Ken is taller than Tom.",
+      "ids": [
+        "M2-COMP2-1453",
+        "M2-COMP2-1501"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken is popularer than Tom. の誤りを直しなさい。",
+      "a": "Ken is more popular than Tom.",
+      "ids": [
+        "M2-COMP2-1471",
+        "M2-COMP2-1519"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Ken knows me. He often talks with (      ).",
+      "a": "me",
+      "ids": [
+        "R2-PRON-0062",
+        "F1-PRON-0014"
+      ],
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
       ]
     }
   ]
