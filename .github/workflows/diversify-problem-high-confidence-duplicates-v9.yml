@@ -26,15 +26,15 @@ jobs:
           const fs=require('fs'),h=fs.readFileSync('problem-app/index.html','utf8'),m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data');const a=JSON.parse(m[1]),e=a.filter(x=>x?.subject==='英語');if(e.length!==10511||new Set(e.map(x=>x.id)).size!==10511)throw Error('bank structure');
           NODE
           set +e; node tools/audit_problem_content_quality.mjs; code=$?; set -e
-          node tools/audit_problem_semantic_review.mjs
+          node tools/audit_problem_semantic_review_signals.mjs
           node tools/audit_problem_semantic_duplicate_review.mjs
           node - <<'NODE'
-          const fs=require('fs'),a=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_CONTENT_QUALITY.json')),s=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_SEMANTIC_REVIEW.json'));const bad=(a.hard_failures||[]).filter(x=>!String(x).startsWith('duplicate_qa_row_ratio:'));if(bad.length)throw Error(bad.join(','));if((a.exact_duplicate_question_answer?.groups_ge5||0)!==0)throw Error('ge5 regression');if((s.hard_failures||[]).length||(s.review_signals||[]).length)throw Error('semantic regression');
+          const fs=require('fs'),a=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_CONTENT_QUALITY.json')),s=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json'));const bad=(a.hard_failures||[]).filter(x=>!String(x).startsWith('duplicate_qa_row_ratio:'));if(bad.length)throw Error(bad.join(','));if((a.exact_duplicate_question_answer?.groups_ge5||0)!==0)throw Error('ge5 regression');if((s.hard_failures||[]).length||(s.review_signals||[]).length)throw Error('semantic regression');
           NODE
           echo audit_exit=$code
       - name: Commit bank and evidence
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add problem-app/index.html audit/PROBLEM_APP_HIGH_CONFIDENCE_DUPLICATE_DIVERSIFICATION_V9.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_REVIEW.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json
+          git add problem-app/index.html audit/PROBLEM_APP_HIGH_CONFIDENCE_DUPLICATE_DIVERSIFICATION_V9.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json
           if git diff --cached --quiet; then echo 'No changes'; else git commit -m 'fix: diversify final high-confidence duplicate families v9 [skip ci]' && git push; fi
