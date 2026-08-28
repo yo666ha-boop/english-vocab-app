@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:31:40.537Z",
+  "generated_at": "2026-08-28T18:17:00.610Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -240,7 +240,7 @@
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 140,
+    "count": 86,
     "top": [
       {
         "normalized_question": "emi is more young than yuki. の誤りを直しなさい。",
@@ -713,15 +713,6 @@
         ]
       },
       {
-        "normalized_question": "me go running. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I go running.",
-        "sample_ids": [
-          "M3N-00526",
-          "M3N-00580"
-        ]
-      },
-      {
         "normalized_question": "mr. sato knows ken and me. he often talks with ( ).",
         "count": 2,
         "answer": "us",
@@ -776,15 +767,6 @@
         ]
       },
       {
-        "normalized_question": "the door ( who / which / where ) kate used yesterday is mine. 正しいものを選びなさい。",
-        "count": 2,
-        "answer": "which",
-        "sample_ids": [
-          "M3N-02202",
-          "M3N-02274"
-        ]
-      },
-      {
         "normalized_question": "the letter ( who / which / where ) bob bought yesterday is mine. 正しいものを選びなさい。",
         "count": 2,
         "answer": "which",
@@ -812,102 +794,12 @@
         ]
       },
       {
-        "normalized_question": "the window ( who / which / where ) mary bought yesterday is mine. 正しいものを選びなさい。",
-        "count": 2,
-        "answer": "which",
-        "sample_ids": [
-          "M3N-02196",
-          "M3N-02268"
-        ]
-      },
-      {
-        "normalized_question": "the woman which teaches us is kind. の誤りを、who を使って直しなさい。",
-        "count": 2,
-        "answer": "The woman who teaches us is kind.",
-        "sample_ids": [
-          "M3N-02188",
-          "M3N-02278"
-        ]
-      },
-      {
         "normalized_question": "they are watching tv now. を疑問文にしなさい。",
         "count": 2,
         "answer": "Are they watching TV now?",
         "sample_ids": [
           "F1-PROG-0051",
           "M3C-01185"
-        ]
-      },
-      {
-        "normalized_question": "they call aya her. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call her Aya.",
-        "sample_ids": [
-          "M3N-01487",
-          "M3N-01559"
-        ]
-      },
-      {
-        "normalized_question": "they call bob him. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call him Bob.",
-        "sample_ids": [
-          "M3N-01463",
-          "M3N-01535"
-        ]
-      },
-      {
-        "normalized_question": "they call emi her. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call her Emi.",
-        "sample_ids": [
-          "M3N-01475",
-          "M3N-01547"
-        ]
-      },
-      {
-        "normalized_question": "they call john him. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call him John.",
-        "sample_ids": [
-          "M3N-01469",
-          "M3N-01541"
-        ]
-      },
-      {
-        "normalized_question": "they call ken him. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call him Ken.",
-        "sample_ids": [
-          "M3N-01451",
-          "M3N-01523"
-        ]
-      },
-      {
-        "normalized_question": "they call mike him. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call him Mike.",
-        "sample_ids": [
-          "M3N-01457",
-          "M3N-01529"
-        ]
-      },
-      {
-        "normalized_question": "they call tom him. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call him Tom.",
-        "sample_ids": [
-          "M3N-01445",
-          "M3N-01517"
-        ]
-      },
-      {
-        "normalized_question": "they call yuki her. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "They call her Yuki.",
-        "sample_ids": [
-          "M3N-01481",
-          "M3N-01553"
         ]
       },
       {
@@ -1064,42 +956,6 @@
         ]
       },
       {
-        "normalized_question": "you must go to the library now. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Must you go to the library now?",
-        "sample_ids": [
-          "M3N-00963",
-          "M3N-01065"
-        ]
-      },
-      {
-        "normalized_question": "you must go to the park now. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Must you go to the park now?",
-        "sample_ids": [
-          "M3N-00969",
-          "M3N-01071"
-        ]
-      },
-      {
-        "normalized_question": "you must go to the room now. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Must you go to the room now?",
-        "sample_ids": [
-          "M3N-00987",
-          "M3N-01077"
-        ]
-      },
-      {
-        "normalized_question": "you must go to the station now. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Must you go to the station now?",
-        "sample_ids": [
-          "M3N-00975",
-          "M3N-01059"
-        ]
-      },
-      {
         "normalized_question": "you need study harder. の誤りを直しなさい。",
         "count": 2,
         "answer": "You need to study harder.",
@@ -1163,12 +1019,30 @@
         ]
       },
       {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
+        "normalized_question": "次の日本語に合う英文を書きなさい。『あなたは何が好きですか。』",
         "count": 2,
-        "answer": "You have to get up early.",
+        "answer": "What do you like?",
         "sample_ids": [
-          "M2-MOD-0629",
-          "M2-MOD-0630"
+          "E1-WH-004",
+          "E1-WR-010"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は毎日英語を勉強します。』",
+        "count": 2,
+        "answer": "I study English every day.",
+        "sample_ids": [
+          "E1-DQ-013",
+          "M2X-RV-0015"
+        ]
+      },
+      {
+        "normalized_question": "答えが “at seven.” になる質問文を書きなさい。",
+        "count": 2,
+        "answer": "When do you get up?",
+        "sample_ids": [
+          "E1-WH-012",
+          "M3C-01499"
         ]
       }
     ]
