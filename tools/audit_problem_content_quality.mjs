@@ -111,7 +111,7 @@ if(duplicateRows/Math.max(rows.length,1)>.10)hardFailures.push(`duplicate_qa_row
 const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures.length?'FAIL':'PASS',hard_failures:hardFailures,english_count:rows.length,
   hybrid_japanese_translation:{count:hybridJapanese.length,by_prefix:prefixBreakdown(hybridJapanese),by_grade_category_type:breakdown(hybridJapanese),samples:hybridJapanese.slice(0,250)},
   subject_verb_agreement:{count:subjectVerbAgreement.length,by_prefix:prefixBreakdown(subjectVerbAgreement),samples:subjectVerbAgreement.slice(0,250)},
-  possessive_substitution:{count:possessiveSubstitution.length,by_prefix:prefixBreakdown(possessessiveSubstitution),samples:possessiveSubstitution.slice(0,250)},
+  possessive_substitution:{count:possessiveSubstitution.length,by_prefix:prefixBreakdown(possessiveSubstitution),samples:possessiveSubstitution.slice(0,250)},
   auxiliary_tense_errors:{count:auxTenseErrors.length,by_prefix:prefixBreakdown(auxTenseErrors),samples:auxTenseErrors.slice(0,250)},
   collocation_errors:{count:collocationErrors.length,by_prefix:prefixBreakdown(collocationErrors),samples:collocationErrors.slice(0,250)},
   exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number((duplicateRows/rows.length).toFixed(6)),groups_ge5:duplicateGroups.filter(g=>g.count>=5).length,groups_ge10:duplicateGroups.filter(g=>g.count>=10).length,by_family_rows:sortCounts(duplicateFamilyRows),by_family_groups:sortCounts(duplicateFamilyGroups),top:duplicateGroups.slice(0,250)},
