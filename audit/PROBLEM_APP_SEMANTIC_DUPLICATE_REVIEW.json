@@ -1,42 +1,24 @@
 {
-  "generated_at": "2026-08-28T16:13:14.597Z",
+  "generated_at": "2026-08-28T17:17:15.805Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 120,
-  "duplicate_excess": 149,
+  "duplicate_group_count": 110,
+  "duplicate_excess": 139,
   "classification_group_counts": {
-    "same_family_copy": 86,
+    "same_family_copy": 76,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 115,
+    "same_family_copy": 105,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 34,
-    "same_family_same_prefix_excess": 34,
+    "same_family_same_prefix_groups": 24,
+    "same_family_same_prefix_excess": 24,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
   "same_family_same_prefix": [
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Me go running. の誤りを直しなさい。",
-      "a": "I go running.",
-      "ids": [
-        "M3N-00526",
-        "M3N-00580"
-      ]
-    },
     {
       "classification": "same_family_copy",
       "count": 2,
@@ -192,24 +174,6 @@
       "prefixes": [
         "M2Y-COMP"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
-      "a": "Emi is younger than Yuki.",
-      "ids": [
-        "M2Y-COMP-0407",
-        "M2Y-COMP-0446"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
       "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
       "a": "This river is longer than that one.",
       "ids": [
@@ -282,155 +246,11 @@
       "prefixes": [
         "M2Y-COMP"
       ],
-      "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
-      "a": "This room is larger than that one.",
-      "ids": [
-        "M2Y-COMP-0410",
-        "M2Y-COMP-0449"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/文型/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
-      "a": "The exercise made me strong.",
-      "ids": [
-        "M3N-01528",
-        "M3N-01534"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
-      "a": "Do not run in the park.",
-      "ids": [
-        "M3N-00727",
-        "M3N-00829"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
-      "a": "Do not run in the library.",
-      "ids": [
-        "M3N-00721",
-        "M3N-00823"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中2/比較/英作文"
-      ],
-      "prefixes": [
-        "M2Y-COMP"
-      ],
       "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
       "a": "My bike is faster than your bike.",
       "ids": [
         "M2Y-COMP-0413",
         "M2Y-COMP-0452"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Saturday.",
-      "ids": [
-        "M3N-01833",
-        "M3N-01917"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』",
-      "a": "I have lived in this town since Sunday.",
-      "ids": [
-        "M3N-01839",
-        "M3N-01881"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『部屋では走らないでください。』",
-      "a": "Do not run in the room.",
-      "ids": [
-        "M3N-00745",
-        "M3N-00835"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/命令文，there is ～ の文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『駅では走らないでください。』",
-      "a": "Do not run in the station.",
-      "ids": [
-        "M3N-00733",
-        "M3N-00817"
       ]
     },
     {

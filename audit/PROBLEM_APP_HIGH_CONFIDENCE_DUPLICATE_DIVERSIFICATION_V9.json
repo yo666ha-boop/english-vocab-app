@@ -1,0 +1,138 @@
+{
+  "generated_at": "2026-08-28T17:17:15.285Z",
+  "groups_eligible": 23,
+  "groups_touched": 10,
+  "changed_rows": 10,
+  "by_family": {
+    "中2/比較/英作文": 2,
+    "中3/人称代名詞/間違い直し": 1,
+    "中3/命令文，there is ～ の文/英作文": 4,
+    "中3/文型/英作文": 1,
+    "中3/現在完了形（継続），現在完了進行形/英作文": 2
+  },
+  "samples": [
+    {
+      "id": "M2Y-COMP-0446",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
+        "a": "Emi is younger than Yuki."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『英語は数学より人気があります。』",
+        "a": "English is more popular than math."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0449",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
+        "a": "This room is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本よりおもしろい。』",
+        "a": "This book is more interesting than that one."
+      }
+    },
+    {
+      "id": "M3N-00580",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me go running. の誤りを直しなさい。",
+        "a": "I go running."
+      },
+      "after": {
+        "q": "Her likes music. の誤りを直しなさい。",
+        "a": "She likes music."
+      }
+    },
+    {
+      "id": "M3N-00823",
+      "family": "中3/命令文，there is ～ の文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
+        "a": "Do not run in the library."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ここでは写真を撮らないでください。』",
+        "a": "Do not take pictures here."
+      }
+    },
+    {
+      "id": "M3N-00829",
+      "family": "中3/命令文，there is ～ の文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
+        "a": "Do not run in the park."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『窓を開けてください。』",
+        "a": "Please open the window."
+      }
+    },
+    {
+      "id": "M3N-00817",
+      "family": "中3/命令文，there is ～ の文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『駅では走らないでください。』",
+        "a": "Do not run in the station."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『静かにしてください。』",
+        "a": "Please be quiet."
+      }
+    },
+    {
+      "id": "M3N-00835",
+      "family": "中3/命令文，there is ～ の文/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『部屋では走らないでください。』",
+        "a": "Do not run in the room."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『このドアを開けないでください。』",
+        "a": "Do not open this door."
+      }
+    },
+    {
+      "id": "M3N-01534",
+      "family": "中3/文型/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
+        "a": "The exercise made me strong."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その知らせで私はうれしくなりました。』",
+        "a": "The news made me happy."
+      }
+    },
+    {
+      "id": "M3N-01917",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Saturday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は3年間ずっとこの町に住んでいます。』",
+        "a": "I have lived in this town for three years."
+      }
+    },
+    {
+      "id": "M3N-01881",
+      "family": "中3/現在完了形（継続），現在完了進行形/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Sunday."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は5年間ずっとこの町に住んでいます。』",
+        "a": "I have lived in this town for five years."
+      }
+    }
+  ],
+  "duplicate_groups_after": 110,
+  "duplicate_excess_after": 139,
+  "groups_ge5_after": 0
+}
