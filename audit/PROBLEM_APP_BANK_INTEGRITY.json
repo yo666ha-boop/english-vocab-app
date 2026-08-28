@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T13:12:23.814Z",
+  "generated_at": "2026-08-28T14:21:32.486Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -114,30 +114,8 @@
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 337,
+    "count": 263,
     "top": [
-      {
-        "normalized_question": "( ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
-        "count": 4,
-        "answer": "How",
-        "sample_ids": [
-          "M3N-00384",
-          "M3N-00414",
-          "M3N-00444",
-          "M3N-00474"
-        ]
-      },
-      {
-        "normalized_question": "( ) do you study english? 「なぜ」に合う最も適切な語を書きなさい。",
-        "count": 4,
-        "answer": "Why",
-        "sample_ids": [
-          "M3N-00366",
-          "M3N-00396",
-          "M3N-00426",
-          "M3N-00456"
-        ]
-      },
       {
         "normalized_question": "( ) do you want? 「何」に合う最も適切な語を書きなさい。",
         "count": 4,
@@ -147,39 +125,6 @@
           "M3N-00420",
           "M3N-00450",
           "M3N-00480"
-        ]
-      },
-      {
-        "normalized_question": "( ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
-        "count": 4,
-        "answer": "When",
-        "sample_ids": [
-          "M3N-00378",
-          "M3N-00408",
-          "M3N-00438",
-          "M3N-00468"
-        ]
-      },
-      {
-        "normalized_question": "( ) does tom live? 「どこ」に合う最も適切な語を書きなさい。",
-        "count": 4,
-        "answer": "Where",
-        "sample_ids": [
-          "M3N-00372",
-          "M3N-00402",
-          "M3N-00432",
-          "M3N-00462"
-        ]
-      },
-      {
-        "normalized_question": "( he / him / his ) teaches us english. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "He",
-        "sample_ids": [
-          "M3N-00483",
-          "M3N-00519",
-          "M3N-00555",
-          "M3N-00591"
         ]
       },
       {
@@ -194,17 +139,6 @@
         ]
       },
       {
-        "normalized_question": "english is ( ) by many students. (speak) の( )内を正しくしなさい。",
-        "count": 4,
-        "answer": "Spoken",
-        "sample_ids": [
-          "M3N-01561",
-          "M3N-01597",
-          "M3N-01633",
-          "M3N-01669"
-        ]
-      },
-      {
         "normalized_question": "i ( have eaten / eaten / am eaten ) lunch, so i am not hungry now. 正しいものを選びなさい。",
         "count": 4,
         "answer": "Have eaten",
@@ -213,83 +147,6 @@
           "M3N-01740",
           "M3N-01770",
           "M3N-01800"
-        ]
-      },
-      {
-        "normalized_question": "i ( have finished / finished / am finished ) my homework, so i can go out now. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Have finished",
-        "sample_ids": [
-          "M3N-01692",
-          "M3N-01722",
-          "M3N-01752",
-          "M3N-01782"
-        ]
-      },
-      {
-        "normalized_question": "i ( have lost / lost / am lost ) my key, so i cannot open the door now. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Have lost",
-        "sample_ids": [
-          "M3N-01686",
-          "M3N-01716",
-          "M3N-01746",
-          "M3N-01776"
-        ]
-      },
-      {
-        "normalized_question": "i ( have seen / seen / am seen ) this movie, so i know the story. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Have seen",
-        "sample_ids": [
-          "M3N-01698",
-          "M3N-01728",
-          "M3N-01758",
-          "M3N-01788"
-        ]
-      },
-      {
-        "normalized_question": "i ( have written / written / am written ) the letter, so i can send it now. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Have written",
-        "sample_ids": [
-          "M3N-01704",
-          "M3N-01734",
-          "M3N-01764",
-          "M3N-01794"
-        ]
-      },
-      {
-        "normalized_question": "i don't know (a) where does he live (b) where he lives (c) he where. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "B",
-        "sample_ids": [
-          "M3N-02043",
-          "M3N-02067",
-          "M3N-02115",
-          "M3N-02139"
-        ]
-      },
-      {
-        "normalized_question": "i don't know where does he live. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I don't know where he lives.",
-        "sample_ids": [
-          "M3N-02044",
-          "M3N-02068",
-          "M3N-02116",
-          "M3N-02140"
-        ]
-      },
-      {
-        "normalized_question": "i have ate lunch before. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I have eaten lunch before.",
-        "sample_ids": [
-          "M3N-01702",
-          "M3N-01732",
-          "M3N-01762",
-          "M3N-01792"
         ]
       },
       {
@@ -304,72 +161,6 @@
         ]
       },
       {
-        "normalized_question": "i have just ( ) my homework. (finish) の( )内を正しくしなさい。",
-        "count": 4,
-        "answer": "Finished",
-        "sample_ids": [
-          "M3N-01681",
-          "M3N-01717",
-          "M3N-01753",
-          "M3N-01789"
-        ]
-      },
-      {
-        "normalized_question": "i have just ( ) the letter. (write) の( )内を正しくしなさい。",
-        "count": 4,
-        "answer": "Written",
-        "sample_ids": [
-          "M3N-01687",
-          "M3N-01723",
-          "M3N-01759",
-          "M3N-01795"
-        ]
-      },
-      {
-        "normalized_question": "i have saw that movie before. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I have seen that movie before.",
-        "sample_ids": [
-          "M3N-01690",
-          "M3N-01720",
-          "M3N-01750",
-          "M3N-01780"
-        ]
-      },
-      {
-        "normalized_question": "i have went there before. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I have gone there before.",
-        "sample_ids": [
-          "M3N-01684",
-          "M3N-01714",
-          "M3N-01744",
-          "M3N-01774"
-        ]
-      },
-      {
-        "normalized_question": "i have wrote the letter before. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I have written the letter before.",
-        "sample_ids": [
-          "M3N-01696",
-          "M3N-01726",
-          "M3N-01756",
-          "M3N-01786"
-        ]
-      },
-      {
-        "normalized_question": "i know ( he / him / his ) well. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Him",
-        "sample_ids": [
-          "M3N-00489",
-          "M3N-00525",
-          "M3N-00561",
-          "M3N-00597"
-        ]
-      },
-      {
         "normalized_question": "my bike is more fast than your bike. の誤りを直しなさい。",
         "count": 4,
         "answer": "My bike is faster than your bike.",
@@ -378,28 +169,6 @@
           "M2Y-COMP-0450",
           "M2-COMP2-1471",
           "M2-COMP2-1534"
-        ]
-      },
-      {
-        "normalized_question": "open the window, please. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 4,
-        "answer": "窓を開けてください。",
-        "sample_ids": [
-          "M3N-00732",
-          "M3N-00768",
-          "M3N-00804",
-          "M3N-00840"
-        ]
-      },
-      {
-        "normalized_question": "please be quiet. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 4,
-        "answer": "静かにしてください。",
-        "sample_ids": [
-          "M3N-00726",
-          "M3N-00762",
-          "M3N-00798",
-          "M3N-00834"
         ]
       },
       {
@@ -425,28 +194,6 @@
         ]
       },
       {
-        "normalized_question": "the boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
-        "count": 4,
-        "answer": "The boy who plays tennis is kind.",
-        "sample_ids": [
-          "M3N-02170",
-          "M3N-02200",
-          "M3N-02230",
-          "M3N-02260"
-        ]
-      },
-      {
-        "normalized_question": "the girl ( who / which / where ) is playing tennis is ann's friend. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "who",
-        "sample_ids": [
-          "M3N-02161",
-          "M3N-02197",
-          "M3N-02233",
-          "M3N-02269"
-        ]
-      },
-      {
         "normalized_question": "the girl ( who / which / where ) is reading is yuki's friend. 正しいものを選びなさい。",
         "count": 4,
         "answer": "who",
@@ -469,17 +216,6 @@
         ]
       },
       {
-        "normalized_question": "the girl which lives next door is kind. の誤りを、who を使って直しなさい。",
-        "count": 4,
-        "answer": "The girl who lives next door is kind.",
-        "sample_ids": [
-          "M3N-02164",
-          "M3N-02194",
-          "M3N-02224",
-          "M3N-02254"
-        ]
-      },
-      {
         "normalized_question": "the man which works here is kind. の誤りを、who を使って直しなさい。",
         "count": 4,
         "answer": "The man who works here is kind.",
@@ -488,28 +224,6 @@
           "M3N-02212",
           "M3N-02242",
           "M3N-02272"
-        ]
-      },
-      {
-        "normalized_question": "the room is clean by many students. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "The room is cleaned by many students.",
-        "sample_ids": [
-          "M3N-01576",
-          "M3N-01606",
-          "M3N-01636",
-          "M3N-01666"
-        ]
-      },
-      {
-        "normalized_question": "the student which studies english is kind. の誤りを、who を使って直しなさい。",
-        "count": 4,
-        "answer": "The student who studies English is kind.",
-        "sample_ids": [
-          "M3N-02176",
-          "M3N-02206",
-          "M3N-02236",
-          "M3N-02266"
         ]
       },
       {
@@ -524,28 +238,6 @@
         ]
       },
       {
-        "normalized_question": "they call him bob. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 4,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01448",
-          "M3N-01484",
-          "M3N-01520",
-          "M3N-01556"
-        ]
-      },
-      {
-        "normalized_question": "they call him ken. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 4,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01442",
-          "M3N-01478",
-          "M3N-01514",
-          "M3N-01550"
-        ]
-      },
-      {
         "normalized_question": "this bag is more large than that one. の誤りを直しなさい。",
         "count": 4,
         "answer": "This bag is larger than that one.",
@@ -557,17 +249,6 @@
         ]
       },
       {
-        "normalized_question": "this book is ( ) by many students. (read) の( )内を正しくしなさい。",
-        "count": 4,
-        "answer": "Read",
-        "sample_ids": [
-          "M3N-01567",
-          "M3N-01603",
-          "M3N-01639",
-          "M3N-01675"
-        ]
-      },
-      {
         "normalized_question": "this book is more small than that one. の誤りを直しなさい。",
         "count": 4,
         "answer": "This book is smaller than that one.",
@@ -576,17 +257,6 @@
           "M2Y-COMP-0435",
           "M2-COMP2-1456",
           "M2-COMP2-1510"
-        ]
-      },
-      {
-        "normalized_question": "this book is read by many students. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "This book is read by many students.",
-        "sample_ids": [
-          "M3N-01582",
-          "M3N-01612",
-          "M3N-01642",
-          "M3N-01672"
         ]
       },
       {
@@ -612,17 +282,6 @@
         ]
       },
       {
-        "normalized_question": "this letter is write by many students. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "This letter is written by many students.",
-        "sample_ids": [
-          "M3N-01570",
-          "M3N-01600",
-          "M3N-01630",
-          "M3N-01660"
-        ]
-      },
-      {
         "normalized_question": "this question is more easy than that one. の誤りを直しなさい。",
         "count": 4,
         "answer": "This question is easier than that one.",
@@ -642,17 +301,6 @@
           "M2Y-COMP-0447",
           "M2-COMP2-1468",
           "M2-COMP2-1522"
-        ]
-      },
-      {
-        "normalized_question": "this song is sing by many students. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "This song is sung by many students.",
-        "sample_ids": [
-          "M3N-01564",
-          "M3N-01594",
-          "M3N-01624",
-          "M3N-01654"
         ]
       },
       {
@@ -678,28 +326,6 @@
         ]
       },
       {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
-        "count": 4,
-        "answer": "This game is easier than that one.",
-        "sample_ids": [
-          "M3C-01203",
-          "M3C-01215",
-          "M3C-01227",
-          "M3C-01287"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
-        "count": 4,
-        "answer": "Tom is the busiest of the three.",
-        "sample_ids": [
-          "M3C-01202",
-          "M3C-01214",
-          "M3C-01226",
-          "M3C-01286"
-        ]
-      },
-      {
         "normalized_question": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
         "count": 4,
         "answer": "Tom is the kindest of the three.",
@@ -708,17 +334,6 @@
           "M3C-01222",
           "M3C-01234",
           "M3C-01294"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
-        "count": 4,
-        "answer": "Tom is busier than Ken.",
-        "sample_ids": [
-          "M3C-01201",
-          "M3C-01213",
-          "M3C-01225",
-          "M3C-01285"
         ]
       },
       {
@@ -788,39 +403,6 @@
         ]
       },
       {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / reading / book / student / is / a )",
-        "count": 4,
-        "answer": "The student who is reading a book",
-        "sample_ids": [
-          "M3N-02177",
-          "M3N-02207",
-          "M3N-02237",
-          "M3N-02267"
-        ]
-      },
-      {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / riding / bike / boy / is / a )",
-        "count": 4,
-        "answer": "The boy who is riding a bike",
-        "sample_ids": [
-          "M3N-02165",
-          "M3N-02195",
-          "M3N-02225",
-          "M3N-02255"
-        ]
-      },
-      {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / singing / song / girl / is / a )",
-        "count": 4,
-        "answer": "The girl who is singing a song",
-        "sample_ids": [
-          "M3N-02171",
-          "M3N-02201",
-          "M3N-02231",
-          "M3N-02261"
-        ]
-      },
-      {
         "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / taking / picture / woman / is / a )",
         "count": 4,
         "answer": "The woman who is taking a picture",
@@ -840,6 +422,16 @@
           "M3N-02213",
           "M3N-02243",
           "M3N-02273"
+        ]
+      },
+      {
+        "normalized_question": "( ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+        "count": 3,
+        "answer": "How",
+        "sample_ids": [
+          "M3N-00384",
+          "M3N-00444",
+          "M3N-00474"
         ]
       },
       {
@@ -893,16 +485,6 @@
         ]
       },
       {
-        "normalized_question": "i don't know (a) what does she want (b) what she wants (c) she what. 正しいものを選びなさい。",
-        "count": 3,
-        "answer": "B",
-        "sample_ids": [
-          "M3N-02073",
-          "M3N-02097",
-          "M3N-02145"
-        ]
-      },
-      {
         "normalized_question": "i don't know (a) when does she come (b) when she comes (c) she when. 正しいものを選びなさい。",
         "count": 3,
         "answer": "B",
@@ -920,16 +502,6 @@
           "M3N-02085",
           "M3N-02109",
           "M3N-02157"
-        ]
-      },
-      {
-        "normalized_question": "i don't know what does she want. の誤りを直しなさい。",
-        "count": 3,
-        "answer": "I don't know what she wants.",
-        "sample_ids": [
-          "M3N-02074",
-          "M3N-02098",
-          "M3N-02146"
         ]
       },
       {
@@ -953,16 +525,6 @@
         ]
       },
       {
-        "normalized_question": "i have just ( ) lunch. (eat) の( )内を正しくしなさい。",
-        "count": 3,
-        "answer": "Eaten",
-        "sample_ids": [
-          "M3N-01699",
-          "M3N-01735",
-          "M3N-01771"
-        ]
-      },
-      {
         "normalized_question": "i have just ( ) the work. (do) の( )内を正しくしなさい。",
         "count": 3,
         "answer": "Done",
@@ -980,16 +542,6 @@
           "M3N-01711",
           "M3N-01747",
           "M3N-01783"
-        ]
-      },
-      {
-        "normalized_question": "i have just ( ) this movie. (see) の( )内を正しくしなさい。",
-        "count": 3,
-        "answer": "Seen",
-        "sample_ids": [
-          "M3N-01693",
-          "M3N-01729",
-          "M3N-01765"
         ]
       },
       {
@@ -1053,16 +605,6 @@
         ]
       },
       {
-        "normalized_question": "please sit down. 問い:この英文の意味として最も適切なものを書きなさい。",
-        "count": 3,
-        "answer": "座ってください。",
-        "sample_ids": [
-          "M3N-00738",
-          "M3N-00774",
-          "M3N-00810"
-        ]
-      },
-      {
         "normalized_question": "the book ( who / which / where ) ken used yesterday is mine. 正しいものを選びなさい。",
         "count": 3,
         "answer": "which",
@@ -1073,26 +615,6 @@
         ]
       },
       {
-        "normalized_question": "the letter is ( ) by many students. (write) の( )内を正しくしなさい。",
-        "count": 3,
-        "answer": "Written",
-        "sample_ids": [
-          "M3N-01585",
-          "M3N-01621",
-          "M3N-01657"
-        ]
-      },
-      {
-        "normalized_question": "the room is ( ) by many students. (clean) の( )内を正しくしなさい。",
-        "count": 3,
-        "answer": "Cleaned",
-        "sample_ids": [
-          "M3N-01573",
-          "M3N-01609",
-          "M3N-01645"
-        ]
-      },
-      {
         "normalized_question": "they call her aya. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
         "count": 3,
         "answer": "AをBと呼ぶ文",
@@ -1100,16 +622,6 @@
           "M3N-01460",
           "M3N-01496",
           "M3N-01532"
-        ]
-      },
-      {
-        "normalized_question": "they call her emi. は『人に物を与える文』か、『aをbと呼ぶ文』か答えなさい。",
-        "count": 3,
-        "answer": "AをBと呼ぶ文",
-        "sample_ids": [
-          "M3N-01454",
-          "M3N-01490",
-          "M3N-01526"
         ]
       },
       {
@@ -1180,6 +692,421 @@
           "M3N-00495",
           "M3N-00531",
           "M3N-00567"
+        ]
+      },
+      {
+        "normalized_question": "this movie is excitinger than that one. の誤りを直しなさい。",
+        "count": 3,
+        "answer": "This movie is more exciting than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0426",
+          "M2Y-COMP-0462",
+          "M2-COMP2-1501"
+        ]
+      },
+      {
+        "normalized_question": "this river is more long than that one. の誤りを直しなさい。",
+        "count": 3,
+        "answer": "This river is longer than that one.",
+        "sample_ids": [
+          "M2Y-COMP-0420",
+          "M2Y-COMP-0456",
+          "M2-COMP2-1486"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Saturday.",
+        "sample_ids": [
+          "M3N-01833",
+          "M3N-01875",
+          "M3N-01917"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
+        "count": 3,
+        "answer": "I don't know where she lives.",
+        "sample_ids": [
+          "M3N-02076",
+          "M3N-02100",
+          "M3N-02148"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Monday.",
+        "sample_ids": [
+          "M3N-01803",
+          "M3N-01845",
+          "M3N-01887"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Thursday.",
+        "sample_ids": [
+          "M3N-01821",
+          "M3N-01863",
+          "M3N-01905"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Wednesday.",
+        "sample_ids": [
+          "M3N-01815",
+          "M3N-01857",
+          "M3N-01899"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Tuesday.",
+        "sample_ids": [
+          "M3N-01809",
+          "M3N-01851",
+          "M3N-01893"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
+        "count": 3,
+        "answer": "I have lived in this town since Friday.",
+        "sample_ids": [
+          "M3N-01827",
+          "M3N-01869",
+          "M3N-01911"
+        ]
+      },
+      {
+        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( english / fun / learn / is / to )",
+        "count": 3,
+        "answer": "English is fun to learn.",
+        "sample_ids": [
+          "M3N-01224",
+          "M3N-01272",
+          "M3N-01320"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / busier )",
+        "count": 2,
+        "answer": "He is busier than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1469",
+          "M2-COMP2-1517"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / easier )",
+        "count": 2,
+        "answer": "He is easier than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1466",
+          "M2-COMP2-1514"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / faster )",
+        "count": 2,
+        "answer": "He is faster than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1460",
+          "M2-COMP2-1508"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / more beautiful )",
+        "count": 2,
+        "answer": "He is more beautiful than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1475",
+          "M2-COMP2-1523"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / more popular )",
+        "count": 2,
+        "answer": "He is more popular than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1472",
+          "M2-COMP2-1520"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / smaller )",
+        "count": 2,
+        "answer": "He is smaller than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1457",
+          "M2-COMP2-1505"
+        ]
+      },
+      {
+        "normalized_question": "( he / than / ken / is / taller )",
+        "count": 2,
+        "answer": "He is taller than Ken.",
+        "sample_ids": [
+          "M2-COMP2-1454",
+          "M2-COMP2-1502"
+        ]
+      },
+      {
+        "normalized_question": "( when / why / where ) do you go to the library? 「どこへ」に合うものを選びなさい。",
+        "count": 2,
+        "answer": "Where",
+        "sample_ids": [
+          "M3N-00364",
+          "M3N-00466"
+        ]
+      },
+      {
+        "normalized_question": "( when / why / where ) do you go to the park? 「どこへ」に合うものを選びなさい。",
+        "count": 2,
+        "answer": "Where",
+        "sample_ids": [
+          "M3N-00370",
+          "M3N-00472"
+        ]
+      },
+      {
+        "normalized_question": "( when / why / where ) do you go to the room? 「どこへ」に合うものを選びなさい。",
+        "count": 2,
+        "answer": "Where",
+        "sample_ids": [
+          "M3N-00388",
+          "M3N-00478"
+        ]
+      },
+      {
+        "normalized_question": "( when / why / where ) do you go to the station? 「どこへ」に合うものを選びなさい。",
+        "count": 2,
+        "answer": "Where",
+        "sample_ids": [
+          "M3N-00376",
+          "M3N-00460"
+        ]
+      },
+      {
+        "normalized_question": "『その花は美しく見えます。』を英語で書きなさい。",
+        "count": 2,
+        "answer": "The flower looks beautiful.",
+        "sample_ids": [
+          "F1-THLOOK-0063",
+          "F2-VFORM-0093"
+        ]
+      },
+      {
+        "normalized_question": "『右に曲がりなさい。』を英語で書きなさい。",
+        "count": 2,
+        "answer": "Turn right.",
+        "sample_ids": [
+          "R2-IMP-0074",
+          "F1-IMP-0041"
+        ]
+      },
+      {
+        "normalized_question": "aya ( has worked / worked / is work ) here since april. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Has worked",
+        "sample_ids": [
+          "M3N-01848",
+          "M3N-01920"
+        ]
+      },
+      {
+        "normalized_question": "aya enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Playing",
+        "sample_ids": [
+          "M3N-01245",
+          "M3N-01317"
+        ]
+      },
+      {
+        "normalized_question": "aya is tired. を否定文にしなさい。",
+        "count": 2,
+        "answer": "Aya is not tired.",
+        "sample_ids": [
+          "GEN-BE-0454",
+          "M2-BE-0093"
+        ]
+      },
+      {
+        "normalized_question": "aya stayed home because she was tired. 問い:この文の内容として最も適切なものを書きなさい。",
+        "count": 2,
+        "answer": "Ayaは疲れていたので家にいました。",
+        "sample_ids": [
+          "M3N-01128",
+          "M3N-01200"
+        ]
+      },
+      {
+        "normalized_question": "bob ( has worked / worked / is work ) here since april. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Has worked",
+        "sample_ids": [
+          "M3N-01824",
+          "M3N-01896"
+        ]
+      },
+      {
+        "normalized_question": "bob enjoyed ( to listen / listening / listen ) to music. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Listening",
+        "sample_ids": [
+          "M3N-01221",
+          "M3N-01293"
+        ]
+      },
+      {
+        "normalized_question": "bob is tired. を否定文にしなさい。",
+        "count": 2,
+        "answer": "Bob is not tired.",
+        "sample_ids": [
+          "GEN-BE-0381",
+          "M2-BE-0083"
+        ]
+      },
+      {
+        "normalized_question": "bob stayed home because he was tired. 問い:この文の内容として最も適切なものを書きなさい。",
+        "count": 2,
+        "answer": "Bobは疲れていたので家にいました。",
+        "sample_ids": [
+          "M3N-01104",
+          "M3N-01176"
+        ]
+      },
+      {
+        "normalized_question": "call me ( ) you arrive at the library. 「〜するとき」に合う語を書きなさい。",
+        "count": 2,
+        "answer": "When",
+        "sample_ids": [
+          "M3N-01082",
+          "M3N-01184"
+        ]
+      },
+      {
+        "normalized_question": "call me ( ) you arrive at the park. 「〜するとき」に合う語を書きなさい。",
+        "count": 2,
+        "answer": "When",
+        "sample_ids": [
+          "M3N-01088",
+          "M3N-01190"
+        ]
+      },
+      {
+        "normalized_question": "call me ( ) you arrive at the room. 「〜するとき」に合う語を書きなさい。",
+        "count": 2,
+        "answer": "When",
+        "sample_ids": [
+          "M3N-01106",
+          "M3N-01196"
+        ]
+      },
+      {
+        "normalized_question": "call me ( ) you arrive at the station. 「〜するとき」に合う語を書きなさい。",
+        "count": 2,
+        "answer": "When",
+        "sample_ids": [
+          "M3N-01094",
+          "M3N-01178"
+        ]
+      },
+      {
+        "normalized_question": "emi ( has worked / worked / is work ) here since april. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Has worked",
+        "sample_ids": [
+          "M3N-01836",
+          "M3N-01908"
+        ]
+      },
+      {
+        "normalized_question": "emi enjoyed ( to watch / watching / watch ) the movie. 正しいものを選びなさい。",
+        "count": 2,
+        "answer": "Watching",
+        "sample_ids": [
+          "M3N-01233",
+          "M3N-01305"
+        ]
+      },
+      {
+        "normalized_question": "emi has been to osaka once. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has Emi been to Osaka once?",
+        "sample_ids": [
+          "M3C-00275",
+          "M3C-00916"
+        ]
+      },
+      {
+        "normalized_question": "emi stayed home because she was tired. 問い:この文の内容として最も適切なものを書きなさい。",
+        "count": 2,
+        "answer": "Emiは疲れていたので家にいました。",
+        "sample_ids": [
+          "M3N-01116",
+          "M3N-01188"
+        ]
+      },
+      {
+        "normalized_question": "have you ever ( ) to the room? (be) の( )内を正しくしなさい。",
+        "count": 2,
+        "answer": "Been",
+        "sample_ids": [
+          "M3N-01706",
+          "M3N-01796"
+        ]
+      },
+      {
+        "normalized_question": "he has been playing tennis for two hours. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has he been playing tennis for two hours?",
+        "sample_ids": [
+          "M3C-00419",
+          "M3C-00937"
+        ]
+      },
+      {
+        "normalized_question": "he has been to kyoto once. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has he been to Kyoto once?",
+        "sample_ids": [
+          "M3C-00415",
+          "M3C-00693"
+        ]
+      },
+      {
+        "normalized_question": "he has been using this computer since this morning. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Has he been using this computer since this morning?",
+        "sample_ids": [
+          "M3C-00420",
+          "M3C-01178"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since eight years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for eight years.",
+        "sample_ids": [
+          "M3N-01840",
+          "M3N-01894"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since five years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for five years.",
+        "sample_ids": [
+          "M3N-01822",
+          "M3N-01876"
         ]
       }
     ]
