@@ -16,6 +16,9 @@ on:
       - 'tools/diversify_problem_high_confidence_duplicate_families_v2.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families_v3.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families_v4.mjs'
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v5.mjs'
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v6.mjs'
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v7.mjs'
 
 permissions:
   contents: write
