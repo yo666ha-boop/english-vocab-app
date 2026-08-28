@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T11:17:54.643Z",
+  "generated_at": "2026-08-28T11:25:34.359Z",
   "groups": [
     {
       "prefix": "M3C",
@@ -134,346 +134,6 @@
           "id": "M3N-01474",
           "jp": "その知らせは私をfreeにしました。",
           "a": "The news made me free."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "疑問詞",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-00361",
-          "jp": "Iはいつthe libraryに着きましたか。",
-          "a": "When did I arrive at the library?"
-        },
-        {
-          "id": "M3N-00367",
-          "jp": "Youはいつthe parkに着きましたか。",
-          "a": "When did you arrive at the park?"
-        },
-        {
-          "id": "M3N-00373",
-          "jp": "Heはいつthe stationに着きましたか。",
-          "a": "When did he arrive at the station?"
-        },
-        {
-          "id": "M3N-00379",
-          "jp": "Sheはいつthe schoolに着きましたか。",
-          "a": "When did she arrive at the school?"
-        },
-        {
-          "id": "M3N-00385",
-          "jp": "Weはいつthe roomに着きましたか。",
-          "a": "When did we arrive at the room?"
-        },
-        {
-          "id": "M3N-00391",
-          "jp": "Theyはいつthe hospitalに着きましたか。",
-          "a": "When did they arrive at the hospital?"
-        },
-        {
-          "id": "M3N-00397",
-          "jp": "My fatherはいつthe museumに着きましたか。",
-          "a": "When did my father arrive at the museum?"
-        },
-        {
-          "id": "M3N-00403",
-          "jp": "My motherはいつthe storeに着きましたか。",
-          "a": "When did my mother arrive at the store?"
-        },
-        {
-          "id": "M3N-00409",
-          "jp": "My brotherはいつthe classroomに着きましたか。",
-          "a": "When did my brother arrive at the classroom?"
-        },
-        {
-          "id": "M3N-00415",
-          "jp": "My sisterはいつthe kitchenに着きましたか。",
-          "a": "When did my sister arrive at the kitchen?"
-        },
-        {
-          "id": "M3N-00421",
-          "jp": "Kenはいつthe gymに着きましたか。",
-          "a": "When did Ken arrive at the gym?"
-        },
-        {
-          "id": "M3N-00427",
-          "jp": "Yukiはいつthe poolに着きましたか。",
-          "a": "When did Yuki arrive at the pool?"
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "人称代名詞",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-00485",
-          "jp": "そのbookは彼らのものです。",
-          "a": "The book is theirs."
-        },
-        {
-          "id": "M3N-00491",
-          "jp": "そのpenは彼らのものです。",
-          "a": "The pen is theirs."
-        },
-        {
-          "id": "M3N-00497",
-          "jp": "そのbagは彼らのものです。",
-          "a": "The bag is theirs."
-        },
-        {
-          "id": "M3N-00503",
-          "jp": "そのpictureは彼らのものです。",
-          "a": "The picture is theirs."
-        },
-        {
-          "id": "M3N-00509",
-          "jp": "そのdeskは彼らのものです。",
-          "a": "The desk is theirs."
-        },
-        {
-          "id": "M3N-00515",
-          "jp": "そのchairは彼らのものです。",
-          "a": "The chair is theirs."
-        },
-        {
-          "id": "M3N-00521",
-          "jp": "そのtableは彼らのものです。",
-          "a": "The table is theirs."
-        },
-        {
-          "id": "M3N-00527",
-          "jp": "そのbikeは彼らのものです。",
-          "a": "The bike is theirs."
-        },
-        {
-          "id": "M3N-00533",
-          "jp": "そのdogは彼らのものです。",
-          "a": "The dog is theirs."
-        },
-        {
-          "id": "M3N-00539",
-          "jp": "そのcatは彼らのものです。",
-          "a": "The cat is theirs."
-        },
-        {
-          "id": "M3N-00545",
-          "jp": "そのwindowは彼らのものです。",
-          "a": "The window is theirs."
-        },
-        {
-          "id": "M3N-00551",
-          "jp": "そのdoorは彼らのものです。",
-          "a": "The door is theirs."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "進行形",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-00605",
-          "jp": "そのとき、Iはtennisをしていました。",
-          "a": "I was playing tennis then."
-        },
-        {
-          "id": "M3N-00611",
-          "jp": "そのとき、Youはsoccerをしていました。",
-          "a": "You were playing soccer then."
-        },
-        {
-          "id": "M3N-00617",
-          "jp": "そのとき、Heはbaseballをしていました。",
-          "a": "He was playing baseball then."
-        },
-        {
-          "id": "M3N-00623",
-          "jp": "そのとき、Sheはbasketballをしていました。",
-          "a": "She was playing basketball then."
-        },
-        {
-          "id": "M3N-00629",
-          "jp": "そのとき、Weはvolleyballをしていました。",
-          "a": "We were playing volleyball then."
-        },
-        {
-          "id": "M3N-00635",
-          "jp": "そのとき、Theyはbadmintonをしていました。",
-          "a": "They were playing badminton then."
-        },
-        {
-          "id": "M3N-00641",
-          "jp": "そのとき、My fatherはswimmingをしていました。",
-          "a": "My father was playing swimming then."
-        },
-        {
-          "id": "M3N-00647",
-          "jp": "そのとき、My motherはrunningをしていました。",
-          "a": "My mother was playing running then."
-        },
-        {
-          "id": "M3N-00653",
-          "jp": "そのとき、My brotherはskiingをしていました。",
-          "a": "My brother was playing skiing then."
-        },
-        {
-          "id": "M3N-00659",
-          "jp": "そのとき、My sisterはskatingをしていました。",
-          "a": "My sister was playing skating then."
-        },
-        {
-          "id": "M3N-00665",
-          "jp": "そのとき、Kenはsoccerをしていました。",
-          "a": "Ken was playing soccer then."
-        },
-        {
-          "id": "M3N-00671",
-          "jp": "そのとき、Yukiはtennisをしていました。",
-          "a": "Yuki was playing tennis then."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "命令文，there is ～ の文",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-00721",
-          "jp": "このthe libraryでは走らないでください。",
-          "a": "Do not run in the library."
-        },
-        {
-          "id": "M3N-00727",
-          "jp": "このthe parkでは走らないでください。",
-          "a": "Do not run in the park."
-        },
-        {
-          "id": "M3N-00733",
-          "jp": "このthe stationでは走らないでください。",
-          "a": "Do not run in the station."
-        },
-        {
-          "id": "M3N-00739",
-          "jp": "このthe schoolでは走らないでください。",
-          "a": "Do not run in the school."
-        },
-        {
-          "id": "M3N-00745",
-          "jp": "このthe roomでは走らないでください。",
-          "a": "Do not run in the room."
-        },
-        {
-          "id": "M3N-00751",
-          "jp": "このthe hospitalでは走らないでください。",
-          "a": "Do not run in the hospital."
-        },
-        {
-          "id": "M3N-00757",
-          "jp": "このthe museumでは走らないでください。",
-          "a": "Do not run in the museum."
-        },
-        {
-          "id": "M3N-00763",
-          "jp": "このthe storeでは走らないでください。",
-          "a": "Do not run in the store."
-        },
-        {
-          "id": "M3N-00769",
-          "jp": "このthe classroomでは走らないでください。",
-          "a": "Do not run in the classroom."
-        },
-        {
-          "id": "M3N-00775",
-          "jp": "このthe kitchenでは走らないでください。",
-          "a": "Do not run in the kitchen."
-        },
-        {
-          "id": "M3N-00781",
-          "jp": "このthe gymでは走らないでください。",
-          "a": "Do not run in the gym."
-        },
-        {
-          "id": "M3N-00787",
-          "jp": "このthe poolでは走らないでください。",
-          "a": "Do not run in the pool."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "未来の文",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-00845",
-          "jp": "Iは来年the libraryへ行くつもりです。",
-          "a": "I am going to go to the library next year."
-        },
-        {
-          "id": "M3N-00851",
-          "jp": "Youは来年the parkへ行くつもりです。",
-          "a": "You are going to go to the park next year."
-        },
-        {
-          "id": "M3N-00857",
-          "jp": "Heは来年the stationへ行くつもりです。",
-          "a": "He is going to go to the station next year."
-        },
-        {
-          "id": "M3N-00863",
-          "jp": "Sheは来年the schoolへ行くつもりです。",
-          "a": "She is going to go to the school next year."
-        },
-        {
-          "id": "M3N-00869",
-          "jp": "Weは来年the roomへ行くつもりです。",
-          "a": "We are going to go to the room next year."
-        },
-        {
-          "id": "M3N-00875",
-          "jp": "Theyは来年the hospitalへ行くつもりです。",
-          "a": "They are going to go to the hospital next year."
-        },
-        {
-          "id": "M3N-00881",
-          "jp": "My fatherは来年the museumへ行くつもりです。",
-          "a": "My father is going to go to the museum next year."
-        },
-        {
-          "id": "M3N-00887",
-          "jp": "My motherは来年the storeへ行くつもりです。",
-          "a": "My mother is going to go to the store next year."
-        },
-        {
-          "id": "M3N-00893",
-          "jp": "My brotherは来年the classroomへ行くつもりです。",
-          "a": "My brother is going to go to the classroom next year."
-        },
-        {
-          "id": "M3N-00899",
-          "jp": "My sisterは来年the kitchenへ行くつもりです。",
-          "a": "My sister is going to go to the kitchen next year."
-        },
-        {
-          "id": "M3N-00905",
-          "jp": "Kenは来年the gymへ行くつもりです。",
-          "a": "Ken is going to go to the gym next year."
-        },
-        {
-          "id": "M3N-00911",
-          "jp": "Yukiは来年the poolへ行くつもりです。",
-          "a": "Yuki is going to go to the pool next year."
         }
       ]
     },
@@ -752,6 +412,74 @@
     {
       "prefix": "M3N",
       "grade": "中3",
+      "category": "疑問詞",
+      "count": 17,
+      "samples": [
+        {
+          "id": "M3N-00367",
+          "jp": "Youはいつthe parkに着きましたか。",
+          "a": "When did you arrive at the park?"
+        },
+        {
+          "id": "M3N-00373",
+          "jp": "Heはいつthe stationに着きましたか。",
+          "a": "When did he arrive at the station?"
+        },
+        {
+          "id": "M3N-00379",
+          "jp": "Sheはいつthe schoolに着きましたか。",
+          "a": "When did she arrive at the school?"
+        },
+        {
+          "id": "M3N-00385",
+          "jp": "Weはいつthe roomに着きましたか。",
+          "a": "When did we arrive at the room?"
+        },
+        {
+          "id": "M3N-00391",
+          "jp": "Theyはいつthe hospitalに着きましたか。",
+          "a": "When did they arrive at the hospital?"
+        },
+        {
+          "id": "M3N-00397",
+          "jp": "My fatherはいつthe museumに着きましたか。",
+          "a": "When did my father arrive at the museum?"
+        },
+        {
+          "id": "M3N-00403",
+          "jp": "My motherはいつthe storeに着きましたか。",
+          "a": "When did my mother arrive at the store?"
+        },
+        {
+          "id": "M3N-00409",
+          "jp": "My brotherはいつthe classroomに着きましたか。",
+          "a": "When did my brother arrive at the classroom?"
+        },
+        {
+          "id": "M3N-00415",
+          "jp": "My sisterはいつthe kitchenに着きましたか。",
+          "a": "When did my sister arrive at the kitchen?"
+        },
+        {
+          "id": "M3N-00433",
+          "jp": "Tomはいつthe officeに着きましたか。",
+          "a": "When did Tom arrive at the office?"
+        },
+        {
+          "id": "M3N-00439",
+          "jp": "Emiはいつthe zooに着きましたか。",
+          "a": "When did Emi arrive at the zoo?"
+        },
+        {
+          "id": "M3N-00445",
+          "jp": "The boyはいつthe townに着きましたか。",
+          "a": "When did the boy arrive at the town?"
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
       "category": "助動詞",
       "count": 16,
       "samples": [
@@ -1017,64 +745,6 @@
       ]
     },
     {
-      "prefix": "GEN-PREP",
-      "grade": "中1",
-      "category": "前置詞",
-      "count": 10,
-      "samples": [
-        {
-          "id": "GEN-PREP-1243",
-          "jp": "the book は on the desk にあります。",
-          "a": "The book is on the desk."
-        },
-        {
-          "id": "GEN-PREP-1246",
-          "jp": "the cat は under the chair にあります。",
-          "a": "The cat is under the chair."
-        },
-        {
-          "id": "GEN-PREP-1249",
-          "jp": "the ball は in the box にあります。",
-          "a": "The ball is in the box."
-        },
-        {
-          "id": "GEN-PREP-1252",
-          "jp": "the dog は by the door にあります。",
-          "a": "The dog is by the door."
-        },
-        {
-          "id": "GEN-PREP-1255",
-          "jp": "the bag は behind the chair にあります。",
-          "a": "The bag is behind the chair."
-        },
-        {
-          "id": "GEN-PREP-1258",
-          "jp": "the notebook は in my bag にあります。",
-          "a": "The notebook is in my bag."
-        },
-        {
-          "id": "GEN-PREP-1261",
-          "jp": "the picture は on the wall にあります。",
-          "a": "The picture is on the wall."
-        },
-        {
-          "id": "GEN-PREP-1264",
-          "jp": "the shoes は under the desk にあります。",
-          "a": "The shoes are under the desk."
-        },
-        {
-          "id": "GEN-PREP-1267",
-          "jp": "the pen は in the pencil case にあります。",
-          "a": "The pen is in the pencil case."
-        },
-        {
-          "id": "GEN-PREP-1270",
-          "jp": "the bike は by the tree にあります。",
-          "a": "The bike is by the tree."
-        }
-      ]
-    },
-    {
       "prefix": "M2-COMP2",
       "grade": "中2",
       "category": "比較",
@@ -1123,6 +793,77 @@
       ]
     },
     {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "人称代名詞",
+      "count": 7,
+      "samples": [
+        {
+          "id": "M3N-00557",
+          "jp": "そのflowerは彼らのものです。",
+          "a": "The flower is theirs."
+        },
+        {
+          "id": "M3N-00563",
+          "jp": "そのtreeは彼らのものです。",
+          "a": "The tree is theirs."
+        },
+        {
+          "id": "M3N-00569",
+          "jp": "そのboxは彼らのものです。",
+          "a": "The box is theirs."
+        },
+        {
+          "id": "M3N-00581",
+          "jp": "そのcarは彼らのものです。",
+          "a": "The car is theirs."
+        },
+        {
+          "id": "M3N-00587",
+          "jp": "そのcameraは彼らのものです。",
+          "a": "The camera is theirs."
+        },
+        {
+          "id": "M3N-00593",
+          "jp": "そのcomputerは彼らのものです。",
+          "a": "The computer is theirs."
+        },
+        {
+          "id": "M3N-00599",
+          "jp": "そのgameは彼らのものです。",
+          "a": "The game is theirs."
+        }
+      ]
+    },
+    {
+      "prefix": "GEN-PREP",
+      "grade": "中1",
+      "category": "前置詞",
+      "count": 4,
+      "samples": [
+        {
+          "id": "GEN-PREP-1249",
+          "jp": "ボールはboxの中にあります。",
+          "a": "The ball is in the box."
+        },
+        {
+          "id": "GEN-PREP-1261",
+          "jp": "写真はwallの上にあります。",
+          "a": "The picture is on the wall."
+        },
+        {
+          "id": "GEN-PREP-1267",
+          "jp": "ペンはpencil caseの中にあります。",
+          "a": "The pen is in the pencil case."
+        },
+        {
+          "id": "GEN-PREP-1270",
+          "jp": "自転車はtreeのそばにあります。",
+          "a": "The bike is by the tree."
+        }
+      ]
+    },
+    {
       "prefix": "M2-COMP",
       "grade": "中2",
       "category": "比較",
@@ -1147,6 +888,50 @@
           "id": "M2-COMP-0678",
           "jp": "My friend は Ken より 人気がある。",
           "a": "My friend is more popular than Ken."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "未来の文",
+      "count": 2,
+      "samples": [
+        {
+          "id": "M3N-00917",
+          "jp": "Tomは来年the officeへ行くつもりです。",
+          "a": "Tom is going to go to the office next year."
+        },
+        {
+          "id": "M3N-00923",
+          "jp": "Emiは来年the zooへ行くつもりです。",
+          "a": "Emi is going to go to the zoo next year."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "進行形",
+      "count": 1,
+      "samples": [
+        {
+          "id": "M3N-00683",
+          "jp": "そのとき、Emiはbasketballをしていました。",
+          "a": "Emi was playing basketball then."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "命令文，there is ～ の文",
+      "count": 1,
+      "samples": [
+        {
+          "id": "M3N-00793",
+          "jp": "このthe officeでは走らないでください。",
+          "a": "Do not run in the office."
         }
       ]
     }

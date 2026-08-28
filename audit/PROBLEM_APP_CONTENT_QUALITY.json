@@ -1,185 +1,75 @@
 {
-  "generated_at": "2026-08-28T11:23:44.036Z",
+  "generated_at": "2026-08-28T11:25:34.275Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "hybrid_japanese_translation:421",
-    "auxiliary_tense_error:6",
-    "collocation_error:30",
+    "hybrid_japanese_translation:343",
     "duplicate_qa_row_ratio:0.3996"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
-    "count": 421,
+    "count": 343,
     "by_prefix": {
-      "M3N": 279,
+      "M3N": 207,
       "M3C": 120,
-      "GEN-PREP": 10,
       "M2-COMP2": 8,
+      "GEN-PREP": 4,
       "M2-COMP": 4
     },
     "by_grade_category_type": {
       "中3/比較/英作文": 140,
       "中3/文型/英作文": 40,
-      "中3/人称代名詞/英作文": 20,
       "中3/受動態/英作文": 20,
-      "中3/命令文，there is ～ の文/英作文": 20,
-      "中3/未来の文/英作文": 20,
       "中3/現在完了形（完了・経験）/英作文": 20,
       "中3/現在完了形（継続），現在完了進行形/英作文": 20,
-      "中3/疑問詞/英作文": 20,
-      "中3/進行形/英作文": 20,
+      "中3/疑問詞/英作文": 17,
       "中3/不定詞①，動名詞/英作文": 16,
       "中3/助動詞/英作文": 16,
       "中3/接続詞/英作文": 16,
       "中2/比較/英作文": 12,
       "中3/関係代名詞/英作文": 11,
-      "中1/前置詞/英作文": 10
+      "中3/人称代名詞/英作文": 7,
+      "中1/前置詞/英作文": 4,
+      "中3/未来の文/英作文": 2,
+      "中3/命令文，there is ～ の文/英作文": 1,
+      "中3/進行形/英作文": 1
     },
     "samples": [
-      {
-        "id": "GEN-PREP-1243",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the book は on the desk にあります。",
-        "english_tokens": [
-          "the",
-          "book",
-          "on",
-          "the",
-          "desk"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the book は on the desk にあります。』",
-        "a": "The book is on the desk."
-      },
-      {
-        "id": "GEN-PREP-1246",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the cat は under the chair にあります。",
-        "english_tokens": [
-          "the",
-          "cat",
-          "under",
-          "the",
-          "chair"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the cat は under the chair にあります。』",
-        "a": "The cat is under the chair."
-      },
       {
         "id": "GEN-PREP-1249",
         "grade": "中1",
         "category": "前置詞",
         "type": "英作文",
-        "source_japanese": "the ball は in the box にあります。",
+        "source_japanese": "ボールはboxの中にあります。",
         "english_tokens": [
-          "the",
-          "ball",
-          "in",
-          "the",
           "box"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『the ball は in the box にあります。』",
+        "q": "次の日本語に合う英文を書きなさい。『ボールはboxの中にあります。』",
         "a": "The ball is in the box."
-      },
-      {
-        "id": "GEN-PREP-1252",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the dog は by the door にあります。",
-        "english_tokens": [
-          "the",
-          "dog",
-          "by",
-          "the",
-          "door"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the dog は by the door にあります。』",
-        "a": "The dog is by the door."
-      },
-      {
-        "id": "GEN-PREP-1255",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the bag は behind the chair にあります。",
-        "english_tokens": [
-          "the",
-          "bag",
-          "behind",
-          "the",
-          "chair"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the bag は behind the chair にあります。』",
-        "a": "The bag is behind the chair."
-      },
-      {
-        "id": "GEN-PREP-1258",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the notebook は in my bag にあります。",
-        "english_tokens": [
-          "the",
-          "notebook",
-          "in",
-          "my",
-          "bag"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the notebook は in my bag にあります。』",
-        "a": "The notebook is in my bag."
       },
       {
         "id": "GEN-PREP-1261",
         "grade": "中1",
         "category": "前置詞",
         "type": "英作文",
-        "source_japanese": "the picture は on the wall にあります。",
+        "source_japanese": "写真はwallの上にあります。",
         "english_tokens": [
-          "the",
-          "picture",
-          "on",
-          "the",
           "wall"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『the picture は on the wall にあります。』",
+        "q": "次の日本語に合う英文を書きなさい。『写真はwallの上にあります。』",
         "a": "The picture is on the wall."
-      },
-      {
-        "id": "GEN-PREP-1264",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "the shoes は under the desk にあります。",
-        "english_tokens": [
-          "the",
-          "shoes",
-          "under",
-          "the",
-          "desk"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『the shoes は under the desk にあります。』",
-        "a": "The shoes are under the desk."
       },
       {
         "id": "GEN-PREP-1267",
         "grade": "中1",
         "category": "前置詞",
         "type": "英作文",
-        "source_japanese": "the pen は in the pencil case にあります。",
+        "source_japanese": "ペンはpencil caseの中にあります。",
         "english_tokens": [
-          "the",
-          "pen",
-          "in",
-          "the",
           "pencil",
           "case"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『the pen は in the pencil case にあります。』",
+        "q": "次の日本語に合う英文を書きなさい。『ペンはpencil caseの中にあります。』",
         "a": "The pen is in the pencil case."
       },
       {
@@ -187,15 +77,11 @@
         "grade": "中1",
         "category": "前置詞",
         "type": "英作文",
-        "source_japanese": "the bike は by the tree にあります。",
+        "source_japanese": "自転車はtreeのそばにあります。",
         "english_tokens": [
-          "the",
-          "bike",
-          "by",
-          "the",
           "tree"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『the bike は by the tree にあります。』",
+        "q": "次の日本語に合う英文を書きなさい。『自転車はtreeのそばにあります。』",
         "a": "The bike is by the tree."
       },
       {
@@ -2035,20 +1921,6 @@
         "a": "That park is the best of the three."
       },
       {
-        "id": "M3N-00361",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Iはいつthe libraryに着きましたか。",
-        "english_tokens": [
-          "I",
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Iはいつthe libraryに着きましたか。』",
-        "a": "When did I arrive at the library?"
-      },
-      {
         "id": "M3N-00367",
         "grade": "中3",
         "category": "疑問詞",
@@ -2179,32 +2051,6 @@
         "a": "When did my sister arrive at the kitchen?"
       },
       {
-        "id": "M3N-00421",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Kenはいつthe gymに着きましたか。",
-        "english_tokens": [
-          "the",
-          "gym"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Kenはいつthe gymに着きましたか。』",
-        "a": "When did Ken arrive at the gym?"
-      },
-      {
-        "id": "M3N-00427",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Yukiはいつthe poolに着きましたか。",
-        "english_tokens": [
-          "the",
-          "pool"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Yukiはいつthe poolに着きましたか。』",
-        "a": "When did Yuki arrive at the pool?"
-      },
-      {
         "id": "M3N-00433",
         "grade": "中3",
         "category": "疑問詞",
@@ -2321,150 +2167,6 @@
         "a": "When did this dog arrive at the room?"
       },
       {
-        "id": "M3N-00485",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのbookは彼らのものです。",
-        "english_tokens": [
-          "book"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのbookは彼らのものです。』",
-        "a": "The book is theirs."
-      },
-      {
-        "id": "M3N-00491",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのpenは彼らのものです。",
-        "english_tokens": [
-          "pen"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのpenは彼らのものです。』",
-        "a": "The pen is theirs."
-      },
-      {
-        "id": "M3N-00497",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのbagは彼らのものです。",
-        "english_tokens": [
-          "bag"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのbagは彼らのものです。』",
-        "a": "The bag is theirs."
-      },
-      {
-        "id": "M3N-00503",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのpictureは彼らのものです。",
-        "english_tokens": [
-          "picture"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのpictureは彼らのものです。』",
-        "a": "The picture is theirs."
-      },
-      {
-        "id": "M3N-00509",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのdeskは彼らのものです。",
-        "english_tokens": [
-          "desk"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのdeskは彼らのものです。』",
-        "a": "The desk is theirs."
-      },
-      {
-        "id": "M3N-00515",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのchairは彼らのものです。",
-        "english_tokens": [
-          "chair"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのchairは彼らのものです。』",
-        "a": "The chair is theirs."
-      },
-      {
-        "id": "M3N-00521",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのtableは彼らのものです。",
-        "english_tokens": [
-          "table"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのtableは彼らのものです。』",
-        "a": "The table is theirs."
-      },
-      {
-        "id": "M3N-00527",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのbikeは彼らのものです。",
-        "english_tokens": [
-          "bike"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのbikeは彼らのものです。』",
-        "a": "The bike is theirs."
-      },
-      {
-        "id": "M3N-00533",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのdogは彼らのものです。",
-        "english_tokens": [
-          "dog"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのdogは彼らのものです。』",
-        "a": "The dog is theirs."
-      },
-      {
-        "id": "M3N-00539",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのcatは彼らのものです。",
-        "english_tokens": [
-          "cat"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのcatは彼らのものです。』",
-        "a": "The cat is theirs."
-      },
-      {
-        "id": "M3N-00545",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのwindowは彼らのものです。",
-        "english_tokens": [
-          "window"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのwindowは彼らのものです。』",
-        "a": "The window is theirs."
-      },
-      {
-        "id": "M3N-00551",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのdoorは彼らのものです。",
-        "english_tokens": [
-          "door"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのdoorは彼らのものです。』",
-        "a": "The door is theirs."
-      },
-      {
         "id": "M3N-00557",
         "grade": "中3",
         "category": "人称代名詞",
@@ -2499,18 +2201,6 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『そのboxは彼らのものです。』",
         "a": "The box is theirs."
-      },
-      {
-        "id": "M3N-00575",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのballは彼らのものです。",
-        "english_tokens": [
-          "ball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのballは彼らのものです。』",
-        "a": "The ball is theirs."
       },
       {
         "id": "M3N-00581",
@@ -2561,176 +2251,6 @@
         "a": "The game is theirs."
       },
       {
-        "id": "M3N-00605",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Iはtennisをしていました。",
-        "english_tokens": [
-          "I",
-          "tennis"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Iはtennisをしていました。』",
-        "a": "I was playing tennis then."
-      },
-      {
-        "id": "M3N-00611",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Youはsoccerをしていました。",
-        "english_tokens": [
-          "You",
-          "soccer"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Youはsoccerをしていました。』",
-        "a": "You were playing soccer then."
-      },
-      {
-        "id": "M3N-00617",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Heはbaseballをしていました。",
-        "english_tokens": [
-          "He",
-          "baseball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Heはbaseballをしていました。』",
-        "a": "He was playing baseball then."
-      },
-      {
-        "id": "M3N-00623",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Sheはbasketballをしていました。",
-        "english_tokens": [
-          "She",
-          "basketball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Sheはbasketballをしていました。』",
-        "a": "She was playing basketball then."
-      },
-      {
-        "id": "M3N-00629",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Weはvolleyballをしていました。",
-        "english_tokens": [
-          "We",
-          "volleyball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Weはvolleyballをしていました。』",
-        "a": "We were playing volleyball then."
-      },
-      {
-        "id": "M3N-00635",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Theyはbadmintonをしていました。",
-        "english_tokens": [
-          "They",
-          "badminton"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Theyはbadmintonをしていました。』",
-        "a": "They were playing badminton then."
-      },
-      {
-        "id": "M3N-00641",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、My fatherはswimmingをしていました。",
-        "english_tokens": [
-          "My",
-          "father",
-          "swimming"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My fatherはswimmingをしていました。』",
-        "a": "My father was playing swimming then."
-      },
-      {
-        "id": "M3N-00647",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、My motherはrunningをしていました。",
-        "english_tokens": [
-          "My",
-          "mother",
-          "running"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My motherはrunningをしていました。』",
-        "a": "My mother was playing running then."
-      },
-      {
-        "id": "M3N-00653",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、My brotherはskiingをしていました。",
-        "english_tokens": [
-          "My",
-          "brother",
-          "skiing"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My brotherはskiingをしていました。』",
-        "a": "My brother was playing skiing then."
-      },
-      {
-        "id": "M3N-00659",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、My sisterはskatingをしていました。",
-        "english_tokens": [
-          "My",
-          "sister",
-          "skating"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My sisterはskatingをしていました。』",
-        "a": "My sister was playing skating then."
-      },
-      {
-        "id": "M3N-00665",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Kenはsoccerをしていました。",
-        "english_tokens": [
-          "soccer"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Kenはsoccerをしていました。』",
-        "a": "Ken was playing soccer then."
-      },
-      {
-        "id": "M3N-00671",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Yukiはtennisをしていました。",
-        "english_tokens": [
-          "tennis"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Yukiはtennisをしていました。』",
-        "a": "Yuki was playing tennis then."
-      },
-      {
-        "id": "M3N-00677",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Tomはbaseballをしていました。",
-        "english_tokens": [
-          "baseball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Tomはbaseballをしていました。』",
-        "a": "Tom was playing baseball then."
-      },
-      {
         "id": "M3N-00683",
         "grade": "中3",
         "category": "進行形",
@@ -2741,246 +2261,6 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『そのとき、Emiはbasketballをしていました。』",
         "a": "Emi was playing basketball then."
-      },
-      {
-        "id": "M3N-00689",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、The boyはvolleyballをしていました。",
-        "english_tokens": [
-          "The",
-          "boy",
-          "volleyball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The boyはvolleyballをしていました。』",
-        "a": "The boy was playing volleyball then."
-      },
-      {
-        "id": "M3N-00695",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、The girlはbadmintonをしていました。",
-        "english_tokens": [
-          "The",
-          "girl",
-          "badminton"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The girlはbadmintonをしていました。』",
-        "a": "The girl was playing badminton then."
-      },
-      {
-        "id": "M3N-00701",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、The studentはrunningをしていました。",
-        "english_tokens": [
-          "The",
-          "student",
-          "running"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The studentはrunningをしていました。』",
-        "a": "The student was playing running then."
-      },
-      {
-        "id": "M3N-00707",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、The teacherはswimmingをしていました。",
-        "english_tokens": [
-          "The",
-          "teacher",
-          "swimming"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The teacherはswimmingをしていました。』",
-        "a": "The teacher was playing swimming then."
-      },
-      {
-        "id": "M3N-00713",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Our teamはsoccerをしていました。",
-        "english_tokens": [
-          "Our",
-          "team",
-          "soccer"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Our teamはsoccerをしていました。』",
-        "a": "Our team was playing soccer then."
-      },
-      {
-        "id": "M3N-00719",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、This dogはtennisをしていました。",
-        "english_tokens": [
-          "This",
-          "dog",
-          "tennis"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、This dogはtennisをしていました。』",
-        "a": "This dog was playing tennis then."
-      },
-      {
-        "id": "M3N-00721",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe libraryでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe libraryでは走らないでください。』",
-        "a": "Do not run in the library."
-      },
-      {
-        "id": "M3N-00727",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe parkでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe parkでは走らないでください。』",
-        "a": "Do not run in the park."
-      },
-      {
-        "id": "M3N-00733",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe stationでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe stationでは走らないでください。』",
-        "a": "Do not run in the station."
-      },
-      {
-        "id": "M3N-00739",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe schoolでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "school"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe schoolでは走らないでください。』",
-        "a": "Do not run in the school."
-      },
-      {
-        "id": "M3N-00745",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe roomでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe roomでは走らないでください。』",
-        "a": "Do not run in the room."
-      },
-      {
-        "id": "M3N-00751",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe hospitalでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "hospital"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe hospitalでは走らないでください。』",
-        "a": "Do not run in the hospital."
-      },
-      {
-        "id": "M3N-00757",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe museumでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "museum"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe museumでは走らないでください。』",
-        "a": "Do not run in the museum."
-      },
-      {
-        "id": "M3N-00763",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe storeでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "store"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe storeでは走らないでください。』",
-        "a": "Do not run in the store."
-      },
-      {
-        "id": "M3N-00769",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe classroomでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "classroom"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe classroomでは走らないでください。』",
-        "a": "Do not run in the classroom."
-      },
-      {
-        "id": "M3N-00775",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe kitchenでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "kitchen"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe kitchenでは走らないでください。』",
-        "a": "Do not run in the kitchen."
-      },
-      {
-        "id": "M3N-00781",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe gymでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "gym"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe gymでは走らないでください。』",
-        "a": "Do not run in the gym."
-      },
-      {
-        "id": "M3N-00787",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe poolでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "pool"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe poolでは走らないでください。』",
-        "a": "Do not run in the pool."
       },
       {
         "id": "M3N-00793",
@@ -2994,267 +2274,6 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『このthe officeでは走らないでください。』",
         "a": "Do not run in the office."
-      },
-      {
-        "id": "M3N-00799",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe zooでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "zoo"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe zooでは走らないでください。』",
-        "a": "Do not run in the zoo."
-      },
-      {
-        "id": "M3N-00805",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe townでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "town"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe townでは走らないでください。』",
-        "a": "Do not run in the town."
-      },
-      {
-        "id": "M3N-00811",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe cityでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "city"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe cityでは走らないでください。』",
-        "a": "Do not run in the city."
-      },
-      {
-        "id": "M3N-00817",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe stationでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe stationでは走らないでください。』",
-        "a": "Do not run in the station."
-      },
-      {
-        "id": "M3N-00823",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe libraryでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe libraryでは走らないでください。』",
-        "a": "Do not run in the library."
-      },
-      {
-        "id": "M3N-00829",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe parkでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe parkでは走らないでください。』",
-        "a": "Do not run in the park."
-      },
-      {
-        "id": "M3N-00835",
-        "grade": "中3",
-        "category": "命令文，there is ～ の文",
-        "type": "英作文",
-        "source_japanese": "このthe roomでは走らないでください。",
-        "english_tokens": [
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe roomでは走らないでください。』",
-        "a": "Do not run in the room."
-      },
-      {
-        "id": "M3N-00845",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Iは来年the libraryへ行くつもりです。",
-        "english_tokens": [
-          "I",
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Iは来年the libraryへ行くつもりです。』",
-        "a": "I am going to go to the library next year."
-      },
-      {
-        "id": "M3N-00851",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Youは来年the parkへ行くつもりです。",
-        "english_tokens": [
-          "You",
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Youは来年the parkへ行くつもりです。』",
-        "a": "You are going to go to the park next year."
-      },
-      {
-        "id": "M3N-00857",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Heは来年the stationへ行くつもりです。",
-        "english_tokens": [
-          "He",
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Heは来年the stationへ行くつもりです。』",
-        "a": "He is going to go to the station next year."
-      },
-      {
-        "id": "M3N-00863",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Sheは来年the schoolへ行くつもりです。",
-        "english_tokens": [
-          "She",
-          "the",
-          "school"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Sheは来年the schoolへ行くつもりです。』",
-        "a": "She is going to go to the school next year."
-      },
-      {
-        "id": "M3N-00869",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Weは来年the roomへ行くつもりです。",
-        "english_tokens": [
-          "We",
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Weは来年the roomへ行くつもりです。』",
-        "a": "We are going to go to the room next year."
-      },
-      {
-        "id": "M3N-00875",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Theyは来年the hospitalへ行くつもりです。",
-        "english_tokens": [
-          "They",
-          "the",
-          "hospital"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Theyは来年the hospitalへ行くつもりです。』",
-        "a": "They are going to go to the hospital next year."
-      },
-      {
-        "id": "M3N-00881",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "My fatherは来年the museumへ行くつもりです。",
-        "english_tokens": [
-          "My",
-          "father",
-          "the",
-          "museum"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My fatherは来年the museumへ行くつもりです。』",
-        "a": "My father is going to go to the museum next year."
-      },
-      {
-        "id": "M3N-00887",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "My motherは来年the storeへ行くつもりです。",
-        "english_tokens": [
-          "My",
-          "mother",
-          "the",
-          "store"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My motherは来年the storeへ行くつもりです。』",
-        "a": "My mother is going to go to the store next year."
-      },
-      {
-        "id": "M3N-00893",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "My brotherは来年the classroomへ行くつもりです。",
-        "english_tokens": [
-          "My",
-          "brother",
-          "the",
-          "classroom"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My brotherは来年the classroomへ行くつもりです。』",
-        "a": "My brother is going to go to the classroom next year."
-      },
-      {
-        "id": "M3N-00899",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "My sisterは来年the kitchenへ行くつもりです。",
-        "english_tokens": [
-          "My",
-          "sister",
-          "the",
-          "kitchen"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My sisterは来年the kitchenへ行くつもりです。』",
-        "a": "My sister is going to go to the kitchen next year."
-      },
-      {
-        "id": "M3N-00905",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Kenは来年the gymへ行くつもりです。",
-        "english_tokens": [
-          "the",
-          "gym"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Kenは来年the gymへ行くつもりです。』",
-        "a": "Ken is going to go to the gym next year."
-      },
-      {
-        "id": "M3N-00911",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Yukiは来年the poolへ行くつもりです。",
-        "english_tokens": [
-          "the",
-          "pool"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Yukiは来年the poolへ行くつもりです。』",
-        "a": "Yuki is going to go to the pool next year."
       },
       {
         "id": "M3N-00917",
@@ -3281,96 +2300,6 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『Emiは来年the zooへ行くつもりです。』",
         "a": "Emi is going to go to the zoo next year."
-      },
-      {
-        "id": "M3N-00929",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "The boyは来年the townへ行くつもりです。",
-        "english_tokens": [
-          "The",
-          "boy",
-          "the",
-          "town"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The boyは来年the townへ行くつもりです。』",
-        "a": "The boy is going to go to the town next year."
-      },
-      {
-        "id": "M3N-00935",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "The girlは来年the cityへ行くつもりです。",
-        "english_tokens": [
-          "The",
-          "girl",
-          "the",
-          "city"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The girlは来年the cityへ行くつもりです。』",
-        "a": "The girl is going to go to the city next year."
-      },
-      {
-        "id": "M3N-00941",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "The studentは来年the stationへ行くつもりです。",
-        "english_tokens": [
-          "The",
-          "student",
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The studentは来年the stationへ行くつもりです。』",
-        "a": "The student is going to go to the station next year."
-      },
-      {
-        "id": "M3N-00947",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "The teacherは来年the libraryへ行くつもりです。",
-        "english_tokens": [
-          "The",
-          "teacher",
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The teacherは来年the libraryへ行くつもりです。』",
-        "a": "The teacher is going to go to the library next year."
-      },
-      {
-        "id": "M3N-00953",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Our teamは来年the parkへ行くつもりです。",
-        "english_tokens": [
-          "Our",
-          "team",
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Our teamは来年the parkへ行くつもりです。』",
-        "a": "Our team is going to go to the park next year."
-      },
-      {
-        "id": "M3N-00959",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "This dogは来年the roomへ行くつもりです。",
-        "english_tokens": [
-          "This",
-          "dog",
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This dogは来年the roomへ行くつもりです。』",
-        "a": "This dog is going to go to the room next year."
       },
       {
         "id": "M3N-00965",
@@ -3469,6 +2398,1010 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『My motherは早く起きなければなりません。』",
         "a": "My mother must get up early."
+      },
+      {
+        "id": "M3N-01013",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "My brotherは早く起きなければなりません。",
+        "english_tokens": [
+          "My",
+          "brother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My brotherは早く起きなければなりません。』",
+        "a": "My brother must get up early."
+      },
+      {
+        "id": "M3N-01019",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "My sisterは早く起きなければなりません。",
+        "english_tokens": [
+          "My",
+          "sister"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My sisterは早く起きなければなりません。』",
+        "a": "My sister must get up early."
+      },
+      {
+        "id": "M3N-01049",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "The boyは早く起きなければなりません。",
+        "english_tokens": [
+          "The",
+          "boy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The boyは早く起きなければなりません。』",
+        "a": "The boy must get up early."
+      },
+      {
+        "id": "M3N-01055",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "The girlは早く起きなければなりません。",
+        "english_tokens": [
+          "The",
+          "girl"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The girlは早く起きなければなりません。』",
+        "a": "The girl must get up early."
+      },
+      {
+        "id": "M3N-01061",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "The studentは早く起きなければなりません。",
+        "english_tokens": [
+          "The",
+          "student"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The studentは早く起きなければなりません。』",
+        "a": "The student must get up early."
+      },
+      {
+        "id": "M3N-01067",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "The teacherは早く起きなければなりません。",
+        "english_tokens": [
+          "The",
+          "teacher"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The teacherは早く起きなければなりません。』",
+        "a": "The teacher must get up early."
+      },
+      {
+        "id": "M3N-01073",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Our teamは早く起きなければなりません。",
+        "english_tokens": [
+          "Our",
+          "team"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Our teamは早く起きなければなりません。』",
+        "a": "Our team must get up early."
+      },
+      {
+        "id": "M3N-01079",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "This dogは早く起きなければなりません。",
+        "english_tokens": [
+          "This",
+          "dog"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『This dogは早く起きなければなりません。』",
+        "a": "This dog must get up early."
+      },
+      {
+        "id": "M3N-01083",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Iは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "I"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Iは疲れていたので、早く寝ました。』",
+        "a": "I went to bed early because I was tired."
+      },
+      {
+        "id": "M3N-01089",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Youは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "You"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Youは疲れていたので、早く寝ました。』",
+        "a": "You went to bed early because you were tired."
+      },
+      {
+        "id": "M3N-01095",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Heは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "He"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Heは疲れていたので、早く寝ました。』",
+        "a": "He went to bed early because he was tired."
+      },
+      {
+        "id": "M3N-01101",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Sheは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "She"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Sheは疲れていたので、早く寝ました。』",
+        "a": "She went to bed early because she was tired."
+      },
+      {
+        "id": "M3N-01107",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Weは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "We"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Weは疲れていたので、早く寝ました。』",
+        "a": "We went to bed early because we were tired."
+      },
+      {
+        "id": "M3N-01113",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Theyは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "They"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Theyは疲れていたので、早く寝ました。』",
+        "a": "They went to bed early because they were tired."
+      },
+      {
+        "id": "M3N-01119",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "My fatherは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "My",
+          "father"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My fatherは疲れていたので、早く寝ました。』",
+        "a": "My father went to bed early because my father was tired."
+      },
+      {
+        "id": "M3N-01125",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "My motherは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "My",
+          "mother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My motherは疲れていたので、早く寝ました。』",
+        "a": "My mother went to bed early because my mother was tired."
+      },
+      {
+        "id": "M3N-01131",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "My brotherは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "My",
+          "brother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My brotherは疲れていたので、早く寝ました。』",
+        "a": "My brother went to bed early because my brother was tired."
+      },
+      {
+        "id": "M3N-01137",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "My sisterは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "My",
+          "sister"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My sisterは疲れていたので、早く寝ました。』",
+        "a": "My sister went to bed early because my sister was tired."
+      },
+      {
+        "id": "M3N-01167",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "The boyは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "The",
+          "boy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The boyは疲れていたので、早く寝ました。』",
+        "a": "The boy went to bed early because the boy was tired."
+      },
+      {
+        "id": "M3N-01173",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "The girlは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "The",
+          "girl"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The girlは疲れていたので、早く寝ました。』",
+        "a": "The girl went to bed early because the girl was tired."
+      },
+      {
+        "id": "M3N-01179",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "The studentは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "The",
+          "student"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The studentは疲れていたので、早く寝ました。』",
+        "a": "The student went to bed early because the student was tired."
+      },
+      {
+        "id": "M3N-01185",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "The teacherは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "The",
+          "teacher"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The teacherは疲れていたので、早く寝ました。』",
+        "a": "The teacher went to bed early because the teacher was tired."
+      },
+      {
+        "id": "M3N-01191",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "Our teamは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "Our",
+          "team"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Our teamは疲れていたので、早く寝ました。』",
+        "a": "Our team went to bed early because our team was tired."
+      },
+      {
+        "id": "M3N-01197",
+        "grade": "中3",
+        "category": "接続詞",
+        "type": "英作文",
+        "source_japanese": "This dogは疲れていたので、早く寝ました。",
+        "english_tokens": [
+          "This",
+          "dog"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『This dogは疲れていたので、早く寝ました。』",
+        "a": "This dog went to bed early because this dog was tired."
+      },
+      {
+        "id": "M3N-01204",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Iは英語を話したいです。",
+        "english_tokens": [
+          "I"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Iは英語を話したいです。』",
+        "a": "I want to speak English."
+      },
+      {
+        "id": "M3N-01210",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Youは英語を話したいです。",
+        "english_tokens": [
+          "You"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Youは英語を話したいです。』",
+        "a": "You want to speak English."
+      },
+      {
+        "id": "M3N-01216",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Heは英語を話したいです。",
+        "english_tokens": [
+          "He"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Heは英語を話したいです。』",
+        "a": "He wants to speak English."
+      },
+      {
+        "id": "M3N-01222",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Sheは英語を話したいです。",
+        "english_tokens": [
+          "She"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Sheは英語を話したいです。』",
+        "a": "She wants to speak English."
+      },
+      {
+        "id": "M3N-01228",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Weは英語を話したいです。",
+        "english_tokens": [
+          "We"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Weは英語を話したいです。』",
+        "a": "We want to speak English."
+      },
+      {
+        "id": "M3N-01234",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Theyは英語を話したいです。",
+        "english_tokens": [
+          "They"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Theyは英語を話したいです。』",
+        "a": "They want to speak English."
+      },
+      {
+        "id": "M3N-01240",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "My fatherは英語を話したいです。",
+        "english_tokens": [
+          "My",
+          "father"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My fatherは英語を話したいです。』",
+        "a": "My father wants to speak English."
+      },
+      {
+        "id": "M3N-01246",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "My motherは英語を話したいです。",
+        "english_tokens": [
+          "My",
+          "mother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My motherは英語を話したいです。』",
+        "a": "My mother wants to speak English."
+      },
+      {
+        "id": "M3N-01252",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "My brotherは英語を話したいです。",
+        "english_tokens": [
+          "My",
+          "brother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My brotherは英語を話したいです。』",
+        "a": "My brother wants to speak English."
+      },
+      {
+        "id": "M3N-01258",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "My sisterは英語を話したいです。",
+        "english_tokens": [
+          "My",
+          "sister"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My sisterは英語を話したいです。』",
+        "a": "My sister wants to speak English."
+      },
+      {
+        "id": "M3N-01288",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "The boyは英語を話したいです。",
+        "english_tokens": [
+          "The",
+          "boy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The boyは英語を話したいです。』",
+        "a": "The boy wants to speak English."
+      },
+      {
+        "id": "M3N-01294",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "The girlは英語を話したいです。",
+        "english_tokens": [
+          "The",
+          "girl"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The girlは英語を話したいです。』",
+        "a": "The girl wants to speak English."
+      },
+      {
+        "id": "M3N-01300",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "The studentは英語を話したいです。",
+        "english_tokens": [
+          "The",
+          "student"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The studentは英語を話したいです。』",
+        "a": "The student wants to speak English."
+      },
+      {
+        "id": "M3N-01306",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "The teacherは英語を話したいです。",
+        "english_tokens": [
+          "The",
+          "teacher"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『The teacherは英語を話したいです。』",
+        "a": "The teacher wants to speak English."
+      },
+      {
+        "id": "M3N-01312",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "Our teamは英語を話したいです。",
+        "english_tokens": [
+          "Our",
+          "team"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Our teamは英語を話したいです。』",
+        "a": "Our team wants to speak English."
+      },
+      {
+        "id": "M3N-01318",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "英作文",
+        "source_japanese": "This dogは英語を話したいです。",
+        "english_tokens": [
+          "This",
+          "dog"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『This dogは英語を話したいです。』",
+        "a": "This dog wants to speak English."
+      },
+      {
+        "id": "M3N-01324",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このbookはあのbookよりbusyです。",
+        "english_tokens": [
+          "book",
+          "book",
+          "busy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このbookはあのbookよりbusyです。』",
+        "a": "This book is busier than that book."
+      },
+      {
+        "id": "M3N-01330",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このpenはあのpenよりkindです。",
+        "english_tokens": [
+          "pen",
+          "pen",
+          "kind"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このpenはあのpenよりkindです。』",
+        "a": "This pen is kinder than that pen."
+      },
+      {
+        "id": "M3N-01336",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このbagはあのbagよりtiredです。",
+        "english_tokens": [
+          "bag",
+          "bag",
+          "tired"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このbagはあのbagよりtiredです。』",
+        "a": "This bag is more tired than that bag."
+      },
+      {
+        "id": "M3N-01342",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このpictureはあのpictureよりhappyです。",
+        "english_tokens": [
+          "picture",
+          "picture",
+          "happy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このpictureはあのpictureよりhappyです。』",
+        "a": "This picture is happier than that picture."
+      },
+      {
+        "id": "M3N-01348",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このdeskはあのdeskよりhungryです。",
+        "english_tokens": [
+          "desk",
+          "desk",
+          "hungry"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このdeskはあのdeskよりhungryです。』",
+        "a": "This desk is hungrier than that desk."
+      },
+      {
+        "id": "M3N-01354",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このchairはあのchairよりfreeです。",
+        "english_tokens": [
+          "chair",
+          "chair",
+          "free"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このchairはあのchairよりfreeです。』",
+        "a": "This chair is freer than that chair."
+      },
+      {
+        "id": "M3N-01360",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このtableはあのtableよりsleepyです。",
+        "english_tokens": [
+          "table",
+          "table",
+          "sleepy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このtableはあのtableよりsleepyです。』",
+        "a": "This table is sleepier than that table."
+      },
+      {
+        "id": "M3N-01366",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このbikeはあのbikeよりsadです。",
+        "english_tokens": [
+          "bike",
+          "bike",
+          "sad"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このbikeはあのbikeよりsadです。』",
+        "a": "This bike is sadder than that bike."
+      },
+      {
+        "id": "M3N-01372",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このdogはあのdogよりcoldです。",
+        "english_tokens": [
+          "dog",
+          "dog",
+          "cold"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このdogはあのdogよりcoldです。』",
+        "a": "This dog is colder than that dog."
+      },
+      {
+        "id": "M3N-01378",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このcatはあのcatよりhotです。",
+        "english_tokens": [
+          "cat",
+          "cat",
+          "hot"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このcatはあのcatよりhotです。』",
+        "a": "This cat is hotter than that cat."
+      },
+      {
+        "id": "M3N-01384",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このwindowはあのwindowよりniceです。",
+        "english_tokens": [
+          "window",
+          "window",
+          "nice"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このwindowはあのwindowよりniceです。』",
+        "a": "This window is nicer than that window."
+      },
+      {
+        "id": "M3N-01390",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このdoorはあのdoorよりyoungです。",
+        "english_tokens": [
+          "door",
+          "door",
+          "young"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このdoorはあのdoorよりyoungです。』",
+        "a": "This door is younger than that door."
+      },
+      {
+        "id": "M3N-01396",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このflowerはあのflowerよりoldです。",
+        "english_tokens": [
+          "flower",
+          "flower",
+          "old"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このflowerはあのflowerよりoldです。』",
+        "a": "This flower is older than that flower."
+      },
+      {
+        "id": "M3N-01402",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このtreeはあのtreeよりsmallです。",
+        "english_tokens": [
+          "tree",
+          "tree",
+          "small"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このtreeはあのtreeよりsmallです。』",
+        "a": "This tree is smaller than that tree."
+      },
+      {
+        "id": "M3N-01408",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このboxはあのboxよりbigです。",
+        "english_tokens": [
+          "box",
+          "box",
+          "big"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このboxはあのboxよりbigです。』",
+        "a": "This box is bigger than that box."
+      },
+      {
+        "id": "M3N-01414",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このballはあのballよりstrongです。",
+        "english_tokens": [
+          "ball",
+          "ball",
+          "strong"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このballはあのballよりstrongです。』",
+        "a": "This ball is stronger than that ball."
+      },
+      {
+        "id": "M3N-01420",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このcarはあのcarよりfastです。",
+        "english_tokens": [
+          "car",
+          "car",
+          "fast"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このcarはあのcarよりfastです。』",
+        "a": "This car is faster than that car."
+      },
+      {
+        "id": "M3N-01426",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このcameraはあのcameraよりslowです。",
+        "english_tokens": [
+          "camera",
+          "camera",
+          "slow"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このcameraはあのcameraよりslowです。』",
+        "a": "This camera is slower than that camera."
+      },
+      {
+        "id": "M3N-01432",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このcomputerはあのcomputerよりgoodです。",
+        "english_tokens": [
+          "computer",
+          "computer",
+          "good"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このcomputerはあのcomputerよりgoodです。』",
+        "a": "This computer is better than that computer."
+      },
+      {
+        "id": "M3N-01438",
+        "grade": "中3",
+        "category": "比較",
+        "type": "英作文",
+        "source_japanese": "このgameはあのgameよりcuteです。",
+        "english_tokens": [
+          "game",
+          "game",
+          "cute"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このgameはあのgameよりcuteです。』",
+        "a": "This game is cuter than that game."
+      },
+      {
+        "id": "M3N-01443",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのbookをあげました。",
+        "english_tokens": [
+          "book"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbookをあげました。』",
+        "a": "I gave him this book."
+      },
+      {
+        "id": "M3N-01444",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をbusyにしました。",
+        "english_tokens": [
+          "busy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をbusyにしました。』",
+        "a": "The news made me busy."
+      },
+      {
+        "id": "M3N-01449",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのpenをあげました。",
+        "english_tokens": [
+          "pen"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのpenをあげました。』",
+        "a": "I gave him this pen."
+      },
+      {
+        "id": "M3N-01450",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をkindにしました。",
+        "english_tokens": [
+          "kind"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をkindにしました。』",
+        "a": "The news made me kind."
+      },
+      {
+        "id": "M3N-01455",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのbagをあげました。",
+        "english_tokens": [
+          "bag"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbagをあげました。』",
+        "a": "I gave him this bag."
+      },
+      {
+        "id": "M3N-01456",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をtiredにしました。",
+        "english_tokens": [
+          "tired"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をtiredにしました。』",
+        "a": "The news made me tired."
+      },
+      {
+        "id": "M3N-01461",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのpictureをあげました。",
+        "english_tokens": [
+          "picture"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのpictureをあげました。』",
+        "a": "I gave him this picture."
+      },
+      {
+        "id": "M3N-01462",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をhappyにしました。",
+        "english_tokens": [
+          "happy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をhappyにしました。』",
+        "a": "The news made me happy."
+      },
+      {
+        "id": "M3N-01467",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのdeskをあげました。",
+        "english_tokens": [
+          "desk"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのdeskをあげました。』",
+        "a": "I gave him this desk."
+      },
+      {
+        "id": "M3N-01468",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をhungryにしました。",
+        "english_tokens": [
+          "hungry"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をhungryにしました。』",
+        "a": "The news made me hungry."
+      },
+      {
+        "id": "M3N-01473",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのchairをあげました。",
+        "english_tokens": [
+          "chair"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのchairをあげました。』",
+        "a": "I gave him this chair."
+      },
+      {
+        "id": "M3N-01474",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をfreeにしました。",
+        "english_tokens": [
+          "free"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をfreeにしました。』",
+        "a": "The news made me free."
+      },
+      {
+        "id": "M3N-01479",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのtableをあげました。",
+        "english_tokens": [
+          "table"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのtableをあげました。』",
+        "a": "I gave him this table."
+      },
+      {
+        "id": "M3N-01480",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をsleepyにしました。",
+        "english_tokens": [
+          "sleepy"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をsleepyにしました。』",
+        "a": "The news made me sleepy."
+      },
+      {
+        "id": "M3N-01485",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのbikeをあげました。",
+        "english_tokens": [
+          "bike"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbikeをあげました。』",
+        "a": "I gave him this bike."
+      },
+      {
+        "id": "M3N-01486",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をsadにしました。",
+        "english_tokens": [
+          "sad"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をsadにしました。』",
+        "a": "The news made me sad."
+      },
+      {
+        "id": "M3N-01491",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのdogをあげました。",
+        "english_tokens": [
+          "dog"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのdogをあげました。』",
+        "a": "I gave him this dog."
+      },
+      {
+        "id": "M3N-01492",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をcoldにしました。",
+        "english_tokens": [
+          "cold"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をcoldにしました。』",
+        "a": "The news made me cold."
       }
     ]
   },
@@ -3483,344 +3416,14 @@
     "samples": []
   },
   "auxiliary_tense_errors": {
-    "count": 6,
-    "by_prefix": {
-      "M3N": 6
-    },
-    "samples": [
-      {
-        "id": "M3N-00330",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The boy played volleyball yesterday. を疑問文にしなさい。",
-        "a": "Did The boy played volleyball yesterday?"
-      },
-      {
-        "id": "M3N-00336",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The girl played badminton yesterday. を疑問文にしなさい。",
-        "a": "Did The girl played badminton yesterday?"
-      },
-      {
-        "id": "M3N-00342",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The student played running yesterday. を疑問文にしなさい。",
-        "a": "Did The student played running yesterday?"
-      },
-      {
-        "id": "M3N-00348",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The teacher played swimming yesterday. を疑問文にしなさい。",
-        "a": "Did The teacher played swimming yesterday?"
-      },
-      {
-        "id": "M3N-00354",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "Our team played soccer yesterday. を疑問文にしなさい。",
-        "a": "Did Our team played soccer yesterday?"
-      },
-      {
-        "id": "M3N-00360",
-        "kind": "did_plus_past_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "This dog played tennis yesterday. を疑問文にしなさい。",
-        "a": "Did This dog played tennis yesterday?"
-      }
-    ]
+    "count": 0,
+    "by_prefix": {},
+    "samples": []
   },
   "collocation_errors": {
-    "count": 30,
-    "by_prefix": {
-      "M3N": 30
-    },
-    "samples": [
-      {
-        "id": "M3N-00278",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "My father played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00279",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "My father was played swimming yesterday. の誤りを直しなさい。",
-        "a": "My father played swimming yesterday."
-      },
-      {
-        "id": "M3N-00282",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "My father played swimming yesterday. を疑問文にしなさい。",
-        "a": "Did my father play swimming yesterday?"
-      },
-      {
-        "id": "M3N-00284",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "My mother played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00285",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "My mother was played running yesterday. の誤りを直しなさい。",
-        "a": "My mother played running yesterday."
-      },
-      {
-        "id": "M3N-00288",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "My mother played running yesterday. を疑問文にしなさい。",
-        "a": "Did my mother play running yesterday?"
-      },
-      {
-        "id": "M3N-00290",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "My brother played skiing yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00291",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "My brother was played skiing yesterday. の誤りを直しなさい。",
-        "a": "My brother played skiing yesterday."
-      },
-      {
-        "id": "M3N-00294",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "My brother played skiing yesterday. を疑問文にしなさい。",
-        "a": "Did my brother play skiing yesterday?"
-      },
-      {
-        "id": "M3N-00296",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "My sister played skating yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00297",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "My sister was played skating yesterday. の誤りを直しなさい。",
-        "a": "My sister played skating yesterday."
-      },
-      {
-        "id": "M3N-00300",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "My sister played skating yesterday. を疑問文にしなさい。",
-        "a": "Did my sister play skating yesterday?"
-      },
-      {
-        "id": "M3N-00338",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "The student played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00339",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "The student was played running yesterday. の誤りを直しなさい。",
-        "a": "The student played running yesterday."
-      },
-      {
-        "id": "M3N-00342",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The student played running yesterday. を疑問文にしなさい。",
-        "a": "Did The student played running yesterday?"
-      },
-      {
-        "id": "M3N-00344",
-        "kind": "bad_collocation_in_source",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "見分け",
-        "q": "The teacher played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
-        "a": "一般動詞の文"
-      },
-      {
-        "id": "M3N-00345",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "間違い直し",
-        "q": "The teacher was played swimming yesterday. の誤りを直しなさい。",
-        "a": "The teacher played swimming yesterday."
-      },
-      {
-        "id": "M3N-00348",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "The teacher played swimming yesterday. を疑問文にしなさい。",
-        "a": "Did The teacher played swimming yesterday?"
-      },
-      {
-        "id": "M3N-00638",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "My father is playing swimming. を否定文にしなさい。",
-        "a": "My father is not playing swimming."
-      },
-      {
-        "id": "M3N-00641",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My fatherはswimmingをしていました。』",
-        "a": "My father was playing swimming then."
-      },
-      {
-        "id": "M3N-00644",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "My mother is playing running. を否定文にしなさい。",
-        "a": "My mother is not playing running."
-      },
-      {
-        "id": "M3N-00647",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My motherはrunningをしていました。』",
-        "a": "My mother was playing running then."
-      },
-      {
-        "id": "M3N-00650",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "My brother is playing skiing. を否定文にしなさい。",
-        "a": "My brother is not playing skiing."
-      },
-      {
-        "id": "M3N-00653",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My brotherはskiingをしていました。』",
-        "a": "My brother was playing skiing then."
-      },
-      {
-        "id": "M3N-00656",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "My sister is playing skating. を否定文にしなさい。",
-        "a": "My sister is not playing skating."
-      },
-      {
-        "id": "M3N-00659",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、My sisterはskatingをしていました。』",
-        "a": "My sister was playing skating then."
-      },
-      {
-        "id": "M3N-00698",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "The student is playing running. を否定文にしなさい。",
-        "a": "The student is not playing running."
-      },
-      {
-        "id": "M3N-00701",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The studentはrunningをしていました。』",
-        "a": "The student was playing running then."
-      },
-      {
-        "id": "M3N-00704",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "変形",
-        "q": "The teacher is playing swimming. を否定文にしなさい。",
-        "a": "The teacher is not playing swimming."
-      },
-      {
-        "id": "M3N-00707",
-        "kind": "bad_collocation_in_answer",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、The teacherはswimmingをしていました。』",
-        "a": "The teacher was playing swimming then."
-      }
-    ]
+    "count": 0,
+    "by_prefix": {},
+    "samples": []
   },
   "exact_duplicate_question_answer": {
     "group_count": 1077,
@@ -8380,7 +7983,7 @@
       {
         "count": 3,
         "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
-        "a": "Practices tennis",
+        "a": "Practices the piano",
         "sample_ids": [
           "GEN-3RD-0907",
           "GEN-3RD-1035",

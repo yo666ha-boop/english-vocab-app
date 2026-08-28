@@ -1,0 +1,980 @@
+{
+  "generated_at": "2026-08-28T11:25:34.001Z",
+  "changed_rows": 121,
+  "hybrid_fixed": 83,
+  "past_family_fixed": 26,
+  "progressive_family_fixed": 25,
+  "meaning_fixed": 6,
+  "by_category": {
+    "前置詞": 11,
+    "三単現": 6,
+    "be動詞と一般動詞（過去形）": 26,
+    "疑問詞": 3,
+    "人称代名詞": 13,
+    "進行形": 25,
+    "命令文，there is ～ の文": 19,
+    "未来の文": 18
+  },
+  "samples": [
+    {
+      "id": "E1-PR-005",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのいすは机の下にあります。』",
+        "a": "The chair is under the desk."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『いすは机の下にあります。』",
+        "a": "The chair is under the desk."
+      }
+    },
+    {
+      "id": "GEN-3RD-0907",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-3RD-0971",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-3RD-1035",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-3RD-1099",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-3RD-1163",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "He (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-3RD-1227",
+      "kind": "piano_meaning_alignment",
+      "before": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices tennis"
+      },
+      "after": {
+        "q": "She (      ) every day. 「ピアノを練習します」の意味になるように、空所に入る最も適切な語(句)を書きなさい。",
+        "a": "Practices the piano"
+      }
+    },
+    {
+      "id": "GEN-PREP-1243",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the book は on the desk にあります。』",
+        "a": "The book is on the desk."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『本は机の上にあります。』",
+        "a": "The book is on the desk."
+      }
+    },
+    {
+      "id": "GEN-PREP-1246",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the cat は under the chair にあります。』",
+        "a": "The cat is under the chair."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『猫はいすの下にいます。』",
+        "a": "The cat is under the chair."
+      }
+    },
+    {
+      "id": "GEN-PREP-1249",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the ball は in the box にあります。』",
+        "a": "The ball is in the box."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ボールはboxの中にあります。』",
+        "a": "The ball is in the box."
+      }
+    },
+    {
+      "id": "GEN-PREP-1252",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the dog は by the door にあります。』",
+        "a": "The dog is by the door."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『犬はドアのそばにいます。』",
+        "a": "The dog is by the door."
+      }
+    },
+    {
+      "id": "GEN-PREP-1255",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the bag は behind the chair にあります。』",
+        "a": "The bag is behind the chair."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『かばんはいすの後ろにあります。』",
+        "a": "The bag is behind the chair."
+      }
+    },
+    {
+      "id": "GEN-PREP-1258",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the notebook は in my bag にあります。』",
+        "a": "The notebook is in my bag."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ノートはかばんの中にあります。』",
+        "a": "The notebook is in my bag."
+      }
+    },
+    {
+      "id": "GEN-PREP-1261",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the picture は on the wall にあります。』",
+        "a": "The picture is on the wall."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『写真はwallの上にあります。』",
+        "a": "The picture is on the wall."
+      }
+    },
+    {
+      "id": "GEN-PREP-1264",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the shoes は under the desk にあります。』",
+        "a": "The shoes are under the desk."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『靴は机の下にあります。』",
+        "a": "The shoes are under the desk."
+      }
+    },
+    {
+      "id": "GEN-PREP-1267",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the pen は in the pencil case にあります。』",
+        "a": "The pen is in the pencil case."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ペンはpencil caseの中にあります。』",
+        "a": "The pen is in the pencil case."
+      }
+    },
+    {
+      "id": "GEN-PREP-1270",
+      "kind": "hybrid_preposition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『the bike は by the tree にあります。』",
+        "a": "The bike is by the tree."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『自転車はtreeのそばにあります。』",
+        "a": "The bike is by the tree."
+      }
+    },
+    {
+      "id": "M3N-00278",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "My father played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "My father went swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00279",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "My father was played swimming yesterday. の誤りを直しなさい。",
+        "a": "My father played swimming yesterday."
+      },
+      "after": {
+        "q": "My father goed swimming yesterday. の誤りを直しなさい。",
+        "a": "My father went swimming yesterday."
+      }
+    },
+    {
+      "id": "M3N-00282",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "My father played swimming yesterday. を疑問文にしなさい。",
+        "a": "Did my father play swimming yesterday?"
+      },
+      "after": {
+        "q": "My father went swimming yesterday. を疑問文にしなさい。",
+        "a": "Did my father go swimming yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00284",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "My mother played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "My mother went running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00285",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "My mother was played running yesterday. の誤りを直しなさい。",
+        "a": "My mother played running yesterday."
+      },
+      "after": {
+        "q": "My mother goed running yesterday. の誤りを直しなさい。",
+        "a": "My mother went running yesterday."
+      }
+    },
+    {
+      "id": "M3N-00288",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "My mother played running yesterday. を疑問文にしなさい。",
+        "a": "Did my mother play running yesterday?"
+      },
+      "after": {
+        "q": "My mother went running yesterday. を疑問文にしなさい。",
+        "a": "Did my mother go running yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00290",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "My brother played skiing yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "My brother went skiing yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00291",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "My brother was played skiing yesterday. の誤りを直しなさい。",
+        "a": "My brother played skiing yesterday."
+      },
+      "after": {
+        "q": "My brother goed skiing yesterday. の誤りを直しなさい。",
+        "a": "My brother went skiing yesterday."
+      }
+    },
+    {
+      "id": "M3N-00294",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "My brother played skiing yesterday. を疑問文にしなさい。",
+        "a": "Did my brother play skiing yesterday?"
+      },
+      "after": {
+        "q": "My brother went skiing yesterday. を疑問文にしなさい。",
+        "a": "Did my brother go skiing yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00296",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "My sister played skating yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "My sister went skating yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00297",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "My sister was played skating yesterday. の誤りを直しなさい。",
+        "a": "My sister played skating yesterday."
+      },
+      "after": {
+        "q": "My sister goed skating yesterday. の誤りを直しなさい。",
+        "a": "My sister went skating yesterday."
+      }
+    },
+    {
+      "id": "M3N-00300",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "My sister played skating yesterday. を疑問文にしなさい。",
+        "a": "Did my sister play skating yesterday?"
+      },
+      "after": {
+        "q": "My sister went skating yesterday. を疑問文にしなさい。",
+        "a": "Did my sister go skating yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00306",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "Ken played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did Ken play soccer yesterday?"
+      },
+      "after": {
+        "q": "Ken played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did ken play soccer yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00312",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "Yuki played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did Yuki play tennis yesterday?"
+      },
+      "after": {
+        "q": "Yuki played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did yuki play tennis yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00318",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "Tom played baseball yesterday. を疑問文にしなさい。",
+        "a": "Did Tom play baseball yesterday?"
+      },
+      "after": {
+        "q": "Tom played baseball yesterday. を疑問文にしなさい。",
+        "a": "Did tom play baseball yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00324",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "Emi played basketball yesterday. を疑問文にしなさい。",
+        "a": "Did Emi play basketball yesterday?"
+      },
+      "after": {
+        "q": "Emi played basketball yesterday. を疑問文にしなさい。",
+        "a": "Did emi play basketball yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00330",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "The boy played volleyball yesterday. を疑問文にしなさい。",
+        "a": "Did The boy played volleyball yesterday?"
+      },
+      "after": {
+        "q": "The boy played volleyball yesterday. を疑問文にしなさい。",
+        "a": "Did the boy play volleyball yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00336",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "The girl played badminton yesterday. を疑問文にしなさい。",
+        "a": "Did The girl played badminton yesterday?"
+      },
+      "after": {
+        "q": "The girl played badminton yesterday. を疑問文にしなさい。",
+        "a": "Did the girl play badminton yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00338",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "The student played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "The student went running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00339",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "The student was played running yesterday. の誤りを直しなさい。",
+        "a": "The student played running yesterday."
+      },
+      "after": {
+        "q": "The student goed running yesterday. の誤りを直しなさい。",
+        "a": "The student went running yesterday."
+      }
+    },
+    {
+      "id": "M3N-00342",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "The student played running yesterday. を疑問文にしなさい。",
+        "a": "Did The student played running yesterday?"
+      },
+      "after": {
+        "q": "The student went running yesterday. を疑問文にしなさい。",
+        "a": "Did the student go running yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00344",
+      "kind": "past_activity_source",
+      "before": {
+        "q": "The teacher played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      "after": {
+        "q": "The teacher went swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      }
+    },
+    {
+      "id": "M3N-00345",
+      "kind": "past_activity_error_correction",
+      "before": {
+        "q": "The teacher was played swimming yesterday. の誤りを直しなさい。",
+        "a": "The teacher played swimming yesterday."
+      },
+      "after": {
+        "q": "The teacher goed swimming yesterday. の誤りを直しなさい。",
+        "a": "The teacher went swimming yesterday."
+      }
+    },
+    {
+      "id": "M3N-00348",
+      "kind": "past_activity_question",
+      "before": {
+        "q": "The teacher played swimming yesterday. を疑問文にしなさい。",
+        "a": "Did The teacher played swimming yesterday?"
+      },
+      "after": {
+        "q": "The teacher went swimming yesterday. を疑問文にしなさい。",
+        "a": "Did the teacher go swimming yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00354",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "Our team played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did Our team played soccer yesterday?"
+      },
+      "after": {
+        "q": "Our team played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did our team play soccer yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00360",
+      "kind": "did_plus_base_repair",
+      "before": {
+        "q": "This dog played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did This dog played tennis yesterday?"
+      },
+      "after": {
+        "q": "This dog played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did this dog play tennis yesterday?"
+      }
+    },
+    {
+      "id": "M3N-00361",
+      "kind": "hybrid_when_arrive",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『Iはいつthe libraryに着きましたか。』",
+        "a": "When did I arrive at the library?"
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私はいつ図書館に着きましたか。』",
+        "a": "When did I arrive at the library?"
+      }
+    },
+    {
+      "id": "M3N-00421",
+      "kind": "hybrid_when_arrive",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『Kenはいつthe gymに着きましたか。』",
+        "a": "When did Ken arrive at the gym?"
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ケンはいつ体育館に着きましたか。』",
+        "a": "When did Ken arrive at the gym?"
+      }
+    },
+    {
+      "id": "M3N-00427",
+      "kind": "hybrid_when_arrive",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『Yukiはいつthe poolに着きましたか。』",
+        "a": "When did Yuki arrive at the pool?"
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『ユキはいつプールに着きましたか。』",
+        "a": "When did Yuki arrive at the pool?"
+      }
+    },
+    {
+      "id": "M3N-00485",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのbookは彼らのものです。』",
+        "a": "The book is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その本は彼らのものです。』",
+        "a": "The book is theirs."
+      }
+    },
+    {
+      "id": "M3N-00491",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのpenは彼らのものです。』",
+        "a": "The pen is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのペンは彼らのものです。』",
+        "a": "The pen is theirs."
+      }
+    },
+    {
+      "id": "M3N-00497",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのbagは彼らのものです。』",
+        "a": "The bag is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのかばんは彼らのものです。』",
+        "a": "The bag is theirs."
+      }
+    },
+    {
+      "id": "M3N-00503",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのpictureは彼らのものです。』",
+        "a": "The picture is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その写真は彼らのものです。』",
+        "a": "The picture is theirs."
+      }
+    },
+    {
+      "id": "M3N-00509",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのdeskは彼らのものです。』",
+        "a": "The desk is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その机は彼らのものです。』",
+        "a": "The desk is theirs."
+      }
+    },
+    {
+      "id": "M3N-00515",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのchairは彼らのものです。』",
+        "a": "The chair is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのいすは彼らのものです。』",
+        "a": "The chair is theirs."
+      }
+    },
+    {
+      "id": "M3N-00521",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのtableは彼らのものです。』",
+        "a": "The table is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのテーブルは彼らのものです。』",
+        "a": "The table is theirs."
+      }
+    },
+    {
+      "id": "M3N-00527",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのbikeは彼らのものです。』",
+        "a": "The bike is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その自転車は彼らのものです。』",
+        "a": "The bike is theirs."
+      }
+    },
+    {
+      "id": "M3N-00533",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのdogは彼らのものです。』",
+        "a": "The dog is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その犬は彼らのものです。』",
+        "a": "The dog is theirs."
+      }
+    },
+    {
+      "id": "M3N-00539",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのcatは彼らのものです。』",
+        "a": "The cat is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その猫は彼らのものです。』",
+        "a": "The cat is theirs."
+      }
+    },
+    {
+      "id": "M3N-00545",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのwindowは彼らのものです。』",
+        "a": "The window is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その窓は彼らのものです。』",
+        "a": "The window is theirs."
+      }
+    },
+    {
+      "id": "M3N-00551",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのdoorは彼らのものです。』",
+        "a": "The door is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのドアは彼らのものです。』",
+        "a": "The door is theirs."
+      }
+    },
+    {
+      "id": "M3N-00575",
+      "kind": "hybrid_possessive_pronoun",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのballは彼らのものです。』",
+        "a": "The ball is theirs."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのボールは彼らのものです。』",
+        "a": "The ball is theirs."
+      }
+    },
+    {
+      "id": "M3N-00605",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Iはtennisをしていました。』",
+        "a": "I was playing tennis then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私はテニスをしていました。』",
+        "a": "I was playing tennis then."
+      }
+    },
+    {
+      "id": "M3N-00611",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Youはsoccerをしていました。』",
+        "a": "You were playing soccer then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、あなたはサッカーをしていました。』",
+        "a": "You were playing soccer then."
+      }
+    },
+    {
+      "id": "M3N-00617",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Heはbaseballをしていました。』",
+        "a": "He was playing baseball then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、彼は野球をしていました。』",
+        "a": "He was playing baseball then."
+      }
+    },
+    {
+      "id": "M3N-00623",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Sheはbasketballをしていました。』",
+        "a": "She was playing basketball then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、彼女はバスケットボールをしていました。』",
+        "a": "She was playing basketball then."
+      }
+    },
+    {
+      "id": "M3N-00629",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Weはvolleyballをしていました。』",
+        "a": "We were playing volleyball then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私たちはバレーボールをしていました。』",
+        "a": "We were playing volleyball then."
+      }
+    },
+    {
+      "id": "M3N-00635",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Theyはbadmintonをしていました。』",
+        "a": "They were playing badminton then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、彼らはバドミントンをしていました。』",
+        "a": "They were playing badminton then."
+      }
+    },
+    {
+      "id": "M3N-00638",
+      "kind": "progressive_direct_activity",
+      "before": {
+        "q": "My father is playing swimming. を否定文にしなさい。",
+        "a": "My father is not playing swimming."
+      },
+      "after": {
+        "q": "My father is swimming. を否定文にしなさい。",
+        "a": "My father is not swimming."
+      }
+    },
+    {
+      "id": "M3N-00641",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My fatherはswimmingをしていました。』",
+        "a": "My father was playing swimming then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私の父は泳いでいました。』",
+        "a": "My father was swimming then."
+      }
+    },
+    {
+      "id": "M3N-00644",
+      "kind": "progressive_direct_activity",
+      "before": {
+        "q": "My mother is playing running. を否定文にしなさい。",
+        "a": "My mother is not playing running."
+      },
+      "after": {
+        "q": "My mother is running. を否定文にしなさい。",
+        "a": "My mother is not running."
+      }
+    },
+    {
+      "id": "M3N-00647",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My motherはrunningをしていました。』",
+        "a": "My mother was playing running then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私の母は走っていました。』",
+        "a": "My mother was running then."
+      }
+    },
+    {
+      "id": "M3N-00650",
+      "kind": "progressive_direct_activity",
+      "before": {
+        "q": "My brother is playing skiing. を否定文にしなさい。",
+        "a": "My brother is not playing skiing."
+      },
+      "after": {
+        "q": "My brother is skiing. を否定文にしなさい。",
+        "a": "My brother is not skiing."
+      }
+    },
+    {
+      "id": "M3N-00653",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My brotherはskiingをしていました。』",
+        "a": "My brother was playing skiing then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私の兄弟はスキーをしていました。』",
+        "a": "My brother was skiing then."
+      }
+    },
+    {
+      "id": "M3N-00656",
+      "kind": "progressive_direct_activity",
+      "before": {
+        "q": "My sister is playing skating. を否定文にしなさい。",
+        "a": "My sister is not playing skating."
+      },
+      "after": {
+        "q": "My sister is skating. を否定文にしなさい。",
+        "a": "My sister is not skating."
+      }
+    },
+    {
+      "id": "M3N-00659",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My sisterはskatingをしていました。』",
+        "a": "My sister was playing skating then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、私の姉妹はスケートをしていました。』",
+        "a": "My sister was skating then."
+      }
+    },
+    {
+      "id": "M3N-00665",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Kenはsoccerをしていました。』",
+        "a": "Ken was playing soccer then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、ケンはサッカーをしていました。』",
+        "a": "Ken was playing soccer then."
+      }
+    },
+    {
+      "id": "M3N-00671",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Yukiはtennisをしていました。』",
+        "a": "Yuki was playing tennis then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、ユキはテニスをしていました。』",
+        "a": "Yuki was playing tennis then."
+      }
+    },
+    {
+      "id": "M3N-00677",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、Tomはbaseballをしていました。』",
+        "a": "Tom was playing baseball then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、トムは野球をしていました。』",
+        "a": "Tom was playing baseball then."
+      }
+    },
+    {
+      "id": "M3N-00689",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、The boyはvolleyballをしていました。』",
+        "a": "The boy was playing volleyball then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、その少年はバレーボールをしていました。』",
+        "a": "The boy was playing volleyball then."
+      }
+    },
+    {
+      "id": "M3N-00695",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、The girlはbadmintonをしていました。』",
+        "a": "The girl was playing badminton then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、その少女はバドミントンをしていました。』",
+        "a": "The girl was playing badminton then."
+      }
+    },
+    {
+      "id": "M3N-00698",
+      "kind": "progressive_direct_activity",
+      "before": {
+        "q": "The student is playing running. を否定文にしなさい。",
+        "a": "The student is not playing running."
+      },
+      "after": {
+        "q": "The student is running. を否定文にしなさい。",
+        "a": "The student is not running."
+      }
+    },
+    {
+      "id": "M3N-00701",
+      "kind": "progressive_composition",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、The studentはrunningをしていました。』",
+        "a": "The student was playing running then."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、その生徒は走っていました。』",
+        "a": "The student was running then."
+      }
+    }
+  ]
+}
