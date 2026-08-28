@@ -13,6 +13,7 @@ const rows=all.filter(x=>x?.subject==='英語');
 const norm=s=>String(s??'').normalize('NFKC').replace(/\s+/g,' ').trim();
 const lower=s=>norm(s).toLowerCase();
 const prefix=id=>{const m=/^(.+?)-\d+$/.exec(String(id||''));return m?m[1]:String(id||'').split('-')[0];};
+const family=x=>`${x.grade}/${x.category}/${x.type}`;
 const properNames=new Set(['Tom','Ken','Mike','Emi','Yuki','Aya','Bob','Lucy','Mary','John','Jim','Ann','Kate','Lisa','Ben','Alex','Kenta','Miki','Mika','Saki','Riku','Kota','Takumi']);
 const wordRe=/[A-Za-z][A-Za-z'-]*/g;
 function quotedJapanese(q){const m=/『([^』]*)』/.exec(String(q||''));return m?m[1]:'';}
@@ -46,9 +47,8 @@ for(const x of rows){
   if(/\bmy\b/i.test(String(x.a||'')))possessiveSubstitution.push({id:x.id,grade:x.grade,category:x.category,type:x.type,source_japanese:jp,q:x.q,a:x.a});
 }
 
-// Only inspect the expected answer for auxiliary-tense errors. An intentionally wrong
-// sentence in an error-correction prompt is teaching material, not a bank defect.
-// "read" is deliberately excluded because its base and past spellings are identical.
+// Inspect expected answers for auxiliary/tense errors. Intentionally wrong source text in
+// error-correction questions is teaching material and must not fail the bank.
 const auxTenseErrors=[];
 const collocationErrors=[];
 for(const x of rows){
@@ -62,7 +62,9 @@ for(const x of rows){
     collocationErrors.push({id:x.id,kind:badInAnswer?'bad_collocation_in_answer':'bad_collocation_in_source',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
 
-const semanticWarnings=[];
+// High-confidence semantic/template errors. These are no longer advisory: each pattern is
+// unambiguously unsuitable as a junior-high teaching item and therefore hard-fails.
+const semanticErrors=[];
 const inanimateBadAdj=/^(?:This|That) (?:bag|book|chair|house|desk|table|car|bike|flower)\b.*\b(?:busier|busiest|kinder|kindest|younger|youngest)\b/i;
 const animalBadVerb=/^This is the (?:cat|dog) which .*\b(?:made|fixed)\b/i;
 const cakeFixed=/^This is the cake which .*\bfixed\b/i;
@@ -77,16 +79,25 @@ for(const x of rows){
   else if(animalBadVerb.test(a))kind='animal_made_or_fixed';
   else if(cakeFixed.test(a))kind='cake_fixed';
   if(!kind){const jp=quotedJapanese(x.q);for(const [jre,are,k] of meaningMismatchHints){if(jre.test(jp)&&are.test(a)){kind=k;break;}}}
-  if(kind)semanticWarnings.push({id:x.id,kind,grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
+  if(kind)semanticErrors.push({id:x.id,kind,grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
 
 const byQA=new Map();
 for(const x of rows){const k=`${lower(x.q)}\u0000${lower(x.a)}`;const a=byQA.get(k)||[];a.push(x);byQA.set(k,a);}
 const duplicateGroups=[]; let duplicateRows=0, duplicateExcess=0;
-for(const items of byQA.values())if(items.length>1){duplicateRows+=items.length;duplicateExcess+=items.length-1;duplicateGroups.push({count:items.length,q:items[0].q,a:items[0].a,sample_ids:items.slice(0,20).map(x=>x.id),grade_category_types:[...new Set(items.map(x=>`${x.grade}/${x.category}/${x.type}`))].slice(0,20)});}
+const duplicateFamilyRows={};
+const duplicateFamilyGroups={};
+for(const items of byQA.values())if(items.length>1){
+  duplicateRows+=items.length;duplicateExcess+=items.length-1;
+  duplicateGroups.push({count:items.length,q:items[0].q,a:items[0].a,sample_ids:items.slice(0,20).map(x=>x.id),grade_category_types:[...new Set(items.map(family))].slice(0,20)});
+  const fams=new Set();
+  for(const x of items){const f=family(x);duplicateFamilyRows[f]=(duplicateFamilyRows[f]||0)+1;fams.add(f);}
+  for(const f of fams)duplicateFamilyGroups[f]=(duplicateFamilyGroups[f]||0)+1;
+}
 duplicateGroups.sort((a,b)=>b.count-a.count||String(a.q).localeCompare(String(b.q)));
-function breakdown(items){const c={};for(const x of items){const k=`${x.grade}/${x.category}/${x.type}`;c[k]=(c[k]||0)+1;}return Object.fromEntries(Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
+function breakdown(items){const c={};for(const x of items){const k=family(x);c[k]=(c[k]||0)+1;}return Object.fromEntries(Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
 function prefixBreakdown(items){const c={};for(const x of items){const k=prefix(x.id);c[k]=(c[k]||0)+1;}return Object.fromEntries(Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
+function sortCounts(o){return Object.fromEntries(Object.entries(o).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
 
 const hardFailures=[];
 if(hybridJapanese.length)hardFailures.push(`hybrid_japanese_translation:${hybridJapanese.length}`);
@@ -94,17 +105,18 @@ if(subjectVerbAgreement.length)hardFailures.push(`subject_verb_agreement:${subje
 if(possessiveSubstitution.length)hardFailures.push(`possessive_substitution:${possessiveSubstitution.length}`);
 if(auxTenseErrors.length)hardFailures.push(`auxiliary_tense_error:${auxTenseErrors.length}`);
 if(collocationErrors.length)hardFailures.push(`collocation_error:${collocationErrors.length}`);
+if(semanticErrors.length)hardFailures.push(`semantic_template_error:${semanticErrors.length}`);
 if(duplicateRows/Math.max(rows.length,1)>.10)hardFailures.push(`duplicate_qa_row_ratio:${(duplicateRows/rows.length).toFixed(4)}`);
 
 const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures.length?'FAIL':'PASS',hard_failures:hardFailures,english_count:rows.length,
   hybrid_japanese_translation:{count:hybridJapanese.length,by_prefix:prefixBreakdown(hybridJapanese),by_grade_category_type:breakdown(hybridJapanese),samples:hybridJapanese.slice(0,250)},
   subject_verb_agreement:{count:subjectVerbAgreement.length,by_prefix:prefixBreakdown(subjectVerbAgreement),samples:subjectVerbAgreement.slice(0,250)},
-  possessive_substitution:{count:possessiveSubstitution.length,by_prefix:prefixBreakdown(possessiveSubstitution),samples:possessiveSubstitution.slice(0,250)},
+  possessive_substitution:{count:possessiveSubstitution.length,by_prefix:prefixBreakdown(possessessiveSubstitution),samples:possessiveSubstitution.slice(0,250)},
   auxiliary_tense_errors:{count:auxTenseErrors.length,by_prefix:prefixBreakdown(auxTenseErrors),samples:auxTenseErrors.slice(0,250)},
   collocation_errors:{count:collocationErrors.length,by_prefix:prefixBreakdown(collocationErrors),samples:collocationErrors.slice(0,250)},
-  exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number((duplicateRows/rows.length).toFixed(6)),top:duplicateGroups.slice(0,250)},
-  semantic_template_warnings:{count:semanticWarnings.length,by_prefix:prefixBreakdown(semanticWarnings),samples:semanticWarnings.slice(0,250)},
-  policy:'Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Semantic findings remain review signals until repaired/validated.'};
+  exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number((duplicateRows/rows.length).toFixed(6)),groups_ge5:duplicateGroups.filter(g=>g.count>=5).length,groups_ge10:duplicateGroups.filter(g=>g.count>=10).length,by_family_rows:sortCounts(duplicateFamilyRows),by_family_groups:sortCounts(duplicateFamilyGroups),top:duplicateGroups.slice(0,250)},
+  semantic_template_errors:{count:semanticErrors.length,by_prefix:prefixBreakdown(semanticErrors),by_grade_category_type:breakdown(semanticErrors),samples:semanticErrors.slice(0,250)},
+  policy:'Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Duplicate family counts are emitted to drive root-cause diversification without ID-specific fixes.'};
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');
-console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,semantic_warnings:semanticWarnings.length},null,2));
+console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,semantic_errors:semanticErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,duplicate_groups_ge5:out.exact_duplicate_question_answer.groups_ge5},null,2));
 if(hardFailures.length)process.exitCode=2;
