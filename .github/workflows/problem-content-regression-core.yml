@@ -8,11 +8,14 @@ on:
     paths:
       - '.github/workflows/problem-content-regression-core.yml'
       - 'problem-app/index.html'
+      - 'tools/audit_problem_content_quality.mjs'
       - 'tools/audit_problem_semantic_duplicate_review.mjs'
       - 'tools/audit_problem_semantic_review_signals.mjs'
       - 'tools/repair_problem_semantic_review_defects.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families_v2.mjs'
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v3.mjs'
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v4.mjs'
 
 permissions:
   contents: write
