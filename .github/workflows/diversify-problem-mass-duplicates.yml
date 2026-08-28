@@ -4,6 +4,7 @@ on:
     branches: [fix-problem-content-quality-20260828]
     paths:
       - 'tools/diversify_problem_mass_duplicates.mjs'
+      - 'tools/run_mass_diversifier_v2.mjs'
       - 'audit/PROBLEM_APP_MASS_DUPLICATE_DIVERSIFY_TRIGGER.md'
 permissions:
   contents: write
@@ -22,7 +23,7 @@ jobs:
         with:
           node-version: '20'
       - name: Diversify semantic mass duplicates
-        run: node tools/diversify_problem_mass_duplicates.mjs
+        run: node tools/run_mass_diversifier_v2.mjs
       - name: Content quality audit
         run: node tools/audit_problem_content_quality.mjs || true
       - name: Duplicate family summary
