@@ -1,0 +1,476 @@
+{
+  "generated_at": "2026-08-28T15:29:23.246Z",
+  "groups_eligible": 36,
+  "groups_touched": 36,
+  "changed_rows": 38,
+  "by_family": {
+    "中2/比較/並びかえ": 7,
+    "中3/疑問詞/選択": 4,
+    "中3/接続詞/空所補充": 4,
+    "中3/接続詞/読解": 4,
+    "中3/不定詞①，動名詞/選択": 8,
+    "中3/現在完了形（継続），現在完了進行形/選択": 8,
+    "中3/仮定法/英作文": 3
+  },
+  "samples": [
+    {
+      "id": "M2-COMP2-1502",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / taller )",
+        "a": "He is taller than Ken."
+      },
+      "after": {
+        "q": "( Ken / than / taller / is / Tom )",
+        "a": "Tom is taller than Ken."
+      }
+    },
+    {
+      "id": "M2-COMP2-1505",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / smaller )",
+        "a": "He is smaller than Ken."
+      },
+      "after": {
+        "q": "( Yuki / than / younger / is / Emi )",
+        "a": "Emi is younger than Yuki."
+      }
+    },
+    {
+      "id": "M2-COMP2-1508",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / faster )",
+        "a": "He is faster than Ken."
+      },
+      "after": {
+        "q": "( bag / that / than / heavier / is / bag / This )",
+        "a": "This bag is heavier than that bag."
+      }
+    },
+    {
+      "id": "M2-COMP2-1514",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / easier )",
+        "a": "He is easier than Ken."
+      },
+      "after": {
+        "q": "( book / that / than / easier / is / book / This )",
+        "a": "This book is easier than that book."
+      }
+    },
+    {
+      "id": "M2-COMP2-1517",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / busier )",
+        "a": "He is busier than Ken."
+      },
+      "after": {
+        "q": "( bike / your / than / faster / is / bike / My )",
+        "a": "My bike is faster than your bike."
+      }
+    },
+    {
+      "id": "M2-COMP2-1520",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / more popular )",
+        "a": "He is more popular than Ken."
+      },
+      "after": {
+        "q": "( river / that / than / longer / is / river / This )",
+        "a": "This river is longer than that river."
+      }
+    },
+    {
+      "id": "M2-COMP2-1523",
+      "family": "中2/比較/並びかえ",
+      "before": {
+        "q": "( He / than / Ken / is / more beautiful )",
+        "a": "He is more beautiful than Ken."
+      },
+      "after": {
+        "q": "( box / that / than / lighter / is / box / This )",
+        "a": "This box is lighter than that box."
+      }
+    },
+    {
+      "id": "M3N-00466",
+      "family": "中3/疑問詞/選択",
+      "before": {
+        "q": "( When / Why / Where ) do you go to the library? 「どこへ」に合うものを選びなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "( Where / When / Why ) do you play tennis? 「どこで」に合うものを選びなさい。",
+        "a": "Where"
+      }
+    },
+    {
+      "id": "M3N-00472",
+      "family": "中3/疑問詞/選択",
+      "before": {
+        "q": "( When / Why / Where ) do you go to the park? 「どこへ」に合うものを選びなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "( When / Where / Why ) do you study English? 「いつ」に合うものを選びなさい。",
+        "a": "When"
+      }
+    },
+    {
+      "id": "M3N-00460",
+      "family": "中3/疑問詞/選択",
+      "before": {
+        "q": "( When / Why / Where ) do you go to the station? 「どこへ」に合うものを選びなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "( Why / When / Where ) do you practice every day? 「なぜ」に合うものを選びなさい。",
+        "a": "Why"
+      }
+    },
+    {
+      "id": "M3N-00478",
+      "family": "中3/疑問詞/選択",
+      "before": {
+        "q": "( When / Why / Where ) do you go to the room? 「どこへ」に合うものを選びなさい。",
+        "a": "Where"
+      },
+      "after": {
+        "q": "( How / What / Who ) do you go to school? 「どのように」に合うものを選びなさい。",
+        "a": "How"
+      }
+    },
+    {
+      "id": "M3N-01184",
+      "family": "中3/接続詞/空所補充",
+      "before": {
+        "q": "Call me (      ) you arrive at the library. 「〜するとき」に合う語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "Call me (      ) you arrive at school. 「〜するとき」に合う語を書きなさい。",
+        "a": "When"
+      }
+    },
+    {
+      "id": "M3N-01190",
+      "family": "中3/接続詞/空所補充",
+      "before": {
+        "q": "Call me (      ) you arrive at the park. 「〜するとき」に合う語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "I stayed home (      ) I was tired. 「〜なので」に合う語を書きなさい。",
+        "a": "Because"
+      }
+    },
+    {
+      "id": "M3N-01164",
+      "family": "中3/接続詞/読解",
+      "before": {
+        "q": "Ken stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "Kenは疲れていたので家にいました。"
+      },
+      "after": {
+        "q": "Aya stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "アヤは疲れていたので家にいました。"
+      }
+    },
+    {
+      "id": "M3N-01178",
+      "family": "中3/接続詞/空所補充",
+      "before": {
+        "q": "Call me (      ) you arrive at the station. 「〜するとき」に合う語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "We will play tennis (      ) it is sunny tomorrow. 「もし〜なら」に合う語を書きなさい。",
+        "a": "If"
+      }
+    },
+    {
+      "id": "M3N-01176",
+      "family": "中3/接続詞/読解",
+      "before": {
+        "q": "Bob stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "Bobは疲れていたので家にいました。"
+      },
+      "after": {
+        "q": "Bob stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "ボブは疲れていたので家にいました。"
+      }
+    },
+    {
+      "id": "M3N-01196",
+      "family": "中3/接続詞/空所補充",
+      "before": {
+        "q": "Call me (      ) you arrive at the room. 「〜するとき」に合う語を書きなさい。",
+        "a": "When"
+      },
+      "after": {
+        "q": "Wash your hands (      ) you eat lunch. 「〜する前に」に合う語を書きなさい。",
+        "a": "Before"
+      }
+    },
+    {
+      "id": "M3N-01188",
+      "family": "中3/接続詞/読解",
+      "before": {
+        "q": "Emi stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "Emiは疲れていたので家にいました。"
+      },
+      "after": {
+        "q": "Ken stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "ケンは疲れていたので家にいました。"
+      }
+    },
+    {
+      "id": "M3N-01200",
+      "family": "中3/接続詞/読解",
+      "before": {
+        "q": "Aya stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "Ayaは疲れていたので家にいました。"
+      },
+      "after": {
+        "q": "Emi stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+        "a": "エミは疲れていたので家にいました。"
+      }
+    },
+    {
+      "id": "M3N-01275",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Tom finished ( to read / reading / read ) this book. 正しいものを選びなさい。",
+        "a": "Reading"
+      },
+      "after": {
+        "q": "Aya enjoyed ( to play tennis / playing tennis / play tennis ). 正しいものを選びなさい。",
+        "a": "Playing tennis"
+      }
+    },
+    {
+      "id": "M3N-01281",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Ken enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+        "a": "Playing"
+      },
+      "after": {
+        "q": "Aya wants ( to visit Kyoto / visiting Kyoto / visit Kyoto ). 正しいものを選びなさい。",
+        "a": "To visit Kyoto"
+      }
+    },
+    {
+      "id": "M3N-01287",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Mike finished ( to write / writing / write ) the letter. 正しいものを選びなさい。",
+        "a": "Writing"
+      },
+      "after": {
+        "q": "Aya enjoyed ( to read books / reading books / read books ). 正しいものを選びなさい。",
+        "a": "Reading books"
+      }
+    },
+    {
+      "id": "M3N-01293",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Bob enjoyed ( to listen / listening / listen ) to music. 正しいものを選びなさい。",
+        "a": "Listening"
+      },
+      "after": {
+        "q": "Aya decided ( to read this book / reading this book / read this book ). 正しいものを選びなさい。",
+        "a": "To read this book"
+      }
+    },
+    {
+      "id": "M3N-01299",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "John finished ( to clean / cleaning / clean ) the room. 正しいものを選びなさい。",
+        "a": "Cleaning"
+      },
+      "after": {
+        "q": "Aya finished ( to clean the room / cleaning the room / clean the room ). 正しいものを選びなさい。",
+        "a": "Cleaning the room"
+      }
+    },
+    {
+      "id": "M3N-01305",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Emi enjoyed ( to watch / watching / watch ) the movie. 正しいものを選びなさい。",
+        "a": "Watching"
+      },
+      "after": {
+        "q": "Aya hopes ( to see Ken / seeing Ken / see Ken ). 正しいものを選びなさい。",
+        "a": "To see Ken"
+      }
+    },
+    {
+      "id": "M3N-01311",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Yuki finished ( to read / reading / read ) this book. 正しいものを選びなさい。",
+        "a": "Reading"
+      },
+      "after": {
+        "q": "Aya finished ( to write the letter / writing the letter / write the letter ). 正しいものを選びなさい。",
+        "a": "Writing the letter"
+      }
+    },
+    {
+      "id": "M3N-01317",
+      "family": "中3/不定詞①，動名詞/選択",
+      "before": {
+        "q": "Aya enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+        "a": "Playing"
+      },
+      "after": {
+        "q": "Aya needs ( to study English / studying English / study English ). 正しいものを選びなさい。",
+        "a": "To study English"
+      }
+    },
+    {
+      "id": "M3N-01878",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Tom ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Aya ( has worked / worked / is worked ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked"
+      }
+    },
+    {
+      "id": "M3N-01884",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Ken ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Bob ( has lived / lived / is lived ) in Japan for two years. 正しいものを選びなさい。",
+        "a": "Has lived"
+      }
+    },
+    {
+      "id": "M3N-01890",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Mike ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Ken ( has studied / studied / is studied ) English since Monday. 正しいものを選びなさい。",
+        "a": "Has studied"
+      }
+    },
+    {
+      "id": "M3N-01896",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Bob ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Emi ( has known / known / is known ) Yuki for five years. 正しいものを選びなさい。",
+        "a": "Has known"
+      }
+    },
+    {
+      "id": "M3N-01902",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "John ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Tom ( has used / used / is used ) this computer since this morning. 正しいものを選びなさい。",
+        "a": "Has used"
+      }
+    },
+    {
+      "id": "M3N-01908",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Emi ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "Lucy ( has played / played / is played ) tennis for three years. 正しいものを選びなさい。",
+        "a": "Has played"
+      }
+    },
+    {
+      "id": "M3N-01914",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Yuki ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "I ( have lived / lived / is lived ) in this town since 2024. 正しいものを選びなさい。",
+        "a": "Have lived"
+      }
+    },
+    {
+      "id": "M3N-01920",
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "before": {
+        "q": "Aya ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+        "a": "Has worked"
+      },
+      "after": {
+        "q": "We ( have studied / studied / is studied ) English for two years. 正しいものを選びなさい。",
+        "a": "Have studied"
+      }
+    },
+    {
+      "id": "M3N-02337",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
+        "a": "If I were a dog, I could run fast."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、空を飛べるのに。』",
+        "a": "If I were a fish, I could fly in the sky."
+      }
+    },
+    {
+      "id": "M3N-02367",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
+        "a": "If I were a dog, I could run fast."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、空を飛べるのに。』",
+        "a": "If I were a dog, I could fly in the sky."
+      }
+    },
+    {
+      "id": "M3N-02397",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
+        "a": "If I were a dog, I could run fast."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、空を飛べるのに。』",
+        "a": "If I were a cat, I could fly in the sky."
+      }
+    }
+  ],
+  "duplicate_groups_after": 179,
+  "duplicate_excess_after": 208,
+  "groups_ge5_after": 0
+}
