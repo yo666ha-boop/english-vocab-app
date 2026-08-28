@@ -1,0 +1,732 @@
+{
+  "generated_at": "2026-08-28T12:00:20.833Z",
+  "mass_group_count": 60,
+  "mass_row_count": 1048,
+  "mass_excess": 988,
+  "groups": [
+    {
+      "count": 28,
+      "excess": 27,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "間違い直し",
+      "q": "If I am you, I would study harder. の誤りを直しなさい。",
+      "a": "If I were you, I would study harder.",
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞①，動名詞",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( to / easy / is / read / this / book )",
+      "a": "This book is easy to read.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞①，動名詞",
+      "type": "選択",
+      "q": "He finished ( to do / doing / do ) his homework. 正しいものを選びなさい。",
+      "a": "Doing",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞②",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( I / have / a / friend / to / talk / with )",
+      "a": "I have a friend to talk with.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞②",
+      "type": "空所補充",
+      "q": "I have a book (      ) read. 「読むための本」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "to",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞②",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『私は英語を勉強するために図書館へ行きました。』",
+      "a": "I went to the library to study English.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞②",
+      "type": "読解",
+      "q": "He got up early to catch the first train. 問い：この文の意味として最も適切なものを書きなさい。",
+      "a": "彼は始発電車に乗るために早く起きました。",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "不定詞②",
+      "type": "選択",
+      "q": "I have a lot of homework to do. の to do のはたらきとして最も適切なものを選びなさい。 (A) 名詞を説明する (B) 理由を表す (C) 結果を表す",
+      "a": "A",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "人称代名詞",
+      "type": "空所補充",
+      "q": "This book is not mine. It is (      ). 「彼のもの」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "His",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "人称代名詞",
+      "type": "選択",
+      "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+      "a": "He",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( I / enough / if / had / money / , / would / buy / it / I )",
+      "a": "If I had enough money, I would buy it.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "空所補充",
+      "q": "If I (      ) you, I would help him. 空所に入る最も適切な語を書きなさい。",
+      "a": "were",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+      "a": "If I were a bird, I could fly in the sky.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "読解",
+      "q": "If I were rich, I would travel around the world. 問い：この文の意味として最も適切なものを書きなさい。",
+      "a": "もし私がお金持ちなら、世界中を旅行するのに。",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "仮定法",
+      "type": "選択",
+      "q": "If she had more time, she ( will / would / can ) read more books. 正しいものを選びなさい。",
+      "a": "Would",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "空所補充",
+      "q": "Do you know (      ) she lives? 「彼女がどこに住んでいるか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "Where",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "空所補充",
+      "q": "The boy (      ) under the tree is my brother. (play) の（ ）内を正しくしなさい。",
+      "a": "Playing",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『あそこで歌っている女の子は私の妹です。』",
+      "a": "The girl singing over there is my sister.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "英作文",
+      "q": "次の日本語に合う英文を書きなさい。『私は彼が何をほしいのかわかりません。』",
+      "a": "I don't know what he wants.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "選択",
+      "q": "I don't know (A) where does he live (B) where he lives (C) he lives where. 正しいものを選びなさい。",
+      "a": "B",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "分詞と間接疑問文",
+      "type": "間違い直し",
+      "q": "I don't know where does he live. の誤りを直しなさい。",
+      "a": "I don't know where he lives.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "助動詞",
+      "type": "読解",
+      "q": "You should see a doctor. 問い：この文の意味として最も適切なものを書きなさい。",
+      "a": "あなたは医者に診てもらうべきです。",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "助動詞",
+      "type": "選択",
+      "q": "You ( must / can / may ) finish your homework today. 「しなければならない」に合うものを選びなさい。",
+      "a": "Must",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "受動態",
+      "type": "空所補充",
+      "q": "English is (      ) in many countries. (speak) の（ ）内を正しくしなさい。",
+      "a": "Spoken",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "受動態",
+      "type": "選択",
+      "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+      "a": "Were sent",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "受動態",
+      "type": "間違い直し",
+      "q": "This song is sing by many students. の誤りを直しなさい。",
+      "a": "This song is sung by many students.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "命令文，there is ～ の文",
+      "type": "読解",
+      "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "静かにしてください。",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "接続詞",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
+      "a": "He was absent because he was sick.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "接続詞",
+      "type": "読解",
+      "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "文型",
+      "type": "見分け",
+      "q": "My father gave me a pen. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "人に物を与える文",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "文型",
+      "type": "見分け",
+      "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "文型",
+      "type": "間違い直し",
+      "q": "They call Ken him. の誤りを直しなさい。",
+      "a": "They call him Ken.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "未来の文",
+      "type": "選択",
+      "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+      "a": "Is Going to",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "空所補充",
+      "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+      "a": "Finished",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "選択",
+      "q": "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。",
+      "a": "Have lost",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "間違い直し",
+      "q": "I have went there before. の誤りを直しなさい。",
+      "a": "I have gone there before.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "type": "変形",
+      "q": "They have been playing soccer for two hours. を疑問文にしなさい。",
+      "a": "Have they been playing soccer for two hours?",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "type": "空所補充",
+      "q": "She has been (      ) English since this morning. (study) の（ ）内を正しくしなさい。",
+      "a": "Studying",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "type": "選択",
+      "q": "My father ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has Worked",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "疑問詞",
+      "type": "空所補充",
+      "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+      "a": "Why",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "関係代名詞",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( the / boy / who / is / bike / riding / a )",
+      "a": "The boy who is riding a bike",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "関係代名詞",
+      "type": "選択",
+      "q": "The boy ( who / which / where ) is running is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "関係代名詞",
+      "type": "選択",
+      "q": "The camera ( who / which / where ) was on the desk is mine. 正しいものを選びなさい。",
+      "a": "Which",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 20,
+      "excess": 19,
+      "grade": "中3",
+      "category": "関係代名詞",
+      "type": "間違い直し",
+      "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+      "a": "The girl who lives next door is kind.",
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中2",
+      "category": "比較",
+      "type": "並びかえ",
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
+      "a": "This bag is larger than that one.",
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中2",
+      "category": "比較",
+      "type": "間違い直し",
+      "q": "This bag is more large than that one. の誤りを直しなさい。",
+      "a": "This bag is larger than that one.",
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中2",
+      "category": "比較",
+      "type": "間違い直し",
+      "q": "This question is more easy than that one. の誤りを直しなさい。",
+      "a": "This question is easier than that one.",
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "She has been to Kyoto once. を疑問文にしなさい。",
+      "a": "Has she been to Kyoto once?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "She has lost her key. を疑問文にしなさい。",
+      "a": "Has she lost her key?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "She has visited Tokyo before. を疑問文にしなさい。",
+      "a": "Has she visited Tokyo before?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "They have been to Kyoto once. を疑問文にしなさい。",
+      "a": "Have they been to Kyoto once?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "They have finished their homework. を疑問文にしなさい。",
+      "a": "Have they finished their homework?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "They have lost their key. を疑問文にしなさい。",
+      "a": "Have they lost their key?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "They have visited Tokyo before. を疑問文にしなさい。",
+      "a": "Have they visited Tokyo before?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "We have been to Kyoto once. を疑問文にしなさい。",
+      "a": "Have we been to Kyoto once?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "We have finished our homework. を疑問文にしなさい。",
+      "a": "Have we finished our homework?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "We have lost our key. を疑問文にしなさい。",
+      "a": "Have we lost our key?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "type": "変形",
+      "q": "We have visited Tokyo before. を疑問文にしなさい。",
+      "a": "Have we visited Tokyo before?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "type": "変形",
+      "q": "They have been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Have they been playing tennis for two hours?",
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 10,
+      "excess": 9,
+      "grade": "中3",
+      "category": "現在完了形（継続），現在完了進行形",
+      "type": "変形",
+      "q": "They have been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Have they been using this computer since this morning?",
+      "prefixes": [
+        "M3C"
+      ]
+    }
+  ]
+}
