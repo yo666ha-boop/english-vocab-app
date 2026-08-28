@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-08-28T18:15:57.644Z",
+  "groups_eligible": 24,
+  "groups_touched": 24,
+  "changed_rows": 24,
+  "by_family": {
+    "中1/頻度副詞/並びかえ": 6,
+    "中2/比較/英作文": 5,
+    "中3/接続詞/並びかえ": 4,
+    "中3/文型/間違い直し": 8,
+    "中3/関係代名詞/並びかえ": 1
+  },
+  "samples": [
+    {
+      "id": "GEN-FREQ-1339",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / He / busy )",
+        "a": "He is always busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / busy / Tom / always )",
+        "a": "Tom is always busy."
+      }
+    },
+    {
+      "id": "GEN-FREQ-1340",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( usually / is / He / busy )",
+        "a": "He is usually busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / busy / Ken / always )",
+        "a": "Ken is always busy."
+      }
+    },
+    {
+      "id": "GEN-FREQ-1341",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( often / is / He / busy )",
+        "a": "He is often busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / busy / Emi / always )",
+        "a": "Emi is always busy."
+      }
+    },
+    {
+      "id": "GEN-FREQ-1342",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )",
+        "a": "She is always busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( is / busy / Yuki / always )",
+        "a": "Yuki is always busy."
+      }
+    },
+    {
+      "id": "GEN-FREQ-1343",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( usually / is / She / busy )",
+        "a": "She is usually busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( father / always / My / is / busy )",
+        "a": "My father is always busy."
+      }
+    },
+    {
+      "id": "GEN-FREQ-1344",
+      "family": "中1/頻度副詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( often / is / She / busy )",
+        "a": "She is often busy."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( mother / always / My / is / busy )",
+        "a": "My mother is always busy."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0452",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+        "a": "My bike is faster than your bike."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この湖はあの湖より深い。』",
+        "a": "This lake is deeper than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0455",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この机はあの机より重い。』",
+        "a": "This desk is heavier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この道はあの道より広い。』",
+        "a": "This road is wider than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0458",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
+        "a": "This river is longer than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この塔はあの塔より高い。』",
+        "a": "This tower is taller than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0461",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』",
+        "a": "This box is lighter than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この鉛筆はあの鉛筆より短い。』",
+        "a": "This pencil is shorter than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0464",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この犬はあの犬より大きい。』",
+        "a": "This dog is bigger than that one."
+      }
+    },
+    {
+      "id": "M3N-01157",
+      "family": "中3/接続詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( Tom / home / he / tired / stayed / because / was )",
+        "a": "Tom stayed home because he was tired."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( stayed / because / was / Ken / home / he / sick )",
+        "a": "Ken stayed home because he was sick."
+      }
+    },
+    {
+      "id": "M3N-01169",
+      "family": "中3/接続詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( Mike / home / he / tired / stayed / because / was )",
+        "a": "Mike stayed home because he was tired."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( went / bed / because / was / Emi / to / early / she / tired )",
+        "a": "Emi went to bed early because she was tired."
+      }
+    },
+    {
+      "id": "M3N-01181",
+      "family": "中3/接続詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( John / home / he / tired / stayed / because / was )",
+        "a": "John stayed home because he was tired."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( took / umbrella / it / raining / Yuki / an / because / was )",
+        "a": "Yuki took an umbrella because it was raining."
+      }
+    },
+    {
+      "id": "M3N-01193",
+      "family": "中3/接続詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( Yuki / home / she / tired / stayed / because / was )",
+        "a": "Yuki stayed home because she was tired."
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( studied / because / had / test / Tom / hard / he / a )",
+        "a": "Tom studied hard because he had a test."
+      }
+    },
+    {
+      "id": "M3N-01517",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Tom him. の誤りを直しなさい。",
+        "a": "They call him Tom."
+      },
+      "after": {
+        "q": "We call Tom him. の誤りを直しなさい。",
+        "a": "We call him Tom."
+      }
+    },
+    {
+      "id": "M3N-01523",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Ken him. の誤りを直しなさい。",
+        "a": "They call him Ken."
+      },
+      "after": {
+        "q": "We call Ken him. の誤りを直しなさい。",
+        "a": "We call him Ken."
+      }
+    },
+    {
+      "id": "M3N-01529",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Mike him. の誤りを直しなさい。",
+        "a": "They call him Mike."
+      },
+      "after": {
+        "q": "We call Mike him. の誤りを直しなさい。",
+        "a": "We call him Mike."
+      }
+    },
+    {
+      "id": "M3N-01535",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Bob him. の誤りを直しなさい。",
+        "a": "They call him Bob."
+      },
+      "after": {
+        "q": "We call Bob him. の誤りを直しなさい。",
+        "a": "We call him Bob."
+      }
+    },
+    {
+      "id": "M3N-01541",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call John him. の誤りを直しなさい。",
+        "a": "They call him John."
+      },
+      "after": {
+        "q": "We call John him. の誤りを直しなさい。",
+        "a": "We call him John."
+      }
+    },
+    {
+      "id": "M3N-01547",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Emi her. の誤りを直しなさい。",
+        "a": "They call her Emi."
+      },
+      "after": {
+        "q": "We call Emi her. の誤りを直しなさい。",
+        "a": "We call her Emi."
+      }
+    },
+    {
+      "id": "M3N-01553",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Yuki her. の誤りを直しなさい。",
+        "a": "They call her Yuki."
+      },
+      "after": {
+        "q": "We call Yuki her. の誤りを直しなさい。",
+        "a": "We call her Yuki."
+      }
+    },
+    {
+      "id": "M3N-01559",
+      "family": "中3/文型/間違い直し",
+      "before": {
+        "q": "They call Aya her. の誤りを直しなさい。",
+        "a": "They call her Aya."
+      },
+      "after": {
+        "q": "We call Aya her. の誤りを直しなさい。",
+        "a": "We call her Aya."
+      }
+    },
+    {
+      "id": "M3N-02279",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
+        "a": "The woman who is taking a picture"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( boy / is / a / The / who / reading / book )",
+        "a": "The boy who is reading a book"
+      }
+    }
+  ],
+  "duplicate_groups_after": 86,
+  "duplicate_excess_after": 115,
+  "groups_ge5_after": 0
+}
