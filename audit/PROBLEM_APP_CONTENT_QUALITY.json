@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-28T11:16:04.713Z",
+  "generated_at": "2026-08-28T11:23:44.036Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
     "hybrid_japanese_translation:421",
-    "auxiliary_tense_error:45",
-    "collocation_error:31",
+    "auxiliary_tense_error:6",
+    "collocation_error:30",
     "duplicate_qa_row_ratio:0.3996"
   ],
   "english_count": 10511,
@@ -3483,371 +3483,14 @@
     "samples": []
   },
   "auxiliary_tense_errors": {
-    "count": 45,
+    "count": 6,
     "by_prefix": {
-      "M2X-PA": 12,
-      "M3C": 12,
-      "M2-REV": 9,
-      "M3N": 6,
-      "M2-PAST": 4,
-      "M2-CONJ2": 1,
-      "M2X-CONJ": 1
+      "M3N": 6
     },
     "samples": [
       {
-        "id": "M2-PAST-0336",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "変形",
-        "q": "I read English books yesterday. を疑問文にしなさい。",
-        "a": "Did I read English books yesterday?"
-      },
-      {
-        "id": "M2-PAST-0356",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "変形",
-        "q": "You read English books yesterday. を疑問文にしなさい。",
-        "a": "Did you read English books yesterday?"
-      },
-      {
-        "id": "M2-PAST-0376",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "変形",
-        "q": "We read English books yesterday. を疑問文にしなさい。",
-        "a": "Did we read English books yesterday?"
-      },
-      {
-        "id": "M2-PAST-0396",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "変形",
-        "q": "They read English books yesterday. を疑問文にしなさい。",
-        "a": "Did they read English books yesterday?"
-      },
-      {
-        "id": "M2X-PA-0226",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did I played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did you play the guitar yesterday?"
-      },
-      {
-        "id": "M2X-PA-0228",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did I readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did you read English books yesterday?"
-      },
-      {
-        "id": "M2X-PA-0238",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did I played video games yesterday? の誤りを直しなさい。",
-        "a": "Did you play video games yesterday?"
-      },
-      {
-        "id": "M2X-PA-0250",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did you played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did you play the guitar yesterday?"
-      },
-      {
-        "id": "M2X-PA-0252",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did you readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did you read English books yesterday?"
-      },
-      {
-        "id": "M2X-PA-0262",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did you played video games yesterday? の誤りを直しなさい。",
-        "a": "Did you play video games yesterday?"
-      },
-      {
-        "id": "M2X-PA-0274",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did we played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did you play the guitar yesterday?"
-      },
-      {
-        "id": "M2X-PA-0276",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did we readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did you read English books yesterday?"
-      },
-      {
-        "id": "M2X-PA-0286",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did we played video games yesterday? の誤りを直しなさい。",
-        "a": "Did you play video games yesterday?"
-      },
-      {
-        "id": "M2X-PA-0298",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did they played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did they play the guitar yesterday?"
-      },
-      {
-        "id": "M2X-PA-0300",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did they readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did they read English books yesterday?"
-      },
-      {
-        "id": "M2X-PA-0310",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did they played video games yesterday? の誤りを直しなさい。",
-        "a": "Did they play video games yesterday?"
-      },
-      {
-        "id": "M2X-CONJ-0461",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "接続詞",
-        "type": "並びかえ",
-        "q": "( I / came / home / when / I / did / my / homework )",
-        "a": "I came home when I did my homework."
-      },
-      {
-        "id": "M2-REV-0212",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did he played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did he play the guitar yesterday?"
-      },
-      {
-        "id": "M2-REV-0216",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did he readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did he read English books yesterday?"
-      },
-      {
-        "id": "M2-REV-0236",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did he played video games yesterday? の誤りを直しなさい。",
-        "a": "Did he play video games yesterday?"
-      },
-      {
-        "id": "M2-REV-0260",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did she played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did she play the guitar yesterday?"
-      },
-      {
-        "id": "M2-REV-0264",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did she readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did she read English books yesterday?"
-      },
-      {
-        "id": "M2-REV-0284",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did she played video games yesterday? の誤りを直しなさい。",
-        "a": "Did she play video games yesterday?"
-      },
-      {
-        "id": "M2-REV-0380",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did my friend played the guitar yesterday? の誤りを直しなさい。",
-        "a": "Did my friend play the guitar yesterday?"
-      },
-      {
-        "id": "M2-REV-0384",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did my friend readed English books yesterday? の誤りを直しなさい。",
-        "a": "Did my friend read English books yesterday?"
-      },
-      {
-        "id": "M2-REV-0404",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "過去の疑問文・否定文",
-        "type": "間違い直し",
-        "q": "Did my friend played video games yesterday? の誤りを直しなさい。",
-        "a": "Did my friend play video games yesterday?"
-      },
-      {
-        "id": "M2-CONJ2-0750",
-        "kind": "did_plus_past",
-        "grade": "中2",
-        "category": "接続詞",
-        "type": "並びかえ",
-        "q": "( I / was / busy / but / I / did / my / homework )",
-        "a": "I was busy, but I did my homework."
-      },
-      {
-        "id": "M3C-00083",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "I read books yesterday. を疑問文にしなさい。",
-        "a": "Did I read books yesterday?"
-      },
-      {
-        "id": "M3C-00084",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "I read books yesterday. を否定文にしなさい。",
-        "a": "I did not read books yesterday."
-      },
-      {
-        "id": "M3C-00283",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "You read books yesterday. を疑問文にしなさい。",
-        "a": "Did you read books yesterday?"
-      },
-      {
-        "id": "M3C-00284",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "You read books yesterday. を否定文にしなさい。",
-        "a": "You did not read books yesterday."
-      },
-      {
-        "id": "M3C-00483",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "He read books yesterday. を疑問文にしなさい。",
-        "a": "Did he read books yesterday?"
-      },
-      {
-        "id": "M3C-00484",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "He read books yesterday. を否定文にしなさい。",
-        "a": "He did not read books yesterday."
-      },
-      {
-        "id": "M3C-00683",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "She read books yesterday. を疑問文にしなさい。",
-        "a": "Did she read books yesterday?"
-      },
-      {
-        "id": "M3C-00684",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "She read books yesterday. を否定文にしなさい。",
-        "a": "She did not read books yesterday."
-      },
-      {
-        "id": "M3C-00883",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "We read books yesterday. を疑問文にしなさい。",
-        "a": "Did we read books yesterday?"
-      },
-      {
-        "id": "M3C-00884",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "We read books yesterday. を否定文にしなさい。",
-        "a": "We did not read books yesterday."
-      },
-      {
-        "id": "M3C-01083",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "They read books yesterday. を疑問文にしなさい。",
-        "a": "Did they read books yesterday?"
-      },
-      {
-        "id": "M3C-01084",
-        "kind": "did_plus_past",
-        "grade": "中3",
-        "category": "be動詞と一般動詞（過去形）",
-        "type": "変形",
-        "q": "They read books yesterday. を否定文にしなさい。",
-        "a": "They did not read books yesterday."
-      },
-      {
         "id": "M3N-00330",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3856,7 +3499,7 @@
       },
       {
         "id": "M3N-00336",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3865,7 +3508,7 @@
       },
       {
         "id": "M3N-00342",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3874,7 +3517,7 @@
       },
       {
         "id": "M3N-00348",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3883,7 +3526,7 @@
       },
       {
         "id": "M3N-00354",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3892,7 +3535,7 @@
       },
       {
         "id": "M3N-00360",
-        "kind": "did_plus_past",
+        "kind": "did_plus_past_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3902,14 +3545,14 @@
     ]
   },
   "collocation_errors": {
-    "count": 31,
+    "count": 30,
     "by_prefix": {
-      "M3N": 31
+      "M3N": 30
     },
     "samples": [
       {
         "id": "M3N-00278",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_source",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "見分け",
@@ -3918,7 +3561,7 @@
       },
       {
         "id": "M3N-00279",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "間違い直し",
@@ -3927,7 +3570,7 @@
       },
       {
         "id": "M3N-00282",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3936,7 +3579,7 @@
       },
       {
         "id": "M3N-00284",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_source",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "見分け",
@@ -3945,7 +3588,7 @@
       },
       {
         "id": "M3N-00285",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "間違い直し",
@@ -3954,7 +3597,7 @@
       },
       {
         "id": "M3N-00288",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3963,7 +3606,7 @@
       },
       {
         "id": "M3N-00290",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_source",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "見分け",
@@ -3972,7 +3615,7 @@
       },
       {
         "id": "M3N-00291",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "間違い直し",
@@ -3981,7 +3624,7 @@
       },
       {
         "id": "M3N-00294",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -3989,8 +3632,35 @@
         "a": "Did my brother play skiing yesterday?"
       },
       {
+        "id": "M3N-00296",
+        "kind": "bad_collocation_in_source",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "My sister played skating yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
+      },
+      {
+        "id": "M3N-00297",
+        "kind": "bad_collocation_in_answer",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "My sister was played skating yesterday. の誤りを直しなさい。",
+        "a": "My sister played skating yesterday."
+      },
+      {
+        "id": "M3N-00300",
+        "kind": "bad_collocation_in_answer",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "My sister played skating yesterday. を疑問文にしなさい。",
+        "a": "Did my sister play skating yesterday?"
+      },
+      {
         "id": "M3N-00338",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_source",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "見分け",
@@ -3999,7 +3669,7 @@
       },
       {
         "id": "M3N-00339",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "間違い直し",
@@ -4008,7 +3678,7 @@
       },
       {
         "id": "M3N-00342",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -4017,7 +3687,7 @@
       },
       {
         "id": "M3N-00344",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_source",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "見分け",
@@ -4026,7 +3696,7 @@
       },
       {
         "id": "M3N-00345",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "間違い直し",
@@ -4035,7 +3705,7 @@
       },
       {
         "id": "M3N-00348",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "be動詞と一般動詞（過去形）",
         "type": "変形",
@@ -4044,7 +3714,7 @@
       },
       {
         "id": "M3N-00638",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "変形",
@@ -4053,7 +3723,7 @@
       },
       {
         "id": "M3N-00641",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "英作文",
@@ -4062,7 +3732,7 @@
       },
       {
         "id": "M3N-00644",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "変形",
@@ -4071,7 +3741,7 @@
       },
       {
         "id": "M3N-00647",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "英作文",
@@ -4080,7 +3750,7 @@
       },
       {
         "id": "M3N-00650",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "変形",
@@ -4089,7 +3759,7 @@
       },
       {
         "id": "M3N-00653",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "英作文",
@@ -4097,8 +3767,26 @@
         "a": "My brother was playing skiing then."
       },
       {
+        "id": "M3N-00656",
+        "kind": "bad_collocation_in_answer",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "My sister is playing skating. を否定文にしなさい。",
+        "a": "My sister is not playing skating."
+      },
+      {
+        "id": "M3N-00659",
+        "kind": "bad_collocation_in_answer",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "英作文",
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My sisterはskatingをしていました。』",
+        "a": "My sister was playing skating then."
+      },
+      {
         "id": "M3N-00698",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "変形",
@@ -4107,7 +3795,7 @@
       },
       {
         "id": "M3N-00701",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "英作文",
@@ -4116,7 +3804,7 @@
       },
       {
         "id": "M3N-00704",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "変形",
@@ -4125,66 +3813,12 @@
       },
       {
         "id": "M3N-00707",
-        "kind": "play_plus_activity_ing",
+        "kind": "bad_collocation_in_answer",
         "grade": "中3",
         "category": "進行形",
         "type": "英作文",
         "q": "次の日本語に合う英文を書きなさい。『そのとき、The teacherはswimmingをしていました。』",
         "a": "The teacher was playing swimming then."
-      },
-      {
-        "id": "M3N-01241",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "間違い直し",
-        "q": "My father want to playing swimming. の誤りを直しなさい。",
-        "a": "My father wants to go swimming."
-      },
-      {
-        "id": "M3N-01247",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "間違い直し",
-        "q": "My mother want to playing running. の誤りを直しなさい。",
-        "a": "My mother wants to go running."
-      },
-      {
-        "id": "M3N-01253",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "間違い直し",
-        "q": "My brother want to playing skiing. の誤りを直しなさい。",
-        "a": "My brother wants to go skiing."
-      },
-      {
-        "id": "M3N-01301",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "間違い直し",
-        "q": "The student want to playing running. の誤りを直しなさい。",
-        "a": "The student wants to go running."
-      },
-      {
-        "id": "M3N-01307",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "間違い直し",
-        "q": "The teacher want to playing swimming. の誤りを直しなさい。",
-        "a": "The teacher wants to go swimming."
-      },
-      {
-        "id": "M3N-01972",
-        "kind": "play_plus_activity_ing",
-        "grade": "中3",
-        "category": "不定詞②",
-        "type": "間違い直し",
-        "q": "My brother went there to played skiing. の誤りを直しなさい。",
-        "a": "My brother went there to go skiing."
       }
     ]
   },
@@ -9147,5 +8781,5 @@
       }
     ]
   },
-  "policy": "Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, auxiliary tense, bad collocation, and excessive exact duplicate QA rows fail. Semantic findings remain review signals until repaired/validated."
+  "policy": "Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Semantic findings remain review signals until repaired/validated."
 }
