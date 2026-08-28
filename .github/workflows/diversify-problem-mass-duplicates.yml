@@ -5,6 +5,7 @@ on:
     paths:
       - 'tools/diversify_problem_mass_duplicates.mjs'
       - 'tools/run_mass_diversifier_v2.mjs'
+      - 'tools/run_mass_diversifier_v3.mjs'
       - 'audit/PROBLEM_APP_MASS_DUPLICATE_DIVERSIFY_TRIGGER.md'
 permissions:
   contents: write
@@ -23,7 +24,7 @@ jobs:
         with:
           node-version: '20'
       - name: Diversify semantic mass duplicates
-        run: node tools/run_mass_diversifier_v2.mjs
+        run: node tools/run_mass_diversifier_v3.mjs
       - name: Content quality audit
         run: node tools/audit_problem_content_quality.mjs || true
       - name: Duplicate family summary
@@ -36,6 +37,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add problem-app/index.html audit/PROBLEM_APP_MASS_DUPLICATE_DIVERSIFICATION.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_DUPLICATE_FAMILY_SUMMARY.json audit/PROBLEM_APP_MASS_DUPLICATE_GROUPS.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'fix: diversify mass duplicate problem families [skip ci]'
+          git commit -m 'fix: diversify final mass duplicate problem families [skip ci]'
           git pull --rebase origin fix-problem-content-quality-20260828
           git push origin HEAD:fix-problem-content-quality-20260828
