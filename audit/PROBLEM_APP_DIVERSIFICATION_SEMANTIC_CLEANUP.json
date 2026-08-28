@@ -1,967 +1,1687 @@
 {
-  "generated_at": "2026-08-28T11:41:33.983Z",
-  "changed_rows": 468,
+  "generated_at": "2026-08-28T11:42:39.531Z",
+  "changed_rows": 367,
   "awkward_present_perfect_negative": 0,
-  "question_answer_case": 468,
+  "common_subject_case_repair": 367,
   "samples": [
     {
       "id": "E1-BQ-005",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "Are he busy? の誤りを直しなさい。",
-        "a": "Is he busy?"
+        "a": "Is He busy?"
       },
       "after": {
         "q": "Are he busy? の誤りを直しなさい。",
-        "a": "Is He busy?"
+        "a": "Is he busy?"
       }
     },
     {
       "id": "E1-BQ-007",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is a teacher. を疑問文にしなさい。",
-        "a": "Is she a teacher?"
+        "a": "Is She a teacher?"
       },
       "after": {
         "q": "She is a teacher. を疑問文にしなさい。",
-        "a": "Is She a teacher?"
+        "a": "Is she a teacher?"
       }
     },
     {
       "id": "E1-3S-002",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She likes music. を疑問文にしなさい。",
-        "a": "Does she like music?"
+        "a": "Does She like music?"
       },
       "after": {
         "q": "She likes music. を疑問文にしなさい。",
-        "a": "Does She like music?"
+        "a": "Does she like music?"
       }
     },
     {
       "id": "E1-3S-008",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She plays tennis. を疑問文にしなさい。",
-        "a": "Does she play tennis?"
+        "a": "Does She play tennis?"
       },
       "after": {
         "q": "She plays tennis. を疑問文にしなさい。",
-        "a": "Does She play tennis?"
+        "a": "Does she play tennis?"
       }
     },
     {
       "id": "E1-3S-010",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "Does she likes music? の誤りを直しなさい。",
-        "a": "Does she like music?"
+        "a": "Does She like music?"
       },
       "after": {
         "q": "Does she likes music? の誤りを直しなさい。",
-        "a": "Does She like music?"
+        "a": "Does she like music?"
       }
     },
     {
       "id": "E1-3S-013",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "次の日本語に合う英文を書きなさい。『彼女はピアノをひきますか。』",
-        "a": "Does she play the piano?"
+        "a": "Does She play the piano?"
       },
       "after": {
         "q": "次の日本語に合う英文を書きなさい。『彼女はピアノをひきますか。』",
-        "a": "Does She play the piano?"
+        "a": "Does she play the piano?"
       }
     },
     {
       "id": "E1-WR-009",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "次の日本語に合う英文を書きなさい。『彼は忙しいですか。』",
-        "a": "Is he busy?"
+        "a": "Is He busy?"
       },
       "after": {
         "q": "次の日本語に合う英文を書きなさい。『彼は忙しいですか。』",
-        "a": "Is He busy?"
+        "a": "Is he busy?"
       }
     },
     {
       "id": "GEN-BE-0022",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is hungry. を疑問文にしなさい。",
-        "a": "Is he hungry?"
+        "a": "Is He hungry?"
       },
       "after": {
         "q": "He is hungry. を疑問文にしなさい。",
-        "a": "Is He hungry?"
+        "a": "Is he hungry?"
       }
     },
     {
       "id": "GEN-BE-0026",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is tired. を疑問文にしなさい。",
-        "a": "Is she tired?"
+        "a": "Is She tired?"
       },
       "after": {
         "q": "She is tired. を疑問文にしなさい。",
-        "a": "Is She tired?"
+        "a": "Is she tired?"
       }
     },
     {
       "id": "GEN-BE-0146",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is old. を疑問文にしなさい。",
-        "a": "Is he old?"
+        "a": "Is He old?"
       },
       "after": {
         "q": "He is old. を疑問文にしなさい。",
-        "a": "Is He old?"
+        "a": "Is he old?"
       }
     },
     {
       "id": "GEN-BE-0162",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is happy. を疑問文にしなさい。",
-        "a": "Is he happy?"
+        "a": "Is He happy?"
       },
       "after": {
         "q": "He is happy. を疑問文にしなさい。",
-        "a": "Is He happy?"
+        "a": "Is he happy?"
       }
     },
     {
       "id": "GEN-BE-0166",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is busy. を疑問文にしなさい。",
-        "a": "Is he busy?"
+        "a": "Is He busy?"
       },
       "after": {
         "q": "He is busy. を疑問文にしなさい。",
-        "a": "Is He busy?"
+        "a": "Is he busy?"
       }
     },
     {
       "id": "GEN-BE-0178",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is kind. を疑問文にしなさい。",
-        "a": "Is he kind?"
+        "a": "Is He kind?"
       },
       "after": {
         "q": "He is kind. を疑問文にしなさい。",
-        "a": "Is He kind?"
+        "a": "Is he kind?"
       }
     },
     {
       "id": "GEN-BE-0194",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is fine. を疑問文にしなさい。",
-        "a": "Is he fine?"
+        "a": "Is He fine?"
       },
       "after": {
         "q": "He is fine. を疑問文にしなさい。",
-        "a": "Is He fine?"
+        "a": "Is he fine?"
       }
     },
     {
       "id": "GEN-BE-0202",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is happy. を疑問文にしなさい。",
-        "a": "Is she happy?"
+        "a": "Is She happy?"
       },
       "after": {
         "q": "She is happy. を疑問文にしなさい。",
-        "a": "Is She happy?"
+        "a": "Is she happy?"
       }
     },
     {
       "id": "GEN-BE-0206",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is she busy?"
+        "a": "Is She busy?"
       },
       "after": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is She busy?"
+        "a": "Is she busy?"
       }
     },
     {
       "id": "GEN-BE-0218",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is kind. を疑問文にしなさい。",
-        "a": "Is she kind?"
+        "a": "Is She kind?"
       },
       "after": {
         "q": "She is kind. を疑問文にしなさい。",
-        "a": "Is She kind?"
+        "a": "Is she kind?"
       }
     },
     {
       "id": "GEN-BE-0234",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is fine. を疑問文にしなさい。",
-        "a": "Is she fine?"
+        "a": "Is She fine?"
       },
       "after": {
         "q": "She is fine. を疑問文にしなさい。",
-        "a": "Is She fine?"
+        "a": "Is she fine?"
       }
     },
     {
       "id": "GEN-BE-0242",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is ready. を疑問文にしなさい。",
-        "a": "Is he ready?"
+        "a": "Is He ready?"
       },
       "after": {
         "q": "He is ready. を疑問文にしなさい。",
-        "a": "Is He ready?"
+        "a": "Is he ready?"
       }
     },
     {
       "id": "GEN-BE-0262",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is sad. を疑問文にしなさい。",
-        "a": "Is she sad?"
+        "a": "Is She sad?"
       },
       "after": {
         "q": "She is sad. を疑問文にしなさい。",
-        "a": "Is She sad?"
+        "a": "Is she sad?"
       }
     },
     {
       "id": "GEN-BE-0306",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is busy. を疑問文にしなさい。",
-        "a": "Is he busy?"
+        "a": "Is He busy?"
       },
       "after": {
         "q": "He is busy. を疑問文にしなさい。",
-        "a": "Is He busy?"
+        "a": "Is he busy?"
       }
     },
     {
       "id": "GEN-BE-0314",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is hungry. を疑問文にしなさい。",
-        "a": "Is she hungry?"
+        "a": "Is She hungry?"
       },
       "after": {
         "q": "She is hungry. を疑問文にしなさい。",
-        "a": "Is She hungry?"
+        "a": "Is she hungry?"
       }
     },
     {
       "id": "GEN-BE-0330",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is young. を疑問文にしなさい。",
-        "a": "Is he young?"
+        "a": "Is He young?"
       },
       "after": {
         "q": "He is young. を疑問文にしなさい。",
-        "a": "Is He young?"
+        "a": "Is he young?"
       }
     },
     {
       "id": "GEN-BE-0334",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is free. を疑問文にしなさい。",
-        "a": "Is she free?"
+        "a": "Is She free?"
       },
       "after": {
         "q": "She is free. を疑問文にしなさい。",
-        "a": "Is She free?"
+        "a": "Is she free?"
       }
     },
     {
       "id": "GEN-BE-0362",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is fine. を疑問文にしなさい。",
-        "a": "Is he fine?"
+        "a": "Is He fine?"
       },
       "after": {
         "q": "He is fine. を疑問文にしなさい。",
-        "a": "Is He fine?"
+        "a": "Is he fine?"
       }
     },
     {
       "id": "GEN-BE-0374",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is happy. を疑問文にしなさい。",
-        "a": "Is he happy?"
+        "a": "Is He happy?"
       },
       "after": {
         "q": "He is happy. を疑問文にしなさい。",
-        "a": "Is He happy?"
+        "a": "Is he happy?"
       }
     },
     {
       "id": "GEN-BE-0382",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is ready. を疑問文にしなさい。",
-        "a": "Is she ready?"
+        "a": "Is She ready?"
       },
       "after": {
         "q": "She is ready. を疑問文にしなさい。",
-        "a": "Is She ready?"
+        "a": "Is she ready?"
       }
     },
     {
       "id": "GEN-BE-0390",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is she busy?"
+        "a": "Is She busy?"
       },
       "after": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is She busy?"
+        "a": "Is she busy?"
       }
     },
     {
       "id": "GEN-BE-0402",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My sister is happy. を疑問文にしなさい。",
-        "a": "Is my sister happy?"
+        "a": "Is My sister happy?"
       },
       "after": {
         "q": "My sister is happy. を疑問文にしなさい。",
-        "a": "Is My sister happy?"
+        "a": "Is my sister happy?"
       }
     },
     {
       "id": "GEN-BE-0406",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My sister is busy. を疑問文にしなさい。",
-        "a": "Is my sister busy?"
+        "a": "Is My sister busy?"
       },
       "after": {
         "q": "My sister is busy. を疑問文にしなさい。",
-        "a": "Is My sister busy?"
+        "a": "Is my sister busy?"
       }
     },
     {
       "id": "GEN-BE-0410",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is good. を疑問文にしなさい。",
-        "a": "Is he good?"
+        "a": "Is He good?"
       },
       "after": {
         "q": "He is good. を疑問文にしなさい。",
-        "a": "Is He good?"
+        "a": "Is he good?"
       }
     },
     {
       "id": "GEN-BE-0414",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is young. を疑問文にしなさい。",
-        "a": "Is she young?"
+        "a": "Is She young?"
       },
       "after": {
         "q": "She is young. を疑問文にしなさい。",
-        "a": "Is She young?"
+        "a": "Is she young?"
       }
     },
     {
       "id": "GEN-BE-0418",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My sister is kind. を疑問文にしなさい。",
-        "a": "Is my sister kind?"
+        "a": "Is My sister kind?"
       },
       "after": {
         "q": "My sister is kind. を疑問文にしなさい。",
-        "a": "Is My sister kind?"
+        "a": "Is my sister kind?"
       }
     },
     {
       "id": "GEN-BE-0434",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My sister is fine. を疑問文にしなさい。",
-        "a": "Is my sister fine?"
+        "a": "Is My sister fine?"
       },
       "after": {
         "q": "My sister is fine. を疑問文にしなさい。",
-        "a": "Is My sister fine?"
+        "a": "Is my sister fine?"
       }
     },
     {
       "id": "GEN-BE-0442",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My brother is happy. を疑問文にしなさい。",
-        "a": "Is my brother happy?"
+        "a": "Is My brother happy?"
       },
       "after": {
         "q": "My brother is happy. を疑問文にしなさい。",
-        "a": "Is My brother happy?"
+        "a": "Is my brother happy?"
       }
     },
     {
       "id": "GEN-BE-0446",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My brother is busy. を疑問文にしなさい。",
-        "a": "Is my brother busy?"
+        "a": "Is My brother busy?"
       },
       "after": {
         "q": "My brother is busy. を疑問文にしなさい。",
-        "a": "Is My brother busy?"
+        "a": "Is my brother busy?"
       }
     },
     {
       "id": "GEN-BE-0450",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He is free. を疑問文にしなさい。",
-        "a": "Is he free?"
+        "a": "Is He free?"
       },
       "after": {
         "q": "He is free. を疑問文にしなさい。",
-        "a": "Is He free?"
+        "a": "Is he free?"
       }
     },
     {
       "id": "GEN-BE-0454",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is she busy?"
+        "a": "Is She busy?"
       },
       "after": {
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is She busy?"
+        "a": "Is she busy?"
       }
     },
     {
       "id": "GEN-BE-0458",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My brother is kind. を疑問文にしなさい。",
-        "a": "Is my brother kind?"
+        "a": "Is My brother kind?"
       },
       "after": {
         "q": "My brother is kind. を疑問文にしなさい。",
-        "a": "Is My brother kind?"
+        "a": "Is my brother kind?"
       }
     },
     {
       "id": "GEN-BE-0470",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She is fine. を疑問文にしなさい。",
-        "a": "Is she fine?"
+        "a": "Is She fine?"
       },
       "after": {
         "q": "She is fine. を疑問文にしなさい。",
-        "a": "Is She fine?"
+        "a": "Is she fine?"
       }
     },
     {
       "id": "GEN-BE-0474",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "My brother is fine. を疑問文にしなさい。",
-        "a": "Is my brother fine?"
+        "a": "Is My brother fine?"
       },
       "after": {
         "q": "My brother is fine. を疑問文にしなさい。",
-        "a": "Is My brother fine?"
+        "a": "Is my brother fine?"
       }
     },
     {
       "id": "GEN-3RD-0857",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He plays tennis. を疑問文にしなさい。",
-        "a": "Does he play tennis?"
+        "a": "Does He play tennis?"
       },
       "after": {
         "q": "He plays tennis. を疑問文にしなさい。",
-        "a": "Does He play tennis?"
+        "a": "Does he play tennis?"
       }
     },
     {
       "id": "GEN-3RD-0861",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He watches TV. を疑問文にしなさい。",
-        "a": "Does he watch TV?"
+        "a": "Does He watch TV?"
       },
       "after": {
         "q": "He watches TV. を疑問文にしなさい。",
-        "a": "Does He watch TV?"
+        "a": "Does he watch TV?"
       }
     },
     {
       "id": "GEN-3RD-0865",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He studies English. を疑問文にしなさい。",
-        "a": "Does he study English?"
+        "a": "Does He study English?"
       },
       "after": {
         "q": "He studies English. を疑問文にしなさい。",
-        "a": "Does He study English?"
+        "a": "Does he study English?"
       }
     },
     {
       "id": "GEN-3RD-0869",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He cleans the room. を疑問文にしなさい。",
-        "a": "Does he clean the room?"
+        "a": "Does He clean the room?"
       },
       "after": {
         "q": "He cleans the room. を疑問文にしなさい。",
-        "a": "Does He clean the room?"
+        "a": "Does he clean the room?"
       }
     },
     {
       "id": "GEN-3RD-0873",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He listens to music. を疑問文にしなさい。",
-        "a": "Does he listen to music?"
+        "a": "Does He listen to music?"
       },
       "after": {
         "q": "He listens to music. を疑問文にしなさい。",
-        "a": "Does He listen to music?"
+        "a": "Does he listen to music?"
       }
     },
     {
       "id": "GEN-3RD-0877",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He helps at home. を疑問文にしなさい。",
-        "a": "Does he help at home?"
+        "a": "Does He help at home?"
       },
       "after": {
         "q": "He helps at home. を疑問文にしなさい。",
-        "a": "Does He help at home?"
+        "a": "Does he help at home?"
       }
     },
     {
       "id": "GEN-3RD-0881",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He uses a computer. を疑問文にしなさい。",
-        "a": "Does he use a computer?"
+        "a": "Does He use a computer?"
       },
       "after": {
         "q": "He uses a computer. を疑問文にしなさい。",
-        "a": "Does He use a computer?"
+        "a": "Does he use a computer?"
       }
     },
     {
       "id": "GEN-3RD-0885",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does he cook dinner?"
+        "a": "Does He cook dinner?"
       },
       "after": {
         "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does He cook dinner?"
+        "a": "Does he cook dinner?"
       }
     },
     {
       "id": "GEN-3RD-0889",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He visits the library. を疑問文にしなさい。",
-        "a": "Does he visit the library?"
+        "a": "Does He visit the library?"
       },
       "after": {
         "q": "He visits the library. を疑問文にしなさい。",
-        "a": "Does He visit the library?"
+        "a": "Does he visit the library?"
       }
     },
     {
       "id": "GEN-3RD-0893",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He walks to school. を疑問文にしなさい。",
-        "a": "Does he walk to school?"
+        "a": "Does He walk to school?"
       },
       "after": {
         "q": "He walks to school. を疑問文にしなさい。",
-        "a": "Does He walk to school?"
+        "a": "Does he walk to school?"
       }
     },
     {
       "id": "GEN-3RD-0897",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He plays soccer. を疑問文にしなさい。",
-        "a": "Does he play soccer?"
+        "a": "Does He play soccer?"
       },
       "after": {
         "q": "He plays soccer. を疑問文にしなさい。",
-        "a": "Does He play soccer?"
+        "a": "Does he play soccer?"
       }
     },
     {
       "id": "GEN-3RD-0901",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He reads books. を疑問文にしなさい。",
-        "a": "Does he read books?"
+        "a": "Does He read books?"
       },
       "after": {
         "q": "He reads books. を疑問文にしなさい。",
-        "a": "Does He read books?"
+        "a": "Does he read books?"
       }
     },
     {
       "id": "GEN-3RD-0905",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He practices tennis. を疑問文にしなさい。",
-        "a": "Does he practice tennis?"
+        "a": "Does He practice tennis?"
       },
       "after": {
         "q": "He practices tennis. を疑問文にしなさい。",
-        "a": "Does He practice tennis?"
+        "a": "Does he practice tennis?"
       }
     },
     {
       "id": "GEN-3RD-0909",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He washes the dishes. を疑問文にしなさい。",
-        "a": "Does he wash the dishes?"
+        "a": "Does He wash the dishes?"
       },
       "after": {
         "q": "He washes the dishes. を疑問文にしなさい。",
-        "a": "Does He wash the dishes?"
+        "a": "Does he wash the dishes?"
       }
     },
     {
       "id": "GEN-3RD-0913",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He opens the window. を疑問文にしなさい。",
-        "a": "Does he open the window?"
+        "a": "Does He open the window?"
       },
       "after": {
         "q": "He opens the window. を疑問文にしなさい。",
-        "a": "Does He open the window?"
+        "a": "Does he open the window?"
       }
     },
     {
       "id": "GEN-3RD-0917",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He closes the door. を疑問文にしなさい。",
-        "a": "Does he close the door?"
+        "a": "Does He close the door?"
       },
       "after": {
         "q": "He closes the door. を疑問文にしなさい。",
-        "a": "Does He close the door?"
+        "a": "Does he close the door?"
       }
     },
     {
       "id": "GEN-3RD-0925",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She watches TV. を疑問文にしなさい。",
-        "a": "Does she watch TV?"
+        "a": "Does She watch TV?"
       },
       "after": {
         "q": "She watches TV. を疑問文にしなさい。",
-        "a": "Does She watch TV?"
+        "a": "Does she watch TV?"
       }
     },
     {
       "id": "GEN-3RD-0929",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She studies English. を疑問文にしなさい。",
-        "a": "Does she study English?"
+        "a": "Does She study English?"
       },
       "after": {
         "q": "She studies English. を疑問文にしなさい。",
-        "a": "Does She study English?"
+        "a": "Does she study English?"
       }
     },
     {
       "id": "GEN-3RD-0933",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She cleans the room. を疑問文にしなさい。",
-        "a": "Does she clean the room?"
+        "a": "Does She clean the room?"
       },
       "after": {
         "q": "She cleans the room. を疑問文にしなさい。",
-        "a": "Does She clean the room?"
+        "a": "Does she clean the room?"
       }
     },
     {
       "id": "GEN-3RD-0937",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She listens to music. を疑問文にしなさい。",
-        "a": "Does she listen to music?"
+        "a": "Does She listen to music?"
       },
       "after": {
         "q": "She listens to music. を疑問文にしなさい。",
-        "a": "Does She listen to music?"
+        "a": "Does she listen to music?"
       }
     },
     {
       "id": "GEN-3RD-0941",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She helps at home. を疑問文にしなさい。",
-        "a": "Does she help at home?"
+        "a": "Does She help at home?"
       },
       "after": {
         "q": "She helps at home. を疑問文にしなさい。",
-        "a": "Does She help at home?"
+        "a": "Does she help at home?"
       }
     },
     {
       "id": "GEN-3RD-0945",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She uses a computer. を疑問文にしなさい。",
-        "a": "Does she use a computer?"
+        "a": "Does She use a computer?"
       },
       "after": {
         "q": "She uses a computer. を疑問文にしなさい。",
-        "a": "Does She use a computer?"
+        "a": "Does she use a computer?"
       }
     },
     {
       "id": "GEN-3RD-0949",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She cooks dinner. を疑問文にしなさい。",
-        "a": "Does she cook dinner?"
+        "a": "Does She cook dinner?"
       },
       "after": {
         "q": "She cooks dinner. を疑問文にしなさい。",
-        "a": "Does She cook dinner?"
+        "a": "Does she cook dinner?"
       }
     },
     {
       "id": "GEN-3RD-0953",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She visits the library. を疑問文にしなさい。",
-        "a": "Does she visit the library?"
+        "a": "Does She visit the library?"
       },
       "after": {
         "q": "She visits the library. を疑問文にしなさい。",
-        "a": "Does She visit the library?"
+        "a": "Does she visit the library?"
       }
     },
     {
       "id": "GEN-3RD-0957",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She walks to school. を疑問文にしなさい。",
-        "a": "Does she walk to school?"
+        "a": "Does She walk to school?"
       },
       "after": {
         "q": "She walks to school. を疑問文にしなさい。",
-        "a": "Does She walk to school?"
+        "a": "Does she walk to school?"
       }
     },
     {
       "id": "GEN-3RD-0961",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She plays soccer. を疑問文にしなさい。",
-        "a": "Does she play soccer?"
+        "a": "Does She play soccer?"
       },
       "after": {
         "q": "She plays soccer. を疑問文にしなさい。",
-        "a": "Does She play soccer?"
+        "a": "Does she play soccer?"
       }
     },
     {
       "id": "GEN-3RD-0965",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She reads books. を疑問文にしなさい。",
-        "a": "Does she read books?"
+        "a": "Does She read books?"
       },
       "after": {
         "q": "She reads books. を疑問文にしなさい。",
-        "a": "Does She read books?"
+        "a": "Does she read books?"
       }
     },
     {
       "id": "GEN-3RD-0969",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She practices tennis. を疑問文にしなさい。",
-        "a": "Does she practice tennis?"
+        "a": "Does She practice tennis?"
       },
       "after": {
         "q": "She practices tennis. を疑問文にしなさい。",
-        "a": "Does She practice tennis?"
+        "a": "Does she practice tennis?"
       }
     },
     {
       "id": "GEN-3RD-0973",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She washes the dishes. を疑問文にしなさい。",
-        "a": "Does she wash the dishes?"
+        "a": "Does She wash the dishes?"
       },
       "after": {
         "q": "She washes the dishes. を疑問文にしなさい。",
-        "a": "Does She wash the dishes?"
+        "a": "Does she wash the dishes?"
       }
     },
     {
       "id": "GEN-3RD-0977",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She opens the window. を疑問文にしなさい。",
-        "a": "Does she open the window?"
+        "a": "Does She open the window?"
       },
       "after": {
         "q": "She opens the window. を疑問文にしなさい。",
-        "a": "Does She open the window?"
+        "a": "Does she open the window?"
       }
     },
     {
       "id": "GEN-3RD-0981",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She closes the door. を疑問文にしなさい。",
-        "a": "Does she close the door?"
+        "a": "Does She close the door?"
       },
       "after": {
         "q": "She closes the door. を疑問文にしなさい。",
-        "a": "Does She close the door?"
+        "a": "Does she close the door?"
       }
     },
     {
       "id": "GEN-3RD-1005",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She plays tennis. を疑問文にしなさい。",
-        "a": "Does she play tennis?"
+        "a": "Does She play tennis?"
       },
       "after": {
         "q": "She plays tennis. を疑問文にしなさい。",
-        "a": "Does She play tennis?"
+        "a": "Does she play tennis?"
       }
     },
     {
       "id": "GEN-3RD-1013",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He plays tennis. を疑問文にしなさい。",
-        "a": "Does he play tennis?"
+        "a": "Does He play tennis?"
       },
       "after": {
         "q": "He plays tennis. を疑問文にしなさい。",
-        "a": "Does He play tennis?"
+        "a": "Does he play tennis?"
       }
     },
     {
       "id": "GEN-3RD-1021",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does he cook dinner?"
+        "a": "Does He cook dinner?"
       },
       "after": {
         "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does He cook dinner?"
+        "a": "Does he cook dinner?"
       }
     },
     {
       "id": "GEN-3RD-1057",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He helps at home. を疑問文にしなさい。",
-        "a": "Does he help at home?"
+        "a": "Does He help at home?"
       },
       "after": {
         "q": "He helps at home. を疑問文にしなさい。",
-        "a": "Does He help at home?"
+        "a": "Does he help at home?"
       }
     },
     {
       "id": "GEN-3RD-1193",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He walks to school. を疑問文にしなさい。",
-        "a": "Does he walk to school?"
+        "a": "Does He walk to school?"
       },
       "after": {
         "q": "He walks to school. を疑問文にしなさい。",
-        "a": "Does He walk to school?"
+        "a": "Does he walk to school?"
       }
     },
     {
       "id": "GEN-PBE-1510",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "She was free. を疑問文にしなさい。",
-        "a": "Was she free?"
+        "a": "Was She free?"
       },
       "after": {
         "q": "She was free. を疑問文にしなさい。",
-        "a": "Was She free?"
+        "a": "Was she free?"
       }
     },
     {
       "id": "GEN-PBE-1561",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He was old. を疑問文にしなさい。",
-        "a": "Was he old?"
+        "a": "Was He old?"
       },
       "after": {
         "q": "He was old. を疑問文にしなさい。",
-        "a": "Was He old?"
+        "a": "Was he old?"
       }
     },
     {
       "id": "GEN-PBE-1624",
-      "kind": "question_subject_case",
+      "kinds": [
+        "common_subject_case"
+      ],
       "before": {
         "q": "He was happy yesterday. を疑問文にしなさい。",
-        "a": "Was he happy yesterday?"
+        "a": "Was He happy yesterday?"
       },
       "after": {
         "q": "He was happy yesterday. を疑問文にしなさい。",
-        "a": "Was He happy yesterday?"
+        "a": "Was he happy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1627",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was busy yesterday. を疑問文にしなさい。",
+        "a": "Was He busy yesterday?"
+      },
+      "after": {
+        "q": "He was busy yesterday. を疑問文にしなさい。",
+        "a": "Was he busy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1633",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was hungry. を疑問文にしなさい。",
+        "a": "Was He hungry?"
+      },
+      "after": {
+        "q": "He was hungry. を疑問文にしなさい。",
+        "a": "Was he hungry?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1636",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was kind yesterday. を疑問文にしなさい。",
+        "a": "Was He kind yesterday?"
+      },
+      "after": {
+        "q": "He was kind yesterday. を疑問文にしなさい。",
+        "a": "Was he kind yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1645",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was tired. を疑問文にしなさい。",
+        "a": "Was She tired?"
+      },
+      "after": {
+        "q": "She was tired. を疑問文にしなさい。",
+        "a": "Was she tired?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1648",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was fine yesterday. を疑問文にしなさい。",
+        "a": "Was He fine yesterday?"
+      },
+      "after": {
+        "q": "He was fine yesterday. を疑問文にしなさい。",
+        "a": "Was he fine yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1654",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was happy yesterday. を疑問文にしなさい。",
+        "a": "Was She happy yesterday?"
+      },
+      "after": {
+        "q": "She was happy yesterday. を疑問文にしなさい。",
+        "a": "Was she happy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1657",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was busy yesterday. を疑問文にしなさい。",
+        "a": "Was She busy yesterday?"
+      },
+      "after": {
+        "q": "She was busy yesterday. を疑問文にしなさい。",
+        "a": "Was she busy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1666",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was kind yesterday. を疑問文にしなさい。",
+        "a": "Was She kind yesterday?"
+      },
+      "after": {
+        "q": "She was kind yesterday. を疑問文にしなさい。",
+        "a": "Was she kind yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1669",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was happy. を疑問文にしなさい。",
+        "a": "Was He happy?"
+      },
+      "after": {
+        "q": "He was happy. を疑問文にしなさい。",
+        "a": "Was he happy?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1672",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was busy. を疑問文にしなさい。",
+        "a": "Was She busy?"
+      },
+      "after": {
+        "q": "She was busy. を疑問文にしなさい。",
+        "a": "Was she busy?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1678",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was fine yesterday. を疑問文にしなさい。",
+        "a": "Was She fine yesterday?"
+      },
+      "after": {
+        "q": "She was fine yesterday. を疑問文にしなさい。",
+        "a": "Was she fine yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1714",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was ready. を疑問文にしなさい。",
+        "a": "Was She ready?"
+      },
+      "after": {
+        "q": "She was ready. を疑問文にしなさい。",
+        "a": "Was she ready?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1738",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was fine. を疑問文にしなさい。",
+        "a": "Was He fine?"
+      },
+      "after": {
+        "q": "He was fine. を疑問文にしなさい。",
+        "a": "Was he fine?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1759",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was good. を疑問文にしなさい。",
+        "a": "Was He good?"
+      },
+      "after": {
+        "q": "He was good. を疑問文にしなさい。",
+        "a": "Was he good?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1762",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was young. を疑問文にしなさい。",
+        "a": "Was She young?"
+      },
+      "after": {
+        "q": "She was young. を疑問文にしなさい。",
+        "a": "Was she young?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1777",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was sad. を疑問文にしなさい。",
+        "a": "Was He sad?"
+      },
+      "after": {
+        "q": "He was sad. を疑問文にしなさい。",
+        "a": "Was he sad?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1780",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was old. を疑問文にしなさい。",
+        "a": "Was She old?"
+      },
+      "after": {
+        "q": "She was old. を疑問文にしなさい。",
+        "a": "Was she old?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1798",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was sad. を疑問文にしなさい。",
+        "a": "Was She sad?"
+      },
+      "after": {
+        "q": "She was sad. を疑問文にしなさい。",
+        "a": "Was she sad?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1804",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My sister was happy yesterday. を疑問文にしなさい。",
+        "a": "Was My sister happy yesterday?"
+      },
+      "after": {
+        "q": "My sister was happy yesterday. を疑問文にしなさい。",
+        "a": "Was my sister happy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1807",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My sister was busy yesterday. を疑問文にしなさい。",
+        "a": "Was My sister busy yesterday?"
+      },
+      "after": {
+        "q": "My sister was busy yesterday. を疑問文にしなさい。",
+        "a": "Was my sister busy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1816",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My sister was kind yesterday. を疑問文にしなさい。",
+        "a": "Was My sister kind yesterday?"
+      },
+      "after": {
+        "q": "My sister was kind yesterday. を疑問文にしなさい。",
+        "a": "Was my sister kind yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1828",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My sister was fine yesterday. を疑問文にしなさい。",
+        "a": "Was My sister fine yesterday?"
+      },
+      "after": {
+        "q": "My sister was fine yesterday. を疑問文にしなさい。",
+        "a": "Was my sister fine yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1831",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He was tired. を疑問文にしなさい。",
+        "a": "Was He tired?"
+      },
+      "after": {
+        "q": "He was tired. を疑問文にしなさい。",
+        "a": "Was he tired?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1834",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My brother was happy yesterday. を疑問文にしなさい。",
+        "a": "Was My brother happy yesterday?"
+      },
+      "after": {
+        "q": "My brother was happy yesterday. を疑問文にしなさい。",
+        "a": "Was my brother happy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1837",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My brother was busy yesterday. を疑問文にしなさい。",
+        "a": "Was My brother busy yesterday?"
+      },
+      "after": {
+        "q": "My brother was busy yesterday. を疑問文にしなさい。",
+        "a": "Was my brother busy yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1846",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My brother was kind yesterday. を疑問文にしなさい。",
+        "a": "Was My brother kind yesterday?"
+      },
+      "after": {
+        "q": "My brother was kind yesterday. を疑問文にしなさい。",
+        "a": "Was my brother kind yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1849",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She was good. を疑問文にしなさい。",
+        "a": "Was She good?"
+      },
+      "after": {
+        "q": "She was good. を疑問文にしなさい。",
+        "a": "Was she good?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1858",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "My brother was fine yesterday. を疑問文にしなさい。",
+        "a": "Was My brother fine yesterday?"
+      },
+      "after": {
+        "q": "My brother was fine yesterday. を疑問文にしなさい。",
+        "a": "Was my brother fine yesterday?"
+      }
+    },
+    {
+      "id": "M2-BE-0065",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is He busy?"
+      },
+      "after": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      }
+    },
+    {
+      "id": "M2-BE-0067",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is He happy?"
+      },
+      "after": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      }
+    },
+    {
+      "id": "M2-BE-0069",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is He busy?"
+      },
+      "after": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      }
+    },
+    {
+      "id": "M2-BE-0071",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is He happy?"
+      },
+      "after": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      }
+    },
+    {
+      "id": "M2-BE-0075",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is kind. を疑問文にしなさい。",
+        "a": "Is He kind?"
+      },
+      "after": {
+        "q": "He is kind. を疑問文にしなさい。",
+        "a": "Is he kind?"
+      }
+    },
+    {
+      "id": "M2-BE-0077",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "He is friendly. を疑問文にしなさい。",
+        "a": "Is He friendly?"
+      },
+      "after": {
+        "q": "He is friendly. を疑問文にしなさい。",
+        "a": "Is he friendly?"
+      }
+    },
+    {
+      "id": "M2-BE-0081",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is She busy?"
+      },
+      "after": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      }
+    },
+    {
+      "id": "M2-BE-0083",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is She happy?"
+      },
+      "after": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is she happy?"
+      }
+    },
+    {
+      "id": "M2-BE-0085",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is She busy?"
+      },
+      "after": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      }
+    },
+    {
+      "id": "M2-BE-0087",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is She happy?"
+      },
+      "after": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is she happy?"
+      }
+    },
+    {
+      "id": "M2-BE-0091",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is kind. を疑問文にしなさい。",
+        "a": "Is She kind?"
+      },
+      "after": {
+        "q": "She is kind. を疑問文にしなさい。",
+        "a": "Is she kind?"
+      }
+    },
+    {
+      "id": "M2-BE-0093",
+      "kinds": [
+        "common_subject_case"
+      ],
+      "before": {
+        "q": "She is friendly. を疑問文にしなさい。",
+        "a": "Is She friendly?"
+      },
+      "after": {
+        "q": "She is friendly. を疑問文にしなさい。",
+        "a": "Is she friendly?"
       }
     }
   ]
