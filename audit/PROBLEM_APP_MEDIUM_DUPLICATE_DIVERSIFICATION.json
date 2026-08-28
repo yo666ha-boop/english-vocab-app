@@ -1,0 +1,1247 @@
+{
+  "generated_at": "2026-08-28T12:13:40.715Z",
+  "target_families": [
+    "中2/一般動詞/英作文",
+    "中2/三単現/英作文",
+    "中3/be動詞と一般動詞（現在形）/変形",
+    "中1/過去の疑問文・否定文/変形",
+    "中2/未来表現/並びかえ",
+    "中3/関係代名詞/選択",
+    "中2/未来表現/空所補充",
+    "中1/一般動詞/変形",
+    "中1/be動詞/変形",
+    "中2/be動詞/変形",
+    "中2/be動詞/空所補充",
+    "中2/比較/間違い直し",
+    "中2/一般動詞の過去形/選択",
+    "中2/三単現/並びかえ"
+  ],
+  "duplicate_rows_before": 2235,
+  "duplicate_excess_before": 1299,
+  "changed_rows": 833,
+  "by_family": {
+    "中1/be動詞/変形": 34,
+    "中1/一般動詞/変形": 53,
+    "中1/過去の疑問文・否定文/変形": 77,
+    "中2/be動詞/変形": 48,
+    "中2/be動詞/空所補充": 44,
+    "中2/未来表現/空所補充": 56,
+    "中2/一般動詞/英作文": 128,
+    "中2/三単現/英作文": 60,
+    "中2/三単現/並びかえ": 48,
+    "中2/未来表現/並びかえ": 72,
+    "中2/比較/間違い直し": 38,
+    "中2/一般動詞の過去形/選択": 48,
+    "中3/be動詞と一般動詞（現在形）/変形": 77,
+    "中3/関係代名詞/選択": 50
+  },
+  "samples": [
+    {
+      "id": "E1-BQ-002",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are happy. を疑問文にしなさい。",
+        "a": "Are you happy?"
+      },
+      "after": {
+        "q": "Tom is busy. を疑問文にしなさい。",
+        "a": "Is Tom busy?"
+      }
+    },
+    {
+      "id": "E1-DQ-002",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They study English. を疑問文にしなさい。",
+        "a": "Do they study English?"
+      },
+      "after": {
+        "q": "I study English every day. を疑問文にしなさい。",
+        "a": "Do you study English every day?"
+      }
+    },
+    {
+      "id": "E1-DQ-007",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You study English. を疑問文にしなさい。",
+        "a": "Do you study English?"
+      },
+      "after": {
+        "q": "We study English every day. を否定文にしなさい。",
+        "a": "We do not study English every day."
+      }
+    },
+    {
+      "id": "E1-PASTDID-001",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "You played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did you play tennis yesterday?"
+      },
+      "after": {
+        "q": "Tom studied English yesterday. を疑問文にしなさい。",
+        "a": "Did Tom study English yesterday?"
+      }
+    },
+    {
+      "id": "E1-PASTDID-002",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "He watched TV yesterday. を否定文にしなさい。",
+        "a": "He did not watch TV yesterday."
+      },
+      "after": {
+        "q": "Ken studied English yesterday. を否定文にしなさい。",
+        "a": "Ken did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-BE-0002",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am happy. を疑問文にしなさい。",
+        "a": "Am I happy?"
+      },
+      "after": {
+        "q": "Ken is busy. を否定文にしなさい。",
+        "a": "Ken is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0006",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am busy. を疑問文にしなさい。",
+        "a": "Am I busy?"
+      },
+      "after": {
+        "q": "Mike is busy. を疑問文にしなさい。",
+        "a": "Is Mike busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0018",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "I am kind. を疑問文にしなさい。",
+        "a": "Am I kind?"
+      },
+      "after": {
+        "q": "Bob is busy. を否定文にしなさい。",
+        "a": "Bob is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0046",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are busy. を疑問文にしなさい。",
+        "a": "Are you busy?"
+      },
+      "after": {
+        "q": "John is busy. を疑問文にしなさい。",
+        "a": "Is John busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0058",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "You are kind. を疑問文にしなさい。",
+        "a": "Are you kind?"
+      },
+      "after": {
+        "q": "Emi is busy. を否定文にしなさい。",
+        "a": "Emi is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0082",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are happy. を疑問文にしなさい。",
+        "a": "Are we happy?"
+      },
+      "after": {
+        "q": "Yuki is busy. を疑問文にしなさい。",
+        "a": "Is Yuki busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0086",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are busy. を疑問文にしなさい。",
+        "a": "Are we busy?"
+      },
+      "after": {
+        "q": "Aya is busy. を否定文にしなさい。",
+        "a": "Aya is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0098",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "We are kind. を疑問文にしなさい。",
+        "a": "Are we kind?"
+      },
+      "after": {
+        "q": "Lucy is busy. を疑問文にしなさい。",
+        "a": "Is Lucy busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0122",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are happy. を疑問文にしなさい。",
+        "a": "Are they happy?"
+      },
+      "after": {
+        "q": "Mary is busy. を否定文にしなさい。",
+        "a": "Mary is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0126",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are busy. を疑問文にしなさい。",
+        "a": "Are they busy?"
+      },
+      "after": {
+        "q": "Ann is busy. を疑問文にしなさい。",
+        "a": "Is Ann busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0138",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "They are kind. を疑問文にしなさい。",
+        "a": "Are they kind?"
+      },
+      "after": {
+        "q": "Kate is busy. を否定文にしなさい。",
+        "a": "Kate is not busy."
+      }
+    },
+    {
+      "id": "GEN-BE-0161",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is happy. を否定文にしなさい。",
+        "a": "He is not happy."
+      },
+      "after": {
+        "q": "Tom is happy. を疑問文にしなさい。",
+        "a": "Is Tom happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0162",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      },
+      "after": {
+        "q": "Ken is happy. を否定文にしなさい。",
+        "a": "Ken is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0166",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "Mike is happy. を疑問文にしなさい。",
+        "a": "Is Mike happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0177",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is kind. を否定文にしなさい。",
+        "a": "He is not kind."
+      },
+      "after": {
+        "q": "Bob is happy. を否定文にしなさい。",
+        "a": "Bob is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0178",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is kind. を疑問文にしなさい。",
+        "a": "Is he kind?"
+      },
+      "after": {
+        "q": "John is happy. を疑問文にしなさい。",
+        "a": "Is John happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0194",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is he fine?"
+      },
+      "after": {
+        "q": "Emi is happy. を否定文にしなさい。",
+        "a": "Emi is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0202",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is she happy?"
+      },
+      "after": {
+        "q": "Yuki is happy. を疑問文にしなさい。",
+        "a": "Is Yuki happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0205",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is busy. を否定文にしなさい。",
+        "a": "She is not busy."
+      },
+      "after": {
+        "q": "Aya is happy. を否定文にしなさい。",
+        "a": "Aya is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0206",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "Lucy is happy. を疑問文にしなさい。",
+        "a": "Is Lucy happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0217",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is kind. を否定文にしなさい。",
+        "a": "She is not kind."
+      },
+      "after": {
+        "q": "Mary is happy. を否定文にしなさい。",
+        "a": "Mary is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0218",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is kind. を疑問文にしなさい。",
+        "a": "Is she kind?"
+      },
+      "after": {
+        "q": "Ann is happy. を疑問文にしなさい。",
+        "a": "Is Ann happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0234",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is she fine?"
+      },
+      "after": {
+        "q": "Kate is happy. を否定文にしなさい。",
+        "a": "Kate is not happy."
+      }
+    },
+    {
+      "id": "GEN-BE-0306",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "Tom is tired. を疑問文にしなさい。",
+        "a": "Is Tom tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0362",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is he fine?"
+      },
+      "after": {
+        "q": "Ken is tired. を否定文にしなさい。",
+        "a": "Ken is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0374",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      },
+      "after": {
+        "q": "Mike is tired. を疑問文にしなさい。",
+        "a": "Is Mike tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0381",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is kind. を否定文にしなさい。",
+        "a": "He is not kind."
+      },
+      "after": {
+        "q": "Bob is tired. を否定文にしなさい。",
+        "a": "Bob is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0390",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "John is tired. を疑問文にしなさい。",
+        "a": "Is John tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0413",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "He is happy. を否定文にしなさい。",
+        "a": "He is not happy."
+      },
+      "after": {
+        "q": "Emi is tired. を否定文にしなさい。",
+        "a": "Emi is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0429",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is busy. を否定文にしなさい。",
+        "a": "She is not busy."
+      },
+      "after": {
+        "q": "Yuki is tired. を疑問文にしなさい。",
+        "a": "Is Yuki tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0454",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "Aya is tired. を否定文にしなさい。",
+        "a": "Aya is not tired."
+      }
+    },
+    {
+      "id": "GEN-BE-0470",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is she fine?"
+      },
+      "after": {
+        "q": "Lucy is tired. を疑問文にしなさい。",
+        "a": "Is Lucy tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0477",
+      "family": "中1/be動詞/変形",
+      "before": {
+        "q": "She is kind. を否定文にしなさい。",
+        "a": "She is not kind."
+      },
+      "after": {
+        "q": "Mary is tired. を否定文にしなさい。",
+        "a": "Mary is not tired."
+      }
+    },
+    {
+      "id": "GEN-PRS-0553",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I play tennis. を疑問文にしなさい。",
+        "a": "Do I play tennis?"
+      },
+      "after": {
+        "q": "They study English every day. を疑問文にしなさい。",
+        "a": "Do they study English every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0554",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I play tennis. を否定文にしなさい。",
+        "a": "I do not play tennis."
+      },
+      "after": {
+        "q": "You study English every day. を否定文にしなさい。",
+        "a": "You do not study English every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0557",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I watch TV. を疑問文にしなさい。",
+        "a": "Do I watch TV?"
+      },
+      "after": {
+        "q": "My friends study English every day. を疑問文にしなさい。",
+        "a": "Do my friends study English every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0558",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I watch TV. を否定文にしなさい。",
+        "a": "I do not watch TV."
+      },
+      "after": {
+        "q": "The students study English every day. を否定文にしなさい。",
+        "a": "The students do not study English every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0561",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I study English. を疑問文にしなさい。",
+        "a": "Do I study English?"
+      },
+      "after": {
+        "q": "Tom and Ken study English every day. を疑問文にしなさい。",
+        "a": "Do tom and ken study English every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0562",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I study English. を否定文にしなさい。",
+        "a": "I do not study English."
+      },
+      "after": {
+        "q": "Emi and Yuki study English every day. を否定文にしなさい。",
+        "a": "Emi and Yuki do not study English every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0569",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I listen to music. を疑問文にしなさい。",
+        "a": "Do I listen to music?"
+      },
+      "after": {
+        "q": "I play soccer after school. を疑問文にしなさい。",
+        "a": "Do you play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0570",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I listen to music. を否定文にしなさい。",
+        "a": "I do not listen to music."
+      },
+      "after": {
+        "q": "We play soccer after school. を否定文にしなさい。",
+        "a": "We do not play soccer after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0573",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I help at home. を疑問文にしなさい。",
+        "a": "Do I help at home?"
+      },
+      "after": {
+        "q": "They play soccer after school. を疑問文にしなさい。",
+        "a": "Do they play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0581",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I cook dinner. を疑問文にしなさい。",
+        "a": "Do I cook dinner?"
+      },
+      "after": {
+        "q": "You play soccer after school. を否定文にしなさい。",
+        "a": "You do not play soccer after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0582",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I cook dinner. を否定文にしなさい。",
+        "a": "I do not cook dinner."
+      },
+      "after": {
+        "q": "My friends play soccer after school. を疑問文にしなさい。",
+        "a": "Do my friends play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0597",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I read books. を疑問文にしなさい。",
+        "a": "Do I read books?"
+      },
+      "after": {
+        "q": "The students play soccer after school. を否定文にしなさい。",
+        "a": "The students do not play soccer after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0598",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "I read books. を否定文にしなさい。",
+        "a": "I do not read books."
+      },
+      "after": {
+        "q": "Tom and Ken play soccer after school. を疑問文にしなさい。",
+        "a": "Do tom and ken play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0617",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You play tennis. を疑問文にしなさい。",
+        "a": "Do you play tennis?"
+      },
+      "after": {
+        "q": "Emi and Yuki play soccer after school. を否定文にしなさい。",
+        "a": "Emi and Yuki do not play soccer after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0618",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You play tennis. を否定文にしなさい。",
+        "a": "You do not play tennis."
+      },
+      "after": {
+        "q": "I read books on Sunday. を疑問文にしなさい。",
+        "a": "Do you read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0621",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You watch TV. を疑問文にしなさい。",
+        "a": "Do you watch TV?"
+      },
+      "after": {
+        "q": "We read books on Sunday. を否定文にしなさい。",
+        "a": "We do not read books on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0622",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You watch TV. を否定文にしなさい。",
+        "a": "You do not watch TV."
+      },
+      "after": {
+        "q": "They read books on Sunday. を疑問文にしなさい。",
+        "a": "Do they read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0626",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You study English. を否定文にしなさい。",
+        "a": "You do not study English."
+      },
+      "after": {
+        "q": "You read books on Sunday. を否定文にしなさい。",
+        "a": "You do not read books on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0633",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You listen to music. を疑問文にしなさい。",
+        "a": "Do you listen to music?"
+      },
+      "after": {
+        "q": "My friends read books on Sunday. を疑問文にしなさい。",
+        "a": "Do my friends read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0634",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You listen to music. を否定文にしなさい。",
+        "a": "You do not listen to music."
+      },
+      "after": {
+        "q": "The students read books on Sunday. を否定文にしなさい。",
+        "a": "The students do not read books on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0637",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You help at home. を疑問文にしなさい。",
+        "a": "Do you help at home?"
+      },
+      "after": {
+        "q": "Tom and Ken read books on Sunday. を疑問文にしなさい。",
+        "a": "Do tom and ken read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0645",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You cook dinner. を疑問文にしなさい。",
+        "a": "Do you cook dinner?"
+      },
+      "after": {
+        "q": "Emi and Yuki read books on Sunday. を否定文にしなさい。",
+        "a": "Emi and Yuki do not read books on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0646",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You cook dinner. を否定文にしなさい。",
+        "a": "You do not cook dinner."
+      },
+      "after": {
+        "q": "I use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do you use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0657",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You play soccer. を疑問文にしなさい。",
+        "a": "Do you play soccer?"
+      },
+      "after": {
+        "q": "We use a computer in the evening. を否定文にしなさい。",
+        "a": "We do not use a computer in the evening."
+      }
+    },
+    {
+      "id": "GEN-PRS-0661",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You read books. を疑問文にしなさい。",
+        "a": "Do you read books?"
+      },
+      "after": {
+        "q": "They use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do they use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0662",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "You read books. を否定文にしなさい。",
+        "a": "You do not read books."
+      },
+      "after": {
+        "q": "You use a computer in the evening. を否定文にしなさい。",
+        "a": "You do not use a computer in the evening."
+      }
+    },
+    {
+      "id": "GEN-PRS-0681",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We play tennis. を疑問文にしなさい。",
+        "a": "Do we play tennis?"
+      },
+      "after": {
+        "q": "My friends use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do my friends use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0682",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We play tennis. を否定文にしなさい。",
+        "a": "We do not play tennis."
+      },
+      "after": {
+        "q": "The students use a computer in the evening. を否定文にしなさい。",
+        "a": "The students do not use a computer in the evening."
+      }
+    },
+    {
+      "id": "GEN-PRS-0685",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We watch TV. を疑問文にしなさい。",
+        "a": "Do we watch TV?"
+      },
+      "after": {
+        "q": "Tom and Ken use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do tom and ken use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0686",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We watch TV. を否定文にしなさい。",
+        "a": "We do not watch TV."
+      },
+      "after": {
+        "q": "Emi and Yuki use a computer in the evening. を否定文にしなさい。",
+        "a": "Emi and Yuki do not use a computer in the evening."
+      }
+    },
+    {
+      "id": "GEN-PRS-0689",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We study English. を疑問文にしなさい。",
+        "a": "Do we study English?"
+      },
+      "after": {
+        "q": "I visit the library every day. を疑問文にしなさい。",
+        "a": "Do you visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0690",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We study English. を否定文にしなさい。",
+        "a": "We do not study English."
+      },
+      "after": {
+        "q": "We visit the library every day. を否定文にしなさい。",
+        "a": "We do not visit the library every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0697",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We listen to music. を疑問文にしなさい。",
+        "a": "Do we listen to music?"
+      },
+      "after": {
+        "q": "They visit the library every day. を疑問文にしなさい。",
+        "a": "Do they visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0698",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We listen to music. を否定文にしなさい。",
+        "a": "We do not listen to music."
+      },
+      "after": {
+        "q": "You visit the library every day. を否定文にしなさい。",
+        "a": "You do not visit the library every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0701",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We help at home. を疑問文にしなさい。",
+        "a": "Do we help at home?"
+      },
+      "after": {
+        "q": "My friends visit the library every day. を疑問文にしなさい。",
+        "a": "Do my friends visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0709",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We cook dinner. を疑問文にしなさい。",
+        "a": "Do we cook dinner?"
+      },
+      "after": {
+        "q": "The students visit the library every day. を否定文にしなさい。",
+        "a": "The students do not visit the library every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0710",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We cook dinner. を否定文にしなさい。",
+        "a": "We do not cook dinner."
+      },
+      "after": {
+        "q": "Tom and Ken visit the library every day. を疑問文にしなさい。",
+        "a": "Do tom and ken visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0725",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We read books. を疑問文にしなさい。",
+        "a": "Do we read books?"
+      },
+      "after": {
+        "q": "Emi and Yuki visit the library every day. を否定文にしなさい。",
+        "a": "Emi and Yuki do not visit the library every day."
+      }
+    },
+    {
+      "id": "GEN-PRS-0726",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "We read books. を否定文にしなさい。",
+        "a": "We do not read books."
+      },
+      "after": {
+        "q": "I watch TV after school. を疑問文にしなさい。",
+        "a": "Do you watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0745",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They play tennis. を疑問文にしなさい。",
+        "a": "Do they play tennis?"
+      },
+      "after": {
+        "q": "We watch TV after school. を否定文にしなさい。",
+        "a": "We do not watch TV after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0746",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They play tennis. を否定文にしなさい。",
+        "a": "They do not play tennis."
+      },
+      "after": {
+        "q": "They watch TV after school. を疑問文にしなさい。",
+        "a": "Do they watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0749",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They watch TV. を疑問文にしなさい。",
+        "a": "Do they watch TV?"
+      },
+      "after": {
+        "q": "You watch TV after school. を否定文にしなさい。",
+        "a": "You do not watch TV after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0750",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They watch TV. を否定文にしなさい。",
+        "a": "They do not watch TV."
+      },
+      "after": {
+        "q": "My friends watch TV after school. を疑問文にしなさい。",
+        "a": "Do my friends watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0754",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They study English. を否定文にしなさい。",
+        "a": "They do not study English."
+      },
+      "after": {
+        "q": "The students watch TV after school. を否定文にしなさい。",
+        "a": "The students do not watch TV after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0761",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They listen to music. を疑問文にしなさい。",
+        "a": "Do they listen to music?"
+      },
+      "after": {
+        "q": "Tom and Ken watch TV after school. を疑問文にしなさい。",
+        "a": "Do tom and ken watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0762",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They listen to music. を否定文にしなさい。",
+        "a": "They do not listen to music."
+      },
+      "after": {
+        "q": "Emi and Yuki watch TV after school. を否定文にしなさい。",
+        "a": "Emi and Yuki do not watch TV after school."
+      }
+    },
+    {
+      "id": "GEN-PRS-0765",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They help at home. を疑問文にしなさい。",
+        "a": "Do they help at home?"
+      },
+      "after": {
+        "q": "I listen to music on Sunday. を疑問文にしなさい。",
+        "a": "Do you listen to music on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0773",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They cook dinner. を疑問文にしなさい。",
+        "a": "Do they cook dinner?"
+      },
+      "after": {
+        "q": "We listen to music on Sunday. を否定文にしなさい。",
+        "a": "We do not listen to music on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0774",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They cook dinner. を否定文にしなさい。",
+        "a": "They do not cook dinner."
+      },
+      "after": {
+        "q": "They listen to music on Sunday. を疑問文にしなさい。",
+        "a": "Do they listen to music on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0789",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They read books. を疑問文にしなさい。",
+        "a": "Do they read books?"
+      },
+      "after": {
+        "q": "You listen to music on Sunday. を否定文にしなさい。",
+        "a": "You do not listen to music on Sunday."
+      }
+    },
+    {
+      "id": "GEN-PRS-0790",
+      "family": "中1/一般動詞/変形",
+      "before": {
+        "q": "They read books. を否定文にしなさい。",
+        "a": "They do not read books."
+      },
+      "after": {
+        "q": "My friends listen to music on Sunday. を疑問文にしなさい。",
+        "a": "Do my friends listen to music on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2055",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did I play tennis yesterday?"
+      },
+      "after": {
+        "q": "Mike studied English yesterday. を疑問文にしなさい。",
+        "a": "Did Mike study English yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2056",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I played tennis yesterday. を否定文にしなさい。",
+        "a": "I did not play tennis yesterday."
+      },
+      "after": {
+        "q": "Bob studied English yesterday. を否定文にしなさい。",
+        "a": "Bob did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-PDID-2057",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I watched TV yesterday. を疑問文にしなさい。",
+        "a": "Did I watch TV yesterday?"
+      },
+      "after": {
+        "q": "John studied English yesterday. を疑問文にしなさい。",
+        "a": "Did John study English yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2058",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I watched TV yesterday. を否定文にしなさい。",
+        "a": "I did not watch TV yesterday."
+      },
+      "after": {
+        "q": "Emi studied English yesterday. を否定文にしなさい。",
+        "a": "Emi did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-PDID-2059",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I studied English yesterday. を疑問文にしなさい。",
+        "a": "Did I study English yesterday?"
+      },
+      "after": {
+        "q": "Yuki studied English yesterday. を疑問文にしなさい。",
+        "a": "Did Yuki study English yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2060",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I studied English yesterday. を否定文にしなさい。",
+        "a": "I did not study English yesterday."
+      },
+      "after": {
+        "q": "Aya studied English yesterday. を否定文にしなさい。",
+        "a": "Aya did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-PDID-2063",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I listened to music yesterday. を疑問文にしなさい。",
+        "a": "Did I listen to music yesterday?"
+      },
+      "after": {
+        "q": "Lucy studied English yesterday. を疑問文にしなさい。",
+        "a": "Did Lucy study English yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2064",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I listened to music yesterday. を否定文にしなさい。",
+        "a": "I did not listen to music yesterday."
+      },
+      "after": {
+        "q": "Mary studied English yesterday. を否定文にしなさい。",
+        "a": "Mary did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-PDID-2065",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I helped at home yesterday. を疑問文にしなさい。",
+        "a": "Did I help at home yesterday?"
+      },
+      "after": {
+        "q": "Ann studied English yesterday. を疑問文にしなさい。",
+        "a": "Did Ann study English yesterday?"
+      }
+    },
+    {
+      "id": "GEN-PDID-2069",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I cooked dinner yesterday. を疑問文にしなさい。",
+        "a": "Did I cook dinner yesterday?"
+      },
+      "after": {
+        "q": "Kate studied English yesterday. を否定文にしなさい。",
+        "a": "Kate did not study English yesterday."
+      }
+    },
+    {
+      "id": "GEN-PDID-2070",
+      "family": "中1/過去の疑問文・否定文/変形",
+      "before": {
+        "q": "I cooked dinner yesterday. を否定文にしなさい。",
+        "a": "I did not cook dinner yesterday."
+      },
+      "after": {
+        "q": "Tom played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did Tom play soccer yesterday?"
+      }
+    }
+  ],
+  "duplicate_rows_after": 1523,
+  "duplicate_excess_after": 904,
+  "duplicate_groups_after": 619,
+  "duplicate_row_ratio_after": 0.144896,
+  "duplicate_excess_ratio_after": 0.086005,
+  "groups_ge5_after": 15,
+  "groups_ge10_after": 0
+}
