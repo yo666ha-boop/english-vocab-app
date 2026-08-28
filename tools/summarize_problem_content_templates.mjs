@@ -1,21 +1,24 @@
 import fs from 'node:fs';
-// Summarize mixed-language English-composition template families for common-cause repair.
+// Summarize mixed-language English-composition template families and residual ASCII tokens.
 const h=fs.readFileSync('problem-app/index.html','utf8');
 const m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data');
 const rows=JSON.parse(m[1]).filter(x=>x?.subject==='英語');
 const prefix=id=>{const z=/^(.+?)-\d+$/.exec(String(id||''));return z?z[1]:String(id||'').split('-')[0];};
 const proper=new Set(['Tom','Ken','Mike','Emi','Yuki','Aya','Bob','Lucy','Mary','John','Jim','Ann','Kate','Lisa','Ben','Alex','Kenta','Miki','Mika','Saki','Riku','Kota','Takumi']);
 const wordRe=/[A-Za-z][A-Za-z'-]*/g;
-const groups={};
+const groups={}; const tokenCounts={}; let hybridRows=0;
 for(const x of rows){
  if(x.type!=='英作文'||!/次の日本語に合う英文/.test(x.q||'')) continue;
  const qm=/『([^』]*)』/.exec(x.q||''); if(!qm) continue;
  const bad=(qm[1].match(wordRe)||[]).filter(t=>!proper.has(t)&&!(/^[ABC]$/.test(t)));
  if(!bad.length) continue;
+ hybridRows++;
+ for(const t of bad){const k=t.toLowerCase();tokenCounts[k]=(tokenCounts[k]||0)+1;}
  const k=`${prefix(x.id)}|${x.grade}|${x.category}`;
  const g=groups[k]??={prefix:prefix(x.id),grade:x.grade,category:x.category,count:0,samples:[]};g.count++;
  if(g.samples.length<12)g.samples.push({id:x.id,jp:qm[1],a:x.a});
 }
 const out=Object.values(groups).sort((a,b)=>b.count-a.count||a.prefix.localeCompare(b.prefix));
-fs.writeFileSync('audit/PROBLEM_APP_CONTENT_TEMPLATE_SUMMARY.json',JSON.stringify({generated_at:new Date().toISOString(),groups:out},null,2)+'\n');
-console.log(JSON.stringify(out,null,2));
+const top_tokens=Object.entries(tokenCounts).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).map(([token,count])=>({token,count}));
+fs.writeFileSync('audit/PROBLEM_APP_CONTENT_TEMPLATE_SUMMARY.json',JSON.stringify({generated_at:new Date().toISOString(),hybrid_rows:hybridRows,top_tokens,groups:out},null,2)+'\n');
+console.log(JSON.stringify({hybrid_rows:hybridRows,top_tokens:top_tokens.slice(0,100),groups:out.map(g=>({prefix:g.prefix,grade:g.grade,category:g.category,count:g.count}))},null,2));
