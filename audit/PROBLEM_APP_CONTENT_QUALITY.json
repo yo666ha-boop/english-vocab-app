@@ -1,27 +1,26 @@
 {
-  "generated_at": "2026-08-28T10:13:47.873Z",
+  "generated_at": "2026-08-28T11:16:04.713Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "hybrid_japanese_translation:429",
-    "subject_verb_agreement:3",
-    "possessive_substitution:14",
+    "hybrid_japanese_translation:421",
+    "auxiliary_tense_error:45",
+    "collocation_error:31",
     "duplicate_qa_row_ratio:0.3996"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
-    "count": 429,
+    "count": 421,
     "by_prefix": {
       "M3N": 279,
       "M3C": 120,
-      "M2-COMP2": 16,
       "GEN-PREP": 10,
+      "M2-COMP2": 8,
       "M2-COMP": 4
     },
     "by_grade_category_type": {
       "中3/比較/英作文": 140,
       "中3/文型/英作文": 40,
-      "中2/比較/英作文": 20,
       "中3/人称代名詞/英作文": 20,
       "中3/受動態/英作文": 20,
       "中3/命令文，there is ～ の文/英作文": 20,
@@ -33,6 +32,7 @@
       "中3/不定詞①，動名詞/英作文": 16,
       "中3/助動詞/英作文": 16,
       "中3/接続詞/英作文": 16,
+      "中2/比較/英作文": 12,
       "中3/関係代名詞/英作文": 11,
       "中1/前置詞/英作文": 10
     },
@@ -163,7 +163,7 @@
           "desk"
         ],
         "q": "次の日本語に合う英文を書きなさい。『the shoes は under the desk にあります。』",
-        "a": "The shoes is under the desk."
+        "a": "The shoes are under the desk."
       },
       {
         "id": "GEN-PREP-1267",
@@ -249,102 +249,6 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『My friend は Ken より 人気がある。』",
         "a": "My friend is more popular than Ken."
-      },
-      {
-        "id": "M2-COMP2-1503",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 背が高い。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 背が高い。』",
-        "a": "Takumi is the tallest in this class."
-      },
-      {
-        "id": "M2-COMP2-1506",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 小さい。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 小さい。』",
-        "a": "Takumi is the smallest in this class."
-      },
-      {
-        "id": "M2-COMP2-1509",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 速い。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 速い。』",
-        "a": "Takumi is the fastest in this class."
-      },
-      {
-        "id": "M2-COMP2-1512",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 大きい。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 大きい。』",
-        "a": "Takumi is the largest in this class."
-      },
-      {
-        "id": "M2-COMP2-1515",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん やさしい。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん やさしい。』",
-        "a": "Takumi is the easiest in this class."
-      },
-      {
-        "id": "M2-COMP2-1518",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 忙しい。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 忙しい。』",
-        "a": "Takumi is the busiest in this class."
-      },
-      {
-        "id": "M2-COMP2-1521",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 人気がある。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 人気がある。』",
-        "a": "Takumi is the most popular in this class."
-      },
-      {
-        "id": "M2-COMP2-1524",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "Takumi はこのクラスでいちばん 美しい。",
-        "english_tokens": [
-          "Takumi"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Takumi はこのクラスでいちばん 美しい。』",
-        "a": "Takumi is the most beautiful in this class."
       },
       {
         "id": "M2-COMP2-1527",
@@ -3467,177 +3371,820 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『This dogは来年the roomへ行くつもりです。』",
         "a": "This dog is going to go to the room next year."
+      },
+      {
+        "id": "M3N-00965",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Iは早く起きなければなりません。",
+        "english_tokens": [
+          "I"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Iは早く起きなければなりません。』",
+        "a": "I must get up early."
+      },
+      {
+        "id": "M3N-00971",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Youは早く起きなければなりません。",
+        "english_tokens": [
+          "You"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Youは早く起きなければなりません。』",
+        "a": "You must get up early."
+      },
+      {
+        "id": "M3N-00977",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Heは早く起きなければなりません。",
+        "english_tokens": [
+          "He"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Heは早く起きなければなりません。』",
+        "a": "He must get up early."
+      },
+      {
+        "id": "M3N-00983",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Sheは早く起きなければなりません。",
+        "english_tokens": [
+          "She"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Sheは早く起きなければなりません。』",
+        "a": "She must get up early."
+      },
+      {
+        "id": "M3N-00989",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Weは早く起きなければなりません。",
+        "english_tokens": [
+          "We"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Weは早く起きなければなりません。』",
+        "a": "We must get up early."
+      },
+      {
+        "id": "M3N-00995",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "Theyは早く起きなければなりません。",
+        "english_tokens": [
+          "They"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『Theyは早く起きなければなりません。』",
+        "a": "They must get up early."
+      },
+      {
+        "id": "M3N-01001",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "My fatherは早く起きなければなりません。",
+        "english_tokens": [
+          "My",
+          "father"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My fatherは早く起きなければなりません。』",
+        "a": "My father must get up early."
+      },
+      {
+        "id": "M3N-01007",
+        "grade": "中3",
+        "category": "助動詞",
+        "type": "英作文",
+        "source_japanese": "My motherは早く起きなければなりません。",
+        "english_tokens": [
+          "My",
+          "mother"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『My motherは早く起きなければなりません。』",
+        "a": "My mother must get up early."
       }
     ]
   },
   "subject_verb_agreement": {
-    "count": 3,
+    "count": 0,
+    "by_prefix": {},
+    "samples": []
+  },
+  "possessive_substitution": {
+    "count": 0,
+    "by_prefix": {},
+    "samples": []
+  },
+  "auxiliary_tense_errors": {
+    "count": 45,
     "by_prefix": {
-      "M3N": 3
+      "M2X-PA": 12,
+      "M3C": 12,
+      "M2-REV": 9,
+      "M3N": 6,
+      "M2-PAST": 4,
+      "M2-CONJ2": 1,
+      "M2X-CONJ": 1
     },
     "samples": [
       {
-        "id": "M3N-01089",
-        "kind": "you_was",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『Youは疲れていたので、早く寝ました。』",
-        "a": "You went to bed early because you was tired."
+        "id": "M2-PAST-0336",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "変形",
+        "q": "I read English books yesterday. を疑問文にしなさい。",
+        "a": "Did I read English books yesterday?"
       },
       {
-        "id": "M3N-01107",
-        "kind": "we_was",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『Weは疲れていたので、早く寝ました。』",
-        "a": "We went to bed early because we was tired."
+        "id": "M2-PAST-0356",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "変形",
+        "q": "You read English books yesterday. を疑問文にしなさい。",
+        "a": "Did you read English books yesterday?"
       },
       {
-        "id": "M3N-01113",
-        "kind": "they_was",
-        "grade": "中3",
+        "id": "M2-PAST-0376",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "変形",
+        "q": "We read English books yesterday. を疑問文にしなさい。",
+        "a": "Did we read English books yesterday?"
+      },
+      {
+        "id": "M2-PAST-0396",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "変形",
+        "q": "They read English books yesterday. を疑問文にしなさい。",
+        "a": "Did they read English books yesterday?"
+      },
+      {
+        "id": "M2X-PA-0226",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did I played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did you play the guitar yesterday?"
+      },
+      {
+        "id": "M2X-PA-0228",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did I readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did you read English books yesterday?"
+      },
+      {
+        "id": "M2X-PA-0238",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did I played video games yesterday? の誤りを直しなさい。",
+        "a": "Did you play video games yesterday?"
+      },
+      {
+        "id": "M2X-PA-0250",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did you played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did you play the guitar yesterday?"
+      },
+      {
+        "id": "M2X-PA-0252",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did you readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did you read English books yesterday?"
+      },
+      {
+        "id": "M2X-PA-0262",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did you played video games yesterday? の誤りを直しなさい。",
+        "a": "Did you play video games yesterday?"
+      },
+      {
+        "id": "M2X-PA-0274",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did we played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did you play the guitar yesterday?"
+      },
+      {
+        "id": "M2X-PA-0276",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did we readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did you read English books yesterday?"
+      },
+      {
+        "id": "M2X-PA-0286",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did we played video games yesterday? の誤りを直しなさい。",
+        "a": "Did you play video games yesterday?"
+      },
+      {
+        "id": "M2X-PA-0298",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did they played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did they play the guitar yesterday?"
+      },
+      {
+        "id": "M2X-PA-0300",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did they readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did they read English books yesterday?"
+      },
+      {
+        "id": "M2X-PA-0310",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did they played video games yesterday? の誤りを直しなさい。",
+        "a": "Did they play video games yesterday?"
+      },
+      {
+        "id": "M2X-CONJ-0461",
+        "kind": "did_plus_past",
+        "grade": "中2",
         "category": "接続詞",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『Theyは疲れていたので、早く寝ました。』",
-        "a": "They went to bed early because they was tired."
+        "type": "並びかえ",
+        "q": "( I / came / home / when / I / did / my / homework )",
+        "a": "I came home when I did my homework."
+      },
+      {
+        "id": "M2-REV-0212",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did he played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did he play the guitar yesterday?"
+      },
+      {
+        "id": "M2-REV-0216",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did he readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did he read English books yesterday?"
+      },
+      {
+        "id": "M2-REV-0236",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did he played video games yesterday? の誤りを直しなさい。",
+        "a": "Did he play video games yesterday?"
+      },
+      {
+        "id": "M2-REV-0260",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did she played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did she play the guitar yesterday?"
+      },
+      {
+        "id": "M2-REV-0264",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did she readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did she read English books yesterday?"
+      },
+      {
+        "id": "M2-REV-0284",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did she played video games yesterday? の誤りを直しなさい。",
+        "a": "Did she play video games yesterday?"
+      },
+      {
+        "id": "M2-REV-0380",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did my friend played the guitar yesterday? の誤りを直しなさい。",
+        "a": "Did my friend play the guitar yesterday?"
+      },
+      {
+        "id": "M2-REV-0384",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did my friend readed English books yesterday? の誤りを直しなさい。",
+        "a": "Did my friend read English books yesterday?"
+      },
+      {
+        "id": "M2-REV-0404",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "過去の疑問文・否定文",
+        "type": "間違い直し",
+        "q": "Did my friend played video games yesterday? の誤りを直しなさい。",
+        "a": "Did my friend play video games yesterday?"
+      },
+      {
+        "id": "M2-CONJ2-0750",
+        "kind": "did_plus_past",
+        "grade": "中2",
+        "category": "接続詞",
+        "type": "並びかえ",
+        "q": "( I / was / busy / but / I / did / my / homework )",
+        "a": "I was busy, but I did my homework."
+      },
+      {
+        "id": "M3C-00083",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "I read books yesterday. を疑問文にしなさい。",
+        "a": "Did I read books yesterday?"
+      },
+      {
+        "id": "M3C-00084",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "I read books yesterday. を否定文にしなさい。",
+        "a": "I did not read books yesterday."
+      },
+      {
+        "id": "M3C-00283",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "You read books yesterday. を疑問文にしなさい。",
+        "a": "Did you read books yesterday?"
+      },
+      {
+        "id": "M3C-00284",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "You read books yesterday. を否定文にしなさい。",
+        "a": "You did not read books yesterday."
+      },
+      {
+        "id": "M3C-00483",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "He read books yesterday. を疑問文にしなさい。",
+        "a": "Did he read books yesterday?"
+      },
+      {
+        "id": "M3C-00484",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "He read books yesterday. を否定文にしなさい。",
+        "a": "He did not read books yesterday."
+      },
+      {
+        "id": "M3C-00683",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "She read books yesterday. を疑問文にしなさい。",
+        "a": "Did she read books yesterday?"
+      },
+      {
+        "id": "M3C-00684",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "She read books yesterday. を否定文にしなさい。",
+        "a": "She did not read books yesterday."
+      },
+      {
+        "id": "M3C-00883",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "We read books yesterday. を疑問文にしなさい。",
+        "a": "Did we read books yesterday?"
+      },
+      {
+        "id": "M3C-00884",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "We read books yesterday. を否定文にしなさい。",
+        "a": "We did not read books yesterday."
+      },
+      {
+        "id": "M3C-01083",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "They read books yesterday. を疑問文にしなさい。",
+        "a": "Did they read books yesterday?"
+      },
+      {
+        "id": "M3C-01084",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "They read books yesterday. を否定文にしなさい。",
+        "a": "They did not read books yesterday."
+      },
+      {
+        "id": "M3N-00330",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The boy played volleyball yesterday. を疑問文にしなさい。",
+        "a": "Did The boy played volleyball yesterday?"
+      },
+      {
+        "id": "M3N-00336",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The girl played badminton yesterday. を疑問文にしなさい。",
+        "a": "Did The girl played badminton yesterday?"
+      },
+      {
+        "id": "M3N-00342",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The student played running yesterday. を疑問文にしなさい。",
+        "a": "Did The student played running yesterday?"
+      },
+      {
+        "id": "M3N-00348",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The teacher played swimming yesterday. を疑問文にしなさい。",
+        "a": "Did The teacher played swimming yesterday?"
+      },
+      {
+        "id": "M3N-00354",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "Our team played soccer yesterday. を疑問文にしなさい。",
+        "a": "Did Our team played soccer yesterday?"
+      },
+      {
+        "id": "M3N-00360",
+        "kind": "did_plus_past",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "This dog played tennis yesterday. を疑問文にしなさい。",
+        "a": "Did This dog played tennis yesterday?"
       }
     ]
   },
-  "possessive_substitution": {
-    "count": 14,
+  "collocation_errors": {
+    "count": 31,
     "by_prefix": {
-      "M2-FUT2": 8,
-      "M2Y-INF": 4,
-      "M2X-GER": 2
+      "M3N": 31
     },
     "samples": [
       {
-        "id": "M2X-GER-0586",
-        "grade": "中2",
-        "category": "動名詞",
-        "type": "英作文",
-        "source_japanese": "彼は 宿題を終える。",
-        "q": "『彼は 宿題を終える。』に合う文を書きなさい。",
-        "a": "He finishes doing my homework."
+        "id": "M3N-00278",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "My father played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
       },
       {
-        "id": "M2X-GER-0610",
-        "grade": "中2",
-        "category": "動名詞",
-        "type": "英作文",
-        "source_japanese": "彼女は 宿題を終える。",
-        "q": "『彼女は 宿題を終える。』に合う文を書きなさい。",
-        "a": "She finishes doing my homework."
+        "id": "M3N-00279",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "My father was played swimming yesterday. の誤りを直しなさい。",
+        "a": "My father played swimming yesterday."
       },
       {
-        "id": "M2Y-INF-0218",
-        "grade": "中2",
-        "category": "不定詞",
-        "type": "英作文",
-        "source_japanese": "彼は 両親を手伝う必要がある。",
-        "q": "次の日本語に合う英文を書きなさい。『彼は 両親を手伝う必要がある。』",
-        "a": "He needs to help my parents."
+        "id": "M3N-00282",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "My father played swimming yesterday. を疑問文にしなさい。",
+        "a": "Did my father play swimming yesterday?"
       },
       {
-        "id": "M2Y-INF-0220",
-        "grade": "中2",
-        "category": "不定詞",
-        "type": "英作文",
-        "source_japanese": "彼は 両親を手伝う必要がある。",
-        "q": "『彼は 両親を手伝う必要がある。』に合う文を書きなさい。",
-        "a": "He needs to help my parents."
+        "id": "M3N-00284",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "My mother played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
       },
       {
-        "id": "M2Y-INF-0233",
-        "grade": "中2",
-        "category": "不定詞",
-        "type": "英作文",
-        "source_japanese": "彼女は 両親を手伝う必要がある。",
-        "q": "次の日本語に合う英文を書きなさい。『彼女は 両親を手伝う必要がある。』",
-        "a": "She needs to help my parents."
+        "id": "M3N-00285",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "My mother was played running yesterday. の誤りを直しなさい。",
+        "a": "My mother played running yesterday."
       },
       {
-        "id": "M2Y-INF-0235",
-        "grade": "中2",
-        "category": "不定詞",
-        "type": "英作文",
-        "source_japanese": "彼女は 両親を手伝う必要がある。",
-        "q": "『彼女は 両親を手伝う必要がある。』に合う文を書きなさい。",
-        "a": "She needs to help my parents."
+        "id": "M3N-00288",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "My mother played running yesterday. を疑問文にしなさい。",
+        "a": "Did my mother play running yesterday?"
       },
       {
-        "id": "M2-FUT2-0585",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼は 明日 自分の部屋をそうじする予定です。",
-        "q": "『彼は 明日 自分の部屋をそうじする予定です。』に近い英文を、will を使って書きなさい。",
-        "a": "He will clean my room tomorrow."
+        "id": "M3N-00290",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "My brother played skiing yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
       },
       {
-        "id": "M2-FUT2-0586",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼は 明日 自分の部屋をそうじする予定です。",
-        "q": "『彼は 明日 自分の部屋をそうじする予定です。』に近い英文を、be going to を使って書きなさい。",
-        "a": "He is going to clean my room tomorrow."
+        "id": "M3N-00291",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "My brother was played skiing yesterday. の誤りを直しなさい。",
+        "a": "My brother played skiing yesterday."
       },
       {
-        "id": "M2-FUT2-0597",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼は 明日 父を手伝う予定です。",
-        "q": "『彼は 明日 父を手伝う予定です。』に近い英文を、will を使って書きなさい。",
-        "a": "He will help my father tomorrow."
+        "id": "M3N-00294",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "My brother played skiing yesterday. を疑問文にしなさい。",
+        "a": "Did my brother play skiing yesterday?"
       },
       {
-        "id": "M2-FUT2-0598",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼は 明日 父を手伝う予定です。",
-        "q": "『彼は 明日 父を手伝う予定です。』に近い英文を、be going to を使って書きなさい。",
-        "a": "He is going to help my father tomorrow."
+        "id": "M3N-00338",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "The student played running yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
       },
       {
-        "id": "M2-FUT2-0625",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼女は 明日 自分の部屋をそうじする予定です。",
-        "q": "『彼女は 明日 自分の部屋をそうじする予定です。』に近い英文を、will を使って書きなさい。",
-        "a": "She will clean my room tomorrow."
+        "id": "M3N-00339",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "The student was played running yesterday. の誤りを直しなさい。",
+        "a": "The student played running yesterday."
       },
       {
-        "id": "M2-FUT2-0626",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼女は 明日 自分の部屋をそうじする予定です。",
-        "q": "『彼女は 明日 自分の部屋をそうじする予定です。』に近い英文を、be going to を使って書きなさい。",
-        "a": "She is going to clean my room tomorrow."
+        "id": "M3N-00342",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The student played running yesterday. を疑問文にしなさい。",
+        "a": "Did The student played running yesterday?"
       },
       {
-        "id": "M2-FUT2-0637",
-        "grade": "中2",
-        "category": "未来表現",
-        "type": "英作文",
-        "source_japanese": "彼女は 明日 父を手伝う予定です。",
-        "q": "『彼女は 明日 父を手伝う予定です。』に近い英文を、will を使って書きなさい。",
-        "a": "She will help my father tomorrow."
+        "id": "M3N-00344",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "見分け",
+        "q": "The teacher played swimming yesterday. は be動詞の文か、一般動詞の文か答えなさい。",
+        "a": "一般動詞の文"
       },
       {
-        "id": "M2-FUT2-0638",
-        "grade": "中2",
-        "category": "未来表現",
+        "id": "M3N-00345",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "間違い直し",
+        "q": "The teacher was played swimming yesterday. の誤りを直しなさい。",
+        "a": "The teacher played swimming yesterday."
+      },
+      {
+        "id": "M3N-00348",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "be動詞と一般動詞（過去形）",
+        "type": "変形",
+        "q": "The teacher played swimming yesterday. を疑問文にしなさい。",
+        "a": "Did The teacher played swimming yesterday?"
+      },
+      {
+        "id": "M3N-00638",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "My father is playing swimming. を否定文にしなさい。",
+        "a": "My father is not playing swimming."
+      },
+      {
+        "id": "M3N-00641",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
         "type": "英作文",
-        "source_japanese": "彼女は 明日 父を手伝う予定です。",
-        "q": "『彼女は 明日 父を手伝う予定です。』に近い英文を、be going to を使って書きなさい。",
-        "a": "She is going to help my father tomorrow."
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My fatherはswimmingをしていました。』",
+        "a": "My father was playing swimming then."
+      },
+      {
+        "id": "M3N-00644",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "My mother is playing running. を否定文にしなさい。",
+        "a": "My mother is not playing running."
+      },
+      {
+        "id": "M3N-00647",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "英作文",
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My motherはrunningをしていました。』",
+        "a": "My mother was playing running then."
+      },
+      {
+        "id": "M3N-00650",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "My brother is playing skiing. を否定文にしなさい。",
+        "a": "My brother is not playing skiing."
+      },
+      {
+        "id": "M3N-00653",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "英作文",
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、My brotherはskiingをしていました。』",
+        "a": "My brother was playing skiing then."
+      },
+      {
+        "id": "M3N-00698",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "The student is playing running. を否定文にしなさい。",
+        "a": "The student is not playing running."
+      },
+      {
+        "id": "M3N-00701",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "英作文",
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、The studentはrunningをしていました。』",
+        "a": "The student was playing running then."
+      },
+      {
+        "id": "M3N-00704",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "変形",
+        "q": "The teacher is playing swimming. を否定文にしなさい。",
+        "a": "The teacher is not playing swimming."
+      },
+      {
+        "id": "M3N-00707",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "進行形",
+        "type": "英作文",
+        "q": "次の日本語に合う英文を書きなさい。『そのとき、The teacherはswimmingをしていました。』",
+        "a": "The teacher was playing swimming then."
+      },
+      {
+        "id": "M3N-01241",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "間違い直し",
+        "q": "My father want to playing swimming. の誤りを直しなさい。",
+        "a": "My father wants to go swimming."
+      },
+      {
+        "id": "M3N-01247",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "間違い直し",
+        "q": "My mother want to playing running. の誤りを直しなさい。",
+        "a": "My mother wants to go running."
+      },
+      {
+        "id": "M3N-01253",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "間違い直し",
+        "q": "My brother want to playing skiing. の誤りを直しなさい。",
+        "a": "My brother wants to go skiing."
+      },
+      {
+        "id": "M3N-01301",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "間違い直し",
+        "q": "The student want to playing running. の誤りを直しなさい。",
+        "a": "The student wants to go running."
+      },
+      {
+        "id": "M3N-01307",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞①，動名詞",
+        "type": "間違い直し",
+        "q": "The teacher want to playing swimming. の誤りを直しなさい。",
+        "a": "The teacher wants to go swimming."
+      },
+      {
+        "id": "M3N-01972",
+        "kind": "play_plus_activity_ing",
+        "grade": "中3",
+        "category": "不定詞②",
+        "type": "間違い直し",
+        "q": "My brother went there to played skiing. の誤りを直しなさい。",
+        "a": "My brother went there to go skiing."
       }
     ]
   },
@@ -8600,5 +9147,5 @@
       }
     ]
   },
-  "policy": "Content-quality gate. High-confidence hybrid Japanese, subject/verb agreement, possessive substitution, and excessive exact duplicate QA rows fail the gate. Semantic template findings remain review signals until repaired/validated."
+  "policy": "Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, auxiliary tense, bad collocation, and excessive exact duplicate QA rows fail. Semantic findings remain review signals until repaired/validated."
 }
