@@ -7,6 +7,7 @@ on:
       - fix-problem-content-quality-20260828
     paths:
       - '.github/workflows/problem-content-regression-core.yml'
+      - 'tools/audit_problem_semantic_duplicate_review.mjs'
 
 permissions:
   contents: write
@@ -27,6 +28,8 @@ jobs:
         run: node tools/audit_problem_app_bank_integrity.mjs
       - name: Content quality
         run: node tools/audit_problem_content_quality.mjs
+      - name: Semantic duplicate review
+        run: node tools/audit_problem_semantic_duplicate_review.mjs
       - name: Grammar chronology
         run: node tools/audit_problem_grammar_chronology.mjs
       - name: Morphology regression
@@ -44,7 +47,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
           if git diff --cached --quiet; then
             echo 'No evidence changes'
           else
