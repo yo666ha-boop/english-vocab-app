@@ -62,8 +62,7 @@ for(const x of rows){
     collocationErrors.push({id:x.id,kind:badInAnswer?'bad_collocation_in_answer':'bad_collocation_in_source',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
 
-// High-confidence semantic/template errors. These are no longer advisory: each pattern is
-// unambiguously unsuitable as a junior-high teaching item and therefore hard-fails.
+// High-confidence semantic/template errors. These are hard failures.
 const semanticErrors=[];
 const inanimateBadAdj=/^(?:This|That) (?:bag|book|chair|house|desk|table|car|bike|flower)\b.*\b(?:busier|busiest|kinder|kindest|younger|youngest)\b/i;
 const animalBadVerb=/^This is the (?:cat|dog) which .*\b(?:made|fixed)\b/i;
@@ -74,10 +73,12 @@ const meaningMismatchHints=[
   [/サッカーを練習/,/\bpiano\b/i,'soccer_vs_piano']
 ];
 for(const x of rows){
-  const a=norm(x.a); let kind=null;
+  const a=norm(x.a); const q=norm(x.q); let kind=null;
   if(inanimateBadAdj.test(a))kind='inanimate_comparison_adjective';
   else if(animalBadVerb.test(a))kind='animal_made_or_fixed';
   else if(cakeFixed.test(a))kind='cake_fixed';
+  else if(/^Do (?:tom and ken|emi and yuki)\b/.test(a))kind='lowercase_proper_names_after_do';
+  else if(/^I\b.*を疑問文にしなさい。$/.test(q)&&/^Do you\b/.test(a))kind='i_question_changed_to_you';
   if(!kind){const jp=quotedJapanese(x.q);for(const [jre,are,k] of meaningMismatchHints){if(jre.test(jp)&&are.test(a)){kind=k;break;}}}
   if(kind)semanticErrors.push({id:x.id,kind,grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
@@ -98,6 +99,10 @@ duplicateGroups.sort((a,b)=>b.count-a.count||String(a.q).localeCompare(String(b.
 function breakdown(items){const c={};for(const x of items){const k=family(x);c[k]=(c[k]||0)+1;}return Object.fromEntries(Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
 function prefixBreakdown(items){const c={};for(const x of items){const k=prefix(x.id);c[k]=(c[k]||0)+1;}return Object.fromEntries(Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
 function sortCounts(o){return Object.fromEntries(Object.entries(o).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));}
+const duplicateRowRatio=duplicateRows/Math.max(rows.length,1);
+const duplicateExcessRatio=duplicateExcess/Math.max(rows.length,1);
+const duplicateGroupsGe5=duplicateGroups.filter(g=>g.count>=5).length;
+const duplicateGroupsGe10=duplicateGroups.filter(g=>g.count>=10).length;
 
 const hardFailures=[];
 if(hybridJapanese.length)hardFailures.push(`hybrid_japanese_translation:${hybridJapanese.length}`);
@@ -106,7 +111,10 @@ if(possessiveSubstitution.length)hardFailures.push(`possessive_substitution:${po
 if(auxTenseErrors.length)hardFailures.push(`auxiliary_tense_error:${auxTenseErrors.length}`);
 if(collocationErrors.length)hardFailures.push(`collocation_error:${collocationErrors.length}`);
 if(semanticErrors.length)hardFailures.push(`semantic_template_error:${semanticErrors.length}`);
-if(duplicateRows/Math.max(rows.length,1)>.10)hardFailures.push(`duplicate_qa_row_ratio:${(duplicateRows/rows.length).toFixed(4)}`);
+// Redundancy is measured by EXCESS duplicate rows, not by counting both the original and
+// its copy as defects. Any cluster repeated 5+ times is independently a hard failure.
+if(duplicateExcessRatio>.10)hardFailures.push(`duplicate_qa_excess_ratio:${duplicateExcessRatio.toFixed(4)}`);
+if(duplicateGroupsGe5>0)hardFailures.push(`duplicate_qa_groups_ge5:${duplicateGroupsGe5}`);
 
 const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures.length?'FAIL':'PASS',hard_failures:hardFailures,english_count:rows.length,
   hybrid_japanese_translation:{count:hybridJapanese.length,by_prefix:prefixBreakdown(hybridJapanese),by_grade_category_type:breakdown(hybridJapanese),samples:hybridJapanese.slice(0,250)},
@@ -114,9 +122,9 @@ const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures
   possessive_substitution:{count:possessiveSubstitution.length,by_prefix:prefixBreakdown(possessiveSubstitution),samples:possessiveSubstitution.slice(0,250)},
   auxiliary_tense_errors:{count:auxTenseErrors.length,by_prefix:prefixBreakdown(auxTenseErrors),samples:auxTenseErrors.slice(0,250)},
   collocation_errors:{count:collocationErrors.length,by_prefix:prefixBreakdown(collocationErrors),samples:collocationErrors.slice(0,250)},
-  exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number((duplicateRows/rows.length).toFixed(6)),groups_ge5:duplicateGroups.filter(g=>g.count>=5).length,groups_ge10:duplicateGroups.filter(g=>g.count>=10).length,by_family_rows:sortCounts(duplicateFamilyRows),by_family_groups:sortCounts(duplicateFamilyGroups),top:duplicateGroups.slice(0,250)},
+  exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number(duplicateRowRatio.toFixed(6)),excess_ratio:Number(duplicateExcessRatio.toFixed(6)),groups_ge5:duplicateGroupsGe5,groups_ge10:duplicateGroupsGe10,by_family_rows:sortCounts(duplicateFamilyRows),by_family_groups:sortCounts(duplicateFamilyGroups),top:duplicateGroups.slice(0,250)},
   semantic_template_errors:{count:semanticErrors.length,by_prefix:prefixBreakdown(semanticErrors),by_grade_category_type:breakdown(semanticErrors),samples:semanticErrors.slice(0,250)},
-  policy:'Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Duplicate family counts are emitted to drive root-cause diversification without ID-specific fixes.'};
+  policy:'Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, duplicate excess above 10%, or any exact QA cluster repeated 5+ times fail. Row ratio remains diagnostic because it counts both the retained original and redundant copies. Deliberately wrong error-correction prompts are not defects.'};
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');
-console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,semantic_errors:semanticErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,duplicate_groups_ge5:out.exact_duplicate_question_answer.groups_ge5},null,2));
+console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,semantic_errors:semanticErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,duplicate_row_ratio:Number(duplicateRowRatio.toFixed(6)),duplicate_excess_ratio:Number(duplicateExcessRatio.toFixed(6)),duplicate_groups_ge5:duplicateGroupsGe5},null,2));
 if(hardFailures.length)process.exitCode=2;
