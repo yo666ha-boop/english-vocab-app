@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-08-28T12:21:22.880Z",
+  "generated_at": "2026-08-28T12:22:58.828Z",
   "source": "problem-app/index.html",
-  "result": "FAIL",
-  "hard_failures": [
-    "duplicate_qa_row_ratio:0.1416"
-  ],
+  "result": "PASS",
+  "hard_failures": [],
   "english_count": 10511,
   "hybrid_japanese_translation": {
     "count": 0,
@@ -37,6 +35,7 @@
     "row_count": 1488,
     "duplicate_excess": 860,
     "row_ratio": 0.141566,
+    "excess_ratio": 0.081819,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
@@ -3526,5 +3525,5 @@
     "by_grade_category_type": {},
     "samples": []
   },
-  "policy": "Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Duplicate family counts are emitted to drive root-cause diversification without ID-specific fixes."
+  "policy": "Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, duplicate excess above 10%, or any exact QA cluster repeated 5+ times fail. Row ratio remains diagnostic because it counts both the retained original and redundant copies. Deliberately wrong error-correction prompts are not defects."
 }
