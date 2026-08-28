@@ -46,14 +46,20 @@ for(const x of rows){
   if(/\bmy\b/i.test(String(x.a||'')))possessiveSubstitution.push({id:x.id,grade:x.grade,category:x.category,type:x.type,source_japanese:jp,q:x.q,a:x.a});
 }
 
+// Only inspect the expected answer for auxiliary-tense errors. An intentionally wrong
+// sentence in an error-correction prompt is teaching material, not a bank defect.
+// "read" is deliberately excluded because its base and past spellings are identical.
 const auxTenseErrors=[];
 const collocationErrors=[];
 for(const x of rows){
-  const s=`${norm(x.q)} ${norm(x.a)}`;
-  if(/\bDid\b[^?.!]{0,80}\b(?:played|went|saw|ate|made|did|had|came|took|wrote|read)\b/i.test(s))
-    auxTenseErrors.push({id:x.id,kind:'did_plus_past',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
-  if(/\b(?:played|playing)\s+(?:swimming|running|skiing)\b/i.test(s))
-    collocationErrors.push({id:x.id,kind:'play_plus_activity_ing',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
+  const a=norm(x.a);
+  const q=norm(x.q);
+  if(/\bDid\b[^?.!]{0,80}\b(?:played|went|saw|ate|made|did|had|came|took|wrote)\b/i.test(a))
+    auxTenseErrors.push({id:x.id,kind:'did_plus_past_in_answer',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
+  const badInAnswer=/\b(?:played|playing|play)\s+(?:swimming|running|skiing|skating)\b/i.test(a);
+  const badNaturalSource=x.type!=='間違い直し' && /\b(?:played|playing|play)\s+(?:swimming|running|skiing|skating)\b/i.test(q);
+  if(badInAnswer||badNaturalSource)
+    collocationErrors.push({id:x.id,kind:badInAnswer?'bad_collocation_in_answer':'bad_collocation_in_source',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
 
 const semanticWarnings=[];
@@ -98,7 +104,7 @@ const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures
   collocation_errors:{count:collocationErrors.length,by_prefix:prefixBreakdown(collocationErrors),samples:collocationErrors.slice(0,250)},
   exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number((duplicateRows/rows.length).toFixed(6)),top:duplicateGroups.slice(0,250)},
   semantic_template_warnings:{count:semanticWarnings.length,by_prefix:prefixBreakdown(semanticWarnings),samples:semanticWarnings.slice(0,250)},
-  policy:'Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, auxiliary tense, bad collocation, and excessive exact duplicate QA rows fail. Semantic findings remain review signals until repaired/validated.'};
+  policy:'Content-quality gate. High-confidence hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Semantic findings remain review signals until repaired/validated.'};
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');
 console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,semantic_warnings:semanticWarnings.length},null,2));
 if(hardFailures.length)process.exitCode=2;
