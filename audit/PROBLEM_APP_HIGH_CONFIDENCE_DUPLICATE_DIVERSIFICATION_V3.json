@@ -1,0 +1,428 @@
+{
+  "generated_at": "2026-08-28T15:16:49.237Z",
+  "groups_eligible": 16,
+  "groups_touched": 14,
+  "changed_rows": 34,
+  "by_family": {
+    "中3/疑問詞/空所補充": 5,
+    "中3/受動態/間違い直し": 3,
+    "中3/現在完了形（完了・経験）/間違い直し": 3,
+    "中3/現在完了形（完了・経験）/選択": 3,
+    "中3/関係代名詞/間違い直し": 6,
+    "中3/関係代名詞/並びかえ": 6,
+    "中3/仮定法/英作文": 8
+  },
+  "samples": [
+    {
+      "id": "M3N-00444",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+        "a": "How"
+      },
+      "after": {
+        "q": "(      ) do you want? 「何」に合う最も適切な疑問詞を書きなさい。",
+        "a": "What"
+      }
+    },
+    {
+      "id": "M3N-00474",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+        "a": "How"
+      },
+      "after": {
+        "q": "(      ) do you play tennis? 「どこで」に合う最も適切な疑問詞を書きなさい。",
+        "a": "Where"
+      }
+    },
+    {
+      "id": "M3N-00420",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
+        "a": "What"
+      },
+      "after": {
+        "q": "(      ) do you study English? 「いつ」に合う最も適切な疑問詞を書きなさい。",
+        "a": "When"
+      }
+    },
+    {
+      "id": "M3N-00450",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
+        "a": "What"
+      },
+      "after": {
+        "q": "(      ) do you read this book? 「なぜ」に合う最も適切な疑問詞を書きなさい。",
+        "a": "Why"
+      }
+    },
+    {
+      "id": "M3N-00480",
+      "family": "中3/疑問詞/空所補充",
+      "before": {
+        "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
+        "a": "What"
+      },
+      "after": {
+        "q": "(      ) do you go to school? 「どのように」に合う最も適切な疑問詞を書きなさい。",
+        "a": "How"
+      }
+    },
+    {
+      "id": "M3N-01618",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This computer is use by many students. の誤りを直しなさい。",
+        "a": "This computer is used by many students."
+      },
+      "after": {
+        "q": "English is speak in many countries. の誤りを直しなさい。",
+        "a": "English is spoken in many countries."
+      }
+    },
+    {
+      "id": "M3N-01648",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This computer is use by many students. の誤りを直しなさい。",
+        "a": "This computer is used by many students."
+      },
+      "after": {
+        "q": "This room is clean every day. の誤りを直しなさい。",
+        "a": "This room is cleaned every day."
+      }
+    },
+    {
+      "id": "M3N-01678",
+      "family": "中3/受動態/間違い直し",
+      "before": {
+        "q": "This computer is use by many students. の誤りを直しなさい。",
+        "a": "This computer is used by many students."
+      },
+      "after": {
+        "q": "These pictures is take in Kyoto. の誤りを直しなさい。",
+        "a": "These pictures is taken in Kyoto."
+      }
+    },
+    {
+      "id": "M3N-01738",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have did the work before. の誤りを直しなさい。",
+        "a": "I have done the work before."
+      },
+      "after": {
+        "q": "I have took many pictures before. の誤りを直しなさい。",
+        "a": "I have taken many pictures before."
+      }
+    },
+    {
+      "id": "M3N-01768",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have did the work before. の誤りを直しなさい。",
+        "a": "I have done the work before."
+      },
+      "after": {
+        "q": "I has made lunch before. の誤りを直しなさい。",
+        "a": "I have made lunch before."
+      }
+    },
+    {
+      "id": "M3N-01798",
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "before": {
+        "q": "I have did the work before. の誤りを直しなさい。",
+        "a": "I have done the work before."
+      },
+      "after": {
+        "q": "I have readed this book before. の誤りを直しなさい。",
+        "a": "I have read this book before."
+      }
+    },
+    {
+      "id": "M3N-01740",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
+        "a": "Have eaten"
+      },
+      "after": {
+        "q": "I ( have finished / finished / am finished ) my homework. 現在完了形になるものを選びなさい。",
+        "a": "Have finished"
+      }
+    },
+    {
+      "id": "M3N-01770",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
+        "a": "Have eaten"
+      },
+      "after": {
+        "q": "I ( have written / written / am written ) the letter. 現在完了形になるものを選びなさい。",
+        "a": "Have written"
+      }
+    },
+    {
+      "id": "M3N-01800",
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "before": {
+        "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
+        "a": "Have eaten"
+      },
+      "after": {
+        "q": "I ( have eaten / eaten / am eaten ) lunch. 現在完了形になるものを選びなさい。",
+        "a": "Have eaten"
+      }
+    },
+    {
+      "id": "M3N-02266",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
+        "a": "The student who studies English is kind."
+      },
+      "after": {
+        "q": "The boy which plays soccer is kind. の誤りを、who を使って直しなさい。",
+        "a": "The boy who plays soccer is kind."
+      }
+    },
+    {
+      "id": "M3N-02267",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
+        "a": "The student who is reading a book"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( boy / plays / is / The / who / soccer / kind )",
+        "a": "The boy who plays soccer is kind."
+      }
+    },
+    {
+      "id": "M3N-02212",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
+        "a": "The man who works here is kind."
+      },
+      "after": {
+        "q": "The girl which studies English is my friend. の誤りを、who を使って直しなさい。",
+        "a": "The girl who studies English is my friend."
+      }
+    },
+    {
+      "id": "M3N-02242",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
+        "a": "The man who works here is kind."
+      },
+      "after": {
+        "q": "The boy which is singing is my brother. の誤りを、who を使って直しなさい。",
+        "a": "The boy who is singing is my brother."
+      }
+    },
+    {
+      "id": "M3N-02272",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
+        "a": "The man who works here is kind."
+      },
+      "after": {
+        "q": "The woman which is taking a picture is my teacher. の誤りを、who を使って直しなさい。",
+        "a": "The woman who is taking a picture is my teacher."
+      }
+    },
+    {
+      "id": "M3N-02213",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
+        "a": "The man who is using a computer"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( girl / studies / is / friend / The / who / English / my )",
+        "a": "The girl who studies English is my friend."
+      }
+    },
+    {
+      "id": "M3N-02243",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
+        "a": "The man who is using a computer"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( boy / is / is / brother / The / who / singing / my )",
+        "a": "The boy who is singing is my brother."
+      }
+    },
+    {
+      "id": "M3N-02273",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
+        "a": "The man who is using a computer"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( woman / is / a / is / teacher / The / who / taking / picture / my )",
+        "a": "The woman who is taking a picture is my teacher."
+      }
+    },
+    {
+      "id": "M3N-02218",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+        "a": "The woman who teaches us is kind."
+      },
+      "after": {
+        "q": "The man which is using a computer is Ken. の誤りを、who を使って直しなさい。",
+        "a": "The man who is using a computer is Ken."
+      }
+    },
+    {
+      "id": "M3N-02248",
+      "family": "中3/関係代名詞/間違い直し",
+      "before": {
+        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+        "a": "The woman who teaches us is kind."
+      },
+      "after": {
+        "q": "The student which is reading a book is Yuki. の誤りを、who を使って直しなさい。",
+        "a": "The student who is reading a book is Yuki."
+      }
+    },
+    {
+      "id": "M3N-02219",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
+        "a": "The woman who is taking a picture"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( man / is / a / is / The / who / using / computer / Ken )",
+        "a": "The man who is using a computer is Ken."
+      }
+    },
+    {
+      "id": "M3N-02249",
+      "family": "中3/関係代名詞/並びかえ",
+      "before": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
+        "a": "The woman who is taking a picture"
+      },
+      "after": {
+        "q": "次の語(句)を正しい順に並べかえなさい。 ( student / is / a / is / The / who / reading / book / Yuki )",
+        "a": "The student who is reading a book is Yuki."
+      }
+    },
+    {
+      "id": "M3N-02313",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+        "a": "If I were a bird, I could fly in the sky."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けられるのに。』",
+        "a": "If I were a teacher, I could help students."
+      }
+    },
+    {
+      "id": "M3N-02343",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+        "a": "If I were a bird, I could fly in the sky."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が医者なら、病気の人を助けられるのに。』",
+        "a": "If I were a doctor, I could help sick people."
+      }
+    },
+    {
+      "id": "M3N-02373",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+        "a": "If I were a bird, I could fly in the sky."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が料理人なら、おいしい料理を作れるのに。』",
+        "a": "If I were a chef, I could cook good food."
+      }
+    },
+    {
+      "id": "M3N-02319",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
+        "a": "If I were a fish, I could swim in the sea."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私がパイロットなら、世界中を飛べるのに。』",
+        "a": "If I were a pilot, I could fly around the world."
+      }
+    },
+    {
+      "id": "M3N-02349",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
+        "a": "If I were a fish, I could swim in the sea."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が歌手なら、多くの人のために歌えるのに。』",
+        "a": "If I were a singer, I could sing for many people."
+      }
+    },
+    {
+      "id": "M3N-02379",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
+        "a": "If I were a fish, I could swim in the sea."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が作家なら、たくさんの本を書けるのに。』",
+        "a": "If I were a writer, I could write many books."
+      }
+    },
+    {
+      "id": "M3N-02325",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+        "a": "If I were a teacher, I could help students."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私がサッカー選手なら、大きなスタジアムでプレーできるのに。』",
+        "a": "If I were a soccer player, I could play in a big stadium."
+      }
+    },
+    {
+      "id": "M3N-02355",
+      "family": "中3/仮定法/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+        "a": "If I were a teacher, I could help students."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『もし私が科学者なら、宇宙を研究できるのに。』",
+        "a": "If I were a scientist, I could study space."
+      }
+    }
+  ],
+  "duplicate_groups_after": 272,
+  "duplicate_excess_after": 342,
+  "groups_ge5_after": 0
+}

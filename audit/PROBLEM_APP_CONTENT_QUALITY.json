@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:29:07.479Z",
+  "generated_at": "2026-08-28T15:16:49.763Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,11 +31,11 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 283,
-    "row_count": 659,
-    "duplicate_excess": 376,
-    "row_ratio": 0.062696,
-    "excess_ratio": 0.035772,
+    "group_count": 272,
+    "row_count": 614,
+    "duplicate_excess": 342,
+    "row_ratio": 0.058415,
+    "excess_ratio": 0.032537,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
@@ -44,7 +44,6 @@
       "中3/関係代名詞/選択": 31,
       "中3/現在完了形（継続），現在完了進行形/変形": 24,
       "中2/比較/英作文": 22,
-      "中3/仮定法/英作文": 20,
       "中3/現在完了形（継続），現在完了進行形/空所補充": 20,
       "中3/現在完了形（継続），現在完了進行形/英作文": 20,
       "中3/現在完了形（継続），現在完了進行形/間違い直し": 20,
@@ -61,9 +60,8 @@
       "中1/頻度副詞/並びかえ": 12,
       "中3/人称代名詞/選択": 12,
       "中3/文型/見分け": 11,
+      "中3/仮定法/英作文": 10,
       "中3/現在完了形（完了・経験）/空所補充": 10,
-      "中3/関係代名詞/並びかえ": 10,
-      "中3/関係代名詞/間違い直し": 10,
       "中3/不定詞①，動名詞/並びかえ": 9,
       "中3/助動詞/変形": 9,
       "中3/命令文，there is ～ の文/読解": 9,
@@ -76,7 +74,6 @@
       "中3/疑問詞/答え方": 8,
       "中3/疑問詞/選択": 8,
       "中3/分詞と間接疑問文/英作文": 7,
-      "中3/疑問詞/空所補充": 7,
       "中1/be動詞/答え方": 6,
       "中1/人称代名詞/空所補充": 6,
       "中2/人称代名詞/空所補充": 6,
@@ -85,9 +82,6 @@
       "中3/be動詞と一般動詞（過去形）/変形": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
-      "中3/受動態/間違い直し": 4,
-      "中3/現在完了形（完了・経験）/選択": 4,
-      "中3/現在完了形（完了・経験）/間違い直し": 4,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
       "中3/受動態/空所補充": 3,
@@ -97,6 +91,8 @@
       "中3/文型/英作文": 2,
       "中3/未来の文/変形": 2,
       "中3/進行形/変形": 2,
+      "中3/関係代名詞/並びかえ": 2,
+      "中3/関係代名詞/間違い直し": 2,
       "中1/can/変形": 1,
       "中1/there is ～・look ～ の文/英作文": 1,
       "中1/一般動詞/英作文": 1,
@@ -137,7 +133,6 @@
       "中1/人称代名詞/空所補充": 6,
       "中1/頻度副詞/並びかえ": 6,
       "中2/人称代名詞/空所補充": 6,
-      "中3/仮定法/英作文": 5,
       "中3/助動詞/変形": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
@@ -156,15 +151,13 @@
       "中1/be動詞/答え方": 3,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
+      "中3/仮定法/英作文": 3,
       "中3/分詞と間接疑問文/英作文": 3,
       "中3/命令文，there is ～ の文/読解": 3,
-      "中3/関係代名詞/並びかえ": 3,
-      "中3/関係代名詞/間違い直し": 3,
       "中1/現在進行形/変形": 2,
       "中3/be動詞と一般動詞（現在形）/見分け": 2,
       "中3/分詞と間接疑問文/選択": 2,
       "中3/分詞と間接疑問文/間違い直し": 2,
-      "中3/疑問詞/空所補充": 2,
       "中3/進行形/変形": 2,
       "中1/can/変形": 1,
       "中1/there is ～・look ～ の文/英作文": 1,
@@ -181,30 +174,15 @@
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
       "中3/受動態/空所補充": 1,
-      "中3/受動態/間違い直し": 1,
       "中3/命令文，there is ～ の文/変形": 1,
       "中3/文型/英作文": 1,
       "中3/未来の文/変形": 1,
-      "中3/現在完了形（完了・経験）/選択": 1,
-      "中3/現在完了形（完了・経験）/間違い直し": 1,
       "中3/疑問詞/答えから質問文": 1,
-      "中3/進行形/間違い直し": 1
+      "中3/進行形/間違い直し": 1,
+      "中3/関係代名詞/並びかえ": 1,
+      "中3/関係代名詞/間違い直し": 1
     },
     "top": [
-      {
-        "count": 4,
-        "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
-        "a": "What",
-        "sample_ids": [
-          "M3N-00390",
-          "M3N-00420",
-          "M3N-00450",
-          "M3N-00480"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/空所補充"
-        ]
-      },
       {
         "count": 4,
         "q": "Emi is more young than Yuki. の誤りを直しなさい。",
@@ -217,34 +195,6 @@
         ],
         "grade_category_types": [
           "中2/比較/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
-        "a": "Have eaten",
-        "sample_ids": [
-          "M3N-01710",
-          "M3N-01740",
-          "M3N-01770",
-          "M3N-01800"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/選択"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "I have did the work before. の誤りを直しなさい。",
-        "a": "I have done the work before.",
-        "sample_ids": [
-          "M3N-01708",
-          "M3N-01738",
-          "M3N-01768",
-          "M3N-01798"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/間違い直し"
         ]
       },
       {
@@ -319,34 +269,6 @@
       },
       {
         "count": 4,
-        "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
-        "a": "The man who works here is kind.",
-        "sample_ids": [
-          "M3N-02182",
-          "M3N-02212",
-          "M3N-02242",
-          "M3N-02272"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
-        "a": "The woman who teaches us is kind.",
-        "sample_ids": [
-          "M3N-02188",
-          "M3N-02218",
-          "M3N-02248",
-          "M3N-02278"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
         "q": "This bag is more large than that one. の誤りを直しなさい。",
         "a": "This bag is larger than that one.",
         "sample_ids": [
@@ -371,20 +293,6 @@
         ],
         "grade_category_types": [
           "中2/比較/間違い直し"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "This computer is use by many students. の誤りを直しなさい。",
-        "a": "This computer is used by many students.",
-        "sample_ids": [
-          "M3N-01588",
-          "M3N-01618",
-          "M3N-01648",
-          "M3N-01678"
-        ],
-        "grade_category_types": [
-          "中3/受動態/間違い直し"
         ]
       },
       {
@@ -487,20 +395,6 @@
       },
       {
         "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
-        "a": "If I were a teacher, I could help students.",
-        "sample_ids": [
-          "M3N-02295",
-          "M3N-02325",
-          "M3N-02355",
-          "M3N-02385"
-        ],
-        "grade_category_types": [
-          "中3/仮定法/英作文"
-        ]
-      },
-      {
-        "count": 4,
         "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
         "a": "If I were a dog, I could run fast.",
         "sample_ids": [
@@ -525,75 +419,6 @@
         ],
         "grade_category_types": [
           "中3/仮定法/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
-        "a": "If I were a fish, I could swim in the sea.",
-        "sample_ids": [
-          "M3N-02289",
-          "M3N-02319",
-          "M3N-02349",
-          "M3N-02379"
-        ],
-        "grade_category_types": [
-          "中3/仮定法/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
-        "a": "If I were a bird, I could fly in the sky.",
-        "sample_ids": [
-          "M3N-02283",
-          "M3N-02313",
-          "M3N-02343",
-          "M3N-02373"
-        ],
-        "grade_category_types": [
-          "中3/仮定法/英作文"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
-        "a": "The woman who is taking a picture",
-        "sample_ids": [
-          "M3N-02189",
-          "M3N-02219",
-          "M3N-02249",
-          "M3N-02279"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/並びかえ"
-        ]
-      },
-      {
-        "count": 4,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
-        "a": "The man who is using a computer",
-        "sample_ids": [
-          "M3N-02183",
-          "M3N-02213",
-          "M3N-02243",
-          "M3N-02273"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/並びかえ"
-        ]
-      },
-      {
-        "count": 3,
-        "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
-        "a": "How",
-        "sample_ids": [
-          "M3N-00384",
-          "M3N-00444",
-          "M3N-00474"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/空所補充"
         ]
       },
       {
@@ -2527,18 +2352,6 @@
       },
       {
         "count": 2,
-        "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
-        "a": "The student who studies English is kind.",
-        "sample_ids": [
-          "M3N-02176",
-          "M3N-02266"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
         "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
         "a": "which",
         "sample_ids": [
@@ -2547,6 +2360,18 @@
         ],
         "grade_category_types": [
           "中3/関係代名詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+        "a": "The woman who teaches us is kind.",
+        "sample_ids": [
+          "M3N-02188",
+          "M3N-02278"
+        ],
+        "grade_category_types": [
+          "中3/関係代名詞/間違い直し"
         ]
       },
       {
@@ -3314,6 +3139,150 @@
         ],
         "grade_category_types": [
           "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
+        "a": "The exercise made me strong.",
+        "sample_ids": [
+          "M3N-01528",
+          "M3N-01534"
+        ],
+        "grade_category_types": [
+          "中3/文型/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+        "a": "Tom is taller than Ken.",
+        "sample_ids": [
+          "M2Y-COMP-0404",
+          "M2Y-COMP-0443"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+        "a": "If I were a teacher, I could help students.",
+        "sample_ids": [
+          "M3N-02295",
+          "M3N-02385"
+        ],
+        "grade_category_types": [
+          "中3/仮定法/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
+        "a": "Do not run in the park.",
+        "sample_ids": [
+          "M3N-00727",
+          "M3N-00829"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
+        "a": "Do not run in the library.",
+        "sample_ids": [
+          "M3N-00721",
+          "M3N-00823"
+        ],
+        "grade_category_types": [
+          "中3/命令文，there is ～ の文/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
+        "a": "They have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0645",
+          "M2-MOD-0646"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
+        "a": "They must not be late.",
+        "sample_ids": [
+          "M2-MOD-0647",
+          "M2-MOD-0648"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
+        "a": "We have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0637",
+          "M2-MOD-0638"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
+        "a": "We must not be late.",
+        "sample_ids": [
+          "M2-MOD-0639",
+          "M2-MOD-0640"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+        "a": "My bike is faster than your bike.",
+        "sample_ids": [
+          "M2Y-COMP-0413",
+          "M2Y-COMP-0452"
+        ],
+        "grade_category_types": [
+          "中2/比較/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
+        "a": "I must finish my homework.",
+        "sample_ids": [
+          "M2-MOD-0619",
+          "M2-MOD-0620"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
+        "a": "I have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0621",
+          "M2-MOD-0622"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/英作文"
         ]
       }
     ]

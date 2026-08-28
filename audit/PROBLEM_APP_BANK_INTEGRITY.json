@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:29:07.282Z",
+  "generated_at": "2026-08-28T15:16:49.599Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -114,19 +114,8 @@
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 283,
+    "count": 272,
     "top": [
-      {
-        "normalized_question": "( ) do you want? 「何」に合う最も適切な語を書きなさい。",
-        "count": 4,
-        "answer": "What",
-        "sample_ids": [
-          "M3N-00390",
-          "M3N-00420",
-          "M3N-00450",
-          "M3N-00480"
-        ]
-      },
       {
         "normalized_question": "emi is more young than yuki. の誤りを直しなさい。",
         "count": 4,
@@ -136,28 +125,6 @@
           "M2Y-COMP-0444",
           "M2-COMP2-1465",
           "M2-COMP2-1519"
-        ]
-      },
-      {
-        "normalized_question": "i ( have eaten / eaten / am eaten ) lunch, so i am not hungry now. 正しいものを選びなさい。",
-        "count": 4,
-        "answer": "Have eaten",
-        "sample_ids": [
-          "M3N-01710",
-          "M3N-01740",
-          "M3N-01770",
-          "M3N-01800"
-        ]
-      },
-      {
-        "normalized_question": "i have did the work before. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "I have done the work before.",
-        "sample_ids": [
-          "M3N-01708",
-          "M3N-01738",
-          "M3N-01768",
-          "M3N-01798"
         ]
       },
       {
@@ -216,28 +183,6 @@
         ]
       },
       {
-        "normalized_question": "the man which works here is kind. の誤りを、who を使って直しなさい。",
-        "count": 4,
-        "answer": "The man who works here is kind.",
-        "sample_ids": [
-          "M3N-02182",
-          "M3N-02212",
-          "M3N-02242",
-          "M3N-02272"
-        ]
-      },
-      {
-        "normalized_question": "the woman which teaches us is kind. の誤りを、who を使って直しなさい。",
-        "count": 4,
-        "answer": "The woman who teaches us is kind.",
-        "sample_ids": [
-          "M3N-02188",
-          "M3N-02218",
-          "M3N-02248",
-          "M3N-02278"
-        ]
-      },
-      {
         "normalized_question": "this bag is more large than that one. の誤りを直しなさい。",
         "count": 4,
         "answer": "This bag is larger than that one.",
@@ -257,17 +202,6 @@
           "M2Y-COMP-0435",
           "M2-COMP2-1456",
           "M2-COMP2-1510"
-        ]
-      },
-      {
-        "normalized_question": "this computer is use by many students. の誤りを直しなさい。",
-        "count": 4,
-        "answer": "This computer is used by many students.",
-        "sample_ids": [
-          "M3N-01588",
-          "M3N-01618",
-          "M3N-01648",
-          "M3N-01678"
         ]
       },
       {
@@ -348,17 +282,6 @@
         ]
       },
       {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
-        "count": 4,
-        "answer": "If I were a teacher, I could help students.",
-        "sample_ids": [
-          "M3N-02295",
-          "M3N-02325",
-          "M3N-02355",
-          "M3N-02385"
-        ]
-      },
-      {
         "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
         "count": 4,
         "answer": "If I were a dog, I could run fast.",
@@ -378,60 +301,6 @@
           "M3N-02331",
           "M3N-02361",
           "M3N-02391"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
-        "count": 4,
-        "answer": "If I were a fish, I could swim in the sea.",
-        "sample_ids": [
-          "M3N-02289",
-          "M3N-02319",
-          "M3N-02349",
-          "M3N-02379"
-        ]
-      },
-      {
-        "normalized_question": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
-        "count": 4,
-        "answer": "If I were a bird, I could fly in the sky.",
-        "sample_ids": [
-          "M3N-02283",
-          "M3N-02313",
-          "M3N-02343",
-          "M3N-02373"
-        ]
-      },
-      {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / taking / picture / woman / is / a )",
-        "count": 4,
-        "answer": "The woman who is taking a picture",
-        "sample_ids": [
-          "M3N-02189",
-          "M3N-02219",
-          "M3N-02249",
-          "M3N-02279"
-        ]
-      },
-      {
-        "normalized_question": "次の語(句)を正しい順に並べかえなさい。 ( the / who / using / computer / man / is / a )",
-        "count": 4,
-        "answer": "The man who is using a computer",
-        "sample_ids": [
-          "M3N-02183",
-          "M3N-02213",
-          "M3N-02243",
-          "M3N-02273"
-        ]
-      },
-      {
-        "normalized_question": "( ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
-        "count": 3,
-        "answer": "How",
-        "sample_ids": [
-          "M3N-00384",
-          "M3N-00444",
-          "M3N-00474"
         ]
       },
       {
@@ -1107,6 +976,114 @@
         "sample_ids": [
           "M3N-01822",
           "M3N-01876"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since four years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for four years.",
+        "sample_ids": [
+          "M3N-01816",
+          "M3N-01870"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since nine years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for nine years.",
+        "sample_ids": [
+          "M3N-01846",
+          "M3N-01900"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since seven years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for seven years.",
+        "sample_ids": [
+          "M3N-01834",
+          "M3N-01888"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since six years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for six years.",
+        "sample_ids": [
+          "M3N-01828",
+          "M3N-01882"
+        ]
+      },
+      {
+        "normalized_question": "he has stayed in japan since ten years. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He has stayed in Japan for ten years.",
+        "sample_ids": [
+          "M3N-01852",
+          "M3N-01906"
+        ]
+      },
+      {
+        "normalized_question": "he help at home every day. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He helps at home every day.",
+        "sample_ids": [
+          "GEN-3RD-0880",
+          "GEN-3RD-1140"
+        ]
+      },
+      {
+        "normalized_question": "he is play tennis. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He plays tennis.",
+        "sample_ids": [
+          "E1-BD-004",
+          "R2-DIST-0055"
+        ]
+      },
+      {
+        "normalized_question": "he play tennis every day. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He plays tennis every day.",
+        "sample_ids": [
+          "GEN-3RD-0860",
+          "GEN-3RD-0996"
+        ]
+      },
+      {
+        "normalized_question": "he study english every day. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He studies English every day.",
+        "sample_ids": [
+          "GEN-3RD-0868",
+          "GEN-3RD-1004"
+        ]
+      },
+      {
+        "normalized_question": "he walk to school every day. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "He walks to school every day.",
+        "sample_ids": [
+          "GEN-3RD-0896",
+          "GEN-3RD-1108"
+        ]
+      },
+      {
+        "normalized_question": "i am going to play tennis. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Am I going to play tennis?",
+        "sample_ids": [
+          "M3C-00008",
+          "M3N-00843"
+        ]
+      },
+      {
+        "normalized_question": "i am study english now. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "I am studying English now.",
+        "sample_ids": [
+          "F1-PROG-0044",
+          "M3N-00604"
         ]
       }
     ]
