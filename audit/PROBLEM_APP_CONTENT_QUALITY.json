@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-28T12:08:05.466Z",
+  "generated_at": "2026-08-28T12:10:10.207Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "duplicate_qa_row_ratio:0.2145"
+    "duplicate_qa_row_ratio:0.2126"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
@@ -33,51 +33,11 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 938,
-    "row_count": 2255,
-    "duplicate_excess": 1317,
-    "row_ratio": 0.214537,
+    "group_count": 936,
+    "row_count": 2235,
+    "duplicate_excess": 1299,
+    "row_ratio": 0.212634,
     "top": [
-      {
-        "count": 10,
-        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
-        "a": "The girl singing in the park is my friend.",
-        "sample_ids": [
-          "M3N-02051",
-          "M3N-02063",
-          "M3N-02075",
-          "M3N-02087",
-          "M3N-02099",
-          "M3N-02111",
-          "M3N-02123",
-          "M3N-02135",
-          "M3N-02147",
-          "M3N-02159"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 10,
-        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
-        "a": "The boy running in the park is my friend.",
-        "sample_ids": [
-          "M3N-02045",
-          "M3N-02057",
-          "M3N-02069",
-          "M3N-02081",
-          "M3N-02093",
-          "M3N-02105",
-          "M3N-02117",
-          "M3N-02129",
-          "M3N-02141",
-          "M3N-02153"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
       {
         "count": 9,
         "q": "Open the window. を否定の命令文にしなさい。",
@@ -3515,6 +3475,30 @@
         "sample_ids": [
           "M2X-FU-0381",
           "M2X-FU-0413"
+        ],
+        "grade_category_types": [
+          "中2/未来表現/並びかえ"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "( He / is / going / to / visit / my / grandmother )",
+        "a": "He is going to visit my grandmother.",
+        "sample_ids": [
+          "M2X-FU-0377",
+          "M2X-FU-0409"
+        ],
+        "grade_category_types": [
+          "中2/未来表現/並びかえ"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "( He / is / going / to / watch / a / movie )",
+        "a": "He is going to watch a movie.",
+        "sample_ids": [
+          "M2X-FU-0383",
+          "M2X-FU-0415"
         ],
         "grade_category_types": [
           "中2/未来表現/並びかえ"

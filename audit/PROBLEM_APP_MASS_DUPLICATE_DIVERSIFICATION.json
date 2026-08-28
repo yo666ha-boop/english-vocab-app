@@ -1,1502 +1,260 @@
 {
-  "generated_at": "2026-08-28T12:08:05.246Z",
-  "mass_groups_before": 60,
-  "mass_rows_before": 1048,
-  "changed_rows": 991,
+  "generated_at": "2026-08-28T12:10:10.009Z",
+  "mass_groups_before": 2,
+  "mass_rows_before": 20,
+  "changed_rows": 20,
   "by_family": {
-    "中2/比較/並びかえ": 10,
-    "中2/比較/間違い直し": 18,
-    "中3/現在完了形（完了・経験）/変形": 110,
-    "中3/現在完了形（継続），現在完了進行形/変形": 40,
-    "中3/仮定法/間違い直し": 28,
-    "中3/疑問詞/空所補充": 16,
-    "中3/人称代名詞/空所補充": 20,
-    "中3/人称代名詞/選択": 16,
-    "中3/命令文，there is ～ の文/読解": 16,
-    "中3/未来の文/選択": 20,
-    "中3/助動詞/選択": 20,
-    "中3/助動詞/読解": 20,
-    "中3/接続詞/並びかえ": 20,
-    "中3/接続詞/読解": 20,
-    "中3/不定詞①，動名詞/選択": 20,
-    "中3/不定詞①，動名詞/並びかえ": 20,
-    "中3/文型/見分け": 36,
-    "中3/文型/間違い直し": 18,
-    "中3/受動態/空所補充": 20,
-    "中3/受動態/間違い直し": 16,
-    "中3/受動態/選択": 15,
-    "中3/現在完了形（完了・経験）/選択": 20,
-    "中3/現在完了形（完了・経験）/空所補充": 16,
-    "中3/現在完了形（完了・経験）/間違い直し": 16,
-    "中3/現在完了形（継続），現在完了進行形/空所補充": 20,
-    "中3/現在完了形（継続），現在完了進行形/選択": 20,
-    "中3/不定詞②/英作文": 20,
-    "中3/不定詞②/選択": 20,
-    "中3/不定詞②/並びかえ": 20,
-    "中3/不定詞②/読解": 20,
-    "中3/不定詞②/空所補充": 19,
-    "中3/分詞と間接疑問文/空所補充": 37,
-    "中3/分詞と間接疑問文/選択": 20,
-    "中3/分詞と間接疑問文/英作文": 40,
-    "中3/分詞と間接疑問文/間違い直し": 16,
-    "中3/関係代名詞/並びかえ": 20,
-    "中3/関係代名詞/選択": 36,
-    "中3/関係代名詞/間違い直し": 16,
-    "中3/仮定法/空所補充": 20,
-    "中3/仮定法/選択": 20,
-    "中3/仮定法/並びかえ": 20,
-    "中3/仮定法/読解": 20,
-    "中3/仮定法/英作文": 16
+    "中3/分詞と間接疑問文/英作文": 20
   },
   "unsupported": {},
   "samples": [
     {
-      "id": "M2Y-COMP-0397",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02045",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / bag / larger / that )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はTomの友達です。』",
+        "a": "The boy running in the park is Tom's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0399",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02051",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "This book is more small than that one. の誤りを直しなさい。",
-        "a": "This book is smaller than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はTomの友達です。』",
+        "a": "The girl singing in the park is Tom's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0408",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02057",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はKenの友達です。』",
+        "a": "The boy running in the park is Ken's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0409",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02063",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / book / smaller / that )",
-        "a": "This book is smaller than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はKenの友達です。』",
+        "a": "The girl singing in the park is Ken's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0411",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02069",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "Tom is more tall than Ken. の誤りを直しなさい。",
-        "a": "Tom is taller than Ken."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はMikeの友達です。』",
+        "a": "The boy running in the park is Mike's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0420",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02075",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "Emi is more young than Yuki. の誤りを直しなさい。",
-        "a": "Emi is younger than Yuki."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はMikeの友達です。』",
+        "a": "The girl singing in the park is Mike's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0421",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02081",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / question / easier / that )",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はBobの友達です。』",
+        "a": "The boy running in the park is Bob's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0423",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02087",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "This room is more big than that one. の誤りを直しなさい。",
-        "a": "This room is bigger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はBobの友達です。』",
+        "a": "The girl singing in the park is Bob's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0432",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02093",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "My bike is more fast than your bike. の誤りを直しなさい。",
-        "a": "My bike is faster than your bike."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はJohnの友達です。』",
+        "a": "The boy running in the park is John's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0433",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02099",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( Tom / taller / Ken / is / than )",
-        "a": "Tom is taller than Ken."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はJohnの友達です。』",
+        "a": "The girl singing in the park is John's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0435",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02105",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "This desk is more heavy than that one. の誤りを直しなさい。",
-        "a": "This desk is heavier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はEmiの友達です。』",
+        "a": "The boy running in the park is Emi's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0444",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02111",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "This river is more long than that one. の誤りを直しなさい。",
-        "a": "This river is longer than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はEmiの友達です。』",
+        "a": "The girl singing in the park is Emi's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0445",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02117",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( Emi / younger / Yuki / is / than )",
-        "a": "Emi is younger than Yuki."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はYukiの友達です。』",
+        "a": "The boy running in the park is Yuki's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0447",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02123",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "This box is more light than that one. の誤りを直しなさい。",
-        "a": "This box is lighter than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はYukiの友達です。』",
+        "a": "The girl singing in the park is Yuki's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0457",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02129",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / room / bigger / that )",
-        "a": "This room is bigger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はAyaの友達です。』",
+        "a": "The boy running in the park is Aya's friend."
       }
     },
     {
-      "id": "M2Y-COMP-0459",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02135",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "This book is more small than that one. の誤りを直しなさい。",
-        "a": "This book is smaller than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はAyaの友達です。』",
+        "a": "The girl singing in the park is Aya's friend."
       }
     },
     {
-      "id": "M2-COMP2-1462",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02141",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はLucyの友達です。』",
+        "a": "The boy running in the park is Lucy's friend."
       }
     },
     {
-      "id": "M2-COMP2-1463",
-      "family": "中2/比較/並びかえ",
+      "id": "M3N-02147",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( My / is / than / bike / bike / faster / your )",
-        "a": "My bike is faster than your bike."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はLucyの友達です。』",
+        "a": "The girl singing in the park is Lucy's friend."
       }
     },
     {
-      "id": "M2-COMP2-1465",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02153",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+        "a": "The boy running in the park is my friend."
       },
       "after": {
-        "q": "Tom is more tall than Ken. の誤りを直しなさい。",
-        "a": "Tom is taller than Ken."
+        "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年はMaryの友達です。』",
+        "a": "The boy running in the park is Mary's friend."
       }
     },
     {
-      "id": "M2-COMP2-1486",
-      "family": "中2/比較/間違い直し",
+      "id": "M3N-02159",
+      "family": "中3/分詞と間接疑問文/英作文",
       "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+        "a": "The girl singing in the park is my friend."
       },
       "after": {
-        "q": "Emi is more young than Yuki. の誤りを直しなさい。",
-        "a": "Emi is younger than Yuki."
-      }
-    },
-    {
-      "id": "M2-COMP2-1487",
-      "family": "中2/比較/並びかえ",
-      "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
-      },
-      "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / desk / heavier / that )",
-        "a": "This desk is heavier than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1489",
-      "family": "中2/比較/間違い直し",
-      "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
-      },
-      "after": {
-        "q": "This room is more big than that one. の誤りを直しなさい。",
-        "a": "This room is bigger than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1510",
-      "family": "中2/比較/間違い直し",
-      "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
-      },
-      "after": {
-        "q": "My bike is more fast than your bike. の誤りを直しなさい。",
-        "a": "My bike is faster than your bike."
-      }
-    },
-    {
-      "id": "M2-COMP2-1511",
-      "family": "中2/比較/並びかえ",
-      "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
-      },
-      "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / river / longer / that )",
-        "a": "This river is longer than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1513",
-      "family": "中2/比較/間違い直し",
-      "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
-      },
-      "after": {
-        "q": "This desk is more heavy than that one. の誤りを直しなさい。",
-        "a": "This desk is heavier than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1534",
-      "family": "中2/比較/間違い直し",
-      "before": {
-        "q": "This bag is more large than that one. の誤りを直しなさい。",
-        "a": "This bag is larger than that one."
-      },
-      "after": {
-        "q": "This river is more long than that one. の誤りを直しなさい。",
-        "a": "This river is longer than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1535",
-      "family": "中2/比較/並びかえ",
-      "before": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-        "a": "This bag is larger than that one."
-      },
-      "after": {
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / box / lighter / that )",
-        "a": "This box is lighter than that one."
-      }
-    },
-    {
-      "id": "M2-COMP2-1537",
-      "family": "中2/比較/間違い直し",
-      "before": {
-        "q": "This question is more easy than that one. の誤りを直しなさい。",
-        "a": "This question is easier than that one."
-      },
-      "after": {
-        "q": "This box is more light than that one. の誤りを直しなさい。",
-        "a": "This box is lighter than that one."
-      }
-    },
-    {
-      "id": "M3C-00614",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Tom has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Tom visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00615",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Ken has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Ken visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00616",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Mike has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Mike visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00634",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Bob visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00635",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has John visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00636",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Emi has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Emi visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00654",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Yuki has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Yuki visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00655",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Aya has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Aya visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00656",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Lucy has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Lucy visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00674",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Mary has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Mary visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00675",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Ann has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Ann visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00676",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Kate has visited Kyoto twice. を疑問文にしなさい。",
-        "a": "Has Kate visited Kyoto twice?"
-      }
-    },
-    {
-      "id": "M3C-00694",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Tom has finished the homework. を疑問文にしなさい。",
-        "a": "Has Tom finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00695",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Ken has finished the homework. を疑問文にしなさい。",
-        "a": "Has Ken finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00696",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Mike has finished the homework. を疑問文にしなさい。",
-        "a": "Has Mike finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00714",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has finished the homework. を疑問文にしなさい。",
-        "a": "Has Bob finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00715",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has finished the homework. を疑問文にしなさい。",
-        "a": "Has John finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00716",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Emi has finished the homework. を疑問文にしなさい。",
-        "a": "Has Emi finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00734",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Yuki has finished the homework. を疑問文にしなさい。",
-        "a": "Has Yuki finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00735",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Aya has finished the homework. を疑問文にしなさい。",
-        "a": "Has Aya finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00736",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Lucy has finished the homework. を疑問文にしなさい。",
-        "a": "Has Lucy finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00754",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Mary has finished the homework. を疑問文にしなさい。",
-        "a": "Has Mary finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00755",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Ann has finished the homework. を疑問文にしなさい。",
-        "a": "Has Ann finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00756",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Kate has finished the homework. を疑問文にしなさい。",
-        "a": "Has Kate finished the homework?"
-      }
-    },
-    {
-      "id": "M3C-00774",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Tom has lost the key. を疑問文にしなさい。",
-        "a": "Has Tom lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00775",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "Ken has lost the key. を疑問文にしなさい。",
-        "a": "Has Ken lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00776",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Mike has lost the key. を疑問文にしなさい。",
-        "a": "Has Mike lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00794",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has lost the key. を疑問文にしなさい。",
-        "a": "Has Bob lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00795",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has lost the key. を疑問文にしなさい。",
-        "a": "Has John lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00796",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?"
-      },
-      "after": {
-        "q": "Emi has lost the key. を疑問文にしなさい。",
-        "a": "Has Emi lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00813",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Yuki has lost the key. を疑問文にしなさい。",
-        "a": "Has Yuki lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00814",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Aya has lost the key. を疑問文にしなさい。",
-        "a": "Has Aya lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00815",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Lucy has lost the key. を疑問文にしなさい。",
-        "a": "Has Lucy lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00816",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Mary has lost the key. を疑問文にしなさい。",
-        "a": "Has Mary lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00833",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Ann has lost the key. を疑問文にしなさい。",
-        "a": "Has Ann lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00834",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Kate has lost the key. を疑問文にしなさい。",
-        "a": "Has Kate lost the key?"
-      }
-    },
-    {
-      "id": "M3C-00835",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Tom has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Tom seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00836",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Ken has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Ken seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00853",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Mike has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Mike seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00854",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Bob seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00855",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has seen this movie before. を疑問文にしなさい。",
-        "a": "Has John seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00856",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Emi has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Emi seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00873",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Yuki has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Yuki seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00874",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Aya has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Aya seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00875",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Lucy has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Lucy seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00876",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Mary has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Mary seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00893",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Ann has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Ann seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00894",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Kate has seen this movie before. を疑問文にしなさい。",
-        "a": "Has Kate seen this movie before?"
-      }
-    },
-    {
-      "id": "M3C-00895",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Tom has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Tom been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00896",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Ken has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Ken been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00913",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Mike has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Mike been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00914",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Bob been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00915",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has John been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00916",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Emi has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Emi been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00933",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Yuki has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Yuki been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00934",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Aya has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Aya been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00935",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Lucy has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Lucy been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00936",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Mary has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Mary been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00953",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Ann has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Ann been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00954",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Kate has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Kate been to Osaka once?"
-      }
-    },
-    {
-      "id": "M3C-00955",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Tom has read this book before. を疑問文にしなさい。",
-        "a": "Has Tom read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00956",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Ken has read this book before. を疑問文にしなさい。",
-        "a": "Has Ken read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00973",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Mike has read this book before. を疑問文にしなさい。",
-        "a": "Has Mike read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00974",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has read this book before. を疑問文にしなさい。",
-        "a": "Has Bob read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00975",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has read this book before. を疑問文にしなさい。",
-        "a": "Has John read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00976",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Emi has read this book before. を疑問文にしなさい。",
-        "a": "Has Emi read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00993",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have finished our homework. を疑問文にしなさい。",
-        "a": "Have we finished our homework?"
-      },
-      "after": {
-        "q": "Yuki has read this book before. を疑問文にしなさい。",
-        "a": "Has Yuki read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00994",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have we visited Tokyo before?"
-      },
-      "after": {
-        "q": "Aya has read this book before. を疑問文にしなさい。",
-        "a": "Has Aya read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00995",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have we been to Kyoto once?"
-      },
-      "after": {
-        "q": "Lucy has read this book before. を疑問文にしなさい。",
-        "a": "Has Lucy read this book before?"
-      }
-    },
-    {
-      "id": "M3C-00996",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "We have lost our key. を疑問文にしなさい。",
-        "a": "Have we lost our key?"
-      },
-      "after": {
-        "q": "Mary has read this book before. を疑問文にしなさい。",
-        "a": "Has Mary read this book before?"
-      }
-    },
-    {
-      "id": "M3C-01013",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have finished their homework. を疑問文にしなさい。",
-        "a": "Have they finished their homework?"
-      },
-      "after": {
-        "q": "Ann has read this book before. を疑問文にしなさい。",
-        "a": "Has Ann read this book before?"
-      }
-    },
-    {
-      "id": "M3C-01014",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have they visited Tokyo before?"
-      },
-      "after": {
-        "q": "Kate has read this book before. を疑問文にしなさい。",
-        "a": "Has Kate read this book before?"
-      }
-    },
-    {
-      "id": "M3C-01015",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have they been to Kyoto once?"
-      },
-      "after": {
-        "q": "Tom has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Tom cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01016",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have lost their key. を疑問文にしなさい。",
-        "a": "Have they lost their key?"
-      },
-      "after": {
-        "q": "Ken has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Ken cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01019",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have they been playing tennis for two hours?"
-      },
-      "after": {
-        "q": "Tom has been studying English for two hours. を疑問文にしなさい。",
-        "a": "Has Tom been studying English for two hours?"
-      }
-    },
-    {
-      "id": "M3C-01020",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have they been using this computer since this morning?"
-      },
-      "after": {
-        "q": "Ken has been studying English for three hours. を疑問文にしなさい。",
-        "a": "Has Ken been studying English for three hours?"
-      }
-    },
-    {
-      "id": "M3C-01033",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have finished their homework. を疑問文にしなさい。",
-        "a": "Have they finished their homework?"
-      },
-      "after": {
-        "q": "Mike has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Mike cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01034",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have they visited Tokyo before?"
-      },
-      "after": {
-        "q": "Bob has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Bob cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01035",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have they been to Kyoto once?"
-      },
-      "after": {
-        "q": "John has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has John cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01036",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have lost their key. を疑問文にしなさい。",
-        "a": "Have they lost their key?"
-      },
-      "after": {
-        "q": "Emi has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Emi cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01039",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have they been playing tennis for two hours?"
-      },
-      "after": {
-        "q": "Mike has been studying English since this morning. を疑問文にしなさい。",
-        "a": "Has Mike been studying English since this morning?"
-      }
-    },
-    {
-      "id": "M3C-01040",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have they been using this computer since this morning?"
-      },
-      "after": {
-        "q": "Bob has been studying English since Monday. を疑問文にしなさい。",
-        "a": "Has Bob been studying English since Monday?"
-      }
-    },
-    {
-      "id": "M3C-01053",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have finished their homework. を疑問文にしなさい。",
-        "a": "Have they finished their homework?"
-      },
-      "after": {
-        "q": "Yuki has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Yuki cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01054",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have they visited Tokyo before?"
-      },
-      "after": {
-        "q": "Aya has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Aya cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01055",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have they been to Kyoto once?"
-      },
-      "after": {
-        "q": "Lucy has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Lucy cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01056",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have lost their key. を疑問文にしなさい。",
-        "a": "Have they lost their key?"
-      },
-      "after": {
-        "q": "Mary has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Mary cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01059",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have they been playing tennis for two hours?"
-      },
-      "after": {
-        "q": "John has been studying English for a week. を疑問文にしなさい。",
-        "a": "Has John been studying English for a week?"
-      }
-    },
-    {
-      "id": "M3C-01060",
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "before": {
-        "q": "They have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have they been using this computer since this morning?"
-      },
-      "after": {
-        "q": "Emi has been studying English since April. を疑問文にしなさい。",
-        "a": "Has Emi been studying English since April?"
-      }
-    },
-    {
-      "id": "M3C-01073",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have finished their homework. を疑問文にしなさい。",
-        "a": "Have they finished their homework?"
-      },
-      "after": {
-        "q": "Ann has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Ann cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01074",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have visited Tokyo before. を疑問文にしなさい。",
-        "a": "Have they visited Tokyo before?"
-      },
-      "after": {
-        "q": "Kate has cleaned the room already. を疑問文にしなさい。",
-        "a": "Has Kate cleaned the room already?"
-      }
-    },
-    {
-      "id": "M3C-01075",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have they been to Kyoto once?"
-      },
-      "after": {
-        "q": "Tom has used this computer before. を疑問文にしなさい。",
-        "a": "Has Tom used this computer before?"
-      }
-    },
-    {
-      "id": "M3C-01076",
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "before": {
-        "q": "They have lost their key. を疑問文にしなさい。",
-        "a": "Have they lost their key?"
-      },
-      "after": {
-        "q": "Ken has used this computer before. を疑問文にしなさい。",
-        "a": "Has Ken used this computer before?"
+        "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女はMaryの友達です。』",
+        "a": "The girl singing in the park is Mary's friend."
       }
     }
   ],
-  "mass_groups_after": 2,
-  "mass_rows_after": 20,
-  "mass_excess_after": 18,
-  "duplicate_rows_after": 2255,
-  "duplicate_excess_after": 1317,
-  "duplicate_groups_after": 938,
-  "duplicate_row_ratio_after": 0.214537,
-  "duplicate_excess_ratio_after": 0.125297
+  "mass_groups_after": 0,
+  "mass_rows_after": 0,
+  "mass_excess_after": 0,
+  "duplicate_rows_after": 2235,
+  "duplicate_excess_after": 1299,
+  "duplicate_groups_after": 936,
+  "duplicate_row_ratio_after": 0.212634,
+  "duplicate_excess_ratio_after": 0.123585
 }

@@ -1,32 +1,7 @@
 {
-  "generated_at": "2026-08-28T12:08:05.734Z",
-  "mass_group_count": 2,
-  "mass_row_count": 20,
-  "mass_excess": 18,
-  "groups": [
-    {
-      "count": 10,
-      "excess": 9,
-      "grade": "中3",
-      "category": "分詞と間接疑問文",
-      "type": "英作文",
-      "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
-      "a": "The girl singing in the park is my friend.",
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "grade": "中3",
-      "category": "分詞と間接疑問文",
-      "type": "英作文",
-      "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
-      "a": "The boy running in the park is my friend.",
-      "prefixes": [
-        "M3N"
-      ]
-    }
-  ]
+  "generated_at": "2026-08-28T12:10:10.479Z",
+  "mass_group_count": 0,
+  "mass_row_count": 0,
+  "mass_excess": 0,
+  "groups": []
 }

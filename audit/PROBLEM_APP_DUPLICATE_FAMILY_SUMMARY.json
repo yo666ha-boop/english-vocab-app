@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-28T12:08:05.609Z",
+  "generated_at": "2026-08-28T12:10:10.349Z",
   "english_count": 10511,
-  "duplicate_row_count": 2255,
-  "duplicate_excess": 1317,
-  "duplicate_group_count": 938,
-  "row_ratio": 0.214537,
+  "duplicate_row_count": 2235,
+  "duplicate_excess": 1299,
+  "duplicate_group_count": 936,
+  "row_ratio": 0.212634,
   "group_size_histogram": {
     "2": 700,
     "3": 144,
@@ -12,20 +12,19 @@
     "5": 9,
     "6": 9,
     "7": 1,
-    "9": 1,
-    "10": 2
+    "9": 1
   },
   "mass_duplicate_ge5": {
-    "group_count": 22,
-    "row_count": 135,
-    "excess": 113,
-    "row_ratio": 0.012844
+    "group_count": 20,
+    "row_count": 115,
+    "excess": 95,
+    "row_ratio": 0.010941
   },
   "mass_duplicate_ge10": {
-    "group_count": 2,
-    "row_count": 20,
-    "excess": 18,
-    "row_ratio": 0.001903
+    "group_count": 0,
+    "row_count": 0,
+    "excess": 0,
+    "row_ratio": 0
   },
   "family_summary": [
     {
@@ -63,12 +62,6 @@
       "row_count": 50,
       "duplicate_group_count": 15,
       "excess_estimate": 35
-    },
-    {
-      "family": "中3/分詞と間接疑問文/英作文",
-      "row_count": 40,
-      "duplicate_group_count": 10,
-      "excess_estimate": 30
     },
     {
       "family": "中2/未来表現/空所補充",
@@ -320,6 +313,12 @@
       "family": "中3/現在完了形（継続），現在完了進行形/変形",
       "row_count": 24,
       "duplicate_group_count": 12,
+      "excess_estimate": 12
+    },
+    {
+      "family": "中3/分詞と間接疑問文/英作文",
+      "row_count": 20,
+      "duplicate_group_count": 8,
       "excess_estimate": 12
     },
     {
@@ -656,7 +655,7 @@
   "prefix_summary": [
     {
       "prefix": "M3N",
-      "row_count": 667
+      "row_count": 647
     },
     {
       "prefix": "M3C",
@@ -832,54 +831,6 @@
     }
   ],
   "top_groups": [
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
-      "a": "The girl singing in the park is my friend.",
-      "ids": [
-        "M3N-02051",
-        "M3N-02063",
-        "M3N-02075",
-        "M3N-02087",
-        "M3N-02099",
-        "M3N-02111",
-        "M3N-02123",
-        "M3N-02135",
-        "M3N-02147",
-        "M3N-02159"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
-      "a": "The boy running in the park is my friend.",
-      "ids": [
-        "M3N-02045",
-        "M3N-02057",
-        "M3N-02069",
-        "M3N-02081",
-        "M3N-02093",
-        "M3N-02105",
-        "M3N-02117",
-        "M3N-02129",
-        "M3N-02141",
-        "M3N-02153"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
     {
       "count": 9,
       "excess": 8,
@@ -9468,6 +9419,42 @@
       "prefixes": [
         "GEN-PDID",
         "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I cooked dinner yesterday. を疑問文にしなさい。",
+      "a": "Did I cook dinner yesterday?",
+      "ids": [
+        "GEN-PDID-2069",
+        "M3C-00163"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I did my homework yesterday. を疑問文にしなさい。",
+      "a": "Did I do my homework yesterday?",
+      "ids": [
+        "GEN-PDID-2081",
+        "GEN-IRR-2199"
+      ],
+      "families": [
+        "中1/過去の疑問文・否定文/変形",
+        "中1/不規則動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-PDID",
+        "GEN-IRR"
       ]
     }
   ]
