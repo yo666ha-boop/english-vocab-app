@@ -1,0 +1,57 @@
+name: Repair problem content high confidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-problem-content-quality-20260828
+    paths:
+      - 'tools/repair_problem_content_high_confidence.mjs'
+      - '.github/workflows/repair-problem-content-high-confidence.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: problem-content-high-confidence-repair
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+          fetch-depth: 0
+      - name: Sync branch actual
+        run: |
+          git fetch origin fix-problem-content-quality-20260828
+          git reset --hard origin/fix-problem-content-quality-20260828
+      - name: Apply high-confidence repairs
+        run: node tools/repair_problem_content_high_confidence.mjs
+      - name: Validate embedded bank
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const h=fs.readFileSync('problem-app/index.html','utf8');
+          const m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);
+          if(!m) throw new Error('qb-data missing');
+          const a=JSON.parse(m[1]);
+          const e=a.filter(x=>x&&x.subject==='英語');
+          if(e.length!==10511) throw new Error(`english count ${e.length}`);
+          const ids=new Set(e.map(x=>x.id));
+          if(ids.size!==10511) throw new Error(`unique ids ${ids.size}`);
+          console.log(JSON.stringify({english:e.length,unique_ids:ids.size}));
+          NODE
+      - name: Commit repair
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add problem-app/index.html audit/PROBLEM_APP_CONTENT_HIGH_CONFIDENCE_REPAIR.json
+          if git diff --cached --quiet; then
+            echo 'No repair change'
+          else
+            git commit -m 'fix: apply high-confidence problem content repairs [skip ci]'
+            git push
+          fi
