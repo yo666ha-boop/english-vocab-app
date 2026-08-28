@@ -1494,12 +1494,12 @@
 {"id":"GEN-FREQ-1336","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )","a":"She is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
 {"id":"GEN-FREQ-1337","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( usually / is / She / busy )","a":"She is usually busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
 {"id":"GEN-FREQ-1338","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( often / is / She / busy )","a":"She is often busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1339","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( always / is / He / busy )","a":"He is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1340","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( usually / is / He / busy )","a":"He is usually busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1341","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( often / is / He / busy )","a":"He is often busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1342","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )","a":"She is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1343","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( usually / is / She / busy )","a":"She is usually busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
-{"id":"GEN-FREQ-1344","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( often / is / She / busy )","a":"She is often busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1339","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( is / busy / Tom / always )","a":"Tom is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1340","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( is / busy / Ken / always )","a":"Ken is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1341","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( is / busy / Emi / always )","a":"Emi is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1342","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( is / busy / Yuki / always )","a":"Yuki is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1343","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( father / always / My / is / busy )","a":"My father is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
+{"id":"GEN-FREQ-1344","subject":"英語","grade":"中1","category":"頻度副詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( mother / always / My / is / busy )","a":"My mother is always busy.","mistake":"頻度副詞の位置ミス","cause":"be動詞文での語順理解不足"}
 {"id":"GEN-ORD-1345","subject":"英語","grade":"中1","category":"並びかえ","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( play / tennis / I / every / day )","a":"I play tennis every day.","mistake":"語順ミス","cause":"一般動詞文の語順不安定"}
 {"id":"GEN-ORD-1346","subject":"英語","grade":"中1","category":"並びかえ","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( watch / TV / I / every / day )","a":"I watch TV every day.","mistake":"語順ミス","cause":"一般動詞文の語順不安定"}
 {"id":"GEN-ORD-1347","subject":"英語","grade":"中1","category":"並びかえ","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( study / English / I / every / day )","a":"I study English every day.","mistake":"語順ミス","cause":"一般動詞文の語順不安定"}
@@ -3318,35 +3318,35 @@
 {"id":"M2-GER-0617","subject":"英語","grade":"中2","category":"動名詞","type":"空所補充","q":"They practice (      ).","a":"Speaking English","mistake":"動名詞ミス","cause":"ing 形の理解不足"}
 {"id":"M2-GER-0618","subject":"英語","grade":"中2","category":"動名詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 英語を話すことを練習する。』","a":"They practice speaking English.","mistake":"動名詞ミス","cause":"動名詞の使い方不足"}
 {"id":"M2-MOD-0619","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』","a":"I must finish my homework.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0620","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』","a":"I must finish my homework.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0620","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは早く起きなければならない。』","a":"You have to get up early.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0621","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』","a":"I have to get up early.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0622","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』","a":"I have to get up early.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0622","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは遅れてはいけない。』","a":"You must not be late.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0623","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』","a":"I must not be late.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0624","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』","a":"I must not be late.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0624","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたはこの部屋を掃除しなければならない。』","a":"You have to clean this room.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0625","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は お弁当を持って来る必要はない。』","a":"I don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0626","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は 昼食を持ってくる必要はない。』","a":"I don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0627","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 自分の宿題を終えなければならない。』","a":"You must finish your homework.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0628","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 宿題を終えなければならない。』","a":"You must finish your homework.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0629","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』","a":"You have to get up early.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0630","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』","a":"You have to get up early.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0630","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたはここで走ってはいけない。』","a":"You must not run here.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0631","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』","a":"You must not be late.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0632","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』","a":"You must not be late.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0632","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは今日宿題をしなければならない。』","a":"You have to do your homework today.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0633","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは お弁当を持って来る必要はない。』","a":"You don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0634","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは 昼食を持ってくる必要はない。』","a":"You don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0635","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 自分たちの宿題を終えなければならない。』","a":"We must finish our homework.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0636","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 宿題を終えなければならない。』","a":"We must finish our homework.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0637","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』","a":"We have to get up early.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0638","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』","a":"We have to get up early.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0638","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたはこの本を読まなければならない。』","a":"You have to read this book.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0639","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』","a":"We must not be late.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0640","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』","a":"We must not be late.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0640","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは今出発しなければならない。』","a":"You must leave now.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0641","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは お弁当を持って来る必要はない。』","a":"We don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0642","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちは 昼食を持ってくる必要はない。』","a":"We don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0643","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 自分たちの宿題を終えなければならない。』","a":"They must finish their homework.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0644","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 宿題を終えなければならない。』","a":"They must finish their homework.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0645","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』","a":"They have to get up early.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0646","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』","a":"They have to get up early.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0646","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは静かにしなければならない。』","a":"You must be quiet.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0647","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』","a":"They must not be late.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
-{"id":"M2-MOD-0648","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』","a":"They must not be late.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
+{"id":"M2-MOD-0648","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あなたは明日学校へ行かなければならない。』","a":"You have to go to school tomorrow.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-MOD-0649","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは お弁当を持って来る必要はない。』","a":"They don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の後ろの原形不足"}
 {"id":"M2-MOD-0650","subject":"英語","grade":"中2","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『彼らは 昼食を持ってくる必要はない。』","a":"They don't have to bring lunch.","mistake":"助動詞ミス","cause":"助動詞の意味理解不足"}
 {"id":"M2-COMP-0651","subject":"英語","grade":"中2","category":"比較","type":"空所補充","q":"Ken is (      ) than Tom. (tall)","a":"Taller","mistake":"比較表現ミス","cause":"比較級の形不足"}
@@ -4542,37 +4542,37 @@
 {"id":"M2Y-COMP-0431","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この机はあの机より 大きい。』","a":"This desk is larger than that desk.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0432","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This bag is more large than that one. の誤りを直しなさい。","a":"This bag is larger than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0433","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( Tom / taller / Ken / is / than )","a":"Tom is taller than Ken.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0434","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』","a":"This bag is larger than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0434","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この自転車はあの自転車より速い。』","a":"This bike is faster than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0435","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This book is more small than that one. の誤りを直しなさい。","a":"This book is smaller than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0436","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( I / am / than / Ken / easier )","a":"I am easier than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0437","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』","a":"This book is smaller than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0437","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『英語は数学より人気がある。』","a":"English is more popular than math.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0438","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This question is more easy than that one. の誤りを直しなさい。","a":"This question is easier than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0439","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( I / am / than / Ken / more exciting )","a":"I am more exciting than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0440","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』","a":"This question is easier than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0440","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この花はあの花より美しい。』","a":"This flower is more beautiful than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0441","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"Tom is more tall than Ken. の誤りを直しなさい。","a":"Tom is taller than Ken.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0442","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( I / am / than / Ken / more important )","a":"I am more important than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0443","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』","a":"Tom is taller than Ken.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0443","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『ケンはマイクより忙しい。』","a":"Ken is busier than Mike.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0444","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"Emi is more young than Yuki. の誤りを直しなさい。","a":"Emi is younger than Yuki.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0445","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( Emi / younger / Yuki / is / than )","a":"Emi is younger than Yuki.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0446","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『エミはユキより若い。』","a":"Emi is younger than Yuki.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0446","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『英語は数学より人気があります。』","a":"English is more popular than math.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0447","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This room is more big than that one. の誤りを直しなさい。","a":"This room is bigger than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0448","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( We / are / than / Ken / easier )","a":"We are easier than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0449","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』","a":"This room is larger than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0449","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この本はあの本よりおもしろい。』","a":"This book is more interesting than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0450","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"My bike is more fast than your bike. の誤りを直しなさい。","a":"My bike is faster than your bike.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0451","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( We / are / than / Ken / more exciting )","a":"We are more exciting than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0452","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』","a":"My bike is faster than your bike.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0452","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この湖はあの湖より深い。』","a":"This lake is deeper than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0453","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This desk is more heavy than that one. の誤りを直しなさい。","a":"This desk is heavier than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0454","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( We / are / than / Ken / more important )","a":"We are more important than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0455","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この机はあの机より重い。』","a":"This desk is heavier than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0455","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この道はあの道より広い。』","a":"This road is wider than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0456","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This river is more long than that one. の誤りを直しなさい。","a":"This river is longer than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0457","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( This / is / than / one / room / bigger / that )","a":"This room is bigger than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0458","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この川はあの川より長い。』","a":"This river is longer than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0458","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この塔はあの塔より高い。』","a":"This tower is taller than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0459","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This box is more light than that one. の誤りを直しなさい。","a":"This box is lighter than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0460","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( They / are / than / Ken / easier )","a":"They are easier than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0461","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』","a":"This box is lighter than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0461","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この鉛筆はあの鉛筆より短い。』","a":"This pencil is shorter than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0462","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This movie is excitinger than that one. の誤りを直しなさい。","a":"This movie is more exciting than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0463","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( They / are / than / Ken / more exciting )","a":"They are more exciting than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
-{"id":"M2Y-COMP-0464","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』","a":"This movie is more exciting than that movie.","mistake":"比較表現ミス","cause":"比較の型不足"}
+{"id":"M2Y-COMP-0464","subject":"英語","grade":"中2","category":"比較","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この犬はあの犬より大きい。』","a":"This dog is bigger than that one.","mistake":"比較表現ミス","cause":"比較の型不足"}
 {"id":"M2Y-COMP-0465","subject":"英語","grade":"中2","category":"比較","type":"間違い直し","q":"This idea is importanter than that one. の誤りを直しなさい。","a":"This idea is more important than that one.","mistake":"比較表現ミス","cause":"比較級の形不足"}
 {"id":"M2Y-COMP-0466","subject":"英語","grade":"中2","category":"比較","type":"並びかえ","q":"( They / are / than / Ken / more important )","a":"They are more important than that one.","mistake":"比較表現ミス","cause":"比較の語順不足"}
 {"id":"M2Y-RD-0467","subject":"英語","grade":"中2","category":"読解・会話完成","type":"読解","q":"Takumi is going to go to Hokkaido next Sunday. 問い：What is Takumi going to do next Sunday?","a":"He is going to go to Hokkaido next Sunday.","mistake":"未来表現ミス","cause":"文の意味理解不足"}
@@ -8688,7 +8688,7 @@
 {"id":"M3N-00577","subject":"英語","grade":"中3","category":"人称代名詞","type":"空所補充","q":"The student is kind. I know (      ) well. 空所に入る最も適切な語を書きなさい。","a":"Him","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00578","subject":"英語","grade":"中3","category":"人称代名詞","type":"空所補充","q":"This email is not mine. It is (      ). 「私たちのもの」になるように、空所に入る最も適切な語を書きなさい。","a":"Ours","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00579","subject":"英語","grade":"中3","category":"人称代名詞","type":"選択","q":"Tom spoke to ( we / us / ours ). 正しいものを選びなさい。","a":"Us","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-00580","subject":"英語","grade":"中3","category":"人称代名詞","type":"間違い直し","q":"Me go running. の誤りを直しなさい。","a":"I go running.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-00580","subject":"英語","grade":"中3","category":"人称代名詞","type":"間違い直し","q":"Her likes music. の誤りを直しなさい。","a":"She likes music.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00581","subject":"英語","grade":"中3","category":"人称代名詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その車は彼らのものです。』","a":"The car is theirs.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00582","subject":"英語","grade":"中3","category":"人称代名詞","type":"変形","q":"This is Tom's car. を it を使って書きかえなさい。","a":"It is his car.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00583","subject":"英語","grade":"中3","category":"人称代名詞","type":"空所補充","q":"The teacher is kind. I know (      ) well. 空所に入る最も適切な語を書きなさい。","a":"Him","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -8925,25 +8925,25 @@
 {"id":"M3N-00814","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"変形","q":"Open the ball. を否定の命令文にしなさい。","a":"Do not open the ball.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00815","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( a / in / there / is / ball / the / room )","a":"There is a ball in the room.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00816","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"読解","q":"Please read this book. 問い：この英文の意味として最も適切なものを書きなさい。","a":"この本を読んでください。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-00817","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『駅では走らないでください。』","a":"Do not run in the station.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-00817","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『静かにしてください。』","a":"Please be quiet.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00818","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"空所補充","q":"(      ) nine cars in the room. 空所に入る最も適切な語を書きなさい。","a":"There are","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00819","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"間違い直し","q":"There is many cars on the desk. の誤りを直しなさい。","a":"There are many cars on the desk.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00820","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"変形","q":"Open the car. を否定の命令文にしなさい。","a":"Do not open the car.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00821","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( a / in / there / is / car / the / room )","a":"There is a car in the room.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00822","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"読解","q":"Don’t use this computer. 問い：この英文の意味として最も適切なものを書きなさい。","a":"このコンピューターを使わないでください。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-00823","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『図書館では走らないでください。』","a":"Do not run in the library.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-00823","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『ここでは写真を撮らないでください。』","a":"Do not take pictures here.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00824","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"空所補充","q":"(      ) ten cameras in the room. 空所に入る最も適切な語を書きなさい。","a":"There are","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00825","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"間違い直し","q":"There is many cameras on the desk. の誤りを直しなさい。","a":"There are many cameras on the desk.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00826","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"変形","q":"Open the camera. を否定の命令文にしなさい。","a":"Do not open the camera.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00827","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( a / in / there / is / camera / the / room )","a":"There is a camera in the room.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00828","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"読解","q":"There is a pen on the desk. 問い：この英文の意味として最も適切なものを書きなさい。","a":"机の上にペンが1本あります。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-00829","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『公園では走らないでください。』","a":"Do not run in the park.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-00829","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『窓を開けてください。』","a":"Please open the window.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00830","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"空所補充","q":"(      ) two computers in the room. 空所に入る最も適切な語を書きなさい。","a":"There are","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00831","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"間違い直し","q":"There is many computers on the desk. の誤りを直しなさい。","a":"There are many computers on the desk.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00832","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"変形","q":"Open the computer. を否定の命令文にしなさい。","a":"Do not open the computer.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00833","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( a / in / there / is / computer / the / room )","a":"There is a computer in the room.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00834","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"読解","q":"Look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。","a":"この写真を見なさい。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-00835","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『部屋では走らないでください。』","a":"Do not run in the room.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-00835","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"英作文","q":"次の日本語に合う英文を書きなさい。『このドアを開けないでください。』","a":"Do not open this door.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00836","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"空所補充","q":"(      ) three games in the room. 空所に入る最も適切な語を書きなさい。","a":"There are","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00837","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"間違い直し","q":"There is many games on the desk. の誤りを直しなさい。","a":"There are many games on the desk.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-00838","subject":"英語","grade":"中3","category":"命令文，there is ～ の文","type":"変形","q":"Open the game. を否定の命令文にしなさい。","a":"Do not open the game.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
@@ -9167,25 +9167,25 @@
 {"id":"M3N-01056","subject":"英語","grade":"中3","category":"助動詞","type":"読解","q":"You can talk with my teacher. 問い：この文の意味として最も適切なものを書きなさい。","a":"あなたは先生と話すできます。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01057","subject":"英語","grade":"中3","category":"助動詞","type":"選択","q":"You ( must / can / may ) open the window today. 「しなければならない」に合うものを選びなさい。","a":"Must","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01058","subject":"英語","grade":"中3","category":"助動詞","type":"空所補充","q":"The student can (      ) running. (play) の（ ）内を正しくしなさい。","a":"play","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01059","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the station now. を疑問文にしなさい。","a":"Must you go to the station now?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01059","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the zoo now. を否定文にしなさい。","a":"You must not go to the zoo now.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01060","subject":"英語","grade":"中3","category":"助動詞","type":"間違い直し","q":"The student can plays running. の誤りを直しなさい。","a":"The student can go running.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01061","subject":"英語","grade":"中3","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その生徒は早く起きなければなりません。』","a":"The student must get up early.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01062","subject":"英語","grade":"中3","category":"助動詞","type":"読解","q":"You should open the window. 問い：この文の意味として最も適切なものを書きなさい。","a":"あなたは窓を開けるすべきです。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01063","subject":"英語","grade":"中3","category":"助動詞","type":"選択","q":"You ( must / can / may ) close the door today. 「しなければならない」に合うものを選びなさい。","a":"Must","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01064","subject":"英語","grade":"中3","category":"助動詞","type":"空所補充","q":"The teacher can (      ) swimming. (play) の（ ）内を正しくしなさい。","a":"play","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01065","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the library now. を疑問文にしなさい。","a":"Must you go to the library now?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01065","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the park now. を否定文にしなさい。","a":"You must not go to the park now.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01066","subject":"英語","grade":"中3","category":"助動詞","type":"間違い直し","q":"The teacher can plays swimming. の誤りを直しなさい。","a":"The teacher can go swimming.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01067","subject":"英語","grade":"中3","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その先生は早く起きなければなりません。』","a":"The teacher must get up early.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01068","subject":"英語","grade":"中3","category":"助動詞","type":"読解","q":"You must close the door. 問い：この文の意味として最も適切なものを書きなさい。","a":"あなたはドアを閉めるしなければなりません。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01069","subject":"英語","grade":"中3","category":"助動詞","type":"選択","q":"You ( must / can / may ) answer the question today. 「しなければならない」に合うものを選びなさい。","a":"Must","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01070","subject":"英語","grade":"中3","category":"助動詞","type":"空所補充","q":"Our team can (      ) soccer. (play) の（ ）内を正しくしなさい。","a":"play","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01071","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the park now. を疑問文にしなさい。","a":"Must you go to the park now?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01071","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to school now. を否定文にしなさい。","a":"You must not go to school now.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01072","subject":"英語","grade":"中3","category":"助動詞","type":"間違い直し","q":"Our team can plays soccer. の誤りを直しなさい。","a":"Our team can play soccer.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01073","subject":"英語","grade":"中3","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちのチームは早く起きなければなりません。』","a":"Our team must get up early.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01074","subject":"英語","grade":"中3","category":"助動詞","type":"読解","q":"You may answer the question. 問い：この文の意味として最も適切なものを書きなさい。","a":"あなたはその質問に答えるかもしれません。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01075","subject":"英語","grade":"中3","category":"助動詞","type":"選択","q":"You ( must / can / may ) finish my homework today. 「しなければならない」に合うものを選びなさい。","a":"Must","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01076","subject":"英語","grade":"中3","category":"助動詞","type":"空所補充","q":"This dog can (      ) tennis. (play) の（ ）内を正しくしなさい。","a":"play","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01077","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the room now. を疑問文にしなさい。","a":"Must you go to the room now?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01077","subject":"英語","grade":"中3","category":"助動詞","type":"変形","q":"You must go to the store now. を否定文にしなさい。","a":"You must not go to the store now.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01078","subject":"英語","grade":"中3","category":"助動詞","type":"間違い直し","q":"This dog can plays tennis. の誤りを直しなさい。","a":"This dog can play tennis.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01079","subject":"英語","grade":"中3","category":"助動詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『この犬は早く起きなければなりません。』","a":"This dog must get up early.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01080","subject":"英語","grade":"中3","category":"助動詞","type":"読解","q":"You can finish my homework. 問い：この文の意味として最も適切なものを書きなさい。","a":"あなたは宿題を終えるできます。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -9265,7 +9265,7 @@
 {"id":"M3N-01154","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Call me (      ) you arrive at the office. 「〜するとき」に合う語を書きなさい。","a":"When","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01155","subject":"英語","grade":"中3","category":"接続詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『Tomは疲れていたので、早く寝ました。』","a":"Tom went to bed early because Tom was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01156","subject":"英語","grade":"中3","category":"接続詞","type":"間違い直し","q":"If it was rainy, Tom stayed home. を『雨だったので家にいた』の意味になるように直しなさい。","a":"Because it was rainy, Tom stayed home.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01157","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( Tom / home / he / tired / stayed / because / was )","a":"Tom stayed home because he was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01157","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( stayed / because / was / Ken / home / he / sick )","a":"Ken stayed home because he was sick.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01158","subject":"英語","grade":"中3","category":"接続詞","type":"読解","q":"If you play soccer, you will learn a lot. 問い：この文の内容として最も適切なものを書きなさい。","a":"もしサッカーをするなら、たくさん学ぶでしょう。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01159","subject":"英語","grade":"中3","category":"接続詞","type":"選択","q":"I stayed at home ( because / if / when ) I was small. 正しいものを選びなさい。","a":"Because","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01160","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Call me (      ) you arrive at the zoo. 「〜するとき」に合う語を書きなさい。","a":"When","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -9277,7 +9277,7 @@
 {"id":"M3N-01166","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Call me (      ) you arrive at the town. 「〜するとき」に合う語を書きなさい。","a":"When","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01167","subject":"英語","grade":"中3","category":"接続詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その少年は疲れていたので、早く寝ました。』","a":"The boy went to bed early because the boy was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01168","subject":"英語","grade":"中3","category":"接続詞","type":"間違い直し","q":"If it was rainy, the boy stayed home. を『雨だったので家にいた』の意味になるように直しなさい。","a":"Because it was rainy, the boy stayed home.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01169","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( Mike / home / he / tired / stayed / because / was )","a":"Mike stayed home because he was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01169","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( went / bed / because / was / Emi / to / early / she / tired )","a":"Emi went to bed early because she was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01170","subject":"英語","grade":"中3","category":"接続詞","type":"読解","q":"If you watch this movie, you will learn a lot. 問い：この文の内容として最も適切なものを書きなさい。","a":"もしこの映画を見るなら、たくさん学ぶでしょう。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01171","subject":"英語","grade":"中3","category":"接続詞","type":"選択","q":"I stayed at home ( because / if / when ) I was strong. 正しいものを選びなさい。","a":"Because","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01172","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Call me (      ) you arrive at the city. 「〜するとき」に合う語を書きなさい。","a":"When","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -9289,7 +9289,7 @@
 {"id":"M3N-01178","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"We will play tennis (      ) it is sunny tomorrow. 「もし〜なら」に合う語を書きなさい。","a":"If","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01179","subject":"英語","grade":"中3","category":"接続詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その生徒は疲れていたので、早く寝ました。』","a":"The student went to bed early because the student was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01180","subject":"英語","grade":"中3","category":"接続詞","type":"間違い直し","q":"If it was rainy, the student stayed home. を『雨だったので家にいた』の意味になるように直しなさい。","a":"Because it was rainy, the student stayed home.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01181","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( John / home / he / tired / stayed / because / was )","a":"John stayed home because he was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01181","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( took / umbrella / it / raining / Yuki / an / because / was )","a":"Yuki took an umbrella because it was raining.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01182","subject":"英語","grade":"中3","category":"接続詞","type":"読解","q":"If you open the window, you will learn a lot. 問い：この文の内容として最も適切なものを書きなさい。","a":"もし窓を開けるなら、たくさん学ぶでしょう。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01183","subject":"英語","grade":"中3","category":"接続詞","type":"選択","q":"I stayed at home ( because / if / when ) I was slow. 正しいものを選びなさい。","a":"Because","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01184","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Call me (      ) you arrive at school. 「〜するとき」に合う語を書きなさい。","a":"When","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -9301,7 +9301,7 @@
 {"id":"M3N-01190","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"I stayed home (      ) I was tired. 「〜なので」に合う語を書きなさい。","a":"Because","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01191","subject":"英語","grade":"中3","category":"接続詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私たちのチームは疲れていたので、早く寝ました。』","a":"Our team went to bed early because our team was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01192","subject":"英語","grade":"中3","category":"接続詞","type":"間違い直し","q":"If it was rainy, our team stayed home. を『雨だったので家にいた』の意味になるように直しなさい。","a":"Because it was rainy, our team stayed home.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01193","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( Yuki / home / she / tired / stayed / because / was )","a":"Yuki stayed home because she was tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01193","subject":"英語","grade":"中3","category":"接続詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( studied / because / had / test / Tom / hard / he / a )","a":"Tom studied hard because he had a test.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01194","subject":"英語","grade":"中3","category":"接続詞","type":"読解","q":"If you answer the question, you will learn a lot. 問い：この文の内容として最も適切なものを書きなさい。","a":"もしその質問に答えるなら、たくさん学ぶでしょう。","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01195","subject":"英語","grade":"中3","category":"接続詞","type":"選択","q":"I stayed at home ( because / if / when ) I was cute. 正しいものを選びなさい。","a":"Because","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01196","subject":"英語","grade":"中3","category":"接続詞","type":"空所補充","q":"Wash your hands (      ) you eat lunch. 「〜する前に」に合う語を書きなさい。","a":"Before","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -9625,49 +9625,49 @@
 {"id":"M3N-01514","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"My friends call me Mike. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"AをBと呼ぶ文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01515","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこの花をあげました。』","a":"I gave him this flower.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01516","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その大変な仕事で私は疲れました。』","a":"The hard work made me tired.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01517","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Tom him. の誤りを直しなさい。","a":"They call him Tom.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01517","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Tom him. の誤りを直しなさい。","a":"We call him Tom.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01518","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にflowerを送りました。』に合うものを選びなさい。 (A) I sent a flower her. (B) I sent her a flower. (C) I sent her to a flower.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01519","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Mike gave me a song. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01520","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"My mother made me lunch. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01521","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこの木をあげました。』","a":"I gave him this tree.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01522","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その知らせは私を小さいにしました。』","a":"The news made me small.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01523","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Ken him. の誤りを直しなさい。","a":"They call him Ken.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01523","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Ken him. の誤りを直しなさい。","a":"We call him Ken.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01524","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にtreeを送りました。』に合うものを選びなさい。 (A) I sent a tree her. (B) I sent her a tree. (C) I sent her to a tree.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01525","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"John gave me a bike. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01526","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"They call him Mike. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"AをBと呼ぶ文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01527","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこの箱をあげました。』","a":"I gave him this box.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01528","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』","a":"The exercise made me strong.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01529","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Mike him. の誤りを直しなさい。","a":"They call him Mike.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01529","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Mike him. の誤りを直しなさい。","a":"We call him Mike.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01530","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にboxを送りました。』に合うものを選びなさい。 (A) I sent a box her. (B) I sent her a box. (C) I sent her to a box.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01531","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Yuki gave me a desk. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01532","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"My friends call me Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"AをBと呼ぶ文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01533","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこのボールをあげました。』","a":"I gave him this ball.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01534","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』","a":"The exercise made me strong.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01535","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Bob him. の誤りを直しなさい。","a":"They call him Bob.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01534","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その知らせで私はうれしくなりました。』","a":"The news made me happy.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01535","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Bob him. の誤りを直しなさい。","a":"We call him Bob.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01536","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にballを送りました。』に合うものを選びなさい。 (A) I sent a ball her. (B) I sent her a ball. (C) I sent her to a ball.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01537","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Lucy gave me a door. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01538","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Mr. Brown taught us English. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01539","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこの車をあげました。』","a":"I gave him this car.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01540","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その練習で私は速くなりました。』","a":"The practice made me fast.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01541","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call John him. の誤りを直しなさい。","a":"They call him John.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01541","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call John him. の誤りを直しなさい。","a":"We call him John.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01542","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にcarを送りました。』に合うものを選びなさい。 (A) I sent a car her. (B) I sent her a car. (C) I sent her to a car.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01543","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Ann gave me a game. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01544","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"We call the cat Tama. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"AをBと呼ぶ文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01545","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこのカメラをあげました。』","a":"I gave him this camera.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01546","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その重いかばんで私は動きが遅くなりました。』","a":"The heavy bag made me slow.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01547","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Emi her. の誤りを直しなさい。","a":"They call her Emi.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01547","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Emi her. の誤りを直しなさい。","a":"We call her Emi.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01548","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にcameraを送りました。』に合うものを選びなさい。 (A) I sent a camera her. (B) I sent her a camera. (C) I sent her to a camera.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01549","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Tom gave me a email. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01550","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"She gave me a book. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01551","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこのコンピューターをあげました。』","a":"I gave him this computer.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01552","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その知らせは私を良いにしました。』","a":"The news made me good.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01553","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Yuki her. の誤りを直しなさい。","a":"They call her Yuki.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01553","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Yuki her. の誤りを直しなさい。","a":"We call her Yuki.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01554","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にcomputerを送りました。』に合うものを選びなさい。 (A) I sent a computer her. (B) I sent her a computer. (C) I sent her to a computer.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01555","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Mike gave me a box. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01556","subject":"英語","grade":"中3","category":"文型","type":"見分け","q":"Ken sent Emi a letter. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。","a":"人に物を与える文","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01557","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は彼にこのゲームをあげました。』","a":"I gave him this game.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01558","subject":"英語","grade":"中3","category":"文型","type":"英作文","q":"次の日本語に合う英文を書きなさい。『その帽子で私はうれしくなりました。』","a":"The hat made me happy.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01559","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"They call Aya her. の誤りを直しなさい。","a":"They call her Aya.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01559","subject":"英語","grade":"中3","category":"文型","type":"間違い直し","q":"We call Aya her. の誤りを直しなさい。","a":"We call her Aya.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01560","subject":"英語","grade":"中3","category":"文型","type":"選択","q":"『私は彼女にgameを送りました。』に合うものを選びなさい。 (A) I sent a game her. (B) I sent her a game. (C) I sent her to a game.","a":"B","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01561","subject":"英語","grade":"中3","category":"受動態","type":"空所補充","q":"English is (      ) by many students. (speak) の（ ）内を正しくしなさい。","a":"Spoken","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01562","subject":"英語","grade":"中3","category":"受動態","type":"変形","q":"They use this book every day. を受動態にしなさい。","a":"This book is used every day.","mistake":"変形ミス","cause":"学校範囲での定着不足"}
@@ -9989,7 +9989,7 @@
 {"id":"M3N-01878","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"選択","q":"Aya ( has worked / worked / is worked ) here since April. 正しいものを選びなさい。","a":"Has worked","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01879","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"空所補充","q":"I have studied English (      ) Monday. 空所に入る最も適切な語を書きなさい。","a":"Since","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01880","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"空所補充","q":"Ken has been (      ) this computer since this morning. (use) の（ ）内を正しくしなさい。","a":"Using","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01881","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』","a":"I have lived in this town since Sunday.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01881","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は5年間ずっとこの町に住んでいます。』","a":"I have lived in this town for five years.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01882","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"間違い直し","q":"He has lived in Japan for Monday. の誤りを直しなさい。","a":"He has lived in Japan since Monday.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01883","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"変形","q":"Mary has been playing soccer for three hours. を疑問文にしなさい。","a":"Has Mary been playing soccer for three hours?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01884","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"選択","q":"Bob ( has lived / lived / is lived ) in Japan for two years. 正しいものを選びなさい。","a":"Has lived","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -10025,7 +10025,7 @@
 {"id":"M3N-01914","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"選択","q":"I ( have lived / lived / is lived ) in this town since 2024. 正しいものを選びなさい。","a":"Have lived","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01915","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"空所補充","q":"I have studied English (      ) a week. 空所に入る最も適切な語を書きなさい。","a":"For","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01916","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"空所補充","q":"Aya has been (      ) for the bus since this morning. (wait) の（ ）内を正しくしなさい。","a":"Waiting","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-01917","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』","a":"I have lived in this town since Saturday.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-01917","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"英作文","q":"次の日本語に合う英文を書きなさい。『私は3年間ずっとこの町に住んでいます。』","a":"I have lived in this town for three years.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01918","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"間違い直し","q":"He has lived in Japan since a week. の誤りを直しなさい。","a":"He has lived in Japan for a week.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01919","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"変形","q":"Bob has been reading books since five o’clock. を疑問文にしなさい。","a":"Has Bob been reading books since five o’clock?","mistake":"変形ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-01920","subject":"英語","grade":"中3","category":"現在完了形（継続），現在完了進行形","type":"選択","q":"We ( have studied / studied / is studied ) English for two years. 正しいものを選びなさい。","a":"Have studied","mistake":"文法ミス","cause":"学校範囲での定着不足"}
@@ -10376,18 +10376,18 @@
 {"id":"M3N-02265","subject":"英語","grade":"中3","category":"関係代名詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あれは私の父が作ったカメラです。』（which を使うこと）","a":"That is the camera which my father made.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02266","subject":"英語","grade":"中3","category":"関係代名詞","type":"間違い直し","q":"The boy which plays soccer is kind. の誤りを、who を使って直しなさい。","a":"The boy who plays soccer is kind.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02267","subject":"英語","grade":"中3","category":"関係代名詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( boy / plays / is / The / who / soccer / kind )","a":"The boy who plays soccer is kind.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-02268","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-02268","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The book ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02269","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The man ( who / which / where ) works here is Mr. Brown. 正しいものを選びなさい。","a":"who","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02270","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"This is the computer ( who / which / where ) I bought yesterday. 空所に入る最も適切な語を書きなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02271","subject":"英語","grade":"中3","category":"関係代名詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あれは私の父が作ったコンピューターです。』（which を使うこと）","a":"That is the computer which my father made.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02272","subject":"英語","grade":"中3","category":"関係代名詞","type":"間違い直し","q":"The woman which is taking a picture is my teacher. の誤りを、who を使って直しなさい。","a":"The woman who is taking a picture is my teacher.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02273","subject":"英語","grade":"中3","category":"関係代名詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( woman / is / a / is / teacher / The / who / taking / picture / my )","a":"The woman who is taking a picture is my teacher.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-02274","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-02274","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The bag ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02275","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The boy ( who / which / where ) is running in the park is John's friend. 正しいものを選びなさい。","a":"who","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02276","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"This is the game ( who / which / where ) I bought yesterday. 空所に入る最も適切な語を書きなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02277","subject":"英語","grade":"中3","category":"関係代名詞","type":"英作文","q":"次の日本語に合う英文を書きなさい。『あれは私の父が作ったゲームです。』（which を使うこと）","a":"That is the game which my father made.","mistake":"語順ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-02278","subject":"英語","grade":"中3","category":"関係代名詞","type":"間違い直し","q":"The woman which teaches us is kind. の誤りを、who を使って直しなさい。","a":"The woman who teaches us is kind.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
-{"id":"M3N-02279","subject":"英語","grade":"中3","category":"関係代名詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )","a":"The woman who is taking a picture","mistake":"語順ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-02278","subject":"英語","grade":"中3","category":"関係代名詞","type":"間違い直し","q":"The book who Kate used yesterday is mine. の誤りを、which を使って直しなさい。","a":"The book which Kate used yesterday is mine.","mistake":"文法ミス","cause":"学校範囲での定着不足"}
+{"id":"M3N-02279","subject":"英語","grade":"中3","category":"関係代名詞","type":"並びかえ","q":"次の語(句)を正しい順に並べかえなさい。 ( boy / is / a / The / who / reading / book )","a":"The boy who is reading a book","mistake":"語順ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02280","subject":"英語","grade":"中3","category":"関係代名詞","type":"選択","q":"The book ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。","a":"which","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02281","subject":"英語","grade":"中3","category":"仮定法","type":"空所補充","q":"If I (      ) you, I would study English. 空所に入る最も適切な語を書きなさい。","a":"were","mistake":"文法ミス","cause":"学校範囲での定着不足"}
 {"id":"M3N-02282","subject":"英語","grade":"中3","category":"仮定法","type":"選択","q":"If Tom had more time, he ( will / would / can ) study English. 正しいものを選びなさい。","a":"Would","mistake":"文法ミス","cause":"学校範囲での定着不足"}
