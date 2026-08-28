@@ -1,0 +1,38 @@
+name: Diversify problem high-confidence duplicates v8
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix-problem-content-quality-20260828]
+    paths:
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v8.mjs'
+      - '.github/workflows/diversify-problem-high-confidence-duplicates-v8.yml'
+permissions:
+  contents: write
+jobs:
+  diversify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - run: git pull --ff-only origin fix-problem-content-quality-20260828
+      - run: node --check tools/diversify_problem_high_confidence_duplicate_families_v8.mjs
+      - run: node tools/diversify_problem_high_confidence_duplicate_families_v8.mjs
+      - name: Validate quality
+        run: |
+          set +e
+          node tools/audit_problem_content_quality.mjs
+          code=$?
+          set -e
+          node tools/audit_problem_semantic_review_signals.mjs
+          node tools/audit_problem_semantic_duplicate_review.mjs
+          node - <<'NODE'
+          const fs=require('fs');const q=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_CONTENT_QUALITY.json'));if((q.hard_failures||[]).filter(x=>!String(x).startsWith('duplicate_qa_row_ratio:')).length)throw Error('content hard failure');const s=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json'));if((s.hard_failures||[]).length||(s.review_signals||[]).length)throw Error('semantic review regression');
+          NODE
+          echo audit_exit=$code
+      - name: Commit bank and evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add problem-app/index.html audit/PROBLEM_APP_HIGH_CONFIDENCE_DUPLICATE_DIVERSIFICATION_V8.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json
+          if git diff --cached --quiet; then echo 'No changes'; else git commit -m 'fix: diversify remaining high-confidence duplicate families v8 [skip ci]' && git push; fi
