@@ -31,7 +31,8 @@ const agreementPatterns=[
   [/\byou was\b/i,'you_was'],[/\bwe was\b/i,'we_was'],[/\bthey was\b/i,'they_was'],
   [/\bi is\b/i,'i_is'],[/\byou is\b/i,'you_is'],[/\bwe is\b/i,'we_is'],[/\bthey is\b/i,'they_is'],
   [/\bhe are\b/i,'he_are'],[/\bshe are\b/i,'she_are'],[/\bit are\b/i,'it_are'],
-  [/\bthe (?:shoes|books|pens|dogs|cats|bags|chairs|desks|bikes|pictures) is\b/i,'plural_is']
+  [/\bthe (?:shoes|books|pens|dogs|cats|bags|chairs|desks|bikes|pictures) is\b/i,'plural_is'],
+  [/\b(?:these|those)\s+(?:[a-z]+\s+){0,3}(?:books|pens|dogs|cats|bags|chairs|desks|bikes|pictures|letters|students|windows|doors|questions|computers|songs)\s+is\b/i,'demonstrative_plural_is']
 ];
 const subjectVerbAgreement=[];
 for(const x of rows){
@@ -47,8 +48,6 @@ for(const x of rows){
   if(/\bmy\b/i.test(String(x.a||'')))possessiveSubstitution.push({id:x.id,grade:x.grade,category:x.category,type:x.type,source_japanese:jp,q:x.q,a:x.a});
 }
 
-// Inspect expected answers for auxiliary/tense errors. Intentionally wrong source text in
-// error-correction questions is teaching material and must not fail the bank.
 const auxTenseErrors=[];
 const collocationErrors=[];
 for(const x of rows){
@@ -62,7 +61,6 @@ for(const x of rows){
     collocationErrors.push({id:x.id,kind:badInAnswer?'bad_collocation_in_answer':'bad_collocation_in_source',grade:x.grade,category:x.category,type:x.type,q:x.q,a:x.a});
 }
 
-// High-confidence semantic/template errors. These are hard failures.
 const semanticErrors=[];
 const inanimateBadAdj=/^(?:This|That) (?:bag|book|chair|house|desk|table|car|bike|flower)\b.*\b(?:busier|busiest|kinder|kindest|younger|youngest)\b/i;
 const animalBadVerb=/^This is the (?:cat|dog) which .*\b(?:made|fixed)\b/i;
@@ -111,8 +109,6 @@ if(possessiveSubstitution.length)hardFailures.push(`possessive_substitution:${po
 if(auxTenseErrors.length)hardFailures.push(`auxiliary_tense_error:${auxTenseErrors.length}`);
 if(collocationErrors.length)hardFailures.push(`collocation_error:${collocationErrors.length}`);
 if(semanticErrors.length)hardFailures.push(`semantic_template_error:${semanticErrors.length}`);
-// Redundancy is measured by EXCESS duplicate rows, not by counting both the original and
-// its copy as defects. Any cluster repeated 5+ times is independently a hard failure.
 if(duplicateExcessRatio>.10)hardFailures.push(`duplicate_qa_excess_ratio:${duplicateExcessRatio.toFixed(4)}`);
 if(duplicateGroupsGe5>0)hardFailures.push(`duplicate_qa_groups_ge5:${duplicateGroupsGe5}`);
 
@@ -124,7 +120,7 @@ const out={generated_at:new Date().toISOString(),source:HTML,result:hardFailures
   collocation_errors:{count:collocationErrors.length,by_prefix:prefixBreakdown(collocationErrors),samples:collocationErrors.slice(0,250)},
   exact_duplicate_question_answer:{group_count:duplicateGroups.length,row_count:duplicateRows,duplicate_excess:duplicateExcess,row_ratio:Number(duplicateRowRatio.toFixed(6)),excess_ratio:Number(duplicateExcessRatio.toFixed(6)),groups_ge5:duplicateGroupsGe5,groups_ge10:duplicateGroupsGe10,by_family_rows:sortCounts(duplicateFamilyRows),by_family_groups:sortCounts(duplicateFamilyGroups),top:duplicateGroups.slice(0,250)},
   semantic_template_errors:{count:semanticErrors.length,by_prefix:prefixBreakdown(semanticErrors),by_grade_category_type:breakdown(semanticErrors),samples:semanticErrors.slice(0,250)},
-  policy:'Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, duplicate excess above 10%, or any exact QA cluster repeated 5+ times fail. Row ratio remains diagnostic because it counts both the retained original and redundant copies. Deliberately wrong error-correction prompts are not defects.'};
+  policy:'Content-quality hard gate. Hybrid Japanese, agreement including demonstrative plural + be, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, duplicate excess above 10%, or any exact QA cluster repeated 5+ times fail. Row ratio remains diagnostic because it counts both the retained original and redundant copies. Deliberately wrong error-correction prompts are not defects.'};
 fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');
 console.log(JSON.stringify({result:out.result,english_count:rows.length,hard_failures:hardFailures,hybrid_japanese:hybridJapanese.length,agreement:subjectVerbAgreement.length,possessive:possessiveSubstitution.length,aux_tense:auxTenseErrors.length,collocation:collocationErrors.length,semantic_errors:semanticErrors.length,duplicate_groups:duplicateGroups.length,duplicate_rows:duplicateRows,duplicate_excess:duplicateExcess,duplicate_row_ratio:Number(duplicateRowRatio.toFixed(6)),duplicate_excess_ratio:Number(duplicateExcessRatio.toFixed(6)),duplicate_groups_ge5:duplicateGroupsGe5},null,2));
 if(hardFailures.length)process.exitCode=2;
