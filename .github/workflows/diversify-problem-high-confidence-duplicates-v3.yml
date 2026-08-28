@@ -1,0 +1,44 @@
+name: Diversify problem high-confidence duplicates v3
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix-problem-content-quality-20260828]
+    paths:
+      - 'tools/diversify_problem_high_confidence_duplicate_families_v3.mjs'
+      - '.github/workflows/diversify-problem-high-confidence-duplicates-v3.yml'
+permissions:
+  contents: write
+jobs:
+  diversify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - run: git pull --ff-only origin fix-problem-content-quality-20260828
+      - run: node --check tools/diversify_problem_high_confidence_duplicate_families_v3.mjs
+      - name: Diversify third batch
+        run: node tools/diversify_problem_high_confidence_duplicate_families_v3.mjs
+      - name: Validate structure and semantic quality
+        shell: bash
+        run: |
+          node tools/check_problem_app_runtime_parse.mjs
+          node tools/audit_problem_app_bank_integrity.mjs
+          node tools/audit_problem_content_quality.mjs || true
+          node tools/audit_problem_semantic_duplicate_review.mjs
+          node tools/audit_problem_semantic_review_signals.mjs
+          node - <<'NODE'
+          const fs=require('fs');
+          const a=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_CONTENT_QUALITY.json'));
+          const s=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json'));
+          if((a.hard_failures||[]).length)throw Error('content hard failures: '+a.hard_failures.join(','));
+          if((a.exact_duplicate_question_answer?.groups_ge5||0)!==0)throw Error('ge5 duplicate regression');
+          if((s.hard_failures||[]).length)throw Error('semantic hard failures: '+s.hard_failures.join(','));
+          if((s.review_signals||[]).length)throw Error('semantic review signals remain');
+          NODE
+      - name: Commit bank and evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add problem-app/index.html audit/PROBLEM_APP_HIGH_CONFIDENCE_DUPLICATE_DIVERSIFICATION_V3.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json
+          if git diff --cached --quiet; then echo 'No changes'; else git commit -m 'fix: diversify third high-confidence duplicate batch [skip ci]' && git push; fi
