@@ -1,41 +1,33 @@
 {
-  "generated_at": "2026-08-28T11:42:39.836Z",
+  "generated_at": "2026-08-28T12:08:05.609Z",
   "english_count": 10511,
-  "duplicate_row_count": 2746,
-  "duplicate_excess": 1933,
-  "duplicate_group_count": 813,
-  "row_ratio": 0.26125,
+  "duplicate_row_count": 2255,
+  "duplicate_excess": 1317,
+  "duplicate_group_count": 938,
+  "row_ratio": 0.214537,
   "group_size_histogram": {
-    "2": 615,
-    "3": 111,
-    "4": 15,
-    "5": 1,
+    "2": 700,
+    "3": 144,
+    "4": 72,
+    "5": 9,
     "6": 9,
     "7": 1,
     "9": 1,
-    "10": 16,
-    "20": 43,
-    "28": 1
+    "10": 2
   },
   "mass_duplicate_ge5": {
-    "group_count": 72,
-    "row_count": 1123,
-    "excess": 1051,
-    "row_ratio": 0.10684
+    "group_count": 22,
+    "row_count": 135,
+    "excess": 113,
+    "row_ratio": 0.012844
   },
   "mass_duplicate_ge10": {
-    "group_count": 60,
-    "row_count": 1048,
-    "excess": 988,
-    "row_ratio": 0.099705
+    "group_count": 2,
+    "row_count": 20,
+    "excess": 18,
+    "row_ratio": 0.001903
   },
   "family_summary": [
-    {
-      "family": "中3/現在完了形（完了・経験）/変形",
-      "row_count": 116,
-      "duplicate_group_count": 14,
-      "excess_estimate": 102
-    },
     {
       "family": "中2/一般動詞/英作文",
       "row_count": 128,
@@ -49,22 +41,10 @@
       "excess_estimate": 60
     },
     {
-      "family": "中3/現在完了形（継続），現在完了進行形/変形",
-      "row_count": 60,
-      "duplicate_group_count": 13,
-      "excess_estimate": 47
-    },
-    {
       "family": "中3/be動詞と一般動詞（現在形）/変形",
       "row_count": 77,
       "duplicate_group_count": 76,
       "excess_estimate": 44
-    },
-    {
-      "family": "中3/関係代名詞/選択",
-      "row_count": 50,
-      "duplicate_group_count": 7,
-      "excess_estimate": 43
     },
     {
       "family": "中1/過去の疑問文・否定文/変形",
@@ -73,37 +53,19 @@
       "excess_estimate": 39
     },
     {
-      "family": "中3/分詞と間接疑問文/空所補充",
-      "row_count": 40,
-      "duplicate_group_count": 2,
-      "excess_estimate": 38
-    },
-    {
-      "family": "中3/分詞と間接疑問文/英作文",
-      "row_count": 40,
-      "duplicate_group_count": 2,
-      "excess_estimate": 38
-    },
-    {
-      "family": "中3/文型/見分け",
-      "row_count": 40,
-      "duplicate_group_count": 2,
-      "excess_estimate": 38
-    },
-    {
       "family": "中2/未来表現/並びかえ",
       "row_count": 72,
       "duplicate_group_count": 36,
       "excess_estimate": 36
     },
     {
-      "family": "中2/比較/間違い直し",
-      "row_count": 44,
-      "duplicate_group_count": 10,
-      "excess_estimate": 34
+      "family": "中3/関係代名詞/選択",
+      "row_count": 50,
+      "duplicate_group_count": 15,
+      "excess_estimate": 35
     },
     {
-      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "family": "中3/分詞と間接疑問文/英作文",
       "row_count": 40,
       "duplicate_group_count": 10,
       "excess_estimate": 30
@@ -127,12 +89,6 @@
       "excess_estimate": 28
     },
     {
-      "family": "中3/仮定法/間違い直し",
-      "row_count": 28,
-      "duplicate_group_count": 1,
-      "excess_estimate": 27
-    },
-    {
       "family": "中2/be動詞/変形",
       "row_count": 48,
       "duplicate_group_count": 22,
@@ -140,6 +96,12 @@
     },
     {
       "family": "中2/be動詞/空所補充",
+      "row_count": 44,
+      "duplicate_group_count": 18,
+      "excess_estimate": 26
+    },
+    {
+      "family": "中2/比較/間違い直し",
       "row_count": 44,
       "duplicate_group_count": 18,
       "excess_estimate": 26
@@ -163,12 +125,6 @@
       "excess_estimate": 24
     },
     {
-      "family": "中3/不定詞②/選択",
-      "row_count": 26,
-      "duplicate_group_count": 2,
-      "excess_estimate": 24
-    },
-    {
       "family": "中3/be動詞と一般動詞（過去形）/変形",
       "row_count": 45,
       "duplicate_group_count": 44,
@@ -178,12 +134,6 @@
       "family": "中1/三単現/変形",
       "row_count": 43,
       "duplicate_group_count": 31,
-      "excess_estimate": 23
-    },
-    {
-      "family": "中3/現在完了形（完了・経験）/空所補充",
-      "row_count": 28,
-      "duplicate_group_count": 5,
       "excess_estimate": 23
     },
     {
@@ -211,196 +161,22 @@
       "excess_estimate": 20
     },
     {
+      "family": "中3/分詞と間接疑問文/空所補充",
+      "row_count": 38,
+      "duplicate_group_count": 18,
+      "excess_estimate": 20
+    },
+    {
       "family": "中2/比較/英作文",
       "row_count": 23,
       "duplicate_group_count": 4,
       "excess_estimate": 19
     },
     {
-      "family": "中3/不定詞①，動名詞/並びかえ",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/不定詞①，動名詞/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/不定詞②/並びかえ",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/不定詞②/空所補充",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/不定詞②/英作文",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/不定詞②/読解",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/人称代名詞/空所補充",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/人称代名詞/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/仮定法/並びかえ",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/仮定法/空所補充",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/仮定法/英作文",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/仮定法/読解",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/仮定法/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/分詞と間接疑問文/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/分詞と間接疑問文/間違い直し",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/助動詞/読解",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/助動詞/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/受動態/空所補充",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/受動態/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/受動態/間違い直し",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/命令文，there is ～ の文/読解",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/接続詞/並びかえ",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/接続詞/読解",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/文型/間違い直し",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/未来の文/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/現在完了形（完了・経験）/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/現在完了形（完了・経験）/間違い直し",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/現在完了形（継続），現在完了進行形/選択",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/疑問詞/空所補充",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/関係代名詞/並びかえ",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
-    },
-    {
-      "family": "中3/関係代名詞/間違い直し",
-      "row_count": 20,
-      "duplicate_group_count": 1,
-      "excess_estimate": 19
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "row_count": 28,
+      "duplicate_group_count": 10,
+      "excess_estimate": 18
     },
     {
       "family": "中3/比較/英作文",
@@ -439,10 +215,82 @@
       "excess_estimate": 16
     },
     {
-      "family": "中2/比較/並びかえ",
-      "row_count": 24,
-      "duplicate_group_count": 8,
+      "family": "中3/受動態/選択",
+      "row_count": 20,
+      "duplicate_group_count": 4,
       "excess_estimate": 16
+    },
+    {
+      "family": "中3/未来の文/選択",
+      "row_count": 20,
+      "duplicate_group_count": 4,
+      "excess_estimate": 16
+    },
+    {
+      "family": "中3/仮定法/英作文",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/受動態/間違い直し",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/現在完了形（完了・経験）/選択",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/現在完了形（完了・経験）/間違い直し",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/疑問詞/空所補充",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/関係代名詞/並びかえ",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/関係代名詞/間違い直し",
+      "row_count": 20,
+      "duplicate_group_count": 5,
+      "excess_estimate": 15
+    },
+    {
+      "family": "中3/人称代名詞/選択",
+      "row_count": 20,
+      "duplicate_group_count": 6,
+      "excess_estimate": 14
+    },
+    {
+      "family": "中3/受動態/空所補充",
+      "row_count": 20,
+      "duplicate_group_count": 6,
+      "excess_estimate": 14
+    },
+    {
+      "family": "中3/命令文，there is ～ の文/読解",
+      "row_count": 20,
+      "duplicate_group_count": 6,
+      "excess_estimate": 14
+    },
+    {
+      "family": "中3/文型/見分け",
+      "row_count": 20,
+      "duplicate_group_count": 6,
+      "excess_estimate": 14
     },
     {
       "family": "中3/現在完了形（継続），現在完了進行形/英作文",
@@ -467,6 +315,30 @@
       "row_count": 24,
       "duplicate_group_count": 12,
       "excess_estimate": 12
+    },
+    {
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "row_count": 24,
+      "duplicate_group_count": 12,
+      "excess_estimate": 12
+    },
+    {
+      "family": "中3/分詞と間接疑問文/選択",
+      "row_count": 19,
+      "duplicate_group_count": 7,
+      "excess_estimate": 12
+    },
+    {
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "row_count": 19,
+      "duplicate_group_count": 7,
+      "excess_estimate": 12
+    },
+    {
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "row_count": 20,
+      "duplicate_group_count": 9,
+      "excess_estimate": 11
     },
     {
       "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
@@ -505,16 +377,58 @@
       "excess_estimate": 9
     },
     {
+      "family": "中3/不定詞①，動名詞/選択",
+      "row_count": 16,
+      "duplicate_group_count": 8,
+      "excess_estimate": 8
+    },
+    {
+      "family": "中3/仮定法/間違い直し",
+      "row_count": 16,
+      "duplicate_group_count": 8,
+      "excess_estimate": 8
+    },
+    {
+      "family": "中3/文型/間違い直し",
+      "row_count": 16,
+      "duplicate_group_count": 8,
+      "excess_estimate": 8
+    },
+    {
+      "family": "中3/現在完了形（継続），現在完了進行形/選択",
+      "row_count": 16,
+      "duplicate_group_count": 8,
+      "excess_estimate": 8
+    },
+    {
       "family": "中3/命令文，there is ～ の文/変形",
       "row_count": 9,
       "duplicate_group_count": 1,
       "excess_estimate": 8
     },
     {
+      "family": "中2/比較/並びかえ",
+      "row_count": 14,
+      "duplicate_group_count": 7,
+      "excess_estimate": 7
+    },
+    {
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "row_count": 14,
+      "duplicate_group_count": 7,
+      "excess_estimate": 7
+    },
+    {
       "family": "中1/頻度副詞/並びかえ",
       "row_count": 12,
       "duplicate_group_count": 6,
       "excess_estimate": 6
+    },
+    {
+      "family": "中3/不定詞①，動名詞/並びかえ",
+      "row_count": 9,
+      "duplicate_group_count": 4,
+      "excess_estimate": 5
     },
     {
       "family": "中3/助動詞/変形",
@@ -526,6 +440,12 @@
       "family": "中2/一般動詞/変形",
       "row_count": 8,
       "duplicate_group_count": 8,
+      "excess_estimate": 5
+    },
+    {
+      "family": "中3/不定詞②/選択",
+      "row_count": 6,
+      "duplicate_group_count": 1,
       "excess_estimate": 5
     },
     {
@@ -553,7 +473,19 @@
       "excess_estimate": 4
     },
     {
+      "family": "中3/接続詞/並びかえ",
+      "row_count": 8,
+      "duplicate_group_count": 4,
+      "excess_estimate": 4
+    },
+    {
       "family": "中3/接続詞/空所補充",
+      "row_count": 8,
+      "duplicate_group_count": 4,
+      "excess_estimate": 4
+    },
+    {
+      "family": "中3/接続詞/読解",
       "row_count": 8,
       "duplicate_group_count": 4,
       "excess_estimate": 4
@@ -724,11 +656,11 @@
   "prefix_summary": [
     {
       "prefix": "M3N",
-      "row_count": 1030
+      "row_count": 667
     },
     {
       "prefix": "M3C",
-      "row_count": 330
+      "row_count": 212
     },
     {
       "prefix": "M2-REV",
@@ -775,10 +707,6 @@
       "row_count": 64
     },
     {
-      "prefix": "M2Y-COMP",
-      "row_count": 53
-    },
-    {
       "prefix": "GEN-PRS",
       "row_count": 51
     },
@@ -787,12 +715,16 @@
       "row_count": 48
     },
     {
+      "prefix": "M2Y-COMP",
+      "row_count": 47
+    },
+    {
       "prefix": "M2-FUT2",
       "row_count": 40
     },
     {
       "prefix": "M2-COMP2",
-      "row_count": 38
+      "row_count": 34
     },
     {
       "prefix": "GEN-FREQ",
@@ -901,1297 +833,20 @@
   ],
   "top_groups": [
     {
-      "count": 28,
-      "excess": 27,
-      "q": "If I am you, I would study harder. の誤りを直しなさい。",
-      "a": "If I were you, I would study harder.",
+      "count": 10,
+      "excess": 9,
+      "q": "次の日本語に合う英文を書きなさい。『公園で歌っている少女は私の友達です。』",
+      "a": "The girl singing in the park is my friend.",
       "ids": [
-        "M3C-01387",
-        "M3C-01389",
-        "M3C-01391",
-        "M3C-01393",
-        "M3C-01395",
-        "M3C-01397",
-        "M3C-01399",
-        "M3C-01401",
-        "M3N-02284",
-        "M3N-02290",
-        "M3N-02296",
-        "M3N-02302",
-        "M3N-02308",
-        "M3N-02314",
-        "M3N-02320",
-        "M3N-02326",
-        "M3N-02332",
-        "M3N-02338",
-        "M3N-02344",
-        "M3N-02350",
-        "M3N-02356",
-        "M3N-02362",
-        "M3N-02368",
-        "M3N-02374",
-        "M3N-02380",
-        "M3N-02386",
-        "M3N-02392",
-        "M3N-02398"
-      ],
-      "families": [
-        "中3/仮定法/間違い直し"
-      ],
-      "prefixes": [
-        "M3C",
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
-      "a": "Why",
-      "ids": [
-        "M3N-00366",
-        "M3N-00372",
-        "M3N-00378",
-        "M3N-00384",
-        "M3N-00390",
-        "M3N-00396",
-        "M3N-00402",
-        "M3N-00408",
-        "M3N-00414",
-        "M3N-00420",
-        "M3N-00426",
-        "M3N-00432",
-        "M3N-00438",
-        "M3N-00444",
-        "M3N-00450",
-        "M3N-00456",
-        "M3N-00462",
-        "M3N-00468",
-        "M3N-00474",
-        "M3N-00480"
-      ],
-      "families": [
-        "中3/疑問詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
-      "a": "He",
-      "ids": [
-        "M3N-00483",
-        "M3N-00489",
-        "M3N-00495",
-        "M3N-00501",
-        "M3N-00507",
-        "M3N-00513",
-        "M3N-00519",
-        "M3N-00525",
-        "M3N-00531",
-        "M3N-00537",
-        "M3N-00543",
-        "M3N-00549",
-        "M3N-00555",
-        "M3N-00561",
-        "M3N-00567",
-        "M3N-00573",
-        "M3N-00579",
-        "M3N-00585",
-        "M3N-00591",
-        "M3N-00597"
-      ],
-      "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "Do you know (      ) she lives? 「彼女がどこに住んでいるか」になるように、空所に入る最も適切な語を書きなさい。",
-      "a": "Where",
-      "ids": [
-        "M3N-02042",
-        "M3N-02048",
-        "M3N-02054",
-        "M3N-02060",
-        "M3N-02066",
-        "M3N-02072",
-        "M3N-02078",
-        "M3N-02084",
-        "M3N-02090",
-        "M3N-02096",
-        "M3N-02102",
-        "M3N-02108",
-        "M3N-02114",
-        "M3N-02120",
-        "M3N-02126",
-        "M3N-02132",
-        "M3N-02138",
-        "M3N-02144",
-        "M3N-02150",
-        "M3N-02156"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "English is (      ) in many countries. (speak) の（ ）内を正しくしなさい。",
-      "a": "Spoken",
-      "ids": [
-        "M3N-01561",
-        "M3N-01567",
-        "M3N-01573",
-        "M3N-01579",
-        "M3N-01585",
-        "M3N-01591",
-        "M3N-01597",
-        "M3N-01603",
-        "M3N-01609",
-        "M3N-01615",
-        "M3N-01621",
-        "M3N-01627",
-        "M3N-01633",
-        "M3N-01639",
-        "M3N-01645",
-        "M3N-01651",
-        "M3N-01657",
-        "M3N-01663",
-        "M3N-01669",
-        "M3N-01675"
-      ],
-      "families": [
-        "中3/受動態/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "He finished ( to do / doing / do ) his homework. 正しいものを選びなさい。",
-      "a": "Doing",
-      "ids": [
-        "M3N-01203",
-        "M3N-01209",
-        "M3N-01215",
-        "M3N-01221",
-        "M3N-01227",
-        "M3N-01233",
-        "M3N-01239",
-        "M3N-01245",
-        "M3N-01251",
-        "M3N-01257",
-        "M3N-01263",
-        "M3N-01269",
-        "M3N-01275",
-        "M3N-01281",
-        "M3N-01287",
-        "M3N-01293",
-        "M3N-01299",
-        "M3N-01305",
-        "M3N-01311",
-        "M3N-01317"
-      ],
-      "families": [
-        "中3/不定詞①，動名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "He got up early to catch the first train. 問い：この文の意味として最も適切なものを書きなさい。",
-      "a": "彼は始発電車に乗るために早く起きました。",
-      "ids": [
-        "M3N-01926",
-        "M3N-01932",
-        "M3N-01938",
-        "M3N-01944",
-        "M3N-01950",
-        "M3N-01956",
-        "M3N-01962",
-        "M3N-01968",
-        "M3N-01974",
-        "M3N-01980",
-        "M3N-01986",
-        "M3N-01992",
-        "M3N-01998",
-        "M3N-02004",
-        "M3N-02010",
-        "M3N-02016",
-        "M3N-02022",
-        "M3N-02028",
-        "M3N-02034",
-        "M3N-02040"
-      ],
-      "families": [
-        "中3/不定詞②/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I ( have lost / lost / am losing ) my key, so I can't open the door now. 正しいものを選びなさい。",
-      "a": "Have lost",
-      "ids": [
-        "M3N-01686",
-        "M3N-01692",
-        "M3N-01698",
-        "M3N-01704",
-        "M3N-01710",
-        "M3N-01716",
-        "M3N-01722",
-        "M3N-01728",
-        "M3N-01734",
-        "M3N-01740",
-        "M3N-01746",
-        "M3N-01752",
-        "M3N-01758",
-        "M3N-01764",
-        "M3N-01770",
-        "M3N-01776",
-        "M3N-01782",
-        "M3N-01788",
-        "M3N-01794",
-        "M3N-01800"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I don't know (A) where does he live (B) where he lives (C) he lives where. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02043",
-        "M3N-02049",
-        "M3N-02055",
-        "M3N-02061",
-        "M3N-02067",
-        "M3N-02073",
-        "M3N-02079",
-        "M3N-02085",
-        "M3N-02091",
-        "M3N-02097",
-        "M3N-02103",
-        "M3N-02109",
-        "M3N-02115",
-        "M3N-02121",
-        "M3N-02127",
-        "M3N-02133",
-        "M3N-02139",
-        "M3N-02145",
-        "M3N-02151",
-        "M3N-02157"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I don't know where does he live. の誤りを直しなさい。",
-      "a": "I don't know where he lives.",
-      "ids": [
-        "M3N-02044",
-        "M3N-02050",
-        "M3N-02056",
-        "M3N-02062",
-        "M3N-02068",
-        "M3N-02074",
-        "M3N-02080",
-        "M3N-02086",
-        "M3N-02092",
-        "M3N-02098",
-        "M3N-02104",
-        "M3N-02110",
-        "M3N-02116",
-        "M3N-02122",
-        "M3N-02128",
-        "M3N-02134",
-        "M3N-02140",
-        "M3N-02146",
-        "M3N-02152",
-        "M3N-02158"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I have a book (      ) read. 「読むための本」になるように、空所に入る最も適切な語を書きなさい。",
-      "a": "to",
-      "ids": [
-        "M3N-01922",
-        "M3N-01928",
-        "M3N-01934",
-        "M3N-01940",
-        "M3N-01946",
-        "M3N-01952",
-        "M3N-01958",
-        "M3N-01964",
-        "M3N-01970",
-        "M3N-01976",
-        "M3N-01982",
-        "M3N-01988",
-        "M3N-01994",
-        "M3N-02000",
-        "M3N-02006",
-        "M3N-02012",
-        "M3N-02018",
-        "M3N-02024",
-        "M3N-02030",
-        "M3N-02036"
-      ],
-      "families": [
-        "中3/不定詞②/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I have a lot of homework to do. の to do のはたらきとして最も適切なものを選びなさい。 (A) 名詞を説明する (B) 理由を表す (C) 結果を表す",
-      "a": "A",
-      "ids": [
-        "M3N-01923",
-        "M3N-01929",
-        "M3N-01935",
-        "M3N-01941",
-        "M3N-01947",
-        "M3N-01953",
-        "M3N-01959",
-        "M3N-01965",
-        "M3N-01971",
-        "M3N-01977",
-        "M3N-01983",
-        "M3N-01989",
-        "M3N-01995",
-        "M3N-02001",
-        "M3N-02007",
-        "M3N-02013",
-        "M3N-02019",
-        "M3N-02025",
-        "M3N-02031",
-        "M3N-02037"
-      ],
-      "families": [
-        "中3/不定詞②/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
-      "a": "Finished",
-      "ids": [
-        "M3N-01681",
-        "M3N-01687",
-        "M3N-01693",
-        "M3N-01699",
-        "M3N-01705",
-        "M3N-01711",
-        "M3N-01717",
-        "M3N-01723",
-        "M3N-01729",
-        "M3N-01735",
-        "M3N-01741",
-        "M3N-01747",
-        "M3N-01753",
-        "M3N-01759",
-        "M3N-01765",
-        "M3N-01771",
-        "M3N-01777",
-        "M3N-01783",
-        "M3N-01789",
-        "M3N-01795"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "I have went there before. の誤りを直しなさい。",
-      "a": "I have gone there before.",
-      "ids": [
-        "M3N-01684",
-        "M3N-01690",
-        "M3N-01696",
-        "M3N-01702",
-        "M3N-01708",
-        "M3N-01714",
-        "M3N-01720",
-        "M3N-01726",
-        "M3N-01732",
-        "M3N-01738",
-        "M3N-01744",
-        "M3N-01750",
-        "M3N-01756",
-        "M3N-01762",
-        "M3N-01768",
-        "M3N-01774",
-        "M3N-01780",
-        "M3N-01786",
-        "M3N-01792",
-        "M3N-01798"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "If I (      ) you, I would help him. 空所に入る最も適切な語を書きなさい。",
-      "a": "were",
-      "ids": [
-        "M3N-02281",
-        "M3N-02287",
-        "M3N-02293",
-        "M3N-02299",
-        "M3N-02305",
-        "M3N-02311",
-        "M3N-02317",
-        "M3N-02323",
-        "M3N-02329",
-        "M3N-02335",
-        "M3N-02341",
-        "M3N-02347",
-        "M3N-02353",
-        "M3N-02359",
-        "M3N-02365",
-        "M3N-02371",
-        "M3N-02377",
-        "M3N-02383",
-        "M3N-02389",
-        "M3N-02395"
-      ],
-      "families": [
-        "中3/仮定法/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "If I were rich, I would travel around the world. 問い：この文の意味として最も適切なものを書きなさい。",
-      "a": "もし私がお金持ちなら、世界中を旅行するのに。",
-      "ids": [
-        "M3N-02286",
-        "M3N-02292",
-        "M3N-02298",
-        "M3N-02304",
-        "M3N-02310",
-        "M3N-02316",
-        "M3N-02322",
-        "M3N-02328",
-        "M3N-02334",
-        "M3N-02340",
-        "M3N-02346",
-        "M3N-02352",
-        "M3N-02358",
-        "M3N-02364",
-        "M3N-02370",
-        "M3N-02376",
-        "M3N-02382",
-        "M3N-02388",
-        "M3N-02394",
-        "M3N-02400"
-      ],
-      "families": [
-        "中3/仮定法/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "If she had more time, she ( will / would / can ) read more books. 正しいものを選びなさい。",
-      "a": "Would",
-      "ids": [
-        "M3N-02282",
-        "M3N-02288",
-        "M3N-02294",
-        "M3N-02300",
-        "M3N-02306",
-        "M3N-02312",
-        "M3N-02318",
-        "M3N-02324",
-        "M3N-02330",
-        "M3N-02336",
-        "M3N-02342",
-        "M3N-02348",
-        "M3N-02354",
-        "M3N-02360",
-        "M3N-02366",
-        "M3N-02372",
-        "M3N-02378",
-        "M3N-02384",
-        "M3N-02390",
-        "M3N-02396"
-      ],
-      "families": [
-        "中3/仮定法/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "If you study hard, you will pass the test. 問い：この文の内容として最も適切なものを書きなさい。",
-      "a": "一生懸命勉強すれば、そのテストに合格するでしょう。",
-      "ids": [
-        "M3N-01086",
-        "M3N-01092",
-        "M3N-01098",
-        "M3N-01104",
-        "M3N-01110",
-        "M3N-01116",
-        "M3N-01122",
-        "M3N-01128",
-        "M3N-01134",
-        "M3N-01140",
-        "M3N-01146",
-        "M3N-01152",
-        "M3N-01158",
-        "M3N-01164",
-        "M3N-01170",
-        "M3N-01176",
-        "M3N-01182",
-        "M3N-01188",
-        "M3N-01194",
-        "M3N-01200"
-      ],
-      "families": [
-        "中3/接続詞/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
-      "a": "Is Going to",
-      "ids": [
-        "M3N-00844",
-        "M3N-00850",
-        "M3N-00856",
-        "M3N-00862",
-        "M3N-00868",
-        "M3N-00874",
-        "M3N-00880",
-        "M3N-00886",
-        "M3N-00892",
-        "M3N-00898",
-        "M3N-00904",
-        "M3N-00910",
-        "M3N-00916",
-        "M3N-00922",
-        "M3N-00928",
-        "M3N-00934",
-        "M3N-00940",
-        "M3N-00946",
-        "M3N-00952",
-        "M3N-00958"
-      ],
-      "families": [
-        "中3/未来の文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "My father ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
-      "a": "Has Worked",
-      "ids": [
-        "M3N-01806",
-        "M3N-01812",
-        "M3N-01818",
-        "M3N-01824",
-        "M3N-01830",
-        "M3N-01836",
-        "M3N-01842",
-        "M3N-01848",
-        "M3N-01854",
-        "M3N-01860",
-        "M3N-01866",
-        "M3N-01872",
-        "M3N-01878",
-        "M3N-01884",
-        "M3N-01890",
-        "M3N-01896",
-        "M3N-01902",
-        "M3N-01908",
-        "M3N-01914",
-        "M3N-01920"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "My father gave me a pen. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "人に物を与える文",
-      "ids": [
-        "M3N-01441",
-        "M3N-01447",
-        "M3N-01453",
-        "M3N-01459",
-        "M3N-01465",
-        "M3N-01471",
-        "M3N-01477",
-        "M3N-01483",
-        "M3N-01489",
-        "M3N-01495",
-        "M3N-01501",
-        "M3N-01507",
-        "M3N-01513",
-        "M3N-01519",
-        "M3N-01525",
-        "M3N-01531",
-        "M3N-01537",
-        "M3N-01543",
-        "M3N-01549",
-        "M3N-01555"
-      ],
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
-      "a": "静かにしてください。",
-      "ids": [
-        "M3N-00726",
-        "M3N-00732",
-        "M3N-00738",
-        "M3N-00744",
-        "M3N-00750",
-        "M3N-00756",
-        "M3N-00762",
-        "M3N-00768",
-        "M3N-00774",
-        "M3N-00780",
-        "M3N-00786",
-        "M3N-00792",
-        "M3N-00798",
-        "M3N-00804",
-        "M3N-00810",
-        "M3N-00816",
-        "M3N-00822",
-        "M3N-00828",
-        "M3N-00834",
-        "M3N-00840"
-      ],
-      "families": [
-        "中3/命令文，there is ～ の文/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "She has been (      ) English since this morning. (study) の（ ）内を正しくしなさい。",
-      "a": "Studying",
-      "ids": [
-        "M3N-01802",
-        "M3N-01808",
-        "M3N-01814",
-        "M3N-01820",
-        "M3N-01826",
-        "M3N-01832",
-        "M3N-01838",
-        "M3N-01844",
-        "M3N-01850",
-        "M3N-01856",
-        "M3N-01862",
-        "M3N-01868",
-        "M3N-01874",
-        "M3N-01880",
-        "M3N-01886",
-        "M3N-01892",
-        "M3N-01898",
-        "M3N-01904",
-        "M3N-01910",
-        "M3N-01916"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "The boy (      ) under the tree is my brother. (play) の（ ）内を正しくしなさい。",
-      "a": "Playing",
-      "ids": [
-        "M3N-02041",
-        "M3N-02047",
-        "M3N-02053",
-        "M3N-02059",
-        "M3N-02065",
-        "M3N-02071",
-        "M3N-02077",
-        "M3N-02083",
-        "M3N-02089",
-        "M3N-02095",
-        "M3N-02101",
-        "M3N-02107",
-        "M3N-02113",
-        "M3N-02119",
-        "M3N-02125",
-        "M3N-02131",
-        "M3N-02137",
-        "M3N-02143",
-        "M3N-02149",
-        "M3N-02155"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "The boy ( who / which / where ) is running is my friend. 空所に入る最も適切な語を書きなさい。",
-      "a": "who",
-      "ids": [
-        "M3N-02161",
-        "M3N-02167",
-        "M3N-02173",
-        "M3N-02179",
-        "M3N-02185",
-        "M3N-02191",
-        "M3N-02197",
-        "M3N-02203",
-        "M3N-02209",
-        "M3N-02215",
-        "M3N-02221",
-        "M3N-02227",
-        "M3N-02233",
-        "M3N-02239",
-        "M3N-02245",
-        "M3N-02251",
-        "M3N-02257",
-        "M3N-02263",
-        "M3N-02269",
-        "M3N-02275"
-      ],
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "The camera ( who / which / where ) was on the desk is mine. 正しいものを選びなさい。",
-      "a": "Which",
-      "ids": [
-        "M3N-02166",
-        "M3N-02172",
-        "M3N-02178",
-        "M3N-02184",
-        "M3N-02190",
-        "M3N-02196",
-        "M3N-02202",
-        "M3N-02208",
-        "M3N-02214",
-        "M3N-02220",
-        "M3N-02226",
-        "M3N-02232",
-        "M3N-02238",
-        "M3N-02244",
-        "M3N-02250",
-        "M3N-02256",
-        "M3N-02262",
-        "M3N-02268",
-        "M3N-02274",
-        "M3N-02280"
-      ],
-      "families": [
-        "中3/関係代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
-      "a": "The girl who lives next door is kind.",
-      "ids": [
-        "M3N-02164",
-        "M3N-02170",
-        "M3N-02176",
-        "M3N-02182",
-        "M3N-02188",
-        "M3N-02194",
-        "M3N-02200",
-        "M3N-02206",
-        "M3N-02212",
-        "M3N-02218",
-        "M3N-02224",
-        "M3N-02230",
-        "M3N-02236",
-        "M3N-02242",
-        "M3N-02248",
-        "M3N-02254",
-        "M3N-02260",
-        "M3N-02266",
-        "M3N-02272",
-        "M3N-02278"
-      ],
-      "families": [
-        "中3/関係代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
-      "a": "Were sent",
-      "ids": [
-        "M3N-01566",
-        "M3N-01572",
-        "M3N-01578",
-        "M3N-01584",
-        "M3N-01590",
-        "M3N-01596",
-        "M3N-01602",
-        "M3N-01608",
-        "M3N-01614",
-        "M3N-01620",
-        "M3N-01626",
-        "M3N-01632",
-        "M3N-01638",
-        "M3N-01644",
-        "M3N-01650",
-        "M3N-01656",
-        "M3N-01662",
-        "M3N-01668",
-        "M3N-01674",
-        "M3N-01680"
-      ],
-      "families": [
-        "中3/受動態/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
-      "a": "AをBと呼ぶ文",
-      "ids": [
-        "M3N-01442",
-        "M3N-01448",
-        "M3N-01454",
-        "M3N-01460",
-        "M3N-01466",
-        "M3N-01472",
-        "M3N-01478",
-        "M3N-01484",
-        "M3N-01490",
-        "M3N-01496",
-        "M3N-01502",
-        "M3N-01508",
-        "M3N-01514",
-        "M3N-01520",
-        "M3N-01526",
-        "M3N-01532",
-        "M3N-01538",
-        "M3N-01544",
-        "M3N-01550",
-        "M3N-01556"
-      ],
-      "families": [
-        "中3/文型/見分け"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "They call Ken him. の誤りを直しなさい。",
-      "a": "They call him Ken.",
-      "ids": [
-        "M3N-01445",
-        "M3N-01451",
-        "M3N-01457",
-        "M3N-01463",
-        "M3N-01469",
-        "M3N-01475",
-        "M3N-01481",
-        "M3N-01487",
-        "M3N-01493",
-        "M3N-01499",
-        "M3N-01505",
-        "M3N-01511",
-        "M3N-01517",
-        "M3N-01523",
-        "M3N-01529",
-        "M3N-01535",
-        "M3N-01541",
-        "M3N-01547",
-        "M3N-01553",
-        "M3N-01559"
-      ],
-      "families": [
-        "中3/文型/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "They have been playing soccer for two hours. を疑問文にしなさい。",
-      "a": "Have they been playing soccer for two hours?",
-      "ids": [
-        "M3N-01805",
-        "M3N-01811",
-        "M3N-01817",
-        "M3N-01823",
-        "M3N-01829",
-        "M3N-01835",
-        "M3N-01841",
-        "M3N-01847",
-        "M3N-01853",
-        "M3N-01859",
-        "M3N-01865",
-        "M3N-01871",
-        "M3N-01877",
-        "M3N-01883",
-        "M3N-01889",
-        "M3N-01895",
-        "M3N-01901",
-        "M3N-01907",
-        "M3N-01913",
-        "M3N-01919"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/変形"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "This book is not mine. It is (      ). 「彼のもの」になるように、空所に入る最も適切な語を書きなさい。",
-      "a": "His",
-      "ids": [
-        "M3N-00482",
-        "M3N-00488",
-        "M3N-00494",
-        "M3N-00500",
-        "M3N-00506",
-        "M3N-00512",
-        "M3N-00518",
-        "M3N-00524",
-        "M3N-00530",
-        "M3N-00536",
-        "M3N-00542",
-        "M3N-00548",
-        "M3N-00554",
-        "M3N-00560",
-        "M3N-00566",
-        "M3N-00572",
-        "M3N-00578",
-        "M3N-00584",
-        "M3N-00590",
-        "M3N-00596"
-      ],
-      "families": [
-        "中3/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "This song is sing by many students. の誤りを直しなさい。",
-      "a": "This song is sung by many students.",
-      "ids": [
-        "M3N-01564",
-        "M3N-01570",
-        "M3N-01576",
-        "M3N-01582",
-        "M3N-01588",
-        "M3N-01594",
-        "M3N-01600",
-        "M3N-01606",
-        "M3N-01612",
-        "M3N-01618",
-        "M3N-01624",
-        "M3N-01630",
-        "M3N-01636",
-        "M3N-01642",
-        "M3N-01648",
-        "M3N-01654",
-        "M3N-01660",
-        "M3N-01666",
-        "M3N-01672",
-        "M3N-01678"
-      ],
-      "families": [
-        "中3/受動態/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "You ( must / can / may ) finish your homework today. 「しなければならない」に合うものを選びなさい。",
-      "a": "Must",
-      "ids": [
-        "M3N-00961",
-        "M3N-00967",
-        "M3N-00973",
-        "M3N-00979",
-        "M3N-00985",
-        "M3N-00991",
-        "M3N-00997",
-        "M3N-01003",
-        "M3N-01009",
-        "M3N-01015",
-        "M3N-01021",
-        "M3N-01027",
-        "M3N-01033",
-        "M3N-01039",
-        "M3N-01045",
-        "M3N-01051",
-        "M3N-01057",
-        "M3N-01063",
-        "M3N-01069",
-        "M3N-01075"
-      ],
-      "families": [
-        "中3/助動詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "You should see a doctor. 問い：この文の意味として最も適切なものを書きなさい。",
-      "a": "あなたは医者に診てもらうべきです。",
-      "ids": [
-        "M3N-00966",
-        "M3N-00972",
-        "M3N-00978",
-        "M3N-00984",
-        "M3N-00990",
-        "M3N-00996",
-        "M3N-01002",
-        "M3N-01008",
-        "M3N-01014",
-        "M3N-01020",
-        "M3N-01026",
-        "M3N-01032",
-        "M3N-01038",
-        "M3N-01044",
-        "M3N-01050",
-        "M3N-01056",
-        "M3N-01062",
-        "M3N-01068",
-        "M3N-01074",
-        "M3N-01080"
-      ],
-      "families": [
-        "中3/助動詞/読解"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の日本語に合う英文を書きなさい。『あそこで歌っている女の子は私の妹です。』",
-      "a": "The girl singing over there is my sister.",
-      "ids": [
-        "M3N-02046",
-        "M3N-02052",
-        "M3N-02058",
-        "M3N-02064",
-        "M3N-02070",
-        "M3N-02076",
-        "M3N-02082",
-        "M3N-02088",
-        "M3N-02094",
-        "M3N-02100",
-        "M3N-02106",
-        "M3N-02112",
-        "M3N-02118",
-        "M3N-02124",
-        "M3N-02130",
-        "M3N-02136",
-        "M3N-02142",
-        "M3N-02148",
-        "M3N-02154",
-        "M3N-02160"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
-      "a": "If I were a bird, I could fly in the sky.",
-      "ids": [
-        "M3N-02283",
-        "M3N-02289",
-        "M3N-02295",
-        "M3N-02301",
-        "M3N-02307",
-        "M3N-02313",
-        "M3N-02319",
-        "M3N-02325",
-        "M3N-02331",
-        "M3N-02337",
-        "M3N-02343",
-        "M3N-02349",
-        "M3N-02355",
-        "M3N-02361",
-        "M3N-02367",
-        "M3N-02373",
-        "M3N-02379",
-        "M3N-02385",
-        "M3N-02391",
-        "M3N-02397"
-      ],
-      "families": [
-        "中3/仮定法/英作文"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の日本語に合う英文を書きなさい。『私は彼が何をほしいのかわかりません。』",
-      "a": "I don't know what he wants.",
-      "ids": [
-        "M3N-02045",
         "M3N-02051",
-        "M3N-02057",
         "M3N-02063",
-        "M3N-02069",
         "M3N-02075",
-        "M3N-02081",
         "M3N-02087",
-        "M3N-02093",
         "M3N-02099",
-        "M3N-02105",
         "M3N-02111",
-        "M3N-02117",
         "M3N-02123",
-        "M3N-02129",
         "M3N-02135",
-        "M3N-02141",
         "M3N-02147",
-        "M3N-02153",
         "M3N-02159"
       ],
       "families": [
@@ -2202,594 +857,27 @@
       ]
     },
     {
-      "count": 20,
-      "excess": 19,
-      "q": "次の日本語に合う英文を書きなさい。『私は英語を勉強するために図書館へ行きました。』",
-      "a": "I went to the library to study English.",
+      "count": 10,
+      "excess": 9,
+      "q": "次の日本語に合う英文を書きなさい。『公園で走っている少年は私の友達です。』",
+      "a": "The boy running in the park is my friend.",
       "ids": [
-        "M3N-01921",
-        "M3N-01927",
-        "M3N-01933",
-        "M3N-01939",
-        "M3N-01945",
-        "M3N-01951",
-        "M3N-01957",
-        "M3N-01963",
-        "M3N-01969",
-        "M3N-01975",
-        "M3N-01981",
-        "M3N-01987",
-        "M3N-01993",
-        "M3N-01999",
-        "M3N-02005",
-        "M3N-02011",
-        "M3N-02017",
-        "M3N-02023",
-        "M3N-02029",
-        "M3N-02035"
+        "M3N-02045",
+        "M3N-02057",
+        "M3N-02069",
+        "M3N-02081",
+        "M3N-02093",
+        "M3N-02105",
+        "M3N-02117",
+        "M3N-02129",
+        "M3N-02141",
+        "M3N-02153"
       ],
       "families": [
-        "中3/不定詞②/英作文"
+        "中3/分詞と間接疑問文/英作文"
       ],
       "prefixes": [
         "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( I / enough / if / had / money / , / would / buy / it / I )",
-      "a": "If I had enough money, I would buy it.",
-      "ids": [
-        "M3N-02285",
-        "M3N-02291",
-        "M3N-02297",
-        "M3N-02303",
-        "M3N-02309",
-        "M3N-02315",
-        "M3N-02321",
-        "M3N-02327",
-        "M3N-02333",
-        "M3N-02339",
-        "M3N-02345",
-        "M3N-02351",
-        "M3N-02357",
-        "M3N-02363",
-        "M3N-02369",
-        "M3N-02375",
-        "M3N-02381",
-        "M3N-02387",
-        "M3N-02393",
-        "M3N-02399"
-      ],
-      "families": [
-        "中3/仮定法/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( I / have / a / friend / to / talk / with )",
-      "a": "I have a friend to talk with.",
-      "ids": [
-        "M3N-01925",
-        "M3N-01931",
-        "M3N-01937",
-        "M3N-01943",
-        "M3N-01949",
-        "M3N-01955",
-        "M3N-01961",
-        "M3N-01967",
-        "M3N-01973",
-        "M3N-01979",
-        "M3N-01985",
-        "M3N-01991",
-        "M3N-01997",
-        "M3N-02003",
-        "M3N-02009",
-        "M3N-02015",
-        "M3N-02021",
-        "M3N-02027",
-        "M3N-02033",
-        "M3N-02039"
-      ],
-      "families": [
-        "中3/不定詞②/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( the / boy / who / is / bike / riding / a )",
-      "a": "The boy who is riding a bike",
-      "ids": [
-        "M3N-02165",
-        "M3N-02171",
-        "M3N-02177",
-        "M3N-02183",
-        "M3N-02189",
-        "M3N-02195",
-        "M3N-02201",
-        "M3N-02207",
-        "M3N-02213",
-        "M3N-02219",
-        "M3N-02225",
-        "M3N-02231",
-        "M3N-02237",
-        "M3N-02243",
-        "M3N-02249",
-        "M3N-02255",
-        "M3N-02261",
-        "M3N-02267",
-        "M3N-02273",
-        "M3N-02279"
-      ],
-      "families": [
-        "中3/関係代名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( to / easy / is / read / this / book )",
-      "a": "This book is easy to read.",
-      "ids": [
-        "M3N-01206",
-        "M3N-01212",
-        "M3N-01218",
-        "M3N-01224",
-        "M3N-01230",
-        "M3N-01236",
-        "M3N-01242",
-        "M3N-01248",
-        "M3N-01254",
-        "M3N-01260",
-        "M3N-01266",
-        "M3N-01272",
-        "M3N-01278",
-        "M3N-01284",
-        "M3N-01290",
-        "M3N-01296",
-        "M3N-01302",
-        "M3N-01308",
-        "M3N-01314",
-        "M3N-01320"
-      ],
-      "families": [
-        "中3/不定詞①，動名詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 20,
-      "excess": 19,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( was / because / absent / he / sick / he )",
-      "a": "He was absent because he was sick.",
-      "ids": [
-        "M3N-01085",
-        "M3N-01091",
-        "M3N-01097",
-        "M3N-01103",
-        "M3N-01109",
-        "M3N-01115",
-        "M3N-01121",
-        "M3N-01127",
-        "M3N-01133",
-        "M3N-01139",
-        "M3N-01145",
-        "M3N-01151",
-        "M3N-01157",
-        "M3N-01163",
-        "M3N-01169",
-        "M3N-01175",
-        "M3N-01181",
-        "M3N-01187",
-        "M3N-01193",
-        "M3N-01199"
-      ],
-      "families": [
-        "中3/接続詞/並びかえ"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "She has been to Kyoto once. を疑問文にしなさい。",
-      "a": "Has she been to Kyoto once?",
-      "ids": [
-        "M3C-00615",
-        "M3C-00635",
-        "M3C-00655",
-        "M3C-00675",
-        "M3C-00695",
-        "M3C-00715",
-        "M3C-00735",
-        "M3C-00755",
-        "M3C-00775",
-        "M3C-00795"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "She has lost her key. を疑問文にしなさい。",
-      "a": "Has she lost her key?",
-      "ids": [
-        "M3C-00616",
-        "M3C-00636",
-        "M3C-00656",
-        "M3C-00676",
-        "M3C-00696",
-        "M3C-00716",
-        "M3C-00736",
-        "M3C-00756",
-        "M3C-00776",
-        "M3C-00796"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "She has visited Tokyo before. を疑問文にしなさい。",
-      "a": "Has she visited Tokyo before?",
-      "ids": [
-        "M3C-00614",
-        "M3C-00634",
-        "M3C-00654",
-        "M3C-00674",
-        "M3C-00694",
-        "M3C-00714",
-        "M3C-00734",
-        "M3C-00754",
-        "M3C-00774",
-        "M3C-00794"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have been playing tennis for two hours. を疑問文にしなさい。",
-      "a": "Have they been playing tennis for two hours?",
-      "ids": [
-        "M3C-01019",
-        "M3C-01039",
-        "M3C-01059",
-        "M3C-01079",
-        "M3C-01099",
-        "M3C-01119",
-        "M3C-01139",
-        "M3C-01159",
-        "M3C-01179",
-        "M3C-01199"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have been to Kyoto once. を疑問文にしなさい。",
-      "a": "Have they been to Kyoto once?",
-      "ids": [
-        "M3C-01015",
-        "M3C-01035",
-        "M3C-01055",
-        "M3C-01075",
-        "M3C-01095",
-        "M3C-01115",
-        "M3C-01135",
-        "M3C-01155",
-        "M3C-01175",
-        "M3C-01195"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have been using this computer since this morning. を疑問文にしなさい。",
-      "a": "Have they been using this computer since this morning?",
-      "ids": [
-        "M3C-01020",
-        "M3C-01040",
-        "M3C-01060",
-        "M3C-01080",
-        "M3C-01100",
-        "M3C-01120",
-        "M3C-01140",
-        "M3C-01160",
-        "M3C-01180",
-        "M3C-01200"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have finished their homework. を疑問文にしなさい。",
-      "a": "Have they finished their homework?",
-      "ids": [
-        "M3C-01013",
-        "M3C-01033",
-        "M3C-01053",
-        "M3C-01073",
-        "M3C-01093",
-        "M3C-01113",
-        "M3C-01133",
-        "M3C-01153",
-        "M3C-01173",
-        "M3C-01193"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have lost their key. を疑問文にしなさい。",
-      "a": "Have they lost their key?",
-      "ids": [
-        "M3C-01016",
-        "M3C-01036",
-        "M3C-01056",
-        "M3C-01076",
-        "M3C-01096",
-        "M3C-01116",
-        "M3C-01136",
-        "M3C-01156",
-        "M3C-01176",
-        "M3C-01196"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "They have visited Tokyo before. を疑問文にしなさい。",
-      "a": "Have they visited Tokyo before?",
-      "ids": [
-        "M3C-01014",
-        "M3C-01034",
-        "M3C-01054",
-        "M3C-01074",
-        "M3C-01094",
-        "M3C-01114",
-        "M3C-01134",
-        "M3C-01154",
-        "M3C-01174",
-        "M3C-01194"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "This bag is more large than that one. の誤りを直しなさい。",
-      "a": "This bag is larger than that one.",
-      "ids": [
-        "M2Y-COMP-0396",
-        "M2Y-COMP-0408",
-        "M2Y-COMP-0420",
-        "M2Y-COMP-0432",
-        "M2Y-COMP-0444",
-        "M2Y-COMP-0456",
-        "M2-COMP2-1462",
-        "M2-COMP2-1486",
-        "M2-COMP2-1510",
-        "M2-COMP2-1534"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2Y-COMP",
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "This question is more easy than that one. の誤りを直しなさい。",
-      "a": "This question is easier than that one.",
-      "ids": [
-        "M2Y-COMP-0399",
-        "M2Y-COMP-0411",
-        "M2Y-COMP-0423",
-        "M2Y-COMP-0435",
-        "M2Y-COMP-0447",
-        "M2Y-COMP-0459",
-        "M2-COMP2-1465",
-        "M2-COMP2-1489",
-        "M2-COMP2-1513",
-        "M2-COMP2-1537"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2Y-COMP",
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "We have been to Kyoto once. を疑問文にしなさい。",
-      "a": "Have we been to Kyoto once?",
-      "ids": [
-        "M3C-00815",
-        "M3C-00835",
-        "M3C-00855",
-        "M3C-00875",
-        "M3C-00895",
-        "M3C-00915",
-        "M3C-00935",
-        "M3C-00955",
-        "M3C-00975",
-        "M3C-00995"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "We have finished our homework. を疑問文にしなさい。",
-      "a": "Have we finished our homework?",
-      "ids": [
-        "M3C-00813",
-        "M3C-00833",
-        "M3C-00853",
-        "M3C-00873",
-        "M3C-00893",
-        "M3C-00913",
-        "M3C-00933",
-        "M3C-00953",
-        "M3C-00973",
-        "M3C-00993"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "We have lost our key. を疑問文にしなさい。",
-      "a": "Have we lost our key?",
-      "ids": [
-        "M3C-00816",
-        "M3C-00836",
-        "M3C-00856",
-        "M3C-00876",
-        "M3C-00896",
-        "M3C-00916",
-        "M3C-00936",
-        "M3C-00956",
-        "M3C-00976",
-        "M3C-00996"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "We have visited Tokyo before. を疑問文にしなさい。",
-      "a": "Have we visited Tokyo before?",
-      "ids": [
-        "M3C-00814",
-        "M3C-00834",
-        "M3C-00854",
-        "M3C-00874",
-        "M3C-00894",
-        "M3C-00914",
-        "M3C-00934",
-        "M3C-00954",
-        "M3C-00974",
-        "M3C-00994"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 10,
-      "excess": 9,
-      "q": "次の語(句)を正しい順に並べかえなさい。 ( This / bag / is / larger / than / that / one )",
-      "a": "This bag is larger than that one.",
-      "ids": [
-        "M2Y-COMP-0397",
-        "M2Y-COMP-0409",
-        "M2Y-COMP-0421",
-        "M2Y-COMP-0433",
-        "M2Y-COMP-0445",
-        "M2Y-COMP-0457",
-        "M2-COMP2-1463",
-        "M2-COMP2-1487",
-        "M2-COMP2-1511",
-        "M2-COMP2-1535"
-      ],
-      "families": [
-        "中2/比較/並びかえ"
-      ],
-      "prefixes": [
-        "M2Y-COMP",
-        "M2-COMP2"
       ]
     },
     {
@@ -3030,6 +1118,158 @@
     {
       "count": 5,
       "excess": 4,
+      "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+      "a": "is going to",
+      "ids": [
+        "M3N-00850",
+        "M3N-00874",
+        "M3N-00898",
+        "M3N-00922",
+        "M3N-00946"
+      ],
+      "families": [
+        "中3/未来の文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+      "a": "is going to",
+      "ids": [
+        "M3N-00844",
+        "M3N-00868",
+        "M3N-00892",
+        "M3N-00916",
+        "M3N-00940"
+      ],
+      "families": [
+        "中3/未来の文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+      "a": "is going to",
+      "ids": [
+        "M3N-00862",
+        "M3N-00886",
+        "M3N-00910",
+        "M3N-00934",
+        "M3N-00958"
+      ],
+      "families": [
+        "中3/未来の文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+      "a": "is going to",
+      "ids": [
+        "M3N-00856",
+        "M3N-00880",
+        "M3N-00904",
+        "M3N-00928",
+        "M3N-00952"
+      ],
+      "families": [
+        "中3/未来の文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+      "a": "Were sent",
+      "ids": [
+        "M3N-01566",
+        "M3N-01590",
+        "M3N-01614",
+        "M3N-01638",
+        "M3N-01662"
+      ],
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+      "a": "Were taken",
+      "ids": [
+        "M3N-01584",
+        "M3N-01608",
+        "M3N-01632",
+        "M3N-01656",
+        "M3N-01680"
+      ],
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+      "a": "Was cleaned",
+      "ids": [
+        "M3N-01572",
+        "M3N-01596",
+        "M3N-01620",
+        "M3N-01644",
+        "M3N-01668"
+      ],
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
+      "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+      "a": "Are read",
+      "ids": [
+        "M3N-01578",
+        "M3N-01602",
+        "M3N-01626",
+        "M3N-01650",
+        "M3N-01674"
+      ],
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 5,
+      "excess": 4,
       "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
       "a": "This bag is larger than that one.",
       "ids": [
@@ -3044,6 +1284,132 @@
       ],
       "prefixes": [
         "M2Y-COMP"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+      "a": "How",
+      "ids": [
+        "M3N-00384",
+        "M3N-00414",
+        "M3N-00444",
+        "M3N-00474"
+      ],
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+      "a": "Why",
+      "ids": [
+        "M3N-00366",
+        "M3N-00396",
+        "M3N-00426",
+        "M3N-00456"
+      ],
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
+      "a": "What",
+      "ids": [
+        "M3N-00390",
+        "M3N-00420",
+        "M3N-00450",
+        "M3N-00480"
+      ],
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-00378",
+        "M3N-00408",
+        "M3N-00438",
+        "M3N-00468"
+      ],
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00372",
+        "M3N-00402",
+        "M3N-00432",
+        "M3N-00462"
+      ],
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+      "a": "He",
+      "ids": [
+        "M3N-00483",
+        "M3N-00519",
+        "M3N-00555",
+        "M3N-00591"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
+      "a": "Spoken",
+      "ids": [
+        "M3N-01561",
+        "M3N-01597",
+        "M3N-01633",
+        "M3N-01669"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
       ]
     },
     {
@@ -3125,6 +1491,96 @@
     {
       "count": 4,
       "excess": 3,
+      "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
+      "a": "Have eaten",
+      "ids": [
+        "M3N-01710",
+        "M3N-01740",
+        "M3N-01770",
+        "M3N-01800"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
+      "a": "Have finished",
+      "ids": [
+        "M3N-01692",
+        "M3N-01722",
+        "M3N-01752",
+        "M3N-01782"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
+      "a": "Have lost",
+      "ids": [
+        "M3N-01686",
+        "M3N-01716",
+        "M3N-01746",
+        "M3N-01776"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I ( have seen / seen / am seen ) this movie, so I know the story. 正しいものを選びなさい。",
+      "a": "Have seen",
+      "ids": [
+        "M3N-01698",
+        "M3N-01728",
+        "M3N-01758",
+        "M3N-01788"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I ( have written / written / am written ) the letter, so I can send it now. 正しいものを選びなさい。",
+      "a": "Have written",
+      "ids": [
+        "M3N-01704",
+        "M3N-01734",
+        "M3N-01764",
+        "M3N-01794"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
       "q": "I am busy. を疑問文にしなさい。",
       "a": "Am I busy?",
       "ids": [
@@ -3141,6 +1597,186 @@
       "prefixes": [
         "GEN-BE",
         "M2-BE",
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02043",
+        "M3N-02067",
+        "M3N-02115",
+        "M3N-02139"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I don't know where does he live. の誤りを直しなさい。",
+      "a": "I don't know where he lives.",
+      "ids": [
+        "M3N-02044",
+        "M3N-02068",
+        "M3N-02116",
+        "M3N-02140"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have ate lunch before. の誤りを直しなさい。",
+      "a": "I have eaten lunch before.",
+      "ids": [
+        "M3N-01702",
+        "M3N-01732",
+        "M3N-01762",
+        "M3N-01792"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have did the work before. の誤りを直しなさい。",
+      "a": "I have done the work before.",
+      "ids": [
+        "M3N-01708",
+        "M3N-01738",
+        "M3N-01768",
+        "M3N-01798"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+      "a": "Finished",
+      "ids": [
+        "M3N-01681",
+        "M3N-01717",
+        "M3N-01753",
+        "M3N-01789"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
+      "a": "Written",
+      "ids": [
+        "M3N-01687",
+        "M3N-01723",
+        "M3N-01759",
+        "M3N-01795"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have saw that movie before. の誤りを直しなさい。",
+      "a": "I have seen that movie before.",
+      "ids": [
+        "M3N-01690",
+        "M3N-01720",
+        "M3N-01750",
+        "M3N-01780"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have went there before. の誤りを直しなさい。",
+      "a": "I have gone there before.",
+      "ids": [
+        "M3N-01684",
+        "M3N-01714",
+        "M3N-01744",
+        "M3N-01774"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I have wrote the letter before. の誤りを直しなさい。",
+      "a": "I have written the letter before.",
+      "ids": [
+        "M3N-01696",
+        "M3N-01726",
+        "M3N-01756",
+        "M3N-01786"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
+      "a": "Him",
+      "ids": [
+        "M3N-00489",
+        "M3N-00525",
+        "M3N-00561",
+        "M3N-00597"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
         "M3N"
       ]
     },
@@ -3164,6 +1800,42 @@
         "GEN-PRS",
         "M2-PRS",
         "M3C",
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "窓を開けてください。",
+      "ids": [
+        "M3N-00732",
+        "M3N-00768",
+        "M3N-00804",
+        "M3N-00840"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "静かにしてください。",
+      "ids": [
+        "M3N-00726",
+        "M3N-00762",
+        "M3N-00798",
+        "M3N-00834"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
         "M3N"
       ]
     },
@@ -3221,6 +1893,420 @@
       "prefixes": [
         "GEN-3RD",
         "M2-3RD"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The bag ( who / which / where ) was in the room is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02184",
+        "M3N-02214",
+        "M3N-02244",
+        "M3N-02274"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The bike ( who / which / where ) was by the tree is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02178",
+        "M3N-02208",
+        "M3N-02238",
+        "M3N-02268"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The book ( who / which / where ) was on the table is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02172",
+        "M3N-02202",
+        "M3N-02232",
+        "M3N-02262"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The boy ( who / which / where ) is running is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02161",
+        "M3N-02191",
+        "M3N-02221",
+        "M3N-02251"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
+      "a": "The boy who plays tennis is kind.",
+      "ids": [
+        "M3N-02170",
+        "M3N-02200",
+        "M3N-02230",
+        "M3N-02260"
+      ],
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The camera ( who / which / where ) was on the desk is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02166",
+        "M3N-02196",
+        "M3N-02226",
+        "M3N-02256"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The computer ( who / which / where ) was in the classroom is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02190",
+        "M3N-02220",
+        "M3N-02250",
+        "M3N-02280"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The girl ( who / which / where ) is singing is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02167",
+        "M3N-02197",
+        "M3N-02227",
+        "M3N-02257"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+      "a": "The girl who lives next door is kind.",
+      "ids": [
+        "M3N-02164",
+        "M3N-02194",
+        "M3N-02224",
+        "M3N-02254"
+      ],
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The man ( who / which / where ) is walking is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02179",
+        "M3N-02209",
+        "M3N-02239",
+        "M3N-02269"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
+      "a": "The man who works here is kind.",
+      "ids": [
+        "M3N-02182",
+        "M3N-02212",
+        "M3N-02242",
+        "M3N-02272"
+      ],
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The room is clean by many students. の誤りを直しなさい。",
+      "a": "The room is cleaned by many students.",
+      "ids": [
+        "M3N-01576",
+        "M3N-01606",
+        "M3N-01636",
+        "M3N-01666"
+      ],
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The student ( who / which / where ) is studying is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02173",
+        "M3N-02203",
+        "M3N-02233",
+        "M3N-02263"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
+      "a": "The student who studies English is kind.",
+      "ids": [
+        "M3N-02176",
+        "M3N-02206",
+        "M3N-02236",
+        "M3N-02266"
+      ],
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The woman ( who / which / where ) is reading is my friend. 空所に入る最も適切な語を書きなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02185",
+        "M3N-02215",
+        "M3N-02245",
+        "M3N-02275"
+      ],
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+      "a": "The woman who teaches us is kind.",
+      "ids": [
+        "M3N-02188",
+        "M3N-02218",
+        "M3N-02248",
+        "M3N-02278"
+      ],
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01448",
+        "M3N-01484",
+        "M3N-01520",
+        "M3N-01556"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01442",
+        "M3N-01478",
+        "M3N-01514",
+        "M3N-01550"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
+      "a": "Read",
+      "ids": [
+        "M3N-01567",
+        "M3N-01603",
+        "M3N-01639",
+        "M3N-01675"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "This book is read by many students. の誤りを直しなさい。",
+      "a": "This book is read by many students.",
+      "ids": [
+        "M3N-01582",
+        "M3N-01612",
+        "M3N-01642",
+        "M3N-01672"
+      ],
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "This computer is use by many students. の誤りを直しなさい。",
+      "a": "This computer is used by many students.",
+      "ids": [
+        "M3N-01588",
+        "M3N-01618",
+        "M3N-01648",
+        "M3N-01678"
+      ],
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "This letter is write by many students. の誤りを直しなさい。",
+      "a": "This letter is written by many students.",
+      "ids": [
+        "M3N-01570",
+        "M3N-01600",
+        "M3N-01630",
+        "M3N-01660"
+      ],
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "This song is sing by many students. の誤りを直しなさい。",
+      "a": "This song is sung by many students.",
+      "ids": [
+        "M3N-01564",
+        "M3N-01594",
+        "M3N-01624",
+        "M3N-01654"
+      ],
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
       ]
     },
     {
@@ -3329,6 +2415,271 @@
       ],
       "prefixes": [
         "M3C"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+      "a": "If I were a teacher, I could help students.",
+      "ids": [
+        "M3N-02295",
+        "M3N-02325",
+        "M3N-02355",
+        "M3N-02385"
+      ],
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
+      "a": "If I were a dog, I could run fast.",
+      "ids": [
+        "M3N-02307",
+        "M3N-02337",
+        "M3N-02367",
+        "M3N-02397"
+      ],
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
+      "a": "If I were a cat, I could jump high.",
+      "ids": [
+        "M3N-02301",
+        "M3N-02331",
+        "M3N-02361",
+        "M3N-02391"
+      ],
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
+      "a": "If I were a fish, I could swim in the sea.",
+      "ids": [
+        "M3N-02289",
+        "M3N-02319",
+        "M3N-02349",
+        "M3N-02379"
+      ],
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+      "a": "If I were a bird, I could fly in the sky.",
+      "ids": [
+        "M3N-02283",
+        "M3N-02313",
+        "M3N-02343",
+        "M3N-02373"
+      ],
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
+      "a": "The student who is reading a book",
+      "ids": [
+        "M3N-02177",
+        "M3N-02207",
+        "M3N-02237",
+        "M3N-02267"
+      ],
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
+      "a": "The boy who is riding a bike",
+      "ids": [
+        "M3N-02165",
+        "M3N-02195",
+        "M3N-02225",
+        "M3N-02255"
+      ],
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / singing / song / girl / is / a )",
+      "a": "The girl who is singing a song",
+      "ids": [
+        "M3N-02171",
+        "M3N-02201",
+        "M3N-02231",
+        "M3N-02261"
+      ],
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
+      "a": "The woman who is taking a picture",
+      "ids": [
+        "M3N-02189",
+        "M3N-02219",
+        "M3N-02249",
+        "M3N-02279"
+      ],
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 4,
+      "excess": 3,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
+      "a": "The man who is using a computer",
+      "ids": [
+        "M3N-02183",
+        "M3N-02213",
+        "M3N-02243",
+        "M3N-02273"
+      ],
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "( She / Her / Hers ) plays tennis. 正しいものを選びなさい。",
+      "a": "She",
+      "ids": [
+        "M3N-00501",
+        "M3N-00537",
+        "M3N-00573"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Do you know (      ) she goes there? 「彼女がどのように行くか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "How",
+      "ids": [
+        "M3N-02066",
+        "M3N-02096",
+        "M3N-02126"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Do you know (      ) she lives? 「彼女がどこに住んでいるか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-02072",
+        "M3N-02102",
+        "M3N-02132"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "ドアを開けないでください。",
+      "ids": [
+        "M3N-00756",
+        "M3N-00792",
+        "M3N-00828"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Don’t run here. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "ここで走らないでください。",
+      "ids": [
+        "M3N-00744",
+        "M3N-00780",
+        "M3N-00816"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
       ]
     },
     {
@@ -3584,6 +2935,176 @@
     {
       "count": 3,
       "excess": 2,
+      "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02073",
+        "M3N-02097",
+        "M3N-02145"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02079",
+        "M3N-02103",
+        "M3N-02151"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I don't know (A) why does she study English (B) why she studies English (C) she why. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02085",
+        "M3N-02109",
+        "M3N-02157"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I don't know what does she want. の誤りを直しなさい。",
+      "a": "I don't know what she wants.",
+      "ids": [
+        "M3N-02074",
+        "M3N-02098",
+        "M3N-02146"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I don't know when does she come. の誤りを直しなさい。",
+      "a": "I don't know when she comes.",
+      "ids": [
+        "M3N-02080",
+        "M3N-02104",
+        "M3N-02152"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I don't know why does she study English. の誤りを直しなさい。",
+      "a": "I don't know why she studies English.",
+      "ids": [
+        "M3N-02086",
+        "M3N-02110",
+        "M3N-02158"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
+      "a": "Eaten",
+      "ids": [
+        "M3N-01699",
+        "M3N-01735",
+        "M3N-01771"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
+      "a": "Done",
+      "ids": [
+        "M3N-01705",
+        "M3N-01741",
+        "M3N-01777"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
+      "a": "Read",
+      "ids": [
+        "M3N-01711",
+        "M3N-01747",
+        "M3N-01783"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "I have just (      ) this movie. (see) の（ ）内を正しくしなさい。",
+      "a": "Seen",
+      "ids": [
+        "M3N-01693",
+        "M3N-01729",
+        "M3N-01765"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
       "q": "I have lived here (      ) three years. 空所に入る最も適切な語を書きなさい。",
       "a": "For",
       "ids": [
@@ -3638,6 +3159,23 @@
     {
       "count": 3,
       "excess": 2,
+      "q": "I talked with ( she / her / hers ). 正しいものを選びなさい。",
+      "a": "Her",
+      "ids": [
+        "M3N-00507",
+        "M3N-00543",
+        "M3N-00579"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
       "q": "Me play soccer. の誤りを直しなさい。",
       "a": "I play soccer.",
       "ids": [
@@ -3664,6 +3202,40 @@
       ],
       "families": [
         "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Please look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "この写真を見てください。",
+      "ids": [
+        "M3N-00750",
+        "M3N-00786",
+        "M3N-00822"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "座ってください。",
+      "ids": [
+        "M3N-00738",
+        "M3N-00774",
+        "M3N-00810"
+      ],
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
       ],
       "prefixes": [
         "M3N"
@@ -3889,6 +3461,40 @@
     {
       "count": 3,
       "excess": 2,
+      "q": "The letter is (      ) by many students. (write) の（ ）内を正しくしなさい。",
+      "a": "Written",
+      "ids": [
+        "M3N-01585",
+        "M3N-01621",
+        "M3N-01657"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "The room is (      ) by many students. (clean) の（ ）内を正しくしなさい。",
+      "a": "Cleaned",
+      "ids": [
+        "M3N-01573",
+        "M3N-01609",
+        "M3N-01645"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
       "q": "They are busy. を疑問文にしなさい。",
       "a": "Are they busy?",
       "ids": [
@@ -3927,6 +3533,74 @@
     {
       "count": 3,
       "excess": 2,
+      "q": "They call her Aya. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01460",
+        "M3N-01496",
+        "M3N-01532"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01454",
+        "M3N-01490",
+        "M3N-01526"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "They call her Kate. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01472",
+        "M3N-01508",
+        "M3N-01544"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "They call her Mary. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01466",
+        "M3N-01502",
+        "M3N-01538"
+      ],
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
       "q": "They play tennis. を疑問文にしなさい。",
       "a": "Do they play tennis?",
       "ids": [
@@ -3943,6 +3617,74 @@
         "GEN-PRS",
         "M2-PRS",
         "M3C"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "This bag is ( her / hers / she ). 正しいものを選びなさい。",
+      "a": "Hers",
+      "ids": [
+        "M3N-00513",
+        "M3N-00549",
+        "M3N-00585"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "This computer is (      ) by many students. (use) の（ ）内を正しくしなさい。",
+      "a": "Used",
+      "ids": [
+        "M3N-01591",
+        "M3N-01627",
+        "M3N-01663"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "This is ( he / him / his ) book. 正しいものを選びなさい。",
+      "a": "His",
+      "ids": [
+        "M3N-00495",
+        "M3N-00531",
+        "M3N-00567"
+      ],
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "This song is (      ) by many students. (sing) の（ ）内を正しくしなさい。",
+      "a": "Sung",
+      "ids": [
+        "M3N-01579",
+        "M3N-01615",
+        "M3N-01651"
+      ],
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
       ]
     },
     {
@@ -5324,6 +5066,74 @@
     {
       "count": 3,
       "excess": 2,
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
+      "a": "I don't know when she will come.",
+      "ids": [
+        "M3N-02064",
+        "M3N-02112",
+        "M3N-02136"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
+      "a": "I don't know where she lives.",
+      "ids": [
+        "M3N-02076",
+        "M3N-02100",
+        "M3N-02148"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
+      "a": "I don't know why she is busy.",
+      "ids": [
+        "M3N-02058",
+        "M3N-02106",
+        "M3N-02130"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
+      "a": "I don't know what she wants.",
+      "ids": [
+        "M3N-02070",
+        "M3N-02094",
+        "M3N-02142"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
       "q": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
       "a": "I have lived in this town since Monday.",
       "ids": [
@@ -5401,6 +5211,23 @@
       ],
       "families": [
         "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 3,
+      "excess": 2,
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( English / fun / learn / is / to )",
+      "a": "English is fun to learn.",
+      "ids": [
+        "M3N-01224",
+        "M3N-01272",
+        "M3N-01320"
+      ],
+      "families": [
+        "中3/不定詞①，動名詞/並びかえ"
       ],
       "prefixes": [
         "M3N"
@@ -6837,6 +6664,102 @@
     {
       "count": 2,
       "excess": 1,
+      "q": "Aya ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01848",
+        "M3N-01920"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Aya enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+      "a": "Playing",
+      "ids": [
+        "M3N-01245",
+        "M3N-01317"
+      ],
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Aya stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Ayaは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01128",
+        "M3N-01200"
+      ],
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Bob ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01824",
+        "M3N-01896"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Bob enjoyed ( to listen / listening / listen ) to music. 正しいものを選びなさい。",
+      "a": "Listening",
+      "ids": [
+        "M3N-01221",
+        "M3N-01293"
+      ],
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Bob stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Bobは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01104",
+        "M3N-01176"
+      ],
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
       "q": "Call me (      ) you arrive at the library. 「〜するとき」に合う語を書きなさい。",
       "a": "When",
       "ids": [
@@ -6893,6 +6816,183 @@
       ],
       "families": [
         "中3/接続詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) he is busy? 「彼がなぜ忙しいか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "Why",
+      "ids": [
+        "M3N-02120",
+        "M3N-02150"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) he wants? 「彼が何がほしいか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "What",
+      "ids": [
+        "M3N-02048",
+        "M3N-02078"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) he will come? 「彼がいつ来るか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-02084",
+        "M3N-02114"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) she is busy? 「彼女がなぜ忙しいか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "Why",
+      "ids": [
+        "M3N-02060",
+        "M3N-02090"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) she wants? 「彼女が何がほしいか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "What",
+      "ids": [
+        "M3N-02108",
+        "M3N-02138"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Do you know (      ) she will come? 「彼女がいつ来るか」になるように、空所に入る最も適切な語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-02054",
+        "M3N-02144"
+      ],
+      "families": [
+        "中3/分詞と間接疑問文/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Emi ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01836",
+        "M3N-01908"
+      ],
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Emi enjoyed ( to watch / watching / watch ) the movie. 正しいものを選びなさい。",
+      "a": "Watching",
+      "ids": [
+        "M3N-01233",
+        "M3N-01305"
+      ],
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Emi has been to Osaka once. を疑問文にしなさい。",
+      "a": "Has Emi been to Osaka once?",
+      "ids": [
+        "M3C-00275",
+        "M3C-00916"
+      ],
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Emi is more young than Yuki. の誤りを直しなさい。",
+      "a": "Emi is younger than Yuki.",
+      "ids": [
+        "M2Y-COMP-0420",
+        "M2-COMP2-1486"
+      ],
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "Emi stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Emiは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01116",
+        "M3N-01188"
+      ],
+      "families": [
+        "中3/接続詞/読解"
       ],
       "prefixes": [
         "M3N"
@@ -9368,986 +9468,6 @@
       "prefixes": [
         "GEN-PDID",
         "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I cooked dinner yesterday. を疑問文にしなさい。",
-      "a": "Did I cook dinner yesterday?",
-      "ids": [
-        "GEN-PDID-2069",
-        "M3C-00163"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I did my homework yesterday. を疑問文にしなさい。",
-      "a": "Did I do my homework yesterday?",
-      "ids": [
-        "GEN-PDID-2081",
-        "GEN-IRR-2199"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I got up at six yesterday. を疑問文にしなさい。",
-      "a": "Did I get up at six yesterday?",
-      "ids": [
-        "GEN-PDID-2083",
-        "GEN-IRR-2202"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I had a test yesterday. を疑問文にしなさい。",
-      "a": "Did I have a test yesterday?",
-      "ids": [
-        "GEN-PDID-2079",
-        "GEN-IRR-2196"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
-      "a": "Have I been playing tennis for two hours?",
-      "ids": [
-        "M3C-00019",
-        "M3C-00779"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have been to Kyoto once. を疑問文にしなさい。",
-      "a": "Have I been to Kyoto once?",
-      "ids": [
-        "M3C-00015",
-        "M3C-00315"
-      ],
-      "families": [
-        "中3/現在完了形（完了・経験）/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have been using this computer since this morning. を疑問文にしなさい。",
-      "a": "Have I been using this computer since this morning?",
-      "ids": [
-        "M3C-00020",
-        "M3C-00478"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/変形"
-      ],
-      "prefixes": [
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01837",
-        "M3N-01891"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01819",
-        "M3N-01873"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01813",
-        "M3N-01867"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01843",
-        "M3N-01897"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01831",
-        "M3N-01885"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01825",
-        "M3N-01879"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01849",
-        "M3N-01903"
-      ],
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I help at home. を yesterday を使って過去の文にしなさい。",
-      "a": "I helped at home yesterday.",
-      "ids": [
-        "GEN-PAST-1878",
-        "M2-PAST-0339"
-      ],
-      "families": [
-        "中1/一般動詞の過去形/変形",
-        "中2/一般動詞の過去形/変形"
-      ],
-      "prefixes": [
-        "GEN-PAST",
-        "M2-PAST"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I help at home. を疑問文にしなさい。",
-      "a": "Do I help at home?",
-      "ids": [
-        "GEN-PRS-0573",
-        "M2-PRS-0159"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中2/一般動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M2-PRS"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I helped at home yesterday. を疑問文にしなさい。",
-      "a": "Did I help at home yesterday?",
-      "ids": [
-        "GEN-PDID-2065",
-        "M2-PAST-0340"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中2/過去の疑問文・否定文/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M2-PAST"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I know Emi. I often talk with (      ).",
-      "a": "her",
-      "ids": [
-        "R2-PRON-0068",
-        "F1-PRON-0023"
-      ],
-      "families": [
-        "中2/人称代名詞/空所補充",
-        "中1/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "R2-PRON",
-        "F1-PRON"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I know Ken and Emi. I often talk with (      ).",
-      "a": "them",
-      "ids": [
-        "R2-PRON-0072",
-        "F1-PRON-0029"
-      ],
-      "families": [
-        "中2/人称代名詞/空所補充",
-        "中1/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "R2-PRON",
-        "F1-PRON"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I know Ken. I often talk with (      ).",
-      "a": "him",
-      "ids": [
-        "R2-PRON-0066",
-        "F1-PRON-0020"
-      ],
-      "families": [
-        "中2/人称代名詞/空所補充",
-        "中1/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "R2-PRON",
-        "F1-PRON"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I know you. I often talk with (      ).",
-      "a": "You",
-      "ids": [
-        "R2-PRON-0064",
-        "F1-PRON-0017"
-      ],
-      "families": [
-        "中2/人称代名詞/空所補充",
-        "中1/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "R2-PRON",
-        "F1-PRON"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I listen to music. を否定文にしなさい。",
-      "a": "I do not listen to music.",
-      "ids": [
-        "GEN-PRS-0570",
-        "M3C-00042"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I listen to music. を疑問文にしなさい。",
-      "a": "Do I listen to music?",
-      "ids": [
-        "GEN-PRS-0569",
-        "M3C-00041"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I listened to music yesterday. を否定文にしなさい。",
-      "a": "I did not listen to music yesterday.",
-      "ids": [
-        "GEN-PDID-2064",
-        "M3C-00044"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I listened to music yesterday. を疑問文にしなさい。",
-      "a": "Did I listen to music yesterday?",
-      "ids": [
-        "GEN-PDID-2063",
-        "M3C-00043"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I made a cake yesterday. を疑問文にしなさい。",
-      "a": "Did I make a cake yesterday?",
-      "ids": [
-        "GEN-PDID-2085",
-        "GEN-IRR-2205"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I play tennis. は be動詞の文か、一般動詞の文か答えなさい。",
-      "a": "一般動詞の文",
-      "ids": [
-        "E1-BD-002",
-        "M3N-00122"
-      ],
-      "families": [
-        "中1/区別/見分け",
-        "中3/be動詞と一般動詞（現在形）/見分け"
-      ],
-      "prefixes": [
-        "E1-BD",
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I play tennis. を yesterday を使って過去の文にしなさい。",
-      "a": "I played tennis yesterday.",
-      "ids": [
-        "GEN-PAST-1863",
-        "M2-PAST-0337"
-      ],
-      "families": [
-        "中1/一般動詞の過去形/変形",
-        "中2/一般動詞の過去形/変形"
-      ],
-      "prefixes": [
-        "GEN-PAST",
-        "M2-PAST"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I play tennis. を否定文にしなさい。",
-      "a": "I do not play tennis.",
-      "ids": [
-        "GEN-PRS-0554",
-        "M3C-00002"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I played tennis yesterday. を否定文にしなさい。",
-      "a": "I did not play tennis yesterday.",
-      "ids": [
-        "GEN-PDID-2056",
-        "M3C-00004"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I read books. を否定文にしなさい。",
-      "a": "I do not read books.",
-      "ids": [
-        "GEN-PRS-0598",
-        "M3C-00082"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I read books. を疑問文にしなさい。",
-      "a": "Do I read books?",
-      "ids": [
-        "GEN-PRS-0597",
-        "M3C-00081"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I saw a movie yesterday. を疑問文にしなさい。",
-      "a": "Did I see a movie yesterday?",
-      "ids": [
-        "GEN-PDID-2073",
-        "GEN-IRR-2187"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I studied English yesterday. を否定文にしなさい。",
-      "a": "I did not study English yesterday.",
-      "ids": [
-        "GEN-PDID-2060",
-        "M3C-00024"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I studied English yesterday. を疑問文にしなさい。",
-      "a": "Did I study English yesterday?",
-      "ids": [
-        "GEN-PDID-2059",
-        "M3C-00023"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I study English. を否定文にしなさい。",
-      "a": "I do not study English.",
-      "ids": [
-        "GEN-PRS-0562",
-        "M3C-00022"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I study English. を疑問文にしなさい。",
-      "a": "Do I study English?",
-      "ids": [
-        "GEN-PRS-0561",
-        "M3C-00021"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I was busy yesterday. を否定文にしなさい。",
-      "a": "I was not busy yesterday.",
-      "ids": [
-        "GEN-PBE-1506",
-        "M3N-00245"
-      ],
-      "families": [
-        "中1/過去のbe動詞/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PBE",
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I watch TV. を否定文にしなさい。",
-      "a": "I do not watch TV.",
-      "ids": [
-        "GEN-PRS-0558",
-        "M3C-00182"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I watch TV. を疑問文にしなさい。",
-      "a": "Do I watch TV?",
-      "ids": [
-        "GEN-PRS-0557",
-        "M3C-00181"
-      ],
-      "families": [
-        "中1/一般動詞/変形",
-        "中3/be動詞と一般動詞（現在形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PRS",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I watched TV yesterday. を否定文にしなさい。",
-      "a": "I did not watch TV yesterday.",
-      "ids": [
-        "GEN-PDID-2058",
-        "M3C-00184"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I watched TV yesterday. を疑問文にしなさい。",
-      "a": "Did I watch TV yesterday?",
-      "ids": [
-        "GEN-PDID-2057",
-        "M3C-00183"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中3/be動詞と一般動詞（過去形）/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "M3C"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I went to the library by bike. になる質問文を書きなさい。",
-      "a": "How did you go to the library?",
-      "ids": [
-        "M3N-00363",
-        "M3N-00465"
-      ],
-      "families": [
-        "中3/疑問詞/答え方"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I went to the park by bike. になる質問文を書きなさい。",
-      "a": "How did you go to the park?",
-      "ids": [
-        "M3N-00369",
-        "M3N-00471"
-      ],
-      "families": [
-        "中3/疑問詞/答え方"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I went to the park yesterday. を疑問文にしなさい。",
-      "a": "Did I go to the park yesterday?",
-      "ids": [
-        "GEN-PDID-2071",
-        "GEN-IRR-2184"
-      ],
-      "families": [
-        "中1/過去の疑問文・否定文/変形",
-        "中1/不規則動詞/変形"
-      ],
-      "prefixes": [
-        "GEN-PDID",
-        "GEN-IRR"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I went to the room by bike. になる質問文を書きなさい。",
-      "a": "How did you go to the room?",
-      "ids": [
-        "M3N-00387",
-        "M3N-00477"
-      ],
-      "families": [
-        "中3/疑問詞/答え方"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "I went to the station by bike. になる質問文を書きなさい。",
-      "a": "How did you go to the station?",
-      "ids": [
-        "M3N-00375",
-        "M3N-00459"
-      ],
-      "families": [
-        "中3/疑問詞/答え方"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Is he busy? に Yes で答えなさい。",
-      "a": "Yes, he is.",
-      "ids": [
-        "GEN-BE-0167",
-        "GEN-BE-0279"
-      ],
-      "families": [
-        "中1/be動詞/答え方"
-      ],
-      "prefixes": [
-        "GEN-BE"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Is he kind? に Yes で答えなさい。",
-      "a": "Yes, he is.",
-      "ids": [
-        "GEN-BE-0179",
-        "GEN-BE-0303"
-      ],
-      "families": [
-        "中1/be動詞/答え方"
-      ],
-      "prefixes": [
-        "GEN-BE"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Is she kind? に Yes で答えなさい。",
-      "a": "Yes, she is.",
-      "ids": [
-        "GEN-BE-0219",
-        "GEN-BE-0451"
-      ],
-      "families": [
-        "中1/be動詞/答え方"
-      ],
-      "prefixes": [
-        "GEN-BE"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is beautifuller than Tom. の誤りを直しなさい。",
-      "a": "Ken is more beautiful than Tom.",
-      "ids": [
-        "M2-COMP2-1474",
-        "M2-COMP2-1522"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is more busy than Tom. の誤りを直しなさい。",
-      "a": "Ken is busier than Tom.",
-      "ids": [
-        "M2-COMP2-1468",
-        "M2-COMP2-1516"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is more fast than Tom. の誤りを直しなさい。",
-      "a": "Ken is faster than Tom.",
-      "ids": [
-        "M2-COMP2-1459",
-        "M2-COMP2-1507"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is more small than Tom. の誤りを直しなさい。",
-      "a": "Ken is smaller than Tom.",
-      "ids": [
-        "M2-COMP2-1456",
-        "M2-COMP2-1504"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is more tall than Tom. の誤りを直しなさい。",
-      "a": "Ken is taller than Tom.",
-      "ids": [
-        "M2-COMP2-1453",
-        "M2-COMP2-1501"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken is popularer than Tom. の誤りを直しなさい。",
-      "a": "Ken is more popular than Tom.",
-      "ids": [
-        "M2-COMP2-1471",
-        "M2-COMP2-1519"
-      ],
-      "families": [
-        "中2/比較/間違い直し"
-      ],
-      "prefixes": [
-        "M2-COMP2"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "Ken knows me. He often talks with (      ).",
-      "a": "me",
-      "ids": [
-        "R2-PRON-0062",
-        "F1-PRON-0014"
-      ],
-      "families": [
-        "中2/人称代名詞/空所補充",
-        "中1/人称代名詞/空所補充"
-      ],
-      "prefixes": [
-        "R2-PRON",
-        "F1-PRON"
       ]
     }
   ]
