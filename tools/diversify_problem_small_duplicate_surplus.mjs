@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+const HTML='problem-app/index.html',OUT='audit/PROBLEM_APP_SMALL_DUPLICATE_SURPLUS_DIVERSIFICATION.json';
+let html=fs.readFileSync(HTML,'utf8');const re=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i,m=re.exec(html);if(!m)throw Error('qb-data');
+const all=JSON.parse(m[1]),rows=all.filter(x=>x?.subject==='英語');
+const norm=s=>String(s??'').normalize('NFKC').replace(/\s+/g,' ').trim().toLowerCase();const key=x=>norm(x.q)+'\u0000'+norm(x.a),fam=x=>`${x.grade}/${x.category}/${x.type}`;
+const byQA=new Map();for(const x of rows){const k=key(x),a=byQA.get(k)||[];a.push(x);byQA.set(k,a);}const small=[...byQA.values()].filter(a=>a.length>=2&&a.length<=4);
+const targets=new Set(['中1/be動詞/変形','中2/be動詞/変形','中3/be動詞と一般動詞（現在形）/変形','中1/be動詞/間違い直し','中1/三単現/変形','中2/三単現/変形','中2/三単現/間違い直し','中1/三単現/空所補充','中2/不定詞/空所補充','中2/不定詞/間違い直し','中3/分詞と間接疑問文/空所補充','中2/助動詞/並びかえ','中2/助動詞/選択','中2/動名詞/変形','中2/動名詞/空所補充','中2/比較/間違い直し','中1/頻度副詞/空所補充','中1/並びかえ/並びかえ','中2/未来表現/変形','中2/未来表現/間違い直し']);
+const names=['Tom','Ken','Mike','Bob','John','Emi','Yuki','Aya','Lucy','Mary','Ann','Kate'];
+const adjs=['happy','busy','tired','young','kind','ready','hungry','fine','quiet','careful'];
+const acts=[['study English','studies English'],['play soccer','plays soccer'],['read books','reads books'],['use a computer','uses a computer'],['visit the library','visits the library'],['watch TV','watches TV'],['listen to music','listens to music'],['clean the room','cleans the room'],['practice the piano','practices the piano'],['walk to school','walks to school'],['make lunch','makes lunch'],['take pictures','takes pictures']];
+const gerunds=[['play soccer','playing soccer'],['read books','reading books'],['study English','studying English'],['use a computer','using a computer'],['swim','swimming'],['run','running'],['make lunch','making lunch'],['take pictures','taking pictures'],['listen to music','listening to music'],['watch TV','watching TV']];
+const comps=[['This bag','that one','large','larger'],['This book','that one','small','smaller'],['This question','that one','easy','easier'],['Tom','Ken','tall','taller'],['Emi','Yuki','young','younger'],['This room','that one','big','bigger'],['My bike','your bike','fast','faster'],['This desk','that one','heavy','heavier'],['This river','that one','long','longer'],['This box','that one','light','lighter']];
+function pick(a,i){return a[i%a.length];}function cap(s){return s[0].toUpperCase()+s.slice(1);}function scramble(s){const w=s.replace(/[.?]/g,'').split(/\s+/),o=[];for(let j=1;j<w.length;j+=2)o.push(w[j]);for(let j=0;j<w.length;j+=2)o.push(w[j]);return o.join(' / ');}function verbParts(s){const a=s.split(' ');return [a[0],a.slice(1).join(' ')];}
+function build(f,i){const n=pick(names,i),adj=pick(adjs,Math.floor(i/names.length)),act=pick(acts,Math.floor(i/names.length));
+ if(f==='中1/be動詞/変形'||f==='中2/be動詞/変形'){if(i%2===0)return{q:`${n} is ${adj}. を疑問文にしなさい。`,a:`Is ${n} ${adj}?`};return{q:`${n} is ${adj}. を否定文にしなさい。`,a:`${n} is not ${adj}.`};}
+ if(f==='中3/be動詞と一般動詞（現在形）/変形'){if(i%2===0)return{q:`${n} is ${adj}. を疑問文にしなさい。`,a:`Is ${n} ${adj}?`};return{q:`${n} ${act[1]}. を否定文にしなさい。`,a:`${n} does not ${act[0]}.`};}
+ if(f==='中1/be動詞/間違い直し'){return{q:`${n} are ${adj}. の誤りを直しなさい。`,a:`${n} is ${adj}.`};}
+ if(f==='中1/三単現/変形'||f==='中2/三単現/変形'){if(i%2===0)return{q:`${n} ${act[1]} every day. を疑問文にしなさい。`,a:`Does ${n} ${act[0]} every day?`};return{q:`${n} ${act[1]} every day. を否定文にしなさい。`,a:`${n} does not ${act[0]} every day.`};}
+ if(f==='中2/三単現/間違い直し'){return{q:`${n} ${act[0]} every day. の誤りを直しなさい。`,a:`${n} ${act[1]} every day.`};}
+ if(f==='中1/三単現/空所補充'){const [v,rest]=verbParts(act[0]);return{q:`${n} (      ) ${rest} every day. (${v}) の語を正しく変化させなさい。`,a:cap(act[1].split(' ')[0])};}
+ if(f==='中2/不定詞/空所補充'){const [v,rest]=verbParts(act[0]);return{q:`${n} wants (      ) ${rest}. (${v}) の語を使って空所を完成させなさい。`,a:`To ${v}`};}
+ if(f==='中2/不定詞/間違い直し'){return{q:`${n} wants ${act[0]}. の誤りを直しなさい。`,a:`${n} wants to ${act[0]}.`};}
+ if(f==='中3/分詞と間接疑問文/空所補充'){const kinds=[['where','lives','どこに住んでいるか'],['why','is busy','なぜ忙しいのか'],['how','goes to school','どのように学校へ行くか'],['when','studies English','いつ英語を勉強するか']];const p=pick(kinds,Math.floor(i/names.length));return{q:`Do you know (      ) ${n} ${p[1]}? 「${n}が${p[2]}」になるように、空所に入る最も適切な語を書きなさい。`,a:cap(p[0])};}
+ if(f==='中2/助動詞/並びかえ'){const s=`${n} can ${act[0]}.`;return{q:`次の語(句)を正しい順に並べかえなさい。 ( ${scramble(s)} )`,a:s};}
+ if(f==='中2/助動詞/選択'){return{q:`${n} ( can / is / does ) ${act[0]}. 正しいものを選びなさい。`,a:'Can'};}
+ if(f==='中2/動名詞/変形'){const g=pick(gerunds,Math.floor(i/names.length));return{q:`${n} likes to ${g[0]}. を動名詞を使った文に書きかえなさい。`,a:`${n} likes ${g[1]}.`};}
+ if(f==='中2/動名詞/空所補充'){const g=pick(gerunds,Math.floor(i/names.length)),[v,rest]=verbParts(g[0]);return{q:`${n} enjoys (      ) ${rest}. (${v}) の語を正しく変化させなさい。`,a:cap(g[1].split(' ')[0])};}
+ if(f==='中2/比較/間違い直し'){const c=pick(comps,i),wrong=c[3].startsWith('more ')?`${c[2]}er`:`more ${c[2]}`;return{q:`${c[0]} is ${wrong} than ${c[1]}. の誤りを直しなさい。`,a:`${c[0]} is ${c[3]} than ${c[1]}.`};}
+ if(f==='中1/頻度副詞/空所補充'){const adv=pick([['always','いつも'],['often','よく'],['never','決して〜ない']],Math.floor(i/names.length));return{q:`${n} (      ) ${act[1]}. 「${adv[1]}」の意味になるように、空所に入る語を書きなさい。`,a:cap(adv[0])};}
+ if(f==='中1/並びかえ/並びかえ'){const s=`${n} ${act[1]} every day.`;return{q:`次の語(句)を正しい順に並べかえなさい。 ( ${scramble(s)} )`,a:s};}
+ if(f==='中2/未来表現/変形'){return{q:`${n} will ${act[0]} tomorrow. を be going to を使った文に書きかえなさい。`,a:`${n} is going to ${act[0]} tomorrow.`};}
+ if(f==='中2/未来表現/間違い直し'){return{q:`${n} is go to ${act[0]} tomorrow. の誤りを直しなさい。`,a:`${n} is going to ${act[0]} tomorrow.`};}
+ return null;}
+const used=new Set(rows.map(key));const idx={};const stats={small_groups_before:small.length,small_rows_before:small.reduce((s,a)=>s+a.length,0),changed_rows:0,groups_touched:0,by_family:{},unsupported_surplus:{},samples:[]};
+for(const group of small){let touched=false;for(let j=1;j<group.length;j++){const x=group[j],f=fam(x);if(!targets.has(f)){stats.unsupported_surplus[f]=(stats.unsupported_surplus[f]||0)+1;continue;}let i=idx[f]||0,out=null,k='';for(let tries=0;tries<2000;tries++,i++){out=build(f,i);if(!out)break;k=norm(out.q)+'\u0000'+norm(out.a);if(!used.has(k))break;out=null;}idx[f]=i+1;if(!out)continue;const before={q:x.q,a:x.a};x.q=out.q;x.a=out.a;used.add(k);stats.changed_rows++;stats.by_family[f]=(stats.by_family[f]||0)+1;touched=true;if(stats.samples.length<120)stats.samples.push({id:x.id,family:f,before,after:{q:x.q,a:x.a}});}if(touched)stats.groups_touched++;}
+const after=new Map();for(const x of rows){const k=key(x),a=after.get(k)||[];a.push(x);after.set(k,a);}const dup=[...after.values()].filter(a=>a.length>1);stats.duplicate_groups_after=dup.length;stats.duplicate_rows_after=dup.reduce((s,a)=>s+a.length,0);stats.duplicate_excess_after=dup.reduce((s,a)=>s+a.length-1,0);stats.duplicate_row_ratio_after=Number((stats.duplicate_rows_after/rows.length).toFixed(6));stats.groups_ge5_after=dup.filter(a=>a.length>=5).length;
+const newJson=JSON.stringify(all);html=html.slice(0,m.index)+m[0].replace(m[1],newJson)+html.slice(m.index+m[0].length);fs.writeFileSync(HTML,html);fs.writeFileSync(OUT,JSON.stringify({generated_at:new Date().toISOString(),...stats},null,2)+'\n');console.log(JSON.stringify(stats,null,2));if(stats.groups_ge5_after)throw Error('ge5 regression');if(!stats.changed_rows)throw Error('no rows changed');
