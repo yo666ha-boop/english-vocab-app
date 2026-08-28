@@ -1,0 +1,968 @@
+{
+  "generated_at": "2026-08-28T11:41:33.983Z",
+  "changed_rows": 468,
+  "awkward_present_perfect_negative": 0,
+  "question_answer_case": 468,
+  "samples": [
+    {
+      "id": "E1-BQ-005",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "Are he busy? の誤りを直しなさい。",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "Are he busy? の誤りを直しなさい。",
+        "a": "Is He busy?"
+      }
+    },
+    {
+      "id": "E1-BQ-007",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is a teacher. を疑問文にしなさい。",
+        "a": "Is she a teacher?"
+      },
+      "after": {
+        "q": "She is a teacher. を疑問文にしなさい。",
+        "a": "Is She a teacher?"
+      }
+    },
+    {
+      "id": "E1-3S-002",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She likes music. を疑問文にしなさい。",
+        "a": "Does she like music?"
+      },
+      "after": {
+        "q": "She likes music. を疑問文にしなさい。",
+        "a": "Does She like music?"
+      }
+    },
+    {
+      "id": "E1-3S-008",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does she play tennis?"
+      },
+      "after": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does She play tennis?"
+      }
+    },
+    {
+      "id": "E1-3S-010",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "Does she likes music? の誤りを直しなさい。",
+        "a": "Does she like music?"
+      },
+      "after": {
+        "q": "Does she likes music? の誤りを直しなさい。",
+        "a": "Does She like music?"
+      }
+    },
+    {
+      "id": "E1-3S-013",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『彼女はピアノをひきますか。』",
+        "a": "Does she play the piano?"
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼女はピアノをひきますか。』",
+        "a": "Does She play the piano?"
+      }
+    },
+    {
+      "id": "E1-WR-009",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『彼は忙しいですか。』",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼は忙しいですか。』",
+        "a": "Is He busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0022",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is hungry. を疑問文にしなさい。",
+        "a": "Is he hungry?"
+      },
+      "after": {
+        "q": "He is hungry. を疑問文にしなさい。",
+        "a": "Is He hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0026",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is tired. を疑問文にしなさい。",
+        "a": "Is she tired?"
+      },
+      "after": {
+        "q": "She is tired. を疑問文にしなさい。",
+        "a": "Is She tired?"
+      }
+    },
+    {
+      "id": "GEN-BE-0146",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is old. を疑問文にしなさい。",
+        "a": "Is he old?"
+      },
+      "after": {
+        "q": "He is old. を疑問文にしなさい。",
+        "a": "Is He old?"
+      }
+    },
+    {
+      "id": "GEN-BE-0162",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      },
+      "after": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is He happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0166",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is He busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0178",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is kind. を疑問文にしなさい。",
+        "a": "Is he kind?"
+      },
+      "after": {
+        "q": "He is kind. を疑問文にしなさい。",
+        "a": "Is He kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0194",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is he fine?"
+      },
+      "after": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is He fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0202",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is she happy?"
+      },
+      "after": {
+        "q": "She is happy. を疑問文にしなさい。",
+        "a": "Is She happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0206",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is She busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0218",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is kind. を疑問文にしなさい。",
+        "a": "Is she kind?"
+      },
+      "after": {
+        "q": "She is kind. を疑問文にしなさい。",
+        "a": "Is She kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0234",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is she fine?"
+      },
+      "after": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is She fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0242",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is ready. を疑問文にしなさい。",
+        "a": "Is he ready?"
+      },
+      "after": {
+        "q": "He is ready. を疑問文にしなさい。",
+        "a": "Is He ready?"
+      }
+    },
+    {
+      "id": "GEN-BE-0262",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is sad. を疑問文にしなさい。",
+        "a": "Is she sad?"
+      },
+      "after": {
+        "q": "She is sad. を疑問文にしなさい。",
+        "a": "Is She sad?"
+      }
+    },
+    {
+      "id": "GEN-BE-0306",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is he busy?"
+      },
+      "after": {
+        "q": "He is busy. を疑問文にしなさい。",
+        "a": "Is He busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0314",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is hungry. を疑問文にしなさい。",
+        "a": "Is she hungry?"
+      },
+      "after": {
+        "q": "She is hungry. を疑問文にしなさい。",
+        "a": "Is She hungry?"
+      }
+    },
+    {
+      "id": "GEN-BE-0330",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is young. を疑問文にしなさい。",
+        "a": "Is he young?"
+      },
+      "after": {
+        "q": "He is young. を疑問文にしなさい。",
+        "a": "Is He young?"
+      }
+    },
+    {
+      "id": "GEN-BE-0334",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is free. を疑問文にしなさい。",
+        "a": "Is she free?"
+      },
+      "after": {
+        "q": "She is free. を疑問文にしなさい。",
+        "a": "Is She free?"
+      }
+    },
+    {
+      "id": "GEN-BE-0362",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is he fine?"
+      },
+      "after": {
+        "q": "He is fine. を疑問文にしなさい。",
+        "a": "Is He fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0374",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is he happy?"
+      },
+      "after": {
+        "q": "He is happy. を疑問文にしなさい。",
+        "a": "Is He happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0382",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is ready. を疑問文にしなさい。",
+        "a": "Is she ready?"
+      },
+      "after": {
+        "q": "She is ready. を疑問文にしなさい。",
+        "a": "Is She ready?"
+      }
+    },
+    {
+      "id": "GEN-BE-0390",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is She busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0402",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My sister is happy. を疑問文にしなさい。",
+        "a": "Is my sister happy?"
+      },
+      "after": {
+        "q": "My sister is happy. を疑問文にしなさい。",
+        "a": "Is My sister happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0406",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My sister is busy. を疑問文にしなさい。",
+        "a": "Is my sister busy?"
+      },
+      "after": {
+        "q": "My sister is busy. を疑問文にしなさい。",
+        "a": "Is My sister busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0410",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is good. を疑問文にしなさい。",
+        "a": "Is he good?"
+      },
+      "after": {
+        "q": "He is good. を疑問文にしなさい。",
+        "a": "Is He good?"
+      }
+    },
+    {
+      "id": "GEN-BE-0414",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is young. を疑問文にしなさい。",
+        "a": "Is she young?"
+      },
+      "after": {
+        "q": "She is young. を疑問文にしなさい。",
+        "a": "Is She young?"
+      }
+    },
+    {
+      "id": "GEN-BE-0418",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My sister is kind. を疑問文にしなさい。",
+        "a": "Is my sister kind?"
+      },
+      "after": {
+        "q": "My sister is kind. を疑問文にしなさい。",
+        "a": "Is My sister kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0434",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My sister is fine. を疑問文にしなさい。",
+        "a": "Is my sister fine?"
+      },
+      "after": {
+        "q": "My sister is fine. を疑問文にしなさい。",
+        "a": "Is My sister fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0442",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My brother is happy. を疑問文にしなさい。",
+        "a": "Is my brother happy?"
+      },
+      "after": {
+        "q": "My brother is happy. を疑問文にしなさい。",
+        "a": "Is My brother happy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0446",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My brother is busy. を疑問文にしなさい。",
+        "a": "Is my brother busy?"
+      },
+      "after": {
+        "q": "My brother is busy. を疑問文にしなさい。",
+        "a": "Is My brother busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0450",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He is free. を疑問文にしなさい。",
+        "a": "Is he free?"
+      },
+      "after": {
+        "q": "He is free. を疑問文にしなさい。",
+        "a": "Is He free?"
+      }
+    },
+    {
+      "id": "GEN-BE-0454",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is she busy?"
+      },
+      "after": {
+        "q": "She is busy. を疑問文にしなさい。",
+        "a": "Is She busy?"
+      }
+    },
+    {
+      "id": "GEN-BE-0458",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My brother is kind. を疑問文にしなさい。",
+        "a": "Is my brother kind?"
+      },
+      "after": {
+        "q": "My brother is kind. を疑問文にしなさい。",
+        "a": "Is My brother kind?"
+      }
+    },
+    {
+      "id": "GEN-BE-0470",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is she fine?"
+      },
+      "after": {
+        "q": "She is fine. を疑問文にしなさい。",
+        "a": "Is She fine?"
+      }
+    },
+    {
+      "id": "GEN-BE-0474",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "My brother is fine. を疑問文にしなさい。",
+        "a": "Is my brother fine?"
+      },
+      "after": {
+        "q": "My brother is fine. を疑問文にしなさい。",
+        "a": "Is My brother fine?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0857",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He plays tennis. を疑問文にしなさい。",
+        "a": "Does he play tennis?"
+      },
+      "after": {
+        "q": "He plays tennis. を疑問文にしなさい。",
+        "a": "Does He play tennis?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0861",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He watches TV. を疑問文にしなさい。",
+        "a": "Does he watch TV?"
+      },
+      "after": {
+        "q": "He watches TV. を疑問文にしなさい。",
+        "a": "Does He watch TV?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0865",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He studies English. を疑問文にしなさい。",
+        "a": "Does he study English?"
+      },
+      "after": {
+        "q": "He studies English. を疑問文にしなさい。",
+        "a": "Does He study English?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0869",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He cleans the room. を疑問文にしなさい。",
+        "a": "Does he clean the room?"
+      },
+      "after": {
+        "q": "He cleans the room. を疑問文にしなさい。",
+        "a": "Does He clean the room?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0873",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He listens to music. を疑問文にしなさい。",
+        "a": "Does he listen to music?"
+      },
+      "after": {
+        "q": "He listens to music. を疑問文にしなさい。",
+        "a": "Does He listen to music?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0877",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does he help at home?"
+      },
+      "after": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does He help at home?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0881",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He uses a computer. を疑問文にしなさい。",
+        "a": "Does he use a computer?"
+      },
+      "after": {
+        "q": "He uses a computer. を疑問文にしなさい。",
+        "a": "Does He use a computer?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0885",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does he cook dinner?"
+      },
+      "after": {
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does He cook dinner?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0889",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He visits the library. を疑問文にしなさい。",
+        "a": "Does he visit the library?"
+      },
+      "after": {
+        "q": "He visits the library. を疑問文にしなさい。",
+        "a": "Does He visit the library?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0893",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He walks to school. を疑問文にしなさい。",
+        "a": "Does he walk to school?"
+      },
+      "after": {
+        "q": "He walks to school. を疑問文にしなさい。",
+        "a": "Does He walk to school?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0897",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He plays soccer. を疑問文にしなさい。",
+        "a": "Does he play soccer?"
+      },
+      "after": {
+        "q": "He plays soccer. を疑問文にしなさい。",
+        "a": "Does He play soccer?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0901",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He reads books. を疑問文にしなさい。",
+        "a": "Does he read books?"
+      },
+      "after": {
+        "q": "He reads books. を疑問文にしなさい。",
+        "a": "Does He read books?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0905",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He practices tennis. を疑問文にしなさい。",
+        "a": "Does he practice tennis?"
+      },
+      "after": {
+        "q": "He practices tennis. を疑問文にしなさい。",
+        "a": "Does He practice tennis?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0909",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He washes the dishes. を疑問文にしなさい。",
+        "a": "Does he wash the dishes?"
+      },
+      "after": {
+        "q": "He washes the dishes. を疑問文にしなさい。",
+        "a": "Does He wash the dishes?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0913",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He opens the window. を疑問文にしなさい。",
+        "a": "Does he open the window?"
+      },
+      "after": {
+        "q": "He opens the window. を疑問文にしなさい。",
+        "a": "Does He open the window?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0917",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He closes the door. を疑問文にしなさい。",
+        "a": "Does he close the door?"
+      },
+      "after": {
+        "q": "He closes the door. を疑問文にしなさい。",
+        "a": "Does He close the door?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0925",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She watches TV. を疑問文にしなさい。",
+        "a": "Does she watch TV?"
+      },
+      "after": {
+        "q": "She watches TV. を疑問文にしなさい。",
+        "a": "Does She watch TV?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0929",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She studies English. を疑問文にしなさい。",
+        "a": "Does she study English?"
+      },
+      "after": {
+        "q": "She studies English. を疑問文にしなさい。",
+        "a": "Does She study English?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0933",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She cleans the room. を疑問文にしなさい。",
+        "a": "Does she clean the room?"
+      },
+      "after": {
+        "q": "She cleans the room. を疑問文にしなさい。",
+        "a": "Does She clean the room?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0937",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She listens to music. を疑問文にしなさい。",
+        "a": "Does she listen to music?"
+      },
+      "after": {
+        "q": "She listens to music. を疑問文にしなさい。",
+        "a": "Does She listen to music?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0941",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She helps at home. を疑問文にしなさい。",
+        "a": "Does she help at home?"
+      },
+      "after": {
+        "q": "She helps at home. を疑問文にしなさい。",
+        "a": "Does She help at home?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0945",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She uses a computer. を疑問文にしなさい。",
+        "a": "Does she use a computer?"
+      },
+      "after": {
+        "q": "She uses a computer. を疑問文にしなさい。",
+        "a": "Does She use a computer?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0949",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She cooks dinner. を疑問文にしなさい。",
+        "a": "Does she cook dinner?"
+      },
+      "after": {
+        "q": "She cooks dinner. を疑問文にしなさい。",
+        "a": "Does She cook dinner?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0953",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She visits the library. を疑問文にしなさい。",
+        "a": "Does she visit the library?"
+      },
+      "after": {
+        "q": "She visits the library. を疑問文にしなさい。",
+        "a": "Does She visit the library?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0957",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She walks to school. を疑問文にしなさい。",
+        "a": "Does she walk to school?"
+      },
+      "after": {
+        "q": "She walks to school. を疑問文にしなさい。",
+        "a": "Does She walk to school?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0961",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She plays soccer. を疑問文にしなさい。",
+        "a": "Does she play soccer?"
+      },
+      "after": {
+        "q": "She plays soccer. を疑問文にしなさい。",
+        "a": "Does She play soccer?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0965",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She reads books. を疑問文にしなさい。",
+        "a": "Does she read books?"
+      },
+      "after": {
+        "q": "She reads books. を疑問文にしなさい。",
+        "a": "Does She read books?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0969",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She practices tennis. を疑問文にしなさい。",
+        "a": "Does she practice tennis?"
+      },
+      "after": {
+        "q": "She practices tennis. を疑問文にしなさい。",
+        "a": "Does She practice tennis?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0973",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She washes the dishes. を疑問文にしなさい。",
+        "a": "Does she wash the dishes?"
+      },
+      "after": {
+        "q": "She washes the dishes. を疑問文にしなさい。",
+        "a": "Does She wash the dishes?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0977",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She opens the window. を疑問文にしなさい。",
+        "a": "Does she open the window?"
+      },
+      "after": {
+        "q": "She opens the window. を疑問文にしなさい。",
+        "a": "Does She open the window?"
+      }
+    },
+    {
+      "id": "GEN-3RD-0981",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She closes the door. を疑問文にしなさい。",
+        "a": "Does she close the door?"
+      },
+      "after": {
+        "q": "She closes the door. を疑問文にしなさい。",
+        "a": "Does She close the door?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1005",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does she play tennis?"
+      },
+      "after": {
+        "q": "She plays tennis. を疑問文にしなさい。",
+        "a": "Does She play tennis?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1013",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He plays tennis. を疑問文にしなさい。",
+        "a": "Does he play tennis?"
+      },
+      "after": {
+        "q": "He plays tennis. を疑問文にしなさい。",
+        "a": "Does He play tennis?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1021",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does he cook dinner?"
+      },
+      "after": {
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does He cook dinner?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1057",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does he help at home?"
+      },
+      "after": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does He help at home?"
+      }
+    },
+    {
+      "id": "GEN-3RD-1193",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He walks to school. を疑問文にしなさい。",
+        "a": "Does he walk to school?"
+      },
+      "after": {
+        "q": "He walks to school. を疑問文にしなさい。",
+        "a": "Does He walk to school?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1510",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "She was free. を疑問文にしなさい。",
+        "a": "Was she free?"
+      },
+      "after": {
+        "q": "She was free. を疑問文にしなさい。",
+        "a": "Was She free?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1561",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He was old. を疑問文にしなさい。",
+        "a": "Was he old?"
+      },
+      "after": {
+        "q": "He was old. を疑問文にしなさい。",
+        "a": "Was He old?"
+      }
+    },
+    {
+      "id": "GEN-PBE-1624",
+      "kind": "question_subject_case",
+      "before": {
+        "q": "He was happy yesterday. を疑問文にしなさい。",
+        "a": "Was he happy yesterday?"
+      },
+      "after": {
+        "q": "He was happy yesterday. を疑問文にしなさい。",
+        "a": "Was He happy yesterday?"
+      }
+    }
+  ]
+}

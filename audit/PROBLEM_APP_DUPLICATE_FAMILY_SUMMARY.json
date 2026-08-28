@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T11:39:40.467Z",
+  "generated_at": "2026-08-28T11:41:34.608Z",
   "english_count": 10511,
   "duplicate_row_count": 2746,
   "duplicate_excess": 1933,
@@ -1525,7 +1525,7 @@
       "count": 20,
       "excess": 19,
       "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
-      "a": "Is going to",
+      "a": "Is Going to",
       "ids": [
         "M3N-00844",
         "M3N-00850",
@@ -1559,7 +1559,7 @@
       "count": 20,
       "excess": 19,
       "q": "My father ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
-      "a": "Has worked",
+      "a": "Has Worked",
       "ids": [
         "M3N-01806",
         "M3N-01812",
@@ -2409,7 +2409,7 @@
       "count": 10,
       "excess": 9,
       "q": "She has been to Kyoto once. を疑問文にしなさい。",
-      "a": "Has she been to Kyoto once?",
+      "a": "Has She been to Kyoto once?",
       "ids": [
         "M3C-00615",
         "M3C-00635",
@@ -2433,7 +2433,7 @@
       "count": 10,
       "excess": 9,
       "q": "She has lost her key. を疑問文にしなさい。",
-      "a": "Has she lost her key?",
+      "a": "Has She lost her key?",
       "ids": [
         "M3C-00616",
         "M3C-00636",
@@ -2457,7 +2457,7 @@
       "count": 10,
       "excess": 9,
       "q": "She has visited Tokyo before. を疑問文にしなさい。",
-      "a": "Has she visited Tokyo before?",
+      "a": "Has She visited Tokyo before?",
       "ids": [
         "M3C-00614",
         "M3C-00634",
@@ -2820,7 +2820,7 @@
       "count": 7,
       "excess": 6,
       "q": "She is busy. を疑問文にしなさい。",
-      "a": "Is she busy?",
+      "a": "Is She busy?",
       "ids": [
         "GEN-BE-0206",
         "GEN-BE-0390",
@@ -2843,7 +2843,7 @@
       "count": 6,
       "excess": 5,
       "q": "He is busy. を疑問文にしなさい。",
-      "a": "Is he busy?",
+      "a": "Is He busy?",
       "ids": [
         "GEN-BE-0166",
         "GEN-BE-0306",
@@ -2865,7 +2865,7 @@
       "count": 6,
       "excess": 5,
       "q": "He is happy. を疑問文にしなさい。",
-      "a": "Is he happy?",
+      "a": "Is He happy?",
       "ids": [
         "GEN-BE-0162",
         "GEN-BE-0374",
@@ -2887,7 +2887,7 @@
       "count": 6,
       "excess": 5,
       "q": "She is happy. を疑問文にしなさい。",
-      "a": "Is she happy?",
+      "a": "Is She happy?",
       "ids": [
         "GEN-BE-0202",
         "M2-BE-0083",
@@ -3437,7 +3437,7 @@
       "count": 3,
       "excess": 2,
       "q": "He cooks dinner. を疑問文にしなさい。",
-      "a": "Does he cook dinner?",
+      "a": "Does He cook dinner?",
       "ids": [
         "GEN-3RD-0885",
         "GEN-3RD-1021",
@@ -3509,7 +3509,7 @@
       "count": 3,
       "excess": 2,
       "q": "He is kind. を疑問文にしなさい。",
-      "a": "Is he kind?",
+      "a": "Is He kind?",
       "ids": [
         "GEN-BE-0178",
         "M2-BE-0075",
@@ -3547,7 +3547,7 @@
       "count": 3,
       "excess": 2,
       "q": "He plays tennis. を疑問文にしなさい。",
-      "a": "Does he play tennis?",
+      "a": "Does He play tennis?",
       "ids": [
         "GEN-3RD-0857",
         "GEN-3RD-1013",
@@ -3794,7 +3794,7 @@
       "count": 3,
       "excess": 2,
       "q": "She is kind. を疑問文にしなさい。",
-      "a": "Is she kind?",
+      "a": "Is She kind?",
       "ids": [
         "GEN-BE-0218",
         "M2-BE-0091",
@@ -3851,7 +3851,7 @@
       "count": 3,
       "excess": 2,
       "q": "She plays tennis. を疑問文にしなさい。",
-      "a": "Does she play tennis?",
+      "a": "Does She play tennis?",
       "ids": [
         "E1-3S-008",
         "GEN-3RD-1005",
@@ -7832,7 +7832,7 @@
       "count": 2,
       "excess": 1,
       "q": "He has been playing tennis for two hours. を疑問文にしなさい。",
-      "a": "Has he been playing tennis for two hours?",
+      "a": "Has He been playing tennis for two hours?",
       "ids": [
         "M3C-00419",
         "M3C-00937"
@@ -7848,7 +7848,7 @@
       "count": 2,
       "excess": 1,
       "q": "He has been to Kyoto once. を疑問文にしなさい。",
-      "a": "Has he been to Kyoto once?",
+      "a": "Has He been to Kyoto once?",
       "ids": [
         "M3C-00415",
         "M3C-00693"
@@ -7864,7 +7864,7 @@
       "count": 2,
       "excess": 1,
       "q": "He has been using this computer since this morning. を疑問文にしなさい。",
-      "a": "Has he been using this computer since this morning?",
+      "a": "Has He been using this computer since this morning?",
       "ids": [
         "M3C-00420",
         "M3C-01178"
@@ -8008,7 +8008,7 @@
       "count": 2,
       "excess": 1,
       "q": "He helps at home. を疑問文にしなさい。",
-      "a": "Does he help at home?",
+      "a": "Does He help at home?",
       "ids": [
         "GEN-3RD-0877",
         "GEN-3RD-1057"
@@ -8056,7 +8056,7 @@
       "count": 2,
       "excess": 1,
       "q": "He is fine. を疑問文にしなさい。",
-      "a": "Is he fine?",
+      "a": "Is He fine?",
       "ids": [
         "GEN-BE-0194",
         "GEN-BE-0362"
@@ -8072,7 +8072,7 @@
       "count": 2,
       "excess": 1,
       "q": "He is friendly. を疑問文にしなさい。",
-      "a": "Is he friendly?",
+      "a": "Is He friendly?",
       "ids": [
         "M2-BE-0077",
         "M2-BE-0109"
@@ -8346,7 +8346,7 @@
       "count": 2,
       "excess": 1,
       "q": "He listens to music. を疑問文にしなさい。",
-      "a": "Does he listen to music?",
+      "a": "Does He listen to music?",
       "ids": [
         "GEN-3RD-0873",
         "M3C-00441"
@@ -8593,7 +8593,7 @@
       "count": 2,
       "excess": 1,
       "q": "He reads books. を疑問文にしなさい。",
-      "a": "Does he read books?",
+      "a": "Does He read books?",
       "ids": [
         "GEN-3RD-0901",
         "M3C-00481"
@@ -8677,7 +8677,7 @@
       "count": 2,
       "excess": 1,
       "q": "He studies English. を疑問文にしなさい。",
-      "a": "Does he study English?",
+      "a": "Does He study English?",
       "ids": [
         "GEN-3RD-0865",
         "M3C-00421"
@@ -8887,7 +8887,7 @@
       "count": 2,
       "excess": 1,
       "q": "He walks to school. を疑問文にしなさい。",
-      "a": "Does he walk to school?",
+      "a": "Does He walk to school?",
       "ids": [
         "GEN-3RD-0893",
         "GEN-3RD-1193"
@@ -9035,7 +9035,7 @@
       "count": 2,
       "excess": 1,
       "q": "He watches TV. を疑問文にしなさい。",
-      "a": "Does he watch TV?",
+      "a": "Does He watch TV?",
       "ids": [
         "GEN-3RD-0861",
         "M3C-00581"

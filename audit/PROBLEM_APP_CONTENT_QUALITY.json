@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T11:37:00.259Z",
+  "generated_at": "2026-08-28T11:41:34.478Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
@@ -581,7 +581,7 @@
       {
         "count": 20,
         "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
-        "a": "Is going to",
+        "a": "Is Going to",
         "sample_ids": [
           "M3N-00844",
           "M3N-00850",
@@ -611,7 +611,7 @@
       {
         "count": 20,
         "q": "My father ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
-        "a": "Has worked",
+        "a": "Has Worked",
         "sample_ids": [
           "M3N-01806",
           "M3N-01812",
@@ -1361,7 +1361,7 @@
       {
         "count": 10,
         "q": "She has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has she been to Kyoto once?",
+        "a": "Has She been to Kyoto once?",
         "sample_ids": [
           "M3C-00615",
           "M3C-00635",
@@ -1381,7 +1381,7 @@
       {
         "count": 10,
         "q": "She has lost her key. を疑問文にしなさい。",
-        "a": "Has she lost her key?",
+        "a": "Has She lost her key?",
         "sample_ids": [
           "M3C-00616",
           "M3C-00636",
@@ -1401,7 +1401,7 @@
       {
         "count": 10,
         "q": "She has visited Tokyo before. を疑問文にしなさい。",
-        "a": "Has she visited Tokyo before?",
+        "a": "Has She visited Tokyo before?",
         "sample_ids": [
           "M3C-00614",
           "M3C-00634",
@@ -1700,7 +1700,7 @@
       {
         "count": 7,
         "q": "She is busy. を疑問文にしなさい。",
-        "a": "Is she busy?",
+        "a": "Is She busy?",
         "sample_ids": [
           "GEN-BE-0206",
           "GEN-BE-0390",
@@ -1718,7 +1718,7 @@
       {
         "count": 6,
         "q": "He is busy. を疑問文にしなさい。",
-        "a": "Is he busy?",
+        "a": "Is He busy?",
         "sample_ids": [
           "GEN-BE-0166",
           "GEN-BE-0306",
@@ -1735,7 +1735,7 @@
       {
         "count": 6,
         "q": "He is happy. を疑問文にしなさい。",
-        "a": "Is he happy?",
+        "a": "Is He happy?",
         "sample_ids": [
           "GEN-BE-0162",
           "GEN-BE-0374",
@@ -1752,7 +1752,7 @@
       {
         "count": 6,
         "q": "She is happy. を疑問文にしなさい。",
-        "a": "Is she happy?",
+        "a": "Is She happy?",
         "sample_ids": [
           "GEN-BE-0202",
           "M2-BE-0083",
@@ -2176,7 +2176,7 @@
       {
         "count": 3,
         "q": "He cooks dinner. を疑問文にしなさい。",
-        "a": "Does he cook dinner?",
+        "a": "Does He cook dinner?",
         "sample_ids": [
           "GEN-3RD-0885",
           "GEN-3RD-1021",
@@ -2230,7 +2230,7 @@
       {
         "count": 3,
         "q": "He is kind. を疑問文にしなさい。",
-        "a": "Is he kind?",
+        "a": "Is He kind?",
         "sample_ids": [
           "GEN-BE-0178",
           "M2-BE-0075",
@@ -2258,7 +2258,7 @@
       {
         "count": 3,
         "q": "He plays tennis. を疑問文にしなさい。",
-        "a": "Does he play tennis?",
+        "a": "Does He play tennis?",
         "sample_ids": [
           "GEN-3RD-0857",
           "GEN-3RD-1013",
@@ -2444,7 +2444,7 @@
       {
         "count": 3,
         "q": "She is kind. を疑問文にしなさい。",
-        "a": "Is she kind?",
+        "a": "Is She kind?",
         "sample_ids": [
           "GEN-BE-0218",
           "M2-BE-0091",
@@ -2486,7 +2486,7 @@
       {
         "count": 3,
         "q": "She plays tennis. を疑問文にしなさい。",
-        "a": "Does she play tennis?",
+        "a": "Does She play tennis?",
         "sample_ids": [
           "E1-3S-008",
           "GEN-3RD-1005",
