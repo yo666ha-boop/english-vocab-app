@@ -1,0 +1,51 @@
+name: Audit problem content quality
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-problem-content-quality-20260828
+    paths:
+      - 'problem-app/index.html'
+      - 'tools/audit_problem_content_quality.mjs'
+      - '.github/workflows/audit-problem-content-quality.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - name: Run content quality audit
+        id: audit
+        shell: bash
+        run: |
+          set +e
+          node tools/audit_problem_content_quality.mjs
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Commit audit evidence
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add audit/PROBLEM_APP_CONTENT_QUALITY.json
+          if git diff --cached --quiet; then
+            echo 'No audit change'
+          else
+            git commit -m 'audit: record problem content quality findings [skip ci]'
+            git push
+          fi
+      - name: Enforce quality gate
+        shell: bash
+        run: |
+          code='${{ steps.audit.outputs.exit_code }}'
+          if [ "$code" != "0" ]; then
+            echo "Content quality gate failed with code $code"
+            exit "$code"
+          fi
