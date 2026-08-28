@@ -9,6 +9,8 @@ on:
       - '.github/workflows/problem-content-regression-core.yml'
       - 'problem-app/index.html'
       - 'tools/audit_problem_semantic_duplicate_review.mjs'
+      - 'tools/audit_problem_semantic_review_signals.mjs'
+      - 'tools/repair_problem_semantic_review_defects.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families.mjs'
       - 'tools/diversify_problem_high_confidence_duplicate_families_v2.mjs'
 
@@ -31,6 +33,8 @@ jobs:
         run: node tools/audit_problem_app_bank_integrity.mjs
       - name: Content quality
         run: node tools/audit_problem_content_quality.mjs
+      - name: Semantic review signals
+        run: node tools/audit_problem_semantic_review_signals.mjs
       - name: Semantic duplicate review
         run: node tools/audit_problem_semantic_duplicate_review.mjs
       - name: Grammar chronology
@@ -50,7 +54,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          git add audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json audit/PROBLEM_APP_BANK_INTEGRITY.json audit/PROBLEM_APP_CONTENT_QUALITY.json audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json audit/PROBLEM_APP_SEMANTIC_DUPLICATE_REVIEW.json audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
           if git diff --cached --quiet; then
             echo 'No evidence changes'
           else
