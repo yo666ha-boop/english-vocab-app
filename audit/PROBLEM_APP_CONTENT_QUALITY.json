@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T14:21:32.684Z",
+  "generated_at": "2026-08-28T14:26:12.366Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,15 +31,16 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 263,
-    "row_count": 619,
-    "duplicate_excess": 356,
-    "row_ratio": 0.058891,
-    "excess_ratio": 0.033869,
+    "group_count": 283,
+    "row_count": 659,
+    "duplicate_excess": 376,
+    "row_ratio": 0.062696,
+    "excess_ratio": 0.035772,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
       "中2/比較/間違い直し": 44,
+      "中2/不定詞/間違い直し": 40,
       "中3/関係代名詞/選択": 31,
       "中3/現在完了形（継続），現在完了進行形/変形": 24,
       "中2/比較/英作文": 22,
@@ -114,6 +115,7 @@
       "中3/進行形/間違い直し": 1
     },
     "by_family_groups": {
+      "中2/不定詞/間違い直し": 20,
       "中2/比較/間違い直し": 12,
       "中3/現在完了形（継続），現在完了進行形/変形": 12,
       "中2/比較/英作文": 11,
@@ -1844,6 +1846,30 @@
       },
       {
         "count": 2,
+        "q": "I like read books. の誤りを直しなさい。",
+        "a": "I like to read books.",
+        "sample_ids": [
+          "M2X-INF-0476",
+          "M2-INF2-0778"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I need study harder. の誤りを直しなさい。",
+        "a": "I need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0474",
+          "M2-INF2-0775"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
         "q": "I play tennis. は be動詞の文か、一般動詞の文か答えなさい。",
         "a": "一般動詞の文",
         "sample_ids": [
@@ -1878,6 +1904,42 @@
         ],
         "grade_category_types": [
           "中3/be動詞と一般動詞（過去形）/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I use this box keep letters. の誤りを直しなさい。",
+        "a": "I use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0480",
+          "M2-INF2-0784"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I want be a teacher. の誤りを直しなさい。",
+        "a": "I want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0472",
+          "M2-INF2-0772"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "I want play tennis. の誤りを直しなさい。",
+        "a": "I want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0470",
+          "M2-INF2-0769"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
         ]
       },
       {
@@ -2623,6 +2685,30 @@
       },
       {
         "count": 2,
+        "q": "They like read books. の誤りを直しなさい。",
+        "a": "They like to read books.",
+        "sample_ids": [
+          "M2X-INF-0548",
+          "M2-INF2-0940"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "They need study harder. の誤りを直しなさい。",
+        "a": "They need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0546",
+          "M2-INF2-0937"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
         "q": "They play tennis. を yesterday を使って過去の文にしなさい。",
         "a": "They played tennis yesterday.",
         "sample_ids": [
@@ -2632,6 +2718,42 @@
         "grade_category_types": [
           "中1/一般動詞の過去形/変形",
           "中2/一般動詞の過去形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "They use this box keep letters. の誤りを直しなさい。",
+        "a": "They use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0552",
+          "M2-INF2-0946"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "They want be a teacher. の誤りを直しなさい。",
+        "a": "They want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0544",
+          "M2-INF2-0934"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "They want play tennis. の誤りを直しなさい。",
+        "a": "They want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0542",
+          "M2-INF2-0931"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
         ]
       },
       {
@@ -2721,6 +2843,30 @@
       },
       {
         "count": 2,
+        "q": "We like read books. の誤りを直しなさい。",
+        "a": "We like to read books.",
+        "sample_ids": [
+          "M2X-INF-0524",
+          "M2-INF2-0886"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "We need study harder. の誤りを直しなさい。",
+        "a": "We need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0522",
+          "M2-INF2-0883"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
         "q": "We play tennis. を yesterday を使って過去の文にしなさい。",
         "a": "We played tennis yesterday.",
         "sample_ids": [
@@ -2730,6 +2876,42 @@
         "grade_category_types": [
           "中1/一般動詞の過去形/変形",
           "中2/一般動詞の過去形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "We use this box keep letters. の誤りを直しなさい。",
+        "a": "We use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0528",
+          "M2-INF2-0892"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "We want be a teacher. の誤りを直しなさい。",
+        "a": "We want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0520",
+          "M2-INF2-0880"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "We want play tennis. の誤りを直しなさい。",
+        "a": "We want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0518",
+          "M2-INF2-0877"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
         ]
       },
       {
@@ -2796,6 +2978,18 @@
       },
       {
         "count": 2,
+        "q": "You like read books. の誤りを直しなさい。",
+        "a": "You like to read books.",
+        "sample_ids": [
+          "M2X-INF-0500",
+          "M2-INF2-0832"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
         "q": "You must go to the library now. を疑問文にしなさい。",
         "a": "Must you go to the library now?",
         "sample_ids": [
@@ -2844,6 +3038,18 @@
       },
       {
         "count": 2,
+        "q": "You need study harder. の誤りを直しなさい。",
+        "a": "You need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0498",
+          "M2-INF2-0829"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
         "q": "You play tennis. を yesterday を使って過去の文にしなさい。",
         "a": "You played tennis yesterday.",
         "sample_ids": [
@@ -2853,6 +3059,42 @@
         "grade_category_types": [
           "中1/一般動詞の過去形/変形",
           "中2/一般動詞の過去形/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "You use this box keep letters. の誤りを直しなさい。",
+        "a": "You use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0504",
+          "M2-INF2-0838"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "You want be a teacher. の誤りを直しなさい。",
+        "a": "You want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0496",
+          "M2-INF2-0826"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "You want play tennis. の誤りを直しなさい。",
+        "a": "You want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0494",
+          "M2-INF2-0823"
+        ],
+        "grade_category_types": [
+          "中2/不定詞/間違い直し"
         ]
       },
       {
@@ -3072,247 +3314,6 @@
         ],
         "grade_category_types": [
           "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
-        "a": "The exercise made me strong.",
-        "sample_ids": [
-          "M3N-01528",
-          "M3N-01534"
-        ],
-        "grade_category_types": [
-          "中3/文型/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
-        "a": "Tom is taller than Ken.",
-        "sample_ids": [
-          "M2Y-COMP-0404",
-          "M2Y-COMP-0443"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
-        "a": "Do not run in the park.",
-        "sample_ids": [
-          "M3N-00727",
-          "M3N-00829"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
-        "a": "Do not run in the library.",
-        "sample_ids": [
-          "M3N-00721",
-          "M3N-00823"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
-        "a": "They have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0645",
-          "M2-MOD-0646"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
-        "a": "They must not be late.",
-        "sample_ids": [
-          "M2-MOD-0647",
-          "M2-MOD-0648"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
-        "a": "We have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0637",
-          "M2-MOD-0638"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
-        "a": "We must not be late.",
-        "sample_ids": [
-          "M2-MOD-0639",
-          "M2-MOD-0640"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
-        "a": "My bike is faster than your bike.",
-        "sample_ids": [
-          "M2Y-COMP-0413",
-          "M2Y-COMP-0452"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
-        "a": "I must finish my homework.",
-        "sample_ids": [
-          "M2-MOD-0619",
-          "M2-MOD-0620"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
-        "a": "I have to get up early.",
-        "sample_ids": [
-          "M2-MOD-0621",
-          "M2-MOD-0622"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
-        "a": "I must not be late.",
-        "sample_ids": [
-          "M2-MOD-0623",
-          "M2-MOD-0624"
-        ],
-        "grade_category_types": [
-          "中2/助動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は彼がいつ来るのかわかりません。』",
-        "a": "I don't know when he will come.",
-        "sample_ids": [
-          "M3N-02088",
-          "M3N-02160"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
-        "a": "I don't know why he is busy.",
-        "sample_ids": [
-          "M3N-02082",
-          "M3N-02154"
-        ],
-        "grade_category_types": [
-          "中3/分詞と間接疑問文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』",
-        "a": "I have lived in this town since Sunday.",
-        "sample_ids": [
-          "M3N-01839",
-          "M3N-01881"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『私は毎日英語を勉強します。』",
-        "a": "I study English every day.",
-        "sample_ids": [
-          "E1-DQ-013",
-          "M2X-RV-0015"
-        ],
-        "grade_category_types": [
-          "中1/一般動詞/英作文",
-          "中2/一般動詞/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『部屋では走らないでください。』",
-        "a": "Do not run in the room.",
-        "sample_ids": [
-          "M3N-00745",
-          "M3N-00835"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の日本語に合う英文を書きなさい。『駅では走らないでください。』",
-        "a": "Do not run in the station.",
-        "sample_ids": [
-          "M3N-00733",
-          "M3N-00817"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/英作文"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / He / busy )",
-        "a": "He is always busy.",
-        "sample_ids": [
-          "GEN-FREQ-1333",
-          "GEN-FREQ-1339"
-        ],
-        "grade_category_types": [
-          "中1/頻度副詞/並びかえ"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )",
-        "a": "She is always busy.",
-        "sample_ids": [
-          "GEN-FREQ-1336",
-          "GEN-FREQ-1342"
-        ],
-        "grade_category_types": [
-          "中1/頻度副詞/並びかえ"
         ]
       }
     ]
