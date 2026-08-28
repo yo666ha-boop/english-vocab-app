@@ -1,593 +1,41 @@
 {
-  "generated_at": "2026-08-28T11:25:34.275Z",
+  "generated_at": "2026-08-28T11:29:45.307Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "hybrid_japanese_translation:343",
-    "duplicate_qa_row_ratio:0.3996"
+    "hybrid_japanese_translation:76",
+    "duplicate_qa_row_ratio:0.4007"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
-    "count": 343,
+    "count": 76,
     "by_prefix": {
-      "M3N": 207,
-      "M3C": 120,
-      "M2-COMP2": 8,
-      "GEN-PREP": 4,
-      "M2-COMP": 4
+      "M3N": 52,
+      "M3C": 24
     },
     "by_grade_category_type": {
-      "中3/比較/英作文": 140,
-      "中3/文型/英作文": 40,
-      "中3/受動態/英作文": 20,
-      "中3/現在完了形（完了・経験）/英作文": 20,
+      "中3/比較/英作文": 35,
       "中3/現在完了形（継続），現在完了進行形/英作文": 20,
-      "中3/疑問詞/英作文": 17,
-      "中3/不定詞①，動名詞/英作文": 16,
-      "中3/助動詞/英作文": 16,
-      "中3/接続詞/英作文": 16,
-      "中2/比較/英作文": 12,
-      "中3/関係代名詞/英作文": 11,
-      "中3/人称代名詞/英作文": 7,
-      "中1/前置詞/英作文": 4,
-      "中3/未来の文/英作文": 2,
+      "中3/文型/英作文": 13,
+      "中3/受動態/英作文": 2,
+      "中3/人称代名詞/英作文": 1,
       "中3/命令文，there is ～ の文/英作文": 1,
-      "中3/進行形/英作文": 1
+      "中3/未来の文/英作文": 1,
+      "中3/現在完了形（完了・経験）/英作文": 1,
+      "中3/疑問詞/英作文": 1,
+      "中3/関係代名詞/英作文": 1
     },
     "samples": [
-      {
-        "id": "GEN-PREP-1249",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "ボールはboxの中にあります。",
-        "english_tokens": [
-          "box"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『ボールはboxの中にあります。』",
-        "a": "The ball is in the box."
-      },
-      {
-        "id": "GEN-PREP-1261",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "写真はwallの上にあります。",
-        "english_tokens": [
-          "wall"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『写真はwallの上にあります。』",
-        "a": "The picture is on the wall."
-      },
-      {
-        "id": "GEN-PREP-1267",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "ペンはpencil caseの中にあります。",
-        "english_tokens": [
-          "pencil",
-          "case"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『ペンはpencil caseの中にあります。』",
-        "a": "The pen is in the pencil case."
-      },
-      {
-        "id": "GEN-PREP-1270",
-        "grade": "中1",
-        "category": "前置詞",
-        "type": "英作文",
-        "source_japanese": "自転車はtreeのそばにあります。",
-        "english_tokens": [
-          "tree"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『自転車はtreeのそばにあります。』",
-        "a": "The bike is by the tree."
-      },
-      {
-        "id": "M2-COMP-0672",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend は Ken より 背が高い。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend は Ken より 背が高い。』",
-        "a": "My friend is taller than Ken."
-      },
-      {
-        "id": "M2-COMP-0674",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend は Ken より 忙しい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend は Ken より 忙しい。』",
-        "a": "My friend is busier than Ken."
-      },
-      {
-        "id": "M2-COMP-0676",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend は Ken より おもしろい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend は Ken より おもしろい。』",
-        "a": "My friend is more interesting than Ken."
-      },
-      {
-        "id": "M2-COMP-0678",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend は Ken より 人気がある。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend は Ken より 人気がある。』",
-        "a": "My friend is more popular than Ken."
-      },
-      {
-        "id": "M2-COMP2-1527",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 背が高い。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 背が高い。』",
-        "a": "My friend is the tallest in this class."
-      },
-      {
-        "id": "M2-COMP2-1530",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 小さい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 小さい。』",
-        "a": "My friend is the smallest in this class."
-      },
-      {
-        "id": "M2-COMP2-1533",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 速い。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 速い。』",
-        "a": "My friend is the fastest in this class."
-      },
-      {
-        "id": "M2-COMP2-1536",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 大きい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 大きい。』",
-        "a": "My friend is the largest in this class."
-      },
-      {
-        "id": "M2-COMP2-1539",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん やさしい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん やさしい。』",
-        "a": "My friend is the easiest in this class."
-      },
-      {
-        "id": "M2-COMP2-1542",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 忙しい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 忙しい。』",
-        "a": "My friend is the busiest in this class."
-      },
-      {
-        "id": "M2-COMP2-1545",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 人気がある。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 人気がある。』",
-        "a": "My friend is the most popular in this class."
-      },
-      {
-        "id": "M2-COMP2-1548",
-        "grade": "中2",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "My friend はこのクラスでいちばん 美しい。",
-        "english_tokens": [
-          "My",
-          "friend"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My friend はこのクラスでいちばん 美しい。』",
-        "a": "My friend is the most beautiful in this class."
-      },
-      {
-        "id": "M3C-01201",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりbusyです。』",
-        "a": "This bag is busier than that one."
-      },
-      {
-        "id": "M3C-01202",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんbusyです。』",
-        "a": "This bag is the busiest of the three."
-      },
-      {
-        "id": "M3C-01203",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりeasyです。』",
-        "a": "This bag is easier than that one."
-      },
-      {
-        "id": "M3C-01204",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんeasyです。』",
-        "a": "This bag is the easiest of the three."
-      },
-      {
-        "id": "M3C-01205",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりsmallです。』",
-        "a": "This bag is smaller than that one."
-      },
-      {
-        "id": "M3C-01206",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんsmallです。』",
-        "a": "This bag is the smallest of the three."
-      },
-      {
-        "id": "M3C-01207",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりlargeです。』",
-        "a": "This bag is larger than that one."
-      },
-      {
-        "id": "M3C-01208",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんlargeです。』",
-        "a": "This bag is the largest of the three."
-      },
-      {
-        "id": "M3C-01209",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりkindです。』",
-        "a": "This bag is kinder than that one."
-      },
-      {
-        "id": "M3C-01210",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんkindです。』",
-        "a": "This bag is the kindest of the three."
-      },
-      {
-        "id": "M3C-01211",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりgoodです。』",
-        "a": "This bag is better than that one."
-      },
-      {
-        "id": "M3C-01212",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bagは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "bag",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんgoodです。』",
-        "a": "This bag is the best of the three."
-      },
-      {
-        "id": "M3C-01213",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりbusyです。』",
-        "a": "This book is busier than that one."
-      },
-      {
-        "id": "M3C-01214",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんbusyです。』",
-        "a": "This book is the busiest of the three."
-      },
-      {
-        "id": "M3C-01215",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりeasyです。』",
-        "a": "This book is easier than that one."
-      },
-      {
-        "id": "M3C-01216",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんeasyです。』",
-        "a": "This book is the easiest of the three."
-      },
-      {
-        "id": "M3C-01217",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりsmallです。』",
-        "a": "This book is smaller than that one."
-      },
-      {
-        "id": "M3C-01218",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんsmallです。』",
-        "a": "This book is the smallest of the three."
-      },
-      {
-        "id": "M3C-01219",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりlargeです。』",
-        "a": "This book is larger than that one."
-      },
-      {
-        "id": "M3C-01220",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんlargeです。』",
-        "a": "This book is the largest of the three."
-      },
-      {
-        "id": "M3C-01221",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりkindです。』",
-        "a": "This book is kinder than that one."
-      },
-      {
-        "id": "M3C-01222",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんkindです。』",
-        "a": "This book is the kindest of the three."
-      },
-      {
-        "id": "M3C-01223",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりgoodです。』",
-        "a": "This book is better than that one."
-      },
-      {
-        "id": "M3C-01224",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This bookは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "book",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんgoodです。』",
-        "a": "This book is the best of the three."
-      },
       {
         "id": "M3C-01225",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりbusyです。",
+        "source_japanese": "My自転車はあれより忙しいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "busy"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりbusyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより忙しいです。』",
         "a": "My bike is busier than that one."
       },
       {
@@ -595,13 +43,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんbusyです。",
+        "source_japanese": "My自転車は3つの中でいちばん忙しいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "busy"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんbusyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん忙しいです。』",
         "a": "My bike is the busiest of the three."
       },
       {
@@ -609,13 +55,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりeasyです。",
+        "source_japanese": "My自転車はあれより簡単です。",
         "english_tokens": [
-          "My",
-          "bike",
-          "easy"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりeasyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより簡単です。』",
         "a": "My bike is easier than that one."
       },
       {
@@ -623,13 +67,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんeasyです。",
+        "source_japanese": "My自転車は3つの中でいちばん簡単です。",
         "english_tokens": [
-          "My",
-          "bike",
-          "easy"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんeasyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん簡単です。』",
         "a": "My bike is the easiest of the three."
       },
       {
@@ -637,13 +79,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりsmallです。",
+        "source_japanese": "My自転車はあれより小さいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "small"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりsmallです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより小さいです。』",
         "a": "My bike is smaller than that one."
       },
       {
@@ -651,13 +91,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんsmallです。",
+        "source_japanese": "My自転車は3つの中でいちばん小さいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "small"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんsmallです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん小さいです。』",
         "a": "My bike is the smallest of the three."
       },
       {
@@ -665,13 +103,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりlargeです。",
+        "source_japanese": "My自転車はあれより大きいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "large"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりlargeです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより大きいです。』",
         "a": "My bike is larger than that one."
       },
       {
@@ -679,13 +115,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんlargeです。",
+        "source_japanese": "My自転車は3つの中でいちばん大きいです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "large"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんlargeです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん大きいです。』",
         "a": "My bike is the largest of the three."
       },
       {
@@ -693,13 +127,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりkindです。",
+        "source_japanese": "My自転車はあれより親切です。",
         "english_tokens": [
-          "My",
-          "bike",
-          "kind"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりkindです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより親切です。』",
         "a": "My bike is kinder than that one."
       },
       {
@@ -707,13 +139,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんkindです。",
+        "source_japanese": "My自転車は3つの中でいちばん親切です。",
         "english_tokens": [
-          "My",
-          "bike",
-          "kind"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんkindです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん親切です。』",
         "a": "My bike is the kindest of the three."
       },
       {
@@ -721,13 +151,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeはあれよりgoodです。",
+        "source_japanese": "My自転車はあれより良いです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "good"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeはあれよりgoodです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車はあれより良いです。』",
         "a": "My bike is better than that one."
       },
       {
@@ -735,699 +163,23 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "My bikeは3つの中でいちばんgoodです。",
+        "source_japanese": "My自転車は3つの中でいちばん良いです。",
         "english_tokens": [
-          "My",
-          "bike",
-          "good"
+          "My"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『My bikeは3つの中でいちばんgoodです。』",
+        "q": "次の日本語に合う英文を書きなさい。『My自転車は3つの中でいちばん良いです。』",
         "a": "My bike is the best of the three."
-      },
-      {
-        "id": "M3C-01237",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりbusyです。』",
-        "a": "This room is busier than that one."
-      },
-      {
-        "id": "M3C-01238",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんbusyです。』",
-        "a": "This room is the busiest of the three."
-      },
-      {
-        "id": "M3C-01239",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりeasyです。』",
-        "a": "This room is easier than that one."
-      },
-      {
-        "id": "M3C-01240",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんeasyです。』",
-        "a": "This room is the easiest of the three."
-      },
-      {
-        "id": "M3C-01241",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりsmallです。』",
-        "a": "This room is smaller than that one."
-      },
-      {
-        "id": "M3C-01242",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんsmallです。』",
-        "a": "This room is the smallest of the three."
-      },
-      {
-        "id": "M3C-01243",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりlargeです。』",
-        "a": "This room is larger than that one."
-      },
-      {
-        "id": "M3C-01244",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんlargeです。』",
-        "a": "This room is the largest of the three."
-      },
-      {
-        "id": "M3C-01245",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりkindです。』",
-        "a": "This room is kinder than that one."
-      },
-      {
-        "id": "M3C-01246",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんkindです。』",
-        "a": "This room is the kindest of the three."
-      },
-      {
-        "id": "M3C-01247",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomはあれよりgoodです。』",
-        "a": "This room is better than that one."
-      },
-      {
-        "id": "M3C-01248",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This roomは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "room",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This roomは3つの中でいちばんgoodです。』",
-        "a": "This room is the best of the three."
-      },
-      {
-        "id": "M3C-01249",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりbusyです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりbusyです。』",
-        "a": "That dog is busier than that one."
-      },
-      {
-        "id": "M3C-01250",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんbusyです。』",
-        "a": "That dog is the busiest of the three."
-      },
-      {
-        "id": "M3C-01251",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりeasyです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりeasyです。』",
-        "a": "That dog is easier than that one."
-      },
-      {
-        "id": "M3C-01252",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんeasyです。』",
-        "a": "That dog is the easiest of the three."
-      },
-      {
-        "id": "M3C-01253",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりsmallです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりsmallです。』",
-        "a": "That dog is smaller than that one."
-      },
-      {
-        "id": "M3C-01254",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんsmallです。』",
-        "a": "That dog is the smallest of the three."
-      },
-      {
-        "id": "M3C-01255",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりlargeです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりlargeです。』",
-        "a": "That dog is larger than that one."
-      },
-      {
-        "id": "M3C-01256",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんlargeです。』",
-        "a": "That dog is the largest of the three."
-      },
-      {
-        "id": "M3C-01257",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりkindです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりkindです。』",
-        "a": "That dog is kinder than that one."
-      },
-      {
-        "id": "M3C-01258",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんkindです。』",
-        "a": "That dog is the kindest of the three."
-      },
-      {
-        "id": "M3C-01259",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogはあれよりgoodです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogはあれよりgoodです。』",
-        "a": "That dog is better than that one."
-      },
-      {
-        "id": "M3C-01260",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That dogは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "That",
-          "dog",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That dogは3つの中でいちばんgoodです。』",
-        "a": "That dog is the best of the three."
-      },
-      {
-        "id": "M3C-01261",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりbusyです。』",
-        "a": "This picture is busier than that one."
-      },
-      {
-        "id": "M3C-01262",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんbusyです。』",
-        "a": "This picture is the busiest of the three."
-      },
-      {
-        "id": "M3C-01263",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりeasyです。』",
-        "a": "This picture is easier than that one."
-      },
-      {
-        "id": "M3C-01264",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんeasyです。』",
-        "a": "This picture is the easiest of the three."
-      },
-      {
-        "id": "M3C-01265",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりsmallです。』",
-        "a": "This picture is smaller than that one."
-      },
-      {
-        "id": "M3C-01266",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんsmallです。』",
-        "a": "This picture is the smallest of the three."
-      },
-      {
-        "id": "M3C-01267",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりlargeです。』",
-        "a": "This picture is larger than that one."
-      },
-      {
-        "id": "M3C-01268",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんlargeです。』",
-        "a": "This picture is the largest of the three."
-      },
-      {
-        "id": "M3C-01269",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりkindです。』",
-        "a": "This picture is kinder than that one."
-      },
-      {
-        "id": "M3C-01270",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんkindです。』",
-        "a": "This picture is the kindest of the three."
-      },
-      {
-        "id": "M3C-01271",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureはあれよりgoodです。』",
-        "a": "This picture is better than that one."
-      },
-      {
-        "id": "M3C-01272",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This pictureは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "picture",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This pictureは3つの中でいちばんgoodです。』",
-        "a": "This picture is the best of the three."
-      },
-      {
-        "id": "M3C-01273",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりbusyです。』",
-        "a": "This computer is busier than that one."
-      },
-      {
-        "id": "M3C-01274",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんbusyです。』",
-        "a": "This computer is the busiest of the three."
-      },
-      {
-        "id": "M3C-01275",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりeasyです。』",
-        "a": "This computer is easier than that one."
-      },
-      {
-        "id": "M3C-01276",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんeasyです。』",
-        "a": "This computer is the easiest of the three."
-      },
-      {
-        "id": "M3C-01277",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりsmallです。』",
-        "a": "This computer is smaller than that one."
-      },
-      {
-        "id": "M3C-01278",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんsmallです。』",
-        "a": "This computer is the smallest of the three."
-      },
-      {
-        "id": "M3C-01279",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりlargeです。』",
-        "a": "This computer is larger than that one."
-      },
-      {
-        "id": "M3C-01280",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんlargeです。』",
-        "a": "This computer is the largest of the three."
-      },
-      {
-        "id": "M3C-01281",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりkindです。』",
-        "a": "This computer is kinder than that one."
-      },
-      {
-        "id": "M3C-01282",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんkindです。』",
-        "a": "This computer is the kindest of the three."
-      },
-      {
-        "id": "M3C-01283",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerはあれよりgoodです。』",
-        "a": "This computer is better than that one."
-      },
-      {
-        "id": "M3C-01284",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This computerは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "computer",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This computerは3つの中でいちばんgoodです。』",
-        "a": "This computer is the best of the three."
       },
       {
         "id": "M3C-01285",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりbusyです。",
+        "source_japanese": "Our学校はあれより忙しいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "busy"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりbusyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより忙しいです。』",
         "a": "Our school is busier than that one."
       },
       {
@@ -1435,13 +187,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんbusyです。",
+        "source_japanese": "Our学校は3つの中でいちばん忙しいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "busy"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんbusyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん忙しいです。』",
         "a": "Our school is the busiest of the three."
       },
       {
@@ -1449,13 +199,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりeasyです。",
+        "source_japanese": "Our学校はあれより簡単です。",
         "english_tokens": [
-          "Our",
-          "school",
-          "easy"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりeasyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより簡単です。』",
         "a": "Our school is easier than that one."
       },
       {
@@ -1463,13 +211,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんeasyです。",
+        "source_japanese": "Our学校は3つの中でいちばん簡単です。",
         "english_tokens": [
-          "Our",
-          "school",
-          "easy"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんeasyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん簡単です。』",
         "a": "Our school is the easiest of the three."
       },
       {
@@ -1477,13 +223,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりsmallです。",
+        "source_japanese": "Our学校はあれより小さいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "small"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりsmallです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより小さいです。』",
         "a": "Our school is smaller than that one."
       },
       {
@@ -1491,13 +235,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんsmallです。",
+        "source_japanese": "Our学校は3つの中でいちばん小さいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "small"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんsmallです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん小さいです。』",
         "a": "Our school is the smallest of the three."
       },
       {
@@ -1505,13 +247,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりlargeです。",
+        "source_japanese": "Our学校はあれより大きいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "large"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりlargeです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより大きいです。』",
         "a": "Our school is larger than that one."
       },
       {
@@ -1519,13 +259,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんlargeです。",
+        "source_japanese": "Our学校は3つの中でいちばん大きいです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "large"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんlargeです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん大きいです。』",
         "a": "Our school is the largest of the three."
       },
       {
@@ -1533,13 +271,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりkindです。",
+        "source_japanese": "Our学校はあれより親切です。",
         "english_tokens": [
-          "Our",
-          "school",
-          "kind"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりkindです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより親切です。』",
         "a": "Our school is kinder than that one."
       },
       {
@@ -1547,13 +283,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんkindです。",
+        "source_japanese": "Our学校は3つの中でいちばん親切です。",
         "english_tokens": [
-          "Our",
-          "school",
-          "kind"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんkindです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん親切です。』",
         "a": "Our school is the kindest of the three."
       },
       {
@@ -1561,13 +295,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolはあれよりgoodです。",
+        "source_japanese": "Our学校はあれより良いです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "good"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolはあれよりgoodです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校はあれより良いです。』",
         "a": "Our school is better than that one."
       },
       {
@@ -1575,644 +307,24 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "Our schoolは3つの中でいちばんgoodです。",
+        "source_japanese": "Our学校は3つの中でいちばん良いです。",
         "english_tokens": [
-          "Our",
-          "school",
-          "good"
+          "Our"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Our schoolは3つの中でいちばんgoodです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Our学校は3つの中でいちばん良いです。』",
         "a": "Our school is the best of the three."
-      },
-      {
-        "id": "M3C-01297",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりbusyです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりbusyです。』",
-        "a": "This city is busier than that one."
-      },
-      {
-        "id": "M3C-01298",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんbusyです。』",
-        "a": "This city is the busiest of the three."
-      },
-      {
-        "id": "M3C-01299",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりeasyです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりeasyです。』",
-        "a": "This city is easier than that one."
-      },
-      {
-        "id": "M3C-01300",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんeasyです。』",
-        "a": "This city is the easiest of the three."
-      },
-      {
-        "id": "M3C-01301",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりsmallです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりsmallです。』",
-        "a": "This city is smaller than that one."
-      },
-      {
-        "id": "M3C-01302",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんsmallです。』",
-        "a": "This city is the smallest of the three."
-      },
-      {
-        "id": "M3C-01303",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりlargeです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりlargeです。』",
-        "a": "This city is larger than that one."
-      },
-      {
-        "id": "M3C-01304",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんlargeです。』",
-        "a": "This city is the largest of the three."
-      },
-      {
-        "id": "M3C-01305",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりkindです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりkindです。』",
-        "a": "This city is kinder than that one."
-      },
-      {
-        "id": "M3C-01306",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんkindです。』",
-        "a": "This city is the kindest of the three."
-      },
-      {
-        "id": "M3C-01307",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityはあれよりgoodです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityはあれよりgoodです。』",
-        "a": "This city is better than that one."
-      },
-      {
-        "id": "M3C-01308",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "This cityは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "This",
-          "city",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This cityは3つの中でいちばんgoodです。』",
-        "a": "This city is the best of the three."
-      },
-      {
-        "id": "M3C-01309",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりbusyです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりbusyです。』",
-        "a": "That park is busier than that one."
-      },
-      {
-        "id": "M3C-01310",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんbusyです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんbusyです。』",
-        "a": "That park is the busiest of the three."
-      },
-      {
-        "id": "M3C-01311",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりeasyです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりeasyです。』",
-        "a": "That park is easier than that one."
-      },
-      {
-        "id": "M3C-01312",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんeasyです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "easy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんeasyです。』",
-        "a": "That park is the easiest of the three."
-      },
-      {
-        "id": "M3C-01313",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりsmallです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりsmallです。』",
-        "a": "That park is smaller than that one."
-      },
-      {
-        "id": "M3C-01314",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんsmallです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんsmallです。』",
-        "a": "That park is the smallest of the three."
-      },
-      {
-        "id": "M3C-01315",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりlargeです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりlargeです。』",
-        "a": "That park is larger than that one."
-      },
-      {
-        "id": "M3C-01316",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんlargeです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "large"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんlargeです。』",
-        "a": "That park is the largest of the three."
-      },
-      {
-        "id": "M3C-01317",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりkindです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりkindです。』",
-        "a": "That park is kinder than that one."
-      },
-      {
-        "id": "M3C-01318",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんkindです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんkindです。』",
-        "a": "That park is the kindest of the three."
-      },
-      {
-        "id": "M3C-01319",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkはあれよりgoodです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkはあれよりgoodです。』",
-        "a": "That park is better than that one."
-      },
-      {
-        "id": "M3C-01320",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "That parkは3つの中でいちばんgoodです。",
-        "english_tokens": [
-          "That",
-          "park",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『That parkは3つの中でいちばんgoodです。』",
-        "a": "That park is the best of the three."
-      },
-      {
-        "id": "M3N-00367",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Youはいつthe parkに着きましたか。",
-        "english_tokens": [
-          "You",
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Youはいつthe parkに着きましたか。』",
-        "a": "When did you arrive at the park?"
-      },
-      {
-        "id": "M3N-00373",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Heはいつthe stationに着きましたか。",
-        "english_tokens": [
-          "He",
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Heはいつthe stationに着きましたか。』",
-        "a": "When did he arrive at the station?"
-      },
-      {
-        "id": "M3N-00379",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Sheはいつthe schoolに着きましたか。",
-        "english_tokens": [
-          "She",
-          "the",
-          "school"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Sheはいつthe schoolに着きましたか。』",
-        "a": "When did she arrive at the school?"
-      },
-      {
-        "id": "M3N-00385",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Weはいつthe roomに着きましたか。",
-        "english_tokens": [
-          "We",
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Weはいつthe roomに着きましたか。』",
-        "a": "When did we arrive at the room?"
-      },
-      {
-        "id": "M3N-00391",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Theyはいつthe hospitalに着きましたか。",
-        "english_tokens": [
-          "They",
-          "the",
-          "hospital"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Theyはいつthe hospitalに着きましたか。』",
-        "a": "When did they arrive at the hospital?"
-      },
-      {
-        "id": "M3N-00397",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "My fatherはいつthe museumに着きましたか。",
-        "english_tokens": [
-          "My",
-          "father",
-          "the",
-          "museum"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My fatherはいつthe museumに着きましたか。』",
-        "a": "When did my father arrive at the museum?"
-      },
-      {
-        "id": "M3N-00403",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "My motherはいつthe storeに着きましたか。",
-        "english_tokens": [
-          "My",
-          "mother",
-          "the",
-          "store"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My motherはいつthe storeに着きましたか。』",
-        "a": "When did my mother arrive at the store?"
-      },
-      {
-        "id": "M3N-00409",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "My brotherはいつthe classroomに着きましたか。",
-        "english_tokens": [
-          "My",
-          "brother",
-          "the",
-          "classroom"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My brotherはいつthe classroomに着きましたか。』",
-        "a": "When did my brother arrive at the classroom?"
-      },
-      {
-        "id": "M3N-00415",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "My sisterはいつthe kitchenに着きましたか。",
-        "english_tokens": [
-          "My",
-          "sister",
-          "the",
-          "kitchen"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My sisterはいつthe kitchenに着きましたか。』",
-        "a": "When did my sister arrive at the kitchen?"
       },
       {
         "id": "M3N-00433",
         "grade": "中3",
         "category": "疑問詞",
         "type": "英作文",
-        "source_japanese": "Tomはいつthe officeに着きましたか。",
+        "source_japanese": "Tomはいつofficeに着きましたか。",
         "english_tokens": [
-          "the",
           "office"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Tomはいつthe officeに着きましたか。』",
+        "q": "次の日本語に合う英文を書きなさい。『Tomはいつofficeに着きましたか。』",
         "a": "When did Tom arrive at the office?"
-      },
-      {
-        "id": "M3N-00439",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Emiはいつthe zooに着きましたか。",
-        "english_tokens": [
-          "the",
-          "zoo"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Emiはいつthe zooに着きましたか。』",
-        "a": "When did Emi arrive at the zoo?"
-      },
-      {
-        "id": "M3N-00445",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "The boyはいつthe townに着きましたか。",
-        "english_tokens": [
-          "The",
-          "boy",
-          "the",
-          "town"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The boyはいつthe townに着きましたか。』",
-        "a": "When did the boy arrive at the town?"
-      },
-      {
-        "id": "M3N-00451",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "The girlはいつthe cityに着きましたか。",
-        "english_tokens": [
-          "The",
-          "girl",
-          "the",
-          "city"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The girlはいつthe cityに着きましたか。』",
-        "a": "When did the girl arrive at the city?"
-      },
-      {
-        "id": "M3N-00457",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "The studentはいつthe stationに着きましたか。",
-        "english_tokens": [
-          "The",
-          "student",
-          "the",
-          "station"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The studentはいつthe stationに着きましたか。』",
-        "a": "When did the student arrive at the station?"
-      },
-      {
-        "id": "M3N-00463",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "The teacherはいつthe libraryに着きましたか。",
-        "english_tokens": [
-          "The",
-          "teacher",
-          "the",
-          "library"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The teacherはいつthe libraryに着きましたか。』",
-        "a": "When did the teacher arrive at the library?"
-      },
-      {
-        "id": "M3N-00469",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "Our teamはいつthe parkに着きましたか。",
-        "english_tokens": [
-          "Our",
-          "team",
-          "the",
-          "park"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Our teamはいつthe parkに着きましたか。』",
-        "a": "When did our team arrive at the park?"
-      },
-      {
-        "id": "M3N-00475",
-        "grade": "中3",
-        "category": "疑問詞",
-        "type": "英作文",
-        "source_japanese": "This dogはいつthe roomに着きましたか。",
-        "english_tokens": [
-          "This",
-          "dog",
-          "the",
-          "room"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This dogはいつthe roomに着きましたか。』",
-        "a": "When did this dog arrive at the room?"
-      },
-      {
-        "id": "M3N-00557",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのflowerは彼らのものです。",
-        "english_tokens": [
-          "flower"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのflowerは彼らのものです。』",
-        "a": "The flower is theirs."
-      },
-      {
-        "id": "M3N-00563",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのtreeは彼らのものです。",
-        "english_tokens": [
-          "tree"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのtreeは彼らのものです。』",
-        "a": "The tree is theirs."
-      },
-      {
-        "id": "M3N-00569",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのboxは彼らのものです。",
-        "english_tokens": [
-          "box"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのboxは彼らのものです。』",
-        "a": "The box is theirs."
-      },
-      {
-        "id": "M3N-00581",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのcarは彼らのものです。",
-        "english_tokens": [
-          "car"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのcarは彼らのものです。』",
-        "a": "The car is theirs."
       },
       {
         "id": "M3N-00587",
@@ -2227,52 +339,15 @@
         "a": "The camera is theirs."
       },
       {
-        "id": "M3N-00593",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのcomputerは彼らのものです。",
-        "english_tokens": [
-          "computer"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのcomputerは彼らのものです。』",
-        "a": "The computer is theirs."
-      },
-      {
-        "id": "M3N-00599",
-        "grade": "中3",
-        "category": "人称代名詞",
-        "type": "英作文",
-        "source_japanese": "そのgameは彼らのものです。",
-        "english_tokens": [
-          "game"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのgameは彼らのものです。』",
-        "a": "The game is theirs."
-      },
-      {
-        "id": "M3N-00683",
-        "grade": "中3",
-        "category": "進行形",
-        "type": "英作文",
-        "source_japanese": "そのとき、Emiはbasketballをしていました。",
-        "english_tokens": [
-          "basketball"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『そのとき、Emiはbasketballをしていました。』",
-        "a": "Emi was playing basketball then."
-      },
-      {
         "id": "M3N-00793",
         "grade": "中3",
         "category": "命令文，there is ～ の文",
         "type": "英作文",
-        "source_japanese": "このthe officeでは走らないでください。",
+        "source_japanese": "このofficeでは走らないでください。",
         "english_tokens": [
-          "the",
           "office"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このthe officeでは走らないでください。』",
+        "q": "次の日本語に合う英文を書きなさい。『このofficeでは走らないでください。』",
         "a": "Do not run in the office."
       },
       {
@@ -2280,729 +355,23 @@
         "grade": "中3",
         "category": "未来の文",
         "type": "英作文",
-        "source_japanese": "Tomは来年the officeへ行くつもりです。",
+        "source_japanese": "Tomは来年officeへ行くつもりです。",
         "english_tokens": [
-          "the",
           "office"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『Tomは来年the officeへ行くつもりです。』",
+        "q": "次の日本語に合う英文を書きなさい。『Tomは来年officeへ行くつもりです。』",
         "a": "Tom is going to go to the office next year."
-      },
-      {
-        "id": "M3N-00923",
-        "grade": "中3",
-        "category": "未来の文",
-        "type": "英作文",
-        "source_japanese": "Emiは来年the zooへ行くつもりです。",
-        "english_tokens": [
-          "the",
-          "zoo"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Emiは来年the zooへ行くつもりです。』",
-        "a": "Emi is going to go to the zoo next year."
-      },
-      {
-        "id": "M3N-00965",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Iは早く起きなければなりません。",
-        "english_tokens": [
-          "I"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Iは早く起きなければなりません。』",
-        "a": "I must get up early."
-      },
-      {
-        "id": "M3N-00971",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Youは早く起きなければなりません。",
-        "english_tokens": [
-          "You"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Youは早く起きなければなりません。』",
-        "a": "You must get up early."
-      },
-      {
-        "id": "M3N-00977",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Heは早く起きなければなりません。",
-        "english_tokens": [
-          "He"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Heは早く起きなければなりません。』",
-        "a": "He must get up early."
-      },
-      {
-        "id": "M3N-00983",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Sheは早く起きなければなりません。",
-        "english_tokens": [
-          "She"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Sheは早く起きなければなりません。』",
-        "a": "She must get up early."
-      },
-      {
-        "id": "M3N-00989",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Weは早く起きなければなりません。",
-        "english_tokens": [
-          "We"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Weは早く起きなければなりません。』",
-        "a": "We must get up early."
-      },
-      {
-        "id": "M3N-00995",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Theyは早く起きなければなりません。",
-        "english_tokens": [
-          "They"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Theyは早く起きなければなりません。』",
-        "a": "They must get up early."
-      },
-      {
-        "id": "M3N-01001",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "My fatherは早く起きなければなりません。",
-        "english_tokens": [
-          "My",
-          "father"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My fatherは早く起きなければなりません。』",
-        "a": "My father must get up early."
-      },
-      {
-        "id": "M3N-01007",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "My motherは早く起きなければなりません。",
-        "english_tokens": [
-          "My",
-          "mother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My motherは早く起きなければなりません。』",
-        "a": "My mother must get up early."
-      },
-      {
-        "id": "M3N-01013",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "My brotherは早く起きなければなりません。",
-        "english_tokens": [
-          "My",
-          "brother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My brotherは早く起きなければなりません。』",
-        "a": "My brother must get up early."
-      },
-      {
-        "id": "M3N-01019",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "My sisterは早く起きなければなりません。",
-        "english_tokens": [
-          "My",
-          "sister"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My sisterは早く起きなければなりません。』",
-        "a": "My sister must get up early."
-      },
-      {
-        "id": "M3N-01049",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "The boyは早く起きなければなりません。",
-        "english_tokens": [
-          "The",
-          "boy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The boyは早く起きなければなりません。』",
-        "a": "The boy must get up early."
-      },
-      {
-        "id": "M3N-01055",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "The girlは早く起きなければなりません。",
-        "english_tokens": [
-          "The",
-          "girl"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The girlは早く起きなければなりません。』",
-        "a": "The girl must get up early."
-      },
-      {
-        "id": "M3N-01061",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "The studentは早く起きなければなりません。",
-        "english_tokens": [
-          "The",
-          "student"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The studentは早く起きなければなりません。』",
-        "a": "The student must get up early."
-      },
-      {
-        "id": "M3N-01067",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "The teacherは早く起きなければなりません。",
-        "english_tokens": [
-          "The",
-          "teacher"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The teacherは早く起きなければなりません。』",
-        "a": "The teacher must get up early."
-      },
-      {
-        "id": "M3N-01073",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "Our teamは早く起きなければなりません。",
-        "english_tokens": [
-          "Our",
-          "team"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Our teamは早く起きなければなりません。』",
-        "a": "Our team must get up early."
-      },
-      {
-        "id": "M3N-01079",
-        "grade": "中3",
-        "category": "助動詞",
-        "type": "英作文",
-        "source_japanese": "This dogは早く起きなければなりません。",
-        "english_tokens": [
-          "This",
-          "dog"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This dogは早く起きなければなりません。』",
-        "a": "This dog must get up early."
-      },
-      {
-        "id": "M3N-01083",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Iは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "I"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Iは疲れていたので、早く寝ました。』",
-        "a": "I went to bed early because I was tired."
-      },
-      {
-        "id": "M3N-01089",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Youは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "You"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Youは疲れていたので、早く寝ました。』",
-        "a": "You went to bed early because you were tired."
-      },
-      {
-        "id": "M3N-01095",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Heは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "He"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Heは疲れていたので、早く寝ました。』",
-        "a": "He went to bed early because he was tired."
-      },
-      {
-        "id": "M3N-01101",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Sheは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "She"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Sheは疲れていたので、早く寝ました。』",
-        "a": "She went to bed early because she was tired."
-      },
-      {
-        "id": "M3N-01107",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Weは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "We"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Weは疲れていたので、早く寝ました。』",
-        "a": "We went to bed early because we were tired."
-      },
-      {
-        "id": "M3N-01113",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Theyは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "They"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Theyは疲れていたので、早く寝ました。』",
-        "a": "They went to bed early because they were tired."
-      },
-      {
-        "id": "M3N-01119",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "My fatherは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "My",
-          "father"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My fatherは疲れていたので、早く寝ました。』",
-        "a": "My father went to bed early because my father was tired."
-      },
-      {
-        "id": "M3N-01125",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "My motherは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "My",
-          "mother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My motherは疲れていたので、早く寝ました。』",
-        "a": "My mother went to bed early because my mother was tired."
-      },
-      {
-        "id": "M3N-01131",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "My brotherは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "My",
-          "brother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My brotherは疲れていたので、早く寝ました。』",
-        "a": "My brother went to bed early because my brother was tired."
-      },
-      {
-        "id": "M3N-01137",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "My sisterは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "My",
-          "sister"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My sisterは疲れていたので、早く寝ました。』",
-        "a": "My sister went to bed early because my sister was tired."
-      },
-      {
-        "id": "M3N-01167",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "The boyは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "The",
-          "boy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The boyは疲れていたので、早く寝ました。』",
-        "a": "The boy went to bed early because the boy was tired."
-      },
-      {
-        "id": "M3N-01173",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "The girlは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "The",
-          "girl"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The girlは疲れていたので、早く寝ました。』",
-        "a": "The girl went to bed early because the girl was tired."
-      },
-      {
-        "id": "M3N-01179",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "The studentは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "The",
-          "student"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The studentは疲れていたので、早く寝ました。』",
-        "a": "The student went to bed early because the student was tired."
-      },
-      {
-        "id": "M3N-01185",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "The teacherは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "The",
-          "teacher"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The teacherは疲れていたので、早く寝ました。』",
-        "a": "The teacher went to bed early because the teacher was tired."
-      },
-      {
-        "id": "M3N-01191",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "Our teamは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "Our",
-          "team"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Our teamは疲れていたので、早く寝ました。』",
-        "a": "Our team went to bed early because our team was tired."
-      },
-      {
-        "id": "M3N-01197",
-        "grade": "中3",
-        "category": "接続詞",
-        "type": "英作文",
-        "source_japanese": "This dogは疲れていたので、早く寝ました。",
-        "english_tokens": [
-          "This",
-          "dog"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This dogは疲れていたので、早く寝ました。』",
-        "a": "This dog went to bed early because this dog was tired."
-      },
-      {
-        "id": "M3N-01204",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Iは英語を話したいです。",
-        "english_tokens": [
-          "I"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Iは英語を話したいです。』",
-        "a": "I want to speak English."
-      },
-      {
-        "id": "M3N-01210",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Youは英語を話したいです。",
-        "english_tokens": [
-          "You"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Youは英語を話したいです。』",
-        "a": "You want to speak English."
-      },
-      {
-        "id": "M3N-01216",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Heは英語を話したいです。",
-        "english_tokens": [
-          "He"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Heは英語を話したいです。』",
-        "a": "He wants to speak English."
-      },
-      {
-        "id": "M3N-01222",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Sheは英語を話したいです。",
-        "english_tokens": [
-          "She"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Sheは英語を話したいです。』",
-        "a": "She wants to speak English."
-      },
-      {
-        "id": "M3N-01228",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Weは英語を話したいです。",
-        "english_tokens": [
-          "We"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Weは英語を話したいです。』",
-        "a": "We want to speak English."
-      },
-      {
-        "id": "M3N-01234",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Theyは英語を話したいです。",
-        "english_tokens": [
-          "They"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Theyは英語を話したいです。』",
-        "a": "They want to speak English."
-      },
-      {
-        "id": "M3N-01240",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "My fatherは英語を話したいです。",
-        "english_tokens": [
-          "My",
-          "father"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My fatherは英語を話したいです。』",
-        "a": "My father wants to speak English."
-      },
-      {
-        "id": "M3N-01246",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "My motherは英語を話したいです。",
-        "english_tokens": [
-          "My",
-          "mother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My motherは英語を話したいです。』",
-        "a": "My mother wants to speak English."
-      },
-      {
-        "id": "M3N-01252",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "My brotherは英語を話したいです。",
-        "english_tokens": [
-          "My",
-          "brother"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My brotherは英語を話したいです。』",
-        "a": "My brother wants to speak English."
-      },
-      {
-        "id": "M3N-01258",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "My sisterは英語を話したいです。",
-        "english_tokens": [
-          "My",
-          "sister"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『My sisterは英語を話したいです。』",
-        "a": "My sister wants to speak English."
-      },
-      {
-        "id": "M3N-01288",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "The boyは英語を話したいです。",
-        "english_tokens": [
-          "The",
-          "boy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The boyは英語を話したいです。』",
-        "a": "The boy wants to speak English."
-      },
-      {
-        "id": "M3N-01294",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "The girlは英語を話したいです。",
-        "english_tokens": [
-          "The",
-          "girl"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The girlは英語を話したいです。』",
-        "a": "The girl wants to speak English."
-      },
-      {
-        "id": "M3N-01300",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "The studentは英語を話したいです。",
-        "english_tokens": [
-          "The",
-          "student"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The studentは英語を話したいです。』",
-        "a": "The student wants to speak English."
-      },
-      {
-        "id": "M3N-01306",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "The teacherは英語を話したいです。",
-        "english_tokens": [
-          "The",
-          "teacher"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『The teacherは英語を話したいです。』",
-        "a": "The teacher wants to speak English."
-      },
-      {
-        "id": "M3N-01312",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "Our teamは英語を話したいです。",
-        "english_tokens": [
-          "Our",
-          "team"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『Our teamは英語を話したいです。』",
-        "a": "Our team wants to speak English."
-      },
-      {
-        "id": "M3N-01318",
-        "grade": "中3",
-        "category": "不定詞①，動名詞",
-        "type": "英作文",
-        "source_japanese": "This dogは英語を話したいです。",
-        "english_tokens": [
-          "This",
-          "dog"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『This dogは英語を話したいです。』",
-        "a": "This dog wants to speak English."
-      },
-      {
-        "id": "M3N-01324",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このbookはあのbookよりbusyです。",
-        "english_tokens": [
-          "book",
-          "book",
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このbookはあのbookよりbusyです。』",
-        "a": "This book is busier than that book."
-      },
-      {
-        "id": "M3N-01330",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このpenはあのpenよりkindです。",
-        "english_tokens": [
-          "pen",
-          "pen",
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このpenはあのpenよりkindです。』",
-        "a": "This pen is kinder than that pen."
-      },
-      {
-        "id": "M3N-01336",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このbagはあのbagよりtiredです。",
-        "english_tokens": [
-          "bag",
-          "bag",
-          "tired"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このbagはあのbagよりtiredです。』",
-        "a": "This bag is more tired than that bag."
-      },
-      {
-        "id": "M3N-01342",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このpictureはあのpictureよりhappyです。",
-        "english_tokens": [
-          "picture",
-          "picture",
-          "happy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このpictureはあのpictureよりhappyです。』",
-        "a": "This picture is happier than that picture."
-      },
-      {
-        "id": "M3N-01348",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このdeskはあのdeskよりhungryです。",
-        "english_tokens": [
-          "desk",
-          "desk",
-          "hungry"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このdeskはあのdeskよりhungryです。』",
-        "a": "This desk is hungrier than that desk."
-      },
-      {
-        "id": "M3N-01354",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このchairはあのchairよりfreeです。",
-        "english_tokens": [
-          "chair",
-          "chair",
-          "free"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このchairはあのchairよりfreeです。』",
-        "a": "This chair is freer than that chair."
       },
       {
         "id": "M3N-01360",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このtableはあのtableよりsleepyです。",
+        "source_japanese": "このテーブルはあのテーブルよりsleepyです。",
         "english_tokens": [
-          "table",
-          "table",
           "sleepy"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このtableはあのtableよりsleepyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『このテーブルはあのテーブルよりsleepyです。』",
         "a": "This table is sleepier than that table."
       },
       {
@@ -3010,13 +379,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このbikeはあのbikeよりsadです。",
+        "source_japanese": "この自転車はあの自転車よりsadです。",
         "english_tokens": [
-          "bike",
-          "bike",
           "sad"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このbikeはあのbikeよりsadです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この自転車はあの自転車よりsadです。』",
         "a": "This bike is sadder than that bike."
       },
       {
@@ -3024,13 +391,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このdogはあのdogよりcoldです。",
+        "source_japanese": "この犬はあの犬よりcoldです。",
         "english_tokens": [
-          "dog",
-          "dog",
           "cold"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このdogはあのdogよりcoldです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この犬はあの犬よりcoldです。』",
         "a": "This dog is colder than that dog."
       },
       {
@@ -3038,13 +403,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このcatはあのcatよりhotです。",
+        "source_japanese": "この猫はあの猫よりhotです。",
         "english_tokens": [
-          "cat",
-          "cat",
           "hot"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このcatはあのcatよりhotです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この猫はあの猫よりhotです。』",
         "a": "This cat is hotter than that cat."
       },
       {
@@ -3052,69 +415,35 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このwindowはあのwindowよりniceです。",
+        "source_japanese": "この窓はあの窓よりniceです。",
         "english_tokens": [
-          "window",
-          "window",
           "nice"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このwindowはあのwindowよりniceです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この窓はあの窓よりniceです。』",
         "a": "This window is nicer than that window."
-      },
-      {
-        "id": "M3N-01390",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このdoorはあのdoorよりyoungです。",
-        "english_tokens": [
-          "door",
-          "door",
-          "young"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このdoorはあのdoorよりyoungです。』",
-        "a": "This door is younger than that door."
       },
       {
         "id": "M3N-01396",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このflowerはあのflowerよりoldです。",
+        "source_japanese": "この花はあの花よりoldです。",
         "english_tokens": [
-          "flower",
-          "flower",
           "old"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このflowerはあのflowerよりoldです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この花はあの花よりoldです。』",
         "a": "This flower is older than that flower."
-      },
-      {
-        "id": "M3N-01402",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このtreeはあのtreeよりsmallです。",
-        "english_tokens": [
-          "tree",
-          "tree",
-          "small"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このtreeはあのtreeよりsmallです。』",
-        "a": "This tree is smaller than that tree."
       },
       {
         "id": "M3N-01408",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このboxはあのboxよりbigです。",
+        "source_japanese": "この箱はあの箱よりbigです。",
         "english_tokens": [
-          "box",
-          "box",
           "big"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このboxはあのboxよりbigです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱よりbigです。』",
         "a": "This box is bigger than that box."
       },
       {
@@ -3136,13 +465,11 @@
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このcarはあのcarよりfastです。",
+        "source_japanese": "この車はあの車よりfastです。",
         "english_tokens": [
-          "car",
-          "car",
           "fast"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このcarはあのcarよりfastです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この車はあの車よりfastです。』",
         "a": "This car is faster than that car."
       },
       {
@@ -3160,188 +487,16 @@
         "a": "This camera is slower than that camera."
       },
       {
-        "id": "M3N-01432",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "source_japanese": "このcomputerはあのcomputerよりgoodです。",
-        "english_tokens": [
-          "computer",
-          "computer",
-          "good"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『このcomputerはあのcomputerよりgoodです。』",
-        "a": "This computer is better than that computer."
-      },
-      {
         "id": "M3N-01438",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "source_japanese": "このgameはあのgameよりcuteです。",
+        "source_japanese": "このゲームはあのゲームよりcuteです。",
         "english_tokens": [
-          "game",
-          "game",
           "cute"
         ],
-        "q": "次の日本語に合う英文を書きなさい。『このgameはあのgameよりcuteです。』",
+        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームよりcuteです。』",
         "a": "This game is cuter than that game."
-      },
-      {
-        "id": "M3N-01443",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのbookをあげました。",
-        "english_tokens": [
-          "book"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbookをあげました。』",
-        "a": "I gave him this book."
-      },
-      {
-        "id": "M3N-01444",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をbusyにしました。",
-        "english_tokens": [
-          "busy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をbusyにしました。』",
-        "a": "The news made me busy."
-      },
-      {
-        "id": "M3N-01449",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのpenをあげました。",
-        "english_tokens": [
-          "pen"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのpenをあげました。』",
-        "a": "I gave him this pen."
-      },
-      {
-        "id": "M3N-01450",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をkindにしました。",
-        "english_tokens": [
-          "kind"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をkindにしました。』",
-        "a": "The news made me kind."
-      },
-      {
-        "id": "M3N-01455",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのbagをあげました。",
-        "english_tokens": [
-          "bag"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbagをあげました。』",
-        "a": "I gave him this bag."
-      },
-      {
-        "id": "M3N-01456",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をtiredにしました。",
-        "english_tokens": [
-          "tired"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をtiredにしました。』",
-        "a": "The news made me tired."
-      },
-      {
-        "id": "M3N-01461",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのpictureをあげました。",
-        "english_tokens": [
-          "picture"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのpictureをあげました。』",
-        "a": "I gave him this picture."
-      },
-      {
-        "id": "M3N-01462",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をhappyにしました。",
-        "english_tokens": [
-          "happy"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をhappyにしました。』",
-        "a": "The news made me happy."
-      },
-      {
-        "id": "M3N-01467",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのdeskをあげました。",
-        "english_tokens": [
-          "desk"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのdeskをあげました。』",
-        "a": "I gave him this desk."
-      },
-      {
-        "id": "M3N-01468",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をhungryにしました。",
-        "english_tokens": [
-          "hungry"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をhungryにしました。』",
-        "a": "The news made me hungry."
-      },
-      {
-        "id": "M3N-01473",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのchairをあげました。",
-        "english_tokens": [
-          "chair"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのchairをあげました。』",
-        "a": "I gave him this chair."
-      },
-      {
-        "id": "M3N-01474",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "その知らせは私をfreeにしました。",
-        "english_tokens": [
-          "free"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をfreeにしました。』",
-        "a": "The news made me free."
-      },
-      {
-        "id": "M3N-01479",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのtableをあげました。",
-        "english_tokens": [
-          "table"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのtableをあげました。』",
-        "a": "I gave him this table."
       },
       {
         "id": "M3N-01480",
@@ -3356,18 +511,6 @@
         "a": "The news made me sleepy."
       },
       {
-        "id": "M3N-01485",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのbikeをあげました。",
-        "english_tokens": [
-          "bike"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのbikeをあげました。』",
-        "a": "I gave him this bike."
-      },
-      {
         "id": "M3N-01486",
         "grade": "中3",
         "category": "文型",
@@ -3380,18 +523,6 @@
         "a": "The news made me sad."
       },
       {
-        "id": "M3N-01491",
-        "grade": "中3",
-        "category": "文型",
-        "type": "英作文",
-        "source_japanese": "私は彼にこのdogをあげました。",
-        "english_tokens": [
-          "dog"
-        ],
-        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのdogをあげました。』",
-        "a": "I gave him this dog."
-      },
-      {
         "id": "M3N-01492",
         "grade": "中3",
         "category": "文型",
@@ -3402,6 +533,414 @@
         ],
         "q": "次の日本語に合う英文を書きなさい。『その知らせは私をcoldにしました。』",
         "a": "The news made me cold."
+      },
+      {
+        "id": "M3N-01498",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をhotにしました。",
+        "english_tokens": [
+          "hot"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をhotにしました。』",
+        "a": "The news made me hot."
+      },
+      {
+        "id": "M3N-01504",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をniceにしました。",
+        "english_tokens": [
+          "nice"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をniceにしました。』",
+        "a": "The news made me nice."
+      },
+      {
+        "id": "M3N-01516",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をoldにしました。",
+        "english_tokens": [
+          "old"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をoldにしました。』",
+        "a": "The news made me old."
+      },
+      {
+        "id": "M3N-01528",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をbigにしました。",
+        "english_tokens": [
+          "big"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をbigにしました。』",
+        "a": "The news made me big."
+      },
+      {
+        "id": "M3N-01533",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのballをあげました。",
+        "english_tokens": [
+          "ball"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのballをあげました。』",
+        "a": "I gave him this ball."
+      },
+      {
+        "id": "M3N-01534",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をstrongにしました。",
+        "english_tokens": [
+          "strong"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をstrongにしました。』",
+        "a": "The news made me strong."
+      },
+      {
+        "id": "M3N-01540",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をfastにしました。",
+        "english_tokens": [
+          "fast"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をfastにしました。』",
+        "a": "The news made me fast."
+      },
+      {
+        "id": "M3N-01545",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "私は彼にこのcameraをあげました。",
+        "english_tokens": [
+          "camera"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は彼にこのcameraをあげました。』",
+        "a": "I gave him this camera."
+      },
+      {
+        "id": "M3N-01546",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をslowにしました。",
+        "english_tokens": [
+          "slow"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をslowにしました。』",
+        "a": "The news made me slow."
+      },
+      {
+        "id": "M3N-01558",
+        "grade": "中3",
+        "category": "文型",
+        "type": "英作文",
+        "source_japanese": "その知らせは私をcuteにしました。",
+        "english_tokens": [
+          "cute"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『その知らせは私をcuteにしました。』",
+        "a": "The news made me cute."
+      },
+      {
+        "id": "M3N-01655",
+        "grade": "中3",
+        "category": "受動態",
+        "type": "英作文",
+        "source_japanese": "このballは昨日使われました。",
+        "english_tokens": [
+          "ball"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このballは昨日使われました。』",
+        "a": "This ball was used yesterday."
+      },
+      {
+        "id": "M3N-01667",
+        "grade": "中3",
+        "category": "受動態",
+        "type": "英作文",
+        "source_japanese": "このcameraは昨日使われました。",
+        "english_tokens": [
+          "camera"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『このcameraは昨日使われました。』",
+        "a": "This camera was used yesterday."
+      },
+      {
+        "id": "M3N-01757",
+        "grade": "中3",
+        "category": "現在完了形（完了・経験）",
+        "type": "英作文",
+        "source_japanese": "私は一度もofficeへ行ったことがありません。",
+        "english_tokens": [
+          "office"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私は一度もofficeへ行ったことがありません。』",
+        "a": "I have never been to the office."
+      },
+      {
+        "id": "M3N-01803",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はMondayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Monday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はMondayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Monday."
+      },
+      {
+        "id": "M3N-01809",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はTuesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Tuesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はTuesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Tuesday."
+      },
+      {
+        "id": "M3N-01815",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はWednesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Wednesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はWednesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Wednesday."
+      },
+      {
+        "id": "M3N-01821",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はThursdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Thursday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はThursdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Thursday."
+      },
+      {
+        "id": "M3N-01827",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はFridayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Friday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はFridayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Friday."
+      },
+      {
+        "id": "M3N-01833",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はSaturdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Saturday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はSaturdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Saturday."
+      },
+      {
+        "id": "M3N-01839",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はSundayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Sunday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はSundayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Sunday."
+      },
+      {
+        "id": "M3N-01845",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はMondayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Monday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はMondayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Monday."
+      },
+      {
+        "id": "M3N-01851",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はTuesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Tuesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はTuesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Tuesday."
+      },
+      {
+        "id": "M3N-01857",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はWednesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Wednesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はWednesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Wednesday."
+      },
+      {
+        "id": "M3N-01863",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はThursdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Thursday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はThursdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Thursday."
+      },
+      {
+        "id": "M3N-01869",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はFridayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Friday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はFridayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Friday."
+      },
+      {
+        "id": "M3N-01875",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はSaturdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Saturday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はSaturdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Saturday."
+      },
+      {
+        "id": "M3N-01881",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はSundayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Sunday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はSundayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Sunday."
+      },
+      {
+        "id": "M3N-01887",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はMondayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Monday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はMondayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Monday."
+      },
+      {
+        "id": "M3N-01893",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はTuesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Tuesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はTuesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Tuesday."
+      },
+      {
+        "id": "M3N-01899",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はWednesdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Wednesday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はWednesdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Wednesday."
+      },
+      {
+        "id": "M3N-01905",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はThursdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Thursday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はThursdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Thursday."
+      },
+      {
+        "id": "M3N-01911",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はFridayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Friday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はFridayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Friday."
+      },
+      {
+        "id": "M3N-01917",
+        "grade": "中3",
+        "category": "現在完了形（継続），現在完了進行形",
+        "type": "英作文",
+        "source_japanese": "私はSaturdayからずっとこの町に住んでいます。",
+        "english_tokens": [
+          "Saturday"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『私はSaturdayからずっとこの町に住んでいます。』",
+        "a": "I have lived in this town since Saturday."
+      },
+      {
+        "id": "M3N-02253",
+        "grade": "中3",
+        "category": "関係代名詞",
+        "type": "英作文",
+        "source_japanese": "あれは私の父が作ったballです。",
+        "english_tokens": [
+          "ball"
+        ],
+        "q": "次の日本語に合う英文を書きなさい。『あれは私の父が作ったballです。』（which を使うこと）",
+        "a": "That is the ball which my father made."
       }
     ]
   },
@@ -3426,10 +965,10 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 1077,
-    "row_count": 4200,
-    "duplicate_excess": 3123,
-    "row_ratio": 0.399581,
+    "group_count": 1083,
+    "row_count": 4212,
+    "duplicate_excess": 3129,
+    "row_ratio": 0.400723,
     "top": [
       {
         "count": 28,
@@ -8295,91 +5834,18 @@
     ]
   },
   "semantic_template_warnings": {
-    "count": 9,
+    "count": 1,
     "by_prefix": {
-      "M3C": 8,
       "M3N": 1
     },
     "samples": [
-      {
-        "id": "M3C-01201",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりbusyです。』",
-        "a": "This bag is busier than that one."
-      },
-      {
-        "id": "M3C-01202",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんbusyです。』",
-        "a": "This bag is the busiest of the three."
-      },
-      {
-        "id": "M3C-01209",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bagはあれよりkindです。』",
-        "a": "This bag is kinder than that one."
-      },
-      {
-        "id": "M3C-01210",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bagは3つの中でいちばんkindです。』",
-        "a": "This bag is the kindest of the three."
-      },
-      {
-        "id": "M3C-01213",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりbusyです。』",
-        "a": "This book is busier than that one."
-      },
-      {
-        "id": "M3C-01214",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんbusyです。』",
-        "a": "This book is the busiest of the three."
-      },
-      {
-        "id": "M3C-01221",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bookはあれよりkindです。』",
-        "a": "This book is kinder than that one."
-      },
-      {
-        "id": "M3C-01222",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『This bookは3つの中でいちばんkindです。』",
-        "a": "This book is the kindest of the three."
-      },
       {
         "id": "M3N-01324",
         "kind": "inanimate_comparison_adjective",
         "grade": "中3",
         "category": "比較",
         "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『このbookはあのbookよりbusyです。』",
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より忙しいです。』",
         "a": "This book is busier than that book."
       }
     ]

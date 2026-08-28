@@ -1,110 +1,14 @@
 {
-  "generated_at": "2026-08-28T11:27:28.242Z",
-  "hybrid_rows": 343,
+  "generated_at": "2026-08-28T11:29:45.390Z",
+  "hybrid_rows": 76,
   "top_tokens": [
     {
-      "token": "this",
-      "count": 76
-    },
-    {
-      "token": "the",
-      "count": 56
-    },
-    {
       "token": "my",
-      "count": 40
-    },
-    {
-      "token": "that",
-      "count": 24
-    },
-    {
-      "token": "busy",
-      "count": 22
-    },
-    {
-      "token": "good",
-      "count": 22
-    },
-    {
-      "token": "kind",
-      "count": 22
-    },
-    {
-      "token": "small",
-      "count": 22
-    },
-    {
-      "token": "dog",
-      "count": 20
-    },
-    {
-      "token": "easy",
-      "count": 20
-    },
-    {
-      "token": "large",
-      "count": 20
-    },
-    {
-      "token": "computer",
-      "count": 18
-    },
-    {
-      "token": "bag",
-      "count": 16
-    },
-    {
-      "token": "bike",
-      "count": 16
-    },
-    {
-      "token": "book",
-      "count": 16
-    },
-    {
-      "token": "our",
-      "count": 16
-    },
-    {
-      "token": "park",
-      "count": 16
-    },
-    {
-      "token": "picture",
-      "count": 16
-    },
-    {
-      "token": "room",
-      "count": 16
-    },
-    {
-      "token": "city",
-      "count": 14
-    },
-    {
-      "token": "school",
-      "count": 14
-    },
-    {
-      "token": "friend",
       "count": 12
     },
     {
-      "token": "box",
-      "count": 7
-    },
-    {
-      "token": "tree",
-      "count": 7
-    },
-    {
-      "token": "car",
-      "count": 6
-    },
-    {
-      "token": "game",
-      "count": 6
+      "token": "our",
+      "count": 12
     },
     {
       "token": "ball",
@@ -115,111 +19,11 @@
       "count": 5
     },
     {
-      "token": "cat",
-      "count": 5
-    },
-    {
-      "token": "desk",
-      "count": 5
-    },
-    {
-      "token": "door",
-      "count": 5
-    },
-    {
-      "token": "flower",
-      "count": 5
-    },
-    {
-      "token": "table",
-      "count": 5
-    },
-    {
-      "token": "window",
-      "count": 5
-    },
-    {
-      "token": "boy",
-      "count": 4
-    },
-    {
-      "token": "brother",
-      "count": 4
-    },
-    {
-      "token": "chair",
-      "count": 4
-    },
-    {
-      "token": "father",
-      "count": 4
-    },
-    {
-      "token": "girl",
-      "count": 4
-    },
-    {
-      "token": "he",
-      "count": 4
-    },
-    {
-      "token": "mother",
-      "count": 4
-    },
-    {
       "token": "office",
       "count": 4
     },
     {
-      "token": "pen",
-      "count": 4
-    },
-    {
-      "token": "she",
-      "count": 4
-    },
-    {
-      "token": "sister",
-      "count": 4
-    },
-    {
-      "token": "station",
-      "count": 4
-    },
-    {
-      "token": "student",
-      "count": 4
-    },
-    {
-      "token": "teacher",
-      "count": 4
-    },
-    {
-      "token": "team",
-      "count": 4
-    },
-    {
-      "token": "they",
-      "count": 4
-    },
-    {
-      "token": "we",
-      "count": 4
-    },
-    {
-      "token": "you",
-      "count": 4
-    },
-    {
       "token": "friday",
-      "count": 3
-    },
-    {
-      "token": "i",
-      "count": 3
-    },
-    {
-      "token": "library",
       "count": 3
     },
     {
@@ -243,15 +47,7 @@
       "count": 3
     },
     {
-      "token": "zoo",
-      "count": 3
-    },
-    {
       "token": "big",
-      "count": 2
-    },
-    {
-      "token": "classroom",
       "count": 2
     },
     {
@@ -267,31 +63,7 @@
       "count": 2
     },
     {
-      "token": "free",
-      "count": 2
-    },
-    {
-      "token": "happy",
-      "count": 2
-    },
-    {
-      "token": "hospital",
-      "count": 2
-    },
-    {
       "token": "hot",
-      "count": 2
-    },
-    {
-      "token": "hungry",
-      "count": 2
-    },
-    {
-      "token": "kitchen",
-      "count": 2
-    },
-    {
-      "token": "museum",
       "count": 2
     },
     {
@@ -315,52 +87,12 @@
       "count": 2
     },
     {
-      "token": "store",
-      "count": 2
-    },
-    {
       "token": "strong",
       "count": 2
     },
     {
       "token": "sunday",
       "count": 2
-    },
-    {
-      "token": "tired",
-      "count": 2
-    },
-    {
-      "token": "town",
-      "count": 2
-    },
-    {
-      "token": "young",
-      "count": 2
-    },
-    {
-      "token": "basketball",
-      "count": 1
-    },
-    {
-      "token": "case",
-      "count": 1
-    },
-    {
-      "token": "gym",
-      "count": 1
-    },
-    {
-      "token": "pencil",
-      "count": 1
-    },
-    {
-      "token": "pool",
-      "count": 1
-    },
-    {
-      "token": "wall",
-      "count": 1
     }
   ],
   "groups": [
@@ -368,339 +100,67 @@
       "prefix": "M3C",
       "grade": "中3",
       "category": "比較",
-      "count": 120,
+      "count": 24,
       "samples": [
         {
-          "id": "M3C-01201",
-          "jp": "This bagはあれよりbusyです。",
-          "a": "This bag is busier than that one."
+          "id": "M3C-01225",
+          "jp": "My自転車はあれより忙しいです。",
+          "a": "My bike is busier than that one."
         },
         {
-          "id": "M3C-01202",
-          "jp": "This bagは3つの中でいちばんbusyです。",
-          "a": "This bag is the busiest of the three."
+          "id": "M3C-01226",
+          "jp": "My自転車は3つの中でいちばん忙しいです。",
+          "a": "My bike is the busiest of the three."
         },
         {
-          "id": "M3C-01203",
-          "jp": "This bagはあれよりeasyです。",
-          "a": "This bag is easier than that one."
+          "id": "M3C-01227",
+          "jp": "My自転車はあれより簡単です。",
+          "a": "My bike is easier than that one."
         },
         {
-          "id": "M3C-01204",
-          "jp": "This bagは3つの中でいちばんeasyです。",
-          "a": "This bag is the easiest of the three."
+          "id": "M3C-01228",
+          "jp": "My自転車は3つの中でいちばん簡単です。",
+          "a": "My bike is the easiest of the three."
         },
         {
-          "id": "M3C-01205",
-          "jp": "This bagはあれよりsmallです。",
-          "a": "This bag is smaller than that one."
+          "id": "M3C-01229",
+          "jp": "My自転車はあれより小さいです。",
+          "a": "My bike is smaller than that one."
         },
         {
-          "id": "M3C-01206",
-          "jp": "This bagは3つの中でいちばんsmallです。",
-          "a": "This bag is the smallest of the three."
+          "id": "M3C-01230",
+          "jp": "My自転車は3つの中でいちばん小さいです。",
+          "a": "My bike is the smallest of the three."
         },
         {
-          "id": "M3C-01207",
-          "jp": "This bagはあれよりlargeです。",
-          "a": "This bag is larger than that one."
+          "id": "M3C-01231",
+          "jp": "My自転車はあれより大きいです。",
+          "a": "My bike is larger than that one."
         },
         {
-          "id": "M3C-01208",
-          "jp": "This bagは3つの中でいちばんlargeです。",
-          "a": "This bag is the largest of the three."
+          "id": "M3C-01232",
+          "jp": "My自転車は3つの中でいちばん大きいです。",
+          "a": "My bike is the largest of the three."
         },
         {
-          "id": "M3C-01209",
-          "jp": "This bagはあれよりkindです。",
-          "a": "This bag is kinder than that one."
+          "id": "M3C-01233",
+          "jp": "My自転車はあれより親切です。",
+          "a": "My bike is kinder than that one."
         },
         {
-          "id": "M3C-01210",
-          "jp": "This bagは3つの中でいちばんkindです。",
-          "a": "This bag is the kindest of the three."
+          "id": "M3C-01234",
+          "jp": "My自転車は3つの中でいちばん親切です。",
+          "a": "My bike is the kindest of the three."
         },
         {
-          "id": "M3C-01211",
-          "jp": "This bagはあれよりgoodです。",
-          "a": "This bag is better than that one."
+          "id": "M3C-01235",
+          "jp": "My自転車はあれより良いです。",
+          "a": "My bike is better than that one."
         },
         {
-          "id": "M3C-01212",
-          "jp": "This bagは3つの中でいちばんgoodです。",
-          "a": "This bag is the best of the three."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "文型",
-      "count": 40,
-      "samples": [
-        {
-          "id": "M3N-01443",
-          "jp": "私は彼にこのbookをあげました。",
-          "a": "I gave him this book."
-        },
-        {
-          "id": "M3N-01444",
-          "jp": "その知らせは私をbusyにしました。",
-          "a": "The news made me busy."
-        },
-        {
-          "id": "M3N-01449",
-          "jp": "私は彼にこのpenをあげました。",
-          "a": "I gave him this pen."
-        },
-        {
-          "id": "M3N-01450",
-          "jp": "その知らせは私をkindにしました。",
-          "a": "The news made me kind."
-        },
-        {
-          "id": "M3N-01455",
-          "jp": "私は彼にこのbagをあげました。",
-          "a": "I gave him this bag."
-        },
-        {
-          "id": "M3N-01456",
-          "jp": "その知らせは私をtiredにしました。",
-          "a": "The news made me tired."
-        },
-        {
-          "id": "M3N-01461",
-          "jp": "私は彼にこのpictureをあげました。",
-          "a": "I gave him this picture."
-        },
-        {
-          "id": "M3N-01462",
-          "jp": "その知らせは私をhappyにしました。",
-          "a": "The news made me happy."
-        },
-        {
-          "id": "M3N-01467",
-          "jp": "私は彼にこのdeskをあげました。",
-          "a": "I gave him this desk."
-        },
-        {
-          "id": "M3N-01468",
-          "jp": "その知らせは私をhungryにしました。",
-          "a": "The news made me hungry."
-        },
-        {
-          "id": "M3N-01473",
-          "jp": "私は彼にこのchairをあげました。",
-          "a": "I gave him this chair."
-        },
-        {
-          "id": "M3N-01474",
-          "jp": "その知らせは私をfreeにしました。",
-          "a": "The news made me free."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "比較",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-01324",
-          "jp": "このbookはあのbookよりbusyです。",
-          "a": "This book is busier than that book."
-        },
-        {
-          "id": "M3N-01330",
-          "jp": "このpenはあのpenよりkindです。",
-          "a": "This pen is kinder than that pen."
-        },
-        {
-          "id": "M3N-01336",
-          "jp": "このbagはあのbagよりtiredです。",
-          "a": "This bag is more tired than that bag."
-        },
-        {
-          "id": "M3N-01342",
-          "jp": "このpictureはあのpictureよりhappyです。",
-          "a": "This picture is happier than that picture."
-        },
-        {
-          "id": "M3N-01348",
-          "jp": "このdeskはあのdeskよりhungryです。",
-          "a": "This desk is hungrier than that desk."
-        },
-        {
-          "id": "M3N-01354",
-          "jp": "このchairはあのchairよりfreeです。",
-          "a": "This chair is freer than that chair."
-        },
-        {
-          "id": "M3N-01360",
-          "jp": "このtableはあのtableよりsleepyです。",
-          "a": "This table is sleepier than that table."
-        },
-        {
-          "id": "M3N-01366",
-          "jp": "このbikeはあのbikeよりsadです。",
-          "a": "This bike is sadder than that bike."
-        },
-        {
-          "id": "M3N-01372",
-          "jp": "このdogはあのdogよりcoldです。",
-          "a": "This dog is colder than that dog."
-        },
-        {
-          "id": "M3N-01378",
-          "jp": "このcatはあのcatよりhotです。",
-          "a": "This cat is hotter than that cat."
-        },
-        {
-          "id": "M3N-01384",
-          "jp": "このwindowはあのwindowよりniceです。",
-          "a": "This window is nicer than that window."
-        },
-        {
-          "id": "M3N-01390",
-          "jp": "このdoorはあのdoorよりyoungです。",
-          "a": "This door is younger than that door."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "受動態",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-01565",
-          "jp": "このbookは昨日使われました。",
-          "a": "This book was used yesterday."
-        },
-        {
-          "id": "M3N-01571",
-          "jp": "このpenは昨日使われました。",
-          "a": "This pen was used yesterday."
-        },
-        {
-          "id": "M3N-01577",
-          "jp": "このbagは昨日使われました。",
-          "a": "This bag was used yesterday."
-        },
-        {
-          "id": "M3N-01583",
-          "jp": "このpictureは昨日使われました。",
-          "a": "This picture was used yesterday."
-        },
-        {
-          "id": "M3N-01589",
-          "jp": "このdeskは昨日使われました。",
-          "a": "This desk was used yesterday."
-        },
-        {
-          "id": "M3N-01595",
-          "jp": "このchairは昨日使われました。",
-          "a": "This chair was used yesterday."
-        },
-        {
-          "id": "M3N-01601",
-          "jp": "このtableは昨日使われました。",
-          "a": "This table was used yesterday."
-        },
-        {
-          "id": "M3N-01607",
-          "jp": "このbikeは昨日使われました。",
-          "a": "This bike was used yesterday."
-        },
-        {
-          "id": "M3N-01613",
-          "jp": "このdogは昨日使われました。",
-          "a": "This dog was used yesterday."
-        },
-        {
-          "id": "M3N-01619",
-          "jp": "このcatは昨日使われました。",
-          "a": "This cat was used yesterday."
-        },
-        {
-          "id": "M3N-01625",
-          "jp": "このwindowは昨日使われました。",
-          "a": "This window was used yesterday."
-        },
-        {
-          "id": "M3N-01631",
-          "jp": "このdoorは昨日使われました。",
-          "a": "This door was used yesterday."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "現在完了形（完了・経験）",
-      "count": 20,
-      "samples": [
-        {
-          "id": "M3N-01685",
-          "jp": "私は一度もthe libraryへ行ったことがありません。",
-          "a": "I have never been to the library."
-        },
-        {
-          "id": "M3N-01691",
-          "jp": "私は一度もthe parkへ行ったことがありません。",
-          "a": "I have never been to the park."
-        },
-        {
-          "id": "M3N-01697",
-          "jp": "私は一度もthe stationへ行ったことがありません。",
-          "a": "I have never been to the station."
-        },
-        {
-          "id": "M3N-01703",
-          "jp": "私は一度もthe schoolへ行ったことがありません。",
-          "a": "I have never been to the school."
-        },
-        {
-          "id": "M3N-01709",
-          "jp": "私は一度もthe roomへ行ったことがありません。",
-          "a": "I have never been to the room."
-        },
-        {
-          "id": "M3N-01715",
-          "jp": "私は一度もthe hospitalへ行ったことがありません。",
-          "a": "I have never been to the hospital."
-        },
-        {
-          "id": "M3N-01721",
-          "jp": "私は一度もthe museumへ行ったことがありません。",
-          "a": "I have never been to the museum."
-        },
-        {
-          "id": "M3N-01727",
-          "jp": "私は一度もthe storeへ行ったことがありません。",
-          "a": "I have never been to the store."
-        },
-        {
-          "id": "M3N-01733",
-          "jp": "私は一度もthe classroomへ行ったことがありません。",
-          "a": "I have never been to the classroom."
-        },
-        {
-          "id": "M3N-01739",
-          "jp": "私は一度もthe kitchenへ行ったことがありません。",
-          "a": "I have never been to the kitchen."
-        },
-        {
-          "id": "M3N-01745",
-          "jp": "私は一度もthe gymへ行ったことがありません。",
-          "a": "I have never been to the gym."
-        },
-        {
-          "id": "M3N-01751",
-          "jp": "私は一度もthe poolへ行ったことがありません。",
-          "a": "I have never been to the pool."
+          "id": "M3C-01236",
+          "jp": "My自転車は3つの中でいちばん良いです。",
+          "a": "My bike is the best of the three."
         }
       ]
     },
@@ -775,383 +235,162 @@
     {
       "prefix": "M3N",
       "grade": "中3",
-      "category": "疑問詞",
-      "count": 17,
+      "category": "文型",
+      "count": 13,
       "samples": [
         {
-          "id": "M3N-00367",
-          "jp": "Youはいつthe parkに着きましたか。",
-          "a": "When did you arrive at the park?"
+          "id": "M3N-01480",
+          "jp": "その知らせは私をsleepyにしました。",
+          "a": "The news made me sleepy."
         },
         {
-          "id": "M3N-00373",
-          "jp": "Heはいつthe stationに着きましたか。",
-          "a": "When did he arrive at the station?"
+          "id": "M3N-01486",
+          "jp": "その知らせは私をsadにしました。",
+          "a": "The news made me sad."
         },
         {
-          "id": "M3N-00379",
-          "jp": "Sheはいつthe schoolに着きましたか。",
-          "a": "When did she arrive at the school?"
+          "id": "M3N-01492",
+          "jp": "その知らせは私をcoldにしました。",
+          "a": "The news made me cold."
         },
         {
-          "id": "M3N-00385",
-          "jp": "Weはいつthe roomに着きましたか。",
-          "a": "When did we arrive at the room?"
+          "id": "M3N-01498",
+          "jp": "その知らせは私をhotにしました。",
+          "a": "The news made me hot."
         },
         {
-          "id": "M3N-00391",
-          "jp": "Theyはいつthe hospitalに着きましたか。",
-          "a": "When did they arrive at the hospital?"
+          "id": "M3N-01504",
+          "jp": "その知らせは私をniceにしました。",
+          "a": "The news made me nice."
         },
         {
-          "id": "M3N-00397",
-          "jp": "My fatherはいつthe museumに着きましたか。",
-          "a": "When did my father arrive at the museum?"
+          "id": "M3N-01516",
+          "jp": "その知らせは私をoldにしました。",
+          "a": "The news made me old."
         },
         {
-          "id": "M3N-00403",
-          "jp": "My motherはいつthe storeに着きましたか。",
-          "a": "When did my mother arrive at the store?"
+          "id": "M3N-01528",
+          "jp": "その知らせは私をbigにしました。",
+          "a": "The news made me big."
         },
         {
-          "id": "M3N-00409",
-          "jp": "My brotherはいつthe classroomに着きましたか。",
-          "a": "When did my brother arrive at the classroom?"
+          "id": "M3N-01533",
+          "jp": "私は彼にこのballをあげました。",
+          "a": "I gave him this ball."
         },
         {
-          "id": "M3N-00415",
-          "jp": "My sisterはいつthe kitchenに着きましたか。",
-          "a": "When did my sister arrive at the kitchen?"
+          "id": "M3N-01534",
+          "jp": "その知らせは私をstrongにしました。",
+          "a": "The news made me strong."
         },
         {
-          "id": "M3N-00433",
-          "jp": "Tomはいつthe officeに着きましたか。",
-          "a": "When did Tom arrive at the office?"
+          "id": "M3N-01540",
+          "jp": "その知らせは私をfastにしました。",
+          "a": "The news made me fast."
         },
         {
-          "id": "M3N-00439",
-          "jp": "Emiはいつthe zooに着きましたか。",
-          "a": "When did Emi arrive at the zoo?"
+          "id": "M3N-01545",
+          "jp": "私は彼にこのcameraをあげました。",
+          "a": "I gave him this camera."
         },
         {
-          "id": "M3N-00445",
-          "jp": "The boyはいつthe townに着きましたか。",
-          "a": "When did the boy arrive at the town?"
+          "id": "M3N-01546",
+          "jp": "その知らせは私をslowにしました。",
+          "a": "The news made me slow."
         }
       ]
     },
     {
       "prefix": "M3N",
       "grade": "中3",
-      "category": "助動詞",
-      "count": 16,
-      "samples": [
-        {
-          "id": "M3N-00965",
-          "jp": "Iは早く起きなければなりません。",
-          "a": "I must get up early."
-        },
-        {
-          "id": "M3N-00971",
-          "jp": "Youは早く起きなければなりません。",
-          "a": "You must get up early."
-        },
-        {
-          "id": "M3N-00977",
-          "jp": "Heは早く起きなければなりません。",
-          "a": "He must get up early."
-        },
-        {
-          "id": "M3N-00983",
-          "jp": "Sheは早く起きなければなりません。",
-          "a": "She must get up early."
-        },
-        {
-          "id": "M3N-00989",
-          "jp": "Weは早く起きなければなりません。",
-          "a": "We must get up early."
-        },
-        {
-          "id": "M3N-00995",
-          "jp": "Theyは早く起きなければなりません。",
-          "a": "They must get up early."
-        },
-        {
-          "id": "M3N-01001",
-          "jp": "My fatherは早く起きなければなりません。",
-          "a": "My father must get up early."
-        },
-        {
-          "id": "M3N-01007",
-          "jp": "My motherは早く起きなければなりません。",
-          "a": "My mother must get up early."
-        },
-        {
-          "id": "M3N-01013",
-          "jp": "My brotherは早く起きなければなりません。",
-          "a": "My brother must get up early."
-        },
-        {
-          "id": "M3N-01019",
-          "jp": "My sisterは早く起きなければなりません。",
-          "a": "My sister must get up early."
-        },
-        {
-          "id": "M3N-01049",
-          "jp": "The boyは早く起きなければなりません。",
-          "a": "The boy must get up early."
-        },
-        {
-          "id": "M3N-01055",
-          "jp": "The girlは早く起きなければなりません。",
-          "a": "The girl must get up early."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "接続詞",
-      "count": 16,
-      "samples": [
-        {
-          "id": "M3N-01083",
-          "jp": "Iは疲れていたので、早く寝ました。",
-          "a": "I went to bed early because I was tired."
-        },
-        {
-          "id": "M3N-01089",
-          "jp": "Youは疲れていたので、早く寝ました。",
-          "a": "You went to bed early because you were tired."
-        },
-        {
-          "id": "M3N-01095",
-          "jp": "Heは疲れていたので、早く寝ました。",
-          "a": "He went to bed early because he was tired."
-        },
-        {
-          "id": "M3N-01101",
-          "jp": "Sheは疲れていたので、早く寝ました。",
-          "a": "She went to bed early because she was tired."
-        },
-        {
-          "id": "M3N-01107",
-          "jp": "Weは疲れていたので、早く寝ました。",
-          "a": "We went to bed early because we were tired."
-        },
-        {
-          "id": "M3N-01113",
-          "jp": "Theyは疲れていたので、早く寝ました。",
-          "a": "They went to bed early because they were tired."
-        },
-        {
-          "id": "M3N-01119",
-          "jp": "My fatherは疲れていたので、早く寝ました。",
-          "a": "My father went to bed early because my father was tired."
-        },
-        {
-          "id": "M3N-01125",
-          "jp": "My motherは疲れていたので、早く寝ました。",
-          "a": "My mother went to bed early because my mother was tired."
-        },
-        {
-          "id": "M3N-01131",
-          "jp": "My brotherは疲れていたので、早く寝ました。",
-          "a": "My brother went to bed early because my brother was tired."
-        },
-        {
-          "id": "M3N-01137",
-          "jp": "My sisterは疲れていたので、早く寝ました。",
-          "a": "My sister went to bed early because my sister was tired."
-        },
-        {
-          "id": "M3N-01167",
-          "jp": "The boyは疲れていたので、早く寝ました。",
-          "a": "The boy went to bed early because the boy was tired."
-        },
-        {
-          "id": "M3N-01173",
-          "jp": "The girlは疲れていたので、早く寝ました。",
-          "a": "The girl went to bed early because the girl was tired."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "不定詞①，動名詞",
-      "count": 16,
-      "samples": [
-        {
-          "id": "M3N-01204",
-          "jp": "Iは英語を話したいです。",
-          "a": "I want to speak English."
-        },
-        {
-          "id": "M3N-01210",
-          "jp": "Youは英語を話したいです。",
-          "a": "You want to speak English."
-        },
-        {
-          "id": "M3N-01216",
-          "jp": "Heは英語を話したいです。",
-          "a": "He wants to speak English."
-        },
-        {
-          "id": "M3N-01222",
-          "jp": "Sheは英語を話したいです。",
-          "a": "She wants to speak English."
-        },
-        {
-          "id": "M3N-01228",
-          "jp": "Weは英語を話したいです。",
-          "a": "We want to speak English."
-        },
-        {
-          "id": "M3N-01234",
-          "jp": "Theyは英語を話したいです。",
-          "a": "They want to speak English."
-        },
-        {
-          "id": "M3N-01240",
-          "jp": "My fatherは英語を話したいです。",
-          "a": "My father wants to speak English."
-        },
-        {
-          "id": "M3N-01246",
-          "jp": "My motherは英語を話したいです。",
-          "a": "My mother wants to speak English."
-        },
-        {
-          "id": "M3N-01252",
-          "jp": "My brotherは英語を話したいです。",
-          "a": "My brother wants to speak English."
-        },
-        {
-          "id": "M3N-01258",
-          "jp": "My sisterは英語を話したいです。",
-          "a": "My sister wants to speak English."
-        },
-        {
-          "id": "M3N-01288",
-          "jp": "The boyは英語を話したいです。",
-          "a": "The boy wants to speak English."
-        },
-        {
-          "id": "M3N-01294",
-          "jp": "The girlは英語を話したいです。",
-          "a": "The girl wants to speak English."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "関係代名詞",
+      "category": "比較",
       "count": 11,
       "samples": [
         {
-          "id": "M3N-02187",
-          "jp": "あれは私の父が作ったdeskです。",
-          "a": "That is the desk which my father made."
+          "id": "M3N-01360",
+          "jp": "このテーブルはあのテーブルよりsleepyです。",
+          "a": "This table is sleepier than that table."
         },
         {
-          "id": "M3N-02199",
-          "jp": "あれは私の父が作ったtableです。",
-          "a": "That is the table which my father made."
+          "id": "M3N-01366",
+          "jp": "この自転車はあの自転車よりsadです。",
+          "a": "This bike is sadder than that bike."
         },
         {
-          "id": "M3N-02217",
-          "jp": "あれは私の父が作ったcatです。",
-          "a": "That is the cat which my father made."
+          "id": "M3N-01372",
+          "jp": "この犬はあの犬よりcoldです。",
+          "a": "This dog is colder than that dog."
         },
         {
-          "id": "M3N-02223",
-          "jp": "あれは私の父が作ったwindowです。",
-          "a": "That is the window which my father made."
+          "id": "M3N-01378",
+          "jp": "この猫はあの猫よりhotです。",
+          "a": "This cat is hotter than that cat."
         },
         {
-          "id": "M3N-02229",
-          "jp": "あれは私の父が作ったdoorです。",
-          "a": "That is the door which my father made."
+          "id": "M3N-01384",
+          "jp": "この窓はあの窓よりniceです。",
+          "a": "This window is nicer than that window."
         },
         {
-          "id": "M3N-02241",
-          "jp": "あれは私の父が作ったtreeです。",
-          "a": "That is the tree which my father made."
+          "id": "M3N-01396",
+          "jp": "この花はあの花よりoldです。",
+          "a": "This flower is older than that flower."
         },
         {
-          "id": "M3N-02247",
-          "jp": "あれは私の父が作ったboxです。",
-          "a": "That is the box which my father made."
+          "id": "M3N-01408",
+          "jp": "この箱はあの箱よりbigです。",
+          "a": "This box is bigger than that box."
         },
         {
-          "id": "M3N-02253",
-          "jp": "あれは私の父が作ったballです。",
-          "a": "That is the ball which my father made."
+          "id": "M3N-01414",
+          "jp": "このballはあのballよりstrongです。",
+          "a": "This ball is stronger than that ball."
         },
         {
-          "id": "M3N-02259",
-          "jp": "あれは私の父が作ったcarです。",
-          "a": "That is the car which my father made."
+          "id": "M3N-01420",
+          "jp": "この車はあの車よりfastです。",
+          "a": "This car is faster than that car."
         },
         {
-          "id": "M3N-02271",
-          "jp": "あれは私の父が作ったcomputerです。",
-          "a": "That is the computer which my father made."
+          "id": "M3N-01426",
+          "jp": "このcameraはあのcameraよりslowです。",
+          "a": "This camera is slower than that camera."
         },
         {
-          "id": "M3N-02277",
-          "jp": "あれは私の父が作ったgameです。",
-          "a": "That is the game which my father made."
+          "id": "M3N-01438",
+          "jp": "このゲームはあのゲームよりcuteです。",
+          "a": "This game is cuter than that game."
         }
       ]
     },
     {
-      "prefix": "M2-COMP2",
-      "grade": "中2",
-      "category": "比較",
-      "count": 8,
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "受動態",
+      "count": 2,
       "samples": [
         {
-          "id": "M2-COMP2-1527",
-          "jp": "My friend はこのクラスでいちばん 背が高い。",
-          "a": "My friend is the tallest in this class."
+          "id": "M3N-01655",
+          "jp": "このballは昨日使われました。",
+          "a": "This ball was used yesterday."
         },
         {
-          "id": "M2-COMP2-1530",
-          "jp": "My friend はこのクラスでいちばん 小さい。",
-          "a": "My friend is the smallest in this class."
-        },
+          "id": "M3N-01667",
+          "jp": "このcameraは昨日使われました。",
+          "a": "This camera was used yesterday."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "疑問詞",
+      "count": 1,
+      "samples": [
         {
-          "id": "M2-COMP2-1533",
-          "jp": "My friend はこのクラスでいちばん 速い。",
-          "a": "My friend is the fastest in this class."
-        },
-        {
-          "id": "M2-COMP2-1536",
-          "jp": "My friend はこのクラスでいちばん 大きい。",
-          "a": "My friend is the largest in this class."
-        },
-        {
-          "id": "M2-COMP2-1539",
-          "jp": "My friend はこのクラスでいちばん やさしい。",
-          "a": "My friend is the easiest in this class."
-        },
-        {
-          "id": "M2-COMP2-1542",
-          "jp": "My friend はこのクラスでいちばん 忙しい。",
-          "a": "My friend is the busiest in this class."
-        },
-        {
-          "id": "M2-COMP2-1545",
-          "jp": "My friend はこのクラスでいちばん 人気がある。",
-          "a": "My friend is the most popular in this class."
-        },
-        {
-          "id": "M2-COMP2-1548",
-          "jp": "My friend はこのクラスでいちばん 美しい。",
-          "a": "My friend is the most beautiful in this class."
+          "id": "M3N-00433",
+          "jp": "Tomはいつofficeに着きましたか。",
+          "a": "When did Tom arrive at the office?"
         }
       ]
     },
@@ -1159,129 +398,12 @@
       "prefix": "M3N",
       "grade": "中3",
       "category": "人称代名詞",
-      "count": 7,
+      "count": 1,
       "samples": [
-        {
-          "id": "M3N-00557",
-          "jp": "そのflowerは彼らのものです。",
-          "a": "The flower is theirs."
-        },
-        {
-          "id": "M3N-00563",
-          "jp": "そのtreeは彼らのものです。",
-          "a": "The tree is theirs."
-        },
-        {
-          "id": "M3N-00569",
-          "jp": "そのboxは彼らのものです。",
-          "a": "The box is theirs."
-        },
-        {
-          "id": "M3N-00581",
-          "jp": "そのcarは彼らのものです。",
-          "a": "The car is theirs."
-        },
         {
           "id": "M3N-00587",
           "jp": "そのcameraは彼らのものです。",
           "a": "The camera is theirs."
-        },
-        {
-          "id": "M3N-00593",
-          "jp": "そのcomputerは彼らのものです。",
-          "a": "The computer is theirs."
-        },
-        {
-          "id": "M3N-00599",
-          "jp": "そのgameは彼らのものです。",
-          "a": "The game is theirs."
-        }
-      ]
-    },
-    {
-      "prefix": "GEN-PREP",
-      "grade": "中1",
-      "category": "前置詞",
-      "count": 4,
-      "samples": [
-        {
-          "id": "GEN-PREP-1249",
-          "jp": "ボールはboxの中にあります。",
-          "a": "The ball is in the box."
-        },
-        {
-          "id": "GEN-PREP-1261",
-          "jp": "写真はwallの上にあります。",
-          "a": "The picture is on the wall."
-        },
-        {
-          "id": "GEN-PREP-1267",
-          "jp": "ペンはpencil caseの中にあります。",
-          "a": "The pen is in the pencil case."
-        },
-        {
-          "id": "GEN-PREP-1270",
-          "jp": "自転車はtreeのそばにあります。",
-          "a": "The bike is by the tree."
-        }
-      ]
-    },
-    {
-      "prefix": "M2-COMP",
-      "grade": "中2",
-      "category": "比較",
-      "count": 4,
-      "samples": [
-        {
-          "id": "M2-COMP-0672",
-          "jp": "My friend は Ken より 背が高い。",
-          "a": "My friend is taller than Ken."
-        },
-        {
-          "id": "M2-COMP-0674",
-          "jp": "My friend は Ken より 忙しい。",
-          "a": "My friend is busier than Ken."
-        },
-        {
-          "id": "M2-COMP-0676",
-          "jp": "My friend は Ken より おもしろい。",
-          "a": "My friend is more interesting than Ken."
-        },
-        {
-          "id": "M2-COMP-0678",
-          "jp": "My friend は Ken より 人気がある。",
-          "a": "My friend is more popular than Ken."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "未来の文",
-      "count": 2,
-      "samples": [
-        {
-          "id": "M3N-00917",
-          "jp": "Tomは来年the officeへ行くつもりです。",
-          "a": "Tom is going to go to the office next year."
-        },
-        {
-          "id": "M3N-00923",
-          "jp": "Emiは来年the zooへ行くつもりです。",
-          "a": "Emi is going to go to the zoo next year."
-        }
-      ]
-    },
-    {
-      "prefix": "M3N",
-      "grade": "中3",
-      "category": "進行形",
-      "count": 1,
-      "samples": [
-        {
-          "id": "M3N-00683",
-          "jp": "そのとき、Emiはbasketballをしていました。",
-          "a": "Emi was playing basketball then."
         }
       ]
     },
@@ -1293,8 +415,47 @@
       "samples": [
         {
           "id": "M3N-00793",
-          "jp": "このthe officeでは走らないでください。",
+          "jp": "このofficeでは走らないでください。",
           "a": "Do not run in the office."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "未来の文",
+      "count": 1,
+      "samples": [
+        {
+          "id": "M3N-00917",
+          "jp": "Tomは来年officeへ行くつもりです。",
+          "a": "Tom is going to go to the office next year."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "現在完了形（完了・経験）",
+      "count": 1,
+      "samples": [
+        {
+          "id": "M3N-01757",
+          "jp": "私は一度もofficeへ行ったことがありません。",
+          "a": "I have never been to the office."
+        }
+      ]
+    },
+    {
+      "prefix": "M3N",
+      "grade": "中3",
+      "category": "関係代名詞",
+      "count": 1,
+      "samples": [
+        {
+          "id": "M3N-02253",
+          "jp": "あれは私の父が作ったballです。",
+          "a": "That is the ball which my father made."
         }
       ]
     }
