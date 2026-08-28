@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-08-28T12:20:33.102Z",
+  "changed_rows": 1,
+  "by_family": {
+    "中3/比較/英作文": 1
+  },
+  "samples": [
+    {
+      "id": "M3N-01324",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より忙しいです。』",
+        "a": "This book is busier than that book."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より大きいです。』",
+        "a": "This book is bigger than that book."
+      }
+    }
+  ],
+  "residual_count": 0,
+  "residual_samples": []
+}
