@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-08-28T12:19:51.408Z",
+  "generated_at": "2026-08-28T12:21:22.880Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "semantic_template_error:1",
     "duplicate_qa_row_ratio:0.1416"
   ],
   "english_count": 10511,
@@ -3522,24 +3521,10 @@
     ]
   },
   "semantic_template_errors": {
-    "count": 1,
-    "by_prefix": {
-      "M3N": 1
-    },
-    "by_grade_category_type": {
-      "中3/比較/英作文": 1
-    },
-    "samples": [
-      {
-        "id": "M3N-01324",
-        "kind": "inanimate_comparison_adjective",
-        "grade": "中3",
-        "category": "比較",
-        "type": "英作文",
-        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より忙しいです。』",
-        "a": "This book is busier than that book."
-      }
-    ]
+    "count": 0,
+    "by_prefix": {},
+    "by_grade_category_type": {},
+    "samples": []
   },
   "policy": "Content-quality hard gate. Hybrid Japanese, agreement, possessive substitution, actual-answer auxiliary tense, bad natural-source/answer collocation, high-confidence semantic/template errors, and excessive exact duplicate QA rows fail. Deliberately wrong error-correction prompts are not defects. Duplicate family counts are emitted to drive root-cause diversification without ID-specific fixes."
 }
