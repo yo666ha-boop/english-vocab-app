@@ -3,7 +3,7 @@ name: Problem app UI selection search random gates
 on:
   push:
     branches:
-      - fix-vocab-grammar-range-20260825
+      - fix-problem-content-quality-20260828
     paths:
       - .github/workflows/problem-app-ui-selection-search-random-gates.yml
       - audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_TRIGGER.md
@@ -136,7 +136,7 @@ jobs:
           set -euo pipefail
           test -f audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json || exit 1
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com'
           git add audit/PROBLEM_APP_UI_SELECTION_SEARCH_RANDOM_GATES.json
           if ! git diff --cached --quiet; then
             git commit -m 'test: record explicit selection search random UI gates [skip ci]'
