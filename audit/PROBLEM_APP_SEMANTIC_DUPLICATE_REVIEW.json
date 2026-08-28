@@ -1,0 +1,6373 @@
+{
+  "generated_at": "2026-08-28T13:12:24.191Z",
+  "source": "problem-app/index.html",
+  "english_count": 10511,
+  "duplicate_group_count": 337,
+  "duplicate_excess": 517,
+  "classification_group_counts": {
+    "same_family_copy": 303,
+    "cross_category": 34
+  },
+  "classification_excess_counts": {
+    "same_family_copy": 483,
+    "cross_category": 34
+  },
+  "review_priority": {
+    "same_family_same_prefix_groups": 271,
+    "same_family_same_prefix_excess": 422,
+    "cross_family_groups": 34,
+    "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
+  },
+  "same_family_same_prefix": [
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
+      "a": "How",
+      "ids": [
+        "M3N-00384",
+        "M3N-00414",
+        "M3N-00444",
+        "M3N-00474"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) do you study English? 「なぜ」に合う最も適切な語を書きなさい。",
+      "a": "Why",
+      "ids": [
+        "M3N-00366",
+        "M3N-00396",
+        "M3N-00426",
+        "M3N-00456"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) do you want? 「何」に合う最も適切な語を書きなさい。",
+      "a": "What",
+      "ids": [
+        "M3N-00390",
+        "M3N-00420",
+        "M3N-00450",
+        "M3N-00480"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) does school start? 「いつ」に合う最も適切な語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-00378",
+        "M3N-00408",
+        "M3N-00438",
+        "M3N-00468"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "(      ) does Tom live? 「どこ」に合う最も適切な語を書きなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00372",
+        "M3N-00402",
+        "M3N-00432",
+        "M3N-00462"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( He / Him / His ) teaches us English. 正しいものを選びなさい。",
+      "a": "He",
+      "ids": [
+        "M3N-00483",
+        "M3N-00519",
+        "M3N-00555",
+        "M3N-00591"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "English is (      ) by many students. (speak) の（ ）内を正しくしなさい。",
+      "a": "Spoken",
+      "ids": [
+        "M3N-01561",
+        "M3N-01597",
+        "M3N-01633",
+        "M3N-01669"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I ( have eaten / eaten / am eaten ) lunch, so I am not hungry now. 正しいものを選びなさい。",
+      "a": "Have eaten",
+      "ids": [
+        "M3N-01710",
+        "M3N-01740",
+        "M3N-01770",
+        "M3N-01800"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I ( have finished / finished / am finished ) my homework, so I can go out now. 正しいものを選びなさい。",
+      "a": "Have finished",
+      "ids": [
+        "M3N-01692",
+        "M3N-01722",
+        "M3N-01752",
+        "M3N-01782"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I ( have lost / lost / am lost ) my key, so I cannot open the door now. 正しいものを選びなさい。",
+      "a": "Have lost",
+      "ids": [
+        "M3N-01686",
+        "M3N-01716",
+        "M3N-01746",
+        "M3N-01776"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I ( have seen / seen / am seen ) this movie, so I know the story. 正しいものを選びなさい。",
+      "a": "Have seen",
+      "ids": [
+        "M3N-01698",
+        "M3N-01728",
+        "M3N-01758",
+        "M3N-01788"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I ( have written / written / am written ) the letter, so I can send it now. 正しいものを選びなさい。",
+      "a": "Have written",
+      "ids": [
+        "M3N-01704",
+        "M3N-01734",
+        "M3N-01764",
+        "M3N-01794"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) where does he live (B) where he lives (C) he where. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02043",
+        "M3N-02067",
+        "M3N-02115",
+        "M3N-02139"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know where does he live. の誤りを直しなさい。",
+      "a": "I don't know where he lives.",
+      "ids": [
+        "M3N-02044",
+        "M3N-02068",
+        "M3N-02116",
+        "M3N-02140"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have ate lunch before. の誤りを直しなさい。",
+      "a": "I have eaten lunch before.",
+      "ids": [
+        "M3N-01702",
+        "M3N-01732",
+        "M3N-01762",
+        "M3N-01792"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have did the work before. の誤りを直しなさい。",
+      "a": "I have done the work before.",
+      "ids": [
+        "M3N-01708",
+        "M3N-01738",
+        "M3N-01768",
+        "M3N-01798"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) my homework. (finish) の（ ）内を正しくしなさい。",
+      "a": "Finished",
+      "ids": [
+        "M3N-01681",
+        "M3N-01717",
+        "M3N-01753",
+        "M3N-01789"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) the letter. (write) の（ ）内を正しくしなさい。",
+      "a": "Written",
+      "ids": [
+        "M3N-01687",
+        "M3N-01723",
+        "M3N-01759",
+        "M3N-01795"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have saw that movie before. の誤りを直しなさい。",
+      "a": "I have seen that movie before.",
+      "ids": [
+        "M3N-01690",
+        "M3N-01720",
+        "M3N-01750",
+        "M3N-01780"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have went there before. の誤りを直しなさい。",
+      "a": "I have gone there before.",
+      "ids": [
+        "M3N-01684",
+        "M3N-01714",
+        "M3N-01744",
+        "M3N-01774"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have wrote the letter before. の誤りを直しなさい。",
+      "a": "I have written the letter before.",
+      "ids": [
+        "M3N-01696",
+        "M3N-01726",
+        "M3N-01756",
+        "M3N-01786"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I know ( he / him / his ) well. 正しいものを選びなさい。",
+      "a": "Him",
+      "ids": [
+        "M3N-00489",
+        "M3N-00525",
+        "M3N-00561",
+        "M3N-00597"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Open the window, please. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "窓を開けてください。",
+      "ids": [
+        "M3N-00732",
+        "M3N-00768",
+        "M3N-00804",
+        "M3N-00840"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Please be quiet. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "静かにしてください。",
+      "ids": [
+        "M3N-00726",
+        "M3N-00762",
+        "M3N-00798",
+        "M3N-00834"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The boy which plays tennis is kind. の誤りを、who を使って直しなさい。",
+      "a": "The boy who plays tennis is kind.",
+      "ids": [
+        "M3N-02170",
+        "M3N-02200",
+        "M3N-02230",
+        "M3N-02260"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The girl ( who / which / where ) is playing tennis is Ann's friend. 正しいものを選びなさい。",
+      "a": "who",
+      "ids": [
+        "M3N-02161",
+        "M3N-02197",
+        "M3N-02233",
+        "M3N-02269"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The girl which lives next door is kind. の誤りを、who を使って直しなさい。",
+      "a": "The girl who lives next door is kind.",
+      "ids": [
+        "M3N-02164",
+        "M3N-02194",
+        "M3N-02224",
+        "M3N-02254"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The man which works here is kind. の誤りを、who を使って直しなさい。",
+      "a": "The man who works here is kind.",
+      "ids": [
+        "M3N-02182",
+        "M3N-02212",
+        "M3N-02242",
+        "M3N-02272"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The room is clean by many students. の誤りを直しなさい。",
+      "a": "The room is cleaned by many students.",
+      "ids": [
+        "M3N-01576",
+        "M3N-01606",
+        "M3N-01636",
+        "M3N-01666"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The student which studies English is kind. の誤りを、who を使って直しなさい。",
+      "a": "The student who studies English is kind.",
+      "ids": [
+        "M3N-02176",
+        "M3N-02206",
+        "M3N-02236",
+        "M3N-02266"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The woman which teaches us is kind. の誤りを、who を使って直しなさい。",
+      "a": "The woman who teaches us is kind.",
+      "ids": [
+        "M3N-02188",
+        "M3N-02218",
+        "M3N-02248",
+        "M3N-02278"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call him Bob. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01448",
+        "M3N-01484",
+        "M3N-01520",
+        "M3N-01556"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call him Ken. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01442",
+        "M3N-01478",
+        "M3N-01514",
+        "M3N-01550"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This book is (      ) by many students. (read) の（ ）内を正しくしなさい。",
+      "a": "Read",
+      "ids": [
+        "M3N-01567",
+        "M3N-01603",
+        "M3N-01639",
+        "M3N-01675"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This book is read by many students. の誤りを直しなさい。",
+      "a": "This book is read by many students.",
+      "ids": [
+        "M3N-01582",
+        "M3N-01612",
+        "M3N-01642",
+        "M3N-01672"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This computer is use by many students. の誤りを直しなさい。",
+      "a": "This computer is used by many students.",
+      "ids": [
+        "M3N-01588",
+        "M3N-01618",
+        "M3N-01648",
+        "M3N-01678"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This letter is write by many students. の誤りを直しなさい。",
+      "a": "This letter is written by many students.",
+      "ids": [
+        "M3N-01570",
+        "M3N-01600",
+        "M3N-01630",
+        "M3N-01660"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This song is sing by many students. の誤りを直しなさい。",
+      "a": "This song is sung by many students.",
+      "ids": [
+        "M3N-01564",
+        "M3N-01594",
+        "M3N-01624",
+        "M3N-01654"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『このゲームは3つの中でいちばん簡単です。』",
+      "a": "This game is the easiest of the three.",
+      "ids": [
+        "M3C-01204",
+        "M3C-01216",
+        "M3C-01228",
+        "M3C-01288"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+      "a": "This game is easier than that one.",
+      "ids": [
+        "M3C-01203",
+        "M3C-01215",
+        "M3C-01227",
+        "M3C-01287"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん忙しいです。』",
+      "a": "Tom is the busiest of the three.",
+      "ids": [
+        "M3C-01202",
+        "M3C-01214",
+        "M3C-01226",
+        "M3C-01286"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
+      "a": "Tom is the kindest of the three.",
+      "ids": [
+        "M3C-01210",
+        "M3C-01222",
+        "M3C-01234",
+        "M3C-01294"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『トムはケンより忙しいです。』",
+      "a": "Tom is busier than Ken.",
+      "ids": [
+        "M3C-01201",
+        "M3C-01213",
+        "M3C-01225",
+        "M3C-01285"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/比較/英作文"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『トムはケンより親切です。』",
+      "a": "Tom is kinder than Ken.",
+      "ids": [
+        "M3C-01209",
+        "M3C-01221",
+        "M3C-01233",
+        "M3C-01293"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『もし私が先生なら、生徒を助けるのに。』",
+      "a": "If I were a teacher, I could help students.",
+      "ids": [
+        "M3N-02295",
+        "M3N-02325",
+        "M3N-02355",
+        "M3N-02385"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『もし私が犬なら、速く走れるのに。』",
+      "a": "If I were a dog, I could run fast.",
+      "ids": [
+        "M3N-02307",
+        "M3N-02337",
+        "M3N-02367",
+        "M3N-02397"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『もし私が猫なら、高く跳べるのに。』",
+      "a": "If I were a cat, I could jump high.",
+      "ids": [
+        "M3N-02301",
+        "M3N-02331",
+        "M3N-02361",
+        "M3N-02391"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『もし私が魚なら、海を泳げるのに。』",
+      "a": "If I were a fish, I could swim in the sea.",
+      "ids": [
+        "M3N-02289",
+        "M3N-02319",
+        "M3N-02349",
+        "M3N-02379"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/仮定法/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『もし私が鳥なら、空を飛べるのに。』",
+      "a": "If I were a bird, I could fly in the sky.",
+      "ids": [
+        "M3N-02283",
+        "M3N-02313",
+        "M3N-02343",
+        "M3N-02373"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / reading / book / student / is / a )",
+      "a": "The student who is reading a book",
+      "ids": [
+        "M3N-02177",
+        "M3N-02207",
+        "M3N-02237",
+        "M3N-02267"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / riding / bike / boy / is / a )",
+      "a": "The boy who is riding a bike",
+      "ids": [
+        "M3N-02165",
+        "M3N-02195",
+        "M3N-02225",
+        "M3N-02255"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / singing / song / girl / is / a )",
+      "a": "The girl who is singing a song",
+      "ids": [
+        "M3N-02171",
+        "M3N-02201",
+        "M3N-02231",
+        "M3N-02261"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / taking / picture / woman / is / a )",
+      "a": "The woman who is taking a picture",
+      "ids": [
+        "M3N-02189",
+        "M3N-02219",
+        "M3N-02249",
+        "M3N-02279"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( The / who / using / computer / man / is / a )",
+      "a": "The man who is using a computer",
+      "ids": [
+        "M3N-02183",
+        "M3N-02213",
+        "M3N-02243",
+        "M3N-02273"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( She / Her / Hers ) plays tennis. 正しいものを選びなさい。",
+      "a": "She",
+      "ids": [
+        "M3N-00501",
+        "M3N-00537",
+        "M3N-00573"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Don’t open the door. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "ドアを開けないでください。",
+      "ids": [
+        "M3N-00756",
+        "M3N-00792",
+        "M3N-00828"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Don’t run here. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "ここで走らないでください。",
+      "ids": [
+        "M3N-00744",
+        "M3N-00780",
+        "M3N-00816"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since three years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for three years.",
+      "ids": [
+        "M3N-01810",
+        "M3N-01864",
+        "M3N-01918"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since two years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for two years.",
+      "ids": [
+        "M3N-01804",
+        "M3N-01858",
+        "M3N-01912"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) what does she want (B) what she wants (C) she what. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02073",
+        "M3N-02097",
+        "M3N-02145"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02079",
+        "M3N-02103",
+        "M3N-02151"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) why does she study English (B) why she studies English (C) she why. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02085",
+        "M3N-02109",
+        "M3N-02157"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know what does she want. の誤りを直しなさい。",
+      "a": "I don't know what she wants.",
+      "ids": [
+        "M3N-02074",
+        "M3N-02098",
+        "M3N-02146"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know when does she come. の誤りを直しなさい。",
+      "a": "I don't know when she comes.",
+      "ids": [
+        "M3N-02080",
+        "M3N-02104",
+        "M3N-02152"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know why does she study English. の誤りを直しなさい。",
+      "a": "I don't know why she studies English.",
+      "ids": [
+        "M3N-02086",
+        "M3N-02110",
+        "M3N-02158"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
+      "a": "Eaten",
+      "ids": [
+        "M3N-01699",
+        "M3N-01735",
+        "M3N-01771"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
+      "a": "Done",
+      "ids": [
+        "M3N-01705",
+        "M3N-01741",
+        "M3N-01777"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
+      "a": "Read",
+      "ids": [
+        "M3N-01711",
+        "M3N-01747",
+        "M3N-01783"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have just (      ) this movie. (see) の（ ）内を正しくしなさい。",
+      "a": "Seen",
+      "ids": [
+        "M3N-01693",
+        "M3N-01729",
+        "M3N-01765"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) three years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01807",
+        "M3N-01861",
+        "M3N-01915"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) two years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01801",
+        "M3N-01855",
+        "M3N-01909"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I talked with ( she / her / hers ). 正しいものを選びなさい。",
+      "a": "Her",
+      "ids": [
+        "M3N-00507",
+        "M3N-00543",
+        "M3N-00579"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play soccer. の誤りを直しなさい。",
+      "a": "I play soccer.",
+      "ids": [
+        "M3N-00490",
+        "M3N-00544",
+        "M3N-00592"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play tennis. の誤りを直しなさい。",
+      "a": "I play tennis.",
+      "ids": [
+        "M3N-00484",
+        "M3N-00550",
+        "M3N-00598"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Please look at this picture. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "この写真を見てください。",
+      "ids": [
+        "M3N-00750",
+        "M3N-00786",
+        "M3N-00822"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Please sit down. 問い：この英文の意味として最も適切なものを書きなさい。",
+      "a": "座ってください。",
+      "ids": [
+        "M3N-00738",
+        "M3N-00774",
+        "M3N-00810"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The letter is (      ) by many students. (write) の（ ）内を正しくしなさい。",
+      "a": "Written",
+      "ids": [
+        "M3N-01585",
+        "M3N-01621",
+        "M3N-01657"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The room is (      ) by many students. (clean) の（ ）内を正しくしなさい。",
+      "a": "Cleaned",
+      "ids": [
+        "M3N-01573",
+        "M3N-01609",
+        "M3N-01645"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call her Aya. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01460",
+        "M3N-01496",
+        "M3N-01532"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call her Emi. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01454",
+        "M3N-01490",
+        "M3N-01526"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call her Kate. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01472",
+        "M3N-01508",
+        "M3N-01544"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/見分け"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call her Mary. は『人に物を与える文』か、『AをBと呼ぶ文』か答えなさい。",
+      "a": "AをBと呼ぶ文",
+      "ids": [
+        "M3N-01466",
+        "M3N-01502",
+        "M3N-01538"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This bag is ( her / hers / she ). 正しいものを選びなさい。",
+      "a": "Hers",
+      "ids": [
+        "M3N-00513",
+        "M3N-00549",
+        "M3N-00585"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This computer is (      ) by many students. (use) の（ ）内を正しくしなさい。",
+      "a": "Used",
+      "ids": [
+        "M3N-01591",
+        "M3N-01627",
+        "M3N-01663"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This is ( he / him / his ) book. 正しいものを選びなさい。",
+      "a": "His",
+      "ids": [
+        "M3N-00495",
+        "M3N-00531",
+        "M3N-00567"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This song is (      ) by many students. (sing) の（ ）内を正しくしなさい。",
+      "a": "Sung",
+      "ids": [
+        "M3N-01579",
+        "M3N-01615",
+        "M3N-01651"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は土曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Saturday.",
+      "ids": [
+        "M3N-01833",
+        "M3N-01875",
+        "M3N-01917"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がいつ来るのかわかりません。』",
+      "a": "I don't know when she will come.",
+      "ids": [
+        "M3N-02064",
+        "M3N-02112",
+        "M3N-02136"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がどこに住んでいるのかわかりません。』",
+      "a": "I don't know where she lives.",
+      "ids": [
+        "M3N-02076",
+        "M3N-02100",
+        "M3N-02148"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女がなぜ忙しいのかわかりません。』",
+      "a": "I don't know why she is busy.",
+      "ids": [
+        "M3N-02058",
+        "M3N-02106",
+        "M3N-02130"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼女が何をほしいのかわかりません。』",
+      "a": "I don't know what she wants.",
+      "ids": [
+        "M3N-02070",
+        "M3N-02094",
+        "M3N-02142"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は月曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Monday.",
+      "ids": [
+        "M3N-01803",
+        "M3N-01845",
+        "M3N-01887"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は木曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Thursday.",
+      "ids": [
+        "M3N-01821",
+        "M3N-01863",
+        "M3N-01905"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は水曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Wednesday.",
+      "ids": [
+        "M3N-01815",
+        "M3N-01857",
+        "M3N-01899"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は火曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Tuesday.",
+      "ids": [
+        "M3N-01809",
+        "M3N-01851",
+        "M3N-01893"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は金曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Friday.",
+      "ids": [
+        "M3N-01827",
+        "M3N-01869",
+        "M3N-01911"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( English / fun / learn / is / to )",
+      "a": "English is fun to learn.",
+      "ids": [
+        "M3N-01224",
+        "M3N-01272",
+        "M3N-01320"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / busier )",
+      "a": "He is busier than Ken.",
+      "ids": [
+        "M2-COMP2-1469",
+        "M2-COMP2-1517"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / easier )",
+      "a": "He is easier than Ken.",
+      "ids": [
+        "M2-COMP2-1466",
+        "M2-COMP2-1514"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / faster )",
+      "a": "He is faster than Ken.",
+      "ids": [
+        "M2-COMP2-1460",
+        "M2-COMP2-1508"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / more beautiful )",
+      "a": "He is more beautiful than Ken.",
+      "ids": [
+        "M2-COMP2-1475",
+        "M2-COMP2-1523"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / more popular )",
+      "a": "He is more popular than Ken.",
+      "ids": [
+        "M2-COMP2-1472",
+        "M2-COMP2-1520"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / smaller )",
+      "a": "He is smaller than Ken.",
+      "ids": [
+        "M2-COMP2-1457",
+        "M2-COMP2-1505"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/並びかえ"
+      ],
+      "prefixes": [
+        "M2-COMP2"
+      ],
+      "q": "( He / than / Ken / is / taller )",
+      "a": "He is taller than Ken.",
+      "ids": [
+        "M2-COMP2-1454",
+        "M2-COMP2-1502"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( When / Why / Where ) do you go to the library? 「どこへ」に合うものを選びなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00364",
+        "M3N-00466"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( When / Why / Where ) do you go to the park? 「どこへ」に合うものを選びなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00370",
+        "M3N-00472"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( When / Why / Where ) do you go to the room? 「どこへ」に合うものを選びなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00388",
+        "M3N-00478"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "( When / Why / Where ) do you go to the station? 「どこへ」に合うものを選びなさい。",
+      "a": "Where",
+      "ids": [
+        "M3N-00376",
+        "M3N-00460"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Aya ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01848",
+        "M3N-01920"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Aya enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+      "a": "Playing",
+      "ids": [
+        "M3N-01245",
+        "M3N-01317"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Aya stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Ayaは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01128",
+        "M3N-01200"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Bob ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01824",
+        "M3N-01896"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Bob enjoyed ( to listen / listening / listen ) to music. 正しいものを選びなさい。",
+      "a": "Listening",
+      "ids": [
+        "M3N-01221",
+        "M3N-01293"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Bob stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Bobは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01104",
+        "M3N-01176"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Call me (      ) you arrive at the library. 「〜するとき」に合う語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-01082",
+        "M3N-01184"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Call me (      ) you arrive at the park. 「〜するとき」に合う語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-01088",
+        "M3N-01190"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Call me (      ) you arrive at the room. 「〜するとき」に合う語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-01106",
+        "M3N-01196"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Call me (      ) you arrive at the station. 「〜するとき」に合う語を書きなさい。",
+      "a": "When",
+      "ids": [
+        "M3N-01094",
+        "M3N-01178"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Emi ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01836",
+        "M3N-01908"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Emi enjoyed ( to watch / watching / watch ) the movie. 正しいものを選びなさい。",
+      "a": "Watching",
+      "ids": [
+        "M3N-01233",
+        "M3N-01305"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Emi has been to Osaka once. を疑問文にしなさい。",
+      "a": "Has Emi been to Osaka once?",
+      "ids": [
+        "M3C-00275",
+        "M3C-00916"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Emi stayed home because she was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Emiは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01116",
+        "M3N-01188"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
+      "a": "Is spoken",
+      "ids": [
+        "M3N-01614",
+        "M3N-01674"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Have you ever (      ) to the library? (be) の（ ）内を正しくしなさい。",
+      "a": "Been",
+      "ids": [
+        "M3N-01682",
+        "M3N-01784"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Have you ever (      ) to the park? (be) の（ ）内を正しくしなさい。",
+      "a": "Been",
+      "ids": [
+        "M3N-01688",
+        "M3N-01790"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Have you ever (      ) to the room? (be) の（ ）内を正しくしなさい。",
+      "a": "Been",
+      "ids": [
+        "M3N-01706",
+        "M3N-01796"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Have you ever (      ) to the station? (be) の（ ）内を正しくしなさい。",
+      "a": "Been",
+      "ids": [
+        "M3N-01694",
+        "M3N-01778"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "He has been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Has he been playing tennis for two hours?",
+      "ids": [
+        "M3C-00419",
+        "M3C-00937"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "He has been to Kyoto once. を疑問文にしなさい。",
+      "a": "Has he been to Kyoto once?",
+      "ids": [
+        "M3C-00415",
+        "M3C-00693"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "He has been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Has he been using this computer since this morning?",
+      "ids": [
+        "M3C-00420",
+        "M3C-01178"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since eight years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for eight years.",
+      "ids": [
+        "M3N-01840",
+        "M3N-01894"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since five years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for five years.",
+      "ids": [
+        "M3N-01822",
+        "M3N-01876"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since four years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for four years.",
+      "ids": [
+        "M3N-01816",
+        "M3N-01870"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since nine years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for nine years.",
+      "ids": [
+        "M3N-01846",
+        "M3N-01900"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since seven years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for seven years.",
+      "ids": [
+        "M3N-01834",
+        "M3N-01888"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since six years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for six years.",
+      "ids": [
+        "M3N-01828",
+        "M3N-01882"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "He has stayed in Japan since ten years. の誤りを直しなさい。",
+      "a": "He has stayed in Japan for ten years.",
+      "ids": [
+        "M3N-01852",
+        "M3N-01906"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "He help at home every day. の誤りを直しなさい。",
+      "a": "He helps at home every day.",
+      "ids": [
+        "GEN-3RD-0880",
+        "GEN-3RD-1140"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "He play tennis every day. の誤りを直しなさい。",
+      "a": "He plays tennis every day.",
+      "ids": [
+        "GEN-3RD-0860",
+        "GEN-3RD-0996"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "He study English every day. の誤りを直しなさい。",
+      "a": "He studies English every day.",
+      "ids": [
+        "GEN-3RD-0868",
+        "GEN-3RD-1004"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "He walk to school every day. の誤りを直しなさい。",
+      "a": "He walks to school every day.",
+      "ids": [
+        "GEN-3RD-0896",
+        "GEN-3RD-1108"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) what does he want (B) what he wants (C) he what. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02049",
+        "M3N-02121"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) when does he come (B) when he comes (C) he when. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02055",
+        "M3N-02127"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know (A) why does he study English (B) why he studies English (C) he why. 正しいものを選びなさい。",
+      "a": "B",
+      "ids": [
+        "M3N-02061",
+        "M3N-02133"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know what does he want. の誤りを直しなさい。",
+      "a": "I don't know what he wants.",
+      "ids": [
+        "M3N-02050",
+        "M3N-02122"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know when does he come. の誤りを直しなさい。",
+      "a": "I don't know when he comes.",
+      "ids": [
+        "M3N-02056",
+        "M3N-02128"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I don't know why does he study English. の誤りを直しなさい。",
+      "a": "I don't know why he studies English.",
+      "ids": [
+        "M3N-02062",
+        "M3N-02134"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Have I been playing tennis for two hours?",
+      "ids": [
+        "M3C-00019",
+        "M3C-00779"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "I have been to Kyoto once. を疑問文にしなさい。",
+      "a": "Have I been to Kyoto once?",
+      "ids": [
+        "M3C-00015",
+        "M3C-00315"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Have I been using this computer since this morning?",
+      "ids": [
+        "M3C-00020",
+        "M3C-00478"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01837",
+        "M3N-01891"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01819",
+        "M3N-01873"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01813",
+        "M3N-01867"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01843",
+        "M3N-01897"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01831",
+        "M3N-01885"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01825",
+        "M3N-01879"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/空所補充"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
+      "a": "For",
+      "ids": [
+        "M3N-01849",
+        "M3N-01903"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I went to the library by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the library?",
+      "ids": [
+        "M3N-00363",
+        "M3N-00465"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I went to the park by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the park?",
+      "ids": [
+        "M3N-00369",
+        "M3N-00471"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I went to the room by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the room?",
+      "ids": [
+        "M3N-00387",
+        "M3N-00477"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/疑問詞/答え方"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "I went to the station by bike. になる質問文を書きなさい。",
+      "a": "How did you go to the station?",
+      "ids": [
+        "M3N-00375",
+        "M3N-00459"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ],
+      "q": "Is he busy? に Yes で答えなさい。",
+      "a": "Yes, he is.",
+      "ids": [
+        "GEN-BE-0167",
+        "GEN-BE-0279"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ],
+      "q": "Is he kind? に Yes で答えなさい。",
+      "a": "Yes, he is.",
+      "ids": [
+        "GEN-BE-0179",
+        "GEN-BE-0303"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/be動詞/答え方"
+      ],
+      "prefixes": [
+        "GEN-BE"
+      ],
+      "q": "Is she kind? に Yes で答えなさい。",
+      "a": "Yes, she is.",
+      "ids": [
+        "GEN-BE-0219",
+        "GEN-BE-0451"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "John ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01830",
+        "M3N-01902"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "John finished ( to clean / cleaning / clean ) the room. 正しいものを選びなさい。",
+      "a": "Cleaning",
+      "ids": [
+        "M3N-01227",
+        "M3N-01299"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Ken ( has worked / worked / is work ) here since April. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01812",
+        "M3N-01884"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Ken enjoyed ( to play / playing / play ) tennis. 正しいものを選びなさい。",
+      "a": "Playing",
+      "ids": [
+        "M3N-01209",
+        "M3N-01281"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Ken has been studying English for three hours. を疑問文にしなさい。",
+      "a": "Has Ken been studying English for three hours?",
+      "ids": [
+        "M3C-00998",
+        "M3C-01020"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Ken has been to Osaka once. を疑問文にしなさい。",
+      "a": "Has Ken been to Osaka once?",
+      "ids": [
+        "M3C-00056",
+        "M3C-00896"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/読解"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Ken stayed home because he was tired. 問い：この文の内容として最も適切なものを書きなさい。",
+      "a": "Kenは疲れていたので家にいました。",
+      "ids": [
+        "M3N-01092",
+        "M3N-01164"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me go running. の誤りを直しなさい。",
+      "a": "I go running.",
+      "ids": [
+        "M3N-00526",
+        "M3N-00580"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me go swimming. の誤りを直しなさい。",
+      "a": "I go swimming.",
+      "ids": [
+        "M3N-00520",
+        "M3N-00586"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play badminton. の誤りを直しなさい。",
+      "a": "I play badminton.",
+      "ids": [
+        "M3N-00514",
+        "M3N-00574"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play baseball. の誤りを直しなさい。",
+      "a": "I play baseball.",
+      "ids": [
+        "M3N-00496",
+        "M3N-00556"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play basketball. の誤りを直しなさい。",
+      "a": "I play basketball.",
+      "ids": [
+        "M3N-00502",
+        "M3N-00562"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/人称代名詞/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Me play volleyball. の誤りを直しなさい。",
+      "a": "I play volleyball.",
+      "ids": [
+        "M3N-00508",
+        "M3N-00568"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Mike ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01818",
+        "M3N-01890"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Mike finished ( to write / writing / write ) the letter. 正しいものを選びなさい。",
+      "a": "Writing",
+      "ids": [
+        "M3N-01215",
+        "M3N-01287"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "She cook dinner every day. の誤りを直しなさい。",
+      "a": "She cooks dinner every day.",
+      "ids": [
+        "GEN-3RD-0952",
+        "GEN-3RD-1100"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "She has been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Has she been playing tennis for two hours?",
+      "ids": [
+        "M3C-00619",
+        "M3C-00880"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "She has been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Has she been using this computer since this morning?",
+      "ids": [
+        "M3C-00620",
+        "M3C-00957"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "She use a computer every day. の誤りを直しなさい。",
+      "a": "She uses a computer every day.",
+      "ids": [
+        "GEN-3RD-0948",
+        "GEN-3RD-1092"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/三単現/間違い直し"
+      ],
+      "prefixes": [
+        "GEN-3RD"
+      ],
+      "q": "She visit the library every day. の誤りを直しなさい。",
+      "a": "She visits the library every day.",
+      "ids": [
+        "GEN-3RD-0956",
+        "GEN-3RD-1236"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The bag ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02190",
+        "M3N-02262"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The bike ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02184",
+        "M3N-02256"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
+      "a": "Was made",
+      "ids": [
+        "M3N-01620",
+        "M3N-01680"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
+      "a": "Was closed",
+      "ids": [
+        "M3N-01608",
+        "M3N-01668"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The door ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02202",
+        "M3N-02274"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
+      "a": "Was written",
+      "ids": [
+        "M3N-01566",
+        "M3N-01626"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The movie ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02178",
+        "M3N-02250"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
+      "a": "Were taken",
+      "ids": [
+        "M3N-01584",
+        "M3N-01644"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
+      "a": "Was cleaned",
+      "ids": [
+        "M3N-01572",
+        "M3N-01632"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The room ( who / which / where ) Kate used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02166",
+        "M3N-02238"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The song ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02172",
+        "M3N-02244"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The window ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3N-02196",
+        "M3N-02268"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
+      "a": "Are opened",
+      "ids": [
+        "M3N-01602",
+        "M3N-01662"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "These books ( read / are read / are doing ) every year. 正しいものを選びなさい。",
+      "a": "Are read",
+      "ids": [
+        "M3N-01590",
+        "M3N-01650"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Aya her. の誤りを直しなさい。",
+      "a": "They call her Aya.",
+      "ids": [
+        "M3N-01487",
+        "M3N-01559"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Bob him. の誤りを直しなさい。",
+      "a": "They call him Bob.",
+      "ids": [
+        "M3N-01463",
+        "M3N-01535"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Emi her. の誤りを直しなさい。",
+      "a": "They call her Emi.",
+      "ids": [
+        "M3N-01475",
+        "M3N-01547"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call John him. の誤りを直しなさい。",
+      "a": "They call him John.",
+      "ids": [
+        "M3N-01469",
+        "M3N-01541"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Ken him. の誤りを直しなさい。",
+      "a": "They call him Ken.",
+      "ids": [
+        "M3N-01451",
+        "M3N-01523"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Mike him. の誤りを直しなさい。",
+      "a": "They call him Mike.",
+      "ids": [
+        "M3N-01457",
+        "M3N-01529"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Tom him. の誤りを直しなさい。",
+      "a": "They call him Tom.",
+      "ids": [
+        "M3N-01445",
+        "M3N-01517"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/間違い直し"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "They call Yuki her. の誤りを直しなさい。",
+      "a": "They call her Yuki.",
+      "ids": [
+        "M3N-01481",
+        "M3N-01553"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This computer ( use / is used / is doing ) every day. 正しいものを選びなさい。",
+      "a": "Is used",
+      "ids": [
+        "M3N-01596",
+        "M3N-01656"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/受動態/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "This song ( sing / was sung / is doing ) at school. 正しいものを選びなさい。",
+      "a": "Was sung",
+      "ids": [
+        "M3N-01578",
+        "M3N-01638"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Tom ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01806",
+        "M3N-01878"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Tom finished ( to read / reading / read ) this book. 正しいものを選びなさい。",
+      "a": "Reading",
+      "ids": [
+        "M3N-01203",
+        "M3N-01275"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Tom has been studying English for two hours. を疑問文にしなさい。",
+      "a": "Has Tom been studying English for two hours?",
+      "ids": [
+        "M3C-00058",
+        "M3C-01019"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Tom has been to Osaka once. を疑問文にしなさい。",
+      "a": "Has Tom been to Osaka once?",
+      "ids": [
+        "M3C-00094",
+        "M3C-00895"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "We have been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Have we been playing tennis for two hours?",
+      "ids": [
+        "M3C-00819",
+        "M3C-01177"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "We have been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Have we been using this computer since this morning?",
+      "ids": [
+        "M3C-00820",
+        "M3C-01078"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "You have been playing tennis for two hours. を疑問文にしなさい。",
+      "a": "Have you been playing tennis for two hours?",
+      "ids": [
+        "M3C-00219",
+        "M3C-00499"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "You have been to Kyoto once. を疑問文にしなさい。",
+      "a": "Have you been to Kyoto once?",
+      "ids": [
+        "M3C-00215",
+        "M3C-00534"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "You have been using this computer since this morning. を疑問文にしなさい。",
+      "a": "Have you been using this computer since this morning?",
+      "ids": [
+        "M3C-00220",
+        "M3C-01097"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/助動詞/変形"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "You must go to the library now. を疑問文にしなさい。",
+      "a": "Must you go to the library now?",
+      "ids": [
+        "M3N-00963",
+        "M3N-01065"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/助動詞/変形"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "You must go to the park now. を疑問文にしなさい。",
+      "a": "Must you go to the park now?",
+      "ids": [
+        "M3N-00969",
+        "M3N-01071"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/助動詞/変形"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "You must go to the room now. を疑問文にしなさい。",
+      "a": "Must you go to the room now?",
+      "ids": [
+        "M3N-00987",
+        "M3N-01077"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/助動詞/変形"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "You must go to the station now. を疑問文にしなさい。",
+      "a": "Must you go to the station now?",
+      "ids": [
+        "M3N-00975",
+        "M3N-01059"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Yuki ( has worked / worked / is work ) here since Monday. 正しいものを選びなさい。",
+      "a": "Has worked",
+      "ids": [
+        "M3N-01842",
+        "M3N-01914"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/選択"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "Yuki finished ( to read / reading / read ) this book. 正しいものを選びなさい。",
+      "a": "Reading",
+      "ids": [
+        "M3N-01239",
+        "M3N-01311"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/変形"
+      ],
+      "prefixes": [
+        "M3C"
+      ],
+      "q": "Yuki has been to Osaka once. を疑問文にしなさい。",
+      "a": "Has Yuki been to Osaka once?",
+      "ids": [
+        "M3C-00494",
+        "M3C-00933"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
+      "a": "You have to get up early.",
+      "ids": [
+        "M2-MOD-0629",
+        "M2-MOD-0630"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『あなたは 遅れてはいけない。』",
+      "a": "You must not be late.",
+      "ids": [
+        "M2-MOD-0631",
+        "M2-MOD-0632"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
+      "a": "Emi is younger than Yuki.",
+      "ids": [
+        "M2Y-COMP-0407",
+        "M2Y-COMP-0446"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
+      "a": "This bag is larger than that one.",
+      "ids": [
+        "M2Y-COMP-0395",
+        "M2Y-COMP-0434"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
+      "a": "This question is easier than that one.",
+      "ids": [
+        "M2Y-COMP-0401",
+        "M2Y-COMP-0440"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
+      "a": "This river is longer than that one.",
+      "ids": [
+        "M2Y-COMP-0419",
+        "M2Y-COMP-0458"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』",
+      "a": "This movie is more exciting than that movie.",
+      "ids": [
+        "M2Y-COMP-0425",
+        "M2Y-COMP-0464"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
+      "a": "This book is smaller than that one.",
+      "ids": [
+        "M2Y-COMP-0398",
+        "M2Y-COMP-0437"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この机はあの机より重い。』",
+      "a": "This desk is heavier than that one.",
+      "ids": [
+        "M2Y-COMP-0416",
+        "M2Y-COMP-0455"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』",
+      "a": "This box is lighter than that one.",
+      "ids": [
+        "M2Y-COMP-0422",
+        "M2Y-COMP-0461"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
+      "a": "This room is larger than that one.",
+      "ids": [
+        "M2Y-COMP-0410",
+        "M2Y-COMP-0449"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/文型/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『その運動で私は強くなりました。』",
+      "a": "The exercise made me strong.",
+      "ids": [
+        "M3N-01528",
+        "M3N-01534"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+      "a": "Tom is taller than Ken.",
+      "ids": [
+        "M2Y-COMP-0404",
+        "M2Y-COMP-0443"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『公園では走らないでください。』",
+      "a": "Do not run in the park.",
+      "ids": [
+        "M3N-00727",
+        "M3N-00829"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『図書館では走らないでください。』",
+      "a": "Do not run in the library.",
+      "ids": [
+        "M3N-00721",
+        "M3N-00823"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『彼らは 早く起きなければならない。』",
+      "a": "They have to get up early.",
+      "ids": [
+        "M2-MOD-0645",
+        "M2-MOD-0646"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『彼らは 遅れてはいけない。』",
+      "a": "They must not be late.",
+      "ids": [
+        "M2-MOD-0647",
+        "M2-MOD-0648"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私たちは 早く起きなければならない。』",
+      "a": "We have to get up early.",
+      "ids": [
+        "M2-MOD-0637",
+        "M2-MOD-0638"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私たちは 遅れてはいけない。』",
+      "a": "We must not be late.",
+      "ids": [
+        "M2-MOD-0639",
+        "M2-MOD-0640"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/比較/英作文"
+      ],
+      "prefixes": [
+        "M2Y-COMP"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+      "a": "My bike is faster than your bike.",
+      "ids": [
+        "M2Y-COMP-0413",
+        "M2Y-COMP-0452"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は 宿題を終えなければならない。』",
+      "a": "I must finish my homework.",
+      "ids": [
+        "M2-MOD-0619",
+        "M2-MOD-0620"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は 早く起きなければならない。』",
+      "a": "I have to get up early.",
+      "ids": [
+        "M2-MOD-0621",
+        "M2-MOD-0622"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中2/助動詞/英作文"
+      ],
+      "prefixes": [
+        "M2-MOD"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は 遅れてはいけない。』",
+      "a": "I must not be late.",
+      "ids": [
+        "M2-MOD-0623",
+        "M2-MOD-0624"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は一度も公園へ行ったことがありません。』",
+      "a": "I have never been to the park.",
+      "ids": [
+        "M3N-01691",
+        "M3N-01793"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は一度も図書館へ行ったことがありません。』",
+      "a": "I have never been to the library.",
+      "ids": [
+        "M3N-01685",
+        "M3N-01787"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は一度も部屋へ行ったことがありません。』",
+      "a": "I have never been to the room.",
+      "ids": [
+        "M3N-01709",
+        "M3N-01799"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（完了・経験）/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は一度も駅へ行ったことがありません。』",
+      "a": "I have never been to the station.",
+      "ids": [
+        "M3N-01697",
+        "M3N-01781"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼がいつ来るのかわかりません。』",
+      "a": "I don't know when he will come.",
+      "ids": [
+        "M3N-02088",
+        "M3N-02160"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼がどこに住んでいるのかわかりません。』",
+      "a": "I don't know where he lives.",
+      "ids": [
+        "M3N-02052",
+        "M3N-02124"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼がなぜ忙しいのかわかりません。』",
+      "a": "I don't know why he is busy.",
+      "ids": [
+        "M3N-02082",
+        "M3N-02154"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/分詞と間接疑問文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は彼が何をほしいのかわかりません。』",
+      "a": "I don't know what he wants.",
+      "ids": [
+        "M3N-02046",
+        "M3N-02118"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/現在完了形（継続），現在完了進行形/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は日曜日からずっとこの町に住んでいます。』",
+      "a": "I have lived in this town since Sunday.",
+      "ids": [
+        "M3N-01839",
+        "M3N-01881"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『部屋では走らないでください。』",
+      "a": "Do not run in the room.",
+      "ids": [
+        "M3N-00745",
+        "M3N-00835"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/命令文，there is ～ の文/英作文"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『駅では走らないでください。』",
+      "a": "Do not run in the station.",
+      "ids": [
+        "M3N-00733",
+        "M3N-00817"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / He / busy )",
+      "a": "He is always busy.",
+      "ids": [
+        "GEN-FREQ-1333",
+        "GEN-FREQ-1339"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( always / is / She / busy )",
+      "a": "She is always busy.",
+      "ids": [
+        "GEN-FREQ-1336",
+        "GEN-FREQ-1342"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( John / home / he / tired / stayed / because / was )",
+      "a": "John stayed home because he was tired.",
+      "ids": [
+        "M3N-01109",
+        "M3N-01181"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( Mike / home / he / tired / stayed / because / was )",
+      "a": "Mike stayed home because he was tired.",
+      "ids": [
+        "M3N-01097",
+        "M3N-01169"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( often / is / He / busy )",
+      "a": "He is often busy.",
+      "ids": [
+        "GEN-FREQ-1335",
+        "GEN-FREQ-1341"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( often / is / She / busy )",
+      "a": "She is often busy.",
+      "ids": [
+        "GEN-FREQ-1338",
+        "GEN-FREQ-1344"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / heavy / carry / bag / too / to )",
+      "a": "That bag is too heavy to carry.",
+      "ids": [
+        "M3N-01266",
+        "M3N-01314"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / book / easy / read )",
+      "a": "That book is easy to read.",
+      "ids": [
+        "M3N-01254",
+        "M3N-01302"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/不定詞①，動名詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( That / is / to / question / easy / answer )",
+      "a": "That question is easy to answer.",
+      "ids": [
+        "M3N-01260",
+        "M3N-01308"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( Tom / home / he / tired / stayed / because / was )",
+      "a": "Tom stayed home because he was tired.",
+      "ids": [
+        "M3N-01085",
+        "M3N-01157"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( usually / is / He / busy )",
+      "a": "He is usually busy.",
+      "ids": [
+        "GEN-FREQ-1334",
+        "GEN-FREQ-1340"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中1/頻度副詞/並びかえ"
+      ],
+      "prefixes": [
+        "GEN-FREQ"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( usually / is / She / busy )",
+      "a": "She is usually busy.",
+      "ids": [
+        "GEN-FREQ-1337",
+        "GEN-FREQ-1343"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": true,
+      "families": [
+        "中3/接続詞/並びかえ"
+      ],
+      "prefixes": [
+        "M3N"
+      ],
+      "q": "次の語(句)を正しい順に並べかえなさい。 ( Yuki / home / she / tired / stayed / because / was )",
+      "a": "Yuki stayed home because she was tired.",
+      "ids": [
+        "M3N-01121",
+        "M3N-01193"
+      ]
+    }
+  ],
+  "same_family_other_prefix": [
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "Emi is more young than Yuki. の誤りを直しなさい。",
+      "a": "Emi is younger than Yuki.",
+      "ids": [
+        "M2Y-COMP-0408",
+        "M2Y-COMP-0444",
+        "M2-COMP2-1465",
+        "M2-COMP2-1519"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "My bike is more fast than your bike. の誤りを直しなさい。",
+      "a": "My bike is faster than your bike.",
+      "ids": [
+        "M2Y-COMP-0414",
+        "M2Y-COMP-0450",
+        "M2-COMP2-1471",
+        "M2-COMP2-1534"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The boy ( who / which / where ) is studying is John's friend. 正しいものを選びなさい。",
+      "a": "who",
+      "ids": [
+        "M3C-01325",
+        "M3N-02179",
+        "M3N-02215",
+        "M3N-02251"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The boy ( who / which / where ) is walking is Lucy's friend. 正しいものを選びなさい。",
+      "a": "who",
+      "ids": [
+        "M3C-01344",
+        "M3N-02191",
+        "M3N-02227",
+        "M3N-02263"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The girl ( who / which / where ) is reading is Yuki's friend. 正しいものを選びなさい。",
+      "a": "who",
+      "ids": [
+        "M3C-01342",
+        "M3N-02185",
+        "M3N-02221",
+        "M3N-02257"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The girl ( who / which / where ) is singing is Mike's friend. 正しいものを選びなさい。",
+      "a": "who",
+      "ids": [
+        "M3C-01323",
+        "M3N-02173",
+        "M3N-02209",
+        "M3N-02245"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This bag is more large than that one. の誤りを直しなさい。",
+      "a": "This bag is larger than that one.",
+      "ids": [
+        "M2Y-COMP-0396",
+        "M2Y-COMP-0432",
+        "M2-COMP2-1453",
+        "M2-COMP2-1507"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This book is more small than that one. の誤りを直しなさい。",
+      "a": "This book is smaller than that one.",
+      "ids": [
+        "M2Y-COMP-0399",
+        "M2Y-COMP-0435",
+        "M2-COMP2-1456",
+        "M2-COMP2-1510"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This desk is more heavy than that one. の誤りを直しなさい。",
+      "a": "This desk is heavier than that one.",
+      "ids": [
+        "M2Y-COMP-0417",
+        "M2Y-COMP-0453",
+        "M2-COMP2-1474",
+        "M2-COMP2-1537"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This question is more easy than that one. の誤りを直しなさい。",
+      "a": "This question is easier than that one.",
+      "ids": [
+        "M2Y-COMP-0402",
+        "M2Y-COMP-0438",
+        "M2-COMP2-1459",
+        "M2-COMP2-1513"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This room is more big than that one. の誤りを直しなさい。",
+      "a": "This room is bigger than that one.",
+      "ids": [
+        "M2Y-COMP-0411",
+        "M2Y-COMP-0447",
+        "M2-COMP2-1468",
+        "M2-COMP2-1522"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 4,
+      "excess": 3,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "Tom is more tall than Ken. の誤りを直しなさい。",
+      "a": "Tom is taller than Ken.",
+      "ids": [
+        "M2Y-COMP-0405",
+        "M2Y-COMP-0441",
+        "M2-COMP2-1462",
+        "M2-COMP2-1516"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The book ( who / which / where ) Ken used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3C-01322",
+        "M3N-02208",
+        "M3N-02280"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This box is more light than that one. の誤りを直しなさい。",
+      "a": "This box is lighter than that one.",
+      "ids": [
+        "M2Y-COMP-0423",
+        "M2Y-COMP-0459",
+        "M2-COMP2-1489"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This idea is importanter than that one. の誤りを直しなさい。",
+      "a": "This idea is more important than that one.",
+      "ids": [
+        "M2Y-COMP-0429",
+        "M2Y-COMP-0465",
+        "M2-COMP2-1504"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This movie is excitinger than that one. の誤りを直しなさい。",
+      "a": "This movie is more exciting than that one.",
+      "ids": [
+        "M2Y-COMP-0426",
+        "M2Y-COMP-0462",
+        "M2-COMP2-1501"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 3,
+      "excess": 2,
+      "same_prefix": false,
+      "families": [
+        "中2/比較/間違い直し"
+      ],
+      "prefixes": [
+        "M2Y-COMP",
+        "M2-COMP2"
+      ],
+      "q": "This river is more long than that one. の誤りを直しなさい。",
+      "a": "This river is longer than that one.",
+      "ids": [
+        "M2Y-COMP-0420",
+        "M2Y-COMP-0456",
+        "M2-COMP2-1486"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/未来の文/変形"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "I am going to play tennis. を疑問文にしなさい。",
+      "a": "Am I going to play tennis?",
+      "ids": [
+        "M3C-00008",
+        "M3N-00843"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "I played tennis yesterday. を疑問文にしなさい。",
+      "a": "Did I play tennis yesterday?",
+      "ids": [
+        "M3C-00003",
+        "M3N-00246"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I am you, I would help my friend. の誤りを直しなさい。",
+      "a": "If I were you, I would help my friend.",
+      "ids": [
+        "M3C-01391",
+        "M3N-02368"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I am you, I would practice tennis. の誤りを直しなさい。",
+      "a": "If I were you, I would practice tennis.",
+      "ids": [
+        "M3C-01395",
+        "M3N-02380"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I am you, I would study English. の誤りを直しなさい。",
+      "a": "If I were you, I would study English.",
+      "ids": [
+        "M3C-01387",
+        "M3N-02356"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I am you, I would use this computer. の誤りを直しなさい。",
+      "a": "If I were you, I would use this computer.",
+      "ids": [
+        "M3C-01399",
+        "M3N-02392"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I was you, I would clean the room. の誤りを直しなさい。",
+      "a": "If I were you, I would clean the room.",
+      "ids": [
+        "M3C-01393",
+        "M3N-02374"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I was you, I would read this book. の誤りを直しなさい。",
+      "a": "If I were you, I would read this book.",
+      "ids": [
+        "M3C-01389",
+        "M3N-02362"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I was you, I would visit Kyoto. の誤りを直しなさい。",
+      "a": "If I were you, I would visit Kyoto.",
+      "ids": [
+        "M3C-01397",
+        "M3N-02386"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/仮定法/間違い直し"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "If I was you, I would write a letter. の誤りを直しなさい。",
+      "a": "If I were you, I would write a letter.",
+      "ids": [
+        "M3C-01401",
+        "M3N-02398"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/命令文，there is ～ の文/変形"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "Open the door. を否定の命令文にしなさい。",
+      "a": "Do not open the door.",
+      "ids": [
+        "M3C-01506",
+        "M3N-00790"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The computer ( who / which / where ) Mary bought yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3C-01345",
+        "M3N-02232"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The letter ( who / which / where ) Bob bought yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3C-01324",
+        "M3N-02214"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The picture ( who / which / where ) Emi used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3C-01341",
+        "M3N-02220"
+      ]
+    },
+    {
+      "classification": "same_family_copy",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中3/関係代名詞/選択"
+      ],
+      "prefixes": [
+        "M3C",
+        "M3N"
+      ],
+      "q": "The question ( who / which / where ) Aya used yesterday is mine. 正しいものを選びなさい。",
+      "a": "which",
+      "ids": [
+        "M3C-01343",
+        "M3N-02226"
+      ]
+    }
+  ],
+  "cross_family": [
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/there is ～・look ～ の文/英作文",
+        "中2/文型①（look ～，give A B）/英作文"
+      ],
+      "prefixes": [
+        "F1-THLOOK",
+        "F2-VFORM"
+      ],
+      "q": "『その花は美しく見えます。』を英語で書きなさい。",
+      "a": "The flower looks beautiful.",
+      "ids": [
+        "F1-THLOOK-0063",
+        "F2-VFORM-0093"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/命令文/英作文",
+        "中1/命令文/英作文"
+      ],
+      "prefixes": [
+        "R2-IMP",
+        "F1-IMP"
+      ],
+      "q": "『右に曲がりなさい。』を英語で書きなさい。",
+      "a": "Turn right.",
+      "ids": [
+        "R2-IMP-0074",
+        "F1-IMP-0041"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/be動詞/変形",
+        "中2/be動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-BE",
+        "M2-BE"
+      ],
+      "q": "Aya is tired. を否定文にしなさい。",
+      "a": "Aya is not tired.",
+      "ids": [
+        "GEN-BE-0454",
+        "M2-BE-0093"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/be動詞/変形",
+        "中2/be動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-BE",
+        "M2-BE"
+      ],
+      "q": "Bob is tired. を否定文にしなさい。",
+      "a": "Bob is not tired.",
+      "ids": [
+        "GEN-BE-0381",
+        "M2-BE-0083"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/区別/間違い直し",
+        "中2/be動詞と一般動詞（現在形）/間違い直し"
+      ],
+      "prefixes": [
+        "E1-BD",
+        "R2-DIST"
+      ],
+      "q": "He is play tennis. の誤りを直しなさい。",
+      "a": "He plays tennis.",
+      "ids": [
+        "E1-BD-004",
+        "R2-DIST-0055"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/現在進行形/間違い直し",
+        "中3/進行形/間違い直し"
+      ],
+      "prefixes": [
+        "F1-PROG",
+        "M3N"
+      ],
+      "q": "I am study English now. の誤りを直しなさい。",
+      "a": "I am studying English now.",
+      "ids": [
+        "F1-PROG-0044",
+        "M3N-00604"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/現在進行形/変形",
+        "中3/進行形/変形"
+      ],
+      "prefixes": [
+        "F1-PROG",
+        "M3C"
+      ],
+      "q": "I am studying English now. を疑問文にしなさい。",
+      "a": "Am I studying English now?",
+      "ids": [
+        "F1-PROG-0045",
+        "M3C-00025"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "I help at home. を yesterday を使って過去の文にしなさい。",
+      "a": "I helped at home yesterday.",
+      "ids": [
+        "GEN-PAST-1878",
+        "M2-PAST-0339"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "I know Emi. I often talk with (      ).",
+      "a": "her",
+      "ids": [
+        "R2-PRON-0068",
+        "F1-PRON-0023"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "I know Ken and Emi. I often talk with (      ).",
+      "a": "them",
+      "ids": [
+        "R2-PRON-0072",
+        "F1-PRON-0029"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "I know Ken. I often talk with (      ).",
+      "a": "him",
+      "ids": [
+        "R2-PRON-0066",
+        "F1-PRON-0020"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "I know you. I often talk with (      ).",
+      "a": "You",
+      "ids": [
+        "R2-PRON-0064",
+        "F1-PRON-0017"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/区別/見分け",
+        "中3/be動詞と一般動詞（現在形）/見分け"
+      ],
+      "prefixes": [
+        "E1-BD",
+        "M3N"
+      ],
+      "q": "I play tennis. は be動詞の文か、一般動詞の文か答えなさい。",
+      "a": "一般動詞の文",
+      "ids": [
+        "E1-BD-002",
+        "M3N-00122"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "I play tennis. を yesterday を使って過去の文にしなさい。",
+      "a": "I played tennis yesterday.",
+      "ids": [
+        "GEN-PAST-1863",
+        "M2-PAST-0337"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/過去のbe動詞/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PBE",
+        "M3N"
+      ],
+      "q": "I was busy yesterday. を否定文にしなさい。",
+      "a": "I was not busy yesterday.",
+      "ids": [
+        "GEN-PBE-1506",
+        "M3N-00245"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "Ken knows me. He often talks with (      ).",
+      "a": "me",
+      "ids": [
+        "R2-PRON-0062",
+        "F1-PRON-0014"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/be動詞/変形",
+        "中2/be動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-BE",
+        "M2-BE"
+      ],
+      "q": "Mary is tired. を否定文にしなさい。",
+      "a": "Mary is not tired.",
+      "ids": [
+        "GEN-BE-0477",
+        "M2-BE-0099"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中2/人称代名詞/空所補充",
+        "中1/人称代名詞/空所補充"
+      ],
+      "prefixes": [
+        "R2-PRON",
+        "F1-PRON"
+      ],
+      "q": "Mr. Sato knows Ken and me. He often talks with (      ).",
+      "a": "us",
+      "ids": [
+        "R2-PRON-0070",
+        "F1-PRON-0026"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/can/変形",
+        "中3/助動詞/変形"
+      ],
+      "prefixes": [
+        "R1-CAN",
+        "M3C"
+      ],
+      "q": "She can play tennis. を疑問文にしなさい。",
+      "a": "Can she play tennis?",
+      "ids": [
+        "R1-CAN-0051",
+        "M3C-00609"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/区別/見分け",
+        "中2/be動詞と一般動詞（現在形）/見分け"
+      ],
+      "prefixes": [
+        "E1-BD",
+        "R2-DIST"
+      ],
+      "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
+      "a": "Be動詞の文",
+      "ids": [
+        "E1-BD-001",
+        "R2-DIST-0053"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/過去のbe動詞/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PBE",
+        "M3N"
+      ],
+      "q": "She was happy yesterday. を否定文にしなさい。",
+      "a": "She was not happy yesterday.",
+      "ids": [
+        "GEN-PBE-1653",
+        "M3N-00263"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/現在進行形/変形",
+        "中3/進行形/変形"
+      ],
+      "prefixes": [
+        "F1-PROG",
+        "M3C"
+      ],
+      "q": "They are watching TV now. を疑問文にしなさい。",
+      "a": "Are they watching TV now?",
+      "ids": [
+        "F1-PROG-0051",
+        "M3C-01185"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "They help at home. を yesterday を使って過去の文にしなさい。",
+      "a": "They helped at home yesterday.",
+      "ids": [
+        "GEN-PAST-2022",
+        "M2-PAST-0399"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "They play tennis. を yesterday を使って過去の文にしなさい。",
+      "a": "They played tennis yesterday.",
+      "ids": [
+        "GEN-PAST-2007",
+        "M2-PAST-0397"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "We help at home. を yesterday を使って過去の文にしなさい。",
+      "a": "We helped at home yesterday.",
+      "ids": [
+        "GEN-PAST-1974",
+        "M2-PAST-0379"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "We play tennis. を yesterday を使って過去の文にしなさい。",
+      "a": "We played tennis yesterday.",
+      "ids": [
+        "GEN-PAST-1959",
+        "M2-PAST-0377"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/区別/見分け",
+        "中3/be動詞と一般動詞（現在形）/見分け"
+      ],
+      "prefixes": [
+        "E1-BD",
+        "M3N"
+      ],
+      "q": "You are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+      "a": "Be動詞の文",
+      "ids": [
+        "E1-BD-007",
+        "M3N-00127"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "You help at home. を yesterday を使って過去の文にしなさい。",
+      "a": "You helped at home yesterday.",
+      "ids": [
+        "GEN-PAST-1926",
+        "M2-PAST-0359"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞の過去形/変形",
+        "中2/一般動詞の過去形/変形"
+      ],
+      "prefixes": [
+        "GEN-PAST",
+        "M2-PAST"
+      ],
+      "q": "You play tennis. を yesterday を使って過去の文にしなさい。",
+      "a": "You played tennis yesterday.",
+      "ids": [
+        "GEN-PAST-1911",
+        "M2-PAST-0357"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/過去のbe動詞/変形",
+        "中3/be動詞と一般動詞（過去形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PBE",
+        "M3N"
+      ],
+      "q": "You were kind yesterday. を否定文にしなさい。",
+      "a": "You were not kind yesterday.",
+      "ids": [
+        "GEN-PBE-1545",
+        "M3N-00251"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/be動詞/変形",
+        "中2/be動詞/変形"
+      ],
+      "prefixes": [
+        "GEN-BE",
+        "M2-BE"
+      ],
+      "q": "Yuki is tired. を疑問文にしなさい。",
+      "a": "Is Yuki tired?",
+      "ids": [
+        "GEN-BE-0429",
+        "M2-BE-0091"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/疑問詞/英作文",
+        "中1/英作文/英作文"
+      ],
+      "prefixes": [
+        "E1-WH",
+        "E1-WR"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『あなたは何が好きですか。』",
+      "a": "What do you like?",
+      "ids": [
+        "E1-WH-004",
+        "E1-WR-010"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/一般動詞/英作文",
+        "中2/一般動詞/英作文"
+      ],
+      "prefixes": [
+        "E1-DQ",
+        "M2X-RV"
+      ],
+      "q": "次の日本語に合う英文を書きなさい。『私は毎日英語を勉強します。』",
+      "a": "I study English every day.",
+      "ids": [
+        "E1-DQ-013",
+        "M2X-RV-0015"
+      ]
+    },
+    {
+      "classification": "cross_category",
+      "count": 2,
+      "excess": 1,
+      "same_prefix": false,
+      "families": [
+        "中1/疑問詞/答えから質問文",
+        "中3/疑問詞/答えから質問文"
+      ],
+      "prefixes": [
+        "E1-WH",
+        "M3C"
+      ],
+      "q": "答えが “At seven.” になる質問文を書きなさい。",
+      "a": "When do you get up?",
+      "ids": [
+        "E1-WH-012",
+        "M3C-01499"
+      ]
+    }
+  ]
+}
