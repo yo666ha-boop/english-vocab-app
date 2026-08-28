@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-28T12:13:40.936Z",
+  "generated_at": "2026-08-28T12:16:23.692Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
-    "duplicate_qa_row_ratio:0.1449"
+    "duplicate_qa_row_ratio:0.1453"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
@@ -33,10 +33,10 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 619,
-    "row_count": 1523,
-    "duplicate_excess": 904,
-    "row_ratio": 0.144896,
+    "group_count": 621,
+    "row_count": 1527,
+    "duplicate_excess": 906,
+    "row_ratio": 0.145276,
     "top": [
       {
         "count": 9,

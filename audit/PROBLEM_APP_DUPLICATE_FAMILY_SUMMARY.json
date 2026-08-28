@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-28T12:13:41.076Z",
+  "generated_at": "2026-08-28T12:16:23.837Z",
   "english_count": 10511,
-  "duplicate_row_count": 1523,
-  "duplicate_excess": 904,
-  "duplicate_group_count": 619,
-  "row_ratio": 0.144896,
+  "duplicate_row_count": 1527,
+  "duplicate_excess": 906,
+  "duplicate_group_count": 621,
+  "row_ratio": 0.145276,
   "group_size_histogram": {
-    "2": 448,
+    "2": 450,
     "3": 80,
     "4": 76,
     "5": 10,
@@ -87,16 +87,16 @@
       "excess_estimate": 20
     },
     {
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "row_count": 30,
+      "duplicate_group_count": 30,
+      "excess_estimate": 19
+    },
+    {
       "family": "中2/比較/英作文",
       "row_count": 23,
       "duplicate_group_count": 4,
       "excess_estimate": 19
-    },
-    {
-      "family": "中3/be動詞と一般動詞（現在形）/変形",
-      "row_count": 28,
-      "duplicate_group_count": 28,
-      "excess_estimate": 18
     },
     {
       "family": "中3/現在完了形（完了・経験）/空所補充",
@@ -507,6 +507,12 @@
       "excess_estimate": 1
     },
     {
+      "family": "中1/一般動詞/変形",
+      "row_count": 1,
+      "duplicate_group_count": 1,
+      "excess_estimate": 1
+    },
+    {
       "family": "中1/一般動詞/英作文",
       "row_count": 1,
       "duplicate_group_count": 1,
@@ -561,6 +567,12 @@
       "excess_estimate": 1
     },
     {
+      "family": "中2/一般動詞/変形",
+      "row_count": 1,
+      "duplicate_group_count": 1,
+      "excess_estimate": 1
+    },
+    {
       "family": "中2/一般動詞/英作文",
       "row_count": 1,
       "duplicate_group_count": 1,
@@ -598,7 +610,7 @@
     },
     {
       "prefix": "M3C",
-      "row_count": 124
+      "row_count": 126
     },
     {
       "prefix": "GEN-BE",
@@ -714,6 +726,14 @@
     },
     {
       "prefix": "F2-VFORM",
+      "row_count": 1
+    },
+    {
+      "prefix": "GEN-PRS",
+      "row_count": 1
+    },
+    {
+      "prefix": "M2-PRS",
       "row_count": 1
     },
     {
@@ -6836,6 +6856,42 @@
     {
       "count": 2,
       "excess": 1,
+      "q": "I help at home. を否定文にしなさい。",
+      "a": "I do not help at home.",
+      "ids": [
+        "GEN-PRS-0574",
+        "M3C-00122"
+      ],
+      "families": [
+        "中1/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "GEN-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
+      "q": "I help at home. を疑問文にしなさい。",
+      "a": "Do I help at home?",
+      "ids": [
+        "M2-PRS-0159",
+        "M3C-00121"
+      ],
+      "families": [
+        "中2/一般動詞/変形",
+        "中3/be動詞と一般動詞（現在形）/変形"
+      ],
+      "prefixes": [
+        "M2-PRS",
+        "M3C"
+      ]
+    },
+    {
+      "count": 2,
+      "excess": 1,
       "q": "I know Emi. I often talk with (      ).",
       "a": "her",
       "ids": [
@@ -9177,38 +9233,6 @@
       "ids": [
         "M3N-02089",
         "M3N-02149"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "The boy (      ) in the park is my friend. (run) の（ ）内を正しくしなさい。",
-      "a": "Running",
-      "ids": [
-        "M3N-02053",
-        "M3N-02113"
-      ],
-      "families": [
-        "中3/分詞と間接疑問文/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ]
-    },
-    {
-      "count": 2,
-      "excess": 1,
-      "q": "The boy (      ) in the park is my friend. (sing) の（ ）内を正しくしなさい。",
-      "a": "Singing",
-      "ids": [
-        "M3N-02077",
-        "M3N-02137"
       ],
       "families": [
         "中3/分詞と間接疑問文/空所補充"

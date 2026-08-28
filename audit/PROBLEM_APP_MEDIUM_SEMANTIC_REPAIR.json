@@ -1,0 +1,416 @@
+{
+  "generated_at": "2026-08-28T12:16:23.495Z",
+  "changed_rows": 27,
+  "do_i_repairs": 7,
+  "proper_name_case_repairs": 6,
+  "mother_pronoun_repairs": 14,
+  "samples": [
+    {
+      "id": "E1-DQ-002",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I study English every day. を疑問文にしなさい。",
+        "a": "Do you study English every day?"
+      },
+      "after": {
+        "q": "I study English every day. を疑問文にしなさい。",
+        "a": "Do I study English every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0561",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken study English every day. を疑問文にしなさい。",
+        "a": "Do tom and ken study English every day?"
+      },
+      "after": {
+        "q": "Tom and Ken study English every day. を疑問文にしなさい。",
+        "a": "Do Tom and Ken study English every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0569",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I play soccer after school. を疑問文にしなさい。",
+        "a": "Do you play soccer after school?"
+      },
+      "after": {
+        "q": "I play soccer after school. を疑問文にしなさい。",
+        "a": "Do I play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0598",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken play soccer after school. を疑問文にしなさい。",
+        "a": "Do tom and ken play soccer after school?"
+      },
+      "after": {
+        "q": "Tom and Ken play soccer after school. を疑問文にしなさい。",
+        "a": "Do Tom and Ken play soccer after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0618",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I read books on Sunday. を疑問文にしなさい。",
+        "a": "Do you read books on Sunday?"
+      },
+      "after": {
+        "q": "I read books on Sunday. を疑問文にしなさい。",
+        "a": "Do I read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0637",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken read books on Sunday. を疑問文にしなさい。",
+        "a": "Do tom and ken read books on Sunday?"
+      },
+      "after": {
+        "q": "Tom and Ken read books on Sunday. を疑問文にしなさい。",
+        "a": "Do Tom and Ken read books on Sunday?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0646",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do you use a computer in the evening?"
+      },
+      "after": {
+        "q": "I use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do I use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0685",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do tom and ken use a computer in the evening?"
+      },
+      "after": {
+        "q": "Tom and Ken use a computer in the evening. を疑問文にしなさい。",
+        "a": "Do Tom and Ken use a computer in the evening?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0689",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I visit the library every day. を疑問文にしなさい。",
+        "a": "Do you visit the library every day?"
+      },
+      "after": {
+        "q": "I visit the library every day. を疑問文にしなさい。",
+        "a": "Do I visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0710",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken visit the library every day. を疑問文にしなさい。",
+        "a": "Do tom and ken visit the library every day?"
+      },
+      "after": {
+        "q": "Tom and Ken visit the library every day. を疑問文にしなさい。",
+        "a": "Do Tom and Ken visit the library every day?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0726",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I watch TV after school. を疑問文にしなさい。",
+        "a": "Do you watch TV after school?"
+      },
+      "after": {
+        "q": "I watch TV after school. を疑問文にしなさい。",
+        "a": "Do I watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0761",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "proper_name_case"
+      ],
+      "before": {
+        "q": "Tom and Ken watch TV after school. を疑問文にしなさい。",
+        "a": "Do tom and ken watch TV after school?"
+      },
+      "after": {
+        "q": "Tom and Ken watch TV after school. を疑問文にしなさい。",
+        "a": "Do Tom and Ken watch TV after school?"
+      }
+    },
+    {
+      "id": "GEN-PRS-0765",
+      "family": "中1/一般動詞/変形",
+      "kinds": [
+        "do_i"
+      ],
+      "before": {
+        "q": "I listen to music on Sunday. を疑問文にしなさい。",
+        "a": "Do you listen to music on Sunday?"
+      },
+      "after": {
+        "q": "I listen to music on Sunday. を疑問文にしなさい。",
+        "a": "Do I listen to music on Sunday?"
+      }
+    },
+    {
+      "id": "M2-REV-0301",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私は毎日母を手伝います。』",
+        "a": "I help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私は毎日家で手伝います。』",
+        "a": "I help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0302",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは毎日母を手伝います。』",
+        "a": "We help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私たちは毎日家で手伝います。』",
+        "a": "We help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0304",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは毎日母を手伝います。』",
+        "a": "They help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『彼らは毎日家で手伝います。』",
+        "a": "They help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0305",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは毎日母を手伝います。』",
+        "a": "You help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『あなたは毎日家で手伝います。』",
+        "a": "You help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0307",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『私の友達は毎日母を手伝います。』",
+        "a": "My friends help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私の友達は毎日家で手伝います。』",
+        "a": "My friends help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0308",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『その生徒たちは毎日母を手伝います。』",
+        "a": "The students help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『その生徒たちは毎日家で手伝います。』",
+        "a": "The students help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0310",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムとケンは毎日母を手伝います。』",
+        "a": "Tom and Ken help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムとケンは毎日家で手伝います。』",
+        "a": "Tom and Ken help at home every day."
+      }
+    },
+    {
+      "id": "M2-REV-0311",
+      "family": "中2/一般動詞/英作文",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『エミとユキは毎日母を手伝います。』",
+        "a": "Emi and Yuki help my mother every day."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『エミとユキは毎日家で手伝います。』",
+        "a": "Emi and Yuki help at home every day."
+      }
+    },
+    {
+      "id": "M3C-00121",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "I help my mother. を疑問文にしなさい。",
+        "a": "Do I help my mother?"
+      },
+      "after": {
+        "q": "I help at home. を疑問文にしなさい。",
+        "a": "Do I help at home?"
+      }
+    },
+    {
+      "id": "M3C-00122",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "I help my mother. を否定文にしなさい。",
+        "a": "I do not help my mother."
+      },
+      "after": {
+        "q": "I help at home. を否定文にしなさい。",
+        "a": "I do not help at home."
+      }
+    },
+    {
+      "id": "M3C-00521",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "He helps his mother. を疑問文にしなさい。",
+        "a": "Does he help his mother?"
+      },
+      "after": {
+        "q": "He helps at home. を疑問文にしなさい。",
+        "a": "Does he help his mother?"
+      }
+    },
+    {
+      "id": "M3C-00522",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "He helps his mother. を否定文にしなさい。",
+        "a": "He does not help his mother."
+      },
+      "after": {
+        "q": "He helps at home. を否定文にしなさい。",
+        "a": "He does not help his mother."
+      }
+    },
+    {
+      "id": "M3C-00721",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "She helps her mother. を疑問文にしなさい。",
+        "a": "Does she help her mother?"
+      },
+      "after": {
+        "q": "She helps at home. を疑問文にしなさい。",
+        "a": "Does she help her mother?"
+      }
+    },
+    {
+      "id": "M3C-00722",
+      "family": "中3/be動詞と一般動詞（現在形）/変形",
+      "kinds": [
+        "mother_pronoun"
+      ],
+      "before": {
+        "q": "She helps her mother. を否定文にしなさい。",
+        "a": "She does not help her mother."
+      },
+      "after": {
+        "q": "She helps at home. を否定文にしなさい。",
+        "a": "She does not help her mother."
+      }
+    }
+  ],
+  "residual_count": 0,
+  "residual_samples": []
+}
