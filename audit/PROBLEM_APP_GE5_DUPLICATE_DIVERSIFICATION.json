@@ -1,0 +1,1019 @@
+{
+  "generated_at": "2026-08-28T12:19:51.285Z",
+  "groups_ge5_before": 15,
+  "rows_ge5_before": 83,
+  "changed_rows": 83,
+  "by_family": {
+    "中2/比較/英作文": 23,
+    "中3/関係代名詞/選択": 5,
+    "中3/不定詞②/選択": 6,
+    "中3/命令文，there is ～ の文/変形": 9,
+    "中3/未来の文/選択": 20,
+    "中3/受動態/選択": 20
+  },
+  "unsupported": {},
+  "samples": [
+    {
+      "id": "M2Y-COMP-0395",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
+        "a": "This bag is larger than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0398",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
+        "a": "This book is smaller than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0401",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
+        "a": "This question is easier than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0404",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+        "a": "Tom is taller than Ken."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0407",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
+        "a": "Emi is younger than Yuki."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0410",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
+        "a": "This room is larger than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0413",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+        "a": "My bike is faster than your bike."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0416",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この机はあの机より重い。』",
+        "a": "This desk is heavier than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0419",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
+        "a": "This river is longer than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0422",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』",
+        "a": "This box is lighter than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0425",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0428",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより大切だ。』",
+        "a": "This idea is more important than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0434",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんはあのかばんより大きい。』",
+        "a": "This bag is larger than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0437",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本はあの本より小さい。』",
+        "a": "This book is smaller than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0440",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題よりやさしい。』",
+        "a": "This question is easier than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0443",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより背が高い。』",
+        "a": "Tom is taller than Ken."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0446",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『エミはユキより若い。』",
+        "a": "Emi is younger than Yuki."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0449",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広い。』",
+        "a": "This room is larger than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0452",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車はあなたの自転車より速い。』",
+        "a": "My bike is faster than your bike."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0455",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
+        "a": "This bag is larger than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この机はあの机より重い。』",
+        "a": "This desk is heavier than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0458",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
+        "a": "This question is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この川はあの川より長い。』",
+        "a": "This river is longer than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0461",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この箱はあの箱より軽い。』",
+        "a": "This box is lighter than that one."
+      }
+    },
+    {
+      "id": "M2Y-COMP-0464",
+      "family": "中2/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
+        "a": "This idea is more important than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画よりわくわくする。』",
+        "a": "This movie is more exciting than that movie."
+      }
+    },
+    {
+      "id": "M3C-01321",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The boy ( who / which / where ) is running in the park is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3C-01403",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This question is easy to answer. の to answer のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01405",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This computer is easy to use. の to use のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01407",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This book is interesting to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01409",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This bag is difficult to carry. の to carry のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01411",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This song is easy to sing. の to sing のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01413",
+      "family": "中3/不定詞②/選択",
+      "before": {
+        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      },
+      "after": {
+        "q": "This room is easy to clean. の to clean のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3C-01506",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Open the door. を否定の命令文にしなさい。",
+        "a": "Do not open the door."
+      }
+    },
+    {
+      "id": "M3C-01508",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Close the window. を否定の命令文にしなさい。",
+        "a": "Do not close the window."
+      }
+    },
+    {
+      "id": "M3C-01510",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Read this book. を否定の命令文にしなさい。",
+        "a": "Do not read this book."
+      }
+    },
+    {
+      "id": "M3C-01512",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Use this computer. を否定の命令文にしなさい。",
+        "a": "Do not use this computer."
+      }
+    },
+    {
+      "id": "M3C-01514",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Watch TV here. を否定の命令文にしなさい。",
+        "a": "Do not watch TV here."
+      }
+    },
+    {
+      "id": "M3C-01516",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Listen to music here. を否定の命令文にしなさい。",
+        "a": "Do not listen to music here."
+      }
+    },
+    {
+      "id": "M3C-01518",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Run in this room. を否定の命令文にしなさい。",
+        "a": "Do not run in this room."
+      }
+    },
+    {
+      "id": "M3C-01520",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Sit on this chair. を否定の命令文にしなさい。",
+        "a": "Do not sit on this chair."
+      }
+    },
+    {
+      "id": "M3N-00784",
+      "family": "中3/命令文，there is ～ の文/変形",
+      "before": {
+        "q": "Open the window. を否定の命令文にしなさい。",
+        "a": "Do not open the window."
+      },
+      "after": {
+        "q": "Stand by the door. を否定の命令文にしなさい。",
+        "a": "Do not stand by the door."
+      }
+    },
+    {
+      "id": "M3N-00844",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Tom has a plan for tomorrow. Tom ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00850",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Ken has a plan for tomorrow. Ken ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00856",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Mike has a plan for tomorrow. Mike ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00862",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Bob has a plan for tomorrow. Bob ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00868",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "John has a plan for tomorrow. John ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00874",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Emi has a plan for tomorrow. Emi ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00880",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Yuki has a plan for tomorrow. Yuki ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00886",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Aya has a plan for tomorrow. Aya ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00892",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Lucy has a plan for tomorrow. Lucy ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00898",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Mary has a plan for tomorrow. Mary ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00904",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Ann has a plan for tomorrow. Ann ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00910",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Kate has a plan for tomorrow. Kate ( will / is going to / did ) study English tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00916",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Tom has a plan for tomorrow. Tom ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00922",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Ken has a plan for tomorrow. Ken ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00928",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Mike has a plan for tomorrow. Mike ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00934",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Bob has a plan for tomorrow. Bob ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00940",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "John has a plan for tomorrow. John ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00946",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Emi has a plan for tomorrow. Emi ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00952",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Yuki has a plan for tomorrow. Yuki ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-00958",
+      "family": "中3/未来の文/選択",
+      "before": {
+        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      },
+      "after": {
+        "q": "Aya has a plan for tomorrow. Aya ( will / is going to / did ) play tennis tomorrow. 正しいものを選びなさい。",
+        "a": "is going to"
+      }
+    },
+    {
+      "id": "M3N-01566",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+        "a": "Were sent"
+      },
+      "after": {
+        "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was written"
+      }
+    },
+    {
+      "id": "M3N-01572",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      }
+    },
+    {
+      "id": "M3N-01578",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "This song ( sing / was sung / is doing ) at school. 正しいものを選びなさい。",
+        "a": "Was sung"
+      }
+    },
+    {
+      "id": "M3N-01584",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      }
+    },
+    {
+      "id": "M3N-01590",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+        "a": "Were sent"
+      },
+      "after": {
+        "q": "These books ( read / are read / are doing ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      }
+    },
+    {
+      "id": "M3N-01596",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "This computer ( use / is used / is doing ) every day. 正しいものを選びなさい。",
+        "a": "Is used"
+      }
+    },
+    {
+      "id": "M3N-01602",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
+        "a": "Are opened"
+      }
+    },
+    {
+      "id": "M3N-01608",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
+        "a": "Was closed"
+      }
+    },
+    {
+      "id": "M3N-01614",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+        "a": "Were sent"
+      },
+      "after": {
+        "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
+        "a": "Is spoken"
+      }
+    },
+    {
+      "id": "M3N-01620",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was made"
+      }
+    },
+    {
+      "id": "M3N-01626",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "The letter ( write / was written / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was written"
+      }
+    },
+    {
+      "id": "M3N-01632",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "The room ( clean / was cleaned / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      }
+    },
+    {
+      "id": "M3N-01638",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+        "a": "Were sent"
+      },
+      "after": {
+        "q": "This song ( sing / was sung / is doing ) at school. 正しいものを選びなさい。",
+        "a": "Was sung"
+      }
+    },
+    {
+      "id": "M3N-01644",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "The pictures ( take / were taken / are doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      }
+    },
+    {
+      "id": "M3N-01650",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "These books ( read / are read / are doing ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      }
+    },
+    {
+      "id": "M3N-01656",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "This computer ( use / is used / is doing ) every day. 正しいものを選びなさい。",
+        "a": "Is used"
+      }
+    },
+    {
+      "id": "M3N-01662",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
+        "a": "Were sent"
+      },
+      "after": {
+        "q": "The windows ( open / are opened / are doing ) every morning. 正しいものを選びなさい。",
+        "a": "Are opened"
+      }
+    },
+    {
+      "id": "M3N-01668",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
+        "a": "Was cleaned"
+      },
+      "after": {
+        "q": "The door ( close / was closed / is doing ) at night. 正しいものを選びなさい。",
+        "a": "Was closed"
+      }
+    },
+    {
+      "id": "M3N-01674",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
+        "a": "Are read"
+      },
+      "after": {
+        "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
+        "a": "Is spoken"
+      }
+    },
+    {
+      "id": "M3N-01680",
+      "family": "中3/受動態/選択",
+      "before": {
+        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
+        "a": "Were taken"
+      },
+      "after": {
+        "q": "The cake ( make / was made / is doing ) yesterday. 正しいものを選びなさい。",
+        "a": "Was made"
+      }
+    },
+    {
+      "id": "M3N-02167",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The girl ( who / which / where ) is running in the park is Ken's friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02203",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The boy ( who / which / where ) is running in the park is Mike's friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02239",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The girl ( who / which / where ) is running in the park is Bob's friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    },
+    {
+      "id": "M3N-02275",
+      "family": "中3/関係代名詞/選択",
+      "before": {
+        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
+        "a": "who"
+      },
+      "after": {
+        "q": "The boy ( who / which / where ) is running in the park is John's friend. 正しいものを選びなさい。",
+        "a": "who"
+      }
+    }
+  ],
+  "groups_ge5_after": 0,
+  "rows_ge5_after": 0,
+  "duplicate_rows_after": 1488,
+  "duplicate_excess_after": 860,
+  "duplicate_row_ratio_after": 0.141566,
+  "duplicate_excess_ratio_after": 0.081819
+}

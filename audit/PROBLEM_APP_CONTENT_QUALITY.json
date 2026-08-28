@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-28T12:18:35.100Z",
+  "generated_at": "2026-08-28T12:19:51.408Z",
   "source": "problem-app/index.html",
   "result": "FAIL",
   "hard_failures": [
     "semantic_template_error:1",
-    "duplicate_qa_row_ratio:0.1453"
+    "duplicate_qa_row_ratio:0.1416"
   ],
   "english_count": 10511,
   "hybrid_japanese_translation": {
@@ -34,15 +34,15 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 621,
-    "row_count": 1527,
-    "duplicate_excess": 906,
-    "row_ratio": 0.145276,
-    "groups_ge5": 15,
+    "group_count": 628,
+    "row_count": 1488,
+    "duplicate_excess": 860,
+    "row_ratio": 0.141566,
+    "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
       "中1/be動詞/変形": 71,
-      "中3/関係代名詞/選択": 50,
+      "中3/関係代名詞/選択": 45,
       "中2/比較/間違い直し": 44,
       "中2/三単現/変形": 40,
       "中2/三単現/間違い直し": 40,
@@ -63,7 +63,7 @@
       "中2/未来表現/間違い直し": 24,
       "中3/比較/英作文": 24,
       "中3/現在完了形（継続），現在完了進行形/変形": 24,
-      "中2/比較/英作文": 23,
+      "中2/比較/英作文": 22,
       "中1/三単現/空所補充": 20,
       "中1/頻度副詞/空所補充": 20,
       "中3/人称代名詞/選択": 20,
@@ -74,7 +74,6 @@
       "中3/受動態/間違い直し": 20,
       "中3/命令文，there is ～ の文/読解": 20,
       "中3/文型/見分け": 20,
-      "中3/未来の文/選択": 20,
       "中3/現在完了形（完了・経験）/選択": 20,
       "中3/現在完了形（完了・経験）/間違い直し": 20,
       "中3/現在完了形（継続），現在完了進行形/空所補充": 20,
@@ -97,7 +96,6 @@
       "中1/頻度副詞/並びかえ": 12,
       "中3/不定詞①，動名詞/並びかえ": 9,
       "中3/助動詞/変形": 9,
-      "中3/命令文，there is ～ の文/変形": 9,
       "中1/一般動詞の過去形/変形": 8,
       "中2/一般動詞の過去形/変形": 8,
       "中3/命令文，there is ～ の文/英作文": 8,
@@ -110,12 +108,12 @@
       "中1/be動詞/答え方": 6,
       "中1/人称代名詞/空所補充": 6,
       "中2/人称代名詞/空所補充": 6,
-      "中3/不定詞②/選択": 6,
       "中3/be動詞と一般動詞（過去形）/変形": 5,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
       "中1/現在進行形/変形": 2,
       "中3/be動詞と一般動詞（現在形）/見分け": 2,
+      "中3/命令文，there is ～ の文/変形": 2,
       "中3/文型/英作文": 2,
       "中3/未来の文/変形": 2,
       "中3/進行形/変形": 2,
@@ -147,7 +145,7 @@
       "中2/不定詞/空所補充": 20,
       "中2/不定詞/間違い直し": 20,
       "中3/分詞と間接疑問文/空所補充": 18,
-      "中3/関係代名詞/選択": 18,
+      "中3/関係代名詞/選択": 17,
       "中2/助動詞/並びかえ": 16,
       "中2/助動詞/選択": 16,
       "中2/動名詞/変形": 16,
@@ -159,8 +157,10 @@
       "中2/未来表現/間違い直し": 12,
       "中2/比較/間違い直し": 12,
       "中3/現在完了形（継続），現在完了進行形/変形": 12,
+      "中2/比較/英作文": 11,
       "中1/三単現/空所補充": 10,
       "中1/頻度副詞/空所補充": 10,
+      "中3/受動態/選択": 10,
       "中3/現在完了形（完了・経験）/空所補充": 10,
       "中1/三単現/間違い直し": 9,
       "中2/助動詞/英作文": 9,
@@ -195,15 +195,12 @@
       "中3/疑問詞/空所補充": 5,
       "中3/関係代名詞/並びかえ": 5,
       "中3/関係代名詞/間違い直し": 5,
-      "中2/比較/英作文": 4,
       "中3/be動詞と一般動詞（過去形）/変形": 4,
       "中3/不定詞①，動名詞/並びかえ": 4,
-      "中3/受動態/選択": 4,
       "中3/命令文，there is ～ の文/英作文": 4,
       "中3/接続詞/並びかえ": 4,
       "中3/接続詞/空所補充": 4,
       "中3/接続詞/読解": 4,
-      "中3/未来の文/選択": 4,
       "中3/現在完了形（完了・経験）/英作文": 4,
       "中3/疑問詞/答え方": 4,
       "中3/疑問詞/選択": 4,
@@ -229,7 +226,6 @@
       "中2/一般動詞/英作文": 1,
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
-      "中3/不定詞②/選択": 1,
       "中3/命令文，there is ～ の文/変形": 1,
       "中3/文型/英作文": 1,
       "中3/未来の文/変形": 1,
@@ -237,239 +233,6 @@
       "中3/進行形/間違い直し": 1
     },
     "top": [
-      {
-        "count": 9,
-        "q": "Open the window. を否定の命令文にしなさい。",
-        "a": "Do not open the window.",
-        "sample_ids": [
-          "M3C-01506",
-          "M3C-01508",
-          "M3C-01510",
-          "M3C-01512",
-          "M3C-01514",
-          "M3C-01516",
-          "M3C-01518",
-          "M3C-01520",
-          "M3N-00784"
-        ],
-        "grade_category_types": [
-          "中3/命令文，there is ～ の文/変形"
-        ]
-      },
-      {
-        "count": 6,
-        "q": "This book is easy to read. の to read のはたらきとして最も適切なものを選びなさい。 A 名詞を説明する / B 形容詞を補う / C 過去を表す",
-        "a": "B",
-        "sample_ids": [
-          "M3C-01403",
-          "M3C-01405",
-          "M3C-01407",
-          "M3C-01409",
-          "M3C-01411",
-          "M3C-01413"
-        ],
-        "grade_category_types": [
-          "中3/不定詞②/選択"
-        ]
-      },
-      {
-        "count": 6,
-        "q": "次の日本語に合う英文を書きなさい。『この問題はあの問題より やさしい。』",
-        "a": "This question is easier than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0398",
-          "M2Y-COMP-0410",
-          "M2Y-COMP-0422",
-          "M2Y-COMP-0434",
-          "M2Y-COMP-0446",
-          "M2Y-COMP-0458"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 6,
-        "q": "次の日本語に合う英文を書きなさい。『この映画はあの映画より わくわくする。』",
-        "a": "This movie is more exciting than that movie.",
-        "sample_ids": [
-          "M2Y-COMP-0401",
-          "M2Y-COMP-0413",
-          "M2Y-COMP-0425",
-          "M2Y-COMP-0437",
-          "M2Y-COMP-0449",
-          "M2Y-COMP-0461"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 6,
-        "q": "次の日本語に合う英文を書きなさい。『この考えはあの考えより 大切だ。』",
-        "a": "This idea is more important than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0404",
-          "M2Y-COMP-0416",
-          "M2Y-COMP-0428",
-          "M2Y-COMP-0440",
-          "M2Y-COMP-0452",
-          "M2Y-COMP-0464"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "Look at that dark sky. It ( will / is going to / did ) snow soon. 正しいものを選びなさい。",
-        "a": "is going to",
-        "sample_ids": [
-          "M3N-00850",
-          "M3N-00874",
-          "M3N-00898",
-          "M3N-00922",
-          "M3N-00946"
-        ],
-        "grade_category_types": [
-          "中3/未来の文/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "Look at the clouds. It ( will / is going to / did ) rain soon. 正しいものを選びなさい。",
-        "a": "is going to",
-        "sample_ids": [
-          "M3N-00844",
-          "M3N-00868",
-          "M3N-00892",
-          "M3N-00916",
-          "M3N-00940"
-        ],
-        "grade_category_types": [
-          "中3/未来の文/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "She has a map and a ticket. She ( will / is going to / did ) travel tomorrow. 正しいものを選びなさい。",
-        "a": "is going to",
-        "sample_ids": [
-          "M3N-00862",
-          "M3N-00886",
-          "M3N-00910",
-          "M3N-00934",
-          "M3N-00958"
-        ],
-        "grade_category_types": [
-          "中3/未来の文/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "The boy ( who / which / where ) is running is Tom's friend. 正しいものを選びなさい。",
-        "a": "who",
-        "sample_ids": [
-          "M3C-01321",
-          "M3N-02167",
-          "M3N-02203",
-          "M3N-02239",
-          "M3N-02275"
-        ],
-        "grade_category_types": [
-          "中3/関係代名詞/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "The bus is coming. It ( will / is going to / did ) arrive soon. 正しいものを選びなさい。",
-        "a": "is going to",
-        "sample_ids": [
-          "M3N-00856",
-          "M3N-00880",
-          "M3N-00904",
-          "M3N-00928",
-          "M3N-00952"
-        ],
-        "grade_category_types": [
-          "中3/未来の文/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "The letters ( sent / were sent / are sending ) yesterday. 正しいものを選びなさい。",
-        "a": "Were sent",
-        "sample_ids": [
-          "M3N-01566",
-          "M3N-01590",
-          "M3N-01614",
-          "M3N-01638",
-          "M3N-01662"
-        ],
-        "grade_category_types": [
-          "中3/受動態/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "The pictures ( took / were taken / are taking ) yesterday. 正しいものを選びなさい。",
-        "a": "Were taken",
-        "sample_ids": [
-          "M3N-01584",
-          "M3N-01608",
-          "M3N-01632",
-          "M3N-01656",
-          "M3N-01680"
-        ],
-        "grade_category_types": [
-          "中3/受動態/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "The room ( cleaned / was cleaned / is cleaning ) yesterday. 正しいものを選びなさい。",
-        "a": "Was cleaned",
-        "sample_ids": [
-          "M3N-01572",
-          "M3N-01596",
-          "M3N-01620",
-          "M3N-01644",
-          "M3N-01668"
-        ],
-        "grade_category_types": [
-          "中3/受動態/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "These books ( read / are read / are reading ) every year. 正しいものを選びなさい。",
-        "a": "Are read",
-        "sample_ids": [
-          "M3N-01578",
-          "M3N-01602",
-          "M3N-01626",
-          "M3N-01650",
-          "M3N-01674"
-        ],
-        "grade_category_types": [
-          "中3/受動態/選択"
-        ]
-      },
-      {
-        "count": 5,
-        "q": "次の日本語に合う英文を書きなさい。『このかばんは あのかばんより 大きい。』",
-        "a": "This bag is larger than that one.",
-        "sample_ids": [
-          "M2Y-COMP-0395",
-          "M2Y-COMP-0407",
-          "M2Y-COMP-0419",
-          "M2Y-COMP-0443",
-          "M2Y-COMP-0455"
-        ],
-        "grade_category_types": [
-          "中2/比較/英作文"
-        ]
-      },
       {
         "count": 4,
         "q": "(      ) do you go to school? 「どのように」に合う最も適切な語を書きなさい。",
@@ -3374,6 +3137,18 @@
       },
       {
         "count": 2,
+        "q": "English ( speak / is spoken / is doing ) in many countries. 正しいものを選びなさい。",
+        "a": "Is spoken",
+        "sample_ids": [
+          "M3N-01614",
+          "M3N-01674"
+        ],
+        "grade_category_types": [
+          "中3/受動態/選択"
+        ]
+      },
+      {
+        "count": 2,
         "q": "Have you ever (      ) to the library? (be) の（ ）内を正しくしなさい。",
         "a": "Been",
         "sample_ids": [
@@ -3574,6 +3349,174 @@
         ],
         "grade_category_types": [
           "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( can / is / does ) speak English.",
+        "a": "Can",
+        "sample_ids": [
+          "M2-MOD2-1354",
+          "M2-MOD2-1400"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( must / is / does ) do my homework.",
+        "a": "Must",
+        "sample_ids": [
+          "M2-MOD2-1357",
+          "M2-MOD2-1402"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( must / is / does ) help my mother.",
+        "a": "Must",
+        "sample_ids": [
+          "M2-MOD2-1360",
+          "M2-MOD2-1404"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( should / is / does ) go to bed early.",
+        "a": "Should",
+        "sample_ids": [
+          "M2-MOD2-1363",
+          "M2-MOD2-1406"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( should / is / does ) study every day.",
+        "a": "Should",
+        "sample_ids": [
+          "M2-MOD2-1366",
+          "M2-MOD2-1408"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( will / is / does ) be busy tomorrow.",
+        "a": "Will",
+        "sample_ids": [
+          "M2-MOD2-1369",
+          "M2-MOD2-1410"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He ( will / is / does ) play soccer tomorrow.",
+        "a": "Will",
+        "sample_ids": [
+          "M2-MOD2-1372",
+          "M2-MOD2-1412"
+        ],
+        "grade_category_types": [
+          "中2/助動詞/選択"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He begins (      ). 「理科を勉強し始める」",
+        "a": "studying science",
+        "sample_ids": [
+          "M2-GER2-1034",
+          "M2-GER2-1142"
+        ],
+        "grade_category_types": [
+          "中2/動名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He cleans the room. を否定文にしなさい。",
+        "a": "He does not clean the room.",
+        "sample_ids": [
+          "GEN-3RD-0870",
+          "GEN-3RD-1210"
+        ],
+        "grade_category_types": [
+          "中1/三単現/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He cook curry every day. の誤りを直しなさい。",
+        "a": "He cooks curry every day.",
+        "sample_ids": [
+          "M2-3RD-0242",
+          "M2-3RD-0282"
+        ],
+        "grade_category_types": [
+          "中2/三単現/間違い直し"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He cooks curry. を否定文にしなさい。",
+        "a": "He does not cook curry.",
+        "sample_ids": [
+          "M2-3RD-0241",
+          "M2-3RD-0281"
+        ],
+        "grade_category_types": [
+          "中2/三単現/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He cooks dinner. を疑問文にしなさい。",
+        "a": "Does he cook dinner?",
+        "sample_ids": [
+          "GEN-3RD-0885",
+          "GEN-3RD-1021"
+        ],
+        "grade_category_types": [
+          "中1/三単現/変形"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He enjoys (      ). 「まんがを読むことを楽しむ」",
+        "a": "reading comics",
+        "sample_ids": [
+          "M2-GER2-1016",
+          "M2-GER2-1124"
+        ],
+        "grade_category_types": [
+          "中2/動名詞/空所補充"
+        ]
+      },
+      {
+        "count": 2,
+        "q": "He finishes (      ). 「宿題を終える」",
+        "a": "doing homework",
+        "sample_ids": [
+          "M2-GER2-1019",
+          "M2-GER2-1127"
+        ],
+        "grade_category_types": [
+          "中2/動名詞/空所補充"
         ]
       }
     ]
