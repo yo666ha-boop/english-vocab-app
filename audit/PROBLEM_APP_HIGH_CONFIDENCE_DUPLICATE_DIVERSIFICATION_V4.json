@@ -1,0 +1,681 @@
+{
+  "generated_at": "2026-08-28T15:19:55.172Z",
+  "groups_eligible": 42,
+  "groups_touched": 36,
+  "changed_rows": 55,
+  "by_family": {
+    "中3/比較/英作文": 8,
+    "中3/人称代名詞/間違い直し": 4,
+    "中3/人称代名詞/選択": 8,
+    "中3/現在完了形（完了・経験）/空所補充": 5,
+    "中3/現在完了形（継続），現在完了進行形/空所補充": 11,
+    "中3/現在完了形（継続），現在完了進行形/間違い直し": 11,
+    "中3/分詞と間接疑問文/選択": 4,
+    "中3/分詞と間接疑問文/間違い直し": 4
+  },
+  "samples": [
+    {
+      "id": "M3C-01287",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
+        "a": "This game is easier than that one."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームは3つのゲームの中でいちばん簡単です。』",
+        "a": "This game is the easiest of the three games."
+      }
+    },
+    {
+      "id": "M3C-01216",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームは3つの中でいちばん簡単です。』",
+        "a": "This game is the easiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の男の子の中でいちばん親切です。』",
+        "a": "Tom is the kindest of the three boys."
+      }
+    },
+    {
+      "id": "M3C-01228",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームは3つの中でいちばん簡単です。』",
+        "a": "This game is the easiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この川は3本の川の中でいちばん長いです。』",
+        "a": "This river is the longest of the three rivers."
+      }
+    },
+    {
+      "id": "M3C-01288",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『このゲームは3つの中でいちばん簡単です。』",
+        "a": "This game is the easiest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私の自転車は3台の中でいちばん速いです。』",
+        "a": "My bike is the fastest of the three bikes."
+      }
+    },
+    {
+      "id": "M3C-01221",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより親切です。』",
+        "a": "Tom is kinder than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この箱は3つの箱の中でいちばん軽いです。』",
+        "a": "This box is the lightest of the three boxes."
+      }
+    },
+    {
+      "id": "M3C-01233",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより親切です。』",
+        "a": "Tom is kinder than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この本は3冊の中でいちばん簡単です。』",
+        "a": "This book is the easiest of the three books."
+      }
+    },
+    {
+      "id": "M3C-01293",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムはケンより親切です。』",
+        "a": "Tom is kinder than Ken."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『この部屋はあの部屋より広いです。』",
+        "a": "This room is larger than that room."
+      }
+    },
+    {
+      "id": "M3C-01222",
+      "family": "中3/比較/英作文",
+      "before": {
+        "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
+        "a": "Tom is the kindest of the three."
+      },
+      "after": {
+        "q": "次の日本語に合う英文を書きなさい。『私のかばんはあなたのかばんより重いです。』",
+        "a": "My bag is heavier than your bag."
+      }
+    },
+    {
+      "id": "M3N-00550",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play tennis. の誤りを直しなさい。",
+        "a": "I play tennis."
+      },
+      "after": {
+        "q": "Him studies English. の誤りを直しなさい。",
+        "a": "He studies English."
+      }
+    },
+    {
+      "id": "M3N-00598",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play tennis. の誤りを直しなさい。",
+        "a": "I play tennis."
+      },
+      "after": {
+        "q": "Her plays tennis. の誤りを直しなさい。",
+        "a": "She plays tennis."
+      }
+    },
+    {
+      "id": "M3N-00544",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play soccer. の誤りを直しなさい。",
+        "a": "I play soccer."
+      },
+      "after": {
+        "q": "Them read books. の誤りを直しなさい。",
+        "a": "They read books."
+      }
+    },
+    {
+      "id": "M3N-00592",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play soccer. の誤りを直しなさい。",
+        "a": "I play soccer."
+      },
+      "after": {
+        "q": "Us use this computer. の誤りを直しなさい。",
+        "a": "We use this computer."
+      }
+    },
+    {
+      "id": "M3N-00531",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "This is ( he / him / his ) book. 正しいものを選びなさい。",
+        "a": "His"
+      },
+      "after": {
+        "q": "( He / Him / His ) studies English. 正しいものを選びなさい。",
+        "a": "He"
+      }
+    },
+    {
+      "id": "M3N-00567",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "This is ( he / him / his ) book. 正しいものを選びなさい。",
+        "a": "His"
+      },
+      "after": {
+        "q": "I helped ( he / him / his ). 正しいものを選びなさい。",
+        "a": "Him"
+      }
+    },
+    {
+      "id": "M3N-00537",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "( She / Her / Hers ) plays tennis. 正しいものを選びなさい。",
+        "a": "She"
+      },
+      "after": {
+        "q": "( They / Them / Theirs ) play soccer. 正しいものを選びなさい。",
+        "a": "They"
+      }
+    },
+    {
+      "id": "M3N-00573",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "( She / Her / Hers ) plays tennis. 正しいものを選びなさい。",
+        "a": "She"
+      },
+      "after": {
+        "q": "I know ( they / them / theirs ). 正しいものを選びなさい。",
+        "a": "Them"
+      }
+    },
+    {
+      "id": "M3N-00543",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "I talked with ( she / her / hers ). 正しいものを選びなさい。",
+        "a": "Her"
+      },
+      "after": {
+        "q": "( We / Us / Ours ) read books. 正しいものを選びなさい。",
+        "a": "We"
+      }
+    },
+    {
+      "id": "M3N-00579",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "I talked with ( she / her / hers ). 正しいものを選びなさい。",
+        "a": "Her"
+      },
+      "after": {
+        "q": "Tom spoke to ( we / us / ours ). 正しいものを選びなさい。",
+        "a": "Us"
+      }
+    },
+    {
+      "id": "M3N-00549",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "This bag is ( her / hers / she ). 正しいものを選びなさい。",
+        "a": "Hers"
+      },
+      "after": {
+        "q": "( I / Me / Mine ) use this computer. 正しいものを選びなさい。",
+        "a": "I"
+      }
+    },
+    {
+      "id": "M3N-00585",
+      "family": "中3/人称代名詞/選択",
+      "before": {
+        "q": "This bag is ( her / hers / she ). 正しいものを選びなさい。",
+        "a": "Hers"
+      },
+      "after": {
+        "q": "Ken called ( I / me / mine ). 正しいものを選びなさい。",
+        "a": "Me"
+      }
+    },
+    {
+      "id": "M3N-01771",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
+        "a": "Eaten"
+      },
+      "after": {
+        "q": "I have just (      ) that movie. (see) の（ ）内を正しくしなさい。",
+        "a": "Seen"
+      }
+    },
+    {
+      "id": "M3N-01741",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
+        "a": "Done"
+      },
+      "after": {
+        "q": "I have just (      ) many pictures. (take) の（ ）内を正しくしなさい。",
+        "a": "Taken"
+      }
+    },
+    {
+      "id": "M3N-01777",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
+        "a": "Done"
+      },
+      "after": {
+        "q": "I have just (      ) lunch. (make) の（ ）内を正しくしなさい。",
+        "a": "Made"
+      }
+    },
+    {
+      "id": "M3N-01796",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "Have you ever (      ) to the room? (be) の（ ）内を正しくしなさい。",
+        "a": "Been"
+      },
+      "after": {
+        "q": "I have just (      ) this bag. (buy) の（ ）内を正しくしなさい。",
+        "a": "Bought"
+      }
+    },
+    {
+      "id": "M3N-01747",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
+        "a": "Read"
+      },
+      "after": {
+        "q": "I have just (      ) English. (speak) の（ ）内を正しくしなさい。",
+        "a": "Spoken"
+      }
+    },
+    {
+      "id": "M3N-01855",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) two years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) two years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01909",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) two years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) three years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01858",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since two years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for two years."
+      },
+      "after": {
+        "q": "He has lived in Japan since two years. の誤りを直しなさい。",
+        "a": "He has lived in Japan for two years."
+      }
+    },
+    {
+      "id": "M3N-01912",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since two years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for two years."
+      },
+      "after": {
+        "q": "He has lived in Japan since three years. の誤りを直しなさい。",
+        "a": "He has lived in Japan for three years."
+      }
+    },
+    {
+      "id": "M3N-01861",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) three years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) five years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01915",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) three years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) a week. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01864",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since three years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for three years."
+      },
+      "after": {
+        "q": "He has lived in Japan since five years. の誤りを直しなさい。",
+        "a": "He has lived in Japan for five years."
+      }
+    },
+    {
+      "id": "M3N-01918",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since three years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for three years."
+      },
+      "after": {
+        "q": "He has lived in Japan since a week. の誤りを直しなさい。",
+        "a": "He has lived in Japan for a week."
+      }
+    },
+    {
+      "id": "M3N-01867",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) two months. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01870",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since four years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for four years."
+      },
+      "after": {
+        "q": "He has lived in Japan since two months. の誤りを直しなさい。",
+        "a": "He has lived in Japan for two months."
+      }
+    },
+    {
+      "id": "M3N-01873",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) a long time. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      }
+    },
+    {
+      "id": "M3N-01876",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since five years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for five years."
+      },
+      "after": {
+        "q": "He has lived in Japan since a long time. の誤りを直しなさい。",
+        "a": "He has lived in Japan for a long time."
+      }
+    },
+    {
+      "id": "M3N-01879",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) Monday. 空所に入る最も適切な語を書きなさい。",
+        "a": "Since"
+      }
+    },
+    {
+      "id": "M3N-01882",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since six years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for six years."
+      },
+      "after": {
+        "q": "He has lived in Japan for Monday. の誤りを直しなさい。",
+        "a": "He has lived in Japan since Monday."
+      }
+    },
+    {
+      "id": "M3N-01885",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) last year. 空所に入る最も適切な語を書きなさい。",
+        "a": "Since"
+      }
+    },
+    {
+      "id": "M3N-01888",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since seven years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for seven years."
+      },
+      "after": {
+        "q": "He has lived in Japan for last year. の誤りを直しなさい。",
+        "a": "He has lived in Japan since last year."
+      }
+    },
+    {
+      "id": "M3N-01891",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) this morning. 空所に入る最も適切な語を書きなさい。",
+        "a": "Since"
+      }
+    },
+    {
+      "id": "M3N-01894",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since eight years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for eight years."
+      },
+      "after": {
+        "q": "He has lived in Japan for this morning. の誤りを直しなさい。",
+        "a": "He has lived in Japan since this morning."
+      }
+    },
+    {
+      "id": "M3N-01897",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) April. 空所に入る最も適切な語を書きなさい。",
+        "a": "Since"
+      }
+    },
+    {
+      "id": "M3N-01900",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since nine years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for nine years."
+      },
+      "after": {
+        "q": "He has lived in Japan for April. の誤りを直しなさい。",
+        "a": "He has lived in Japan since April."
+      }
+    },
+    {
+      "id": "M3N-01903",
+      "family": "中3/現在完了形（継続），現在完了進行形/空所補充",
+      "before": {
+        "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
+        "a": "For"
+      },
+      "after": {
+        "q": "I have studied English (      ) 2024. 空所に入る最も適切な語を書きなさい。",
+        "a": "Since"
+      }
+    },
+    {
+      "id": "M3N-01906",
+      "family": "中3/現在完了形（継続），現在完了進行形/間違い直し",
+      "before": {
+        "q": "He has stayed in Japan since ten years. の誤りを直しなさい。",
+        "a": "He has stayed in Japan for ten years."
+      },
+      "after": {
+        "q": "He has lived in Japan for 2024. の誤りを直しなさい。",
+        "a": "He has lived in Japan since 2024."
+      }
+    },
+    {
+      "id": "M3N-02103",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) when does Emi come here (B) when Emi comes here (C) here comes Emi when. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02151",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) why does Ken study English (B) why Ken studies English (C) English studies Ken why. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02104",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know when does she come. の誤りを直しなさい。",
+        "a": "I don't know when she comes."
+      },
+      "after": {
+        "q": "I don't know when does Emi come here. の誤りを直しなさい。",
+        "a": "I don't know when Emi comes here."
+      }
+    },
+    {
+      "id": "M3N-02152",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know when does she come. の誤りを直しなさい。",
+        "a": "I don't know when she comes."
+      },
+      "after": {
+        "q": "I don't know why does Ken study English. の誤りを直しなさい。",
+        "a": "I don't know why Ken studies English."
+      }
+    },
+    {
+      "id": "M3N-02109",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) why does she study English (B) why she studies English (C) she why. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) how does Yuki go to school (B) how Yuki goes to school (C) school to goes Yuki how. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02157",
+      "family": "中3/分詞と間接疑問文/選択",
+      "before": {
+        "q": "I don't know (A) why does she study English (B) why she studies English (C) she why. 正しいものを選びなさい。",
+        "a": "B"
+      },
+      "after": {
+        "q": "I don't know (A) why is Tom busy (B) why Tom is busy (C) busy is Tom why. 正しいものを選びなさい。",
+        "a": "B"
+      }
+    },
+    {
+      "id": "M3N-02110",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know why does she study English. の誤りを直しなさい。",
+        "a": "I don't know why she studies English."
+      },
+      "after": {
+        "q": "I don't know how does Yuki go to school. の誤りを直しなさい。",
+        "a": "I don't know how Yuki goes to school."
+      }
+    },
+    {
+      "id": "M3N-02158",
+      "family": "中3/分詞と間接疑問文/間違い直し",
+      "before": {
+        "q": "I don't know why does she study English. の誤りを直しなさい。",
+        "a": "I don't know why she studies English."
+      },
+      "after": {
+        "q": "I don't know why is Tom busy. の誤りを直しなさい。",
+        "a": "I don't know why Tom is busy."
+      }
+    }
+  ],
+  "duplicate_groups_after": 238,
+  "duplicate_excess_after": 287,
+  "groups_ge5_after": 0
+}

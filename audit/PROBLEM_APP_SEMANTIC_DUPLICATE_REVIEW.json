@@ -1,84 +1,24 @@
 {
-  "generated_at": "2026-08-28T15:16:49.855Z",
+  "generated_at": "2026-08-28T15:19:55.844Z",
   "source": "problem-app/index.html",
   "english_count": 10511,
-  "duplicate_group_count": 272,
-  "duplicate_excess": 342,
+  "duplicate_group_count": 238,
+  "duplicate_excess": 287,
   "classification_group_counts": {
-    "same_family_copy": 238,
+    "same_family_copy": 204,
     "cross_category": 34
   },
   "classification_excess_counts": {
-    "same_family_copy": 308,
+    "same_family_copy": 253,
     "cross_category": 34
   },
   "review_priority": {
-    "same_family_same_prefix_groups": 186,
-    "same_family_same_prefix_excess": 227,
+    "same_family_same_prefix_groups": 152,
+    "same_family_same_prefix_excess": 172,
     "cross_family_groups": 34,
     "policy": "same-family + same-prefix exact Q/A duplicates are highest-confidence template-copy review targets; cross-family duplicates require pedagogical review before diversification."
   },
   "same_family_same_prefix": [
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『このゲームは3つの中でいちばん簡単です。』",
-      "a": "This game is the easiest of the three.",
-      "ids": [
-        "M3C-01204",
-        "M3C-01216",
-        "M3C-01228",
-        "M3C-01288"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
-      "a": "Tom is the kindest of the three.",
-      "ids": [
-        "M3C-01210",
-        "M3C-01222",
-        "M3C-01234",
-        "M3C-01294"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 4,
-      "excess": 3,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『トムはケンより親切です。』",
-      "a": "Tom is kinder than Ken.",
-      "ids": [
-        "M3C-01209",
-        "M3C-01221",
-        "M3C-01233",
-        "M3C-01293"
-      ]
-    },
     {
       "classification": "same_family_copy",
       "count": 4,
@@ -125,25 +65,6 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "( She / Her / Hers ) plays tennis. 正しいものを選びなさい。",
-      "a": "She",
-      "ids": [
-        "M3N-00501",
-        "M3N-00537",
-        "M3N-00573"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
         "中3/命令文，there is ～ の文/読解"
       ],
       "prefixes": [
@@ -174,253 +95,6 @@
         "M3N-00744",
         "M3N-00780",
         "M3N-00816"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since three years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for three years.",
-      "ids": [
-        "M3N-01810",
-        "M3N-01864",
-        "M3N-01918"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since two years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for two years.",
-      "ids": [
-        "M3N-01804",
-        "M3N-01858",
-        "M3N-01912"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) when does she come (B) when she comes (C) she when. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02079",
-        "M3N-02103",
-        "M3N-02151"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know (A) why does she study English (B) why she studies English (C) she why. 正しいものを選びなさい。",
-      "a": "B",
-      "ids": [
-        "M3N-02085",
-        "M3N-02109",
-        "M3N-02157"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know when does she come. の誤りを直しなさい。",
-      "a": "I don't know when she comes.",
-      "ids": [
-        "M3N-02080",
-        "M3N-02104",
-        "M3N-02152"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/分詞と間接疑問文/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I don't know why does she study English. の誤りを直しなさい。",
-      "a": "I don't know why she studies English.",
-      "ids": [
-        "M3N-02086",
-        "M3N-02110",
-        "M3N-02158"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have just (      ) the work. (do) の（ ）内を正しくしなさい。",
-      "a": "Done",
-      "ids": [
-        "M3N-01705",
-        "M3N-01741",
-        "M3N-01777"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
-      "a": "Read",
-      "ids": [
-        "M3N-01711",
-        "M3N-01747",
-        "M3N-01783"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) three years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01807",
-        "M3N-01861",
-        "M3N-01915"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) two years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01801",
-        "M3N-01855",
-        "M3N-01909"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I talked with ( she / her / hers ). 正しいものを選びなさい。",
-      "a": "Her",
-      "ids": [
-        "M3N-00507",
-        "M3N-00543",
-        "M3N-00579"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Me play soccer. の誤りを直しなさい。",
-      "a": "I play soccer.",
-      "ids": [
-        "M3N-00490",
-        "M3N-00544",
-        "M3N-00592"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
-        "中3/人称代名詞/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Me play tennis. の誤りを直しなさい。",
-      "a": "I play tennis.",
-      "ids": [
-        "M3N-00484",
-        "M3N-00550",
-        "M3N-00598"
       ]
     },
     {
@@ -505,25 +179,6 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
-        "中3/人称代名詞/選択"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "This bag is ( her / hers / she ). 正しいものを選びなさい。",
-      "a": "Hers",
-      "ids": [
-        "M3N-00513",
-        "M3N-00549",
-        "M3N-00585"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 3,
-      "excess": 2,
-      "same_prefix": true,
-      "families": [
         "中3/受動態/空所補充"
       ],
       "prefixes": [
@@ -543,17 +198,17 @@
       "excess": 2,
       "same_prefix": true,
       "families": [
-        "中3/人称代名詞/選択"
+        "中3/比較/英作文"
       ],
       "prefixes": [
-        "M3N"
+        "M3C"
       ],
-      "q": "This is ( he / him / his ) book. 正しいものを選びなさい。",
-      "a": "His",
+      "q": "次の日本語に合う英文を書きなさい。『トムは3人の中でいちばん親切です。』",
+      "a": "Tom is the kindest of the three.",
       "ids": [
-        "M3N-00495",
-        "M3N-00531",
-        "M3N-00567"
+        "M3C-01210",
+        "M3C-01234",
+        "M3C-01294"
       ]
     },
     {
@@ -1164,24 +819,6 @@
       "excess": 1,
       "same_prefix": true,
       "families": [
-        "中3/現在完了形（完了・経験）/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "Have you ever (      ) to the room? (be) の（ ）内を正しくしなさい。",
-      "a": "Been",
-      "ids": [
-        "M3N-01706",
-        "M3N-01796"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
         "中3/現在完了形（継続），現在完了進行形/変形"
       ],
       "prefixes": [
@@ -1228,132 +865,6 @@
       "ids": [
         "M3C-00420",
         "M3C-01178"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since eight years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for eight years.",
-      "ids": [
-        "M3N-01840",
-        "M3N-01894"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since five years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for five years.",
-      "ids": [
-        "M3N-01822",
-        "M3N-01876"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since four years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for four years.",
-      "ids": [
-        "M3N-01816",
-        "M3N-01870"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since nine years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for nine years.",
-      "ids": [
-        "M3N-01846",
-        "M3N-01900"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since seven years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for seven years.",
-      "ids": [
-        "M3N-01834",
-        "M3N-01888"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since six years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for six years.",
-      "ids": [
-        "M3N-01828",
-        "M3N-01882"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/間違い直し"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "He has stayed in Japan since ten years. の誤りを直しなさい。",
-      "a": "He has stayed in Japan for ten years.",
-      "ids": [
-        "M3N-01852",
-        "M3N-01906"
       ]
     },
     {
@@ -1493,137 +1004,11 @@
       "prefixes": [
         "M3N"
       ],
-      "q": "I have just (      ) lunch. (eat) の（ ）内を正しくしなさい。",
-      "a": "Eaten",
+      "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
+      "a": "Read",
       "ids": [
-        "M3N-01699",
-        "M3N-01771"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) eight years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01837",
-        "M3N-01891"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) five years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01819",
-        "M3N-01873"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) four years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01813",
-        "M3N-01867"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) nine years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01843",
-        "M3N-01897"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) seven years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01831",
-        "M3N-01885"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) six years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01825",
-        "M3N-01879"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/現在完了形（継続），現在完了進行形/空所補充"
-      ],
-      "prefixes": [
-        "M3N"
-      ],
-      "q": "I have lived here (      ) ten years. 空所に入る最も適切な語を書きなさい。",
-      "a": "For",
-      "ids": [
-        "M3N-01849",
-        "M3N-01903"
+        "M3N-01711",
+        "M3N-01783"
       ]
     },
     {
@@ -2686,24 +2071,6 @@
       "ids": [
         "M2Y-COMP-0395",
         "M2Y-COMP-0434"
-      ]
-    },
-    {
-      "classification": "same_family_copy",
-      "count": 2,
-      "excess": 1,
-      "same_prefix": true,
-      "families": [
-        "中3/比較/英作文"
-      ],
-      "prefixes": [
-        "M3C"
-      ],
-      "q": "次の日本語に合う英文を書きなさい。『このゲームはあのゲームより簡単です。』",
-      "a": "This game is easier than that one.",
-      "ids": [
-        "M3C-01203",
-        "M3C-01287"
       ]
     },
     {
