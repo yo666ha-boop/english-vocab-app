@@ -1,0 +1,52 @@
+name: Diversify problem small duplicate surplus
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-problem-content-quality-20260828
+    paths:
+      - 'tools/diversify_problem_small_duplicate_surplus.mjs'
+      - '.github/workflows/diversify-problem-small-duplicate-surplus.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  diversify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix-problem-content-quality-20260828
+      - name: Check tool syntax
+        run: node --check tools/diversify_problem_small_duplicate_surplus.mjs
+      - name: Diversify surplus rows
+        run: node tools/diversify_problem_small_duplicate_surplus.mjs
+      - name: Validate bank structure
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const h=fs.readFileSync('problem-app/index.html','utf8');const m=/<script\s+id=["']qb-data["'][^>]*>([\s\S]*?)<\/script>/i.exec(h);if(!m)throw Error('qb-data');const all=JSON.parse(m[1]);const e=all.filter(x=>x&&x.subject==='英語');if(e.length!==10511)throw Error('english count '+e.length);if(new Set(e.map(x=>x.id)).size!==10511)throw Error('unique id count');
+          NODE
+      - name: Re-run content audit
+        shell: bash
+        run: |
+          set +e
+          node tools/audit_problem_content_quality.mjs
+          code=$?
+          set -e
+          node - <<'NODE'
+          const fs=require('fs');const a=JSON.parse(fs.readFileSync('audit/PROBLEM_APP_CONTENT_QUALITY.json','utf8'));const bad=(a.hard_failures||[]).filter(x=>!String(x).startsWith('duplicate_qa_row_ratio:'));if(bad.length)throw Error('new non-duplicate hard failures: '+bad.join(','));if((a.exact_duplicate_question_answer?.groups_ge5||0)!==0)throw Error('ge5 duplicate regression');
+          NODE
+          echo "audit_exit=$code"
+      - name: Commit diversified bank and evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add problem-app/index.html audit/PROBLEM_APP_SMALL_DUPLICATE_SURPLUS_DIVERSIFICATION.json audit/PROBLEM_APP_CONTENT_QUALITY.json
+          if git diff --cached --quiet; then
+            echo 'No diversification change'
+          else
+            git commit -m 'fix: diversify small duplicate surplus rows [skip ci]'
+            git push
+          fi
