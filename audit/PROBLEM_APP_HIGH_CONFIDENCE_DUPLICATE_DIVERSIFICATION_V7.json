@@ -1,0 +1,488 @@
+{
+  "generated_at": "2026-08-28T15:30:46.873Z",
+  "groups_eligible": 40,
+  "groups_touched": 39,
+  "changed_rows": 39,
+  "by_family": {
+    "中1/be動詞/答え方": 3,
+    "中1/三単現/間違い直し": 7,
+    "中3/現在完了形（完了・経験）/変形": 7,
+    "中3/現在完了形（継続），現在完了進行形/変形": 12,
+    "中3/疑問詞/答え方": 4,
+    "中3/人称代名詞/間違い直し": 5,
+    "中3/現在完了形（完了・経験）/空所補充": 1
+  },
+  "samples": [
+    {
+      "id": "GEN-BE-0279",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Is he busy? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      },
+      "after": {
+        "q": "Is he busy? に No で答えなさい。",
+        "a": "No, he is not."
+      }
+    },
+    {
+      "id": "GEN-BE-0303",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Is he kind? に Yes で答えなさい。",
+        "a": "Yes, he is."
+      },
+      "after": {
+        "q": "Is she busy? に No で答えなさい。",
+        "a": "No, she is not."
+      }
+    },
+    {
+      "id": "GEN-BE-0451",
+      "family": "中1/be動詞/答え方",
+      "before": {
+        "q": "Is she kind? に Yes で答えなさい。",
+        "a": "Yes, she is."
+      },
+      "after": {
+        "q": "Is he kind? に No で答えなさい。",
+        "a": "No, he is not."
+      }
+    },
+    {
+      "id": "GEN-3RD-0996",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "He play tennis every day. の誤りを直しなさい。",
+        "a": "He plays tennis every day."
+      },
+      "after": {
+        "q": "Ken walk to school every day. の誤りを直しなさい。",
+        "a": "Ken walks to school every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1004",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "He study English every day. の誤りを直しなさい。",
+        "a": "He studies English every day."
+      },
+      "after": {
+        "q": "Ken play tennis every day. の誤りを直しなさい。",
+        "a": "Ken plays tennis every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1140",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "He help at home every day. の誤りを直しなさい。",
+        "a": "He helps at home every day."
+      },
+      "after": {
+        "q": "Ken listen to music every day. の誤りを直しなさい。",
+        "a": "Ken listens to music every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1108",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "He walk to school every day. の誤りを直しなさい。",
+        "a": "He walks to school every day."
+      },
+      "after": {
+        "q": "Ken clean the room every day. の誤りを直しなさい。",
+        "a": "Ken cleans the room every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1092",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "She use a computer every day. の誤りを直しなさい。",
+        "a": "She uses a computer every day."
+      },
+      "after": {
+        "q": "Ken wash the dishes every day. の誤りを直しなさい。",
+        "a": "Ken washes the dishes every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1100",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "She cook dinner every day. の誤りを直しなさい。",
+        "a": "She cooks dinner every day."
+      },
+      "after": {
+        "q": "Mike help at home every day. の誤りを直しなさい。",
+        "a": "Mike helps at home every day."
+      }
+    },
+    {
+      "id": "GEN-3RD-1236",
+      "family": "中1/三単現/間違い直し",
+      "before": {
+        "q": "She visit the library every day. の誤りを直しなさい。",
+        "a": "She visits the library every day."
+      },
+      "after": {
+        "q": "Mike walk to school every day. の誤りを直しなさい。",
+        "a": "Mike walks to school every day."
+      }
+    },
+    {
+      "id": "M3C-00315",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "I have been to Kyoto once. を疑問文にしなさい。",
+        "a": "Have I been to Kyoto once?"
+      },
+      "after": {
+        "q": "Ken has been to Kyoto once. を否定文にしなさい。",
+        "a": "Ken has not been to Kyoto once."
+      }
+    },
+    {
+      "id": "M3C-00779",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Have I been playing tennis for two hours?"
+      },
+      "after": {
+        "q": "Ken has been studying English for two hours. を否定文にしなさい。",
+        "a": "Ken has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-00478",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "I have been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Have I been using this computer since this morning?"
+      },
+      "after": {
+        "q": "Mike has been studying English for two hours. を疑問文にしなさい。",
+        "a": "Has Mike been studying English for two hours?"
+      }
+    },
+    {
+      "id": "M3C-00896",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "Ken has been to Osaka once. を疑問文にしなさい。",
+        "a": "Has Ken been to Osaka once?"
+      },
+      "after": {
+        "q": "Mike has been to Kyoto once. を疑問文にしなさい。",
+        "a": "Has Mike been to Kyoto once?"
+      }
+    },
+    {
+      "id": "M3C-01019",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "Tom has been studying English for two hours. を疑問文にしなさい。",
+        "a": "Has Tom been studying English for two hours?"
+      },
+      "after": {
+        "q": "Bob has been studying English for two hours. を否定文にしなさい。",
+        "a": "Bob has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-00895",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "Tom has been to Osaka once. を疑問文にしなさい。",
+        "a": "Has Tom been to Osaka once?"
+      },
+      "after": {
+        "q": "Bob has been to Kyoto once. を否定文にしなさい。",
+        "a": "Bob has not been to Kyoto once."
+      }
+    },
+    {
+      "id": "M3C-00534",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "You have been to Kyoto once. を疑問文にしなさい。",
+        "a": "Have You been to Kyoto once?"
+      },
+      "after": {
+        "q": "John has been to Kyoto once. を疑問文にしなさい。",
+        "a": "Has John been to Kyoto once?"
+      }
+    },
+    {
+      "id": "M3C-00499",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "You have been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Have You been playing tennis for two hours?"
+      },
+      "after": {
+        "q": "John has been studying English for two hours. を疑問文にしなさい。",
+        "a": "Has John been studying English for two hours?"
+      }
+    },
+    {
+      "id": "M3C-01097",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "You have been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Have You been using this computer since this morning?"
+      },
+      "after": {
+        "q": "Emi has been studying English for two hours. を否定文にしなさい。",
+        "a": "Emi has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-00916",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "Emi has been to Osaka once. を疑問文にしなさい。",
+        "a": "Has Emi been to Osaka once?"
+      },
+      "after": {
+        "q": "Emi has been to Kyoto once. を否定文にしなさい。",
+        "a": "Emi has not been to Kyoto once."
+      }
+    },
+    {
+      "id": "M3C-00693",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "He has been to Kyoto once. を疑問文にしなさい。",
+        "a": "Has he been to Kyoto once?"
+      },
+      "after": {
+        "q": "Aya has been to Kyoto once. を否定文にしなさい。",
+        "a": "Aya has not been to Kyoto once."
+      }
+    },
+    {
+      "id": "M3C-00937",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "He has been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Has he been playing tennis for two hours?"
+      },
+      "after": {
+        "q": "Aya has been studying English for two hours. を否定文にしなさい。",
+        "a": "Aya has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-01178",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "He has been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Has he been using this computer since this morning?"
+      },
+      "after": {
+        "q": "Mary has been studying English for two hours. を否定文にしなさい。",
+        "a": "Mary has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-00933",
+      "family": "中3/現在完了形（完了・経験）/変形",
+      "before": {
+        "q": "Yuki has been to Osaka once. を疑問文にしなさい。",
+        "a": "Has Yuki been to Osaka once?"
+      },
+      "after": {
+        "q": "Lucy has been to Kyoto once. を疑問文にしなさい。",
+        "a": "Has Lucy been to Kyoto once?"
+      }
+    },
+    {
+      "id": "M3C-00880",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "She has been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Has she been playing tennis for two hours?"
+      },
+      "after": {
+        "q": "Ann has been studying English for two hours. を疑問文にしなさい。",
+        "a": "Has Ann been studying English for two hours?"
+      }
+    },
+    {
+      "id": "M3C-00957",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "She has been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Has she been using this computer since this morning?"
+      },
+      "after": {
+        "q": "Kate has been studying English for two hours. を否定文にしなさい。",
+        "a": "Kate has not been studying English for two hours."
+      }
+    },
+    {
+      "id": "M3C-01177",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "We have been playing tennis for two hours. を疑問文にしなさい。",
+        "a": "Have We been playing tennis for two hours?"
+      },
+      "after": {
+        "q": "Ken has been reading this book for an hour. を否定文にしなさい。",
+        "a": "Ken has not been reading this book for an hour."
+      }
+    },
+    {
+      "id": "M3C-01078",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "We have been using this computer since this morning. を疑問文にしなさい。",
+        "a": "Have We been using this computer since this morning?"
+      },
+      "after": {
+        "q": "Mike has been reading this book for an hour. を疑問文にしなさい。",
+        "a": "Has Mike been reading this book for an hour?"
+      }
+    },
+    {
+      "id": "M3C-01020",
+      "family": "中3/現在完了形（継続），現在完了進行形/変形",
+      "before": {
+        "q": "Ken has been studying English for three hours. を疑問文にしなさい。",
+        "a": "Has Ken been studying English for three hours?"
+      },
+      "after": {
+        "q": "Bob has been reading this book for an hour. を否定文にしなさい。",
+        "a": "Bob has not been reading this book for an hour."
+      }
+    },
+    {
+      "id": "M3N-00465",
+      "family": "中3/疑問詞/答え方",
+      "before": {
+        "q": "I went to the library by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the library?"
+      },
+      "after": {
+        "q": "I went to the library by bus. になる質問文を書きなさい。",
+        "a": "How did you go to the library?"
+      }
+    },
+    {
+      "id": "M3N-00471",
+      "family": "中3/疑問詞/答え方",
+      "before": {
+        "q": "I went to the park by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the park?"
+      },
+      "after": {
+        "q": "I went to the park on foot. になる質問文を書きなさい。",
+        "a": "How did you go to the park?"
+      }
+    },
+    {
+      "id": "M3N-00459",
+      "family": "中3/疑問詞/答え方",
+      "before": {
+        "q": "I went to the station by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the station?"
+      },
+      "after": {
+        "q": "I went to the station by train. になる質問文を書きなさい。",
+        "a": "How did you go to the station?"
+      }
+    },
+    {
+      "id": "M3N-00477",
+      "family": "中3/疑問詞/答え方",
+      "before": {
+        "q": "I went to the room by bike. になる質問文を書きなさい。",
+        "a": "How did you go to the room?"
+      },
+      "after": {
+        "q": "I went to school by bike. になる質問文を書きなさい。",
+        "a": "How did you go to school?"
+      }
+    },
+    {
+      "id": "M3N-00556",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play baseball. の誤りを直しなさい。",
+        "a": "I play baseball."
+      },
+      "after": {
+        "q": "Him plays soccer. の誤りを直しなさい。",
+        "a": "He plays soccer."
+      }
+    },
+    {
+      "id": "M3N-00562",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play basketball. の誤りを直しなさい。",
+        "a": "I play basketball."
+      },
+      "after": {
+        "q": "Her studies English. の誤りを直しなさい。",
+        "a": "She studies English."
+      }
+    },
+    {
+      "id": "M3N-00568",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play volleyball. の誤りを直しなさい。",
+        "a": "I play volleyball."
+      },
+      "after": {
+        "q": "Them play tennis. の誤りを直しなさい。",
+        "a": "They play tennis."
+      }
+    },
+    {
+      "id": "M3N-00574",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me play badminton. の誤りを直しなさい。",
+        "a": "I play badminton."
+      },
+      "after": {
+        "q": "Us listen to music. の誤りを直しなさい。",
+        "a": "We listen to music."
+      }
+    },
+    {
+      "id": "M3N-00586",
+      "family": "中3/人称代名詞/間違い直し",
+      "before": {
+        "q": "Me go swimming. の誤りを直しなさい。",
+        "a": "I go swimming."
+      },
+      "after": {
+        "q": "Him helps at home. の誤りを直しなさい。",
+        "a": "He helps at home."
+      }
+    },
+    {
+      "id": "M3N-01783",
+      "family": "中3/現在完了形（完了・経験）/空所補充",
+      "before": {
+        "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
+        "a": "Read"
+      },
+      "after": {
+        "q": "I have just (      ) here. (come) の（ ）内を正しくしなさい。",
+        "a": "Come"
+      }
+    }
+  ],
+  "duplicate_groups_after": 140,
+  "duplicate_excess_after": 169,
+  "groups_ge5_after": 0
+}

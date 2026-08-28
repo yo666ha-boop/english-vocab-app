@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:29:23.594Z",
+  "generated_at": "2026-08-28T15:30:47.230Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -240,7 +240,7 @@
     ]
   },
   "exact_duplicate_question_answer_groups": {
-    "count": 179,
+    "count": 140,
     "top": [
       {
         "normalized_question": "emi is more young than yuki. の誤りを直しなさい。",
@@ -461,84 +461,12 @@
         ]
       },
       {
-        "normalized_question": "emi has been to osaka once. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has Emi been to Osaka once?",
-        "sample_ids": [
-          "M3C-00275",
-          "M3C-00916"
-        ]
-      },
-      {
-        "normalized_question": "he has been playing tennis for two hours. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has he been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00419",
-          "M3C-00937"
-        ]
-      },
-      {
-        "normalized_question": "he has been to kyoto once. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has he been to Kyoto once?",
-        "sample_ids": [
-          "M3C-00415",
-          "M3C-00693"
-        ]
-      },
-      {
-        "normalized_question": "he has been using this computer since this morning. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has he been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00420",
-          "M3C-01178"
-        ]
-      },
-      {
-        "normalized_question": "he help at home every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "He helps at home every day.",
-        "sample_ids": [
-          "GEN-3RD-0880",
-          "GEN-3RD-1140"
-        ]
-      },
-      {
         "normalized_question": "he is play tennis. の誤りを直しなさい。",
         "count": 2,
         "answer": "He plays tennis.",
         "sample_ids": [
           "E1-BD-004",
           "R2-DIST-0055"
-        ]
-      },
-      {
-        "normalized_question": "he play tennis every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "He plays tennis every day.",
-        "sample_ids": [
-          "GEN-3RD-0860",
-          "GEN-3RD-0996"
-        ]
-      },
-      {
-        "normalized_question": "he study english every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "He studies English every day.",
-        "sample_ids": [
-          "GEN-3RD-0868",
-          "GEN-3RD-1004"
-        ]
-      },
-      {
-        "normalized_question": "he walk to school every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "He walks to school every day.",
-        "sample_ids": [
-          "GEN-3RD-0896",
-          "GEN-3RD-1108"
         ]
       },
       {
@@ -566,42 +494,6 @@
         "sample_ids": [
           "F1-PROG-0045",
           "M3C-00025"
-        ]
-      },
-      {
-        "normalized_question": "i have been playing tennis for two hours. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Have I been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00019",
-          "M3C-00779"
-        ]
-      },
-      {
-        "normalized_question": "i have been to kyoto once. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Have I been to Kyoto once?",
-        "sample_ids": [
-          "M3C-00015",
-          "M3C-00315"
-        ]
-      },
-      {
-        "normalized_question": "i have been using this computer since this morning. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Have I been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00020",
-          "M3C-00478"
-        ]
-      },
-      {
-        "normalized_question": "i have just ( ) this book. (read) の( )内を正しくしなさい。",
-        "count": 2,
-        "answer": "Read",
-        "sample_ids": [
-          "M3N-01711",
-          "M3N-01783"
         ]
       },
       {
@@ -731,42 +623,6 @@
         ]
       },
       {
-        "normalized_question": "i went to the library by bike. になる質問文を書きなさい。",
-        "count": 2,
-        "answer": "How did you go to the library?",
-        "sample_ids": [
-          "M3N-00363",
-          "M3N-00465"
-        ]
-      },
-      {
-        "normalized_question": "i went to the park by bike. になる質問文を書きなさい。",
-        "count": 2,
-        "answer": "How did you go to the park?",
-        "sample_ids": [
-          "M3N-00369",
-          "M3N-00471"
-        ]
-      },
-      {
-        "normalized_question": "i went to the room by bike. になる質問文を書きなさい。",
-        "count": 2,
-        "answer": "How did you go to the room?",
-        "sample_ids": [
-          "M3N-00387",
-          "M3N-00477"
-        ]
-      },
-      {
-        "normalized_question": "i went to the station by bike. になる質問文を書きなさい。",
-        "count": 2,
-        "answer": "How did you go to the station?",
-        "sample_ids": [
-          "M3N-00375",
-          "M3N-00459"
-        ]
-      },
-      {
         "normalized_question": "if i am you, i would help my friend. の誤りを直しなさい。",
         "count": 2,
         "answer": "If I were you, I would help my friend.",
@@ -839,51 +695,6 @@
         ]
       },
       {
-        "normalized_question": "is he busy? に yes で答えなさい。",
-        "count": 2,
-        "answer": "Yes, he is.",
-        "sample_ids": [
-          "GEN-BE-0167",
-          "GEN-BE-0279"
-        ]
-      },
-      {
-        "normalized_question": "is he kind? に yes で答えなさい。",
-        "count": 2,
-        "answer": "Yes, he is.",
-        "sample_ids": [
-          "GEN-BE-0179",
-          "GEN-BE-0303"
-        ]
-      },
-      {
-        "normalized_question": "is she kind? に yes で答えなさい。",
-        "count": 2,
-        "answer": "Yes, she is.",
-        "sample_ids": [
-          "GEN-BE-0219",
-          "GEN-BE-0451"
-        ]
-      },
-      {
-        "normalized_question": "ken has been studying english for three hours. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has Ken been studying English for three hours?",
-        "sample_ids": [
-          "M3C-00998",
-          "M3C-01020"
-        ]
-      },
-      {
-        "normalized_question": "ken has been to osaka once. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has Ken been to Osaka once?",
-        "sample_ids": [
-          "M3C-00056",
-          "M3C-00896"
-        ]
-      },
-      {
         "normalized_question": "ken knows me. he often talks with ( ).",
         "count": 2,
         "answer": "me",
@@ -908,51 +719,6 @@
         "sample_ids": [
           "M3N-00526",
           "M3N-00580"
-        ]
-      },
-      {
-        "normalized_question": "me go swimming. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I go swimming.",
-        "sample_ids": [
-          "M3N-00520",
-          "M3N-00586"
-        ]
-      },
-      {
-        "normalized_question": "me play badminton. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I play badminton.",
-        "sample_ids": [
-          "M3N-00514",
-          "M3N-00574"
-        ]
-      },
-      {
-        "normalized_question": "me play baseball. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I play baseball.",
-        "sample_ids": [
-          "M3N-00496",
-          "M3N-00556"
-        ]
-      },
-      {
-        "normalized_question": "me play basketball. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I play basketball.",
-        "sample_ids": [
-          "M3N-00502",
-          "M3N-00562"
-        ]
-      },
-      {
-        "normalized_question": "me play volleyball. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "I play volleyball.",
-        "sample_ids": [
-          "M3N-00508",
-          "M3N-00568"
         ]
       },
       {
@@ -983,57 +749,12 @@
         ]
       },
       {
-        "normalized_question": "she cook dinner every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "She cooks dinner every day.",
-        "sample_ids": [
-          "GEN-3RD-0952",
-          "GEN-3RD-1100"
-        ]
-      },
-      {
-        "normalized_question": "she has been playing tennis for two hours. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has she been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00619",
-          "M3C-00880"
-        ]
-      },
-      {
-        "normalized_question": "she has been using this computer since this morning. を疑問文にしなさい。",
-        "count": 2,
-        "answer": "Has she been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00620",
-          "M3C-00957"
-        ]
-      },
-      {
         "normalized_question": "she is kind. は be動詞の文か、一般動詞の文か答えなさい。",
         "count": 2,
         "answer": "Be動詞の文",
         "sample_ids": [
           "E1-BD-001",
           "R2-DIST-0053"
-        ]
-      },
-      {
-        "normalized_question": "she use a computer every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "She uses a computer every day.",
-        "sample_ids": [
-          "GEN-3RD-0948",
-          "GEN-3RD-1092"
-        ]
-      },
-      {
-        "normalized_question": "she visit the library every day. の誤りを直しなさい。",
-        "count": 2,
-        "answer": "She visits the library every day.",
-        "sample_ids": [
-          "GEN-3RD-0956",
-          "GEN-3RD-1236"
         ]
       },
       {
@@ -1169,6 +890,285 @@
         "sample_ids": [
           "M3N-01457",
           "M3N-01529"
+        ]
+      },
+      {
+        "normalized_question": "they call tom him. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They call him Tom.",
+        "sample_ids": [
+          "M3N-01445",
+          "M3N-01517"
+        ]
+      },
+      {
+        "normalized_question": "they call yuki her. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They call her Yuki.",
+        "sample_ids": [
+          "M3N-01481",
+          "M3N-01553"
+        ]
+      },
+      {
+        "normalized_question": "they help at home. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "They helped at home yesterday.",
+        "sample_ids": [
+          "GEN-PAST-2022",
+          "M2-PAST-0399"
+        ]
+      },
+      {
+        "normalized_question": "they like read books. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They like to read books.",
+        "sample_ids": [
+          "M2X-INF-0548",
+          "M2-INF2-0940"
+        ]
+      },
+      {
+        "normalized_question": "they need study harder. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0546",
+          "M2-INF2-0937"
+        ]
+      },
+      {
+        "normalized_question": "they play tennis. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "They played tennis yesterday.",
+        "sample_ids": [
+          "GEN-PAST-2007",
+          "M2-PAST-0397"
+        ]
+      },
+      {
+        "normalized_question": "they use this box keep letters. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0552",
+          "M2-INF2-0946"
+        ]
+      },
+      {
+        "normalized_question": "they want be a teacher. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0544",
+          "M2-INF2-0934"
+        ]
+      },
+      {
+        "normalized_question": "they want play tennis. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "They want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0542",
+          "M2-INF2-0931"
+        ]
+      },
+      {
+        "normalized_question": "we help at home. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "We helped at home yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1974",
+          "M2-PAST-0379"
+        ]
+      },
+      {
+        "normalized_question": "we like read books. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "We like to read books.",
+        "sample_ids": [
+          "M2X-INF-0524",
+          "M2-INF2-0886"
+        ]
+      },
+      {
+        "normalized_question": "we need study harder. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "We need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0522",
+          "M2-INF2-0883"
+        ]
+      },
+      {
+        "normalized_question": "we play tennis. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "We played tennis yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1959",
+          "M2-PAST-0377"
+        ]
+      },
+      {
+        "normalized_question": "we use this box keep letters. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "We use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0528",
+          "M2-INF2-0892"
+        ]
+      },
+      {
+        "normalized_question": "we want be a teacher. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "We want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0520",
+          "M2-INF2-0880"
+        ]
+      },
+      {
+        "normalized_question": "we want play tennis. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "We want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0518",
+          "M2-INF2-0877"
+        ]
+      },
+      {
+        "normalized_question": "you are kind. は be動詞の文か、一般動詞の文か答えなさい。",
+        "count": 2,
+        "answer": "Be動詞の文",
+        "sample_ids": [
+          "E1-BD-007",
+          "M3N-00127"
+        ]
+      },
+      {
+        "normalized_question": "you help at home. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "You helped at home yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1926",
+          "M2-PAST-0359"
+        ]
+      },
+      {
+        "normalized_question": "you like read books. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "You like to read books.",
+        "sample_ids": [
+          "M2X-INF-0500",
+          "M2-INF2-0832"
+        ]
+      },
+      {
+        "normalized_question": "you must go to the library now. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Must you go to the library now?",
+        "sample_ids": [
+          "M3N-00963",
+          "M3N-01065"
+        ]
+      },
+      {
+        "normalized_question": "you must go to the park now. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Must you go to the park now?",
+        "sample_ids": [
+          "M3N-00969",
+          "M3N-01071"
+        ]
+      },
+      {
+        "normalized_question": "you must go to the room now. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Must you go to the room now?",
+        "sample_ids": [
+          "M3N-00987",
+          "M3N-01077"
+        ]
+      },
+      {
+        "normalized_question": "you must go to the station now. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Must you go to the station now?",
+        "sample_ids": [
+          "M3N-00975",
+          "M3N-01059"
+        ]
+      },
+      {
+        "normalized_question": "you need study harder. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "You need to study harder.",
+        "sample_ids": [
+          "M2X-INF-0498",
+          "M2-INF2-0829"
+        ]
+      },
+      {
+        "normalized_question": "you play tennis. を yesterday を使って過去の文にしなさい。",
+        "count": 2,
+        "answer": "You played tennis yesterday.",
+        "sample_ids": [
+          "GEN-PAST-1911",
+          "M2-PAST-0357"
+        ]
+      },
+      {
+        "normalized_question": "you use this box keep letters. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "You use this box to keep letters.",
+        "sample_ids": [
+          "M2X-INF-0504",
+          "M2-INF2-0838"
+        ]
+      },
+      {
+        "normalized_question": "you want be a teacher. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "You want to be a teacher.",
+        "sample_ids": [
+          "M2X-INF-0496",
+          "M2-INF2-0826"
+        ]
+      },
+      {
+        "normalized_question": "you want play tennis. の誤りを直しなさい。",
+        "count": 2,
+        "answer": "You want to play tennis.",
+        "sample_ids": [
+          "M2X-INF-0494",
+          "M2-INF2-0823"
+        ]
+      },
+      {
+        "normalized_question": "you were kind yesterday. を否定文にしなさい。",
+        "count": 2,
+        "answer": "You were not kind yesterday.",
+        "sample_ids": [
+          "GEN-PBE-1545",
+          "M3N-00251"
+        ]
+      },
+      {
+        "normalized_question": "yuki is tired. を疑問文にしなさい。",
+        "count": 2,
+        "answer": "Is Yuki tired?",
+        "sample_ids": [
+          "GEN-BE-0429",
+          "M2-BE-0091"
+        ]
+      },
+      {
+        "normalized_question": "次の日本語に合う英文を書きなさい。『あなたは 早く起きなければならない。』",
+        "count": 2,
+        "answer": "You have to get up early.",
+        "sample_ids": [
+          "M2-MOD-0629",
+          "M2-MOD-0630"
         ]
       }
     ]

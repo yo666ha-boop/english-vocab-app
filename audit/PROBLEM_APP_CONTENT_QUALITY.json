@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:29:23.781Z",
+  "generated_at": "2026-08-28T15:30:47.409Z",
   "source": "problem-app/index.html",
   "result": "PASS",
   "hard_failures": [],
@@ -31,33 +31,27 @@
     "samples": []
   },
   "exact_duplicate_question_answer": {
-    "group_count": 179,
-    "row_count": 387,
-    "duplicate_excess": 208,
-    "row_ratio": 0.036819,
-    "excess_ratio": 0.019789,
+    "group_count": 140,
+    "row_count": 309,
+    "duplicate_excess": 169,
+    "row_ratio": 0.029398,
+    "excess_ratio": 0.016078,
     "groups_ge5": 0,
     "groups_ge10": 0,
     "by_family_rows": {
       "中2/比較/間違い直し": 44,
       "中2/不定詞/間違い直し": 40,
       "中3/関係代名詞/選択": 31,
-      "中3/現在完了形（継続），現在完了進行形/変形": 24,
       "中2/比較/英作文": 22,
       "中2/助動詞/英作文": 18,
       "中3/仮定法/間違い直し": 16,
       "中3/文型/間違い直し": 16,
-      "中1/三単現/間違い直し": 14,
-      "中3/現在完了形（完了・経験）/変形": 14,
       "中1/頻度副詞/並びかえ": 12,
-      "中3/人称代名詞/間違い直し": 12,
       "中3/助動詞/変形": 9,
       "中1/一般動詞の過去形/変形": 8,
       "中2/一般動詞の過去形/変形": 8,
       "中3/命令文，there is ～ の文/英作文": 8,
       "中3/接続詞/並びかえ": 8,
-      "中3/疑問詞/答え方": 8,
-      "中1/be動詞/答え方": 6,
       "中1/人称代名詞/空所補充": 6,
       "中2/人称代名詞/空所補充": 6,
       "中3/be動詞と一般動詞（過去形）/変形": 5,
@@ -68,10 +62,10 @@
       "中1/過去のbe動詞/変形": 3,
       "中1/現在進行形/変形": 2,
       "中3/be動詞と一般動詞（現在形）/見分け": 2,
+      "中3/人称代名詞/間違い直し": 2,
       "中3/命令文，there is ～ の文/変形": 2,
       "中3/文型/英作文": 2,
       "中3/未来の文/変形": 2,
-      "中3/現在完了形（完了・経験）/空所補充": 2,
       "中3/進行形/変形": 2,
       "中3/関係代名詞/並びかえ": 2,
       "中3/関係代名詞/間違い直し": 2,
@@ -95,7 +89,6 @@
     "by_family_groups": {
       "中2/不定詞/間違い直し": 20,
       "中2/比較/間違い直し": 12,
-      "中3/現在完了形（継続），現在完了進行形/変形": 12,
       "中2/比較/英作文": 11,
       "中3/関係代名詞/選択": 11,
       "中2/助動詞/英作文": 9,
@@ -103,20 +96,15 @@
       "中2/一般動詞の過去形/変形": 8,
       "中3/仮定法/間違い直し": 8,
       "中3/文型/間違い直し": 8,
-      "中1/三単現/間違い直し": 7,
-      "中3/現在完了形（完了・経験）/変形": 7,
       "中1/人称代名詞/空所補充": 6,
       "中1/頻度副詞/並びかえ": 6,
       "中2/人称代名詞/空所補充": 6,
-      "中3/人称代名詞/間違い直し": 6,
       "中3/助動詞/変形": 5,
       "中1/be動詞/変形": 4,
       "中2/be動詞/変形": 4,
       "中3/be動詞と一般動詞（過去形）/変形": 4,
       "中3/命令文，there is ～ の文/英作文": 4,
       "中3/接続詞/並びかえ": 4,
-      "中3/疑問詞/答え方": 4,
-      "中1/be動詞/答え方": 3,
       "中1/区別/見分け": 3,
       "中1/過去のbe動詞/変形": 3,
       "中1/現在進行形/変形": 2,
@@ -137,10 +125,10 @@
       "中2/一般動詞/英作文": 1,
       "中2/命令文/英作文": 1,
       "中2/文型①（look ～，give A B）/英作文": 1,
+      "中3/人称代名詞/間違い直し": 1,
       "中3/命令文，there is ～ の文/変形": 1,
       "中3/文型/英作文": 1,
       "中3/未来の文/変形": 1,
-      "中3/現在完了形（完了・経験）/空所補充": 1,
       "中3/疑問詞/答えから質問文": 1,
       "中3/進行形/間違い直し": 1,
       "中3/関係代名詞/並びかえ": 1,
@@ -434,66 +422,6 @@
       },
       {
         "count": 2,
-        "q": "Emi has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Emi been to Osaka once?",
-        "sample_ids": [
-          "M3C-00275",
-          "M3C-00916"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He has been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Has he been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00419",
-          "M3C-00937"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He has been to Kyoto once. を疑問文にしなさい。",
-        "a": "Has he been to Kyoto once?",
-        "sample_ids": [
-          "M3C-00415",
-          "M3C-00693"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He has been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Has he been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00420",
-          "M3C-01178"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He help at home every day. の誤りを直しなさい。",
-        "a": "He helps at home every day.",
-        "sample_ids": [
-          "GEN-3RD-0880",
-          "GEN-3RD-1140"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
         "q": "He is play tennis. の誤りを直しなさい。",
         "a": "He plays tennis.",
         "sample_ids": [
@@ -503,42 +431,6 @@
         "grade_category_types": [
           "中1/区別/間違い直し",
           "中2/be動詞と一般動詞（現在形）/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He play tennis every day. の誤りを直しなさい。",
-        "a": "He plays tennis every day.",
-        "sample_ids": [
-          "GEN-3RD-0860",
-          "GEN-3RD-0996"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He study English every day. の誤りを直しなさい。",
-        "a": "He studies English every day.",
-        "sample_ids": [
-          "GEN-3RD-0868",
-          "GEN-3RD-1004"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "He walk to school every day. の誤りを直しなさい。",
-        "a": "He walks to school every day.",
-        "sample_ids": [
-          "GEN-3RD-0896",
-          "GEN-3RD-1108"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
         ]
       },
       {
@@ -577,54 +469,6 @@
         "grade_category_types": [
           "中1/現在進行形/変形",
           "中3/進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have I been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00019",
-          "M3C-00779"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have I been to Kyoto once?",
-        "sample_ids": [
-          "M3C-00015",
-          "M3C-00315"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have I been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00020",
-          "M3C-00478"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I have just (      ) this book. (read) の（ ）内を正しくしなさい。",
-        "a": "Read",
-        "sample_ids": [
-          "M3N-01711",
-          "M3N-01783"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/空所補充"
         ]
       },
       {
@@ -805,54 +649,6 @@
       },
       {
         "count": 2,
-        "q": "I went to the library by bike. になる質問文を書きなさい。",
-        "a": "How did you go to the library?",
-        "sample_ids": [
-          "M3N-00363",
-          "M3N-00465"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I went to the park by bike. になる質問文を書きなさい。",
-        "a": "How did you go to the park?",
-        "sample_ids": [
-          "M3N-00369",
-          "M3N-00471"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I went to the room by bike. になる質問文を書きなさい。",
-        "a": "How did you go to the room?",
-        "sample_ids": [
-          "M3N-00387",
-          "M3N-00477"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "I went to the station by bike. になる質問文を書きなさい。",
-        "a": "How did you go to the station?",
-        "sample_ids": [
-          "M3N-00375",
-          "M3N-00459"
-        ],
-        "grade_category_types": [
-          "中3/疑問詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
         "q": "If I am you, I would help my friend. の誤りを直しなさい。",
         "a": "If I were you, I would help my friend.",
         "sample_ids": [
@@ -949,66 +745,6 @@
       },
       {
         "count": 2,
-        "q": "Is he busy? に Yes で答えなさい。",
-        "a": "Yes, he is.",
-        "sample_ids": [
-          "GEN-BE-0167",
-          "GEN-BE-0279"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Is he kind? に Yes で答えなさい。",
-        "a": "Yes, he is.",
-        "sample_ids": [
-          "GEN-BE-0179",
-          "GEN-BE-0303"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Is she kind? に Yes で答えなさい。",
-        "a": "Yes, she is.",
-        "sample_ids": [
-          "GEN-BE-0219",
-          "GEN-BE-0451"
-        ],
-        "grade_category_types": [
-          "中1/be動詞/答え方"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Ken has been studying English for three hours. を疑問文にしなさい。",
-        "a": "Has Ken been studying English for three hours?",
-        "sample_ids": [
-          "M3C-00998",
-          "M3C-01020"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Ken has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Ken been to Osaka once?",
-        "sample_ids": [
-          "M3C-00056",
-          "M3C-00896"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
         "q": "Ken knows me. He often talks with (      ).",
         "a": "me",
         "sample_ids": [
@@ -1040,66 +776,6 @@
         "sample_ids": [
           "M3N-00526",
           "M3N-00580"
-        ],
-        "grade_category_types": [
-          "中3/人称代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Me go swimming. の誤りを直しなさい。",
-        "a": "I go swimming.",
-        "sample_ids": [
-          "M3N-00520",
-          "M3N-00586"
-        ],
-        "grade_category_types": [
-          "中3/人称代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Me play badminton. の誤りを直しなさい。",
-        "a": "I play badminton.",
-        "sample_ids": [
-          "M3N-00514",
-          "M3N-00574"
-        ],
-        "grade_category_types": [
-          "中3/人称代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Me play baseball. の誤りを直しなさい。",
-        "a": "I play baseball.",
-        "sample_ids": [
-          "M3N-00496",
-          "M3N-00556"
-        ],
-        "grade_category_types": [
-          "中3/人称代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Me play basketball. の誤りを直しなさい。",
-        "a": "I play basketball.",
-        "sample_ids": [
-          "M3N-00502",
-          "M3N-00562"
-        ],
-        "grade_category_types": [
-          "中3/人称代名詞/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Me play volleyball. の誤りを直しなさい。",
-        "a": "I play volleyball.",
-        "sample_ids": [
-          "M3N-00508",
-          "M3N-00568"
         ],
         "grade_category_types": [
           "中3/人称代名詞/間違い直し"
@@ -1145,42 +821,6 @@
       },
       {
         "count": 2,
-        "q": "She cook dinner every day. の誤りを直しなさい。",
-        "a": "She cooks dinner every day.",
-        "sample_ids": [
-          "GEN-3RD-0952",
-          "GEN-3RD-1100"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "She has been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Has she been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00619",
-          "M3C-00880"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "She has been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Has she been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00620",
-          "M3C-00957"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
         "q": "She is kind. は be動詞の文か、一般動詞の文か答えなさい。",
         "a": "Be動詞の文",
         "sample_ids": [
@@ -1190,30 +830,6 @@
         "grade_category_types": [
           "中1/区別/見分け",
           "中2/be動詞と一般動詞（現在形）/見分け"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "She use a computer every day. の誤りを直しなさい。",
-        "a": "She uses a computer every day.",
-        "sample_ids": [
-          "GEN-3RD-0948",
-          "GEN-3RD-1092"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "She visit the library every day. の誤りを直しなさい。",
-        "a": "She visits the library every day.",
-        "sample_ids": [
-          "GEN-3RD-0956",
-          "GEN-3RD-1236"
-        ],
-        "grade_category_types": [
-          "中1/三単現/間違い直し"
         ]
       },
       {
@@ -1510,54 +1126,6 @@
       },
       {
         "count": 2,
-        "q": "Tom has been studying English for two hours. を疑問文にしなさい。",
-        "a": "Has Tom been studying English for two hours?",
-        "sample_ids": [
-          "M3C-00058",
-          "M3C-01019"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Tom has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Tom been to Osaka once?",
-        "sample_ids": [
-          "M3C-00094",
-          "M3C-00895"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "We have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have we been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00819",
-          "M3C-01177"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "We have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have we been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00820",
-          "M3C-01078"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
         "q": "We help at home. を yesterday を使って過去の文にしなさい。",
         "a": "We helped at home yesterday.",
         "sample_ids": [
@@ -1653,42 +1221,6 @@
         "grade_category_types": [
           "中1/区別/見分け",
           "中3/be動詞と一般動詞（現在形）/見分け"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You have been playing tennis for two hours. を疑問文にしなさい。",
-        "a": "Have you been playing tennis for two hours?",
-        "sample_ids": [
-          "M3C-00219",
-          "M3C-00499"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You have been to Kyoto once. を疑問文にしなさい。",
-        "a": "Have you been to Kyoto once?",
-        "sample_ids": [
-          "M3C-00215",
-          "M3C-00534"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "You have been using this computer since this morning. を疑問文にしなさい。",
-        "a": "Have you been using this computer since this morning?",
-        "sample_ids": [
-          "M3C-00220",
-          "M3C-01097"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（継続），現在完了進行形/変形"
         ]
       },
       {
@@ -1836,18 +1368,6 @@
         "grade_category_types": [
           "中1/過去のbe動詞/変形",
           "中3/be動詞と一般動詞（過去形）/変形"
-        ]
-      },
-      {
-        "count": 2,
-        "q": "Yuki has been to Osaka once. を疑問文にしなさい。",
-        "a": "Has Yuki been to Osaka once?",
-        "sample_ids": [
-          "M3C-00494",
-          "M3C-00933"
-        ],
-        "grade_category_types": [
-          "中3/現在完了形（完了・経験）/変形"
         ]
       },
       {
