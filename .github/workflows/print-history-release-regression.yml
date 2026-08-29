@@ -1,0 +1,85 @@
+name: Print history release regression
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature-print-history-20260829
+    paths:
+      - tests/test_print_history_release_regression.py
+      - .github/workflows/print-history-release-regression.yml
+      - problem-app/index.html
+
+permissions:
+  contents: write
+
+jobs:
+  release-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Runtime parse
+        run: node tools/check_problem_app_runtime_parse.mjs
+      - name: Core content regressions
+        run: |
+          node tools/audit_problem_app_bank_integrity.mjs
+          node tools/audit_problem_content_quality.mjs
+          node tools/audit_problem_semantic_review_signals.mjs
+          node tools/audit_problem_grammar_chronology.mjs
+          node tools/audit_vocab_morphology_regression.mjs
+          node tools/audit_vocab_zeroed_rows.mjs
+          node tools/audit_problem_vocab_minimum_supply.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser and PDF dependencies
+        run: |
+          pip install playwright pypdf
+          playwright install --with-deps chromium firefox webkit
+      - name: Run 3-engine print and A4 regression
+        run: python tests/test_print_history_release_regression.py
+      - name: Upload release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: print-history-release-regression-evidence
+          path: |
+            audit/PROBLEM_APP_PRINT_HISTORY_RELEASE_REGRESSION.json
+            audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json
+            audit/PROBLEM_APP_BANK_INTEGRITY.json
+            audit/PROBLEM_APP_CONTENT_QUALITY.json
+            audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json
+            audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json
+            audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json
+            audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json
+            audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          if-no-files-found: warn
+      - name: Commit PASS evidence
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_PRINT_HISTORY_RELEASE_REGRESSION.json \
+            audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json \
+            audit/PROBLEM_APP_BANK_INTEGRITY.json \
+            audit/PROBLEM_APP_CONTENT_QUALITY.json \
+            audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json \
+            audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json \
+            audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json \
+            audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json \
+            audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record print-history release regression PASS [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
