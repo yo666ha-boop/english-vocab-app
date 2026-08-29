@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "url": "https://yo666ha-boop.github.io/english-vocab-app/problem-app/?print_history_verify=09b1001",
+  "expected_main_sha": "09b1001ec686f26a6233629816c9fd72959e321b",
+  "markers": {
+    "print_history_button": true,
+    "print_history_text": true,
+    "backup_export_label": true,
+    "backup_import_label": true,
+    "print_history_storage_key": true
+  },
+  "public_html_bytes": 3885845,
+  "public_html_sha256": "c244ea92c5bc7fff8fe8d3f1a5e9e164c94c24900cd2c7a92803239ff2f3d761"
+}
