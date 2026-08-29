@@ -1,0 +1,150 @@
+{
+  "result": "PASS",
+  "url": "file:///home/runner/work/english-vocab-app/english-vocab-app/problem-app/index.html",
+  "browsers": [
+    {
+      "browser": "chromium",
+      "generated_ids": [
+        "GEN-WR-1477",
+        "E1-WR-001",
+        "GEN-ORD-1400",
+        "GEN-WR-1454",
+        "E1-WR-011",
+        "E1-OR-013",
+        "E1-WR-007",
+        "GEN-WR-1426",
+        "GEN-WR-1459",
+        "GEN-ORD-1356",
+        "E1-OR-007",
+        "GEN-ORD-1381",
+        "GEN-ORD-1349",
+        "GEN-ORD-1355",
+        "GEN-ORD-1373",
+        "GEN-WR-1445",
+        "GEN-ORD-1358",
+        "GEN-ORD-1363",
+        "GEN-WR-1480",
+        "E1-OR-011"
+      ],
+      "answer_toggle_exact": true,
+      "reload_exact": true,
+      "both_question_ids_exact": true,
+      "both_answer_ids_exact": true,
+      "questions_only_exact": true,
+      "answers_only_exact": true,
+      "question_pages_before_answer_pages": true,
+      "history_rows_after_three_prints": 3,
+      "history_snapshots_exact": true,
+      "unexpected_errors": []
+    },
+    {
+      "browser": "firefox",
+      "generated_ids": [
+        "GEN-WR-1443",
+        "E1-WR-008",
+        "GEN-WR-1429",
+        "GEN-WR-1484",
+        "GEN-ORD-1391",
+        "GEN-WR-1441",
+        "E1-WR-010",
+        "GEN-WR-1414",
+        "GEN-WR-1432",
+        "E1-OR-013",
+        "E1-WR-007",
+        "GEN-ORD-1389",
+        "E1-OR-010",
+        "GEN-WR-1447",
+        "GEN-WR-1422",
+        "GEN-WR-1461",
+        "GEN-WR-1481",
+        "GEN-WR-1457",
+        "GEN-WR-1451",
+        "E1-WR-009"
+      ],
+      "answer_toggle_exact": true,
+      "reload_exact": true,
+      "both_question_ids_exact": true,
+      "both_answer_ids_exact": true,
+      "questions_only_exact": true,
+      "answers_only_exact": true,
+      "question_pages_before_answer_pages": true,
+      "history_rows_after_three_prints": 3,
+      "history_snapshots_exact": true,
+      "unexpected_errors": []
+    },
+    {
+      "browser": "webkit",
+      "generated_ids": [
+        "GEN-ORD-1376",
+        "GEN-WR-1475",
+        "GEN-WR-1474",
+        "GEN-WR-1459",
+        "GEN-WR-1476",
+        "GEN-WR-1438",
+        "GEN-ORD-1360",
+        "GEN-ORD-1354",
+        "GEN-WR-1423",
+        "E1-WR-009",
+        "GEN-ORD-1394",
+        "GEN-WR-1463",
+        "GEN-WR-1472",
+        "GEN-WR-1484",
+        "GEN-ORD-1356",
+        "GEN-WR-1417",
+        "GEN-ORD-1371",
+        "GEN-WR-1430",
+        "GEN-WR-1488",
+        "GEN-WR-1435"
+      ],
+      "answer_toggle_exact": true,
+      "reload_exact": true,
+      "both_question_ids_exact": true,
+      "both_answer_ids_exact": true,
+      "questions_only_exact": true,
+      "answers_only_exact": true,
+      "question_pages_before_answer_pages": true,
+      "history_rows_after_three_prints": 3,
+      "history_snapshots_exact": true,
+      "unexpected_errors": []
+    }
+  ],
+  "a4": {
+    "combined_pages": 3,
+    "questions_only_pages": 2,
+    "answers_only_pages": 1,
+    "combined_pdf_bytes": 97601,
+    "questions_pdf_bytes": 81707,
+    "answers_pdf_bytes": 53967,
+    "combined_page_points": [
+      [
+        594.96,
+        841.92
+      ],
+      [
+        594.96,
+        841.92
+      ],
+      [
+        594.96,
+        841.92
+      ]
+    ],
+    "questions_page_points": [
+      [
+        594.96,
+        841.92
+      ],
+      [
+        594.96,
+        841.92
+      ]
+    ],
+    "answers_page_points": [
+      [
+        594.96,
+        841.92
+      ]
+    ],
+    "result": "PASS"
+  }
+}
