@@ -1,0 +1,55 @@
+name: Print history gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature-print-history-20260829
+    paths:
+      - tests/test_print_history.py
+      - .github/workflows/print-history-gate.yml
+      - problem-app/index.html
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium firefox webkit
+      - name: Run print history gate
+        run: python tests/test_print_history.py
+      - name: Upload gate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: print-history-gate-evidence
+          path: audit/PROBLEM_APP_PRINT_HISTORY_GATE.json
+          if-no-files-found: warn
+      - name: Commit PASS evidence
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_PRINT_HISTORY_GATE.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record 3-engine print-history PASS [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
