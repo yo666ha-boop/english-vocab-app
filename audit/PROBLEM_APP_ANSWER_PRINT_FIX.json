@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "invariants": {
+    "answer_toggle_preserves_current_question_set": true,
+    "default_print_contains_question_pages_then_separate_answer_pages": true,
+    "questions_only_button": true,
+    "answers_only_button": true,
+    "print_uses_snapshot_of_current_questions": true
+  }
+}

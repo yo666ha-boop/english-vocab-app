@@ -86,7 +86,9 @@ img.previewImg{max-width:100%;max-height:320px;border-radius:12px;border:1px sol
         <div class="btns builderOnly" style="margin-top:14px">
           <button id="generateBtn" class="primary">問題を作成</button>
           <button id="toggleAnswersBtn">解答表示切替</button>
-          <button id="printBtn">印刷</button>
+          <button id="printBothBtn" class="primary">問題＋解答を印刷</button>
+          <button id="printQuestionsOnlyBtn">問題だけ印刷</button>
+          <button id="printAnswersOnlyBtn">解答だけ印刷</button>
           <button id="toListBtn">この条件で問題一覧へ</button>
         </div>
         <div id="builderStatus" class="status">準備中…</div>
@@ -1374,32 +1376,49 @@ function renderQuestions() {
   `).join('');
 }
 
-function printQuestions() {
+function printQuestions(mode = 'both') {
   if (!currentQuestions.length) return;
+  if (!['both','questions','answers'].includes(mode)) mode = 'both';
+
+  // 印刷処理中も同じ問題ID・同じ順番を固定する。
+  const printSet = currentQuestions.slice();
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-  const renderQuestion = (q, index) => `<div class="q"><div class="n">Q${index + 1}　${escapeHtml(q.id)}</div><div class="body">${escapeHtml(q.q)}</div>${showAnswers ? `<div class="a">答え: ${escapeHtml(q.a)}</div>` : '<div class="answer-space" aria-label="解答欄"></div>'}</div>`;
-  const pages = [];
-  for (let startIndex = 0; startIndex < currentQuestions.length; startIndex += 10) {
-    const pageQuestions = currentQuestions.slice(startIndex, startIndex + 10);
-    pages.push({
-      html: pageQuestions.map((q, offset) => renderQuestion(q, startIndex + offset)).join(''),
-      rows: Math.ceil(pageQuestions.length / 2)
-    });
+  const subject = currentSubject();
+  const grade = currentGrade();
+  const textbook = subject === '英語' ? currentTextbook() : '—';
+  const section = subject === '英語' ? (el('sectionSelect').value || '—') : '—';
+  const meta = '教科書: ' + escapeHtml(textbook) + ' / 単語はここまで: ' + escapeHtml(section);
+
+  const questionPages = [];
+  for (let startIndex = 0; startIndex < printSet.length; startIndex += 10) {
+    const pageQuestions = printSet.slice(startIndex, startIndex + 10);
+    const rows = Math.ceil(pageQuestions.length / 2);
+    const body = pageQuestions.map((q, offset) => {
+      const index = startIndex + offset;
+      return '<div class="q"><div class="n">Q' + (index + 1) + '　' + escapeHtml(q.id) + '</div><div class="body">' + escapeHtml(q.q) + '</div><div class="answer-space" aria-label="解答欄"></div></div>';
+    }).join('');
+    questionPages.push('<section class="page question-page"><h2>' + escapeHtml(grade) + ' ' + escapeHtml(subject) + ' 問題プリント</h2><div class="student-line">名前：____________________________　日付：______________</div><div class="meta">' + meta + ' / 問題 ' + (startIndex + 1) + '〜' + (startIndex + pageQuestions.length) + '</div><div class="questions" style="grid-template-rows:repeat(' + rows + ', minmax(0, 1fr))">' + body + '</div></section>');
   }
-  const printHtml = `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>問題プリント</title><style>
-  @page{size:A4 portrait;margin:8mm}
-  *{box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;margin:0;color:#111;font-size:9pt;line-height:1.3}
-  .page{height:281mm;display:flex;flex-direction:column;overflow:hidden;page-break-after:always;break-after:page}
-  .page:last-child{page-break-after:auto;break-after:auto}
-  h2{flex:0 0 auto;font-size:14pt;margin:0 0 2mm}.meta{flex:0 0 auto;font-size:8pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:0.3mm solid #555}
-  .questions{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 5mm;height:auto}
-  .q{display:flex;flex-direction:column;break-inside:avoid;page-break-inside:avoid;border:0.2mm solid #c7c7c7;border-radius:1.5mm;padding:2.5mm;margin:0;min-height:0}
-  .n{font-weight:700;font-size:8pt;margin-bottom:1mm}.body{white-space:pre-wrap}.a{margin-top:2mm;color:#075c4c;font-size:8pt}
-  .answer-space{flex:1;min-height:18mm;margin-top:2mm;background:repeating-linear-gradient(to bottom,transparent 0,transparent 7.2mm,#a8a8a8 7.4mm,transparent 7.6mm)}
-  </style></head><body>
-  ${pages.map((page, pageIndex) => `<section class="page"><h2>${currentGrade()} ${currentSubject()} 問題プリント</h2><div class="meta">教科書: ${currentSubject()==='英語' ? escapeHtml(currentTextbook()) : '—'} / 単語はここまで: ${currentSubject()==='英語' ? escapeHtml(el('sectionSelect').value || '—') : '—'} / ${pageIndex + 1}頁</div><div class="questions" style="grid-template-rows:repeat(${page.rows}, minmax(0, 1fr))">${page.html}</div></section>`).join('')}
-  <script>window.onload=()=>window.print()<\/script></body></html>`;
+
+  const answerPages = [];
+  for (let startIndex = 0; startIndex < printSet.length; startIndex += 20) {
+    const pageAnswers = printSet.slice(startIndex, startIndex + 20);
+    const body = pageAnswers.map((q, offset) => {
+      const index = startIndex + offset;
+      return '<div class="answer-item"><div class="n">Q' + (index + 1) + '　' + escapeHtml(q.id) + '</div><div class="a">' + escapeHtml(q.a) + '</div></div>';
+    }).join('');
+    answerPages.push('<section class="page answer-page"><h2>' + escapeHtml(grade) + ' ' + escapeHtml(subject) + ' 解答</h2><div class="meta">' + meta + ' / 解答 ' + (startIndex + 1) + '〜' + (startIndex + pageAnswers.length) + '</div><div class="answers">' + body + '</div></section>');
+  }
+
+  const selectedPages = mode === 'questions' ? questionPages : mode === 'answers' ? answerPages : questionPages.concat(answerPages);
+  const titleSuffix = mode === 'questions' ? '問題' : mode === 'answers' ? '解答' : '問題＋解答';
+  const printHtml = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>' + escapeHtml(grade + ' ' + subject + ' ' + titleSuffix) + '</title><style>' +
+    '@page{size:A4 portrait;margin:10mm}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;color:#111}' +
+    '.page{min-height:277mm;page-break-after:always;break-after:page;padding:0}.page:last-child{page-break-after:auto;break-after:auto}h2{margin:0 0 4mm;font-size:18pt}.meta,.student-line{font-size:9.5pt;margin-bottom:3mm}' +
+    '.questions{height:245mm;display:grid;grid-template-columns:1fr 1fr;column-gap:8mm;row-gap:0}.q{border-bottom:1px solid #bbb;padding:3mm 1mm;min-height:0;break-inside:avoid}.n{font-weight:700;font-size:10pt;margin-bottom:2mm}.body{font-size:11pt;line-height:1.45}.answer-space{height:16mm;border-bottom:1px dotted #bbb;margin-top:3mm}' +
+    '.answers{display:grid;grid-template-columns:1fr 1fr;column-gap:10mm;row-gap:2mm}.answer-item{border-bottom:1px solid #ddd;padding:2.5mm 1mm;break-inside:avoid}.answer-item .n{margin-bottom:1mm}.a{font-size:11pt;line-height:1.4}' +
+    '</style></head><body>' + selectedPages.join('') + '<script>window.onload=()=>window.print()<\\/script></body></html>';
+
   const w = window.open('', '_blank');
   if (!w) return;
   w.document.open();
@@ -1448,8 +1467,15 @@ function wireEvents() {
     if (evt.target.matches('input[data-stage], input[data-type]')) updateBuilderStatus(baseFiltered());
   });
   el('generateBtn').addEventListener('click', renderQuestions);
-  el('toggleAnswersBtn').addEventListener('click', () => { showAnswers = !showAnswers; renderQuestions(); });
-  el('printBtn').addEventListener('click', printQuestions);
+  el('toggleAnswersBtn').addEventListener('click', () => {
+    showAnswers = !showAnswers;
+    // 解答表示の切替では currentQuestions を絶対に再抽選しない。
+    el('questionPreview').classList.toggle('showAnswers', showAnswers);
+    saveState(true);
+  });
+  el('printBothBtn').addEventListener('click', () => printQuestions('both'));
+  el('printQuestionsOnlyBtn').addEventListener('click', () => printQuestions('questions'));
+  el('printAnswersOnlyBtn').addEventListener('click', () => printQuestions('answers'));
   el('toListBtn').addEventListener('click', () => { document.querySelector('.tab[data-screen="list"]').click(); refreshList(); saveState(true); });
   el('refreshListBtn').addEventListener('click', () => { refreshList(); saveState(true); });
   const autoSave = () => saveState(true);
