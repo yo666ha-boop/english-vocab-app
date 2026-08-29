@@ -1,4 +1,5 @@
 name: Apply print history
+# rerun after tool repair
 
 on:
   workflow_dispatch:
