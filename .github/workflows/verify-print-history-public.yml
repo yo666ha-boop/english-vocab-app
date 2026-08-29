@@ -1,0 +1,66 @@
+name: Verify public print history
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature-print-history-20260829
+    paths:
+      - .github/workflows/verify-print-history-public.yml
+
+permissions:
+  contents: write
+
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify deployed app markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p audit
+          url='https://yo666ha-boop.github.io/english-vocab-app/problem-app/?print_history_verify=09b1001'
+          for attempt in 1 2 3 4 5 6; do
+            if curl -fsSL --retry 2 --retry-delay 2 "$url" -o /tmp/public.html; then
+              if grep -Fq 'id="printHistoryBtn"' /tmp/public.html \
+                && grep -Fq '印刷履歴' /tmp/public.html \
+                && grep -Fq 'バックアップを書き出す' /tmp/public.html \
+                && grep -Fq 'バックアップを読み込む' /tmp/public.html \
+                && grep -Fq 'mikamijuku_problem_app_print_history_v1' /tmp/public.html; then
+                bytes=$(wc -c < /tmp/public.html | tr -d ' ')
+                sha=$(sha256sum /tmp/public.html | awk '{print $1}')
+                cat > audit/PROBLEM_APP_PRINT_HISTORY_PUBLIC_VERIFY.json <<JSON
+          {
+            "result": "PASS",
+            "url": "$url",
+            "expected_main_sha": "09b1001ec686f26a6233629816c9fd72959e321b",
+            "markers": {
+              "print_history_button": true,
+              "print_history_text": true,
+              "backup_export_label": true,
+              "backup_import_label": true,
+              "print_history_storage_key": true
+            },
+            "public_html_bytes": $bytes,
+            "public_html_sha256": "$sha"
+          }
+          JSON
+                cat audit/PROBLEM_APP_PRINT_HISTORY_PUBLIC_VERIFY.json
+                exit 0
+              fi
+            fi
+            sleep 10
+          done
+          echo 'public markers not found after retries' >&2
+          exit 1
+      - name: Commit public verification evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_PRINT_HISTORY_PUBLIC_VERIFY.json
+          git commit -m 'test: record public print-history PASS [skip ci]'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
