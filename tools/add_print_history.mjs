@@ -288,7 +288,7 @@ fs.writeFileSync('audit/PROBLEM_APP_PRINT_HISTORY_IMPLEMENTATION.json', JSON.str
     print_start_writes_snapshot_history: true,
     snapshot_contains_id_order_question_answer: true,
     history_persists_in_local_storage: true,
-    history_limit: PRINT_HISTORY_LIMIT,
+    history_limit: 100,
     history_can_view_reprint_delete: true,
     backup_includes_print_history: true,
     legacy_backup_import_supported: true
