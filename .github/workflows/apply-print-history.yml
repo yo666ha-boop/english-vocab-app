@@ -20,22 +20,40 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Apply print history
-        run: node tools/add_print_history.mjs
-      - name: Commit implementation
+      - name: Apply print history with diagnostics
+        shell: bash
+        run: |
+          set +e
+          mkdir -p audit
+          node tools/add_print_history.mjs > audit/PROBLEM_APP_PRINT_HISTORY_APPLY.log 2>&1
+          code=$?
+          echo "exit_code=${code}" >> audit/PROBLEM_APP_PRINT_HISTORY_APPLY.log
+          cat audit/PROBLEM_APP_PRINT_HISTORY_APPLY.log
+          echo "${code}" > /tmp/apply_code
+          exit 0
+      - name: Commit implementation or diagnostic
         shell: bash
         run: |
           set -euo pipefail
+          code="$(cat /tmp/apply_code)"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add problem-app/index.html audit/PROBLEM_APP_PRINT_HISTORY_IMPLEMENTATION.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'feat: save and reopen exact printed problem sets [skip ci]'
-          branch="${GITHUB_REF_NAME}"
-          for attempt in 1 2 3 4; do
-            git fetch origin "${branch}"
-            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
-            if git push origin "HEAD:${branch}"; then exit 0; fi
-            sleep 2
-          done
-          exit 1
+          git add audit/PROBLEM_APP_PRINT_HISTORY_APPLY.log
+          if [[ "${code}" == "0" ]]; then
+            git add problem-app/index.html audit/PROBLEM_APP_PRINT_HISTORY_IMPLEMENTATION.json
+          fi
+          if ! git diff --cached --quiet; then
+            if [[ "${code}" == "0" ]]; then
+              git commit -m 'feat: save and reopen exact printed problem sets [skip ci]'
+            else
+              git commit -m 'diag: record print-history patch failure [skip ci]'
+            fi
+            branch="${GITHUB_REF_NAME}"
+            for attempt in 1 2 3 4; do
+              git fetch origin "${branch}"
+              if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+              if git push origin "HEAD:${branch}"; then break; fi
+              sleep 2
+            done
+          fi
+          if [[ "${code}" != "0" ]]; then exit "${code}"; fi
