@@ -1,0 +1,121 @@
+name: Answer print A4 gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-answer-toggle-preserve-set-20260829
+    paths:
+      - .github/workflows/answer-print-a4-gate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  a4-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser and PDF reader
+        run: |
+          pip install playwright pypdf
+          playwright install --with-deps chromium
+      - name: Verify combined and split A4 output
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          from pypdf import PdfReader
+          import io, json, re
+
+          url=Path('problem-app/index.html').resolve().as_uri()
+          out={'url':url}
+
+          def ids_from_preview(page):
+              texts=page.locator('#questionPreview .qnum').all_inner_texts()
+              ids=[]
+              for text in texts:
+                  m=re.search(r'Q\d+\s+([^\s　/]+)',text)
+                  if m: ids.append(m.group(1))
+              return ids
+
+          def capture(page, selector):
+              page.evaluate("""()=>{window.__printHtml='';window.open=()=>({document:{open:()=>{},write:s=>{window.__printHtml=String(s)},close:()=>{}},focus:()=>{},print:()=>{},onload:null})}""")
+              page.locator(selector).click();page.wait_for_timeout(60)
+              html=page.evaluate('window.__printHtml')
+              assert len(html)>1000
+              return html
+
+          def render_pdf(browser, html):
+              safe=re.sub(r'<script>window\.onload=\(\)=>window\.print\(\)<\\/script>','',html)
+              p=browser.new_page(viewport={'width':1280,'height':900})
+              p.set_content(safe,wait_until='load');p.emulate_media(media='print')
+              pdf=p.pdf(format='A4',print_background=True,prefer_css_page_size=True)
+              p.close()
+              reader=PdfReader(io.BytesIO(pdf))
+              dims=[]
+              for pg in reader.pages:
+                  dims.append([round(float(pg.mediabox.width),2),round(float(pg.mediabox.height),2)])
+              return pdf,reader,dims
+
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              page=browser.new_page(viewport={'width':1280,'height':900})
+              page.goto(url,wait_until='load')
+              page.select_option('#subjectSelect','英語');page.select_option('#gradeSelect','中1')
+              page.select_option('#vocabMode','off');page.select_option('#questionCount','20');page.select_option('#pickMode','random')
+              page.evaluate("""()=>Array.from(document.querySelectorAll('input[data-stage],input[data-type]')).forEach(x=>{x.checked=true;x.dispatchEvent(new Event('change',{bubbles:true}))})""")
+              page.locator('#generateBtn').click();page.wait_for_timeout(100)
+              ids=ids_from_preview(page);assert len(ids)==20
+
+              both=capture(page,'#printBothBtn')
+              questions=capture(page,'#printQuestionsOnlyBtn')
+              answers=capture(page,'#printAnswersOnlyBtn')
+
+              both_pdf,both_reader,both_dims=render_pdf(browser,both)
+              q_pdf,q_reader,q_dims=render_pdf(browser,questions)
+              a_pdf,a_reader,a_dims=render_pdf(browser,answers)
+
+              assert len(both_reader.pages)==3, len(both_reader.pages)
+              assert len(q_reader.pages)==2, len(q_reader.pages)
+              assert len(a_reader.pages)==1, len(a_reader.pages)
+              for dims in [both_dims,q_dims,a_dims]:
+                  for w,h in dims:
+                      assert 590<=w<=600 and 838<=h<=846,(w,h)
+
+              out.update({
+                'result':'PASS','generated_ids':ids,
+                'combined_pages':len(both_reader.pages),
+                'questions_only_pages':len(q_reader.pages),
+                'answers_only_pages':len(a_reader.pages),
+                'combined_pdf_bytes':len(both_pdf),
+                'questions_pdf_bytes':len(q_pdf),
+                'answers_pdf_bytes':len(a_pdf),
+                'combined_page_points':both_dims,
+                'questions_page_points':q_dims,
+                'answers_page_points':a_dims
+              })
+              browser.close()
+
+          Path('audit/PROBLEM_APP_ANSWER_PRINT_A4_GATE.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit A4 evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/PROBLEM_APP_ANSWER_PRINT_A4_GATE.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'test: record stable combined and split A4 print gate [skip ci]'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
