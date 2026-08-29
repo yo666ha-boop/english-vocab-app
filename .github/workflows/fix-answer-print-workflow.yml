@@ -1,0 +1,179 @@
+name: Fix answer toggle and print workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix-answer-toggle-preserve-set-20260829
+    paths:
+      - tools/fix_answer_print_workflow.mjs
+      - .github/workflows/fix-answer-print-workflow.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-answer-print-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repair-and-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply stable answer and print UX repair
+        run: node tools/fix_answer_print_workflow.mjs
+      - name: Runtime parse
+        run: node tools/check_problem_app_runtime_parse.mjs
+      - name: Core content regressions
+        run: |
+          node tools/audit_problem_app_bank_integrity.mjs
+          node tools/audit_problem_content_quality.mjs
+          node tools/audit_problem_semantic_review_signals.mjs
+          node tools/audit_problem_grammar_chronology.mjs
+          node tools/audit_vocab_morphology_regression.mjs
+          node tools/audit_vocab_zeroed_rows.mjs
+          node tools/audit_problem_vocab_minimum_supply.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright browsers
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium firefox webkit
+      - name: Verify answer toggle preserves IDs and all print modes use the same set
+        shell: python
+        run: |
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          import json, re
+
+          url = Path('problem-app/index.html').resolve().as_uri()
+          out = {'url': url, 'browsers': []}
+
+          def ids_from_preview(page):
+              texts = page.locator('#questionPreview .qnum').all_inner_texts()
+              ids=[]
+              for text in texts:
+                  m=re.search(r'Q\d+\s+([^\s　/]+)', text)
+                  if m: ids.append(m.group(1))
+              return ids
+
+          def set_all_checks(page):
+              page.evaluate("""()=>{
+                for (const x of document.querySelectorAll('input[data-stage],input[data-type]')) {
+                  x.checked=true;
+                  x.dispatchEvent(new Event('change',{bubbles:true}));
+                }
+              }""")
+
+          def install_print_hook(page):
+              page.evaluate("""()=>{
+                window.__printHtml='';
+                window.open=()=>({
+                  document:{open:()=>{},write:s=>{window.__printHtml=String(s)},close:()=>{}},
+                  focus:()=>{},print:()=>{},onload:null
+                });
+              }""")
+
+          def capture(page, button_id):
+              install_print_hook(page)
+              page.locator(button_id).click()
+              page.wait_for_timeout(80)
+              html=page.evaluate('window.__printHtml')
+              assert len(html)>1000, (button_id, len(html))
+              return html
+
+          def section_ids(html, cls):
+              sections=re.findall(r'<section class="page '+re.escape(cls)+r'">([\s\S]*?)</section>', html)
+              joined=''.join(sections)
+              return re.findall(r'Q\d+　([^<\s]+)', joined)
+
+          with sync_playwright() as p:
+              for name, launcher in [('chromium',p.chromium),('firefox',p.firefox),('webkit',p.webkit)]:
+                  browser=launcher.launch()
+                  page=browser.new_page(viewport={'width':1280,'height':900})
+                  errors=[]
+                  page.on('pageerror', lambda exc,e=errors:e.append('page:'+str(exc)))
+                  page.on('console', lambda msg,e=errors:e.append('console:'+msg.text) if msg.type=='error' else None)
+                  page.goto(url, wait_until='load')
+                  page.select_option('#subjectSelect','英語')
+                  page.select_option('#gradeSelect','中1')
+                  page.select_option('#vocabMode','off')
+                  page.select_option('#questionCount','20')
+                  page.select_option('#pickMode','random')
+                  set_all_checks(page)
+                  page.locator('#generateBtn').click(); page.wait_for_timeout(120)
+                  ids=ids_from_preview(page)
+                  assert len(ids)==20, (name, ids)
+                  assert len(set(ids))==20, (name, 'duplicate generated ids', ids)
+
+                  page.locator('#toggleAnswersBtn').click(); page.wait_for_timeout(50)
+                  toggled=ids_from_preview(page)
+                  assert toggled==ids, (name, 'answer toggle changed set', ids, toggled)
+                  assert page.locator('#questionPreview').evaluate("e=>e.classList.contains('showAnswers')") is True
+
+                  page.reload(wait_until='load'); page.wait_for_timeout(100)
+                  restored=ids_from_preview(page)
+                  assert restored==ids, (name, 'reload after toggle changed set', ids, restored)
+
+                  both=capture(page,'#printBothBtn')
+                  qonly=capture(page,'#printQuestionsOnlyBtn')
+                  aonly=capture(page,'#printAnswersOnlyBtn')
+
+                  both_q=section_ids(both,'question-page'); both_a=section_ids(both,'answer-page')
+                  qonly_q=section_ids(qonly,'question-page'); qonly_a=section_ids(qonly,'answer-page')
+                  aonly_q=section_ids(aonly,'question-page'); aonly_a=section_ids(aonly,'answer-page')
+                  assert both_q==ids and both_a==ids, (name,'both mismatch',both_q,both_a,ids)
+                  assert qonly_q==ids and not qonly_a, (name,'questions-only mismatch')
+                  assert not aonly_q and aonly_a==ids, (name,'answers-only mismatch')
+                  assert both.index('question-page') < both.index('answer-page'), (name,'answers not separated after questions')
+                  assert not errors, (name,errors)
+
+                  out['browsers'].append({
+                    'browser':name,
+                    'generated_ids':ids,
+                    'answer_toggle_exact':True,
+                    'reload_exact':True,
+                    'both_question_ids_exact':True,
+                    'both_answer_ids_exact':True,
+                    'questions_only_exact':True,
+                    'answers_only_exact':True,
+                    'question_pages_before_answer_pages':True
+                  })
+                  browser.close()
+
+          out['result']='PASS'
+          Path('audit').mkdir(exist_ok=True)
+          Path('audit/PROBLEM_APP_ANSWER_PRINT_BROWSER_GATE.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+      - name: Commit repaired app and evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html \
+            audit/PROBLEM_APP_ANSWER_PRINT_FIX.json \
+            audit/PROBLEM_APP_ANSWER_PRINT_BROWSER_GATE.json \
+            audit/PROBLEM_APP_RUNTIME_PARSE_CHECK.json \
+            audit/PROBLEM_APP_BANK_INTEGRITY.json \
+            audit/PROBLEM_APP_CONTENT_QUALITY.json \
+            audit/PROBLEM_APP_SEMANTIC_REVIEW_SIGNALS.json \
+            audit/PROBLEM_APP_GRAMMAR_CHRONOLOGY_AUDIT.json \
+            audit/PROBLEM_APP_VOCAB_MORPHOLOGY_REGRESSION.json \
+            audit/PROBLEM_APP_VOCAB_ZEROED_ROWS.json \
+            audit/PROBLEM_APP_VOCAB_MINIMUM_SUPPLY.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: preserve generated set and print questions with separate answers'
+          branch="${GITHUB_REF_NAME}"
+          for attempt in 1 2 3 4; do
+            git fetch origin "${branch}"
+            if ! git rebase "origin/${branch}"; then git rebase --abort || true; exit 1; fi
+            if git push origin "HEAD:${branch}"; then exit 0; fi
+            sleep 2
+          done
+          exit 1
