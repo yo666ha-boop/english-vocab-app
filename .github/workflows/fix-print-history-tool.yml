@@ -1,0 +1,41 @@
+name: Fix print history tool
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature-print-history-20260829
+    paths:
+      - .github/workflows/fix-print-history-tool.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix tool audit constant
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('tools/add_print_history.mjs')
+          s=p.read_text(encoding='utf-8')
+          old='history_limit: PRINT_HISTORY_LIMIT,'
+          new='history_limit: 100,'
+          if old not in s:
+              raise SystemExit('target constant not found')
+          p.write_text(s.replace(old,new,1),encoding='utf-8')
+          PY
+      - name: Commit tool repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/add_print_history.mjs
+          git commit -m 'fix: repair print-history tool audit constant'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
