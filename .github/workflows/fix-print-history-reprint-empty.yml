@@ -1,0 +1,32 @@
+name: Fix print history reprint guard
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature-print-history-20260829
+    paths:
+      - .github/workflows/fix-print-history-reprint-empty.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fix guard
+        run: node tools/fix_print_history_reprint_empty.mjs
+      - name: Commit fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problem-app/index.html audit/PROBLEM_APP_PRINT_HISTORY_REPRINT_GUARD.json
+          git commit -m 'fix: reprint saved history without current set [skip ci]'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
