@@ -1564,7 +1564,7 @@ function renderQuestions() {
 }
 
 function printQuestions(mode = 'both', historySource = null) {
-  if (!currentQuestions.length) return;
+  if (!historySource && !currentQuestions.length) return;
   if (!['both','questions','answers'].includes(mode)) mode = 'both';
 
   // 印刷処理中も同じ問題ID・同じ順番を固定する。履歴再印刷時は保存済みスナップショットを使う。
