@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "branch_target": "feature-print-history-20260829",
+  "invariants": {
+    "generation_does_not_write_print_history": true,
+    "print_start_writes_snapshot_history": true,
+    "snapshot_contains_id_order_question_answer": true,
+    "history_persists_in_local_storage": true,
+    "history_limit": 100,
+    "history_can_view_reprint_delete": true,
+    "backup_includes_print_history": true,
+    "legacy_backup_import_supported": true
+  }
+}
