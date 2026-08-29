@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "engines": [
+    {
+      "engine": "chromium",
+      "result": "PASS",
+      "generated_count": 10,
+      "generation_without_print_history": true,
+      "snapshot_exact_id_question_answer_order": true,
+      "reload_persistence": true,
+      "history_reprint_without_current_set": true,
+      "history_screen_restore": true,
+      "backup_export_import_history": true,
+      "individual_delete": true,
+      "mobile_viewport": false
+    },
+    {
+      "engine": "firefox",
+      "result": "PASS",
+      "generated_count": 10,
+      "generation_without_print_history": true,
+      "snapshot_exact_id_question_answer_order": true,
+      "reload_persistence": true,
+      "history_reprint_without_current_set": true,
+      "history_screen_restore": true,
+      "backup_export_import_history": true,
+      "individual_delete": true,
+      "mobile_viewport": false
+    },
+    {
+      "engine": "webkit",
+      "result": "PASS",
+      "generated_count": 10,
+      "generation_without_print_history": true,
+      "snapshot_exact_id_question_answer_order": true,
+      "reload_persistence": true,
+      "history_reprint_without_current_set": true,
+      "history_screen_restore": true,
+      "backup_export_import_history": true,
+      "individual_delete": true,
+      "mobile_viewport": true
+    }
+  ],
+  "failures": [],
+  "required": {
+    "generate_only_not_saved": true,
+    "print_snapshot_saved": true,
+    "date_time_history_ui": true,
+    "exact_reopen_reprint": true,
+    "three_print_modes_from_history": true,
+    "backup_includes_history": true
+  }
+}
