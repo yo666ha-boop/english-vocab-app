@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          node tools/add_textbook_page_filter.mjs > /tmp/page-filter.log 2>&1
+          node tools/add_textbook_page_filter_v2.mjs > /tmp/page-filter.log 2>&1
           code=$?
           mkdir -p audit
           cp /tmp/page-filter.log audit/TEXTBOOK_PAGE_FILTER_APPLY_LOG.txt
