@@ -1,0 +1,38 @@
+name: Diagnose textbook page filter patch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-page-filter.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - name: Run patch and capture result
+        shell: bash
+        run: |
+          set +e
+          node tools/add_textbook_page_filter.mjs > /tmp/page-filter.log 2>&1
+          code=$?
+          mkdir -p audit
+          cp /tmp/page-filter.log audit/TEXTBOOK_PAGE_FILTER_APPLY_LOG.txt
+          echo "exit_code=$code" >> audit/TEXTBOOK_PAGE_FILTER_APPLY_LOG.txt
+          cat audit/TEXTBOOK_PAGE_FILTER_APPLY_LOG.txt
+      - name: Commit diagnostic
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add audit/TEXTBOOK_PAGE_FILTER_APPLY_LOG.txt
+          git diff --cached --quiet && exit 0
+          git commit -m 'diag: record textbook page filter patch result'
+          git push origin HEAD:main
