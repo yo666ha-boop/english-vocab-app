@@ -52,7 +52,6 @@ try {
   status.checks.memory_print_obeys_page_range=true;
   status.checks.print_range_label_includes_pages=true;
 
-  document;
   await page.locator('#pageEndInput').fill('');
   await page.locator('#pageStartInput').fill('120');
   await page.waitForTimeout(100);
@@ -87,7 +86,7 @@ try {
   await mobile.locator('#pageEndInput').fill('41');
   await mobile.waitForTimeout(120);
   const mobileCheck=await mobile.evaluate(()=>({count:state.currentList.length,bad:state.currentList.filter(r=>Number(r.page_start)>41||Number(r.page_end)<34).length}));
-  status.mobile_webkit={boxes, ...mobileCheck};
+  status.mobile_webkit={boxes,...mobileCheck};
   if(!mobileCheck.count||mobileCheck.bad) throw new Error('iPhone WebKit page filter failed '+JSON.stringify(mobileCheck));
   status.checks.iphone_webkit_layout_and_filter=true;
   await mobileBrowser.close(); mobileBrowser=null;
