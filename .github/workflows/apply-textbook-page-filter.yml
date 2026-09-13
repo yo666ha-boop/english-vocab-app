@@ -1,0 +1,94 @@
+name: Apply textbook page filter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-textbook-page-filter.yml'
+      - 'tools/add_textbook_page_filter.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-verify:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    env:
+      PAGE_URL: https://yo666ha-boop.github.io/english-vocab-app/
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Apply canonical textbook page data and UI
+        run: node tools/add_textbook_page_filter.mjs
+
+      - name: Run vocabulary integrity audits
+        run: |
+          node tools/extract_vocab_data.mjs
+          python3 tools/audit_vocab_structure.py
+          node tools/diagnose_exam_pos.mjs
+          grep -q 'page_start' index.html
+          grep -q 'page_end' index.html
+          grep -q 'id="pageStartInput"' index.html
+          grep -q 'id="pageEndInput"' index.html
+
+      - name: Commit page filter app
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          git add index.html audit/TEXTBOOK_PAGE_FILTER_PATCH.json audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
+          git diff --cached --quiet || git commit -m 'feat: add textbook page range filtering'
+          git push origin HEAD:main
+
+      - name: Wait for GitHub Pages deployment
+        id: live
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED_SHA="$(sha256sum index.html | awk '{print $1}')"
+          LIVE_SHA=''
+          for i in $(seq 1 90); do
+            curl -L -sS -o /tmp/live-index.html "$PAGE_URL" || true
+            LIVE_SHA="$(sha256sum /tmp/live-index.html 2>/dev/null | awk '{print $1}' || true)"
+            [ "$LIVE_SHA" = "$EXPECTED_SHA" ] && break
+            sleep 5
+          done
+          test "$LIVE_SHA" = "$EXPECTED_SHA"
+          echo "index_sha256=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Install matching Playwright package only
+        run: npm install --no-save playwright@1.55.0
+
+      - name: Test page filter in Edge-equivalent Chromium and iPhone WebKit
+        env:
+          INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
+        run: node tools/test_page_filter.mjs
+
+      - name: Commit page filter browser audit
+        if: always()
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+users.noreply.github.com'
+          git pull --rebase --autostash origin main
+          if [ -f audit/TEXTBOOK_PAGE_FILTER_SMOKE.json ]; then
+            git add audit/TEXTBOOK_PAGE_FILTER_SMOKE.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'test: record textbook page filter health'
+              git push origin HEAD:main
+            fi
+          fi
+
+      - name: Require browser smoke pass
+        if: always()
+        run: |
+          test -f audit/TEXTBOOK_PAGE_FILTER_SMOKE.json
+          grep -q '"status": "pass"' audit/TEXTBOOK_PAGE_FILTER_SMOKE.json
