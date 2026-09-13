@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/apply-textbook-page-filter.yml'
-      - 'tools/add_textbook_page_filter.mjs'
+      - 'tools/add_textbook_page_filter_v2.mjs'
   workflow_dispatch:
 
 permissions:
@@ -24,10 +24,8 @@ jobs:
       - uses: actions/checkout@v6
         with:
           ref: main
-
       - name: Apply canonical textbook page data and UI
-        run: node tools/add_textbook_page_filter.mjs
-
+        run: node tools/add_textbook_page_filter_v2.mjs
       - name: Run vocabulary integrity audits
         run: |
           node tools/extract_vocab_data.mjs
@@ -37,7 +35,6 @@ jobs:
           grep -q 'page_end' index.html
           grep -q 'id="pageStartInput"' index.html
           grep -q 'id="pageEndInput"' index.html
-
       - name: Commit page filter app
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -47,7 +44,6 @@ jobs:
           git add index.html audit/TEXTBOOK_PAGE_FILTER_PATCH.json audit/EXAM_POS_DIAGNOSTIC.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.json audit/VOCAB_EMBEDDED_DATA_SUMMARY.txt audit/VOCAB_SECONDARY_AUDIT.json audit/VOCAB_SECONDARY_AUDIT.txt
           git diff --cached --quiet || git commit -m 'feat: add textbook page range filtering'
           git push origin HEAD:main
-
       - name: Wait for GitHub Pages deployment
         id: live
         shell: bash
@@ -63,21 +59,18 @@ jobs:
           done
           test "$LIVE_SHA" = "$EXPECTED_SHA"
           echo "index_sha256=$EXPECTED_SHA" >> "$GITHUB_OUTPUT"
-
       - name: Install matching Playwright package only
         run: npm install --no-save playwright@1.55.0
-
       - name: Test page filter in Edge-equivalent Chromium and iPhone WebKit
         env:
           INDEX_SHA: ${{ steps.live.outputs.index_sha256 }}
         run: node tools/test_page_filter.mjs
-
       - name: Commit page filter browser audit
         if: always()
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git pull --rebase --autostash origin main
           if [ -f audit/TEXTBOOK_PAGE_FILTER_SMOKE.json ]; then
             git add audit/TEXTBOOK_PAGE_FILTER_SMOKE.json
@@ -86,7 +79,6 @@ jobs:
               git push origin HEAD:main
             fi
           fi
-
       - name: Require browser smoke pass
         if: always()
         run: |
