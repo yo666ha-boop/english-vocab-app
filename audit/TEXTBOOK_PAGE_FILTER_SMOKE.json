@@ -1,0 +1,92 @@
+{
+  "status": "pass",
+  "page_url": "https://yo666ha-boop.github.io/english-vocab-app/",
+  "index_sha256": "73b022eccbe508377e64faea43fc563f9fea128c3036f59c4b423ad853305b7f",
+  "checks": {
+    "page_loaded": true,
+    "page_inputs_present": true,
+    "range_overlap_filter_works": true,
+    "test_creation_obeys_page_range": true,
+    "memory_print_obeys_page_range": true,
+    "print_range_label_includes_pages": true,
+    "start_only_filter_works": true,
+    "end_only_filter_works": true,
+    "clear_restores_list": true,
+    "iphone_webkit_layout_and_filter": true
+  },
+  "checked_at_utc": "2026-09-13T03:02:46.763Z",
+  "before_count": 662,
+  "range_34_41": {
+    "count": 62,
+    "bad": 0,
+    "sample": [
+      {
+        "english": "see",
+        "page_start": 33,
+        "page_end": 35,
+        "textbook_page": "P33～P35"
+      },
+      {
+        "english": "but",
+        "page_start": 33,
+        "page_end": 35,
+        "textbook_page": "P33～P35"
+      },
+      {
+        "english": "weekend",
+        "page_start": 33,
+        "page_end": 35,
+        "textbook_page": "P33～P35"
+      },
+      {
+        "english": "How many ~?",
+        "page_start": 33,
+        "page_end": 35,
+        "textbook_page": "P33～P35"
+      },
+      {
+        "english": "any",
+        "page_start": 33,
+        "page_end": 35,
+        "textbook_page": "P33～P35"
+      }
+    ]
+  },
+  "test_range": {
+    "count": 10,
+    "bad": 0
+  },
+  "memory_range": {
+    "rows": 62,
+    "pages": 4,
+    "maxRows": 18,
+    "rangeText": "範囲：サンシャイン｜中1｜PROGRAM2 2-2〜PROGRAM3 3-2｜p.34〜41"
+  },
+  "start_only": {
+    "count": 57,
+    "bad": 0
+  },
+  "end_only": {
+    "count": 30,
+    "bad": 0
+  },
+  "restored_count": 662,
+  "mobile_webkit": {
+    "boxes": [
+      {
+        "x": 53.59375,
+        "y": 713,
+        "width": 92,
+        "height": 39
+      },
+      {
+        "x": 191.6875,
+        "y": 713,
+        "width": 92,
+        "height": 39
+      }
+    ],
+    "count": 62,
+    "bad": 0
+  }
+}
