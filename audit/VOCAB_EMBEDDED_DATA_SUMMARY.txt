@@ -1,19 +1,19 @@
 data_array_count=4613
 dataset_counts={"elementary":104,"exam":534,"textbook":3975}
-all_fields=current_confirmed,dataset,elem_category,elem_category_short,elem_hint,elem_intro,elem_order,elem_type,english,exam_category,exam_subcategory,grade,japanese,kana,major_unit,phrase,pos,pos_raw,section,star,textbook
+all_fields=current_confirmed,dataset,elem_category,elem_category_short,elem_hint,elem_intro,elem_order,elem_type,english,exam_category,exam_subcategory,grade,japanese,kana,major_unit,page_end,page_start,phrase,pos,pos_raw,section,star,textbook,textbook_page
 textbook_record_count=3975
 missing_english=0
 missing_japanese=0
 missing_kana=0
 blank_pos_raw=1611
 full_duplicate_group_count=0
-fields=current_confirmed,dataset,english,exam_category,exam_subcategory,grade,japanese,kana,major_unit,phrase,pos,pos_raw,section,star,textbook
+fields=current_confirmed,dataset,english,exam_category,exam_subcategory,grade,japanese,kana,major_unit,page_end,page_start,phrase,pos,pos_raw,section,star,textbook,textbook_page
 
 [dataset_samples]
 textbook	count=3975
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"Sunday","japanese":"日曜日","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"サンデイ"}
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"two","japanese":"2, 2つの","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"トゥー"}
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"Monday","japanese":"月曜日","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"マンデイ"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"Sunday","japanese":"日曜日","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"サンデイ","page_start":null,"page_end":null,"textbook_page":""}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"two","japanese":"2, 2つの","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"トゥー","page_start":null,"page_end":null,"textbook_page":""}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"Monday","japanese":"月曜日","star":"1","phrase":"0","pos":"","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"マンデイ","page_start":null,"page_end":null,"textbook_page":""}
 exam	count=534
   {"dataset":"exam","textbook":"","grade":"nan","major_unit":"","section":"","english":"did","japanese":"do の過去","star":"0","phrase":"0","pos":"動詞","pos_raw":"動","exam_category":"書ける最優先","exam_subcategory":"","current_confirmed":"0","kana":"ディド"}
   {"dataset":"exam","textbook":"","grade":"nan","major_unit":"","section":"","english":"and","japanese":"そして","star":"0","phrase":"0","pos":"接続詞","pos_raw":"接","exam_category":"書ける最優先","exam_subcategory":"","current_confirmed":"0","kana":"アンド"}
@@ -35,27 +35,27 @@ elementary	count=104
 sweet(s)	rows=0
 friend(s)	rows=0
 English	rows=3
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"English","japanese":"英語","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ"}
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit2","section":"Unit2 Part1","english":"English","japanese":"英語の","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ"}
-  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"English","japanese":"英語","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"English","japanese":"英語","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ","page_start":null,"page_end":null,"textbook_page":""}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit2","section":"Unit2 Part1","english":"English","japanese":"英語の","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ","page_start":19,"page_end":21,"textbook_page":"P19～P21"}
+  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"プレステップ","section":"プレステップ2 アルファベットと英語のきまり","english":"English","japanese":"英語","star":"1","phrase":"0","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"1","kana":"イングリッシュ","page_start":null,"page_end":null,"textbook_page":""}
 want to	rows=2
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part1","english":"want to ~","japanese":"~したい","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ウォント トゥ ～"}
-  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"PROGRAM1","section":"PROGRAM1 1-2","english":"want to ~","japanese":"~したい","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ウォント トゥ ～"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part1","english":"want to ~","japanese":"~したい","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ウォント トゥ ～","page_start":11,"page_end":13,"textbook_page":"P11～P13"}
+  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"PROGRAM1","section":"PROGRAM1 1-2","english":"want to ~","japanese":"~したい","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ウォント トゥ ～","page_start":25,"page_end":28,"textbook_page":"P25～P28"}
 How about you?	rows=1
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part3","english":"How about you?","japanese":"あなたはどうですか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ハウ アバウト ユー"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part3","english":"How about you?","japanese":"あなたはどうですか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ハウ アバウト ユー","page_start":16,"page_end":17,"textbook_page":"P16,P17"}
 don't	rows=6
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part2","english":"don't","japanese":"do notの短縮形","star":"1","phrase":"0","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント"}
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit6","section":"Unit6 Part1","english":"Why don't we ~?","japanese":"~しませんか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ワイ ドント ウィー ～"}
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"2","major_unit":"Unit4","section":"Unit4 Part1","english":"don't have to ~","japanese":"~しなくてよい, ~する必要がない","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント ハブ トゥ ～"}
-  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"Let's","section":"PROGRAM4 4-1","english":"Don't worry.","japanese":"心配しないで。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント ウォーリー"}
-  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"Happy","section":"PROGRAM8 8-2","english":"Why don't we ~?","japanese":"(提案して)~しませんか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ワイ ドント ウィー ～"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part2","english":"don't","japanese":"do notの短縮形","star":"1","phrase":"0","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント","page_start":14,"page_end":15,"textbook_page":"P14,P15"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit6","section":"Unit6 Part1","english":"Why don't we ~?","japanese":"~しませんか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ワイ ドント ウィー ～","page_start":71,"page_end":73,"textbook_page":"P71～P73"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"2","major_unit":"Unit4","section":"Unit4 Part1","english":"don't have to ~","japanese":"~しなくてよい, ~する必要がない","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント ハブ トゥ ～","page_start":49,"page_end":50,"textbook_page":"P49,P50"}
+  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"Let's","section":"PROGRAM4 4-1","english":"Don't worry.","japanese":"心配しないで。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ドント ウォーリー","page_start":51,"page_end":55,"textbook_page":"P51～P55"}
+  {"dataset":"textbook","textbook":"サンシャイン","grade":"1","major_unit":"Happy","section":"PROGRAM8 8-2","english":"Why don't we ~?","japanese":"(提案して)~しませんか。","star":"1","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ワイ ドント ウィー ～","page_start":104,"page_end":107,"textbook_page":"P104～P107"}
 Malala Yousafzai	rows=1
-  {"dataset":"textbook","textbook":"サンシャイン","grade":"3","major_unit":"Malala's","section":"Reading2 教科書本文","english":"Malala Yousafzai","japanese":"マララ・ユスフザイ(人名)","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"マララ ユスフザイ"}
+  {"dataset":"textbook","textbook":"サンシャイン","grade":"3","major_unit":"Malala's","section":"Reading2 教科書本文","english":"Malala Yousafzai","japanese":"マララ・ユスフザイ(人名)","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"マララ ユスフザイ","page_start":106,"page_end":111,"textbook_page":"P106～P111"}
 Cafe Maria	rows=1
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit5","section":"Unit5 教科書本文","english":"Cafe Maria","japanese":"カフェ マリア[架空のカフェの名前]","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"カフェ マリア"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit5","section":"Unit5 教科書本文","english":"Cafe Maria","japanese":"カフェ マリア[架空のカフェの名前]","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"カフェ マリア","page_start":62,"page_end":67,"textbook_page":"P62～P67"}
 Diane Kichijitsu	rows=1
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit6","section":"Unit6 教科書本文","english":"Diane Kichijitsu","japanese":"ダイアン 吉日[イギリス出身の落語家]","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ダイアン キチジツ"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit6","section":"Unit6 教科書本文","english":"Diane Kichijitsu","japanese":"ダイアン 吉日[イギリス出身の落語家]","star":"0","phrase":"1","pos":"熟語・表現","pos_raw":"","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ダイアン キチジツ","page_start":72,"page_end":77,"textbook_page":"P72～P77"}
 South Africa	rows=1
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part1","english":"South Africa","japanese":"南アフリカ共和国","star":"0","phrase":"1","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"サウス アフリカ"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"1","major_unit":"Unit1","section":"Unit1 Part1","english":"South Africa","japanese":"南アフリカ共和国","star":"0","phrase":"1","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"サウス アフリカ","page_start":11,"page_end":13,"textbook_page":"P11～P13"}
 natural gas	rows=1
-  {"dataset":"textbook","textbook":"ニューホライズン","grade":"3","major_unit":"Power","section":"Let's Read 2 教科書本文","english":"natural gas","japanese":"天然ガス","star":"0","phrase":"1","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ナチュラル ガス"}
+  {"dataset":"textbook","textbook":"ニューホライズン","grade":"3","major_unit":"Power","section":"Let's Read 2 教科書本文","english":"natural gas","japanese":"天然ガス","star":"0","phrase":"1","pos":"名詞","pos_raw":"名","exam_category":"","exam_subcategory":"","current_confirmed":"0","kana":"ナチュラル ガス","page_start":92,"page_end":95,"textbook_page":"P92～P95"}

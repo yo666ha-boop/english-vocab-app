@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "source": "英単語_教科書別マスターデータ_NH_SS_2026_v7_app_wordbook_master",
+  "source_sheet": "単語マスター",
+  "total_count": 4613,
+  "textbook_count": 3975,
+  "page_tagged_count": 3773,
+  "page_blank_count": 202,
+  "identity_sha256": "3db16ac9fb8f734558bba5407cb5ca6261f2159422120ca9f0d82a262fdf5eac",
+  "non_textbook_sha256_unchanged": true,
+  "ui": "教科書ページ p.開始〜p.終了",
+  "behavior": [
+    "一覧へ反映",
+    "テスト作成へ反映",
+    "暗記プリントへ反映",
+    "片側だけの範囲指定",
+    "ページ不明語はページ指定時のみ除外"
+  ],
+  "checked_at_utc": "2026-09-13T03:01:49.252Z"
+}

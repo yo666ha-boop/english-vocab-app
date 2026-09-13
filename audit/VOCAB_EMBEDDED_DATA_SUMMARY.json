@@ -1,6 +1,6 @@
 {
   "source": "index.html const DATA",
-  "index_sha256": "4d69b8f64e92bbcb22db2f74e2def78d10dc15979d66a4296be8786a0729dfc6",
+  "index_sha256": "73b022eccbe508377e64faea43fc563f9fea128c3036f59c4b423ad853305b7f",
   "data_array_count": 4613,
   "dataset_counts": {
     "elementary": 104,
@@ -24,7 +24,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "サンデイ"
+        "kana": "サンデイ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -41,7 +44,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "トゥー"
+        "kana": "トゥー",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -58,7 +64,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "マンデイ"
+        "kana": "マンデイ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -75,7 +84,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "スリー"
+        "kana": "スリー",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -92,7 +104,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "チューズデイ"
+        "kana": "チューズデイ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -109,7 +124,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "ジャパニーズ"
+        "kana": "ジャパニーズ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -126,7 +144,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "アイ"
+        "kana": "アイ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -143,7 +164,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "イングリッシュ"
+        "kana": "イングリッシュ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       }
     ],
     "exam": [
@@ -487,12 +511,15 @@
     "japanese",
     "kana",
     "major_unit",
+    "page_end",
+    "page_start",
     "phrase",
     "pos",
     "pos_raw",
     "section",
     "star",
-    "textbook"
+    "textbook",
+    "textbook_page"
   ],
   "textbook_record_count": 3975,
   "fields": [
@@ -505,12 +532,15 @@
     "japanese",
     "kana",
     "major_unit",
+    "page_end",
+    "page_start",
     "phrase",
     "pos",
     "pos_raw",
     "section",
     "star",
-    "textbook"
+    "textbook",
+    "textbook_page"
   ],
   "counts_by_textbook_grade": [
     {
@@ -581,7 +611,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "イングリッシュ"
+        "kana": "イングリッシュ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       },
       {
         "dataset": "textbook",
@@ -598,7 +631,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "イングリッシュ"
+        "kana": "イングリッシュ",
+        "page_start": 19,
+        "page_end": 21,
+        "textbook_page": "P19～P21"
       },
       {
         "dataset": "textbook",
@@ -615,7 +651,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "1",
-        "kana": "イングリッシュ"
+        "kana": "イングリッシュ",
+        "page_start": null,
+        "page_end": null,
+        "textbook_page": ""
       }
     ],
     "want to": [
@@ -634,7 +673,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ウォント トゥ ～"
+        "kana": "ウォント トゥ ～",
+        "page_start": 11,
+        "page_end": 13,
+        "textbook_page": "P11～P13"
       },
       {
         "dataset": "textbook",
@@ -651,7 +693,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ウォント トゥ ～"
+        "kana": "ウォント トゥ ～",
+        "page_start": 25,
+        "page_end": 28,
+        "textbook_page": "P25～P28"
       }
     ],
     "How about you?": [
@@ -670,7 +715,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ハウ アバウト ユー"
+        "kana": "ハウ アバウト ユー",
+        "page_start": 16,
+        "page_end": 17,
+        "textbook_page": "P16,P17"
       }
     ],
     "don't": [
@@ -689,7 +737,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ドント"
+        "kana": "ドント",
+        "page_start": 14,
+        "page_end": 15,
+        "textbook_page": "P14,P15"
       },
       {
         "dataset": "textbook",
@@ -706,7 +757,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ワイ ドント ウィー ～"
+        "kana": "ワイ ドント ウィー ～",
+        "page_start": 71,
+        "page_end": 73,
+        "textbook_page": "P71～P73"
       },
       {
         "dataset": "textbook",
@@ -723,7 +777,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ドント ハブ トゥ ～"
+        "kana": "ドント ハブ トゥ ～",
+        "page_start": 49,
+        "page_end": 50,
+        "textbook_page": "P49,P50"
       },
       {
         "dataset": "textbook",
@@ -740,7 +797,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ドント ウォーリー"
+        "kana": "ドント ウォーリー",
+        "page_start": 51,
+        "page_end": 55,
+        "textbook_page": "P51～P55"
       },
       {
         "dataset": "textbook",
@@ -757,7 +817,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ワイ ドント ウィー ～"
+        "kana": "ワイ ドント ウィー ～",
+        "page_start": 104,
+        "page_end": 107,
+        "textbook_page": "P104～P107"
       },
       {
         "dataset": "textbook",
@@ -774,7 +837,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ワイ ドント ユー ～"
+        "kana": "ワイ ドント ユー ～",
+        "page_start": 13,
+        "page_end": 18,
+        "textbook_page": "P13～P18"
       }
     ],
     "Malala Yousafzai": [
@@ -793,7 +859,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "マララ ユスフザイ"
+        "kana": "マララ ユスフザイ",
+        "page_start": 106,
+        "page_end": 111,
+        "textbook_page": "P106～P111"
       }
     ],
     "Cafe Maria": [
@@ -812,7 +881,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "カフェ マリア"
+        "kana": "カフェ マリア",
+        "page_start": 62,
+        "page_end": 67,
+        "textbook_page": "P62～P67"
       }
     ],
     "Diane Kichijitsu": [
@@ -831,7 +903,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ダイアン キチジツ"
+        "kana": "ダイアン キチジツ",
+        "page_start": 72,
+        "page_end": 77,
+        "textbook_page": "P72～P77"
       }
     ],
     "South Africa": [
@@ -850,7 +925,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "サウス アフリカ"
+        "kana": "サウス アフリカ",
+        "page_start": 11,
+        "page_end": 13,
+        "textbook_page": "P11～P13"
       }
     ],
     "natural gas": [
@@ -869,7 +947,10 @@
         "exam_category": "",
         "exam_subcategory": "",
         "current_confirmed": "0",
-        "kana": "ナチュラル ガス"
+        "kana": "ナチュラル ガス",
+        "page_start": 92,
+        "page_end": 95,
+        "textbook_page": "P92～P95"
       }
     ]
   },
@@ -889,7 +970,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "サンデイ"
+      "kana": "サンデイ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -906,7 +990,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "トゥー"
+      "kana": "トゥー",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -923,7 +1010,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "マンデイ"
+      "kana": "マンデイ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -940,7 +1030,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "スリー"
+      "kana": "スリー",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -957,7 +1050,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "チューズデイ"
+      "kana": "チューズデイ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -974,7 +1070,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "ジャパニーズ"
+      "kana": "ジャパニーズ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -991,7 +1090,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "アイ"
+      "kana": "アイ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1008,7 +1110,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "イングリッシュ"
+      "kana": "イングリッシュ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1025,7 +1130,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "ユー"
+      "kana": "ユー",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1042,7 +1150,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "サッカー"
+      "kana": "サッカー",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1059,7 +1170,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "ライク"
+      "kana": "ライク",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1076,7 +1190,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "ベースボール"
+      "kana": "ベースボール",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1093,7 +1210,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "スタディ"
+      "kana": "スタディ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1110,7 +1230,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "バイク"
+      "kana": "バイク",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1127,7 +1250,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "ハブ"
+      "kana": "ハブ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1144,7 +1270,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "カー"
+      "kana": "カー",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1161,7 +1290,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "ワン"
+      "kana": "ワン",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1178,7 +1310,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "ア、アン"
+      "kana": "ア、アン",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1195,7 +1330,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "1",
-      "kana": "キャット"
+      "kana": "キャット",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     },
     {
       "dataset": "textbook",
@@ -1212,7 +1350,10 @@
       "exam_category": "",
       "exam_subcategory": "",
       "current_confirmed": "0",
-      "kana": "マイ"
+      "kana": "マイ",
+      "page_start": null,
+      "page_end": null,
+      "textbook_page": ""
     }
   ]
 }
